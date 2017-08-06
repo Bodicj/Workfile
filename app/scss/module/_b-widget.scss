@@ -1,0 +1,40 @@
+.b-widget{
+	margin-bottom: 54px;
+}
+.b-widget__title{
+	margin: 0 0 25px;
+	font-size: 24px;
+	line-height: 29px;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: center;
+	color: #121212;
+}
+.b-widget__text{
+	margin: 0 0 40px;
+	font-size: 17px;
+	line-height: 21px;
+	font-weight: 400;
+	color: #121212;
+}
+.b-widget__btn{
+	display: block;
+	width: 100%;
+	height: 53px;
+	padding: 8px 16px;
+	border: 0;
+	outline: none;
+	background-color: #d1d4d3;
+	font-size: 22px;
+	font-weight: 700;
+	color: #121212;
+	line-height: 35px;
+	text-transform: uppercase;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.16);
+	transition: all .3s;
+
+	&:hover{
+		background-color: darken(#d1d4d3, 5%);
+	}
+}

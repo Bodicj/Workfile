@@ -1,0 +1,42 @@
+.b-subscribe{
+	padding: 43px 0 47px;
+	background-color: #121212;
+}
+.b-subscribe__title{
+	display: inline-block;
+	margin: 0 30px 0 0;
+	font-size: 28px;
+	line-height: 40px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #ffffff;
+	vertical-align: middle;
+
+	@include huge {
+		font-size: 21px;
+		text-transform: none;
+	}
+}
+.b-subscribe__form{
+	display: inline-block;
+	vertical-align: middle;
+
+	input {
+		width: auto;
+		min-width: 310px;
+		box-sizing: border-box;
+		display: inline-block;
+		margin-right: 30px;
+
+		@include huge {
+			min-width: 235px;
+		}
+
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+	input[type="submit"] {
+		min-width: 0;
+	}
+}

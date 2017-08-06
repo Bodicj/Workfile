@@ -1,0 +1,67 @@
+.b-contacts{
+  float: left;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @include note {
+    width: percentage(3/4);
+  }
+  @include note {
+    width: percentage(3/4);
+  }
+  @include tablet {
+    float: none;
+    width: percentage(4/4);
+  }
+  li{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: -.25em;
+    margin-left: 95px;
+
+    &.is--first,
+    &:first-child{
+      margin-left: 0;
+    }
+
+    @include pc {
+      margin-left: 55px;
+    }
+    @include note {
+      margin-left: 0;
+      margin-bottom: 10px;
+      
+      &.is--first,
+      &:first-child{
+        margin-right: 113px;
+      }
+      
+      &.is--last,
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+    @include tablet {
+      &.is--last,
+      &:last-child{
+        margin-bottom: 10px;
+      }
+    }
+  }
+  span, a{
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    color: #ffffff;
+  }
+  i, span, a{
+    vertical-align: middle;
+  }
+  i{
+    margin-right: 11px;
+  }
+  a + a{
+    margin-left: 35px;
+  }
+}

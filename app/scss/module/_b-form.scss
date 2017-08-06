@@ -1,0 +1,121 @@
+.b-form{
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	z-index: 10;
+	@include note {
+		width: 100%;
+	}
+}
+.b-form--right{
+	float: right;
+	
+	@include note {
+		float: none;
+		margin: 0 auto;
+	}
+}
+.b-form--left{
+	float: left;
+	
+	@include note {
+		float: none;
+		margin: 0 auto;
+	}
+}
+.b-form__inner{}
+.b-form__content{}
+.b-form__action{
+	.g-btn + .g-btn { margin-left: 20px; }
+	@include small {
+		.g-btn + .g-btn { margin-left: 0; margin-top: 20px; }
+	}
+}
+.b-form__field{
+	position: relative;
+	width: 100%;
+	max-width: 370px;
+	margin-bottom: 14px;
+	
+	i{
+		position: absolute;
+		top: 15px; left: 13px;
+		z-index: 10;
+	}
+	input,
+	select,
+	textarea{
+		display: block;
+		max-width: 370px;
+		width: 100%; 
+		height: 40px;
+		padding: 10px 12px 10px 24px;
+		outline: 0;
+		border: 1px solid #e5eaed;
+		background-color: #ffffff;
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 20px;
+		color: #282828;
+	  &.error{
+	    border-color: $color__primary;
+	    color: $color__primary;
+	  }
+	  &:hover,
+	  &:focus{
+	  	border: 1px solid #a5aaba;
+	  }
+	}
+	textarea{
+		height: 80px;
+	}
+}
+.b-form__field--inline{
+	display: inline-block;
+	margin-right: -.25em;
+	margin-left: -30px;
+	&:first-child{
+		margin-left: 0;
+	}
+}
+
+.b-form__file{
+	position: relative;
+	display: inline-block;
+	padding: 4px 0 4px 45px;
+	margin-right: 20px;
+	line-height: 20px;
+	font-size: 14px;
+	z-index: 10;
+	color: #282828;
+	cursor: pointer;
+
+	i {
+		position: absolute;
+		top: 2px; left: 8px;
+
+		&:before{
+			content: '';
+			position: absolute;
+			left: -8px; top: -6px;
+			width: 36px;
+			height: 36px;
+			border-radius: 36px;
+			background:$color__primary;
+			z-index: -1;
+		}
+	}
+
+	input{
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+
+		& + label {
+		}
+	}
+	span{}
+}

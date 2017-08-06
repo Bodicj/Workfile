@@ -1,0 +1,15 @@
+.b-menu{
+	float: left;
+	margin-right: 35px;
+}
+.b-menu__list{
+	@extend %list;
+}
+.b-menu__item{}
+.b-menu__link{
+	color: #FFF;
+	&:hover {
+		color: #FFF;
+		text-decoration: underline;
+	}
+}

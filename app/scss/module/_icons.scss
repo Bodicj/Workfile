@@ -1,0 +1,101 @@
+/**
+ *
+ * icons
+ *
+ **/
+ %icon{
+	display: inline-block;
+}
+.icon-facebook-black {
+	@extend %icon;
+	@include sprite($i-fb-black);
+}
+.icon-in-black {
+	@extend %icon;
+	@include sprite($i-in-black);
+}
+.icon-gplus-black {
+	@extend %icon;
+	@include sprite($i-gplus-black);
+}
+.icon-youtube-black {
+	@extend %icon;
+	@include sprite($i-youtube-black);
+}
+
+.icon-facebook-white {
+	@extend %icon;
+	@include sprite($i-facebook-white);
+}
+.icon-in-white {
+	@extend %icon;
+	@include sprite($i-in-white);
+}
+.icon-gplus-white {
+	@extend %icon;
+	@include sprite($i-gplus-white);
+}
+.icon-youtube-white {
+	@extend %icon;
+	@include sprite($i-youtube-white);
+}
+.icon-account-black {
+	@extend %icon;
+	@include sprite($i-account-black);
+}
+.icon-search {
+	@extend %icon;
+	@include sprite($i-search);
+}
+.icon-cart-white {
+	@extend %icon;
+	@include sprite($i-cart-white);
+}
+.icon-cart-black {
+	@extend %icon;
+	@include sprite($i-cart-black);
+}
+.icon-phone-small-white {
+	@extend %icon;
+	@include sprite($i-phone-small-white);
+}
+.icon-location-small-white {
+	@extend %icon;
+	@include sprite($i-location-small-white);
+}
+
+
+.icon-close {
+	@extend %icon;
+	@include sprite($i-close);
+}
+.icon-alarm {
+	@extend %icon;
+	@include sprite($i-alarm);
+}
+.icon-arrow-up {
+	@extend %icon;
+	@include sprite($i-arrow-up);
+	vertical-align: middle;
+}
+
+.icon-qty-up {
+	@extend %icon;
+	@include sprite($i-qty-up);
+	vertical-align: middle;
+}
+.icon-qty-down {
+	@extend %icon;
+	@include sprite($i-qty-down);
+	vertical-align: middle;
+}
+.icon-sort-down {
+	@extend %icon;
+	@include sprite($i-qty-down);
+	vertical-align: middle;
+}
+.icon-toggler {
+	@extend %icon;
+	@include sprite($i-arrow-toggle-up);
+	vertical-align: middle;
+}

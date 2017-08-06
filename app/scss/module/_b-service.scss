@@ -1,0 +1,30 @@
+.b-service{
+	margin-bottom: 45px;
+}
+.b-service__img{
+	margin: 0 0 32px;
+	img{
+		display: block;
+		margin: 0 auto;
+	}
+}
+.b-service__list{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.b-service__item{
+	padding: 2px 0;
+	text-align: center;
+}
+.b-service__link{
+	font-size: 21px;
+	font-weight: 300;
+	line-height: 28px;
+	color: #121212;
+
+	@include huge {
+		font-size: 16px;
+		line-height: 21px;
+	}
+}

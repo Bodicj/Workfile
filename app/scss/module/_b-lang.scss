@@ -1,0 +1,34 @@
+.b-lang{
+	padding: 11px 2px;
+	cursor: pointer;
+	transition: all .3s;
+	&:hover{
+		background:#fff;
+	}
+}
+.b-lang__current{
+	position: relative;
+	padding-right: 15px;
+	line-height: 20px;
+	font-size: 19px;
+	font-weight: 600;
+	color: #3d3f3c;
+	cursor: pointer;
+
+	&:after{
+		content: '';
+		position: absolute;
+		top: 8px; right: 4px;
+		@include triangle(3px, #3d3f3c, 'down');
+	}
+
+	@include huge {
+		font-size: 16px;
+	}
+}
+.b-lang__list{
+	display: none;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}

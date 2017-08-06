@@ -1,0 +1,35 @@
+.b-seo-text{
+	padding: 0 102px 98px;
+	margin: 0 auto;
+	clear: both;
+
+	p {
+		margin: 0;
+	}
+}
+.b-seo-text__inner{
+	margin-bottom: 20px;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 19px;
+	line-height: 21px;
+	font-weight: 400;
+	color: #1a1a1a;
+	text-align: center;
+
+	@include huge {
+		font-size: 16px;
+		line-height: 21px;
+	}
+
+	&.is--short{
+		max-height: 105px;
+		overflow: hidden;
+	}
+}
+.b-seo-text__action{
+	text-align: center;
+}
+.b-seo-text__btn{
+  font-weight: 700;
+  text-transform: uppercase;
+}

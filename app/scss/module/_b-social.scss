@@ -1,0 +1,28 @@
+.b-social{
+	float: left;
+	@include clearfix();
+}
+.b-social__item{
+	float: left;
+	margin-right: 10px;
+
+	&:last-child{
+		margin-right: 0;
+	}
+}
+.b-social--footer{
+	margin-left: -2px;
+
+	.b-social__item{
+		margin-right: 24px;
+
+		@include huge {
+			margin-right: 10px;
+		}
+
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+
+}

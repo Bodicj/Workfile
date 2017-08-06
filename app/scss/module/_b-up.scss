@@ -1,0 +1,13 @@
+.b-up{
+	display: none;
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	z-index: 250;
+	width: 90px;
+	height: 90px;
+	line-height: 90px;
+	text-align: center;
+	background-color: #d1d4d3;
+	cursor: pointer;
+}

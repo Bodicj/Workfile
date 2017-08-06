@@ -1,0 +1,80 @@
+.b-sort{
+	margin-top: 8px;
+  margin-right: 6px;
+	margin-bottom: 110px;
+	text-align: right;
+	&:focus{
+		outline:none;
+	}
+}
+.b-sort__text{
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 15px;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 400;
+	color: #0f0f0f;
+	text-align: left;
+}
+.b-sort__dropdown{
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	width: 175px;
+	height: 42px;
+	padding: 10px 16px;
+	border: 1px solid #121212;
+	background-color: #ffffff;
+	text-align: left;
+
+	i {
+		position: absolute;
+		top: 19px;
+		right: 17px;
+	}
+}
+.b-sort__selected{
+	display: block;
+	height: 20px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 600;
+	cursor: pointer;
+	color: #0f0f0f;
+	
+	i{
+		position: absolute;
+		right: 3px; top: 3px;
+	}
+}
+.b-sort__list{
+	display: none;
+	position: absolute;
+	top: 40px; left: -1px;
+	margin: 0;padding: 12px 10px;
+	list-style-type: none;
+	width: 175px;
+	border: 1px solid #121212;
+	background-color: #ffffff;
+	z-index: 300;
+	
+	.is--open &{
+		display: block;
+	}
+}
+.b-sort__item{
+	position: relative;
+	padding-bottom: 10px;
+	&:last-child{
+		padding-bottom: 0;
+	}
+	a {
+	  display: block;
+	  position: relative;
+	  cursor: pointer;
+	}
+}

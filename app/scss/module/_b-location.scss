@@ -1,0 +1,25 @@
+.b-location{
+	position: relative;
+	padding-left: 43px;
+	font-size: 19px;
+	line-height: 22px;
+	font-weight: 600;
+	color: #3d3f3c;
+
+	&:before{
+		content: '';
+		position: absolute;
+		left: 0; top: 5px;
+		@include sprite($i-location-lg-black);
+	}
+
+	@include huge {
+		font-size: 16px;
+	}
+}
+.b-location__current{}
+.b-location__more a{
+	font-weight: 700;
+	text-decoration: underline;
+	color: #3d3f3c;
+}

@@ -1,0 +1,195 @@
+
+@@include('./../parts/slider.html')
+
+<!-- MAIN MENU -->
+@@include('./../parts/nav.html')
+<!-- /MAIN MENU -->
+
+<!-- SERVICES -->
+<section class="section section--products">
+  <div class="container">
+    <h2 class="section__title">Топ продаж</h2>
+
+    <div class="row">
+    @@for (i=1; i<=8; i++){
+      <div class="col col--3-of-12">
+        
+        @@include('./../parts/product.html', {"index": "`+i+`"})
+
+      </div>
+    }
+    </div>
+
+    <a href="" class="g-link g-link--allinfo">В каталог</a>
+
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section section--services">
+  <div class="container">
+    <h2 class="section__title">Наши услуги</h2>
+
+    <div class="row">
+      <div class="col col--4-of-12">
+
+        <div class="b-service">
+          <div class="b-service__img">
+            <img src="./img/services/s-1.jpg" alt="">
+          </div>
+          <ul class="b-service__list">
+            <li class="b-service__item">
+              <a href="" class="b-service__link">Участие в формировании</a>
+            </li>
+            <li class="b-service__item">
+              <a href="" class="b-service__link">Дальнейших </a>
+            </li>
+            <li class="b-service__item">
+              <a href="" class="b-service__link">Направлений развития. </a>
+            </li>
+            <li class="b-service__item">
+              <a href="" class="b-service__link">Равным образом рамки </a>
+            </li>
+            <li class="b-service__item">
+              <a href="" class="b-service__link">Место обучения</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="col col--4-of-12">
+
+        <div class="b-service">
+          <div class="b-service__img">
+            <img src="./img/services/s-2.jpg" alt="">
+          </div>
+          <ul class="b-service__list">
+            <li class="b-service__item">
+              <a href="" class="b-service__link">Внедрения</a>
+            </li>
+            <li class="b-service__item">
+              <a href="" class="b-service__link">Модернизации </a>
+            </li>
+            <li class="b-service__item">
+              <a href="" class="b-service__link">Соответствующий </a>
+            </li>
+            <li class="b-service__item">
+              <a href="" class="b-service__link">Условий </a>
+            </li>
+            <li class="b-service__item">
+              <a href="" class="b-service__link">Активизации</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="col col--4-of-12">
+
+        <div class="b-service">
+          <div class="b-service__img">
+            <img src="./img/services/s-3.jpg" alt="">
+          </div>
+          <ul class="b-service__list">
+            <li class="b-service__item">
+              <a href="" class="b-service__link">Букет невесты</a>
+            </li>
+            <li class="b-service__item">
+              <a href="" class="b-service__link">Бутоньерка жениха</a>
+            </li>
+            <li class="b-service__item">
+              <a href="" class="b-service__link">Арка</a>
+            </li>
+            <li class="b-service__item">
+              <a href="" class="b-service__link">Оформление свадебного зала</a>
+            </li>
+            <li class="b-service__item">
+              <a href="" class="b-service__link">Оформление машин</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <a href="" class="g-link g-link--allinfo">Все услуги</a>
+  </div>
+</section>
+<!-- /SERVICES -->
+
+<!-- WHY WE -->
+<section class="section section--grey section--why-we">
+  <div class="container">
+    <h2 class="section__title">Почему мы?</h2>
+    <div class="row">
+      <div class="col col--4-of-12">
+        <article class="b-why-we b-why-we--1">
+          <h3 class="b-why-we__title">Уникальность</h3>
+          <p class="b-why-we__text">Детский букет, игрушки из цветов, оформление дня рождения,  оформление детского праздника, детская доставка.</p>
+          <div class="b-why-we__icon b-why-we__icon--1">
+            <img src="./img/icons/i-ruby.png">
+          </div>
+        </article>
+      </div>
+      <div class="col col--4-of-12">
+        <article class="b-why-we b-why-we--2">
+          <h3 class="b-why-we__title">Качество</h3>
+          <p class="b-why-we__text">Детский букет, игрушки из цветов, оформление дня рождения,  оформление детского праздника, детская доставка.</p>
+          <div class="b-why-we__icon b-why-we__icon--2">
+            <img src="./img/icons/i-medal.png">
+          </div>
+        </article>
+      </div>
+      <div class="col col--4-of-12">
+        <article class="b-why-we b-why-we--3">
+          <h3 class="b-why-we__title">Бесплатная доставка</h3>
+          <p class="b-why-we__text">Детский букет, игрушки из цветов, оформление дня рождения,  оформление детского праздника, детская доставка.</p>
+          <div class="b-why-we__icon b-why-we__icon--3">
+            <img src="./img/icons/i-truck.png">
+          </div>
+        </article>
+      </div>
+    </div>
+    
+  </div>
+</section>
+<!-- /WHY WE -->
+
+<!-- NEWS -->
+<section class="section section--news">
+  <div class="container">
+    <h2 class="section__title">Новости</h2>
+
+    <div class="row">
+    @@for (i=1; i<=3; i++){
+      <div class="col col--4-of-12">
+        
+        @@include('./../parts/news.html', {"index": "`+i+`"})
+
+      </div>
+    }
+    </div>
+
+    <a href="" class="g-link g-link--allinfo">Все новости</a>
+
+  </div>
+</section>
+<!-- /NEWS -->
+
+@@include('./../parts/seo-text.html')
+
+<!-- SUBSCRIBE -->
+<section class="section section--subscribe">
+  <article class="b-subscribe">
+    <div class="container">
+      <h4 class="b-subscribe__title">Подпишись на Эксклюзивные предложения</h4>
+      <form action="" class="b-subscribe__form">
+        <input type="text" name="name" placeholder="Ваше имя">
+        <input type="email" name="email" placeholder="Ваш e-mail">
+        <input type="submit" value="Подписаться" class="g-btn g-btn--bordered-white">
+      </form>
+    </div>
+  </article>
+</section>
+<!-- /SUBSCRIBE -->

@@ -1,0 +1,26 @@
+.b-logo{
+	display: block;
+	width: 369px;
+	padding: 9px 10px 10px 9px;
+	background-color: #0f0f0f;
+}
+.b-logo--simple{
+	width: 180px;
+	padding: 9px 20px 12px 10px;
+
+	img {
+		max-width: 100%;
+	}
+}
+.b-logo__inner{
+	display: block;
+	width: 350px;
+	padding: 16px;
+	padding-bottom: 10px;
+	border: 1px solid #fff;
+}
+.b-logo__text{
+	display: block;
+	padding-top: 12px;
+	text-align: center;
+}

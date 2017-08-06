@@ -1,0 +1,23 @@
+.b-phones{
+	position: relative;
+	margin: 0;
+	padding: 0 0 0 40px;
+	list-style-type: none;
+
+	&:before{
+		content: '';
+		position: absolute;
+		left: 0; top: 5px;
+		@include sprite($i-phone-lg-black);
+	}
+}
+.b-phones__item{
+	font-size: 19px;
+	font-weight: 600;
+	line-height: 22px;
+	color: #3d3f3c;
+
+	@include huge {
+		font-size: 16px;
+	}
+}

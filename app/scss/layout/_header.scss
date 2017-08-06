@@ -1,0 +1,88 @@
+.header{
+	position: relative;
+	background: transparent url('../img/ht-bg.jpg') center top repeat;
+}
+.header--simple{
+	margin-bottom: 63px;
+}
+.header__logo{
+	position: absolute;
+	top: -28px; left: 50%;
+	margin-left: -185px;
+	z-index: 40;
+}
+.header__top{
+	padding: 28px 0;
+	@include clearfix();
+}
+.header__top-left{
+	float: left;
+	width: percentage(1/2);
+	padding-right: 185px;
+
+/* 	@include huge {
+	padding-right: 100px;
+} */
+}
+.header__top-right{
+	float: right;
+	width: percentage(1/2);
+	padding-left: 185px;
+}
+.header__phones{
+	float: left;
+	margin-right: 33px;
+
+/* 	@include huge {
+	margin-right: 20px;
+} */
+}
+.header__location{
+	float: left;
+}
+.header__social{
+	float: left;
+	padding-top: 6px;
+	margin-left: 36px;
+	margin-right: 143px;
+
+/* 	@include huge {
+	margin-left: 16px;
+	margin-right: 20px;
+} */
+}
+.header__account{
+	float: left;
+	padding-top: 6px;
+}
+.header__lang{
+	float: right;
+}
+.header__bottom{
+	padding: 15px 0;
+	background-color: #0f0f0f;
+}
+.header__bottom-left{
+	float: left;
+	width: percentage(1/2);
+	padding-right: 185px;
+}
+.header__bottom-right{
+	float: right;
+	width: percentage(1/2);
+	padding-left: 185px;
+
+/* 	@include huge {
+	padding-left: 169px;
+} */
+}
+.header__menu{}
+.header__search{
+	float: left;
+	margin-left: 35px;
+}
+.header__cart{
+	float: right;
+	margin-top: -8px;
+	margin-bottom: -10px;
+}

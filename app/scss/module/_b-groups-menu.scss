@@ -1,0 +1,27 @@
+.b-groups-menu{
+	margin-bottom: 47px;
+}
+.b-groups-menu__list{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.b-groups-menu__item{
+	display: block;
+	margin-bottom: 4px;
+}
+.b-groups-menu__link{
+	display: inline-block;
+	padding: 0 10px;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 30px;
+	text-transform: uppercase;
+	color: #0f0f0f;
+
+	&:hover,
+	&.is--current {
+		background-color: #d1d4d3;
+		text-decoration: none;
+	}
+}

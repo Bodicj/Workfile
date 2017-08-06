@@ -1,0 +1,221 @@
+html{box-sizing:border-box}
+*,:after,:before{box-sizing:inherit}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  width: 100%;
+  font-family: "Open Sans", Arial, sans-serif;
+  
+  font-size: $fs--base;
+  line-height: $lh--base;
+  color: $color__base;
+}
+a {
+  text-decoration: none;
+  color: $color__secondary;
+  @extend %transition;
+  transition-property: color;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+img {
+  max-width: 100%;
+}
+
+.row {
+  list-style: none;
+  margin-left: -30px
+}
+.col {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: -.25em;
+  min-height: 1px;
+  padding-left: 30px;
+  vertical-align: top
+}
+
+.container{
+  // min-width: 320px;
+  min-width: 1650px;
+  max-width: 1650px;
+	margin: 0 auto;
+  padding: 0 15px;
+  @include clearfix();
+  
+  @include huge {
+    max-width: 1250px;
+  }
+  @include pc {
+    max-width: 970px;
+  }
+
+  @include note {
+    max-width: 750px;
+  }
+
+  @include tablet {
+    max-width: 480px;
+  }
+
+  @include small {
+    max-width: 90%;
+  }
+
+  @include phone {
+    width: 100%;
+  }
+
+}
+.title{
+  margin:0 0 20px;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+}
+
+// Error State For Form Elements
+
+label{
+  &.error{
+    display: block;
+    text-align: right;
+    font-size: $fs--small;
+    line-height: $lh--small;
+    color: $color__secondary;
+  }
+}
+
+input, 
+select, 
+textarea {
+  &.error{
+    border-color: $color__secondary;
+    color: $color__secondary;
+  }
+}
+.g-mb--32{
+  margin-bottom: 32px !important;
+}
+.g-menu{
+  display: block;
+  margin-bottom: 60px;
+}
+.g-menu__title{
+  margin: 0 0 45px;
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+
+  @include huge {
+    font-size: 21px;
+    margin-bottom: 25px;
+  }
+}
+.g-menu__list{
+  margin: 0;
+  padding: 0 40px 0 0;
+  list-style-type: none;
+
+  @include huge {
+    padding: 0;
+  }
+}
+.g-menu__item{
+  padding: 4px 0;
+  margin-bottom: 4px;
+}
+.g-menu__item,
+.g-menu__link{
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 28px;
+  color: #fff;
+
+  @include huge {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+.g-menu__item span a{
+  color: #fff;
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.g-menu__item i {
+  margin-left: -25px;
+  margin-right: 4px;
+}
+
+.g-rating{
+  display: inline-block;
+  background:url('../img/rating.png') 0 0 no-repeat;
+  width: 120px;
+  height: 20px;
+  overflow: hidden;
+}
+.g-rating--0{
+  background:url('../img/rating.png') -120px 0 no-repeat;
+}
+.g-rating--1{
+  background:url('../img/rating.png') -92px 0 no-repeat;
+}
+.g-rating--2{
+  background:url('../img/rating.png') -69px 0 no-repeat;
+}
+.g-rating--3{
+  background:url('../img/rating.png') -46px 0 no-repeat;
+}
+.g-rating--4{
+  background:url('../img/rating.png') -23px 0 no-repeat;
+}
+
+.g-text--right{
+  text-align: right;
+}
+.g-text--center{
+  text-align: center;
+}
+.g-h2{
+  margin: 0 0 25px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+}
+.g-h3{
+  margin: 0 0 25px;
+  font-size: 16px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #1a1a1a;
+}
+.g-link{
+  color: #121212;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+.g-link--allinfo{
+  padding-right: 5px;
+  float: right;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.is--relative{
+  position: relative!important;
+}

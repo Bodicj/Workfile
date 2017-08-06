@@ -1,0 +1,8 @@
+.b-counters{
+	@include clearfix();
+	margin-left: -4px;
+}
+.b-counters__item{
+	float: left;
+	margin-right: 10px;
+}

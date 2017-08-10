@@ -81,11 +81,15 @@
 	padding: 15px 0;
 	background-color: #0f0f0f;
 	@include twoK {
-		height: 63px;
+      height: 80px;
+      padding-top: 22px;
+      margin-top: 19px;
 	}
 	@include fourK {
-		height: 90px;
-	}
+      height: 125px;
+      padding-top: 33px;
+      margin-top: 34px;
+    }
 }
 .header__bottom-left{
 	float: left;

@@ -23,6 +23,14 @@
 	line-height: 20px;
 	font-weight: 400;
 
+	@include twoK {
+		font-size: 20px;
+	}
+	@include fourK {
+		font-size: 30px;
+		line-height: 35px;
+	}
+
 	&:first-child{
 		padding-left: 0;
 	}

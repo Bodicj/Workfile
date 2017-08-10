@@ -7,6 +7,9 @@
 	img{
 		display: block;
 		//margin: 0 auto;
+		@include twoK {
+			width: 100%;
+		}
 	}
 }
 .b-news__title{
@@ -16,6 +19,14 @@
 	line-height: 24px;
 	text-transform: uppercase;
 	color: #121212;
+	@include twoK{
+		font-size: 25px;
+		line-height: 25px;
+	}
+	@include fourK {
+		font-size: 35px;
+		line-height: 40px;
+	}
 }
 .b-news__meta{
 	margin: 0 0 20px;	
@@ -23,6 +34,13 @@
 	font-weight: 400;
 	line-height: 24px;
 	color: #121212;
+	@include twoK{
+		font-size: 20px;
+	}
+	@include fourK {
+		font-size: 25px;
+		line-height: 30px;
+	}
 }
 .b-news__meta-date{
 	margin-right: 58px;
@@ -35,6 +53,16 @@
 	font-weight: 400;
 	line-height: 16px;
 	color: #121212;
+	@include twoK {
+		max-height: 87px;
+		font-size: 20px;
+		line-height: 22px;
+	}
+	@include fourK {
+		max-height: 108px;
+		font-size: 30px;
+		line-height: 35px;
+	}
 }
 .b-news__action{}
 

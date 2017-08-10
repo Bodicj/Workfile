@@ -5,10 +5,14 @@
 	@include note {
 		display: none;
 	}
+	@include twoK {
+		margin-top: 120px;
+	}
 }
 .b-nav__list{
 	@extend %list;
 	@extend %clearfix;
+	@extend %flexrow;
 }
 .b-nav__item{
 	position: relative;
@@ -27,6 +31,13 @@
 		.b-nav__sublist{
 			display: block;
 		}
+	}
+
+	@include twoK {
+		width: 10%;
+	}
+	@include fourK {
+		width: 9%;
 	}
 }
 .b-nav__link{
@@ -49,6 +60,16 @@
 		font-size: 16px;
 		max-width: 105px;
 	}
+	@include twoK{
+		font-size: 24px;
+		max-width: 190px;
+	}
+	@include fourK {
+		font-size: 37px;
+		line-height: 45px;
+		max-width: none;
+	}
+
 }
 .b-nav__item-1{
 	padding-left: 48px;
@@ -164,6 +185,14 @@
 
 		@include huge {
 			font-size: 16px;
+		}
+		@include twoK {
+			font-size: 24px;
+			line-height: 25px;
+		}
+		@include fourK {
+			font-size: 38px;
+			line-height: 50px;
 		}
 	}
 

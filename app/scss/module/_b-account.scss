@@ -6,6 +6,9 @@
 	i,
 	span {
 		vertical-align: middle;
+		@include fourK {
+			margin-left: 18px;
+		}
 	}
 	i{
 		margin-right: 10px;
@@ -13,5 +16,12 @@
 
 	@include huge {
 		font-size: 16px;
+	}
+	@include twoK {
+		font-size:24px;
+	}
+	@include fourK {
+		font-size: 40px;
+		line-height: 45px;
 	}
 }

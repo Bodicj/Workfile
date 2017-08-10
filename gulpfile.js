@@ -12,8 +12,19 @@ var gulp         = require('gulp'), // Подключаем Gulp
 	pngquant     = require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
 	cache        = require('gulp-cache'), // Подключаем библиотеку кеширования
 	autoprefixer = require('gulp-autoprefixer'),// Подключаем библиотеку для автоматического добавления префиксов
-	browserSync  = require('browser-sync').create();
-	
+	browserSync  = require('browser-sync');
+
+var config = {
+		server: {
+			baseDir: "./dist"
+		},
+		tunnel: true,
+		host: 'localhost',
+		port: 9000,
+		logPrefix: "Frontend_Devil"
+	};
+
+
 	// process JS files and return the stream.
 
 	gulp.task('js', function() {
@@ -129,4 +140,8 @@ var gulp         = require('gulp'), // Подключаем Gulp
 		return cache.clearAll();
 	})
 
-	gulp.task('default', ['serve']);
+	gulp.task('webserver', function () {
+		browserSync(config);
+	});
+
+	gulp.task('default', ['serve', 'webserver']);

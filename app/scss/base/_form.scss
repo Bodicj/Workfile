@@ -143,6 +143,10 @@ textarea{
   textarea{
     @extend %formElement;
     width: 100%;
+    @include fourK {
+      font-size: 35px;
+      line-height: 40px;
+    }
   }
   select{
     @extend %select;
@@ -331,6 +335,11 @@ textarea{
   height: 22px;
   border: 1px solid #0f0f0f;
   background-color: #ffffff;
+  @include fourK {
+    top: 5px;
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .g-checkbox:not(checked) + label:after {

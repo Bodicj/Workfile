@@ -1,3 +1,7 @@
+#subscribe_container{
+	@extend %flexrow;
+}
+
 .b-subscribe{
 	padding: 43px 0 47px;
 	background-color: #121212;
@@ -16,6 +20,14 @@
 		font-size: 21px;
 		text-transform: none;
 	}
+	@include twoK {
+		font-size: 30px;
+	}
+	@include fourK {
+		font-size: 40px;
+		line-height: 40px;
+		padding-top: 10px;
+	}
 }
 .b-subscribe__form{
 	display: inline-block;
@@ -31,6 +43,14 @@
 		@include huge {
 			min-width: 235px;
 		}
+		@include twoK {
+			font-size: 21px;
+		}
+		@include fourK {
+			font-size: 33px;
+			line-height: 33px;
+			min-width: 524px;
+		}
 
 		&:last-child{
 			margin-right: 0;
@@ -38,5 +58,8 @@
 	}
 	input[type="submit"] {
 		min-width: 0;
+		@include fourK {
+			line-height: 40px;
+		}
 	}
 }

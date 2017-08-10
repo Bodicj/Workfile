@@ -27,4 +27,11 @@
 	@include huge {
 		font-size: 16px;
 	}
+	@include twoK {
+		font-size: 25px;
+	}
+	@include fourK {
+		font-size: 40px;
+		line-height: 45px;
+	}
 }

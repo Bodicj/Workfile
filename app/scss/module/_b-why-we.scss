@@ -33,6 +33,14 @@
 		line-height: 24px;
 		margin-bottom: 10px;
 	}
+	@include twoK {
+		font-size: 30px;
+		line-height: 30px;
+	}
+	@include fourK {
+		font-size: 35px;
+		line-height: 40px;
+	}
 }
 .b-why-we__text{
 	margin: 0;
@@ -46,6 +54,14 @@
 	@include huge {
 		font-size: 14px;
 	}
+	@include twoK {
+		font-size: 20px;
+		line-height: 20px;
+	}
+	@include fourK {
+		font-size: 28px;
+		line-height: 35px;
+	}
 }
 .b-why-we__icon{
 	position: absolute;
@@ -54,20 +70,48 @@
 .b-why-we__icon--1{
 	left: 3px;
 	top: 6px;
+	img{
+		@include fourK {
+			transform: scale(1.5);
+		}
+	}
+
+	@include fourK {
+		left: -12px;
+		top: 25px;
+	}
 }
 .b-why-we__icon--2{
 	top: -11px;
 	left: 34px;
+	img{
+		@include fourK {
+			transform: scale(1.5);
+		}
+	}
 
 	@include huge {
 		left: 19px;
+	}
+	@include fourK {
+		top: 8px;
+		left: 6px;
 	}
 }
 .b-why-we__icon--3{
 	left: 58px;
 	top: 3px;
+	img{
+		@include fourK {
+			transform: scale(1.5);
+		}
+	}
 
 	@include huge {
 		left: 8px;
+	}
+	@include fourK {
+		left: 17px;
+		top: 29px;
 	}
 }

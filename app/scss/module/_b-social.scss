@@ -5,6 +5,12 @@
 .b-social__item{
 	float: left;
 	margin-right: 10px;
+	@include twoK {
+		margin-right: 20px;
+	}
+	@include fourK {
+		margin-right: 48px;
+	}
 
 	&:last-child{
 		margin-right: 0;
@@ -18,6 +24,10 @@
 
 		@include huge {
 			margin-right: 10px;
+		}
+		@include fourK {
+			margin-right: 68px;
+			margin-top: 25px;
 		}
 
 		&:last-child{

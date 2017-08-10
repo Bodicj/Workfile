@@ -15,15 +15,28 @@
 	font-weight: 400;
 	color: #1a1a1a;
 	text-align: center;
+	@extend %transition;
 
 	@include huge {
 		font-size: 16px;
 		line-height: 21px;
 	}
+	@include twoK {
+		font-size: 23px;
+		line-height: 26px;
+	}
+	@include fourK {
+		font-size: 35px;
+		line-height: 40px;
+	}
 
 	&.is--short{
 		max-height: 105px;
 		overflow: hidden;
+		@extend %transition;
+		@include fourK {
+			max-height: 115px;
+		}
 	}
 }
 .b-seo-text__action{

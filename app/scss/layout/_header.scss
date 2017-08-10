@@ -1,6 +1,12 @@
 .header{
 	position: relative;
 	background: transparent url('../img/ht-bg.jpg') center top repeat;
+	@include twoK {
+		background-size: 100%;
+	}
+	@include fourK {
+		background-size: 100%;
+	}
 }
 .header--simple{
 	margin-bottom: 63px;
@@ -8,8 +14,9 @@
 .header__logo{
 	position: absolute;
 	top: -28px; left: 50%;
-	margin-left: -185px;
+	margin-left: -11.52%;
 	z-index: 40;
+	width: 22.36%;;
 }
 .header__top{
 	padding: 28px 0;
@@ -18,7 +25,7 @@
 .header__top-left{
 	float: left;
 	width: percentage(1/2);
-	padding-right: 185px;
+	padding-right: 11.52%;
 
 /* 	@include huge {
 	padding-right: 100px;
@@ -27,7 +34,7 @@
 .header__top-right{
 	float: right;
 	width: percentage(1/2);
-	padding-left: 185px;
+	padding-left: 11.52%;
 }
 .header__phones{
 	float: left;
@@ -44,8 +51,14 @@
 	float: left;
 	padding-top: 6px;
 	margin-left: 36px;
-	margin-right: 143px;
+	margin-right: 100px;
 
+	@include twoK {
+		margin-right: 167px;
+	}
+	@include fourK {
+		margin-top: 30px;
+	}
 /* 	@include huge {
 	margin-left: 16px;
 	margin-right: 20px;
@@ -54,23 +67,35 @@
 .header__account{
 	float: left;
 	padding-top: 6px;
+	@include fourK {
+		margin-top: 17px;
+	}
 }
 .header__lang{
 	float: right;
+	@include fourK {
+		margin-top: 17px;
+	}
 }
 .header__bottom{
 	padding: 15px 0;
 	background-color: #0f0f0f;
+	@include twoK {
+		height: 63px;
+	}
+	@include fourK {
+		height: 90px;
+	}
 }
 .header__bottom-left{
 	float: left;
 	width: percentage(1/2);
-	padding-right: 185px;
+	padding-right: 11.52%;
 }
 .header__bottom-right{
 	float: right;
 	width: percentage(1/2);
-	padding-left: 185px;
+	padding-left: 11.52%;
 
 /* 	@include huge {
 	padding-left: 169px;

@@ -18,6 +18,10 @@
 	text-align: center;
 	transition: all .3s;
 
+	@include fourK {
+		font-size: 41px;
+	}
+
 	&:hover{
 		background:#0f0f0f;
 		color: #f5f4f2;
@@ -30,13 +34,16 @@
 	}
 	&.is--ellipsis{
 		margin: 0 2px 20px -18px;
-    line-height: 18px;
-    vertical-align: bottom;
+		line-height: 18px;
+		vertical-align: bottom;
 		background:transparent;
 		color: #d1d4d3;
 		&:hover {
-			background:transparent;
+			background: transparent;
 			color: #0f0f0f;
+		}
+		@include fourK {
+			line-height: 37px;
 		}
 	}
 }

@@ -16,6 +16,14 @@
 	font-weight: 400;
 	color: #0f0f0f;
 	text-align: left;
+
+	@include twoK {
+		font-size: 24px;
+	}
+	@include  fourK {
+		font-size: 35px;
+		line-height: 40px;
+	}
 }
 .b-sort__dropdown{
 	display: inline-block;
@@ -33,6 +41,13 @@
 		top: 19px;
 		right: 17px;
 	}
+
+	@include twoK {
+		width: 209px;
+	}
+	@include fourK {
+		width: 254px;
+	}
 }
 .b-sort__selected{
 	display: block;
@@ -45,7 +60,14 @@
 	font-weight: 600;
 	cursor: pointer;
 	color: #0f0f0f;
-	
+
+	@include twoK {
+		font-size: 18px;
+	}
+	@include  fourK {
+		font-size: 24px;
+	}
+
 	i{
 		position: absolute;
 		right: 3px; top: 3px;

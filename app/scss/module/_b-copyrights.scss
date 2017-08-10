@@ -9,4 +9,8 @@
 	a, span{
 		color: #ffffff;
 	}
+
+	@include fourK {
+		font-size: 24px;
+	}
 }

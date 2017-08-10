@@ -1,6 +1,6 @@
 .b-logo{
 	display: block;
-	width: 369px;
+	width: 100%;
 	padding: 9px 10px 10px 9px;
 	background-color: #0f0f0f;
 }
@@ -11,13 +11,19 @@
 	img {
 		max-width: 100%;
 	}
+	@include fourK {
+		width: 319px;
+	}
 }
 .b-logo__inner{
 	display: block;
-	width: 350px;
+	width: 100%;
 	padding: 16px;
 	padding-bottom: 10px;
 	border: 1px solid #fff;
+	img{
+		width: 92.5%;
+	}
 }
 .b-logo__text{
 	display: block;

@@ -40,8 +40,8 @@ img {
 
 .container{
   // min-width: 320px;
-  min-width: 1650px;
-  max-width: 1650px;
+  min-width: 85.93%;
+  max-width: 85.93%;
 	margin: 0 auto;
   padding: 0 15px;
   @include clearfix();
@@ -118,6 +118,10 @@ textarea {
     font-size: 21px;
     margin-bottom: 25px;
   }
+  @include fourK {
+    font-size: 35px;
+    line-height: 40px;
+  }
 }
 .g-menu__list{
   margin: 0;
@@ -142,6 +146,10 @@ textarea {
   @include huge {
     font-size: 16px;
     line-height: 21px;
+  }
+  @include fourK {
+    font-size: 35px;
+    line-height: 40px;
   }
 }
 .g-menu__item span a{
@@ -208,6 +216,12 @@ textarea {
   text-decoration: none;
   &:hover{
     text-decoration: underline;
+  }
+  @include twoK{
+    font-size: 24px;
+  }
+  @include  fourK {
+    font-size: 35px;
   }
 }
 .g-link--allinfo{

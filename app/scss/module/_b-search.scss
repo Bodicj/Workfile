@@ -18,6 +18,14 @@
 		outline:0;
 		cursor: pointer;
 		z-index: 10;
+		@include twoK {
+			transform: scale(1.2);
+		}
+		@include fourK {
+			transform: scale(1.9);
+			top: 16px;
+			right: -193px;
+		}
 	}
 	input {
 		position: absolute;
@@ -37,5 +45,14 @@
 	  user-select: none;
 	  appearance: none;
 	  outline:none;
+		@include twoK{
+			line-height: 24px;
+			font-size: 15px;
+		}
+		@include fourK{
+			line-height: 45px;
+			font-size: 30px;
+			width:160%;
+		}
 	}
 }

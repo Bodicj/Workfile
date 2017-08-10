@@ -19,6 +19,9 @@
 	margin: 0 auto;
 	padding: 0;
 	*zoom: 1;
+	@include fourK {
+		margin-top: 120px;
+	}
 }
 
 .bx-wrapper img {

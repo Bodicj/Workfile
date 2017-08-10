@@ -17,8 +17,15 @@
 }
 .scroll__nav{
 	float: left;
+	.b-nav--simple {
+		margin-top: 0;
+	}
 }
 .scroll__cart{
 	float: right;
 	padding-top: 21px;
+
+	@include twoK{
+		padding-top: 16px;
+	}
 }

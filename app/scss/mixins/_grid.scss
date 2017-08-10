@@ -21,6 +21,16 @@
   }
 
 }
+@mixin twoK {
+  @include media('screen', '>=twoK'){
+    @content;
+  }
+}
+@mixin fourK {
+  @include media('screen', '>=fourK'){
+    @content;
+  }
+}
 @mixin pc {
 
   @include media('screen','<pc') {

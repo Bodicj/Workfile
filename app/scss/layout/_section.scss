@@ -98,4 +98,11 @@
 	text-transform: uppercase;
 	text-align: center;
 	color: #121212;
+
+	@include twoK {
+		font-size: 40px;
+	}
+	@include fourK {
+		font-size: 55px;
+	}
 }

@@ -77,11 +77,22 @@
         cursor: default;
     }
 
+    .irs-to {
+        left: 89.0633%;
+    }
     .irs-from, .irs-to, .irs-single {
         position: absolute; display: block;
         top: 0; left: 0;
         cursor: default;
         white-space: nowrap;
+        @include  twoK {
+            top:-15%;
+            font-size: 16px !important;
+        }
+        @include fourK {
+          top: -49%;
+          font-size: 26px!important;
+        }
     }
 
 .irs-grid {
@@ -98,8 +109,14 @@
         width: 1px; height: 8px;
         background: #0f0f0f;
     }
+    @include fourK {
+      height: 15px;
+    }
     .irs-grid-pol.small {
         height: 4px;
+      @include fourK {
+        height: 10px;
+      }
     }
     .irs-grid-text {
         position: absolute;
@@ -109,6 +126,14 @@
         font-size: 9px; line-height: 9px;
         padding: 0 3px;
         color: #0f0f0f;
+
+        @include twoK {
+            font-size: 13px;
+        }
+      @include fourK {
+        font-size: 20px;
+        top: 91%
+      }
     }
 
 .irs-disable-mask {

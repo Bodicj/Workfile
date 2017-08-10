@@ -9,39 +9,94 @@
 .icon-facebook-black {
 	@extend %icon;
 	@include sprite($i-fb-black);
+	@include twoK {
+		transform: scale(1.2);
+	}
+	@include fourK {
+		transform: scale(1.9);
+	}
 }
 .icon-in-black {
 	@extend %icon;
 	@include sprite($i-in-black);
+	@include twoK {
+		transform: scale(1.2);
+	}
+	@include fourK {
+		transform: scale(1.9);
+	}
 }
 .icon-gplus-black {
 	@extend %icon;
 	@include sprite($i-gplus-black);
+	@include twoK {
+		transform: scale(1.2);
+	}
+	@include fourK {
+		transform: scale(1.9);
+	}
 }
 .icon-youtube-black {
 	@extend %icon;
 	@include sprite($i-youtube-black);
+	@include twoK {
+		transform: scale(1.2);
+	}
+	@include fourK {
+		transform: scale(1.9);
+	}
 }
 
 .icon-facebook-white {
 	@extend %icon;
 	@include sprite($i-facebook-white);
+	@include twoK {
+		transform: scale(1.2);
+	}
+	@include fourK {
+		transform: scale(1.9);
+	}
 }
 .icon-in-white {
 	@extend %icon;
 	@include sprite($i-in-white);
+	@include twoK {
+		transform: scale(1.2);
+	}
+	@include fourK {
+		transform: scale(1.9);
+	}
 }
 .icon-gplus-white {
 	@extend %icon;
 	@include sprite($i-gplus-white);
+	@include twoK {
+		transform: scale(1.2);
+	}
+	@include fourK {
+		transform: scale(1.9);
+	}
+
 }
 .icon-youtube-white {
 	@extend %icon;
 	@include sprite($i-youtube-white);
+	@include twoK {
+		transform: scale(1.2);
+	}
+	@include fourK {
+		transform: scale(1.9);
+	}
 }
 .icon-account-black {
 	@extend %icon;
 	@include sprite($i-account-black);
+	@include twoK {
+		transform: scale(1.2);
+	}
+	@include fourK {
+		transform: scale(1.9);
+	}
 }
 .icon-search {
 	@extend %icon;
@@ -50,10 +105,24 @@
 .icon-cart-white {
 	@extend %icon;
 	@include sprite($i-cart-white);
+	@include twoK {
+		transform: scale(1.2);
+	}
+	@include fourK {
+		transform: scale(1.9);
+		margin-top: 13px;
+	}
 }
 .icon-cart-black {
 	@extend %icon;
 	@include sprite($i-cart-black);
+	@include twoK {
+		transform: scale(1.2);
+	}
+	@include fourK {
+		transform: scale(1.9);
+		margin-top: 20px;
+	}
 }
 .icon-phone-small-white {
 	@extend %icon;

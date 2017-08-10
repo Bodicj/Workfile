@@ -35,6 +35,15 @@
   i {
     margin-right: 8px;
   }
+
+  @include twoK {
+    font-size: 24px;
+  }
+  @include fourK {
+    font-size: 35px;
+    line-height: 40px;
+  }
+
 }
 
 .g-btn--md{
@@ -75,6 +84,14 @@
   font-weight: 700;
   text-transform: uppercase;
   color: #0f0f0f;
+  @include twoK {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  @include fourK {
+    font-size: 30px;
+    line-height: 35px;
+  }
   
   &:hover{
     background:  #d6d6d4;

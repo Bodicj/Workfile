@@ -10,13 +10,9 @@
   <div class="container">
     <h2 class="section__title">Топ продаж</h2>
 
-    <div class="row">
+    <div class="content-block">
     @@for (i=1; i<=8; i++){
-      <div class="col col--3-of-12">
-        
         @@include('./../parts/product.html', {"index": "`+i+`"})
-
-      </div>
     }
     </div>
 
@@ -30,8 +26,8 @@
   <div class="container">
     <h2 class="section__title">Наши услуги</h2>
 
-    <div class="row">
-      <div class="col col--4-of-12">
+    <div class="content-block">
+      <div class="b-service-separate">
 
         <div class="b-service">
           <div class="b-service__img">
@@ -58,7 +54,7 @@
 
       </div>
 
-      <div class="col col--4-of-12">
+      <div class="b-service-separate">
 
         <div class="b-service">
           <div class="b-service__img">
@@ -85,7 +81,7 @@
 
       </div>
 
-      <div class="col col--4-of-12">
+      <div class="b-service-separate">
 
         <div class="b-service">
           <div class="b-service__img">
@@ -122,8 +118,8 @@
 <section class="section section--grey section--why-we">
   <div class="container">
     <h2 class="section__title">Почему мы?</h2>
-    <div class="row">
-      <div class="col col--4-of-12">
+    <div class="content-block">
+      <div class="b-why-we-single">
         <article class="b-why-we b-why-we--1">
           <h3 class="b-why-we__title">Уникальность</h3>
           <p class="b-why-we__text">Детский букет, игрушки из цветов, оформление дня рождения,  оформление детского праздника, детская доставка.</p>
@@ -132,7 +128,7 @@
           </div>
         </article>
       </div>
-      <div class="col col--4-of-12">
+      <div class="b-why-we-single">
         <article class="b-why-we b-why-we--2">
           <h3 class="b-why-we__title">Качество</h3>
           <p class="b-why-we__text">Детский букет, игрушки из цветов, оформление дня рождения,  оформление детского праздника, детская доставка.</p>
@@ -141,7 +137,7 @@
           </div>
         </article>
       </div>
-      <div class="col col--4-of-12">
+      <div class="b-why-we-single">
         <article class="b-why-we b-why-we--3">
           <h3 class="b-why-we__title">Бесплатная доставка</h3>
           <p class="b-why-we__text">Детский букет, игрушки из цветов, оформление дня рождения,  оформление детского праздника, детская доставка.</p>
@@ -161,13 +157,9 @@
   <div class="container">
     <h2 class="section__title">Новости</h2>
 
-    <div class="row">
+    <div class="content-block">
     @@for (i=1; i<=3; i++){
-      <div class="col col--4-of-12">
-        
         @@include('./../parts/news.html', {"index": "`+i+`"})
-
-      </div>
     }
     </div>
 

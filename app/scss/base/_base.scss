@@ -24,10 +24,17 @@ a {
 img {
   max-width: 100%;
 }
-
+.content-block {
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
 .row {
   list-style: none;
-  margin-left: -30px
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
 }
 .col {
   box-sizing: border-box;

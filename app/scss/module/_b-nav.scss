@@ -1,14 +1,14 @@
 .b-nav{
-	min-height: 100px;
-	background-color: #d1d4d3;
+	   min-height: 100px;
+	   background-color: #d1d4d3;
 
-	@include note {
-		display: none;
-	}
-	@include twoK {
-		margin-top: 70px;
-	}
-}
+	   @include note {
+		   display: none;
+	   }
+	   @include twoK {
+		   margin-top: 70px;
+	   }
+   }
 .b-nav__list{
 	@extend %list;
 	@extend %clearfix;
@@ -18,7 +18,6 @@
 	position: relative;
 	display: inline-block;
 	padding: 28px 0 27px 50px;
-	margin-right: -.25em;
 	margin-left: 55px;
 
 	&:before {

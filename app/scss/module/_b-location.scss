@@ -1,10 +1,12 @@
 .b-location{
 	position: relative;
-	padding-left: 73px;
+	padding-left: 42px;
 	font-size: 19px;
 	line-height: 22px;
 	font-weight: 600;
 	color: #3d3f3c;
+	letter-spacing: -0.9px;
+	margin-top: -1px;
 
 	&:before{
 		content: '';

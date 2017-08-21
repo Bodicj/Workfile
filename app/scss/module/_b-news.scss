@@ -14,12 +14,14 @@
 	}
 }
 .b-news__title{
-	margin: 0 0 7px;
-	font-size: 20px;
-	font-weight: 600;
-	line-height: 24px;
-	text-transform: uppercase;
-	color: #121212;
+  margin: 0 0 7px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #121212;
+  width: 75%;
+  letter-spacing: 1px;
 	@include twoK{
 		font-size: 25px;
 		line-height: 25px;
@@ -78,4 +80,8 @@
 	@include huge {
 		padding-right: 45px;
 	}
+}
+#news_content{
+  padding-top: 17px;
+  padding-left:  6px;
 }

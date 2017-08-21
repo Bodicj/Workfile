@@ -86,7 +86,31 @@
 			</div>
 
 			<div class="footer__right">
-				<div class="b-map"><img src="./img/map.jpg" alt=""></div>
+				<div id="map">
+					<script>
+						function initMap() {
+							var university = {lat: 50.444248, lng: 30.505879};
+							var center = {lat:50.442441, lng: 30.509395};
+							var square = {lat:50.439360, lng: 30.516294};
+							var map = new google.maps.Map(document.getElementById('map'), {
+								zoom: 14,
+								center: center
+							});
+							var marker1 = new google.maps.Marker({
+								position: university,
+								map: map
+							});
+							var marker2 = new google.maps.Marker({
+								position: square,
+								map: map
+							});
+						}
+					</script>
+					<script async defer
+							src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbYdRSX_XQ-p7xlVH9V2KiuXZq1FqQKIo&callback=initMap">
+					</script>
+
+				</div>
 			</div>
 
 			<div class="footer__bottom">

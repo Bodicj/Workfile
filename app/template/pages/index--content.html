@@ -10,7 +10,7 @@
   <div class="container">
     <h2 class="section__title">Топ продаж</h2>
 
-    <div class="content-block">
+    <div class="content-block" id="product_content">
     @@for (i=1; i<=8; i++){
         @@include('./../parts/product.html', {"index": "`+i+`"})
     }
@@ -157,7 +157,7 @@
   <div class="container">
     <h2 class="section__title">Новости</h2>
 
-    <div class="content-block">
+    <div class="content-block" id="news_content">
     @@for (i=1; i<=3; i++){
         @@include('./../parts/news.html', {"index": "`+i+`"})
     }

@@ -57,14 +57,20 @@
 .section--news{
 	/*padding-top: 149px;*/
 	padding-bottom: 285px;
+	margin-top: 109px;
 
-/* 	@include huge {
+	/* 	@include huge {
 	padding-top: 80px;
 } */
-
+}
 	.section__title{
-		margin-bottom: 96px;
-	}
+		margin: 0 0 147px;
+		font-size: 36px;
+		font-weight: 700;
+		line-height: 42px;
+		text-transform: uppercase;
+		text-align: center;
+		color: #121212;
 }
 .section--text{
 	position: relative;

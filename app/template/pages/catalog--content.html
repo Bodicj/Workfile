@@ -41,10 +41,10 @@
 
         <div class="b-wiget__body">
           <form class="g-form js-form-simple-order">
-            <div class="g-form__field g-mb--32">
+            <div class="g-form__field">
               <input class="g-input g-input--md" type="text" name="name" placeholder="Имя">
             </div>
-            <div class="g-form__field g-mb--32">
+            <div class="g-form__field">
               <input class="g-input g-input--md" type="tel" name="phone" placeholder="Номер телефона">
             </div>
             <div class="g-form__field">
@@ -79,13 +79,9 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="content-block">
       @@for (i=1; i<=15; i++){
-        <div class="item">
-          
           @@include('./../parts/product.html', {"index": "`+i+`"})
-
-        </div>
       }
       </div>
       <!-- /PRODUCTS -->

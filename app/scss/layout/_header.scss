@@ -13,8 +13,8 @@
 }
 .header__logo{
 	position: absolute;
-	top: -28px; left: 50%;
-	margin-left: -11.52%;
+	top: -32px; left: 50%;
+	margin-left: -11.82%;
 	z-index: 40;
 	width: 22.36%;;
 }
@@ -50,8 +50,9 @@
 .header__social{
 	float: left;
 	padding-top: 6px;
-	margin-left: 36px;
+	margin-left: 4.4%;
     margin-right: 50px;
+	width: 25%;
 
 	@include twoK {
 		margin-right: 167px;
@@ -67,6 +68,7 @@
 .header__account{
 	float: left;
 	padding-top: 6px;
+	margin-left: 14.8%;
 	@include fourK {
 		margin-top: 17px;
 	}

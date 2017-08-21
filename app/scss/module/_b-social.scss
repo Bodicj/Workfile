@@ -1,5 +1,6 @@
 .b-social{
 	float: left;
+	margin-left: 5%;
 	@include clearfix();
 }
 .b-social__item{
@@ -17,7 +18,7 @@
 	}
 }
 .b-social--footer{
-	margin-left: -2px;
+	margin-left:  9px;
 
 	.b-social__item{
 		margin-right: 24px;

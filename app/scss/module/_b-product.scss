@@ -3,10 +3,14 @@
 	margin: 0 auto 133px;
 	position: relative;
 	width: 21.804%;
+	padding: 0 2%;
+}
+#product_content{
+	margin-top:  150px;
 }
 .b-product__photo{
 	display: block;
-	height: 260px;
+	height: 280px;
 	margin-bottom: 30px;
 
 	img{
@@ -27,7 +31,8 @@
 }
 .b-product__tags{
 	position: absolute;
-	top: 0;right: 0;
+	top: -35px;
+	right: 19px;
 }
 .b-product__tag{
 	display: inline-block;

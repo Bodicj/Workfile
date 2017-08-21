@@ -124,8 +124,8 @@ textarea{
 }
 .g-form__field{
   position: relative;
-  width: 100%;
-  margin-bottom: 20px;
+  width: 97%;
+  margin-bottom: 32px;
   
   &.is--required{
     &:after{
@@ -142,7 +142,7 @@ textarea{
   select,
   textarea{
     @extend %formElement;
-    width: 100%;
+    width: 101%;
     @include fourK {
       font-size: 35px;
       line-height: 40px;

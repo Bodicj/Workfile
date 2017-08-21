@@ -47,10 +47,11 @@ img {
 
 .container{
   // min-width: 320px;
-  min-width: 85.93%;
+  min-width: 86.8%;
   max-width: 85.93%;
-	margin: 0 auto;
+  margin: 0 auto;
   padding: 0 15px;
+  margin-left: 7%;
   @include clearfix();
   
   @include huge {

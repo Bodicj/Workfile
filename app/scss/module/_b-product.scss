@@ -1,9 +1,8 @@
 .b-product{
 	max-width: 76.56%;
-	margin: 0 auto 133px;
+	margin: 0 0 122px;
 	position: relative;
-	width: 21.804%;
-	padding: 0 2%;
+	width: 17.9%;
 }
 #product_content{
 	margin-top:  150px;
@@ -31,8 +30,8 @@
 }
 .b-product__tags{
 	position: absolute;
-	top: -35px;
-	right: 19px;
+	top: -36px;
+	right: -73px;
 }
 .b-product__tag{
 	display: inline-block;
@@ -197,7 +196,9 @@
 		text-align: center;
 		transition: background-color .3s;
 		cursor: pointer;
-
+		margin-bottom: 0px;
+		margin-right: 8px;
+		margin-top: 5px;
 		&:hover{
 			background-color: #d1d4d3;
 		}
@@ -218,9 +219,10 @@
 	right: 1px;
 }
 .b-product__action{
-	padding-top: 20px;
+	padding-top: 23px;
 	margin-bottom: 18px;
 	clear: both;
+	margin-left: 5px;
     @include fourK {
       width: 82%;
       margin-left: 9%;

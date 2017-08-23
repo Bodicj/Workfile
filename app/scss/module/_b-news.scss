@@ -1,27 +1,28 @@
 .b-news{
 	margin-bottom: 45px;
-	width: 31%;
+	width: 31.5%;
 }
 .b-news__photo{
 	display: block;
-	margin: 0 0 26px;
+	margin: 0 0 24px;
 	img{
 		display: block;
-		//margin: 0 auto;
+		width: 100%;
 		@include twoK {
 			width: 100%;
 		}
 	}
 }
 .b-news__title{
-  margin: 0 0 7px;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 24px;
-  text-transform: uppercase;
-  color: #121212;
-  width: 75%;
-  letter-spacing: 1px;
+	margin: 0 0 7px;
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: #121212;
+	width: 75%;
+	padding: 0;
+	padding-left: 16px;
 	@include twoK{
 		font-size: 25px;
 		line-height: 25px;
@@ -56,6 +57,8 @@
 	font-weight: 400;
 	line-height: 16px;
 	color: #121212;
+	letter-spacing: px;
+	width: 83%;
 	@include twoK {
 		max-height: 87px;
 		font-size: 20px;
@@ -73,10 +76,8 @@
 .b-news__title,
 .b-news__text,
 .b-news__action{
-	//padding: 0 85px 0 20px;
-	padding: 0;
-
-
+	padding-left: 3px;
+	padding-top: 2px;
 	@include huge {
 		padding-right: 45px;
 	}

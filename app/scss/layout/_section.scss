@@ -27,27 +27,34 @@
 	}
 }
 .section--services{
-	padding-top: 40px;
+	padding-top: 18px;
 	padding-bottom: 271px;
+	padding-left: 5px;
+}
+#section_tite_services{
+	margin: 0 0 80px;
 }
 .section--why-we{
 	position: relative;
-	padding-top: 163px;
+	padding-top: 158px;
 	padding-bottom: 58px;
+	padding-left: 4px;
 
 	&:before{
-		content: '';
+		content: "";
 		position: absolute;
-		left: 50%; 
+		left: 50%;
 		top: -133px;
 		margin-left: -180px;
 		width: 385px;
 		height: 261px;
-		background: url('../img/why-we-flower.png') 0 0 no-repeat;
+		background: url(../img/why-we-flower.png) -9px 0 no-repeat;
 	}
 
 	.section__title{
 		padding-bottom: 27px;
+		margin-bottom: 81px;
+		padding-left: 1px;
 
 /* 		@include huge {
 	padding-bottom: 5px;
@@ -56,8 +63,12 @@
 }
 .section--news{
 	/*padding-top: 149px;*/
-	padding-bottom: 285px;
+	padding-bottom: 259px;
 	margin-top: 109px;
+
+	.section__title{
+		margin-bottom: 81px;
+	}
 
 	/* 	@include huge {
 	padding-top: 80px;
@@ -71,6 +82,7 @@
 		text-transform: uppercase;
 		text-align: center;
 		color: #121212;
+
 }
 .section--text{
 	position: relative;
@@ -82,17 +94,18 @@
 } */
 
 	&:before{
-		content: '';
+		content: "";
 		position: absolute;
-		left: 50%; top: -213px;
+		left: 50%;
+		top: -213px;
 		margin-left: -339px;
 		width: 622px;
 		height: 380px;
-		background: url('../img/text-flower.png') 0 0 no-repeat;
+		background: url(../img/text-flower.png) 43px 0px no-repeat;
 	}
 }
 .section--subscribe{
-	background:#fff url('./../img/subscribe-bg.jpg') center 130px no-repeat;
+	background: #fff url(../img/subscribe-bg.jpg) -1px 130px no-repeat;
 	padding-top: 0;
 	padding-bottom: 535px;
 }

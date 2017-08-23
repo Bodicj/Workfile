@@ -25,6 +25,7 @@ img {
   max-width: 100%;
 }
 .content-block {
+  margin-left:  -1px;
   list-style: none;
   display: flex;
   flex-flow: row wrap;
@@ -46,12 +47,12 @@ img {
 }
 
 .container{
-  // min-width: 320px;
-  min-width: 86.8%;
-  max-width: 85.93%;
+  min-width: 1600px;
+  max-width: 1649px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0px 10px;
   margin-left: 7%;
+  padding-right: 19px;
   @include clearfix();
   
   @include huge {
@@ -121,6 +122,7 @@ textarea {
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
+  letter-spacing: 0.4px;
 
   @include huge {
     font-size: 21px;

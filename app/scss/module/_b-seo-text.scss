@@ -1,7 +1,8 @@
 .b-seo-text{
-	padding: 0 102px 54px;
+	padding: 0 102px 59px;
 	margin: 0 auto;
 	clear: both;
+	padding-right: 86px;
 
 	p {
 		margin: 0;
@@ -9,12 +10,14 @@
 }
 .b-seo-text__inner{
 	margin-bottom: 20px;
-	font-family: 'PT Sans', sans-serif;
+	font-family: PT Sans,sans-serif;
 	font-size: 19px;
-	line-height: 21px;
+	line-height: 22.6px;
 	font-weight: 400;
 	color: #1a1a1a;
 	text-align: center;
+	margin-top: -1px;
+	margin-left: 5px;
 	@extend %transition;
 
 	@include huge {
@@ -31,7 +34,7 @@
 	}
 
 	&.is--short{
-		max-height: 105px;
+		max-height: 115px;
 		overflow: hidden;
 		@extend %transition;
 		@include fourK {

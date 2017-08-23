@@ -37,10 +37,12 @@
 
 	input {
 		width: auto;
-		min-width: 309px;
+		min-width: 310px;
 		box-sizing: border-box;
 		display: inline-block;
-		margin-right: 30px;
+		margin-right: 29px;
+		font-size: 16px;
+		padding-left: 17px !important;
 
 		@include huge {
 			min-width: 235px;
@@ -62,10 +64,9 @@
 		border: none;
 		padding-top: 9.5px;
 		padding-bottom: 9.5px;
-		padding-left: 6px;
 		width: 320px;
 		margin-left: -4px;
-		padding-left: 20px;
+		margin-right: 28px;
 	}
 	input[type="text"]{
 		border: none;
@@ -75,9 +76,10 @@
 	}
 	input[type="submit"] {
 		min-width: 0;
-		width: 131px;
-		padding: 5px;
+		width: 135px;
+		padding: 8px 20px 6px 0;
 		font-weight: 500;
+		font-size: 14px;
 		@include fourK {
 			line-height: 40px;
 		}

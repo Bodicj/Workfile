@@ -1,7 +1,7 @@
 .b-cart{
 	display: block;
 	position: relative;
-	padding: 5px 8px 0 0;
+	padding: 4px 3px 0 0;
 
 	@include twoK {
 		padding: 5px 14px 0 0;
@@ -9,12 +9,12 @@
 }
 .b-cart__total{
 	position: absolute;
-	top: 0;right: 0;
+	top: 0;
+	right: -7px;
 	width: 19px;
 	height: 19px;
 	border-radius: 50%;
-	border:2px solid;
-
+	border: 2px solid;
 	font-size: 12px;
 	font-weight: 600;
 	line-height: 15px;

@@ -10,6 +10,7 @@
 	   }
    }
 .b-nav__list{
+	margin-left: -17px;
 	@extend %list;
 	@extend %clearfix;
 	@extend %flexrow;
@@ -17,7 +18,7 @@
 .b-nav__item{
 	position: relative;
 	display: inline-block;
-	padding: 28px 0 27px 50px;
+	padding: 25px 0 27px 50px;
 	margin-left: 55px;
 
 	&:before {
@@ -29,6 +30,7 @@
 	&.with--subnav:hover{
 		.b-nav__sublist{
 			display: block;
+			margin-left:17px;
 		}
 	}
 
@@ -48,6 +50,7 @@
 	font-weight: 600;
 	text-transform: uppercase;
 	color: #262c26;
+	line-height: 24px;
 
 	&.is--current,
 	&:hover{
@@ -70,16 +73,16 @@
 	}
 
 }
-.b-nav__item-1{
-	padding-left: 48px;
+.b-nav__item-1 {
+	padding-left: 53px;
 	margin-left: 0;
 	&:before{
-		left: 2px;
+		left: 8px;
 		@include sprite($i-menu-item-1);
 	}
 }
 .b-nav__item-2{
-	margin-left: 100px;
+	margin-left: 103px;
 	&:before{
 		left: 2px;
 		@include sprite($i-menu-item-2);
@@ -127,9 +130,9 @@
 	}
 }
 .b-nav__item-6{
-	margin-left: 20px;
+	padding-left: 12px;
 	&:before{
-		left: 9px;
+		left: -27px;
 		top: 30px;
 		@include sprite($i-menu-item-6);
 	}
@@ -159,6 +162,7 @@
 	padding: 20px 50px;
 	border-top: 10px solid #fff;
 	background-color: #d1d4d3;
+	margin-left: -9px;
 }
 .b-nav__sublist-link{
 	display: block;

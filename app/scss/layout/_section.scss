@@ -9,6 +9,17 @@
 .section--products{
 	padding-top: 165px;
 	padding-bottom: 16px;
+	.container{
+		min-width: 1600px;
+		max-width: 1651px;
+		margin: 0 auto;
+		padding: 0 10px;
+		margin-left: 7%;
+		padding-right: 19px;
+		.section__title{
+			margin: 0 0px 129px;
+		}
+	}
 
 /* 	@include huge {
 	padding-top: 80px;
@@ -27,9 +38,9 @@
 	}
 }
 .section--services{
-	padding-top: 18px;
-	padding-bottom: 271px;
-	padding-left: 5px;
+		padding-top: 18px;
+		padding-bottom: 255px;
+		padding-left: 5px;
 }
 #section_tite_services{
 	margin: 0 0 80px;
@@ -65,7 +76,10 @@
 	/*padding-top: 149px;*/
 	padding-bottom: 259px;
 	margin-top: 109px;
-
+	.container{
+		max-width: 1656px;
+		padding-left: 19px;
+	}
 	.section__title{
 		margin-bottom: 81px;
 	}

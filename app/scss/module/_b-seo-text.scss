@@ -1,45 +1,46 @@
 .b-seo-text{
-	padding: 0 102px 59px;
+	padding: 0 100px 59px;
 	margin: 0 auto;
 	clear: both;
-	padding-right: 86px;
+	padding-right: 89px;
 
 	p {
 		margin: 0;
+        letter-spacing: -.001em;
 	}
 }
 .b-seo-text__inner{
 	margin-bottom: 20px;
 	font-family: PT Sans,sans-serif;
 	font-size: 19px;
-	line-height: 22.6px;
+	line-height: 23px;
 	font-weight: 400;
 	color: #1a1a1a;
 	text-align: center;
 	margin-top: -1px;
-	margin-left: 5px;
+	margin-left: 2px;
 	@extend %transition;
 
-	@include huge {
-		font-size: 16px;
-		line-height: 21px;
-	}
-	@include twoK {
-		font-size: 23px;
-		line-height: 26px;
-	}
-	@include fourK {
-		font-size: 35px;
-		line-height: 40px;
-	}
+//	@include huge {
+//		font-size: 16px;
+//		line-height: 21px;
+//	}
+//	@include twoK {
+//		font-size: 23px;
+//		line-height: 26px;
+//	}
+//	@include fourK {
+//		font-size: 35px;
+//		line-height: 40px;
+//	}
 
 	&.is--short{
 		max-height: 115px;
 		overflow: hidden;
 		@extend %transition;
-		@include fourK {
-			max-height: 115px;
-		}
+//		@include fourK {
+//			max-height: 115px;
+//		}
 	}
 }
 .b-seo-text__action{

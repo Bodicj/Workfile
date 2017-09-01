@@ -4,64 +4,65 @@
 	margin-bottom: 80px;
 }
 .b-why-we--1{
-	padding-left: 121px;
+	padding-left: 122px;
 }
 .b-why-we--2{
-	padding-left: 128px;
+	padding-left: 129px;
 
-	@include huge {
-		padding-left: 131px;
-	}
+//	@include huge {
+//		padding-left: 131px;
+//	}
 }
 .b-why-we--3{
 	padding-left: 160px;
 
-	@include huge {
-		padding-left: 145px;
-	}
+//	@include huge {
+//		padding-left: 145px;
+//	}
 }
 .b-why-we__title{
 	margin: 0 0 14px;
 	font-size: 26px;
 	font-weight: 700;
 	line-height: 30px;
+    letter-spacing: -.01em;
 	text-transform: uppercase;
 	color: #121212;
 
-	@include huge {
-		font-size: 19px;
-		line-height: 24px;
-		margin-bottom: 10px;
-	}
-	@include twoK {
-		font-size: 30px;
-		line-height: 30px;
-	}
-	@include fourK {
-		font-size: 35px;
-		line-height: 40px;
-	}
+//	@include huge {
+//		font-size: 19px;
+//		line-height: 24px;
+//		margin-bottom: 10px;
+//	}
+//	@include twoK {
+//		font-size: 30px;
+//		line-height: 30px;
+//	}
+//	@include fourK {
+//		font-size: 35px;
+//		line-height: 40px;
+//	}
 }
 .b-why-we__text{
 	margin: 0;
-	padding-left: 2px;
+	padding-left: 1px;
 	padding-right: 0;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 18px;
 	color: #121212;
 
-	@include huge {
-		font-size: 14px;
-	}
-	@include twoK {
-		font-size: 20px;
-		line-height: 20px;
-	}
-	@include fourK {
-		font-size: 28px;
-		line-height: 35px;
-	}
+//	@include huge {
+//		font-size: 14px;
+//	}
+//	@include twoK {
+//		font-size: 20px;
+//		line-height: 20px;
+//	}
+//	@include fourK {
+//		font-size: 28px;
+//		line-height: 35px;
+//	}
 }
 .b-why-we__icon{
 	position: absolute;
@@ -71,35 +72,35 @@
 	left: 3px;
 	top: 6px;
 	img{
-		@include fourK {
-			transform: scale(1.5);
-		}
+//		@include fourK {
+//			transform: scale(1.5);
+//		}
 	}
 
-	@include fourK {
-		left: -12px;
-		top: 25px;
-	}
+//	@include fourK {
+//		left: -12px;
+//		top: 25px;
+//	}
 }
 .b-why-we__icon--2{
-	top: -13px;
-	left: 19px;
+	top: -11px;
+	left: 17px;
 	img{
 		@include fourK {
 			transform: scale(1.5);
 		}
 	}
 
-	@include huge {
-		left: 19px;
-	}
-	@include fourK {
-		top: 8px;
-		left: 6px;
-	}
+//	@include huge {
+//		left: 19px;
+//	}
+//	@include fourK {
+//		top: 8px;
+//		left: 6px;
+//	}
 }
 .b-why-we__icon--3{
-	left: 25px;
+	left: 23px;
 	top: 3px;
 	img{
 		@include fourK {
@@ -107,17 +108,17 @@
 		}
 	}
 
-	@include huge {
-		left: 8px;
-	}
-	@include fourK {
-		left: 17px;
-		top: 29px;
-	}
+//	@include huge {
+//		left: 8px;
+//	}
+//	@include fourK {
+//		left: 17px;
+//		top: 29px;
+//	}
 }
 .b-why-we-single{
 	max-width: 30%;
 }
 #why-we-content{
-	padding-left: 4px;
+//	padding-left: 4px;
 }

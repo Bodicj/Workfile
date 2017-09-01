@@ -1,24 +1,38 @@
 .b-slider{
-	min-height: 793px;
+//	height: 800px;
 	img{
 		display: block;
-		width: 103%;
+//		width: 103%;
 	}
 }
 
 .b-slider__slide{
-	min-height: 793px;
+//	min-height: 793px;
+	height: 800px;
+    overflow: hidden;
 
-	&>img{
-		min-height: 793px;
-	}
+//	&>img{
+//		min-height: 793px;
+//		height: 800px;
+//	}
+}
+.b-slide__bg{
+    position: absolute;
+    left: 50%;
+    z-index: -1;
+    max-width: none;
+    height: 800px;
+    transform: translateX(-50%);
 }
 .b-slider__desc{
-	position: absolute;
-	top: 81px;
-	left: 14.1%;
-	width: 33.6315%;
-	padding: 49px 45px;
+//	position: absolute;
+//	top: 81px;
+//	left: 14.1%;
+//	width: 33.6315%;
+    margin-top: 81px;
+    margin-left: 125px;
+    width: 640px;
+	padding: 49px 45px 49px 36px;
 	background-color: rgba(250, 250, 250, 0.69);
 
 
@@ -36,21 +50,21 @@
 		color: #121212;
 		text-align: center;
 
-		@include huge {
-			font-size: 30px;
-		}
-        @include twoK {
-          font-size: 44px;
-          margin-bottom: 35px;
-        }
-        @include fourK {
-          font-size: 57px;
-          line-height: 60px;
-        }
+//		@include huge {
+//			font-size: 30px;
+//		}
+//        @include twoK {
+//          font-size: 44px;
+//          margin-bottom: 35px;
+//        }
+//        @include fourK {
+//          font-size: 57px;
+//          line-height: 60px;
+//        }
 	}
 	p {
 		font-family: 'PT Sans', sans-serif;
-		padding: 0 60px;
+		padding: 0 60px 0 56px;
 		margin: 0 0 33px;
 		font-size: 22px;
 		line-height: 27px;
@@ -58,44 +72,46 @@
 		color: #121212;
 		text-align: center;
 
-		@include huge {
-			font-size: 18px;
-		}
-        @include twoK {
-          font-size: 24px;
-        }
-      @include fourK {
-        font-size: 39px;
-        line-height: 45px;
-      }
+//		@include huge {
+//			font-size: 18px;
+//		}
+//        @include twoK {
+//          font-size: 24px;
+//        }
+//      @include fourK {
+//        font-size: 39px;
+//        line-height: 45px;
+//      }
 	}
 
 	form {
-		max-width: 70.093%;
+		max-width: 69%;
 		margin: 0 auto;
-		margin-left: 14.8%;
+//		margin-left: 14.8%;
 		
 		.g-btn,
 		input {
 			min-height: 50px;
-            @include twoK {
-              min-height: 70px;
-              font-size: 24px;
-              margin-top: 29px;
-            }
-          @include fourK {
-            min-height: 80px;
-            font-size: 35px;
-          }
+//            @include twoK {
+//              min-height: 70px;
+//              font-size: 24px;
+//              margin-top: 29px;
+//            }
+//          @include fourK {
+//            min-height: 80px;
+//            font-size: 35px;
+//          }
 		}
 
 		.g-btn--lg{
-			margin-top: 7px;
-			margin-right: 1px;
+			margin-top: 6px;
+			margin-right: 3px;
+            padding-left: 36px;
+            padding-right: 37px;
 		}
 
 		.g-form__field{
-			margin-bottom: 25px;
+			margin-bottom: 25.5px;
 		}
 	}
 
@@ -109,10 +125,10 @@
 		text-transform: none;
 		text-align: center;
 
-		@include huge {
-			font-size: 30px;
-			line-height: 42px;
-		}
+//		@include huge {
+//			font-size: 30px;
+//			line-height: 42px;
+//		}
 	}
 	.b-slider__desc-action{
 		max-width: 400px;
@@ -123,11 +139,11 @@
 	right: 120px; left: auto;
 	width: 540px;
 
-	@include huge {
-		right: 60px;
-		left: auto;
-	}
-    @include twoK {
-      width: 28.377%;
-    }
+//	@include huge {
+//		right: 60px;
+//		left: auto;
+//	}
+//    @include twoK {
+//      width: 28.377%;
+//    }
 }

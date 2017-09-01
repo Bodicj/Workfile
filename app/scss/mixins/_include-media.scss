@@ -121,6 +121,7 @@ $im-media-support: true !default;
 ///  @include media('>=tablet') {
 ///    .foo {
 ///      color: tomato;
+///      color: tomato;
 ///    }
 ///  }
 ///

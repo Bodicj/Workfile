@@ -1,15 +1,20 @@
-html{box-sizing:border-box}
+html{
+    transform-origin: 0 0;    // for document scale script
+    box-sizing:border-box
+}
 *,:after,:before{box-sizing:inherit}
 
 body {
   margin: 0;
-  min-width: 320px;
+//  min-width: 320px;
+//  min-width: 1920px;
   width: 100%;
   font-family: "Open Sans", Arial, sans-serif;
   
   font-size: $fs--base;
   line-height: $lh--base;
   color: $color__base;
+  
 }
 a {
   text-decoration: none;
@@ -47,36 +52,37 @@ img {
 }
 
 .container{
-  min-width: 1600px;
-  max-width: 1649px;
+//  min-width: 1600px;
+//  max-width: 1649px;
+    width: 1640px;
   margin: 0 auto;
   padding: 0px 10px;
-  margin-left: 7%;
-  padding-right: 19px;
+//  margin-left: 7%;
+//  padding-right: 19px;
   @include clearfix();
   
-  @include huge {
-    max-width: 1250px;
-  }
-  @include pc {
-    max-width: 970px;
-  }
-
-  @include note {
-    max-width: 750px;
-  }
-
-  @include tablet {
-    max-width: 480px;
-  }
-
-  @include small {
-    max-width: 90%;
-  }
-
-  @include phone {
-    width: 100%;
-  }
+//  @include huge {
+//    max-width: 1250px;
+//  }
+//  @include pc {
+//    max-width: 970px;
+//  }
+//
+//  @include note {
+//    max-width: 750px;
+//  }
+//
+//  @include tablet {
+//    max-width: 480px;
+//  }
+//
+//  @include small {
+//    max-width: 90%;
+//  }
+//
+//  @include phone {
+//    width: 100%;
+//  }
 
 }
 .title{
@@ -122,45 +128,51 @@ textarea {
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
-  letter-spacing: 0.4px;
+  letter-spacing: .019em;
 
-  @include huge {
-    font-size: 21px;
-    margin-bottom: 25px;
-  }
-  @include fourK {
-    font-size: 35px;
-    line-height: 40px;
-  }
+//  @include huge {
+//    font-size: 21px;
+//    margin-bottom: 25px;
+//  }
+//  @include fourK {
+//    font-size: 35px;
+//    line-height: 40px;
+//  }
 }
 .g-menu__list{
   margin: 0;
   padding: 0 40px 0 0;
   list-style-type: none;
 
-  @include huge {
-    padding: 0;
-  }
-}
-.g-menu__item{
-  padding: 4px 0;
-  margin-bottom: 4px;
+//  @include huge {
+//    padding: 0;
+//  }
 }
 .g-menu__item,
 .g-menu__link{
   font-size: 24px;
   font-weight: 300;
-  line-height: 28px;
+  line-height: 27px;
   color: #fff;
 
-  @include huge {
-    font-size: 16px;
-    line-height: 21px;
-  }
-  @include fourK {
-    font-size: 35px;
-    line-height: 40px;
-  }
+//  @include huge {
+//    font-size: 16px;
+//    line-height: 21px;
+//  }
+//  @include fourK {
+//    font-size: 35px;
+//    line-height: 40px;
+//  }
+}
+.g-menu__item{
+  padding: 4px 0;
+  margin-bottom: 4px;
+//    line-height: 27px;
+    
+    &:nth-child(2n){
+        margin-top: 7px;
+        margin-bottom: 0;
+    }
 }
 .g-menu__item span a{
   color: #fff;
@@ -171,7 +183,7 @@ textarea {
 }
 .g-menu__item i {
   margin-left: -25px;
-  margin-right: 3px;
+  margin-right: 4px;
 }
 
 .g-rating{
@@ -227,20 +239,20 @@ textarea {
   &:hover{
     text-decoration: underline;
   }
-  @include twoK{
-    font-size: 24px;
-  }
-  @include  fourK {
-    font-size: 35px;
-  }
+//  @include twoK{
+//    font-size: 24px;
+//  }
+//  @include  fourK {
+//    font-size: 35px;
+//  }
 }
 .g-link--allinfo{
-  padding-right: 5px;
+//  padding-right: 5px;
   float: right;
   font-weight: 700;
   text-transform: uppercase;
 }
 .is--relative{
   position: relative!important;
-  padding-right: 13px;
+//  padding-right: 13px;
 }

@@ -36,13 +36,13 @@
     margin-right: 8px;
   }
 
-  @include twoK {
-    font-size: 24px;
-  }
-  @include fourK {
-    font-size: 35px;
-    line-height: 40px;
-  }
+//  @include twoK {
+//    font-size: 24px;
+//  }
+//  @include fourK {
+//    font-size: 35px;
+//    line-height: 40px;
+//  }
 
 }
 
@@ -76,7 +76,7 @@
   margin: 0;
 }
 .g-btn--bordered{
-  padding: 8px 18px;
+  padding: 8px 17px;
   background-color: #fff;
   border: 2px solid #0f0f0f;
   font-size: 15px;
@@ -84,14 +84,14 @@
   font-weight: 700;
   text-transform: uppercase;
   color: #0f0f0f;
-  @include twoK {
-    font-size: 20px;
-    line-height: 28px;
-  }
-  @include fourK {
-    font-size: 30px;
-    line-height: 35px;
-  }
+//  @include twoK {
+//    font-size: 20px;
+//    line-height: 28px;
+//  }
+//  @include fourK {
+//    font-size: 30px;
+//    line-height: 35px;
+//  }
   
   &:hover{
     background:  #d6d6d4;

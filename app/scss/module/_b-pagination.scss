@@ -18,9 +18,9 @@
 	text-align: center;
 	transition: all .3s;
 
-	@include fourK {
-		font-size: 41px;
-	}
+//	@include fourK {
+//		font-size: 41px;
+//	}
 
 	&:hover{
 		background:#0f0f0f;
@@ -42,8 +42,8 @@
 			background: transparent;
 			color: #0f0f0f;
 		}
-		@include fourK {
-			line-height: 37px;
-		}
+//		@include fourK {
+//			line-height: 37px;
+//		}
 	}
 }

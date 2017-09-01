@@ -46,6 +46,34 @@ d.fn.arcticmodal=function(a){if(h[a])return h[a].apply(this,Array.prototype.slic
 
 $(function() {
   var $window = $(window);
+  
+  //
+  // Window scale script 
+  //---------------------------------------------------------------------------------------
+//    (function(){
+////    var elm = document.getElementById('all'); // all -- элемент, в который был обернут весь сайт
+////    var coeff = document.body.clientWidth/elm.offsetWidth; // считаем коэффициент масштабирования так, чтобы элемент all занял весь экран
+//    var  body = document.body
+//        ,html = document.getElementsByTagName("html")[0]
+//        ;
+//        
+//        console.log("body:", body);
+//        console.log("html:", html);
+//        console.log("body width:", body.clientWidth);
+//        console.log("html width:", html.clientWidth);    
+//        var coeff = html.clientWidth/body.clientWidth;
+//            console.log("coeff: ", coeff);
+//            console.log("style: ", 'scale('+coeff+')');
+//        if (coeff>1) coeff=1; // нам нужно только уменьшение сайта, но не его увеличение, поэтому ограничиваем коэффициент сверху единицей
+//        if (coeff<0.6) coeff=0.6; // ограничение снизу добавлено для того, чтобы сайт совсем уж не превращался в нечитаемый
+//        if (coeff!=1.0) {
+//        //    if (navigator.userAgent.indexOf('Firefox')!=-1) elm.style.boxShadow='none';  // масштабирование в Firefox порождало некорректное отображение boxshadow, и пришлось это свойство отключить
+////            html.style.webkitTransform = 
+////            html.style.msTransform = 
+////            html.style.mozTransform = 
+//            html.style.transform = 'scale('+coeff+')'; // собственно масштабирование
+//        }
+//    })()
 
   //
   // Переключатель для моб. версии главного меню сайта
@@ -248,6 +276,27 @@ $(function() {
   // Main Slider
   //---------------------------------------------------------------------------------------
 	(function(){
+        
+//        var  body = document.body
+//            ,html = document.getElementsByTagName("html")[0]
+//            ;
+//        
+//        console.log("body:", body);
+//        console.log("html:", html);
+//        console.log("body width:", body.clientWidth);
+//        console.log("html width:", html.clientWidth);    
+//        var coeff = html.clientWidth/body.clientWidth;
+//            console.log("coeff: ", coeff);
+//            console.log("style: ", 'scale('+coeff+')');
+//        if (coeff>1) coeff=1; // нам нужно только уменьшение сайта, но не его увеличение, поэтому ограничиваем коэффициент сверху единицей
+//        if (coeff<0.6) coeff=0.6; // ограничение снизу добавлено для того, чтобы сайт совсем уж не превращался в нечитаемый
+//        if (coeff!=1.0) {
+//        //    if (navigator.userAgent.indexOf('Firefox')!=-1) elm.style.boxShadow='none';  // масштабирование в Firefox порождало некорректное отображение boxshadow, и пришлось это свойство отключить
+//            html.style.webkitTransform = 
+//            html.style.msTransform = 
+//            html.style.mozTransform = 
+//            html.style.transform = 'scale('+coeff+')'; // собственно масштабирование
+//        }
 		
 		$('.js-slider').bxSlider({
 				//auto: true,

@@ -139,9 +139,9 @@ body.is--mobile-active{
   display: none;
   @include hamburger-icon;
 
-  @include note {
-    display: block;
-  } 
+//  @include note {
+//    display: block;
+//  } 
 }
 .b-mobile-nav-icon{
   position: absolute;
@@ -153,17 +153,17 @@ body.is--mobile-active{
     background:$color__primary;
   }
 
-  @include note {
-    display: block;
-  } 
-  @include tablet {
-    left: auto;
-    margin-left: 0;
-    right: 20px;
-  }
-  @include small {
-    right: 5px;
-  } 
+//  @include note {
+//    display: block;
+//  } 
+//  @include tablet {
+//    left: auto;
+//    margin-left: 0;
+//    right: 20px;
+//  }
+//  @include small {
+//    right: 5px;
+//  } 
 }
 .b-mobile-nav__toggle{
   position: absolute;

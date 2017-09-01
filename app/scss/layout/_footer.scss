@@ -1,5 +1,6 @@
 .footer{
 	position: relative;
+    height: 600px;
 	@extend %clearfix;
 	padding: 120px 0 0;
 	background-color: #121212;
@@ -7,6 +8,10 @@
 /* 	@include huge {
 	padding: 60px 0 0;
 } */
+    
+    .container{
+        padding: 0 4px;
+    }
 }
 .footer__left{
 	float: left;
@@ -14,14 +19,15 @@
 	padding-left: 11px;
 }
 .footer__right{
+	width: 37.3%;
 	position: absolute;
-	width: 37%;
 	right: 0;
 	top: 0;
 	bottom: 0;
 }
 .footer__bottom{
 	clear: both;
+    padding-left: 12px;
 }
 .footer__block{
 	display: inline-block;
@@ -35,18 +41,18 @@
 }
 .footer__block--2{
 	width: 33%;
-	padding-left: 9px;
+	padding-left: 10px;
 }
 .footer__block--3{
 	width: 38%;
-	padding-left: 108px;
-	margin-top: -4px;
+	padding-left: 102px;
+	margin-top: -3px;
 }
 .footer__block-menu--information{
 
 }
 .footer__block-menu--delivery{
-	margin-bottom: 72px;
+	margin-bottom: 69px;
 
 /* 	@include huge {
 	margin-bottom: 55px;
@@ -57,7 +63,7 @@
 	}
 }
 .footer__block-menu--account{
-	margin-left: -4px;
+	margin-left: -8px;
 	margin-bottom: 0px;
 
 /* 	@include huge {
@@ -65,7 +71,7 @@
 } */
 
 	h4{
-		margin-bottom: 49px;
+		margin-bottom: 51px;
 
 /* 		@include huge {
 	margin-bottom: 27px;
@@ -73,22 +79,33 @@
 	}
 }
 .footer__block-menu--contacts{
-	margin-bottom: 24px;
+	margin-bottom: 26px;
 
 	h4{
-		margin-bottom: 53px;
+		margin-bottom: 55px;
 
 /* 		@include huge {
 	margin-bottom: 33px;
 } */
 	}
 
-	ul li {
+	.g-menu__item {
+        margin-top: 0;
 		margin-bottom: 0;
+        padding-top: 2px;
 		padding-bottom: 0;
+        
+        &:last-child{
+            margin-top: 7px;
+            
+            i{
+                margin-right: 2px;
+            }
+        }
 	}
 
 }
 #all_adresses{
 	font-size: 22px;
+    letter-spacing: .003em;
 }

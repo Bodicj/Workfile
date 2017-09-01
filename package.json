@@ -25,6 +25,7 @@
     "imagemin-pngquant": "^5.0.1"
   },
   "devDependencies": {
-    "del": "^3.0.0"
+    "del": "^3.0.0",
+    "gulp-sourcemaps": "^2.6.1"
   }
 }

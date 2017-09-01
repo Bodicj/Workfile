@@ -13,16 +13,16 @@
 	th,td{
 		border: 1px solid #d3d3d3;
 		vertical-align: middle;
-		@include phone {
-			padding: 3px 6px 4px;
-			font-size: $fs--small;
-			line-height: $lh--small;	
-		}
-		@include tablet {
-			padding: 3px 10px 4px;
-			font-size: $fs--base;
-			line-height: $lh--base;
-		}
+//		@include phone {
+//			padding: 3px 6px 4px;
+//			font-size: $fs--small;
+//			line-height: $lh--small;	
+//		}
+//		@include tablet {
+//			padding: 3px 10px 4px;
+//			font-size: $fs--base;
+//			line-height: $lh--base;
+//		}
 	}
 	th{
 		font-weight: normal;

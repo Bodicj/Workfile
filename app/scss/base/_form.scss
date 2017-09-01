@@ -35,7 +35,7 @@ textarea{
 %formElement{
   display: inline-block;
   vertical-align: middle;
-  padding: 6px 15px 8px 20px;
+  padding: 4px 15px 8px 19px;
   outline: 0;
   border: 2px solid #121212;
   background-color: #ffffff;
@@ -59,9 +59,9 @@ textarea{
   width: 100%;
   margin: 0 auto;
   z-index: 10;
-  @include note {
-    width: 100%;
-  }
+//  @include note {
+//    width: 100%;
+//  }
 }
 .g-form__alarm{
   position: relative;
@@ -86,18 +86,18 @@ textarea{
 .g-form--right{
   float: right;
   
-  @include note {
-    float: none;
-    margin: 0 auto;
-  }
+//  @include note {
+//    float: none;
+//    margin: 0 auto;
+//  }
 }
 .g-form--left{
   float: left;
   
-  @include note {
-    float: none;
-    margin: 0 auto;
-  }
+//  @include note {
+//    float: none;
+//    margin: 0 auto;
+//  }
 }
 .g-form__inner{
   padding: 20px 30px 30px;
@@ -118,13 +118,13 @@ textarea{
   padding-top: 10px;
   text-align: center;
   .g-btn + .g-btn { margin-left: 20px; }
-  @include small {
-    .g-btn + .g-btn { margin-left: 0; margin-top: 20px; }
-  }
+//  @include small {
+//    .g-btn + .g-btn { margin-left: 0; margin-top: 20px; }
+//  }
 }
 .g-form__field{
   position: relative;
-  width: 97%;
+  width: 98%;
   margin-bottom: 32px;
   
   &.is--required{
@@ -142,11 +142,11 @@ textarea{
   select,
   textarea{
     @extend %formElement;
-    width: 101%;
-    @include fourK {
-      font-size: 35px;
-      line-height: 40px;
-    }
+    width: 100%;
+//    @include fourK {
+//      font-size: 35px;
+//      line-height: 40px;
+//    }
   }
   select{
     @extend %select;
@@ -335,11 +335,11 @@ textarea{
   height: 22px;
   border: 1px solid #0f0f0f;
   background-color: #ffffff;
-  @include fourK {
-    top: 5px;
-    width: 30px;
-    height: 30px;
-  }
+//  @include fourK {
+//    top: 5px;
+//    width: 30px;
+//    height: 30px;
+//  }
 }
 
 .g-checkbox:not(checked) + label:after {

@@ -1,42 +1,42 @@
 .b-search{
   position: relative;
   vertical-align: middle;
-  min-width: 365px;
+  min-width: 364px;
 	background-color: #f5f5f5;
   text-align: left;
 
-	@include huge {
-		min-width: 320px;
-	}
+//	@include huge {
+//		min-width: 320px;
+//	}
 
 	button {
 		position: absolute;
-		top: 6px; right: 20px;
+		top: 6px; right: 19px;
 		padding: 0; margin: 0;
 		background-color:#f5f5f5;
 		border: 0;
 		outline:0;
 		cursor: pointer;
 		z-index: 10;
-		@include twoK {
-			transform: scale(1.2);
-		}
-		@include fourK {
-			transform: scale(1.9);
-			top: 16px;
-			right: -193px;
-		}
+//		@include twoK {
+//			transform: scale(1.2);
+//		}
+//		@include fourK {
+//			transform: scale(1.9);
+//			top: 16px;
+//			right: -193px;
+//		}
 	}
 	input {
 		position: absolute;
-		top: 0; left: 0;
+		top: -1px; left: 0;
 		right: 0;
 		width: 100%;
-  	padding: 5px 32px 5px 18px;
+  	padding: 7px 32px 6px 17px;
   	border: 0;
 	  box-shadow: none;
 	  box-sizing: border-box;
-	  line-height: 20px;
+	  line-height: 18px;
 	  font-size: 14px;
 	  font-weight: 600;
 	  text-transform: uppercase;
@@ -45,14 +45,14 @@
 	  user-select: none;
 	  appearance: none;
 	  outline:none;
-		@include twoK{
-			line-height: 24px;
-			font-size: 15px;
-		}
-		@include fourK{
-			line-height: 45px;
-			font-size: 30px;
-			width:160%;
-		}
+//		@include twoK{
+//			line-height: 24px;
+//			font-size: 15px;
+//		}
+//		@include fourK{
+//			line-height: 45px;
+//			font-size: 30px;
+//			width:160%;
+//		}
 	}
 }

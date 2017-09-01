@@ -17,13 +17,13 @@
 	color: #0f0f0f;
 	text-align: left;
 
-	@include twoK {
-		font-size: 24px;
-	}
-	@include  fourK {
-		font-size: 35px;
-		line-height: 40px;
-	}
+//	@include twoK {
+//		font-size: 24px;
+//	}
+//	@include  fourK {
+//		font-size: 35px;
+//		line-height: 40px;
+//	}
 }
 .b-sort__dropdown{
 	display: inline-block;
@@ -42,12 +42,12 @@
 		right: 17px;
 	}
 
-	@include twoK {
-		width: 209px;
-	}
-	@include fourK {
-		width: 254px;
-	}
+//	@include twoK {
+//		width: 209px;
+//	}
+//	@include fourK {
+//		width: 254px;
+//	}
 }
 .b-sort__selected{
 	display: block;
@@ -61,12 +61,12 @@
 	cursor: pointer;
 	color: #0f0f0f;
 
-	@include twoK {
-		font-size: 18px;
-	}
-	@include  fourK {
-		font-size: 24px;
-	}
+//	@include twoK {
+//		font-size: 18px;
+//	}
+//	@include  fourK {
+//		font-size: 24px;
+//	}
 
 	i{
 		position: absolute;

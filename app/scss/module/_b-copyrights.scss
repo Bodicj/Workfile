@@ -1,7 +1,7 @@
 .b-copyrights{
-	padding: 41px 0 25px;
+	padding: 41px 0 25px 3px;
 	font-size: 18px;
-	line-height: 24px;
+	line-height: 30px;
 	font-weight: 300;
 	text-transform: uppercase;
 	color: #ffffff;
@@ -10,7 +10,7 @@
 		color: #ffffff;
 	}
 
-	@include fourK {
-		font-size: 24px;
-	}
+//	@include fourK {
+//		font-size: 24px;
+//	}
 }

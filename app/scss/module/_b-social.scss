@@ -6,12 +6,12 @@
 .b-social__item{
 	float: left;
 	margin-right: 10px;
-	@include twoK {
-		margin-right: 20px;
-	}
-	@include fourK {
-		margin-right: 48px;
-	}
+//	@include twoK {
+//		margin-right: 20px;
+//	}
+//	@include fourK {
+//		margin-right: 48px;
+//	}
 
 	&:last-child{
 		margin-right: 0;
@@ -23,13 +23,13 @@
 	.b-social__item{
 		margin-right: 24px;
 
-		@include huge {
-			margin-right: 10px;
-		}
-		@include fourK {
-			margin-right: 68px;
-			margin-top: 25px;
-		}
+//		@include huge {
+//			margin-right: 10px;
+//		}
+//		@include fourK {
+//			margin-right: 68px;
+//			margin-top: 25px;
+//		}
 
 		&:last-child{
 			margin-right: 0;

@@ -6,13 +6,17 @@
 	i,
 	span {
 		vertical-align: middle;
-		@include fourK {
-			margin-left: 18px;
-		}
+//		@include fourK {
+//			margin-left: 18px;
+//		}
 	}
 	i{
-		margin-right: 10px;
+		margin-right: 9.6px;
 	}
+    span{
+        vertical-align: -6%;
+        letter-spacing: .004em;
+    }
 
 	@include huge {
 		font-size: 16px;

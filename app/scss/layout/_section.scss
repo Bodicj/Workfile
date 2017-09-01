@@ -10,15 +10,19 @@
 	padding-top: 165px;
 	padding-bottom: 16px;
 	.container{
-		min-width: 1600px;
-		max-width: 1651px;
+//		min-width: 1600px;
+//		max-width: 1651px;
 		margin: 0 auto;
-		padding: 0 10px;
-		margin-left: 7%;
-		padding-right: 19px;
+//		padding: 0 4px;
+//		margin-left: 7%;
+//		padding-right: 19px;
 		.section__title{
-			margin: 0 0px 129px;
+			margin: 0 0px 108px;
 		}
+        .content-block{
+//            margin-left: -14px;
+//            margin-right: -9px;
+        }
 	}
 
 /* 	@include huge {
@@ -38,34 +42,45 @@
 	}
 }
 .section--services{
-		padding-top: 18px;
-		padding-bottom: 255px;
-		padding-left: 5px;
+	padding-top: 18px;
+	padding-bottom: 252px;
+//	padding-left: 5px;
+    
+    .container{
+//        padding: 0 10px;
+    }
 }
 #section_tite_services{
-	margin: 0 0 80px;
+	margin: 0 0 79px;
+    padding-left: 4px;
 }
 .section--why-we{
 	position: relative;
-	padding-top: 158px;
-	padding-bottom: 58px;
-	padding-left: 4px;
+	padding-top: 163px;
+	padding-bottom: 60px;
+//	padding-left: 4px;
 
 	&:before{
 		content: "";
 		position: absolute;
 		left: 50%;
-		top: -133px;
-		margin-left: -180px;
+		top: -130px;
+        transform: translateX(calc(20px - 50%));
+//		margin-left: -180px;
 		width: 385px;
 		height: 261px;
 		background: url(../img/why-we-flower.png) -9px 0 no-repeat;
 	}
+    
+    .container{
+//        padding: 0 10px;
+    }
 
 	.section__title{
+		margin-bottom: 80px;
 		padding-bottom: 27px;
-		margin-bottom: 81px;
-		padding-left: 1px;
+        padding-right: 2px;
+//		padding-left: 1px;
 
 /* 		@include huge {
 	padding-bottom: 5px;
@@ -74,14 +89,16 @@
 }
 .section--news{
 	/*padding-top: 149px;*/
-	padding-bottom: 259px;
+	padding-bottom: 260px;
 	margin-top: 109px;
 	.container{
-		max-width: 1656px;
-		padding-left: 19px;
+//		max-width: 1656px;
+//        padding-right: 10px;
+//        padding-left: 13px;
 	}
 	.section__title{
 		margin-bottom: 81px;
+        padding-right: 2px;
 	}
 
 	/* 	@include huge {
@@ -100,7 +117,7 @@
 }
 .section--text{
 	position: relative;
-	padding-top: 195px;
+	padding-top: 194px;
 	padding-bottom: 0px;
 
 /* 	@include huge {
@@ -111,15 +128,16 @@
 		content: "";
 		position: absolute;
 		left: 50%;
-		top: -213px;
-		margin-left: -339px;
+		top: -214px;
+//		margin-left: -339px;
+        transform: translateX(-48.65%);
 		width: 622px;
 		height: 380px;
-		background: url(../img/text-flower.png) 43px 0px no-repeat;
+		background: url(../img/text-flower.png) 0px 0px no-repeat;
 	}
 }
 .section--subscribe{
-	background: #fff url(../img/subscribe-bg.jpg) -1px 130px no-repeat;
+	background: #fff url(../img/subscribe-bg.jpg) 0 130px no-repeat;
 	padding-top: 0;
 	padding-bottom: 535px;
 }
@@ -132,10 +150,10 @@
 	text-align: center;
 	color: #121212;
 
-	@include twoK {
-		font-size: 40px;
-	}
-	@include fourK {
-		font-size: 55px;
-	}
+//	@include twoK {
+//		font-size: 40px;
+//	}
+//	@include fourK {
+//		font-size: 55px;
+//	}
 }

@@ -1,7 +1,8 @@
 #subscribe_container{
-	@extend %flexrow;
-	justify-content: unset;
-	margin-left: 8.05% !important;
+//	@extend %flexrow;
+    display: flex;
+//	justify-content: unset;
+//	margin-left: 8.05% !important;
 }
 
 .b-subscribe{
@@ -18,18 +19,18 @@
 	color: #fff;
 	vertical-align: middle;
 
-	@include huge {
-		font-size: 21px;
-		text-transform: none;
-	}
-	@include twoK {
-		font-size: 30px;
-	}
-	@include fourK {
-		font-size: 40px;
-		line-height: 40px;
-		padding-top: 10px;
-	}
+//	@include huge {
+//		font-size: 21px;
+//		text-transform: none;
+//	}
+//	@include twoK {
+//		font-size: 30px;
+//	}
+//	@include fourK {
+//		font-size: 40px;
+//		line-height: 40px;
+//		padding-top: 10px;
+//	}
 }
 .b-subscribe__form{
 	display: inline-block;
@@ -40,21 +41,21 @@
 		min-width: 310px;
 		box-sizing: border-box;
 		display: inline-block;
-		margin-right: 29px;
+		margin-right: 31px;
 		font-size: 16px;
-		padding-left: 17px !important;
+		padding-left: 17px;
 
-		@include huge {
-			min-width: 235px;
-		}
-		@include twoK {
-			font-size: 21px;
-		}
-		@include fourK {
-			font-size: 33px;
-			line-height: 33px;
-			min-width: 524px;
-		}
+//		@include huge {
+//			min-width: 235px;
+//		}
+//		@include twoK {
+//			font-size: 21px;
+//		}
+//		@include fourK {
+//			font-size: 33px;
+//			line-height: 33px;
+//			min-width: 524px;
+//		}
 
 		&:last-child{
 			margin-right: 0;
@@ -62,27 +63,28 @@
 	}
 	input[type="email"]{
 		border: none;
-		padding-top: 9.5px;
-		padding-bottom: 9.5px;
+		padding-top: 10px;
+		padding-bottom: 10px;
 		width: 320px;
 		margin-left: -4px;
-		margin-right: 28px;
+		margin-right: 26px;
 	}
 	input[type="text"]{
 		border: none;
 		padding-top: 10px;
 		padding-bottom: 10px;
-		margin-left: 31px;
+		margin-left: 29px;
 	}
 	input[type="submit"] {
 		min-width: 0;
-		width: 135px;
-		padding: 8px 20px 6px 0;
+		width: 137px;
+		padding: 9px 13px 7px 15px;
 		font-weight: 500;
 		font-size: 14px;
-		@include fourK {
-			line-height: 40px;
-		}
+        letter-spacing: .016em;
+//		@include fourK {
+//			line-height: 40px;
+//		}
 	}
 }
 .b-subscribe__form input:hover {

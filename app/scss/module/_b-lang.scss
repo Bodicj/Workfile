@@ -3,12 +3,13 @@
 	cursor: pointer;
 	transition: all .3s;
 	&:hover{
-		background:#fff;
+//		background:#fff;
+        text-decoration: underline;
 	}
 }
 .b-lang__current{
 	position: relative;
-	padding-right: 15px;
+	padding-right: 14px;
 	line-height: 20px;
 	font-size: 19px;
 	font-weight: 600;
@@ -18,27 +19,27 @@
 	&:after{
 		content: '';
 		position: absolute;
-		top: 8px; right: 4px;
+		top: 9px; right: 1px;
 		@include triangle(3px, #3d3f3c, 'down');
-		@include twoK {
-			@include triangle(4px, #3d3f3c, 'down')
-		}
-		@include fourK {
-			@include triangle(6px, #3d3f3c, 'down');
-			top: 17px;
-		}
+//		@include twoK {
+//			@include triangle(4px, #3d3f3c, 'down')
+//		}
+//		@include fourK {
+//			@include triangle(6px, #3d3f3c, 'down');
+//			top: 17px;
+//		}
 	}
 
-	@include huge {
-		font-size: 16px;
-	}
-	@include twoK {
-		font-size: 24px;
-	}
-	@include fourK {
-		font-size: 40px;
-		line-height: 45px;
-	}
+//	@include huge {
+//		font-size: 16px;
+//	}
+//	@include twoK {
+//		font-size: 24px;
+//	}
+//	@include fourK {
+//		font-size: 40px;
+//		line-height: 45px;
+//	}
 }
 .b-lang__list{
 	display: none;

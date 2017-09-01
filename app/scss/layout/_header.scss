@@ -1,31 +1,35 @@
 .header{
 	position: relative;
 	background: transparent url('../img/ht-bg.jpg') center top repeat;
-	@include twoK {
-		background-size: 100%;
-	}
-	@include fourK {
-		background-size: 100%;
-	}
+//	@include twoK {
+//		background-size: 100%;
+//	}
+//	@include fourK {
+//		background-size: 100%;
+//	}
 }
 .header--simple{
 	margin-bottom: 63px;
 }
 .header__logo{
 	position: absolute;
-	top: -32px; left: 50%;
-	margin-left: -11.82%;
+	top: -28px; left: 50%;
 	z-index: 40;
-	width: 22.36%;;
+//	margin-left: -11.95%;
+	width: 22.5%;
+    transform: translateX(-50%);
 }
 .header__top{
-	padding: 28px 0;
+	padding: 28px 0 20px;
+    min-height: 100px;
+//    display: flex;
+//    align-items: center;
 	@include clearfix();
 }
 .header__top-left{
 	float: left;
 	width: percentage(1/2);
-	padding-left: 0.3%;
+//	padding-left: 0.3%;
 
 /* 	@include huge {
 	padding-right: 100px;
@@ -54,44 +58,47 @@
     margin-right: 50px;
 	width: 25%;
 
-	@include twoK {
-		margin-right: 167px;
-	}
-	@include fourK {
-		margin-top: 30px;
-	}
+//	@include twoK {
+//		margin-right: 167px;
+//	}
+//	@include fourK {
+//		margin-top: 30px;
+//	}
 /* 	@include huge {
 	margin-left: 16px;
 	margin-right: 20px;
 } */
 }
 .header__account{
-	float: left;
+//	float: left;
+    float: right;
 	padding-top: 6px;
-	margin-left: 14.8%;
-	@include fourK {
-		margin-top: 17px;
-	}
+//	margin-left: 14.74%;
+	margin-right: 53px;
+//	@include fourK {
+//		margin-top: 17px;
+//	}
 }
 .header__lang{
 	float: right;
-	@include fourK {
-		margin-top: 17px;
-	}
+//	@include fourK {
+//		margin-top: 17px;
+//	}
 }
 .header__bottom{
+    min-height: 60px;
 	padding: 15px 0;
 	background-color: #0f0f0f;
-	@include twoK {
-      height: 80px;
-      padding-top: 22px;
-      margin-top: 19px;
-	}
-	@include fourK {
-      height: 125px;
-      padding-top: 33px;
-      margin-top: 34px;
-    }
+//	@include twoK {
+//      height: 80px;
+//      padding-top: 22px;
+//      margin-top: 19px;
+//	}
+//	@include fourK {
+//      height: 125px;
+//      padding-top: 33px;
+//      margin-top: 34px;
+//    }
 }
 .header__bottom-left{
 	float: left;
@@ -110,10 +117,11 @@
 .header__menu{}
 .header__search{
 	float: left;
-	margin-left: 35px;
+	margin-left: 31px;
 }
 .header__cart{
 	float: right;
 	margin-top: -8px;
 	margin-bottom: -10px;
+    margin-right: 9px;
 }

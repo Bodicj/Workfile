@@ -29,13 +29,6 @@ a {
 img {
   max-width: 100%;
 }
-.content-block {
-  margin-left:  -1px;
-  list-style: none;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-}
 .row {
   list-style: none;
   display: flex;
@@ -169,10 +162,10 @@ textarea {
   margin-bottom: 4px;
 //    line-height: 27px;
     
-    &:nth-child(2n){
-        margin-top: 7px;
-        margin-bottom: 0;
-    }
+//    &:nth-child(2n){
+//        margin-top: 7px;
+//        margin-bottom: 0;
+//    }
 }
 .g-menu__item span a{
   color: #fff;

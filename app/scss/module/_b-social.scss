@@ -6,12 +6,17 @@
 .b-social__item{
 	float: left;
 	margin-right: 10px;
+    filter: brightness(1);
+    transition: filter 200ms;
 //	@include twoK {
 //		margin-right: 20px;
 //	}
 //	@include fourK {
 //		margin-right: 48px;
 //	}
+    &:hover{
+        filter: brightness(0);
+    }
 
 	&:last-child{
 		margin-right: 0;
@@ -30,6 +35,10 @@
 //			margin-right: 68px;
 //			margin-top: 25px;
 //		}
+        
+        &:hover{
+            filter: brightness(1);
+        }
 
 		&:last-child{
 			margin-right: 0;

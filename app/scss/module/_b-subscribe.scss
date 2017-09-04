@@ -60,6 +60,10 @@
 		&:last-child{
 			margin-right: 0;
 		}
+        
+        &:hover{
+//	        border:none;
+        }
 	}
 	input[type="email"]{
 		border: none;
@@ -78,15 +82,16 @@
 	input[type="submit"] {
 		min-width: 0;
 		width: 137px;
-		padding: 9px 13px 7px 15px;
+		padding: 9px 13px 7px;
 		font-weight: 500;
 		font-size: 14px;
         letter-spacing: .016em;
 //		@include fourK {
 //			line-height: 40px;
 //		}
+        
+        &:hover{
+            border: 2px solid transparent;
+        }
 	}
-}
-.b-subscribe__form input:hover {
-	border:none;
 }

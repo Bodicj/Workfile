@@ -1,6 +1,7 @@
 .header{
 	position: relative;
-	background: transparent url('../img/ht-bg.jpg') center top repeat;
+	background: url('../img/ht-bg.jpg') repeat #e5e5e5;
+    background-position: calc(50% - 960px) 0;
 //	@include twoK {
 //		background-size: 100%;
 //	}
@@ -13,11 +14,13 @@
 }
 .header__logo{
 	position: absolute;
-	top: -28px; left: 50%;
+	top: -28px;
+//    left: calc(50% - 186px);
+    left: calc(50% - 11.34%);
 	z-index: 40;
 //	margin-left: -11.95%;
 	width: 22.5%;
-    transform: translateX(-50%);
+//    transform: translateX(-50%);
 }
 .header__top{
 	padding: 28px 0 20px;
@@ -81,6 +84,7 @@
 }
 .header__lang{
 	float: right;
+    margin-right: 2px;
 //	@include fourK {
 //		margin-top: 17px;
 //	}
@@ -117,7 +121,7 @@
 .header__menu{}
 .header__search{
 	float: left;
-	margin-left: 31px;
+	margin-left: 29px;
 }
 .header__cart{
 	float: right;

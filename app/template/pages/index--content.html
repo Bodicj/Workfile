@@ -11,15 +11,14 @@
     <h2 class="section__title">Топ продаж</h2>
 
     <div class="content-block" id="product_content1">
-    @@for (i=1; i<=4; i++){
-        @@include('./../parts/product.html', {"index": "`+i+`"})
-    }
+        @@for (i=1; i<=4; i++){
+            @@include('./../parts/product.html', {"index": "`+i+`"})
+        }
+        @@for (i=1; i<=4; i++){
+            @@include('./../parts/product.html', {"index": "`+i+`"})
+        }
     </div>
-    <div class="content-block" id="product_content2">
-      @@for (i=1; i<=4; i++){
-      @@include('./../parts/product.html', {"index": "`+i+`"})
-      }
-    </div>
+    <!--<div class="content-block" id="product_content2"></div>-->
 
     <a href="" class="g-link g-link--allinfo">В каталог</a>
 

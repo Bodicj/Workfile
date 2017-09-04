@@ -124,7 +124,7 @@ textarea{
 }
 .g-form__field{
   position: relative;
-  width: 98%;
+  width: 96.5%;
   margin-bottom: 32px;
   
   &.is--required{
@@ -156,11 +156,18 @@ textarea{
   }
 }
 .g-form__field--inline{
+    text-align: center;
+    margin-right: 0;
+    width: 100%;
   input,
   select,
   textarea{
     width: auto;
   }
+    
+    .g-input{
+        margin-right: 12px;
+    }
 }
 .g-form__field--select{
   position: relative;

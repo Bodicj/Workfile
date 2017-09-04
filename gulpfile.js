@@ -60,7 +60,7 @@ var config = {
 			.pipe(notify({ message: 'CSS done!' }));
 	});
 	gulp.task('scss-watch', ['scss'], function (done) {
-	    // browserSync.reload();
+	    browserSync.reload();
 	    done();
 	});
 

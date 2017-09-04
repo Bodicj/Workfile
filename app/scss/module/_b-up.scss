@@ -1,7 +1,8 @@
 .b-up{
 	display: none;
 	position: fixed;
-	right: 50px;
+//	right: 50px;
+	left: calc(50% + 810px);
 	bottom: 50px;
 	z-index: 250;
 	width: 90px;

@@ -2,17 +2,19 @@ $productNarrow: 290px;
 
 .b-product{
 	max-width: 76.56%;
-	margin: 0 0 122px;
+	margin: 0 30px 122px;
 	position: relative;
 //	width: 17.9%;
-    width: 325px;
+//    width: 325px;
+    width: $productNarrow;
 }
 #product_content{
 	margin-top:  150px;
 }
 .b-product__photo{
 	display: block;
-	height: 310px;
+//	height: 310px;
+	height: 260px;
 	margin-bottom: 21px;
 
 	img{
@@ -79,7 +81,7 @@ $productNarrow: 290px;
 }
 .b-product__title{
 	margin: 0 auto;
-    max-width: $productNarrow;
+//    max-width: $productNarrow;
 	text-align: center;
 
 	a{
@@ -101,7 +103,7 @@ $productNarrow: 290px;
 }
 .b-product__desc{
 	margin: 0 auto 16px;
-    max-width: $productNarrow;
+//    max-width: $productNarrow;
 	font-size: 14px;
 	line-height: 20px;
 	font-weight: 400;
@@ -118,7 +120,7 @@ $productNarrow: 290px;
 
 .b-product__nums{
     margin: 0 auto;
-    max-width: $productNarrow;
+//    max-width: $productNarrow;
 }
 .b-product__prices{
 	float: left;
@@ -205,7 +207,9 @@ $productNarrow: 290px;
 	}
 
 	span{
-		display: block;
+        position: absolute;
+        right: 1px;
+//		display: block;
 		width: 15px;
 		height: 14px;
 		font-size: 0;
@@ -214,7 +218,7 @@ $productNarrow: 290px;
 		transition: background-color .3s;
 		cursor: pointer;
 		margin-bottom: 0px;
-		margin-right: 8px;
+//		margin-right: 8px;
 //		margin-top: 5px;
 //        &:before{
 //            content: '';
@@ -223,6 +227,9 @@ $productNarrow: 290px;
 //		&:hover{
 //			background-color: #d1d4d3;
 //		}
+        i{
+            vertical-align: middle;
+        }
 	}
 //    @include fourK {
 //      width: 80px;
@@ -230,20 +237,20 @@ $productNarrow: 290px;
 //    }
 }
 .b-product__qty-plus{
-	position: absolute;
+//	position: absolute;
 	top: 1px;
-	right: 0;
-    i{
-        vertical-align: -35%;
-    }
+//	right: 0;
+//    i{
+//        vertical-align: -35%;
+//    }
 }
 .b-product__qty-minus{
-	position: absolute;
+//	position: absolute;
 	bottom: 1px;
-	right: 0;
-    i{
-        vertical-align: 0%;
-    }
+//	right: 0;
+//    i{
+//        vertical-align: 0%;
+//    }
 }
 .b-product__action{
 	padding-top: 23px;
@@ -251,7 +258,7 @@ $productNarrow: 290px;
 	clear: both;
     margin-left: auto;
     margin-right: auto;
-    max-width: $productNarrow;
+//    max-width: $productNarrow;
 //	margin-left: 5px;
 //    @include fourK {
 //      width: 82%;

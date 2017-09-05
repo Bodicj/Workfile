@@ -1,6 +1,6 @@
 var gulp         = require('gulp'), // Подключаем Gulp
 	sass         = require('gulp-ruby-sass'), //Подключаем Sass пакет,
-	// sourcemaps   = require('gulp-sourcemaps'),
+	sourcemaps   = require('gulp-sourcemaps'),
 	fileinclude  = require('gulp-file-include'),
 	spritesmith  = require('gulp.spritesmith'),
 	notify       = require('gulp-notify'),
@@ -30,10 +30,10 @@ var config = {
 
 	gulp.task('js', function() {
 		return gulp.src([
-				'app/libs/jquery/dist/jquery.min.js',
+				'app/libs/*',
 				'app/js/script.js'])
 				.pipe(concat('script.min.js'))
-				//.pipe(uglify()) // Сжимаем JS файл
+				.pipe(uglify()) // Сжимаем JS файл
 				.pipe(gulp.dest('dist/js')); // Выгружаем в папку app/js
 	});
 
@@ -48,14 +48,11 @@ var config = {
 	gulp.task('scss', function(){ // Создаем таск Sass
 		return sass('app/scss/style.scss',{
                 style: 'compressed',
-                // sourcemap: true
+                sourcemap: true
              })
-		    // .pipe(sourcemaps.write('maps', {
-	     //        includeContent: false,
-	     //        sourceRoot: 'source'
-	     //    }))
 			.pipe(autoprefixer(['last 3 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
 			.pipe(cssnano())
+	        .pipe(sourcemaps.write('.'))
 			.pipe(gulp.dest('dist/css'))
 			.pipe(notify({ message: 'CSS done!' }));
 	});
@@ -79,7 +76,7 @@ var config = {
 	});
 	gulp.task('html-watch', ['html'], function (done) {
 		setTimeout(function() {
-		    // browserSync.reload();
+		    browserSync.reload();
 		    done();
 		},2000);
 	});
@@ -88,9 +85,9 @@ var config = {
 	gulp.task('serve', ['js','scss','html'], function () {
 
 	    // Serve files from the root of this project
-	    browserSync.init({
-	        baseDir: "./app/"
-	    });
+	    // browserSync.init({
+	    //     baseDir: "./app/"
+	    // });
 
 	    // add browserSync.reload to the tasks array to make
 	    // all browsers reload after tasks are complete.
@@ -134,10 +131,10 @@ var config = {
 
 	gulp.task('build', ['clean', 'img', 'scss', 'html'], function() {
 
-		var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
+		var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшн
 		.pipe(gulp.dest('dist/fonts'));
 
-		var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
+		var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшн
 		.pipe(gulp.dest('dist/js'));
 	});
 

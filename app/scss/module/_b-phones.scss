@@ -8,14 +8,24 @@
 		content: '';
 		position: absolute;
 		left: 0; top: 5px;
+        width: 27px;
+        height: 36px;
+        background-image: url(../img/svg/i-phone.svg);
 //        filter: brightness(0);
-		@include sprite($i-phone-lg-black);
+//		@include sprite($i-phone-lg-black);
 //		@include fourK {
 //			transform: scale(2);
 //			margin-top: 18px;
 //			margin-right: 5px;
 //		}
 	}
+}
+.b-phones__icon{
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 27px;
+    height: 36px;
 }
 .b-phones__item{
 	font-size: 19px;

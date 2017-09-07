@@ -48,8 +48,11 @@
 	margin-left: 0;
 	&:before{
         top: 28px;
-//		left: 6px;
-		@include sprite($i-menu-item-1);
+		left: 6px;
+        width: 37px;
+        height: 46px;
+//		@include sprite($i-menu-item-1);
+        background-image: url(../img/svg/i-menu-item-1.svg);
 	}
 }
 .b-nav__item-2{
@@ -57,7 +60,10 @@
 	&:before{
         top: 27px;
 		left: 3px;
-		@include sprite($i-menu-item-2);
+        width: 32px;
+        height: 49px;
+//		@include sprite($i-menu-item-2);
+        background-image: url(../img/svg/i-menu-item-2.svg);
 	}
 
 //	@include huge {
@@ -68,9 +74,12 @@
 	padding-left: 60px;
 	margin-left: 34px;
 	&:before{
-		@include sprite($i-menu-item-3);
 		top: 16px;
-		left: -1px;
+		left: -2px;
+        width: 52px;
+        height: 58px;
+//		@include sprite($i-menu-item-3);
+        background-image: url(../img/svg/i-menu-item-3.svg);
 	}
 
 //	@include huge {
@@ -82,24 +91,38 @@
 	padding-left: 52px;
 	&:before{
 		top: 25px;
-		@include sprite($i-menu-item-4);
+        width: 40px;
+        height: 49px;
+//		@include sprite($i-menu-item-4);
+        background-image: url(../img/svg/i-menu-item-4.svg);
 	}
 
 //	@include huge {
 //		margin-left: 75px;
 //	}
+    .b-nav__sublist{
+        left: auto;
+        right: 0;
+    }
 }
 .b-nav__item-5{
 	padding-left: 68px;
 	margin-left: 114px;
 	&:before{
 		top: 31px;
-		@include sprite($i-menu-item-5);
+        width: 56px;
+        height: 43px;
+//		@include sprite($i-menu-item-5);
+        background-image: url(../img/svg/i-menu-item-5.svg);
 	}
 
 //	@include huge {
 //		margin-left: 94px;
 //	}
+    .b-nav__sublist{
+        left: auto;
+        right: 0;
+    }
 }
 .b-nav__item-6{
     padding-left: 15px;
@@ -107,16 +130,24 @@
 	&:before{
 		left: -26px;
 		top: 30px;
-		@include sprite($i-menu-item-6);
+        width: 43px;
+        height: 44px;
+        background-image: url(../img/svg/i-menu-item-6.svg);
+//		@include sprite($i-menu-item-6);
 	}
 
 //	@include huge {
 //		margin-left: 0px;
 //	}
 
-	a {
+	> a {
 		padding-left: 8px;
 	}
+    
+    .b-nav__sublist{
+        left: auto;
+        right: 0;
+    }
 }
 .b-nav__link{
 	position: relative;

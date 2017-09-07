@@ -1,7 +1,15 @@
+$headerTopSvgColor: #3D3F3C;
+$headerTopSvgColorHover: #0F0F0F;
+$svgTransitionTime: 0.2s;
+
 .header{
 	position: relative;
 	background: url('../img/ht-bg.jpg') repeat #e5e5e5;
-    background-position: calc(50% - 960px) 0;
+//    background-position: calc(50% - 960px) 0;
+    @include HDplus {
+	    background: url('../img/ht-bg-4k.jpg') top repeat #e5e5e5;
+	}
+        
 //	@include twoK {
 //		background-size: 100%;
 //	}
@@ -28,6 +36,17 @@
 //    display: flex;
 //    align-items: center;
 	@include clearfix();
+    
+    svg{
+        .filled{
+            fill: $headerTopSvgColor;
+            transition: fill $svgTransitionTime;
+        }
+        .stroked{
+            stroke: $headerTopSvgColor;
+            transition: stroke $svgTransitionTime;
+        }
+    }
 }
 .header__top-left{
 	float: left;
@@ -42,6 +61,7 @@
 	float: right;
 	width: percentage(1/2);
 	padding-left: 11.52%;
+    
 }
 .header__phones{
 	float: left;
@@ -60,6 +80,10 @@
 	margin-left: 4.4%;
     margin-right: 50px;
 	width: 25%;
+    
+//    svg:hover{
+//        fill: $headerTopSvgColorHover;
+//    }
 
 //	@include twoK {
 //		margin-right: 167px;
@@ -128,4 +152,10 @@
 	margin-top: -8px;
 	margin-bottom: -10px;
     margin-right: 9px;
+    
+    .b-cart-icon{
+        .filled{
+            fill: #FFFFFF;
+        }
+    }
 }

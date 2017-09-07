@@ -7,12 +7,18 @@ $productNarrow: 290px;
 //	width: 17.9%;
 //    width: 325px;
     width: $productNarrow;
+    
+    .g-btn--fullwide{
+        min-height: 45px;
+        padding: 12px 30px;
+    }
 }
 #product_content{
 	margin-top:  150px;
 }
 .b-product__photo{
 	display: block;
+    outline: 1px solid red;
 //	height: 310px;
 	height: 260px;
 	margin-bottom: 21px;

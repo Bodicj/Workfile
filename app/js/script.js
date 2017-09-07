@@ -299,7 +299,7 @@ $(function() {
 //        }
 		
 		$('.js-slider').bxSlider({
-				//auto: true,
+				auto: true,
 				pager: true,
 				controls:false
 			}

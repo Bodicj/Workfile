@@ -53,6 +53,10 @@ img {
 //  margin-left: 7%;
 //  padding-right: 19px;
   @include clearfix();
+    
+  @include huge{
+    width: 1200px;
+  }
   
 //  @include huge {
 //    max-width: 1250px;
@@ -181,26 +185,26 @@ textarea {
 
 .g-rating{
   display: inline-block;
-  background:url('../img/rating.png') 0 0 no-repeat;
+//  background:url('../img/rating.png') 0 0 no-repeat;
   width: 120px;
   height: 20px;
-  overflow: hidden;
+//  overflow: hidden;
 }
-.g-rating--0{
-  background:url('../img/rating.png') -120px 0 no-repeat;
-}
-.g-rating--1{
-  background:url('../img/rating.png') -92px 0 no-repeat;
-}
-.g-rating--2{
-  background:url('../img/rating.png') -69px 0 no-repeat;
-}
-.g-rating--3{
-  background:url('../img/rating.png') -46px 0 no-repeat;
-}
-.g-rating--4{
-  background:url('../img/rating.png') -23px 0 no-repeat;
-}
+//.g-rating--0{
+//  background:url('../img/rating.png') -120px 0 no-repeat;
+//}
+//.g-rating--1{
+//  background:url('../img/rating.png') -92px 0 no-repeat;
+//}
+//.g-rating--2{
+//  background:url('../img/rating.png') -69px 0 no-repeat;
+//}
+//.g-rating--3{
+//  background:url('../img/rating.png') -46px 0 no-repeat;
+//}
+//.g-rating--4{
+//  background:url('../img/rating.png') -23px 0 no-repeat;
+//}
 
 .g-text--right{
   text-align: right;

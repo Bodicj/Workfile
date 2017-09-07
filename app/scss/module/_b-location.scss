@@ -13,8 +13,11 @@
 		content: '';
 		position: absolute;
 		left: 0; top: 6px;
+        width: 29px;
+        height: 36px;
+        background-image: url(../img/svg/i-location.svg);
 //        filter: brightness(0);
-		@include sprite($i-location-lg-black);
+//		@include sprite($i-location-lg-black);
 //		@include fourK {
 //			transform: scale(2);
 //			margin-top: 18px;
@@ -33,6 +36,13 @@
 //		font-size: 40px;
 //		line-height: 45px;
 //	}
+}
+.b-location__icon{
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 29px;
+    height: 36px;
 }
 .b-location__current{}
 .b-location__more a{

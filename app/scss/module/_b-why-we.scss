@@ -66,11 +66,15 @@
 }
 .b-why-we__icon{
 	position: absolute;
-	top: 0; left: 0;
+//	top: 0; left: 0;
+    img{
+        width: 100%;
+    }
 }
 .b-why-we__icon--1{
-	left: 3px;
 	top: 6px;
+	left: 3px;
+    width: 89px;
 	img{
 //		@include fourK {
 //			transform: scale(1.5);
@@ -85,6 +89,7 @@
 .b-why-we__icon--2{
 	top: -11px;
 	left: 17px;
+    width: 83px;
 	img{
 //		@include fourK {
 //			transform: scale(1.5);
@@ -100,8 +105,9 @@
 //	}
 }
 .b-why-we__icon--3{
-	left: 23px;
 	top: 3px;
+	left: 23px;
+    width: 117px;
 	img{
 //		@include fourK {
 //			transform: scale(1.5);

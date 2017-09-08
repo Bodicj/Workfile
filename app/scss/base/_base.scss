@@ -127,10 +127,10 @@ textarea {
   color: #fff;
   letter-spacing: .019em;
 
-//  @include huge {
-//    font-size: 21px;
-//    margin-bottom: 25px;
-//  }
+  @include huge {
+    font-size: 21px;
+    margin-bottom: 25px;
+  }
 //  @include fourK {
 //    font-size: 35px;
 //    line-height: 40px;
@@ -152,10 +152,10 @@ textarea {
   line-height: 27px;
   color: #fff;
 
-//  @include huge {
-//    font-size: 16px;
-//    line-height: 21px;
-//  }
+  @include huge {
+    font-size: 16px;
+    line-height: 21px;
+  }
 //  @include fourK {
 //    font-size: 35px;
 //    line-height: 40px;
@@ -181,6 +181,10 @@ textarea {
 .g-menu__item i {
   margin-left: -25px;
   margin-right: 4px;
+    
+    @include huge{
+        vertical-align: middle;
+    }
 }
 
 .g-rating{

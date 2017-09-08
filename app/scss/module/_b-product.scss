@@ -8,6 +8,11 @@ $productNarrow: 290px;
 //    width: 325px;
     width: $productNarrow;
     
+    @include huge {
+        margin: 0 5px 122px;
+        width: $productNarrow - 10px;
+    }
+    
     .g-btn--fullwide{
         min-height: 45px;
         padding: 12px 30px;
@@ -82,7 +87,7 @@ $productNarrow: 290px;
 .b-product__tag--new{
 	border: 3px solid #0f0f0f;
 	font-size: 16px;
-	background-color: transparent;
+	background-color: #fff;
 	color: #0f0f0f;
 }
 .b-product__title{
@@ -230,9 +235,9 @@ $productNarrow: 290px;
 //            content: '';
 //            vertical-align: middle;
 //        }
-//		&:hover{
-//			background-color: #d1d4d3;
-//		}
+		&:hover{
+			background-color: #d1d4d3;
+		}
         i{
             vertical-align: middle;
         }

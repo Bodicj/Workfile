@@ -21,14 +21,23 @@ $svgTransitionTime: 0.2s;
 	margin-bottom: 63px;
 }
 .header__logo{
+    $width: 22.5%;
+    
 	position: absolute;
 	top: -28px;
 //    left: calc(50% - 186px);
-    left: calc(50% - 11.34%);
+    left: calc(50% - #{$width}/2);
 	z-index: 40;
 //	margin-left: -11.95%;
-	width: 22.5%;
+	width: $width;
 //    transform: translateX(-50%);
+    
+	@include huge {
+        $width: 26.5%;
+        
+        left: calc(50% - #{$width}/2);
+        width: $width;
+	}
 }
 .header__top{
 	padding: 28px 0 20px;
@@ -91,10 +100,11 @@ $svgTransitionTime: 0.2s;
 //	@include fourK {
 //		margin-top: 30px;
 //	}
-/* 	@include huge {
-	margin-left: 16px;
-	margin-right: 20px;
-} */
+ 	@include huge {
+        margin-right: 0;
+        margin-left: 43px;
+        width: auto;
+    } 
 }
 .header__account{
 //	float: left;
@@ -105,6 +115,9 @@ $svgTransitionTime: 0.2s;
 //	@include fourK {
 //		margin-top: 17px;
 //	}
+    @include huge {
+        margin-right: 22px;
+    }
 }
 .header__lang{
 	float: right;
@@ -146,6 +159,10 @@ $svgTransitionTime: 0.2s;
 .header__search{
 	float: left;
 	margin-left: 29px;
+    
+ 	@include huge {
+        margin-left: 43px;
+    } 
 }
 .header__cart{
 	float: right;

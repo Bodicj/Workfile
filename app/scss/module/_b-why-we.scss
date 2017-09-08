@@ -2,6 +2,10 @@
 	position: relative;
 	padding-left: 130px;
 	margin-bottom: 80px;
+    
+    @include huge{
+        margin-bottom: 0;
+    }
 }
 .b-why-we--1{
 	padding-left: 122px;
@@ -9,16 +13,16 @@
 .b-why-we--2{
 	padding-left: 129px;
 
-//	@include huge {
-//		padding-left: 131px;
-//	}
+	@include huge {
+		padding-left: 131px;
+	}
 }
 .b-why-we--3{
 	padding-left: 160px;
 
-//	@include huge {
-//		padding-left: 145px;
-//	}
+	@include huge {
+		padding-left: 145px;
+	}
 }
 .b-why-we__title{
 	margin: 0 0 14px;
@@ -29,11 +33,11 @@
 	text-transform: uppercase;
 	color: #121212;
 
-//	@include huge {
-//		font-size: 19px;
-//		line-height: 24px;
-//		margin-bottom: 10px;
-//	}
+	@include huge {
+		font-size: 19px;
+		line-height: 24px;
+		margin-bottom: 10px;
+	}
 //	@include twoK {
 //		font-size: 30px;
 //		line-height: 30px;
@@ -52,9 +56,9 @@
 	line-height: 18px;
 	color: #121212;
 
-//	@include huge {
-//		font-size: 14px;
-//	}
+	@include huge {
+		font-size: 14px;
+	}
 //	@include twoK {
 //		font-size: 20px;
 //		line-height: 20px;
@@ -69,6 +73,7 @@
 //	top: 0; left: 0;
     img{
         width: 100%;
+        transform: scale(0.9)
     }
 }
 .b-why-we__icon--1{
@@ -96,9 +101,9 @@
 //		}
 	}
 
-//	@include huge {
-//		left: 19px;
-//	}
+	@include huge {
+		left: 19px;
+	}
 //	@include fourK {
 //		top: 8px;
 //		left: 6px;
@@ -114,9 +119,9 @@
 //		}
 	}
 
-//	@include huge {
-//		left: 8px;
-//	}
+	@include huge {
+		left: 8px;
+	}
 //	@include fourK {
 //		left: 17px;
 //		top: 29px;

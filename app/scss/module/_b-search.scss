@@ -5,9 +5,9 @@
 	background-color: #f5f5f5;
   text-align: left;
 
-//	@include huge {
-//		min-width: 320px;
-//	}
+	@include huge {
+		min-width: 275px;
+	}
 
 	button {
 		position: absolute;

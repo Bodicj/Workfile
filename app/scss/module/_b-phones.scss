@@ -12,12 +12,16 @@
         height: 36px;
         background-image: url(../img/svg/i-phone.svg);
 //        filter: brightness(0);
+        @include huge {
+            transform: scale(0.9);
+        }
 //		@include sprite($i-phone-lg-black);
 //		@include fourK {
 //			transform: scale(2);
 //			margin-top: 18px;
 //			margin-right: 5px;
 //		}
+        
 	}
 }
 .b-phones__icon{
@@ -34,9 +38,9 @@
     letter-spacing: -.001em;
 	color: #3d3f3c;
 
-//	@include huge {
-//		font-size: 16px;
-//	}
+	@include huge {
+		font-size: 16px;
+	}
 //	@include twoK {
 //		font-size: 24px;
 //	}

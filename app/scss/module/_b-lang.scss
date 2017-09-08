@@ -18,12 +18,16 @@
             background:#f5f5f5;
         }
 	}
+    
+	@include huge {
+		font-size: 16px;
+	}
 }
 .b-lang__current{
 	position: relative;
 	padding-right: 14px;
 	line-height: 20px;
-	font-size: 19px;
+//	font-size: 19px;
 	font-weight: 600;
 	color: #3d3f3c;
 	cursor: pointer;
@@ -42,9 +46,6 @@
 //		}
 	}
 
-//	@include huge {
-//		font-size: 16px;
-//	}
 //	@include twoK {
 //		font-size: 24px;
 //	}

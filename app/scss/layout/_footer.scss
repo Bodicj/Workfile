@@ -5,12 +5,14 @@ $footerSvgColor: #FFFFFF;
 	position: relative;
     height: 600px;
 	@extend %clearfix;
-	padding: 120px 0 0;
+//	padding: 120px 0 0;
+	padding: 100px 0 0;
 	background-color: #121212;
 
-/* 	@include huge {
-	padding: 60px 0 0;
-} */
+ 	@include huge {
+        height: 480px;
+        padding: 58px 0 0;
+    } 
     
     .container{
 //        padding: 0 4px;
@@ -30,6 +32,9 @@ $footerSvgColor: #FFFFFF;
 	float: left;
 	width: 65%;
 //	padding-left: 11px;
+    @include huge{
+        width: 70%;
+    }
 }
 .footer__right{
 //	width: 37.3%;
@@ -69,16 +74,20 @@ $footerSvgColor: #FFFFFF;
 //	padding-left: 102px;
 //	margin-top: -3px;
     padding-left: 64px;
+    
+    @include huge{
+        padding-left: 60px;
+    }
 }
 .footer__block-menu--information{
 
 }
 .footer__block-menu--delivery{
-	margin-bottom: 77px;
+	margin-bottom: 78px;
 
-/* 	@include huge {
-	margin-bottom: 55px;
-} */
+ 	@include huge {
+        margin-bottom: 60px;
+    } 
 
 	ul {
 //		padding-top: 6px;
@@ -88,9 +97,10 @@ $footerSvgColor: #FFFFFF;
 //	margin-left: -8px;
 	margin-bottom: 11px;
 
-/* 	@include huge {
-	margin-bottom: 60px;
-} */
+ 	@include huge {
+//        margin-bottom: 60px;
+        margin-bottom: 13px;
+    } 
 
 	h4{
 //		margin-bottom: 45px;
@@ -103,12 +113,13 @@ $footerSvgColor: #FFFFFF;
 .footer__block-menu--contacts{
 	margin-bottom: 26px;
 
+    @include huge {
+        margin-bottom: 11px;
+    }
+    
 	h4{
 //		margin-bottom: 45px;
 
-/* 		@include huge {
-	margin-bottom: 33px;
-} */
 	}
 
 	.g-menu__item {
@@ -120,6 +131,10 @@ $footerSvgColor: #FFFFFF;
         &:last-child{
             margin-top: 34px;
             
+            @include huge{
+                margin-top: 60px;    
+            }
+            
             i{
                 margin-right: 2px;
             }
@@ -129,5 +144,9 @@ $footerSvgColor: #FFFFFF;
 }
 #all_adresses{
 	font-size: 22px;
-    letter-spacing: .003em;
+//    letter-spacing: .003em;
+    
+    @include huge {
+        font-size: 16px;
+    }
 }

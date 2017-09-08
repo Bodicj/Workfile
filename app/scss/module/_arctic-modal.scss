@@ -1,3 +1,6 @@
+body{
+  overflow: auto !important;
+}
 .arcticmodal{
 	position: relative;
 	min-width: 300px;
@@ -11,33 +14,72 @@
 		min-width: 260px;
 		max-width: 300px;
 	}
+    
+    .g-btn{
+        font-size: 16px;
+    }
+    
+    .g-form__field{
+        margin-bottom: 20px;
+        padding-right: 10px;
+        
+        .g-input{
+            border-width: 1px;
+            padding-left: 14px;
+            padding-top: 6px;
+            padding-bottom: 7px;
+            font-size: 16px;
+            font-weight: 300;
+            background-color: #f5f5f5;
+        }
+        
+        .g-btn{
+            width: 150px;
+            height: 36px;
+            padding: 7px 20px;
+        }
+        
+        .g-btn--link{
+            padding: 0;
+            padding-top: 10px;
+            padding-left: 3px;
+        }
+        
+        &:last-child{
+            margin-bottom: 0;
+            padding-right: 0;
+        }
+    }
+    
+    .g-form__field--inline{
+        text-align: initial;
+    }
+    
 }
 .arcticmodal-close{
 	position: absolute;
-	right: 24px; top: 24px;
+    top: 23px;
+	right: 23px;
 	cursor: pointer;
 }
 .arcticmodal--wide{
-	width: 980px;
-	max-width: 980px;
-}
-.arcticmodal-promo{
-	background:#fff;
-	padding: 25px 30px;
-	@include clearfix();
+	width: 983px;
+	max-width: 983px;
 }
 .arcticmodal-promo__left{
-	float: left;
+//	float: left;
+    max-width: 429px;
+    align-self: center;
 	width: 430px;
 	margin-right: 35px;
 }
 .arcticmodal-promo__right{
-	float: left;
+//	float: left;
 	padding-top: 50px;
-	width: 450px;
+//	width: 450px;
 }
 .arcticmodal-header{
-	padding: 50px 50px 16px;
+	padding: 45px 45px 18px;
 	margin: 0;	
 	font-size: 22px;
 	font-weight: 700;
@@ -47,13 +89,114 @@
 	color: #1a1a1a;
 }
 .arcticmodal-body{
-	padding: 0 50px;
+	padding: 0 45px 16px;
 	background: #fff;
+    
 }
 .arcticmodal-footer{
-	padding: 15px 50px 35px;
+	padding: 15px 44px 35px;
 	background: #fff;
 	color: #fff;
+    
+    .g-h3{
+        font-size: 16px;
+        line-height: 38px;
+        margin-bottom: 22px;
+    }
+    .g-form__alarm{
+        p{
+            padding-top: 3px;
+            line-height: 14px;
+        }
+    }
+}
+#promo{
+//	@include clearfix();
+    display: flex;
+	background:#fff;
+	padding: 25px 30px;
+    
+    .arcticmodal-close {
+        top: 19px;
+        right: 19px;
+    }
+    
+    .g-h2{
+        margin-bottom: 35px;
+        
+        &:first-child{
+            margin-bottom: 36px;
+        }
+        
+        span{
+            display: inline-block;
+            + span{
+                margin-left: 80px;
+            }
+        }
+    }
+    .g-form__field{
+    
+        .g-input{
+            padding: 8px 14px;
+            width: 156px;
+            margin-right: 6px;
+        }
+        .g-btn{
+            min-width: 124px;
+            width: 124px;
+            height: 39px;
+            padding: 8px 10px 7px;
+            font-size: 14px;
+            background-color: #d6d6d4;
+        }
+    }
+}
+#login{
+    .arcticmodal-body{
+        padding-bottom: 26px;
+    }
+    
+    .arcticmodal-footer{
+
+        .g-h3{
+            font-size: 16px;
+            line-height: 38px;
+            margin-bottom: 22px;
+        }
+        .b-social_modal{
+            margin-bottom: 10px;
+            
+            img{
+                margin-right: 10px;
+                display: inline-block;
+                +img{
+                    margin-right: 0;
+                    margin-left: 10px;
+                }
+            }
+        }
+        
+        .g-btn--link{
+            padding: 18px 0 15px;
+//                padding-left: 18px;
+        }
+        
+        .g-form__alarm{
+            margin-top: 35px;
+            margin-left: 29px;
+            
+            p{
+                padding-top: 3px;
+                line-height: 14px;
+            }
+        }
+    }
+}
+#register{
+    .arcticmodal-footer{
+        padding-bottom: 43px;
+    }
 }
 .arcticmodal-overlay,
 .arcticmodal-container { 

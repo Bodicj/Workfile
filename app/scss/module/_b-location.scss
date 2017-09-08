@@ -17,6 +17,9 @@
         height: 36px;
         background-image: url(../img/svg/i-location.svg);
 //        filter: brightness(0);
+        @include huge {
+            transform: scale(0.9);
+        }
 //		@include sprite($i-location-lg-black);
 //		@include fourK {
 //			transform: scale(2);
@@ -25,9 +28,9 @@
 //		}
 	}
 
-//	@include huge {
-//		font-size: 16px;
-//	}
+	@include huge {
+		font-size: 16px;
+	}
 //
 //	@include twoK {
 //		font-size:24px;

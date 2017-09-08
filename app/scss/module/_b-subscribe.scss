@@ -22,10 +22,10 @@
 	color: #fff;
 	vertical-align: middle;
 
-//	@include huge {
-//		font-size: 21px;
-//		text-transform: none;
-//	}
+	@include huge {
+		font-size: 21px;
+		text-transform: none;
+	}
 //	@include twoK {
 //		font-size: 30px;
 //	}
@@ -40,6 +40,7 @@
 //	vertical-align: middle;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     
 	input {
@@ -52,9 +53,10 @@
 		font-size: 16px;
 		padding: 9px 17px;
 
-//		@include huge {
+		@include huge {
 //			min-width: 235px;
-//		}
+            width: 240px;
+		}
 //		@include twoK {
 //			font-size: 21px;
 //		}
@@ -79,6 +81,10 @@
 		width: 320px;
 //		margin-left: -4px;
 //		margin-right: 26px;
+        
+        @include huge{
+            width: auto;
+        }
 	}
 	input[type="text"]{
 		border: none;

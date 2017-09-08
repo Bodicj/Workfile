@@ -21,8 +21,11 @@
 //		margin-left: 7%;
 //		padding-right: 19px;
         .content-block {
-            margin-right: -30px;
-            margin-left:  -30px;
+            margin: 0 -30px;
+            
+            @include huge {
+                margin: 0 -5px;
+            }
         }
 	}
 	.section__title{

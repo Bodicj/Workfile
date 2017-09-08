@@ -5,6 +5,10 @@
  **/
  %icon{
 	display: inline-block;
+     
+    @include huge {
+        transform: scale(0.9);
+    }
 }
 .icon-facebook-black {
 	@extend %icon;
@@ -182,11 +186,17 @@
 
 .icon-close {
 	@extend %icon;
-	@include sprite($i-close);
+//	@include sprite($i-close);
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/svg/i-close.svg);
 }
 .icon-alarm {
 	@extend %icon;
-	@include sprite($i-alarm);
+//	@include sprite($i-alarm);
+    width: 32px;
+    height: 28px;
+    background-image: url(../img/svg/i-alarm.svg);
 }
 .icon-arrow-up {
 	@extend %icon;

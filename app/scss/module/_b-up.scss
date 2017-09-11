@@ -11,8 +11,26 @@
 	text-align: center;
 	background-color: #d1d4d3;
 	cursor: pointer;
+    transition: opacity 0.2s;
     
     @include huge {
+        width: 85px;
+        height: 85px;
+        line-height: 85px;
         left:  calc(50% + 590px);
+        
+        i{
+            width: 34px;
+            height: 28px;
+        }
+    }
+    @include laptop{
+	    left: auto;
+        right: calc(50% - 590px);
+        opacity: .3;
+        
+        &:hover{
+            opacity: 1;
+        }
     }
 }

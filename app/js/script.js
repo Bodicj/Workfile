@@ -83,6 +83,32 @@ $(function() {
       });
     })();
 
+    // акордеон (в т.ч. в моб меню)
+    (function(){
+    	var  
+    		 $accordions = $(".js-accordion__item")
+    		,$accordionTriggers = $accordions.find(".js-accordion__trigger")
+			,$accordionContents = $accordionTriggers.siblings(".js-accordion__content")
+    		;
+
+    	$accordionTriggers.on("click", function(){
+			var  $trigger = $(this)
+				,$content = $trigger.siblings(".js-accordion__content")
+				,$parent = $(this).parents(".js-accordion__item")
+				;
+			// close all opened accordion items except of clicked
+			$accordionContents.each(function(){
+				if (($(this)[0] !== $content[0])&&($parent.hasClass("opened"))){
+					$(this).slideUp(200);
+					$parent.removeClass("opened").addClass("closed");
+				}
+			});
+			$content.slideToggle(200);
+			$parent.toggleClass("opened").toggleClass("closed");
+		});
+
+    })();
+
   //
   // Modal Popup
   //---------------------------------------------------------------------------------------

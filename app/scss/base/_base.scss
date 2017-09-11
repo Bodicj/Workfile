@@ -61,9 +61,9 @@ img {
 //  @include huge {
 //    max-width: 1250px;
 //  }
-//  @include pc {
-//    max-width: 970px;
-//  }
+  @include pc {
+    max-width: 990px;
+  }
 //
 //  @include note {
 //    max-width: 750px;

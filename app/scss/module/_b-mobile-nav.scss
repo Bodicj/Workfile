@@ -120,14 +120,19 @@ body.is--mobile-active{
   bottom: 0;
   z-index: 1000;
   visibility: hidden;
-  overflow: auto;
+//  overflow: auto;
   width: 300px;
   height: 100%;
-  padding-top: 54px;
+//  padding-top: 5px;
   background: $color__primary;
   transform: translate3d(-100%, 0, 0);
-  transition: all 0.5s;
+  transition: transform 0.5s;
+    text-transform: uppercase;
+    color: #fff;
   
+    @include pc{
+        visibility: visible;
+    }
 
   &.is--visible{
     visibility: visible;
@@ -139,9 +144,9 @@ body.is--mobile-active{
   display: none;
   @include hamburger-icon;
 
-//  @include note {
-//    display: block;
-//  } 
+  @include pc {
+    display: block;
+  } 
 }
 .b-mobile-nav-icon{
   position: absolute;
@@ -153,9 +158,9 @@ body.is--mobile-active{
     background:$color__primary;
   }
 
-//  @include note {
-//    display: block;
-//  } 
+  @include pc {
+    display: block;
+  } 
 //  @include tablet {
 //    left: auto;
 //    margin-left: 0;
@@ -167,31 +172,70 @@ body.is--mobile-active{
 }
 .b-mobile-nav__toggle{
   position: absolute;
-  top: 6px; right: 6px;
+    top: 34px;
+    right: -75px;
+    transition: right $button-transistion-duration;
+
+    &.is--active{
+        right: 6px;
+    }
+
   span,
   span:after,
   span:before{
     background: #ffffff;
   }
 }
+.b-mobile-nav__heading{
+    padding: 8px 15px;
+    font-size: 18px;
+    line-height: 91px;
+    font-weight: 700;
+    border-bottom: 2px solid #191c1f;
+    
+    @include tablet{
+        
+    }
+}
 .b-mobile-nav__list{
   @extend %list;
+    border-bottom: 2px solid #191c1f;
 }
 .b-mobile-nav__item{
   display: block;
-  margin-bottom: 5px;
+    margin: 4px 0;
+    
+    @include tablet{
+        margin: 2px 0;
+    }
 }
 .b-mobile-nav__link{
   display: block;
-  padding: 12px 24px;
-  font-size: 22px;
-  line-height: 28px;
+    padding: 8px 15px;
+  font-size: 14px;
+//  line-height: 28px;
   background: $color__primary;
   color: #ffffff;
+    cursor: pointer;
   
+    @include tablet{
+        padding: 4px 15px;
+    }
+    
   &:hover,
   &.is--current{
     background: #ffffff;
     color: $color__primary;
   }
+}
+
+.b-mobile-subnav{
+    display: none;
+    
+    &.closed{
+        display: none;
+    }
+    &.opened{
+//        display: none;
+    }
 }

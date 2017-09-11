@@ -30,10 +30,22 @@ var config = {
 
 	gulp.task('js', function() {
 		return gulp.src([
-				'app/libs/*',
-				'app/js/script.js'])
-				.pipe(concat('script.min.js'))
-				.pipe(uglify()) // Сжимаем JS файл
+				'app/js/libs/jquery.min.js',
+				'app/js/libs/arcticmodal.min.js',
+				'app/js/libs/jquery.validate.min.js',
+				'app/js/libs/jquery.bxslider.min.js',
+				'app/js/libs/ion.rangeSlider.min.js',
+				'app/js/libs/jquery.mousewheel.min.js',
+				'app/js/libs/jquery.jscrollpane.min.js',
+				'app/js/script.js',
+				])
+				.pipe(sourcemaps.init())
+				.pipe(concat("script.min.js"))
+				// .pipe(sourcemaps.init({loadMaps: true}))
+				// .pipe(concat('script.min.js'))
+				// .pipe(uglify({outSourceMap: true})) // Об'єднуємо js файли і стискаємо їх
+				// .pipe(uglify({outSourceMap: true})) // Об'єднуємо js файли і стискаємо їх
+				.pipe(sourcemaps.write('.'))
 				.pipe(gulp.dest('dist/js')); // Выгружаем в папку app/js
 	});
 
@@ -93,7 +105,7 @@ var config = {
 	    // all browsers reload after tasks are complete.
 	    gulp.watch('app/img/sprite/*.*', ['sprite']);
 	    gulp.watch('app/img/**/*.*', ['img']);
-	    gulp.watch(['libs/**/*.js', 'app/js/script.js'], ['js-watch']);
+	    gulp.watch(['app/js/libs/*.js', 'app/js/script.js'], ['js-watch']);
 	    gulp.watch('app/scss/**/*.scss', ['scss-watch']);
 	    gulp.watch('app/template/**/*.html', ['html-watch']);
 	});

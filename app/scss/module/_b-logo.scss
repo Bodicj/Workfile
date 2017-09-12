@@ -10,16 +10,30 @@
 //    margin-top: 0;
 //    margin-left: 0;
     margin: auto;
+    display: none;
 	width: 205px;
     padding: 0px;
 //	padding: 13px 20px 9px 10px;
 
-	img {
-		max-width: 100%;
-	}
 //	@include fourK {
 //		width: 319px;
 //	}
+	@include pc {
+		display: block;
+	}
+	@include note {
+		width: 103px;
+        
+//        &:before{
+//            content: '';
+//            display: inline-block;
+//            height: 100%;
+//        }
+	}
+    
+	img {
+		max-width: 100%;
+	}
 }
 .b-logo__inner{
 	display: block;

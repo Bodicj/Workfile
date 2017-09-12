@@ -5,12 +5,15 @@
 	font-weight: 300;
 	text-transform: uppercase;
 	color: #ffffff;
+    
+//	@include fourK {
+//		font-size: 24px;
+//	}
+	@include pc {
+		font-size: 17px;
+	}
 
 	a, span{
 		color: #ffffff;
 	}
-
-//	@include fourK {
-//		font-size: 24px;
-//	}
 }

@@ -129,6 +129,10 @@
 }
 .b-why-we-single{
 	max-width: 30%;
+    
+    @include pc{
+        max-width: 31%;
+    }
 }
 #why-we-content{
 //	padding-left: 4px;

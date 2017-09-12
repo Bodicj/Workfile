@@ -6,6 +6,10 @@
     &:before, &:after{
         content: none;
     }
+    
+    @include pc{
+        max-width: 815px;
+    }
 }
 
 .b-subscribe{
@@ -22,10 +26,6 @@
 	color: #fff;
 	vertical-align: middle;
 
-	@include huge {
-		font-size: 21px;
-		text-transform: none;
-	}
 //	@include twoK {
 //		font-size: 30px;
 //	}
@@ -34,6 +34,16 @@
 //		line-height: 40px;
 //		padding-top: 10px;
 //	}
+	@include huge {
+		font-size: 21px;
+		text-transform: none;
+	}
+    @include pc{
+        margin-bottom: 15px;
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+    }
 }
 .b-subscribe__form{
 //	display: inline-block;
@@ -42,6 +52,10 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    
+    @include pc{
+        flex-wrap: wrap;
+    }
     
 	input {
 //		width: auto;
@@ -65,6 +79,9 @@
 //			line-height: 33px;
 //			min-width: 524px;
 //		}
+        @include pc{
+            width: 300px;
+        }
 
 		&:last-child{
 			margin-right: 0;
@@ -84,6 +101,9 @@
         
         @include huge{
             width: auto;
+        }
+        @include pc{
+            width: 300px;
         }
 	}
 	input[type="text"]{

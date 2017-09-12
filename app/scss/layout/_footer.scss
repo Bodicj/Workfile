@@ -35,6 +35,9 @@ $footerSvgColor: #FFFFFF;
     @include huge{
         width: 70%;
     }
+    @include pc{
+        width: 71%;
+    }
 }
 .footer__right{
 //	width: 37.3%;
@@ -43,6 +46,11 @@ $footerSvgColor: #FFFFFF;
 	right: 0;
 	top: 0;
 	bottom: 0;
+    
+	@include pc {
+        left: calc(50% + 970px * 0.21);    // 970px = (container - padding)/2 
+                                           // 0.21 = 71% - 0.5; 71% = footer_left.width
+	}
 }
 .footer__bottom{
 	clear: both;

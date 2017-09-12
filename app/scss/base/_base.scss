@@ -64,6 +64,10 @@ img {
   @include pc {
     max-width: 990px;
   }
+  @include note {
+    max-width: 750px;
+      padding: 0;
+  }
 //
 //  @include note {
 //    max-width: 750px;

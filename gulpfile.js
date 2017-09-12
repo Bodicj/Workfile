@@ -63,7 +63,7 @@ var config = {
                 sourcemap: true
              })
 			.pipe(autoprefixer(['last 3 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
-			.pipe(cssnano())
+			// .pipe(cssnano())
 	        .pipe(sourcemaps.write('.'))
 			.pipe(gulp.dest('dist/css'))
 			.pipe(notify({ message: 'CSS done!' }));

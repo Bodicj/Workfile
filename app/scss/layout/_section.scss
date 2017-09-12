@@ -7,12 +7,17 @@
 	background:#f5f5f5;
 }
 .section--products{
-	padding-top: 165px;
+    margin-top: 125px;
+//	padding-top: 165px;
 	padding-bottom: 16px;
 
-/* 	@include huge {
-	padding-top: 80px;
-} */
+ 	@include huge {
+        margin-top: 100px;
+    } 
+    @include pc{
+        margin-top: 60px;
+//        padding-top: 80px;
+    }
 	.container{
 //		min-width: 1600px;
 //		max-width: 1651px;
@@ -57,6 +62,10 @@
 	padding-bottom: 252px;
 //	padding-left: 5px;
     
+    @include pc {
+        padding-bottom: 190px;
+    }
+    
     .container{
 //        padding: 0 10px;
     }
@@ -88,20 +97,32 @@
     }
 
 	.section__title{
-		margin-bottom: 80px;
-		padding-bottom: 27px;
+		margin-bottom: 107px;
+//		padding-bottom: 27px;
         padding-right: 2px;
 //		padding-left: 1px;
 
 /* 		@include huge {
 	padding-bottom: 5px;
 } */
+        @include pc{
+            margin-bottom: 90px;
+        }
 	}
 }
 .section--news{
 	/*padding-top: 149px;*/
 	padding-bottom: 260px;
 	margin-top: 109px;
+    
+	@include huge {
+        margin-top: 100px;
+    } 
+    @include pc{
+        margin-top: 60px;
+        padding-bottom: 190px;
+    }
+    
 	.container{
 //		max-width: 1656px;
 //        padding-right: 10px;
@@ -112,9 +133,6 @@
         padding-right: 2px;
 	}
 
-	/* 	@include huge {
-	padding-top: 80px;
-} */
 }
 	.section__title{
 		margin: 0 0 147px;
@@ -151,6 +169,14 @@
 	background: #fff url(../img/subscribe-bg.jpg) center 130px no-repeat;
 	padding-top: 0;
 	padding-bottom: 535px;
+    
+    @include huge{
+        background: #fff url(../img/subscribe-bg.jpg) center 130px no-repeat /contain;
+    }
+    
+    @include pc{
+	    background: #fff url(../img/subscribe-bg.jpg) center 185px no-repeat /contain;
+    }
 }
 .section__title{
 	margin: 0 0 80px;
@@ -167,4 +193,13 @@
 //	@include fourK {
 //		font-size: 55px;
 //	}
+    @include huge{
+        font-size: 35px;
+    }
+    @include laptop{
+        font-size: 33px;
+    }
+    @include pc{
+        font-size: 31px;
+    }
 }

@@ -12,6 +12,13 @@ $productNarrow: 290px;
         margin: 0 5px 122px;
         width: $productNarrow - 10px;
     }
+    @include pc{
+        @for $i from 7 through 8{
+            &:nth-child(#{$i}){
+                display: none;
+            }
+        } 
+    }
     
     .g-btn--fullwide{
         min-height: 45px;

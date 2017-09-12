@@ -3,7 +3,8 @@ $button-height: 42px;                   // The height of the button area
 $bar-thickness: 6px;                    // The thickness of the button bars
 $button-pad: 0;                      // The left/right padding between button area and bars.
 $button-bar-space: 8px;                // The spacing between button bars
-$button-transistion-duration: 0.3s;     // The transition duration
+$menu-transistion-duration: 0.5s;
+$button-transistion-duration: $menu-transistion-duration;     // The transition duration
 $button-color: $color__primary;
 
 @mixin hamburger-icon {
@@ -100,16 +101,19 @@ body:after{
   width: 0;
   height: 0;
   background: rgba(0,0,0,0.3);
-  content: '';
   opacity: 0;
-  transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+  transition: opacity $menu-transistion-duration, width 0.1s $menu-transistion-duration, height 0.1s $menu-transistion-duration;
+      
+    @include pc{
+        content: '';
+    }
 }
 body.is--mobile-active{
   &:after{
     width: 100%;
     height: 100%;
     opacity: 1;
-    transition: opacity 0.5s;
+    transition: opacity $menu-transistion-duration;
     z-index: 100;
   }
 }
@@ -126,7 +130,7 @@ body.is--mobile-active{
 //  padding-top: 5px;
   background: $color__primary;
   transform: translate3d(-100%, 0, 0);
-  transition: transform 0.5s;
+  transition: transform $menu-transistion-duration;
     text-transform: uppercase;
     color: #fff;
   
@@ -135,9 +139,16 @@ body.is--mobile-active{
     }
 
   &.is--visible{
-    visibility: visible;
+//    visibility: visible;
     transform: translate3d(0, 0, 0);
+      
+    @include pc{
+        visibility: visible;
+    }
   }
+    &:hover{
+        will-change: transform;
+    }
 }
 .b-mobile-nav-icon,
 .b-mobile-nav__toggle{
@@ -174,10 +185,16 @@ body.is--mobile-active{
   position: absolute;
     top: 34px;
     right: -75px;
-    transition: right $button-transistion-duration;
+    transition: transform $menu-transistion-duration;
+    transform: translateX(0);
+    
+    &:hover{
+        will-change: transform;
+    }
 
     &.is--active{
-        right: 6px;
+//        right: 6px;
+        transform: translateX(-105px);
     }
 
   span,
@@ -189,24 +206,37 @@ body.is--mobile-active{
 .b-mobile-nav__heading{
     padding: 8px 15px;
     font-size: 18px;
-    line-height: 91px;
+    line-height: 93px;
     font-weight: 700;
-    border-bottom: 2px solid #191c1f;
+//    border-bottom: 1px solid #191c1f;
     
     @include tablet{
         
     }
 }
+.b-mobile-nav_wrapper{
+    height: calc(100% - 109px);
+    overflow: auto;
+}
 .b-mobile-nav__list{
   @extend %list;
-    border-bottom: 2px solid #191c1f;
+    border-top: 2px solid #191c1f;
 }
 .b-mobile-nav__item{
-  display: block;
+    display: block;
     margin: 4px 0;
     
     @include tablet{
         margin: 2px 0;
+    }
+    
+    &.opened{
+        
+        .b-mobile-nav__link_accordion{
+            &:after{
+                transform: rotate(0deg)
+            }
+        }
     }
 }
 .b-mobile-nav__link{
@@ -229,7 +259,31 @@ body.is--mobile-active{
   }
 }
 
+.b-mobile-nav__link_accordion{
+    position: relative;
+    &:after{
+        position: absolute;
+        top: 0;
+        right: 20px;
+        bottom: 0;
+        margin: auto;
+        content: '';
+        width: 14px;
+        height: 8px;
+        background-image: url(../img/svg/i-toggler-white.svg);
+        transform: rotate(-180deg);
+        transition: transform $time_short;
+    }
+    
+    &:hover{
+        &:after{
+            background-image: url(../img/svg/i-toggler.svg);
+        }
+    }
+}
+
 .b-mobile-subnav{
+    padding-left: 30px;
     display: none;
     
     &.closed{

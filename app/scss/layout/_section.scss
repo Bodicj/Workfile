@@ -18,6 +18,10 @@
         margin-top: 60px;
 //        padding-top: 80px;
     }
+    @include note{
+        margin-top: 40px;
+    }
+    
 	.container{
 //		min-width: 1600px;
 //		max-width: 1651px;
@@ -31,10 +35,17 @@
             @include huge {
                 margin: 0 -5px;
             }
+            @include note{
+                margin: 0;
+            }
         }
 	}
 	.section__title{
 		margin: 0 0 108px;
+        
+        @include note{
+            margin-bottom: 65px;
+        }
 	}
     .content-block{
 //      margin-left: -14px;
@@ -108,6 +119,9 @@
         @include pc{
             margin-bottom: 90px;
         }
+        @include note{
+            font-size: 16px;
+        }
 	}
 }
 .section--news{
@@ -177,6 +191,13 @@
     @include pc{
 	    background: #fff url(../img/subscribe-bg.jpg) center 185px no-repeat /contain;
     }
+    
+    @include note{
+        max-width: 100%;
+    }
+    @include tablet{
+        background: #fff url(../img/subscribe-bg.jpg) center 314px no-repeat /contain;
+    }
 }
 .section__title{
 	margin: 0 0 80px;
@@ -200,6 +221,13 @@
         font-size: 33px;
     }
     @include pc{
-        font-size: 31px;
+        line-height: normal;
+        font-size: 30px;
+    }
+    @include note{
+        font-size: 26px;
+    }
+    @include tablet{
+        font-size: 21px;
     }
 }

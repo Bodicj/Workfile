@@ -6,7 +6,7 @@ html{
 
 body {
   margin: 0;
-//  min-width: 320px;
+  min-width: 320px;
 //  min-width: 1920px;
   width: 100%;
   font-family: "Open Sans", Arial, sans-serif;
@@ -66,16 +66,11 @@ img {
   }
   @include note {
     max-width: 750px;
-      padding: 0;
+//      padding: 0;
   }
-//
-//  @include note {
-//    max-width: 750px;
-//  }
-//
-//  @include tablet {
-//    max-width: 480px;
-//  }
+  @include tablet {
+    max-width: 620px;
+  }
 //
 //  @include small {
 //    max-width: 90%;
@@ -139,6 +134,12 @@ textarea {
 //    font-size: 35px;
 //    line-height: 40px;
 //  }
+    @include tablet{
+        font-size: 18px;
+    }
+//    @include small{
+//        font-size: 18px;
+//    }
 }
 .g-menu__list{
   margin: 0;
@@ -148,6 +149,9 @@ textarea {
 //  @include huge {
 //    padding: 0;
 //  }
+    @include note{
+        padding-right: 0;
+    }
 }
 .g-menu__item,
 .g-menu__link{
@@ -156,14 +160,20 @@ textarea {
   line-height: 27px;
   color: #fff;
 
-  @include huge {
-    font-size: 16px;
-    line-height: 21px;
-  }
 //  @include fourK {
 //    font-size: 35px;
 //    line-height: 40px;
 //  }
+    @include huge {
+        font-size: 16px;
+        line-height: 21px;
+    }
+    @include tablet{
+        font-size: 14px;
+    }
+    @include small{
+        font-size: 12px;
+    }
 }
 .g-menu__item{
   padding: 4px 0;
@@ -197,6 +207,9 @@ textarea {
   width: 120px;
   height: 20px;
 //  overflow: hidden;
+    @include note{
+        height: 15px;
+    }
 }
 //.g-rating--0{
 //  background:url('../img/rating.png') -120px 0 no-repeat;

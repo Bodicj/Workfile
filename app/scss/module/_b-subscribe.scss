@@ -10,11 +10,18 @@
     @include pc{
         max-width: 815px;
     }
+    @include note{
+        max-width: 100%;
+    }
 }
 
 .b-subscribe{
 	padding: 43px 0 47px;
 	background-color: #121212;
+    
+    @include tablet{
+        padding: 40px 0 45px;
+    }
 }
 .b-subscribe__title{
 	display: inline-block;
@@ -56,6 +63,13 @@
     @include pc{
         flex-wrap: wrap;
     }
+    @include note{
+        flex-direction: column;
+        font-size: 14px;
+    }
+    @include tablet{
+        font-size: 12px;
+    }
     
 	input {
 //		width: auto;
@@ -67,10 +81,6 @@
 		font-size: 16px;
 		padding: 9px 17px;
 
-		@include huge {
-//			min-width: 235px;
-            width: 240px;
-		}
 //		@include twoK {
 //			font-size: 21px;
 //		}
@@ -79,8 +89,15 @@
 //			line-height: 33px;
 //			min-width: 524px;
 //		}
+		@include huge {
+//			min-width: 235px;
+            width: 240px;
+		}
         @include pc{
             width: 300px;
+        }
+        @include note{
+            margin-bottom: 27px;
         }
 
 		&:last-child{
@@ -122,6 +139,12 @@
 //		@include fourK {
 //			line-height: 40px;
 //		}
+        @include note{
+            font-size: 12px;
+        }
+        @include note{
+            margin-bottom: 0;
+        }
         
         &:hover{
             border: 2px solid transparent;

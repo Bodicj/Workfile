@@ -12,10 +12,17 @@ $footerSvgColor: #FFFFFF;
  	@include huge {
         height: 480px;
         padding: 58px 0 0;
-    } 
+    }
+    @include note{
+        height: auto;
+        padding: 55px 0 10px;
+    }
     
     .container{
 //        padding: 0 4px;
+        @include note{
+            max-width: 100%;
+        }
     }
     
     
@@ -38,6 +45,13 @@ $footerSvgColor: #FFFFFF;
     @include pc{
         width: 71%;
     }
+    @include note{
+        float: none;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 35px;
+    }
 }
 .footer__right{
 //	width: 37.3%;
@@ -51,10 +65,23 @@ $footerSvgColor: #FFFFFF;
         left: calc(50% + 970px * 0.21);    // 970px = (container - padding)/2 
                                            // 0.21 = 71% - 0.5; 71% = footer_left.width
 	}
+    @include note{
+        position: static;
+        height: 305px;
+//        width: 100%;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
 }
 .footer__bottom{
 	clear: both;
 //    padding-left: 12px;
+    @include note{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
 }
 .footer__block{
 	display: inline-block;
@@ -63,6 +90,10 @@ $footerSvgColor: #FFFFFF;
 	margin-right: -.25em;
 	vertical-align: top;
     
+    @include note{
+        margin-right: 0;    
+    }
+    
     h4{
 //        margin-bottom: $footerListHeadingMB;
     }
@@ -70,12 +101,20 @@ $footerSvgColor: #FFFFFF;
 .footer__block--1{
 //	width: 29%;
 //	padding-left: 4px;
+    @include note{
+        width: 195px;
+        padding-left: 25px;
+    }
 }
 .footer__block--2{
 //	width: 33%;
 //	padding-left: 10px;
-    
     padding-left: 5px;
+    
+    @include note{
+        width: 245px;
+        padding-left: 25px;
+    }
 }
 .footer__block--3{
 //	width: 37%;
@@ -86,6 +125,10 @@ $footerSvgColor: #FFFFFF;
     @include huge{
         padding-left: 60px;
     }
+    @include note{
+        width: 220px;
+        padding-left: 25px;
+    }
 }
 .footer__block-menu--information{
 
@@ -95,6 +138,9 @@ $footerSvgColor: #FFFFFF;
 
  	@include huge {
         margin-bottom: 60px;
+    } 
+ 	@include tablet {
+        margin-bottom: 62px;
     } 
 
 	ul {
@@ -140,7 +186,7 @@ $footerSvgColor: #FFFFFF;
             margin-top: 34px;
             
             @include huge{
-                margin-top: 60px;    
+                margin-top: 58px;    
             }
             
             i{
@@ -156,5 +202,11 @@ $footerSvgColor: #FFFFFF;
     
     @include huge {
         font-size: 16px;
+    }
+    @include tablet{
+        font-size: 14px;
+    }
+    @include small{
+        font-size: 12px;
     }
 }

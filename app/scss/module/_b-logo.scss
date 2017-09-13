@@ -22,7 +22,9 @@
 		display: block;
 	}
 	@include note {
-		width: 103px;
+		width: 87px;
+        height: 100%;
+        padding-top: 5px;
         
 //        &:before{
 //            content: '';
@@ -33,6 +35,9 @@
     
 	img {
 		max-width: 100%;
+        @include note {
+            display: block;
+        }
 	}
 }
 .b-logo__inner{

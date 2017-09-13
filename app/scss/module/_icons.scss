@@ -5,6 +5,7 @@
  **/
  %icon{
 	display: inline-block;
+    background-repeat: no-repeat;
      
     @include huge {
         transform: scale(0.9);
@@ -137,7 +138,7 @@
 //	@include sprite($i-cart-white);
     width: 28px;
     height: 38px;
-    background-image: url(../img/svg/i-cart-white.svg)
+    background-image: url(../img/svg/i-cart-white.svg);
 //	@include twoK {
 //		transform: scale(1.2);
 //	}
@@ -145,6 +146,11 @@
 //		transform: scale(1.9);
 //		margin-top: 13px;
 //	}
+    @include note {
+        width: 18px;
+        height: 25px;
+        transform: scale(1);
+    }
 }
 .icon-cart-black {
 	@extend %icon;
@@ -174,6 +180,10 @@
     width: 14px;
     height: 19px;
     background-image: url(../img/svg/i-phone-white.svg);
+    
+    @include tablet{
+        transform: scale(0.78);
+    }
 }
 .icon-location-small-white {
 	@extend %icon;
@@ -181,6 +191,10 @@
     width: 15px;
     height: 19px;
     background-image: url(../img/svg/i-location-white.svg);
+    
+    @include tablet{
+        transform: scale(0.78);
+    }
 }
 
 
@@ -239,6 +253,16 @@
     height: 20px;
     background-image: url(../img/svg/i-star-empty.svg);
 	vertical-align: middle;
+    
+    @include note{
+        width: 16px;
+        height: 16px;
+        vertical-align: top;
+    }
+    @include tablet{
+        width: 14px;
+        height: 14px;
+    }
 }
 .icon-star_filled{
     background-image: url(../img/svg/i-star-filled.svg);

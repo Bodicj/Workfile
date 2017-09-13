@@ -18,7 +18,16 @@
 }
 .b-service-separate{
 	width: 31.5%;
-	margin-left: 1px;
+//	margin-left: 1px;
+    @include tablet{
+//        width: 100%;
+        width: 47%;
+        
+        &:last-child{
+            display: none;
+//            margin: 0 auto;
+        }
+    }
 }
 .b-service__list{
 	margin: 0;

@@ -23,6 +23,20 @@
   color: #ffffff;
   cursor: pointer;
 
+//  @include twoK {
+//    font-size: 24px;
+//  }
+//  @include fourK {
+//    font-size: 35px;
+//    line-height: 40px;
+//  }
+    @include note{
+        font-size: 14px;
+    }
+    @include tablet{
+        font-size: 12.4px;
+    }
+
   &:hover{
     background-color: #d6d6d4;
     text-decoration: none;
@@ -35,14 +49,6 @@
   i {
     margin-right: 8px;
   }
-
-//  @include twoK {
-//    font-size: 24px;
-//  }
-//  @include fourK {
-//    font-size: 35px;
-//    line-height: 40px;
-//  }
 
 }
 

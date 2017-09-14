@@ -131,7 +131,10 @@
 }
 .icon-search {
 	@extend %icon;
-	@include sprite($i-search);
+//	@include sprite($i-search);
+    width: 17px;
+    height: 17px;
+    background-image: url(../img/svg/i-search.svg);
 }
 .icon-cart-white {
 	@extend %icon;
@@ -262,6 +265,11 @@
     @include tablet{
         width: 14px;
         height: 14px;
+    }
+    @include small{
+        width: 14px;
+        height: 14px;
+        transform: scale(1);
     }
 }
 .icon-star_filled{

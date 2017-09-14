@@ -17,6 +17,10 @@ $footerSvgColor: #FFFFFF;
         height: auto;
         padding: 55px 0 10px;
     }
+    @include small{
+        
+        padding: 54px 0 10px;
+    }
     
     .container{
 //        padding: 0 4px;
@@ -52,6 +56,13 @@ $footerSvgColor: #FFFFFF;
         justify-content: space-between;
         margin-bottom: 35px;
     }
+    @include small{
+        text-align: center;
+    }
+    @include small{
+        margin-bottom: 31px;
+        flex-direction: column;
+    }
 }
 .footer__right{
 //	width: 37.3%;
@@ -71,6 +82,9 @@ $footerSvgColor: #FFFFFF;
 //        width: 100%;
         margin-left: -10px;
         margin-right: -10px;
+    }
+    @include small{
+        height: 300px;
     }
 }
 .footer__bottom{
@@ -93,6 +107,9 @@ $footerSvgColor: #FFFFFF;
     @include note{
         margin-right: 0;    
     }
+    @include small{
+        flex-shrink: 0;
+    }
     
     h4{
 //        margin-bottom: $footerListHeadingMB;
@@ -105,6 +122,10 @@ $footerSvgColor: #FFFFFF;
         width: 195px;
         padding-left: 25px;
     }
+    @include small{
+        width: 100%;
+        padding-left: 0;
+    }
 }
 .footer__block--2{
 //	width: 33%;
@@ -114,6 +135,10 @@ $footerSvgColor: #FFFFFF;
     @include note{
         width: 245px;
         padding-left: 25px;
+    }
+    @include small{
+        width: 100%;
+        padding-left: 0;
     }
 }
 .footer__block--3{
@@ -129,6 +154,11 @@ $footerSvgColor: #FFFFFF;
         width: 220px;
         padding-left: 25px;
     }
+    @include small{
+        width: 100%;
+        flex-shrink: 0;
+        padding-left: 0;
+    }
 }
 .footer__block-menu--information{
 
@@ -142,6 +172,9 @@ $footerSvgColor: #FFFFFF;
  	@include tablet {
         margin-bottom: 62px;
     } 
+    @include small{
+        margin-bottom: 45px;
+    }
 
 	ul {
 //		padding-top: 6px;
@@ -155,6 +188,9 @@ $footerSvgColor: #FFFFFF;
 //        margin-bottom: 60px;
         margin-bottom: 13px;
     } 
+    @include small{
+        margin-bottom: 48px;
+    }
 
 	h4{
 //		margin-bottom: 45px;
@@ -170,9 +206,16 @@ $footerSvgColor: #FFFFFF;
     @include huge {
         margin-bottom: 11px;
     }
+    @include small{
+        vertical-align: 22px;
+    }
     
 	h4{
 //		margin-bottom: 45px;
+        @include small{
+            margin-bottom: 31px;
+            letter-spacing: 0.012em;
+        }
 
 	}
 
@@ -182,15 +225,30 @@ $footerSvgColor: #FFFFFF;
 //        padding-top: 2px;
 //		padding-bottom: 0;
         
+        @include small{
+            font-size: 12.31px;
+            &:not(:last-child){
+                letter-spacing: .038em;
+            }
+        }
+        
         &:last-child{
             margin-top: 34px;
             
             @include huge{
                 margin-top: 58px;    
             }
+            @include small{
+                margin-top: 9px;
+                font-size: 11.83px;
+            }
             
             i{
                 margin-right: 2px;
+                
+                @include small{
+                    vertical-align: -4px;
+                }
             }
         }
 	}

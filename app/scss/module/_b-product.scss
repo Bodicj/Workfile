@@ -1,6 +1,7 @@
 $productNarrow: 290px;
 $product-note: 31.5%;
-$product-tablet: 270px;
+$product-tablet: 282px;
+$product-small: 270px;
 $product-phone: 200px;
 
 .b-product{
@@ -27,7 +28,7 @@ $product-phone: 200px;
         width: $product-note;
     }
     @include tablet{
-        margin-bottom: 70px;
+        margin-bottom: 75px;
         width: $product-tablet;
         
         @for $i from 7 through 8{
@@ -37,33 +38,35 @@ $product-phone: 200px;
         } 
     }
     @include small{
-        margin-bottom: 30px;
+        margin-bottom: 70px;
         width: $product-tablet;
+    }
+    @include phone{
+        margin-bottom: 30px;
+        width: $product-phone;
     }
     
     .g-btn--fullwide{
         min-height: 45px;
         padding: 12px 30px;
+        
+        @include small{
+            min-height: 31px;
+            padding: 3px 0 0;
+            line-height: 27px;
+        }
     }
 }
 #product_content{
 	margin-top:  150px;
 }
 .b-product__photo{
+    position: relative;
 	display: block;
     outline: 1px solid red;
 //	height: 310px;
 	height: 260px;
 	margin-bottom: 21px;
-
-	img{
-		display: block;
-		margin: 0 auto;
-		max-height: 100%;
-//		@include fourK {
-//			width: 100%;
-//		}
-	}
 
     //	@include twoK {
     //		height: 304px;
@@ -71,22 +74,40 @@ $product-phone: 200px;
     //	@include fourK {
     //		height: 580px;
     //	}
-        @include note{
-            height: 220px;
-        }
-        @include tablet{
-            margin-bottom: 15px;
-            height: 260px;
-        }
-        @include small{
-            height: 220px;
-        }
+    @include note{
+        height: 220px;
+    }
+    @include tablet{
+        margin-bottom: 15px;
+        height: 260px;
+    }
+    @include small{
+        margin-bottom: 15px;
+        height: 216px;
+    }
+    
+	img{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+//		display: block;
+//		margin: 0 auto;
+		max-height: 100%;
+        transform: translateY(-50%);
+        
+//		@include fourK {
+//			width: 100%;
+//		}
+	}
+
 }
 .b-product__tags{
 	position: absolute;
 	top: -14px;
 //	right: -53px;
     right: 0;
+    z-index: 1;
 }
 .b-product__tag{
 	display: inline-block;
@@ -152,6 +173,7 @@ $product-phone: 200px;
 	margin: 0 auto;
 //    max-width: $productNarrow;
 	text-align: center;
+    
 
 	a{
 		display: block;
@@ -173,6 +195,9 @@ $product-phone: 200px;
         }
         @include tablet{
             font-size: 13.78px;
+        }
+        @include small{
+            line-height: 18px;
         }
 	}
 }
@@ -197,6 +222,10 @@ $product-phone: 200px;
     }
     @include tablet{
         font-size: 9.64px;
+    }
+    @include small{
+        margin-bottom: 6px;
+        line-height: 14px;
     }
 }
 
@@ -312,6 +341,9 @@ $product-phone: 200px;
         margin-top: 4px;
         width: 50px;
     }
+    @include small{
+        margin-top: 3px;
+    }
 
 	input{
 		width: 60px;
@@ -396,6 +428,10 @@ $product-phone: 200px;
     @include note{
         padding-top: 16px;
         margin-bottom: 11px;
+    }
+    @include small{
+        padding-top: 10px;
+        margin-bottom: 13px;
     }
 }
 .b-product__rating{

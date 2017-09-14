@@ -225,7 +225,7 @@ body.is--mobile-active{
     
     @include note{
         top: 13px;
-        right: -34px;
+        right: -36px;
     }
 
     &.is--active{
@@ -233,7 +233,7 @@ body.is--mobile-active{
         transform: translateX(-105px);
         
         @include note{
-            transform: translateX(-50px);
+            transform: translateX(-52px);
         }
     }
 

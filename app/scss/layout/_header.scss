@@ -207,7 +207,11 @@ $svgTransitionTime: 0.2s;
     } 
  	@include note {
         margin-top: 10px;
-    } 
+    }
+    @include small{
+        margin-top: 0;
+        height: 100%;
+    }
 }
 .header__cart{
 	float: right;
@@ -223,7 +227,8 @@ $svgTransitionTime: 0.2s;
     }
     @include pc{
         float: left;
-        margin-left: 22px;
+        margin-right: 6px;
+        margin-left: 19px;
     }
     
     .b-cart-icon{

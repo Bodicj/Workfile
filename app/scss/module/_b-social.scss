@@ -6,6 +6,10 @@
     @include huge {
         margin-left: 0;
     }
+    @include small{
+        float: none;
+        text-align: center;
+    }
 }
 .b-social--header{
     svg:hover{            
@@ -47,6 +51,9 @@
     @include pc{
         margin-left: -8px;
     }
+    @include small{
+        margin-left: 0;
+    }
 
 	.b-social__item{
 		margin-right: 24px;
@@ -75,6 +82,11 @@
             [class^="icon"]{
                 transform: scale(0.83);
             }
+        }
+        @include small{
+            margin-left: -1px;
+            float: none;
+            display: inline-block;
         }
         
 

@@ -21,6 +21,9 @@
     @include note{
         margin-top: 40px;
     }
+    @include small{
+        margin-top: 00px;
+    }
     
 	.container{
 //		min-width: 1600px;
@@ -45,6 +48,9 @@
         
         @include note{
             margin-bottom: 65px;
+        }
+        @include small{
+            margin-bottom: 39px;
         }
 	}
     .content-block{
@@ -194,9 +200,13 @@
     
     @include note{
         max-width: 100%;
+        background: #fff url(../img/subscribe-bg.jpg) center 319px no-repeat /contain;
     }
     @include tablet{
+        padding-bottom: 505px;
         background: #fff url(../img/subscribe-bg.jpg) center 314px no-repeat /contain;
+    }
+    @include small{
     }
 }
 .section__title{

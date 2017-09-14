@@ -5,12 +5,20 @@
 .b-news{
 	margin-bottom: 45px;
 	width: 31.5%;
+    
     @include tablet{
         width: 47%;
         
         &:last-child{
             display: none;
 //            margin: 0 auto;
+        }
+    }
+    @include small{
+        width: 100%;
+        
+        &:last-child{
+            display: block;
         }
     }
 }

@@ -71,6 +71,13 @@ img {
   @include tablet {
     max-width: 620px;
   }
+  @include small {
+    max-width: 460px;
+  }
+  @include phone {
+    max-width: 290px;
+      padding: 0 15px;
+  }
 //
 //  @include small {
 //    max-width: 90%;
@@ -117,11 +124,16 @@ textarea {
 .g-menu{
   display: block;
   margin-bottom: 60px;
+    
+    @include small{
+        margin-bottom: 49px;
+    }
 }
 .g-menu__title{
   margin: 0 0 45px;
   font-size: 26px;
   font-weight: 700;
+font-weight: 800;
   text-transform: uppercase;
   color: #fff;
   letter-spacing: .019em;
@@ -140,6 +152,9 @@ textarea {
 //    @include small{
 //        font-size: 18px;
 //    }
+    @include small{
+        margin-bottom: 16px;
+    }
 }
 .g-menu__list{
   margin: 0;
@@ -173,6 +188,8 @@ textarea {
     }
     @include small{
         font-size: 12px;
+        line-height: 22px;
+        letter-spacing: 0.005em;
     }
 }
 .g-menu__item{
@@ -184,6 +201,10 @@ textarea {
 //        margin-top: 7px;
 //        margin-bottom: 0;
 //    }
+    @include small{
+        padding: 0;
+        margin: 2px 0;
+    }
 }
 .g-menu__item span a{
   color: #fff;
@@ -198,6 +219,11 @@ textarea {
     
     @include huge{
         vertical-align: middle;
+    }
+    @include small{
+        margin-right: 2px;
+        margin-left: 0;
+        vertical-align: -4px;
     }
 }
 

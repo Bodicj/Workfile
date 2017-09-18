@@ -1,5 +1,5 @@
 .b-nav{
-   min-height: 100px;
+//   min-height: 100px;
    background-color: #d1d4d3;
     
 //	   @include note {
@@ -51,6 +51,9 @@
 //	@include fourK {
 //		width: 9%;
 //	}
+    @include huge{
+        padding: 21px 0 20px 50px;
+    }
 }
 .b-nav__item-1 {
 //	margin-left: 0;
@@ -64,6 +67,7 @@
         background-image: url(../img/svg/i-menu-item-1.svg);
         
         @include huge{
+            top: 23px;
             left: 0;
         }
 	}
@@ -77,11 +81,10 @@
         height: 49px;
 //		@include sprite($i-menu-item-2);
         background-image: url(../img/svg/i-menu-item-2.svg);
-	}
 
-	@include huge {
-//		margin-left: 80px;
-//        margin-left: 0;
+        @include huge {
+            top: 22px;
+        }
 	}
 }
 .b-nav__item-3{
@@ -94,11 +97,10 @@
         height: 58px;
 //		@include sprite($i-menu-item-3);
         background-image: url(../img/svg/i-menu-item-3.svg);
-	}
 
-	@include huge {
-//		margin-left: 14px;
-//        margin-left: 0;
+        @include huge {
+            top: 11px;
+        }
 	}
 }
 .b-nav__item-4{
@@ -110,16 +112,11 @@
         height: 49px;
 //		@include sprite($i-menu-item-4);
         background-image: url(../img/svg/i-menu-item-4.svg);
-	}
 
-	@include huge {
-//		margin-left: 75px;
-//        margin-left: 0;
+        @include huge {
+            top: 20px;
+        }
 	}
-    .b-nav__sublist{
-        left: auto;
-        right: 0;
-    }
 }
 .b-nav__item-5{
 //	margin-left: 114px;
@@ -130,16 +127,11 @@
         height: 43px;
 //		@include sprite($i-menu-item-5);
         background-image: url(../img/svg/i-menu-item-5.svg);
+        
+        @include huge {
+            top: 26px;
+        }
 	}
-
-	@include huge {
-//		margin-left: 94px;
-//        margin-left: 0;
-	}
-    .b-nav__sublist{
-        left: auto;
-        right: 0;
-    }
 }
 .b-nav__item-6{
 //    padding-left: 15px;
@@ -155,11 +147,10 @@
         height: 44px;
         background-image: url(../img/svg/i-menu-item-6.svg);
 //		@include sprite($i-menu-item-6);
-	}
-
-	@include huge {
-//		margin-left: 26px;
-//        margin-left: 0;
+        
+        @include huge {
+            top: 25px;
+        }
 	}
 
 //	> a {

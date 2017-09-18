@@ -52,10 +52,16 @@
 .b-phones__item + .b-phones__item{
     margin-top: 1px;
 }
-.b-phones__link{    
+.b-phones__link_header{ 
 	color: #3d3f3c;
+}
+.b-phones__link_footer{ 
+	color: #fff;
+    
     &:hover{
-//        text-decoration: none;
-
+        text-decoration: none;
+        span{
+            text-decoration: underline;
+        }
     }
 }

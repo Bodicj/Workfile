@@ -151,8 +151,11 @@ $why-we-pl-sm: 130px;
 .b-why-we-single{
 	max-width: 30%;
     
+	@include huge {
+		max-width: 33%;
+	}
     @include pc{
-        max-width: 31%;
+        max-width: 32%;
     }
     @include note{
         max-width: none;

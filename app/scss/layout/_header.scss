@@ -4,11 +4,11 @@ $svgTransitionTime: 0.2s;
 
 .header{
 	position: relative;
-	background: url('../img/ht-bg.jpg') repeat #e5e5e5;
+//	background: url('../img/ht-bg.jpg') repeat #e5e5e5;
+    background: url('../img/ht-bg-4k.jpg') top repeat #e5e5e5;
 //    background-position: calc(50% - 960px) 0;
-    @include HDplus {
-	    background: url('../img/ht-bg-4k.jpg') top repeat #e5e5e5;
-	}
+//    @include HDplus {
+//	}
         
 //	@include twoK {
 //		background-size: 100%;
@@ -22,7 +22,7 @@ $svgTransitionTime: 0.2s;
         top: 0; 
         left: 0;
         right: 0;
-        z-index: 1;
+        z-index: 100;
     }
 }
 .header--simple{

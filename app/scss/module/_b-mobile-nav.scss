@@ -305,16 +305,20 @@ body.is--mobile-active{
   background: $color__primary;
   color: #ffffff;
     cursor: pointer;
+    
+    &:hover{
+        text-decoration: underline;
+    }
   
     @include note{
         padding: 3px 15px;
     }
     
-  &:hover,
-  &.is--current{
-    background: #ffffff;
-    color: $color__primary;
-  }
+//  &:hover,
+//  &.is--current{
+//    background: #ffffff;
+//    color: $color__primary;
+//  }
 }
 
 .b-mobile-nav__link_accordion{
@@ -333,11 +337,11 @@ body.is--mobile-active{
         transition: transform $time_short;
     }
     
-    &:hover{
-        &:after{
-            background-image: url(../img/svg/i-toggler.svg);
-        }
-    }
+//    &:hover{
+//        &:after{
+//            background-image: url(../img/svg/i-toggler.svg);
+//        }
+//    }
 }
 
 .b-mobile-subnav{

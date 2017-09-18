@@ -9,8 +9,12 @@
 //	@include fourK {
 //		font-size: 24px;
 //	}
-	@include pc {
+	@include huge{
+        padding-top: 35px;
 		font-size: 17px;
+	}
+	@include pc {
+//		font-size: 17px;
 	}
     @include note{
         order: 1;

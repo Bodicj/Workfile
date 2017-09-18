@@ -10,7 +10,7 @@ $footerSvgColor: #FFFFFF;
 	background-color: #121212;
 
  	@include huge {
-        height: 480px;
+        height: 445px;
         padding: 58px 0 0;
     }
     @include note{
@@ -167,10 +167,10 @@ $footerSvgColor: #FFFFFF;
 	margin-bottom: 78px;
 
  	@include huge {
-        margin-bottom: 60px;
+        margin-bottom: 55px;
     } 
  	@include tablet {
-        margin-bottom: 62px;
+//        margin-bottom: 62px;
     } 
     @include small{
         margin-bottom: 45px;
@@ -236,7 +236,7 @@ $footerSvgColor: #FFFFFF;
             margin-top: 34px;
             
             @include huge{
-                margin-top: 58px;    
+                margin-top: 55px;    
             }
             @include small{
                 margin-top: 9px;

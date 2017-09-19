@@ -43,19 +43,28 @@
 .b-logo__inner{
 	display: block;
 	width: 100%;
-	padding: 16px 17px 10px 17px;
-	padding-bottom: 10px;
+//	padding: 16px 17px 10px 17px;
+//	padding-bottom: 10px;
 	border: 1px solid #fff;
-	img{
-		width: 92.2%;
+    
+	>img{
+        display: block;
+//		width: 92.2%;
+        width: 82.8%;
+        margin-left: 5.0%;
+        margin-top: 4.68%;
 	}
 }
 .b-logo__text{
 	display: block;
-	padding-top: 12px;
+//	padding-top: 12px;
 	text-align: center;
-	img {
-		width: 81.6%;
-		margin-left: 0.8%;
+    
+	>img {
+        display: block;
+        width: 73.4%;
+		margin-top: 5.2%;
+        margin-left: 13.64%;
+        margin-bottom: 4.5%;
 	}
 }

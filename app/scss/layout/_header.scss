@@ -138,8 +138,10 @@ $svgTransitionTime: 0.2s;
 //	}
 }
 .header__bottom{
+    position: relative;
     min-height: 60px;
-	padding: 15px 0;
+    height: 60px;
+//	padding: 15px 0;
 	background-color: #0f0f0f;
     
 //	@include twoK {
@@ -157,11 +159,13 @@ $svgTransitionTime: 0.2s;
         height: 42px;
         padding: 0;
         
-        .container{
-            max-width: 100%;
-            height: 100%;
-            padding: 0px 15px;
-        }
+    }
+    
+    .container{
+        position: relative;
+        max-width: 100%;
+        height: 100%;
+        
     }
     
 }
@@ -169,15 +173,21 @@ $svgTransitionTime: 0.2s;
 	float: left;
 	width: percentage(1/2);
 	padding-right: 11.52%;
+    padding-top: 15px;
+    padding-bottom: 15px;
     
     @include pc{
         display: none;
     }
 }
 .header__bottom-right{
+//    position: relative;
 	float: right;
 	width: 50%;
+    height: 100%;
 	padding-left: 11.82%;
+    padding-top: 15px;
+    padding-bottom: 15px;
 
 /* 	@include huge {
 	padding-left: 169px;
@@ -192,6 +202,10 @@ $svgTransitionTime: 0.2s;
         width: auto;
         height: 100%;
         margin-top: 0;
+    }
+    @include tablet{
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
 .header__menu{}
@@ -218,22 +232,71 @@ $svgTransitionTime: 0.2s;
 	margin-top: -8px;
 	margin-bottom: -10px;
     margin-right: 9px;
+    line-height: 33px;
     
- 	@include pc {
-        margin-top: -10px;
-    } 
+// 	@include pc {
+//        position: relative;
+//        margin-top: -10px;
+//    } 
  	@include note {
         margin-top: 4px;
     }
     @include pc{
+//        position: static;
         float: left;
+        margin-top: 0;
         margin-right: 6px;
         margin-left: 19px;
+        height: 100%;
+        padding-top: 4px;
     }
     
-    .b-cart-icon{
-        .filled{
-            fill: #FFFFFF;
+    .b-cart__wrapper{
+        visibility: hidden;
+        position: absolute;
+//        top: 42px;
+        top: 100%;
+        right: -10px;
+        z-index: 10;
+        width: 480px;
+        max-height: 70vh;
+        padding: 5px 5px 25px;
+        opacity: 0;
+        transition: opacity .3s;
+        background-color: #fff;
+        
+        &:before{    // white triangle
+            content: '';
+            position: absolute;
+            bottom: 100%;
+            right: 38px;
+            width: 0;
+            height: 0;
+            border-top: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 7px solid #fff;
+        }
+        
+         @include tablet{
+            width: 320px;
+            right: 0;
+             &:before{
+                 right: 25px;
+             }
+         }
+    }
+    
+    &:hover{
+        .b-cart__wrapper{
+            visibility: visible;
+            opacity: 1;
         }
     }
+    
+//    .b-cart-icon{
+//        .filled{
+//            fill: #FFFFFF;
+//        }
+//    }
 }

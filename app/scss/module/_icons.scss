@@ -208,6 +208,12 @@
     height: 18px;
     background-image: url(../img/svg/i-close.svg);
 }
+.icon-close-small {
+	@extend %icon;
+    width: 13px;
+    height: 14px;
+    background-image: url(../img/svg/i-close-small.svg);
+}
 .icon-alarm {
 	@extend %icon;
 //	@include sprite($i-alarm);

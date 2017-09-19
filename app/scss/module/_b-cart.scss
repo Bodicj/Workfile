@@ -1,11 +1,12 @@
 .b-cart{
+    position: relative;
 	display: block;
-	position: relative;
 	padding-top: 4px;
 
 //	@include twoK {
 //		padding: 5px 14px 0 0;
 //	}
+    
 }
 .b-cart-icon{
     width: 28px;

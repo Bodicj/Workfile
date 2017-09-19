@@ -50,7 +50,9 @@
 //    margin-left: 125px;
 //    left: 134px;
 //    left: calc(50% - 687px);
-    left: 10px;
+//    left: 10px;
+    left: calc(25% - 5px);
+    transform: translateX(-50%);
     width: 561px;
 	padding: 40px 32.8px;
 	background-color: rgba(250, 250, 250, 0.8);
@@ -229,7 +231,10 @@
     left: auto;
 //	right: 134px;
 //	right: calc(50% - 687px);
-    right: 10px;
+//    right: 10px;
+    
+    right: calc(25% - 5px);
+    transform: translateX(50%);
 //    left: auto;
 //	width: 540px;
 

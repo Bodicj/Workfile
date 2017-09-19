@@ -28,6 +28,7 @@
 
     .b-wrapper_search{
         @include small {
+            display: none;
             position: absolute;
             top: 42px;
             right: 0;

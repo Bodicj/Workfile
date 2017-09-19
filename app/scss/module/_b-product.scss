@@ -65,7 +65,7 @@ $product-phone: 200px;
 	display: block;
     outline: 1px solid red;
 //	height: 310px;
-	height: 260px;
+	height: 280px;
 	margin-bottom: 21px;
 
     //	@include twoK {
@@ -75,15 +75,15 @@ $product-phone: 200px;
     //		height: 580px;
     //	}
     @include note{
-        height: 220px;
+        height: 230px;
     }
     @include tablet{
         margin-bottom: 15px;
-        height: 260px;
+        height: 282px;
     }
-    @include small{
-        margin-bottom: 15px;
-        height: 216px;
+    @include phone{
+//        margin-bottom: 15px;
+        height: 200px;
     }
     
 	img{

@@ -41,10 +41,10 @@
 				<div class="header__logo">
 					<a href="" class="b-logo">
 						<span class="b-logo__inner">
-							<img src="./img/logo.png" alt="">
+							<img src="./img/logo-2x.png" alt="">
 							
 							<span class="b-logo__text">
-								<img src="./img/logo-text.png" alt="">
+								<img src="./img/logo-text-2x.png" alt="">
 							</span>
 						</span>
 					</a>
@@ -180,7 +180,7 @@
 				
 				<div class="header__bottom-right">
 					<!-- search -->
-					<div class="header__search">
+					<div class="header__search js-serch">
 
 						<form class="b-search">
                             <div class="b-wrapper_search">
@@ -193,7 +193,7 @@
 					<!-- /search -->
 
 					<!-- cart -->
-					<div class="header__cart">
+					<div class="header__cart js-cart">
 						<a href="/" class="b-cart">
 							<i class="icon-cart-white"></i>
 <!--
@@ -203,6 +203,29 @@
 -->
 							<span class="b-cart__total b-cart__total--white">1</span>
 						</a>
+                        <div class="b-cart__wrapper">
+                            <form action="" class="b-minicart js-minicart">
+                                <div class="b-minicart__item js-item">
+                                    <div class="b-item__content">
+                                        <img src="./img/minicart-product.png" alt="букет">
+                                        <div class="b-item__heading">название букета несколько слов</div>
+                                        <p class="b-item__desc">роза, ромашка, пион, тюльпан</p>
+                                        <div class="b-item__articul">Артикул <span class="js-articul">1234</span></div>
+                                        <div class="b-item__price">800 грн</div>
+                                    </div>
+                                    <div class="b-item__controls">
+                                        <div class="b-item__del js-item__del"><i class="icon-close-small"></i></div>
+                                        <div class="b-item__counter">
+                                            <span class="js-qty-minus">-</span>
+                                            <input type="text" name="articul-1234" data-price="800" class="js-qty-input" value="2">
+                                            <span class="js-qty-plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="b-minicart__total">итого: <span class="js-total">6 000</span> грн</div>
+                                <button type="submit" class="g-btn">оформить заказ</button>
+                            </form>
+                        </div>
 					</div>
 					<!-- /cart -->
 				</div>
@@ -375,7 +398,7 @@
 	<div class="b-slider__slide">
 		
         <div class="container">
-		    <img src="./img/slider/s1.jpg" class="b-slide__bg" alt="">
+		    <img src="./img/slider/s3.jpg" class="b-slide__bg" alt="">
            
             <div class="b-slider__desc b-slider__desc--high">
                 <h3>Подписаться на рассылку</h3>

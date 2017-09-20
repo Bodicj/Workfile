@@ -21,6 +21,9 @@
             display: block;
         }
     }
+    @include phone{
+        margin: 0 0 36px;
+    }
 }
 .b-news__photo{
 	display: block;
@@ -32,6 +35,10 @@
 //			width: 100%;
 //		}
 	}
+    
+    @include phone{
+        margin: 0 0 9px;
+    }
 }
 .b-news__title,
 .b-news__meta,
@@ -61,6 +68,10 @@
 //		font-size: 35px;
 //		line-height: 40px;
 //	}
+    @include phone{
+        font-size: 16px;
+        line-height: 19px;
+    }
 }
 .b-news__meta{
 	margin: 0 0 16px;
@@ -77,21 +88,29 @@
 //		font-size: 25px;
 //		line-height: 30px;
 //	}
+    @include phone{
+        margin: 0 0 6px;
+        font-size: 12px;
+        line-height: 16px;
+    }
 }
 .b-news__meta-date{
 	margin-right: 58px;
+    
+    @include phone{
+        margin-right: 37px;
+    }
 }
 .b-news__text{
-	overflow: hidden;
-	max-height: 66px;
 	margin: 0 0 29px;
-	font-size: 16px;
-    padding-top: 2px;
-	font-weight: 400;
-	line-height: 16px;
-	color: #121212;
-	letter-spacing: px;
+	overflow: hidden;
 //	width: 83%;
+	max-height: 66px;
+    padding-top: 2px;
+	line-height: 16px;
+	font-weight: 400;
+	font-size: 16px;
+	color: #121212;
 //	@include twoK {
 //		max-height: 87px;
 //		font-size: 20px;
@@ -102,7 +121,27 @@
 //		font-size: 30px;
 //		line-height: 35px;
 //	}
+    @include phone{
+        margin: 0 0 18px;
+        max-height: 120px;
+        padding-top: 0;
+        font-size: 13px;
+        line-height: 20px;
+    }
 }
 .b-news__action{
 //    padding-left: 18px;
+    @include phone{
+        text-align: center;
+    }
+    
+    .g-btn{
+        @include phone{
+            border: none;
+            padding: 0;
+            font-size: 12px;
+            line-height: normal;
+            background-color: transparent;
+        }
+    }
 }

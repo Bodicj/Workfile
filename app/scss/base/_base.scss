@@ -76,7 +76,8 @@ img {
   }
   @include phone {
     max-width: 290px;
-      padding: 0 15px;
+//      padding: 0 15px;
+      padding: 0;
   }
 //
 //  @include small {
@@ -295,9 +296,14 @@ font-weight: 800;
 }
 .g-link--allinfo{
 //  padding-right: 5px;
+    position: relative;
   float: right;
   font-weight: 700;
   text-transform: uppercase;
+    
+    @include phone{
+        font-size: 14px;
+    }
 }
 .is--relative{
   position: relative!important;

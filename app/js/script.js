@@ -343,25 +343,40 @@ $(function() {
 	})();
 
 
-	// Mobile menu search
+	// Mobile menu search and minicart
 	//---------------------------------------------------------------------------------------
-	// (function(){
-	// 	var  $search = $(".b-search")
-	// 		,$searchWrapper = $search.children(".b-wrapper_search")
-	// 		;
+	(function(){
+		var  $searchIcon = $(".js-search")
+			,$searchField = $searchIcon.children(".js-search")
+			,$minicartIcon = $(".js-cart")
+			,$minicart = $minicartIcon.find(".js-minicart")
+			;
 
-	// 	$window.on("resize", function(){
-	// 		$search.on("click", function(){
+		$window.on("resize", function(){
+			$searchIcon.on("click", function(e){
+				e.stopPropagation;
+				if(window.outerWidth < 1220){
+					$searchField.slideToggle(300);
+				} else{
+					if ($searchField.css("display") == "none"){$searchField.show(0)};
+				}
+			});
+			$minicartIcon.on("click", function(e){
+				e.stopPropagation;
+				$minicart.slideToggle(300);
+			});
+		}).trigger("resize");
 
-	// 		})
-	// 	}).trigger("resize");
 
+		$window.on("click", function(){
+			if(window.outerWidth < 1220){
+				$searchField.slideUp(300);
+				$minicart.slideUp(300);
+			};
 
-	// 	$window.on("click", function(){
-	// 		$searchWrapper
-	// 	});
+		});
 
-	// })();
+	})();
 
 	//
 	// Catalog - Products Sort Block

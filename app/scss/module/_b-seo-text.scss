@@ -3,6 +3,10 @@
 	margin: 0 auto;
 	clear: both;
 	padding-right: 89px;
+    
+    @include phone{
+        padding: 0;
+    }
 
 	p {
 		margin: 0;
@@ -10,15 +14,16 @@
 	}
 }
 .b-seo-text__inner{
+	margin-top: -1px;
+	margin-left: 2px;
 	margin-bottom: 20px;
+    margin: -1px 0 20px 2px;
 	font-family: PT Sans,sans-serif;
 	font-size: 19px;
 	line-height: 23px;
 	font-weight: 400;
 	color: #1a1a1a;
 	text-align: center;
-	margin-top: -1px;
-	margin-left: 2px;
 	@extend %transition;
 
 //	@include huge {
@@ -33,6 +38,12 @@
 //		font-size: 35px;
 //		line-height: 40px;
 //	}
+    
+    @include phone{
+        margin: 0 0 30px;
+        font-size: 14px;
+        line-height: 17px;
+    }
 
 	&.is--short{
 		max-height: 115px;
@@ -41,6 +52,9 @@
 //		@include fourK {
 //			max-height: 115px;
 //		}
+        @include phone{
+            max-height: 240px;
+        }
 	}
 }
 .b-seo-text__action{

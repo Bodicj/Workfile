@@ -182,8 +182,8 @@
 					<!-- search -->
 					<div class="header__search js-serch">
 
-						<form class="b-search">
-                            <div class="b-wrapper_search">
+						<form class="b-search js-search">
+                            <div class="b-wrapper_search js-minisearch">
                                 <input type="text" placeholder="Поиск">
                             </div>
                             <button class="icon-search"></button>
@@ -194,7 +194,7 @@
 
 					<!-- cart -->
 					<div class="header__cart js-cart">
-						<a href="/" class="b-cart">
+						<span href="/" class="b-cart">
 							<i class="icon-cart-white"></i>
 <!--
                             <svg class="b-cart-icon" id="svg-cart" viewBox="0 0 27.6 38">
@@ -202,21 +202,61 @@
                             </svg>
 -->
 							<span class="b-cart__total b-cart__total--white">1</span>
-						</a>
-                        <div class="b-cart__wrapper">
-                            <form action="" class="b-minicart js-minicart">
+						</span>
+                        <div class="b-cart__wrapper js-minicart">
+                            <form action="" class="b-minicart">
                                 <div class="b-minicart__item js-item">
-                                    <div class="b-item__content">
+                                    <div class="b-item__img">
                                         <img src="./img/minicart-product.png" alt="букет">
+                                    </div>
+                                    <div class="b-item__content">
                                         <div class="b-item__heading">название букета несколько слов</div>
                                         <p class="b-item__desc">роза, ромашка, пион, тюльпан</p>
-                                        <div class="b-item__articul">Артикул <span class="js-articul">1234</span></div>
+                                        <div class="b-item__articul">Артикул <span class="b-articul js-articul">1234</span></div>
                                         <div class="b-item__price">800 грн</div>
                                     </div>
                                     <div class="b-item__controls">
                                         <div class="b-item__del js-item__del"><i class="icon-close-small"></i></div>
                                         <div class="b-item__counter">
-                                            <span class="js-qty-minus">-</span>
+                                            <span class="js-qty-minus">&#8210;</span>
+                                            <input type="text" name="articul-1234" data-price="800" class="js-qty-input" value="2">
+                                            <span class="js-qty-plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="b-minicart__item js-item">
+                                    <div class="b-item__img">
+                                        <img src="./img/minicart-product.png" alt="букет">
+                                    </div>
+                                    <div class="b-item__content">
+                                        <div class="b-item__heading">название букета несколько слов</div>
+                                        <p class="b-item__desc">роза, ромашка, пион, тюльпан</p>
+                                        <div class="b-item__articul">Артикул <span class="b-articul js-articul">1234</span></div>
+                                        <div class="b-item__price">800 грн</div>
+                                    </div>
+                                    <div class="b-item__controls">
+                                        <div class="b-item__del js-item__del"><i class="icon-close-small"></i></div>
+                                        <div class="b-item__counter">
+                                            <span class="js-qty-minus">&#8210;</span>
+                                            <input type="text" name="articul-1234" data-price="800" class="js-qty-input" value="2">
+                                            <span class="js-qty-plus">+</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="b-minicart__item js-item">
+                                    <div class="b-item__img">
+                                        <img src="./img/minicart-product.png" alt="букет">
+                                    </div>
+                                    <div class="b-item__content">
+                                        <div class="b-item__heading">название букета несколько слов</div>
+                                        <p class="b-item__desc">роза, ромашка, пион, тюльпан</p>
+                                        <div class="b-item__articul">Артикул <span class="b-articul js-articul">1234</span></div>
+                                        <div class="b-item__price">800 грн</div>
+                                    </div>
+                                    <div class="b-item__controls">
+                                        <div class="b-item__del js-item__del"><i class="icon-close-small"></i></div>
+                                        <div class="b-item__counter">
+                                            <span class="js-qty-minus">&#8210;</span>
                                             <input type="text" name="articul-1234" data-price="800" class="js-qty-input" value="2">
                                             <span class="js-qty-plus">+</span>
                                         </div>
@@ -1298,6 +1338,7 @@
       </form>
     </div>
   </article>
+  <div class="b-subscribe__after"></div>
 </section>
 <!-- /SUBSCRIBE -->
 

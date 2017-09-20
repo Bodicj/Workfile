@@ -1,4 +1,5 @@
 $why-we-pl-sm: 130px;
+$why-we-pl-xs: 71px;
 
 .b-why-we{
 	position: relative;
@@ -14,6 +15,9 @@ $why-we-pl-sm: 130px;
     
     @include note{
         padding-left: $why-we-pl-sm;    
+    }    
+    @include phone{
+        padding-left: $why-we-pl-xs;
     }
 }
 .b-why-we--2{
@@ -24,6 +28,9 @@ $why-we-pl-sm: 130px;
 	}
     @include note{
         padding-left: $why-we-pl-sm;    
+    } 
+    @include phone{
+        padding-left: $why-we-pl-xs;
     }
 }
 .b-why-we--3{
@@ -34,6 +41,9 @@ $why-we-pl-sm: 130px;
 	}
     @include note{
         padding-left: $why-we-pl-sm;    
+    } 
+    @include phone{
+        padding-left: $why-we-pl-xs;
     }
 }
 .b-why-we__title{
@@ -49,7 +59,12 @@ $why-we-pl-sm: 130px;
 		font-size: 19px;
 		line-height: 24px;
 		margin-bottom: 10px;
-	}
+	} 
+    @include phone{
+        font-size: 16.3px;
+        line-height: 20px;
+        margin-bottom: 7px;
+    }
 //	@include twoK {
 //		font-size: 30px;
 //		line-height: 30px;
@@ -79,13 +94,22 @@ $why-we-pl-sm: 130px;
 //		font-size: 28px;
 //		line-height: 35px;
 //	}
+    @include phone{
+        padding-left: 0;
+        line-height: 13px;
+        font-size: 11.34px;
+    }
 }
 .b-why-we__icon{
 	position: absolute;
 //	top: 0; left: 0;
     img{
         width: 100%;
-        transform: scale(0.9)
+        transform: scale(0.9);
+            
+        @include phone{
+            transform: scale(1)
+        }
     }
 }
 .b-why-we__icon--1{
@@ -104,6 +128,11 @@ $why-we-pl-sm: 130px;
 //	}
     @include note{
         left: 10px;
+    }    
+    @include phone{
+        top: 3px;
+        left: 6px;
+        width: 53px;
     }
 }
 .b-why-we__icon--2{
@@ -125,6 +154,11 @@ $why-we-pl-sm: 130px;
 //	}
     @include note{
         left: 11px;
+    }    
+    @include phone{
+        top: -2px;
+        left: 7px;
+        width: 50px;
     }
 }
 .b-why-we__icon--3{
@@ -146,6 +180,11 @@ $why-we-pl-sm: 130px;
 //	}
     @include note{
         left: 0;
+    }    
+    @include phone{
+        top: 2px;
+    left: -3px;
+    width: 64px;
     }
 }
 .b-why-we-single{
@@ -165,6 +204,9 @@ $why-we-pl-sm: 130px;
         &:last-child{
             margin-bottom: 0;
         }
+    }    
+    @include phone{
+        margin-bottom: 23px;
     }
 }
 #why-we-content{

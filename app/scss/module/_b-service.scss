@@ -1,5 +1,9 @@
 .b-service{
 	margin-bottom: 45px;
+    
+    @include phone{
+        margin: 0 0 23px;
+    }
 }
 .b-service__img{
     display: block;
@@ -20,6 +24,10 @@
 //			width: 100%;
 //		}
 	}
+    
+    @include phone{
+        margin: 0 0 5px;
+    }
 }
 .b-service-separate{
 	width: 31.5%;
@@ -66,6 +74,10 @@
 //		font-size: 40px;
 //		line-height: 45px;
 //	}
+    @include phone{
+        font-size: 12px;
+        line-height: 18px;
+    }
 }
 
 .b-service__link{

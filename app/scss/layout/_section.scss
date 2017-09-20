@@ -22,7 +22,10 @@
         margin-top: 40px;
     }
     @include small{
-        margin-top: 00px;
+        margin-top: 0;
+    }
+    @include phone{
+        padding-top: 51px;
     }
     
 	.container{
@@ -58,8 +61,12 @@
 //      margin-right: -9px;
     }
     .g-link--allinfo{
-        position: relative;
         bottom: 30px;
+        
+        @include phone{
+            bottom: -16px;
+            right: -9px;
+        }
     }
 }
 .section--catalog{
@@ -82,20 +89,41 @@
     @include pc {
         padding-bottom: 190px;
     }
+    @include phone{
+        padding-bottom: 157px;
+    }
     
     .container{
 //        padding: 0 10px;
+        @include phone{
+            padding: 0;
+        }
+    }
+    .g-link--allinfo{
+        @include phone{
+            bottom: -13px;
+            right: 3px;
+        }
     }
 }
 #section_tite_services{
 	margin: 0 0 79px;
     padding-left: 4px;
+    
+    @include phone{
+        margin: 35px 0 60px;
+        padding-left: 2px;
+    }
 }
 .section--why-we{
 	position: relative;
 	padding-top: 163px;
 	padding-bottom: 60px;
 //	padding-left: 4px;
+    
+    @include phone{
+        padding: 137px 0 35px;
+    }
 
 	&:before{
 		content: "";
@@ -107,10 +135,18 @@
 		width: 385px;
 		height: 261px;
 		background: url(../img/why-we-flower.png) -9px 0 no-repeat;
+        
+        @include tablet{
+            top: -92px;
+            width: 85.3%;
+            transform: translateX(-50%);
+            background: url(../img/why-we-flower.png) 5px 0px no-repeat/contain;
+        }
 	}
     
     .container{
 //        padding: 0 10px;
+        padding: 0;
     }
 
 	.section__title{
@@ -126,7 +162,11 @@
             margin-bottom: 90px;
         }
         @include note{
-            font-size: 16px;
+//            font-size: 16px;
+        }
+        @include phone{
+            margin-bottom: 69px;
+            padding-right: 0;
         }
 	}
 }
@@ -142,6 +182,10 @@
         margin-top: 60px;
         padding-bottom: 190px;
     }
+    @include phone{
+        margin-top: 21px;
+        padding-bottom: 130px;
+    }
     
 	.container{
 //		max-width: 1656px;
@@ -151,6 +195,11 @@
 	.section__title{
 		margin-bottom: 81px;
         padding-right: 2px;
+        
+        @include phone{
+            margin-bottom: 20px;
+            padding-right: 0;
+        }
 	}
 
 }
@@ -172,6 +221,9 @@
 /* 	@include huge {
 	padding-top: 170px;
 } */
+    @include phone{
+        padding: 104px 0 68px;
+    }
 
 	&:before{
 		content: "";
@@ -183,31 +235,40 @@
 		width: 622px;
 		height: 380px;
 		background: url(../img/text-flower.png) 0px 0px no-repeat;
+        
+        @include tablet{
+            top: -112px;
+            width: 100%;
+            transform: translateX(-50%);
+            background: url(../img/text-flower.png) 50% 0px no-repeat/contain;
+        }
 	}
 }
 .section--subscribe{
-	background: #fff url(../img/subscribe-bg.jpg) center 130px no-repeat;
+//	background: #fff url(../img/subscribe-bg.jpg) center 130px no-repeat;
 	padding-top: 0;
-	padding-bottom: 535px;
+//	padding-bottom: 535px;
+    padding-bottom: 0;
     
     @include huge{
-        background: #fff url(../img/subscribe-bg.jpg) center 110px no-repeat /contain;
+//        background: #fff url(../img/subscribe-bg.jpg) center 110px no-repeat /contain;
     }
     
     @include pc{
-	    background: #fff url(../img/subscribe-bg.jpg) center 185px no-repeat /contain;
+//	    background: #fff url(../img/subscribe-bg.jpg) center 185px no-repeat /contain;
     }
     
     @include note{
         max-width: 100%;
-        background: #fff url(../img/subscribe-bg.jpg) center 319px no-repeat /contain;
+//        background: #fff url(../img/subscribe-bg.jpg) center 319px no-repeat /contain;
     }
     @include tablet{
-        padding-bottom: 505px;
-        background: #fff url(../img/subscribe-bg.jpg) center 314px no-repeat /contain;
+//        padding-bottom: 505px;
+//        background: #fff url(../img/subscribe-bg.jpg) center 314px no-repeat /contain;
     }
     @include small{
     }
+    
 }
 .section__title{
 	margin: 0 0 80px;

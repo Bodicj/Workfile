@@ -13,6 +13,9 @@
     @include note{
         max-width: 100%;
     }
+    @include phone{
+        padding: 0;
+    }
 }
 
 .b-subscribe{
@@ -23,13 +26,21 @@
     @include huge {
         height: 110px;
     }
+    @include pc {
+        height: auto;
+    }
     @include tablet{
         padding: 40px 0 45px;
+    }
+    @include phone{
+        margin: 0 auto;
+        width: calc(100% - 30px);
     }
     
     .container{
         height: 100%;
     }
+    
 }
 .b-subscribe__title{
 //	display: inline-block;
@@ -75,7 +86,8 @@
         padding: 0 12px;
     }
     @include pc{
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+        flex-direction: column;
     }
     @include note{
         flex-direction: column;
@@ -110,8 +122,13 @@
 		}
         @include pc{
             width: 300px;
+            margin-right: 0;
         }
         @include note{
+            margin-bottom: 27px;
+        }
+        @include phone{
+            width: 263px;
             margin-bottom: 27px;
         }
 
@@ -137,6 +154,9 @@
         }
         @include pc{
             width: 300px;
+        }
+        @include phone{
+            width: 263px;
         }
 	}
 	input[type="text"]{
@@ -167,4 +187,14 @@
             border: 2px solid transparent;
         }
 	}
+}
+
+
+.b-subscribe__after{
+    height: 535px;
+    background: #fff url(../img/subscribe-bg.jpg) top no-repeat /contain;
+    
+    @include tablet{
+        height: 505px;
+    }
 }

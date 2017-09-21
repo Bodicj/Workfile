@@ -83,6 +83,34 @@ $(function() {
       });
     })();
 
+  //
+  // document scale
+  //--------------------------------------------------------------------------------------- 
+//	(function(){
+//        var  body = document.body
+//            ,html = document.getElementsByTagName("html")[0]
+//            ;
+//        
+//        console.log("body:", body);
+//        console.log("html:", html);
+//        console.log("body width:", body.clientWidth);
+//        console.log("html width:", html.clientWidth);    
+//        var coeff = html.clientWidth/body.clientWidth;
+//            console.log("coeff: ", coeff);
+//            console.log("style: ", 'scale('+coeff+')');
+//        if (coeff>1) coeff=1; // нам нужно только уменьшение сайта, но не его увеличение, поэтому ограничиваем коэффициент сверху единицей
+//        if (coeff<0.6) coeff=0.6; // ограничение снизу добавлено для того, чтобы сайт совсем уж не превращался в нечитаемый
+//        if (coeff!=1.0) {
+//        //    if (navigator.userAgent.indexOf('Firefox')!=-1) elm.style.boxShadow='none';  // масштабирование в Firefox порождало некорректное отображение boxshadow, и пришлось это свойство отключить
+//            html.style.webkitTransform = 
+//            html.style.msTransform = 
+//            html.style.mozTransform = 
+//            html.style.transform = 'scale('+coeff+')'; // собственно масштабирование
+//        }
+//
+//	})();
+
+
     // Accordion
     // sSelector - css selector of the container which contains accordions inside
     // fCallback - cb f-n, which fires after each accordion toggle (trigger click)
@@ -141,6 +169,81 @@ $(function() {
    	// $(".js-scrollPane").jScrollPane({
     // 	showArrows: false
     // });
+    
+	// Mobile menu search and minicart
+	//---------------------------------------------------------------------------------------
+	(function(){
+		var  $searchForm = $(".js-search")
+			,$searchIcon = $searchForm.children("button[type='submit']")
+			,$searchField = $searchForm.children(".js-minisearch")
+			,$minicartIcon = $(".js-cart")
+			,$minicart = $minicartIcon.find(".js-minicart")
+			;
+
+		var hideSearch = function(iTime){
+			$searchField.fadeOut(iTime);
+			console.log("Hide search");
+		}
+		var toggleSearch = function(iTime){
+			$searchField.fadeToggle(iTime);
+			console.log("Hide search");
+		}
+
+		var hideCart = function(iTime){
+			$minicart.slideUp(iTime);
+			console.log("toggle minicart");
+		}
+		var toggleCart = function(iTime){
+			$minicart.slideToggle(iTime);
+			console.log("toggle minicart");
+		}
+
+		var hideSearchAndCart = function(iTime){
+			hideSearch(iTime);
+			hideCart(iTime);
+		}
+
+		$searchIcon.on("click", function(e){
+			if(window.innerWidth < 1220){
+				e.preventDefault();
+				console.log("search icon click")
+			}
+		});
+
+		$minicartIcon.on("click", function(e){
+			e.stopPropagation();
+			if(window.innerWidth < 1220){
+				hideSearch(300);
+			}
+			toggleCart(300);
+		});
+
+		$window.on("resize", function(){
+			$searchForm.off("click");
+			hideSearchAndCart(0);
+
+			if(window.innerWidth < 1220){
+				$searchForm.on("click", function(e){
+					e.stopPropagation();
+					hideCart(300);
+					toggleSearch(300);
+				});
+			} else{
+				if ($searchField.is(":hidden")){$searchField.show(0)};
+			}
+
+		}).trigger("resize");
+
+
+		$window.on("click", function(){
+			if(window.innerWidth < 1220){
+				$searchField.fadeOut(300);
+				$minicart.slideUp(300);
+			};
+
+		});
+
+	})();
 
   //
   // Modal Popup
@@ -291,31 +394,12 @@ $(function() {
   	});
   })();
 
+
+
   //
   // Main Slider
   //---------------------------------------------------------------------------------------
 	(function(){
-        
-//        var  body = document.body
-//            ,html = document.getElementsByTagName("html")[0]
-//            ;
-//        
-//        console.log("body:", body);
-//        console.log("html:", html);
-//        console.log("body width:", body.clientWidth);
-//        console.log("html width:", html.clientWidth);    
-//        var coeff = html.clientWidth/body.clientWidth;
-//            console.log("coeff: ", coeff);
-//            console.log("style: ", 'scale('+coeff+')');
-//        if (coeff>1) coeff=1; // нам нужно только уменьшение сайта, но не его увеличение, поэтому ограничиваем коэффициент сверху единицей
-//        if (coeff<0.6) coeff=0.6; // ограничение снизу добавлено для того, чтобы сайт совсем уж не превращался в нечитаемый
-//        if (coeff!=1.0) {
-//        //    if (navigator.userAgent.indexOf('Firefox')!=-1) elm.style.boxShadow='none';  // масштабирование в Firefox порождало некорректное отображение boxshadow, и пришлось это свойство отключить
-//            html.style.webkitTransform = 
-//            html.style.msTransform = 
-//            html.style.mozTransform = 
-//            html.style.transform = 'scale('+coeff+')'; // собственно масштабирование
-//        }
 		
 		$('.js-slider').bxSlider({
 				// auto: true,
@@ -339,42 +423,6 @@ $(function() {
 				$(this).css({ top: (parentHeight-h)/2 });
 			})
 		}
-
-	})();
-
-
-	// Mobile menu search and minicart
-	//---------------------------------------------------------------------------------------
-	(function(){
-		var  $searchIcon = $(".js-search")
-			,$searchField = $searchIcon.children(".js-search")
-			,$minicartIcon = $(".js-cart")
-			,$minicart = $minicartIcon.find(".js-minicart")
-			;
-
-		$window.on("resize", function(){
-			$searchIcon.on("click", function(e){
-				e.stopPropagation;
-				if(window.outerWidth < 1220){
-					$searchField.slideToggle(300);
-				} else{
-					if ($searchField.css("display") == "none"){$searchField.show(0)};
-				}
-			});
-			$minicartIcon.on("click", function(e){
-				e.stopPropagation;
-				$minicart.slideToggle(300);
-			});
-		}).trigger("resize");
-
-
-		$window.on("click", function(){
-			if(window.outerWidth < 1220){
-				$searchField.slideUp(300);
-				$minicart.slideUp(300);
-			};
-
-		});
 
 	})();
 

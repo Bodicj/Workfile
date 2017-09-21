@@ -34,6 +34,7 @@
     }
     @include phone{
         margin: 0 auto;
+        padding: 22px 0 39px;
         width: calc(100% - 30px);
     }
     
@@ -70,6 +71,15 @@
         width: 100%;
         text-align: center;
 //        text-transform: uppercase;
+    }
+    @include phone{
+        margin-bottom: 25px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    
+    br{
+        display: none;
     }
 }
 .b-subscribe__form{
@@ -130,6 +140,9 @@
         @include phone{
             width: 263px;
             margin-bottom: 27px;
+            font-size: 12px;
+            min-height: 31px;
+            padding: 2px 14px;
         }
 
 		&:last-child{
@@ -182,6 +195,13 @@
         @include note{
             margin-bottom: 0;
         }
+        @include phone{
+            width: auto;
+            font-size: 12px;
+            line-height: 23px;
+            padding: 2px 13px;
+            min-width: initial;
+        }
         
         &:hover{
             border: 2px solid transparent;
@@ -192,9 +212,14 @@
 
 .b-subscribe__after{
     height: 535px;
-    background: #fff url(../img/subscribe-bg.jpg) top no-repeat /contain;
+    background: #fff url(../img/flowers-subscribe.jpg) top no-repeat /contain;
     
     @include tablet{
         height: 505px;
+//        background: #fff url(../img/flowers-subscribe.jpg) top no-repeat /contain;
+    }
+    @include phone{
+        height: 207px;
+        background: #fff url(../img/flowers-subscribe-xs.png) top no-repeat/91%;
     }
 }

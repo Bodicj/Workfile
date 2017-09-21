@@ -84,6 +84,7 @@ $footerSvgColor: #FFFFFF;
         margin-right: -10px;
     }
     @include small{
+        margin: 0;
         height: 300px;
     }
 }

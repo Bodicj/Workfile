@@ -289,6 +289,10 @@ $svgTransitionTime: 0.2s;
                  right: 8px;
              }
          }
+        @include phone{
+            max-height: calc(100vh - 42px);
+            overflow: auto;
+        }
     }
     
 //    &:hover{

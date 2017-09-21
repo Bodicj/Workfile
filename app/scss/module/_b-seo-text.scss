@@ -40,7 +40,7 @@
 //	}
     
     @include phone{
-        margin: 0 0 30px;
+        margin: 0 0 31px;
         font-size: 14px;
         line-height: 17px;
     }
@@ -63,4 +63,8 @@
 .b-seo-text__btn{
   font-weight: 700;
   text-transform: uppercase;
+    
+    @include phone{
+        font-size: 12px;
+    }
 }

@@ -33,4 +33,11 @@
             opacity: 1;
         }
     }
+    @include small{
+        right: 5px;
+        bottom: 5px;
+        width: 65px;
+        height: 65px;
+        line-height: 65px;
+    }
 }

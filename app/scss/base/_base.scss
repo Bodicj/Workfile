@@ -315,3 +315,8 @@ font-weight: 800;
         display: inline !important;
     }
 }
+.visible-xs-block{
+    @include phone{
+        display: block !important;
+    }
+}

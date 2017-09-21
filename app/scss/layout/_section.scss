@@ -71,7 +71,7 @@
 }
 .section--catalog{
 	padding-top: 117px;
-	padding-bottom: 320px;
+	padding-bottom: 270px;
 
 /* 	@include huge {
 	padding-top: 80px;
@@ -80,6 +80,11 @@
 	.section__title{
 		margin-bottom: 65px;
 	}
+    
+    >.container{
+        display: flex;
+        justify-content: space-between;
+    }
 }
 .section--services{
 	padding-top: 18px;

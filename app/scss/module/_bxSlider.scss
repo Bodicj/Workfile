@@ -54,6 +54,10 @@
 	position: absolute;
 	bottom: 31px;
 	width: 100%;
+    
+    @include phone{
+        bottom: 12px;
+    }
 }
 
 /* LOADER */
@@ -78,6 +82,10 @@
 	font-weight: bold;
 	color: #666;
 	padding-top: 20px;
+    
+    @include phone{
+        line-height: 10px;
+    }
 }
 
 .bx-wrapper .bx-pager .bx-pager-item,
@@ -100,6 +108,13 @@
 	border-radius: 50%;
 	cursor: pointer;
 	transition: all .3s;
+    
+    @include phone{
+        margin: 0 2.5px;
+        border-width: 1px;
+        width: 10px;
+        height: 10px;
+    }
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a:hover,

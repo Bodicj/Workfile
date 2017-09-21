@@ -61,8 +61,8 @@
     <!-- MAIN -->
     <div class="main">
       <!-- PRODUCTS -->
-      <div class="row">
-        <div class="col col--4-of-12 col--push-8-of-12 col--d-last">
+      <div class="b-row">
+<!--        <div class="col col--4-of-12 col--push-8-of-12 col--d-last">-->
           <div id="sort" class="b-sort" tabindex="100">
             <div class="b-sort__text">Сортировать:</div>
             <div class="b-sort__dropdown">
@@ -76,19 +76,14 @@
               </ul>
             </div>
           </div>
-        </div>
+<!--        </div>-->
       </div>
 
-      <div class="content-block" id="catalog_product1">
-      @@for (i=1; i<=4; i++){
+    <div class="content-block" id="catalog_product1">
+      @@for (i=1; i<=15; i++){
           @@include('./../parts/product.html', {"index": "`+i+`"})
       }
-      </div>
-      <div class="content-block" id="catalog_product2">
-        @@for (i=1; i<=4; i++){
-        @@include('./../parts/product.html', {"index": "`+i+`"})
-        }
-      </div>
+    </div>
       <!-- /PRODUCTS -->
 
       <div class="b-pagination">

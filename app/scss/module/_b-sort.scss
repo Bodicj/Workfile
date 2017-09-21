@@ -1,7 +1,11 @@
+.b-row{
+    @include clearfix;
+}
 .b-sort{
 	margin-top: 8px;
-  margin-right: 6px;
+    margin-right: 6px;
 	margin-bottom: 110px;
+    float: right;
 	text-align: right;
 	&:focus{
 		outline:none;

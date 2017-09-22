@@ -93,19 +93,20 @@ $(function() {
 
     // акордеон + кастомна прокрутка (моб меню)
     (function(){
-    	var  $container = $(".b-mobile-nav_wrapper").jScrollPane({
-			showArrows: false
-		});
+    	// var  $container = $(".b-mobile-nav_wrapper").jScrollPane({
+			// showArrows: false
+		// });
 
-    	function callback($container){
-	    	$container.data('jsp').reinitialise();	// reinitialize jScrollPane
-	   	}
+    	// function callback($container){
+	    	// $container.data('jsp').reinitialise();	// reinitialize jScrollPane
+	   	// }
 
-    	accordion(".b-mobile-nav_wrapper",	callback);	// initialize accordions in mobile menu
+    	// accordion(".b-mobile-nav_wrapper",	callback);	// initialize accordions in mobile menu
+    	accordion(".b-mobile-nav_wrapper");	// initialize accordions in mobile menu
 
-    	$window.on("resize", function(){	// reinitialize jScrollPane after window resizing
-    		callback($container);
-    	});
+    	// $window.on("resize", function(){	// reinitialize jScrollPane after window resizing
+    		// callback($container);
+    	// });
 
     })();
 

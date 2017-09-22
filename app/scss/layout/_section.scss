@@ -139,16 +139,16 @@
 //		margin-left: -180px;
 		width: 385px;
 		height: 261px;
-		background: url(../img/flowers-why-we.png) -9px 0 no-repeat;
+		background: url(../img/flowers-why-we.png) no-repeat -9px 0;
         
         @include tablet{
             top: -92px;
             width: 85.3%;
             transform: translateX(-50%);
-            background: url(../img/flowers-why-we.png) 9px -2px no-repeat/contain;
+            background: url(../img/flowers-why-we.png) no-repeat 9px -2px / contain;
         }
         @include phone{
-            background: url(../img/flowers-why-we-xs.png) 9px 0px no-repeat;
+            background: url(../img/flowers-why-we-xs.png) no-repeat 9px 0px;
         }
 	}
     
@@ -242,19 +242,19 @@
         transform: translateX(calc(-50% - 20px));
 		width: 622px;
 		height: 380px;
-		background: url(../img/flowers-seo.png) 0px 0px no-repeat;
+		background: url(../img/flowers-seo.png) no-repeat 0px 0px;
         
         @include tablet{
             top: -112px;
             width: 100%;
             transform: translateX(-50%);
-            background: url(../img/flowers-seo-xs.png) 50% 0px no-repeat/contain;
+            background: url(../img/flowers-seo-xs.png) no-repeat 50% 0px /contain;
         }
         @include phone{
             top: -56px;
             width: 100%;
             transform: translateX(-50%);
-            background: url(../img/flowers-seo-xs.png) calc(50% + 1px) 0px no-repeat;
+            background: url(../img/flowers-seo-xs.png) no-repeat calc(50% + 1px) 0px;
         }
 	}
 }

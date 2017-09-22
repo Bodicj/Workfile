@@ -1,6 +1,6 @@
 
 <!-- Filter -->
-<form class="b-filter">
+<form class="b-filter is--mobile-active">
 
   <!-- filter block -->
   <div class="b-filter__slider-wrapper">
@@ -19,7 +19,10 @@
   @@for (i=1; i<=7; i++){
   <!-- filter block -->
   <div class="b-filter__block">
-    <h4 class="b-filter__title">кому <i class="icon-toggler"></i></h4>
+    <h4 class="b-filter__title">кому
+        <i class="icon-toggler"></i>
+        <i class="icon-toggler-white"></i>
+    </h4>
     <ul class="b-filter__block-items">
       <li>
         <input id="r-`+i+`1" type="checkbox" name="o-`+i+`1" class="g-checkbox">

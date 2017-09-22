@@ -62,7 +62,8 @@ var config = {
                 style: 'compressed',
                 sourcemap: true
              })
-			.pipe(autoprefixer(['last 3 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
+			.pipe(autoprefixer(['last 10 major versions', "Firefox > 20", '> 0.1%', 'ie 10-11'])) // Создаем префиксы
+			// .pipe(autoprefixer(['last 3 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
 			// .pipe(cssnano())
 	        .pipe(sourcemaps.write('.'))
 			.pipe(gulp.dest('dist/css'))

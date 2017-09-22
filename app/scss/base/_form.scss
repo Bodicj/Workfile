@@ -339,7 +339,8 @@ textarea{
   left: 0;
   width: 22px;
   height: 22px;
-  border: 1px solid #0f0f0f;
+//  border: 1px solid #0f0f0f;
+  border: 1px solid currentColor;
   background-color: #ffffff;
 //  @include fourK {
 //    top: 5px;
@@ -355,7 +356,8 @@ textarea{
   left: 7px;
   width: 9px;
   height: 13px;
-  border: solid #0f0f0f;
+//  border: solid #0f0f0f;
+  border: solid currentColor;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
   opacity: 0;

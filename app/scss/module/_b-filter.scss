@@ -1,6 +1,29 @@
 .b-filter{
 	position: relative;
 	margin-bottom: 60px;
+    
+    @include phone{
+        overflow: auto;
+        position: fixed;
+        top: 0;
+        right: 100%;
+        bottom: 0;
+        z-index: 1001;
+        visibility: hidden;
+        margin-bottom: 0;
+        width: 280px;
+        padding: 0 15px;
+        background-color: #000;
+        transform: translateX(0);
+        transition: transform 300ms;
+        opacity: 0;
+        
+        &.is--mobile-active{
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(280px);
+        }
+    }
 }
 .b-filter__title{
 	position: relative;
@@ -12,17 +35,38 @@
 	text-transform: uppercase;
 	text-align: center;
 	color: #0f0f0f;
+    
+    @include phone{
+        color: #fff;
+    }
+    
+    .icon-toggler-white{
+        display: none;
+    }
 
 	i{
 		position: absolute;
 		top: 10px;
 		right: 3px;
 		cursor: pointer;
+        transform: scale(1);
 		transition: transform .3s;
 
 		.is--closed & {
 			transform: rotate(180deg);
 		}
+        
+        &.icon-toggler{
+            @include phone{
+                display: none;
+            }
+        }
+        
+        &.icon-toggler-white{
+            display: block;
+            width: 14px;
+            height: 8px;
+        }
 	}
 
 //	@include fourK {
@@ -53,6 +97,16 @@
 	li {
 		margin-bottom: 8px;
 	}
+    
+    .g-checkbox:not(checked) + label:before {
+        height: 20px;
+        width: 20px;
+        background-color: #000;
+    }
+    .g-checkbox:not(checked) + label:after {
+        top: 2px;
+    left: 6px;
+    }
 
 	label{
 		display: block;
@@ -67,7 +121,13 @@
 //          font-size: 30px;
 //          line-height: 39px;
 //        }
+        @include phone{
+            line-height: 20px;
+            color: #fff;
+        }
 	}
+    
+    
 }
 .b-filter__slider-wrapper{
 	margin-bottom: 35px;
@@ -100,6 +160,14 @@
 	.g-btn{
 		display: block;
 		width: 100%;
+        
+        @include phone{
+            margin: auto;
+            width: 200px;
+            border: 1px solid #fff;
+            padding: 7px 10px 6px;
+            line-height: 21px;
+        }
 	}
 }
 

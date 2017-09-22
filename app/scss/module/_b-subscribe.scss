@@ -212,7 +212,7 @@
 
 .b-subscribe__after{
     height: 535px;
-    background: #fff url(../img/flowers-subscribe.jpg) top no-repeat /contain;
+    background: #fff url(../img/flowers-subscribe.jpg) no-repeat top / contain;
     
     @include tablet{
         height: 505px;
@@ -220,6 +220,6 @@
     }
     @include phone{
         height: 207px;
-        background: #fff url(../img/flowers-subscribe-xs.png) top no-repeat/91%;
+        background: #fff url(../img/flowers-subscribe-xs.png) no-repeat top / 91%;
     }
 }

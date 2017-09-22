@@ -246,15 +246,25 @@
     background-image: url(../img/svg/i-qty-down.svg);
 	vertical-align: middle;
 }
-.icon-sort-down {
-	@extend %icon;
-	@include sprite($i-qty-down);
-	vertical-align: middle;
-}
+//.icon-sort-down {
+//	@extend %icon;
+//	@include sprite($i-qty-down);
+//	vertical-align: middle;
+//}
 .icon-toggler {
 	@extend %icon;
-	@include sprite($i-arrow-toggle-up);
+//	@include sprite($i-arrow-toggle-up);
+    width: 17px;
+    height: 10px;
 	vertical-align: middle;
+    background-image: url(../img/svg/i-toggler.svg);
+}
+.icon-toggler-white {
+	@extend %icon;
+    width: 17px;
+    height: 10px;
+	vertical-align: middle;
+    background-image: url(../img/svg/i-toggler-white.svg);
 }
 .icon-star{
 	@extend %icon;

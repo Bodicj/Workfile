@@ -208,6 +208,12 @@
     height: 18px;
     background-image: url(../img/svg/i-close.svg);
 }
+.icon-close-white {
+	@extend %icon;
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/svg/i-close-white.svg);
+}
 .icon-close-small {
 	@extend %icon;
     width: 13px;

@@ -26,7 +26,20 @@ $(function() {
       $('.js-nav-toggle').removeClass('is--active');
     }
 
-    // Закрываем мобильное меню при клике на область вне его
+    // filters:
+    // Показываем/Скрываем бічне меню фільтрів
+    function toggleFiltersMenuVisibility(){
+      $('.js-filters').toggleClass('is--visible');
+    }
+
+    // Закрываем бічне меню фільтрів
+    function closeFiltersMenu(){
+      $('body').removeClass('is--mobile-active');
+      $('.js-filters').removeClass('is--visible');
+      // $('.js-nav-toggle').removeClass('is--active');
+    }
+
+    // Закрываем мобильное меню (і меню фільтрів) при клике на область вне его
     function closeMobileMenuOnOutOfClick(){
       $('body').mouseup(function(e) {
         var subject = $('.is--visible');
@@ -37,6 +50,7 @@ $(function() {
           && e.target.className != subject.attr('class')
           && !subject.has(e.target).length){
           toggleMenuVisibility();
+      		closeMobileMenu();	// закриваємо бічне меню фільтрів
           toggleBodyBackground();
           toggleMenuTriggerClass();
         }
@@ -355,7 +369,7 @@ $(function() {
 			});
 
 		$window.on("resize", function(){
-			if (window.innerWidth <= 480){
+			if (window.innerWidth <= 480 && $slider[0]){
 				// $slider.reloadSlider();
 				$slider.destroySlider();
 				$('.js-slider').bxSlider({

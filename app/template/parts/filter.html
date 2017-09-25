@@ -1,10 +1,18 @@
 
 <!-- Filter -->
 <form class="b-filter is--mobile-active">
+  
+  <div class="b-mobile-nav__heading b-mobile-nav__heading_filter">
+      Фильтр
+      <i class="icon-close-white js-close_filters"></i>
+  </div>
 
   <!-- filter block -->
   <div class="b-filter__slider-wrapper">
-    <h4 class="b-filter__title">Цена <i class="icon-toggler"></i></h4>
+    <h4 class="b-filter__title">Цена
+        <i class="icon-toggler"></i>
+        <i class="icon-toggler-white"></i>
+    </h4>
     <div class="b-filter__slider">
       <div class="b-filter__slider-inner">
           <input type="text" id="price_range" name="price">
@@ -65,7 +73,9 @@
 
   <!-- filter action -->
   <div class="b-filter__action">
-    <input type="reset" class="b-filter__action-btn" value="сбросить все фильтры">
+<!--    <input type="reset" class="b-filter__action-btn" value="сбросить все фильтры">-->
+    <button type="reset" class="b-filter__action-btn">сбросить<span class="hidden-xs"> все фильтры</span></button>
+    <button type="submit" class="b-filter__action-btn visible-xs-block">показать</button>
   </div>
   <!-- /filter action -->
 

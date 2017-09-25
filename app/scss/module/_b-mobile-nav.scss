@@ -151,7 +151,7 @@ body.is--mobile-active{
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
+//  bottom: 0;
   z-index: 1000;
   visibility: hidden;
 //  overflow: auto;
@@ -248,6 +248,7 @@ body.is--mobile-active{
     font-size: 18px;
     line-height: 93px;
     font-weight: 700;
+    color: #fff;
 //    border-bottom: 1px solid #191c1f;
     
     @include note{

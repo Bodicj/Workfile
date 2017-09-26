@@ -15,6 +15,16 @@ body {
   line-height: $lh--base;
   color: $color__base;
   
+//	@include fourK {
+//		margin-top: 120px;
+//	}
+    @include pc{
+        margin-top: 109px;
+    }
+    @include note{
+        margin-top: 42px;
+    }
+    
 }
 a {
   text-decoration: none;

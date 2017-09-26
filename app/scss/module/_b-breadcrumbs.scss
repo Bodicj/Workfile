@@ -2,6 +2,11 @@
 	margin-bottom: 92px;
 	min-height: 20px;
 
+    @include phone{
+        margin-bottom: 50px;
+        font-size: 10px;
+    }
+    
 	a {
 		text-decoration: none;
 		&:hover{
@@ -16,7 +21,7 @@
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
-	padding-left: 27px;
+	padding-left: 26px;
 	color: #0f0f0f;
 	text-transform: uppercase;
 	font-size: 16px;
@@ -30,6 +35,11 @@
 //		font-size: 30px;
 //		line-height: 35px;
 //	}
+    @include phone{
+        padding-left: 10px;
+        line-height: 16px;
+        font-size: 10px;
+    }
 
 	&:first-child{
 		padding-left: 0;
@@ -41,9 +51,19 @@
 	
 	&:before{
 		content: '';
+		@extend .icon-toggler;
 		position: absolute;
-		left: 8px; top:2px;
-		@include sprite($i-breadcrumbs-arrow);
+		left: 2px;
+        top:5px;
+        transform: rotate(90deg);
+        
+        
+        @include phone{
+            top: 5px;
+            left: 0;
+            width: 8px;
+            height: 5px;
+        }
 	}
 }
 

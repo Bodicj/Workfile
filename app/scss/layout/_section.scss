@@ -76,14 +76,25 @@
 /* 	@include huge {
 	padding-top: 80px;
 } */
+    @include phone{
+        padding-top: 13px;
+    }
 
 	.section__title{
 		margin-bottom: 65px;
+        
+        @include phone{
+            margin-bottom: 36px;
+        }
 	}
     
     >.container{
         display: flex;
         justify-content: space-between;
+        
+        @include small {
+            flex-direction: column-reverse;
+        }
     }
 }
 .section--services{

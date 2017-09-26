@@ -21,6 +21,17 @@
 //	@include fourK {
 //		font-size: 41px;
 //	}
+    @include small{
+        margin: 0 9px 20px 0;
+        min-width: 31px;
+        padding: 0 10px;
+        line-height: 31px;
+        font-size: 14.88px;
+    }
+    
+    &:last-child{
+        margin-right: 0;
+    }
 
 	&:hover{
 		background:#0f0f0f;
@@ -45,5 +56,11 @@
 //		@include fourK {
 //			line-height: 37px;
 //		}
+        @include phone{
+            margin: 0px 0px 20px -8px;
+            padding: 0px 5px 0 5px;
+            min-width: initial;
+            line-height: 11px;
+        }
 	}
 }

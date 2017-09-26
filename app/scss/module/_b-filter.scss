@@ -2,7 +2,7 @@
 	position: relative;
 	margin-bottom: 60px;
     
-    @include phone{
+    @include small{
         overflow: auto;
         position: fixed;
         top: 0;
@@ -18,7 +18,7 @@
         transition: transform 300ms;
         opacity: 0;
         
-        &.is--mobile-active{
+        &.is--visible{
             opacity: 1;
             visibility: visible;
             transform: translateX(280px);

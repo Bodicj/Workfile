@@ -68,6 +68,13 @@ $(function() {
         toggleMenuTriggerClass();
         toggleBodyBackground();
       });
+
+      // Add listener for filters open/close buttons
+    $('.js-filters-toggle').on('click',function(){
+        toggleFiltersMenuVisibility();
+        // toggleMenuTriggerClass();
+        toggleBodyBackground();
+      });
     })();
 
 
@@ -403,11 +410,43 @@ $(function() {
 	// Catalog - Products Sort Block
 	//---------------------------------------------------------------------------------------
 		(function(){
-			var $sort = $('.b-sort');
-			if ( $sort.length ){
-				$sort.find('.b-sort__selected').on('click',function(){
-					$(this).parents('.b-sort').toggleClass('is--open');
-				});
+			var  $sort = $('.b-sort')
+				,$select = $sort.find(".js-selectric")	// "Сортировать"
+				,$optionLabeled = $select.children(".label")
+				,BREAKPOINT = 1220	//px
+				,bPrevWindowWidthMore =  $window.outerWidth() >= BREAKPOINT
+				;
+
+			var SelectricSettings = {
+					onInit: function() {
+						$(this).parents(".selectric-wrapper").children(".selectric-items").find("ul").children("li.disabled").remove();	//прибираємо з меню неактивний пункт (placeholder)
+					},
+					onChange: function(){
+						// $(this).change();
+						$(this).parents("form").trigger("submit");
+					}
+				}
+
+			var  selectInit = function(bInitialization){	// if bInitialization == true then first init select
+				if ($window.outerWidth() >= BREAKPOINT && (bInitialization?true:!bPrevWindowWidthMore)){
+					$optionLabel = $select.children(".label");
+					$select.children(".label").remove();	// hide "Сортировать" option on desktops
+				} else if ($window.outerWidth() < BREAKPOINT && (bInitialization?true:bPrevWindowWidthMore)){
+					if(!$select.children(".label").length){	// show "Сортировать" option on tablets
+						$select.prepend($optionLabeled);
+					}
+				}
+
+				$select.selectric(SelectricSettings);
+				bPrevWindowWidthMore =  $window.outerWidth() >= BREAKPOINT;
+			}
+
+			if ( $sort.length ){	// if page has Sort block
+				// $sort.find('.b-sort__selected').on('click',function(){
+				// 	$(this).parents('.b-sort').toggleClass('is--open');
+				// });
+				selectInit(true);
+				$window.on("resize", selectInit);	// hide/show "Сортировать" option on resize
 			}
 		})();
 

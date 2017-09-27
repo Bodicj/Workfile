@@ -9,6 +9,7 @@ $selectric-border-width:    1px !default;                                       
 $selectric-border-radius:   0px !default;                                               // Border radius
 $selectric-inner-height:    $selectric-height - ($selectric-border-width * 2) !default; // Inner height
 $selectric-font-size:       16px !default;                                              // Font size
+$selectric-font-size-xs: $selectric-font-size - 4px !default;
 
 .selectric-wrapper {
   position: relative;
@@ -37,6 +38,10 @@ $selectric-font-size:       16px !default;                                      
     color: $selectric-text-color;
     height: $selectric-inner-height;
     user-select: none;
+      
+      @include small{
+          font-size: $selectric-font-size-xs;
+      }
   }
 
   .button {
@@ -187,6 +192,10 @@ $selectric-font-size:       16px !default;                                      
     font-size: $selectric-font-size;
     line-height: 20px;
     min-height: 20px;
+      
+      @include small{
+          font-size: $selectric-font-size-xs;
+      }
   }
 
   li {

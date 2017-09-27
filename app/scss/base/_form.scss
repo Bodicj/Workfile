@@ -185,11 +185,6 @@ textarea{
   @extend %formElement;
 }
 
-.g-input--md{
-  font-style: 18px !important;
-  padding: 12px 13px 12px 13px!important;
-}
-
 %select{
   border: 1px solid $color__primary;
   padding: 1px 15px 1px 11px!important;

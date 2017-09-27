@@ -8,19 +8,15 @@
         top: 0;
         right: 100%;
         bottom: 0;
-        z-index: 1001;
-        visibility: hidden;
+        z-index: 1001;;
         margin-bottom: 0;
         width: 280px;
 //        padding: 0 15px;
         background-color: #000;
         transform: translateX(0);
-        transition: transform 300ms;
-        opacity: 0;
+        transition: transform 500ms;
         
         &.is--visible{
-            opacity: 1;
-            visibility: visible;
             transform: translateX(280px);
         }
     }

@@ -76,8 +76,9 @@
 /* 	@include huge {
 	padding-top: 80px;
 } */
-    @include phone{
-        padding-top: 13px;
+    @include small{
+        padding: 13px 0 73px;
+        
     }
 
 	.section__title{

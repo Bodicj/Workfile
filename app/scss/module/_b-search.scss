@@ -9,25 +9,25 @@
 		min-width: 275px;
 	}
 	@include pc {
-		min-width: 245px;
-	}
-	@include note {
-		min-width: 220px;
-	}
-	@include tablet {
 		min-width: 0;
-        width: 180px;
-	}
-    @include small {
+//		min-width: 245px;
         position: static;
         background-color: transparent;
         width: auto;
         height: 100%;
         line-height: 42px;
+	}
+	@include note {
+//		min-width: 220px;
+	}
+	@include tablet {
+//        width: 180px;
+	}
+    @include small {
     }
 
     .b-wrapper_search{
-        @include small {
+        @include pc{
             display: none;
             position: absolute;
             top: 42px;
@@ -87,15 +87,11 @@
     //			font-size: 30px;
     //			width:160%;
     //		}
+            @include huge {
+                font-size: 10.2px;
+            }
             @include pc{
                 position: static;
-            }
-            @include note{
-                font-size: 12px;
-                line-height: 21px;
-                padding: 1px 25px 0px 10px;
-            }
-            @include small {
                 display: block;
                 width: 100%;
                 height: 43px;
@@ -104,6 +100,13 @@
                 text-transform: none;
                 box-shadow: 0 0px 5px 1px rgba(76, 64, 40, 0.23);
 
+            }
+            @include note{
+//                font-size: 12px;
+//                line-height: 21px;
+//                padding: 1px 25px 0px 10px;
+            }
+            @include small {
             }
         }
     }
@@ -125,19 +128,23 @@
 //			top: 16px;
 //			right: -193px;
 //		}
-        @include note{
-            top: 3px;
-            right: 3px;
-        }
-        @include small {
+        @include pc{
             position: static;
             background-color: transparent;
             display: inline-block;
             vertical-align: -16%;
-            transform: scale(1);
+            transform: scale(0.9);
             width: 21px;
             height: 21px;
             background-image: url(../img/svg/i-search-white.svg);
+//            top: 3px;
+//            right: 3px;
+        }
+        @include note{
+//            top: 3px;
+//            right: 3px;
+        }
+        @include small {
         }
 	}
 }

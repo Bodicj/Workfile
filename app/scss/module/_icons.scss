@@ -8,7 +8,7 @@
     background-repeat: no-repeat;
      
     @include huge {
-        transform: scale(0.9);
+        transform: scale(0.92);
     }
 }
 .icon-facebook-black {
@@ -149,10 +149,16 @@
 //		transform: scale(1.9);
 //		margin-top: 13px;
 //	}
-    @include note {
+    @include pc {
         width: 18px;
         height: 25px;
         transform: scale(1);
+        background-image: url(../img/svg/i-cart-white-sm.svg);
+    }
+    @include note {
+//        width: 18px;
+//        height: 25px;
+//        transform: scale(1);
     }
 }
 .icon-cart-black {

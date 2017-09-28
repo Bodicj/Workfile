@@ -47,7 +47,7 @@
 	text-align: center;
 	color: #0f0f0f;
     
-    @include phone{
+    @include small{
         padding: 0;
         text-align: left;
         font-size: 16.61px;
@@ -65,19 +65,23 @@
 		cursor: pointer;
         transform: scale(1);
 		transition: transform .3s;
+        
+        @include pc{
+            top: 9px;
+        }
 
 		.is--closed & {
 			transform: rotate(180deg);
 		}
         
         &.icon-toggler{
-            @include phone{
+            @include pc{
                 display: none;
             }
         }
         
         &.icon-toggler-white{
-            @include phone{
+            @include pc{
                 display: block;
                 width: 14px;
                 height: 8px;

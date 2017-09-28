@@ -182,9 +182,9 @@
 					<!-- search -->
 					<div class="header__search">
 
-						<form class="b-search js-search">
+						<form action="" class="b-search js-search">
                             <div class="b-wrapper_search js-minisearch">
-                                <input type="text" placeholder="Поиск">
+                                <input type="text" name="search" placeholder="Поиск">
                             </div>
                             <button type="submit" class="icon-search"></button>
 						</form>
@@ -194,7 +194,7 @@
 
 					<!-- cart -->
 					<div class="header__cart js-cart">
-						<span href="/" class="b-cart">
+						<span class="b-cart">
 							<i class="icon-cart-white"></i>
 <!--
                             <svg class="b-cart-icon" id="svg-cart" viewBox="0 0 27.6 38">
@@ -212,14 +212,14 @@
                                     <div class="b-item__content">
                                         <div class="b-item__heading">название букета несколько слов</div>
                                         <p class="b-item__desc">роза, ромашка, пион, тюльпан</p>
-                                        <div class="b-item__articul">Артикул <span class="b-articul js-articul">1234</span></div>
+                                        <div class="b-item__articul">Артикул <span class="b-articul js-articul">12</span></div>
                                         <div class="b-item__price">800 грн</div>
                                     </div>
                                     <div class="b-item__controls">
                                         <div class="b-item__del js-item__del"><i class="icon-close-small"></i></div>
                                         <div class="b-item__counter">
                                             <span class="js-qty-minus">&#8210;</span>
-                                            <input type="text" name="articul-1234" data-price="800" class="js-qty-input" value="2">
+                                            <input type="text" name="articul-12" data-price="800" class="js-qty-input" value="2">
                                             <span class="js-qty-plus">+</span>
                                         </div>
                                     </div>
@@ -231,14 +231,14 @@
                                     <div class="b-item__content">
                                         <div class="b-item__heading">название букета несколько слов</div>
                                         <p class="b-item__desc">роза, ромашка, пион, тюльпан</p>
-                                        <div class="b-item__articul">Артикул <span class="b-articul js-articul">1234</span></div>
+                                        <div class="b-item__articul">Артикул <span class="b-articul js-articul">123</span></div>
                                         <div class="b-item__price">800 грн</div>
                                     </div>
                                     <div class="b-item__controls">
                                         <div class="b-item__del js-item__del"><i class="icon-close-small"></i></div>
                                         <div class="b-item__counter">
                                             <span class="js-qty-minus">&#8210;</span>
-                                            <input type="text" name="articul-1234" data-price="800" class="js-qty-input" value="2">
+                                            <input type="text" name="articul-123" data-price="800" class="js-qty-input" value="2">
                                             <span class="js-qty-plus">+</span>
                                         </div>
                                     </div>
@@ -445,10 +445,10 @@
                 <p>Идейные соображения высшего порядка, а также укрепление и развитие структуры!</p>
                 <form action="" class="g-form">
                     <div class="g-form__field">
-                        <input type="text" class="g-input" placeholder="Ваше имя">
+                        <input type="text" name="name" class="g-input" placeholder="Ваше имя">
                     </div>
                     <div class="g-form__field">
-                        <input type="email" class="g-input" placeholder="Ваш e-mail">
+                        <input type="email" name="email" class="g-input" placeholder="Ваш e-mail">
                     </div>
                     <div class="g-form__field">
                         <img src="./img/captcha.png" alt="">
@@ -474,10 +474,10 @@
                 <p>Идейные соображения высшего порядка, а также укрепление и развитие структуры!</p>
                 <form action="" class="g-form">
                     <div class="g-form__field">
-                        <input type="text" class="g-input" placeholder="Ваше имя">
+                        <input type="text" name="name" class="g-input" placeholder="Ваше имя">
                     </div>
                     <div class="g-form__field">
-                        <input type="email" class="g-input" placeholder="Ваш e-mail">
+                        <input type="email" name="email" class="g-input" placeholder="Ваш e-mail">
                     </div>
                     <div class="g-form__field">
                         <img src="./img/captcha.png" alt="">
@@ -509,7 +509,7 @@
 
                 <form action="" class="g-form b-slider__desc-action">
                     <div class="g-form__field g-form__field--inline">
-                        <input type="email" class="g-input" placeholder="E-mail для промокода">
+                        <input type="email" name="email" aria-describedby=""class="g-input" placeholder="E-mail для промокода">
                         <button class="g-btn g-btn--md-2">Подписаться</button>
                     </div>
                 </form>
@@ -536,7 +536,7 @@
 
                 <form action="" class="g-form b-slider__desc-action">
                     <div class="g-form__field g-form__field--inline">
-                        <input type="email" class="g-input" placeholder="E-mail для промокода">
+                        <input type="email" name="email" class="g-input" placeholder="E-mail для промокода">
                         <button class="g-btn g-btn--md-2">Подписаться</button>
                     </div>
                 </form>

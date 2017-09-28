@@ -1,5 +1,8 @@
 $(function() {
-  var $window = $(window);
+  var 	 $window = $(window)
+  		,BREAKPOINT_RES = 1220	// px
+  		,ANIM_TIME_SM = 300		// ms
+  		;
   
 
   //
@@ -107,13 +110,13 @@ $(function() {
 			$accordionContents.each(function(index, element){
 				var currentParent = $accordions[index]
 				if ((element !== $content[0])&&(currentParent.classList.contains("opened"))){
-					$(this).slideUp(300);
+					$(this).slideUp(ANIM_TIME_SM);
 					currentParent.classList.remove("opened");
 					currentParent.classList.add("closed");
 				}
 			});
 			$parent.toggleClass("opened").toggleClass("closed");
-			$content.slideToggle(300, function(){
+			$content.slideToggle(ANIM_TIME_SM, function(){
 				if (typeof fCallback == "function"){
 					fCallback($container);
 				}
@@ -157,53 +160,83 @@ $(function() {
 			,$minicart = $minicartIcon.find(".js-minicart")
 			;
 
+		var focusBlurSearchField = function(bBlur){	// focus/blur cursor on search field after searchButton press
+			if ($searchField.hasClass("is-focused") || bBlur){
+				$searchField.removeClass("is-focused");
+				$searchField.children("input").blur();
+				// console.log("blur");
+			} else {
+				$searchField.addClass("is-focused");
+				$searchField.children("input").focus();
+				// console.log("focus");
+			}
+		}
+
 		var hideSearch = function(iTime){
 			$searchField.fadeOut(iTime);
-			console.log("Hide search");
+			focusBlurSearchField(true);
+			// console.log("Hide search");
 		}
 		var toggleSearch = function(iTime){
 			$searchField.fadeToggle(iTime);
-			console.log("Hide search");
+			focusBlurSearchField();
+			// console.log("toggle search");
 		}
 
 		var hideCart = function(iTime){
 			$minicart.slideUp(iTime);
-			console.log("toggle minicart");
+			removeBodyBackground();
+			// console.log("hide minicart");
 		}
 		var toggleCart = function(iTime){
 			$minicart.slideToggle(iTime);
-			console.log("toggle minicart");
+			toggleBodyBackground()
+			// console.log("toggle minicart");
 		}
 
 		var hideSearchAndCart = function(iTime){
 			hideSearch(iTime);
 			hideCart(iTime);
+			focusBlurSearchField(true);
 		}
 
-		$searchIcon.on("click", function(e){
-			if(window.innerWidth < 1220){
+
+		$searchIcon.on("click", function(e){	// prevent form submit
+			if(window.innerWidth < BREAKPOINT_RES){
 				e.preventDefault();
-				console.log("search icon click")
+				// console.log("search icon click")
 			}
+		});
+		$searchField.on("click", function(e){	//	prevent hiding search field on click
+			if(window.innerWidth < BREAKPOINT_RES){
+				e.stopPropagation();
+			}
+		})
+		$searchField.children("input").on("keypress", function(e){		// submit search form by enter press
+			if ( e.which == 13 ) {
+				$searchForm.trigger("submit");
+				console.log("submit");
+			}
+
 		});
 
 		$minicartIcon.on("click", function(e){
 			e.stopPropagation();
-			if(window.innerWidth < 1220){
-				hideSearch(300);
+			if(window.innerWidth < BREAKPOINT_RES){
+				hideSearch(ANIM_TIME_SM);
 			}
-			toggleCart(300);
+			toggleCart(ANIM_TIME_SM);
 		});
 
 		$window.on("resize", function(){
 			$searchForm.off("click");
 			hideSearchAndCart(0);
 
-			if(window.innerWidth < 1220){
+			if(window.innerWidth < BREAKPOINT_RES){
 				$searchForm.on("click", function(e){
 					e.stopPropagation();
-					hideCart(300);
-					toggleSearch(300);
+					hideCart(ANIM_TIME_SM);
+					toggleSearch(ANIM_TIME_SM);
 				});
 			} else{
 				if ($searchField.is(":hidden")){$searchField.show(0)};
@@ -213,9 +246,9 @@ $(function() {
 
 
 		$window.on("click", function(){
-			if(window.innerWidth < 1220){
-				$searchField.fadeOut(300);
-				$minicart.slideUp(300);
+			if(window.innerWidth < BREAKPOINT_RES){
+				$searchField.fadeOut(ANIM_TIME_SM);
+				$minicart.slideUp(ANIM_TIME_SM);
 			};
 
 		});
@@ -422,8 +455,7 @@ $(function() {
 			var  $sort = $('.b-sort')
 				,$select = $sort.find(".js-selectric")	// "Сортировать"
 				,$optionLabeled = $select.children(".label")
-				,BREAKPOINT = 1220	//px
-				,bPrevWindowWidthMore =  $window.outerWidth() >= BREAKPOINT
+				,bPrevWindowWidthMore =  $window.outerWidth() >= BREAKPOINT_RES
 				;
 
 			var SelectricSettings = {
@@ -437,17 +469,17 @@ $(function() {
 				}
 
 			var  selectInit = function(bInitialization){	// if bInitialization == true then first init select
-				if ($window.outerWidth() >= BREAKPOINT && (bInitialization?true:!bPrevWindowWidthMore)){
+				if ($window.outerWidth() >= BREAKPOINT_RES && (bInitialization?true:!bPrevWindowWidthMore)){
 					$optionLabel = $select.children(".label");
 					$select.children(".label").remove();	// hide "Сортировать" option on desktops
-				} else if ($window.outerWidth() < BREAKPOINT && (bInitialization?true:bPrevWindowWidthMore)){
+				} else if ($window.outerWidth() < BREAKPOINT_RES && (bInitialization?true:bPrevWindowWidthMore)){
 					if(!$select.children(".label").length){	// show "Сортировать" option on tablets
 						$select.prepend($optionLabeled);
 					}
 				}
 
 				$select.selectric(SelectricSettings);
-				bPrevWindowWidthMore =  $window.outerWidth() >= BREAKPOINT;
+				bPrevWindowWidthMore =  $window.outerWidth() >= BREAKPOINT_RES;
 			}
 
 			if ( $sort.length ){	// if page has Sort block
@@ -462,16 +494,14 @@ $(function() {
 	//
 	// Catalog - Filter Toggle
 	//---------------------------------------------------------------------------------------
-		// (function(){
-		// 	var $filter = $('.b-filter');
-		// 	if ( $filter.length ){
-		// 		// $filter.on('click', '.b-filter__title', function(){
-		// 		$filter.on('click', '.js-close_filters', function(){
-		// 			// $(this).parent().toggleClass('is--closed');
-		// 			$filter.toggleClass('is--visible');
-		// 		});
-		// 	}
-		// })();
+		(function(){
+			var $filter = $('.b-filter');
+			if ( $filter.length ){
+				$filter.on('click', '.b-filter__title', function(){
+					$(this).parent().toggleClass('is--closed');
+				});
+			}
+		})();
 
 	//
 	// SEO text

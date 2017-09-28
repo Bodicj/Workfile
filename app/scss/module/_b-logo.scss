@@ -19,6 +19,9 @@
 //		width: 319px;
 //	}
 	@include pc {
+        position: relative;
+        right: 3.2%;
+        bottom: 3%;
 		display: block;
 	}
 	@include note {

@@ -154,10 +154,16 @@ $svgTransitionTime: 0.2s;
 //      padding-top: 33px;
 //      margin-top: 34px;
 //    }
-    @include note{
+    @include pc{
+        min-height: 65px;
+        height: 65px;
+        padding: 0;
+        
+    }
+    @include tablet{
         min-height: 42px;
         height: 42px;
-        padding: 0;
+//        padding: 0;
         
     }
     
@@ -194,18 +200,16 @@ $svgTransitionTime: 0.2s;
 } */
  	@include pc {
         float: right;
-        margin-top: 25px;
-        width: 34%;
-        padding-left: 0;
-    }
-    @include note{
+//        margin-top: 25px;
+//        width: 34%;
+        padding: 0;
         width: auto;
         height: 100%;
         margin-top: 0;
     }
+    @include note{
+    }
     @include tablet{
-        padding-top: 0;
-        padding-bottom: 0;
     }
 }
 .header__menu{}
@@ -217,14 +221,14 @@ $svgTransitionTime: 0.2s;
         margin-left: 43px;
     } 
  	@include pc {
+        margin-top: 0;
         margin-left: 0;
+        height: 100%;
     } 
  	@include note {
-        margin-top: 10px;
+//        margin-top: 10px;
     }
     @include small{
-        margin-top: 0;
-        height: 100%;
     }
 }
 .header__cart{
@@ -259,8 +263,9 @@ $svgTransitionTime: 0.2s;
         top: 100%;
         right: -10px;
         z-index: 10;
-        width: 480px;
-        max-height: 70vh;
+        overflow: auto;
+        width: 288px;
+        max-height: calc(100vh - 160px);
         padding: 5px 5px 25px;
 //        opacity: 0;
         transition: opacity .3s;
@@ -281,7 +286,7 @@ $svgTransitionTime: 0.2s;
         }
         
          @include tablet{
-            width: 288px;
+//            width: 288px;
             right: 15px;
 //            left: 0;
 //            margin: auto;

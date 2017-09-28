@@ -144,7 +144,7 @@ body.is--mobile-active{
     height: 100%;
     opacity: 1;
     transition: opacity $menu-transistion-duration;
-    z-index: 100;
+    z-index: 99;
   }
 }
 .b-mobile-nav{

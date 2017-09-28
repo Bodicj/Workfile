@@ -19,9 +19,9 @@ body {
 //		margin-top: 120px;
 //	}
     @include pc{
-        margin-top: 109px;
+        margin-top: 65px;
     }
-    @include note{
+    @include tablet{
         margin-top: 42px;
     }
     
@@ -65,7 +65,7 @@ img {
   @include clearfix();
     
   @include huge{
-    width: 1200px;
+    width: 1205px;
   }
   
 //  @include huge {

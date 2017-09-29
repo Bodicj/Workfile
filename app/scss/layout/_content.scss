@@ -45,8 +45,12 @@
   flex-flow: row wrap;
   justify-content: space-between;
     
+    @include tablet{
+        justify-content: space-around;
+    }
     @include small{
         flex-direction: column;
+      justify-content: space-between;
         align-items: center;
     }
 }

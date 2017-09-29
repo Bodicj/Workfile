@@ -1,8 +1,8 @@
 $productNarrow: 290px;
-$product-note: 31.5%;
-$product-tablet: 282px;
-$product-small: 270px;
-$product-phone: 200px;
+//$product-note: 31.5%;
+//$product-tablet: 282px;
+$product-small: 230px;
+//$product-phone: 200px;
 
 .b-product{
 	max-width: 76.56%;
@@ -17,19 +17,21 @@ $product-phone: 200px;
         width: $productNarrow - 10px;
     }
     @include pc{
+        margin-bottom: 30px;
+        width: $product-small;
+    }
+    @include note{
+//        margin: 0 0 95px;
+//        width: $product-note;
         @for $i from 7 through 8{
             &:nth-child(#{$i}){
                 display: none;
             }
         } 
     }
-    @include note{
-        margin: 0 0 95px;
-        width: $product-note;
-    }
     @include tablet{
-        margin-bottom: 75px;
-        width: $product-tablet;
+//        margin-bottom: 75px;
+//        width: $product-tablet;
         
         @for $i from 7 through 8{
             &:nth-child(#{$i}){
@@ -38,22 +40,22 @@ $product-phone: 200px;
         } 
     }
     @include small{
-        margin-bottom: 70px;
-        width: $product-tablet;
+//        width: $product-small;
     }
     @include phone{
-        margin-bottom: 30px;
-        width: $product-phone;
+//        margin-bottom: 30px;
+//        width: $product-phone;
     }
     
     .g-btn--fullwide{
         min-height: 45px;
         padding: 12px 30px;
         
-        @include small{
+        @include pc{
             min-height: 31px;
             padding: 3px 0 0;
             line-height: 27px;
+            font-size: 12.4px;
         }
     }
 }
@@ -74,16 +76,20 @@ $product-phone: 200px;
     //	@include fourK {
     //		height: 580px;
     //	}
+    @include pc{
+        margin-bottom: 15px;
+        height: 200px;
+//        height: 230px;
+    }
     @include note{
-        height: 230px;
+//        height: 230px;
     }
     @include tablet{
-        margin-bottom: 15px;
-        height: 282px;
-    }
-    @include phone{
 //        margin-bottom: 15px;
-        height: 200px;
+//        height: 282px;
+    }
+    @include small{
+//        margin-bottom: 15px;
     }
     
 	img{
@@ -130,7 +136,7 @@ $product-phone: 200px;
 //		font-size: 17px;
 //		padding-top: 5px;
 //	}
-    @include note{
+    @include pc{
         margin-left: 8px;
         min-width: 35px;
         width: 38px;
@@ -144,7 +150,7 @@ $product-phone: 200px;
 	background-color: #0f0f0f;
 	color: #ffffff;
     
-    @include note{
+    @include pc{
         font-size: 12px;
     }
 }
@@ -154,7 +160,7 @@ $product-phone: 200px;
 	color: #0f0f0f;
     font-size: 14px;
     
-    @include note{
+    @include pc{
         font-size: 12px;
     }
 }
@@ -164,7 +170,7 @@ $product-phone: 200px;
 	background-color: #fff;
 	color: #0f0f0f;
     
-    @include note{
+    @include pc{
         font-size: 12px;
     }
 }
@@ -189,14 +195,18 @@ $product-phone: 200px;
 //			font-size: 36px;
 //			line-height: 40px;
 //		}
+        @include pc{
+//            font-size: 13.78px;
+//            line-height: 18px;
+            font-size: 15.6px;
+            line-height: 19px;
+            letter-spacing: .012em;
+        }
         @include note{
-            font-size: 16px;
         }
         @include tablet{
-            font-size: 13.78px;
         }
         @include small{
-            line-height: 18px;
         }
 	}
 }
@@ -215,16 +225,23 @@ $product-phone: 200px;
 //	@include fourK {
 //		font-size: 25px;
 //	}
+    @include pc{
+//        margin-bottom: 6px;
+//        line-height: 14px;
+//        font-size: 9.64px;
+       font-size: 11px;
+        margin-bottom: 10px;
+        line-height: 14px;
+        letter-spacing: -.02em;
+        font-weight: 600;
+    }
     @include note{
-        font-size: 12px;
-        margin-bottom: 8px;
+//        font-size: 12px;
+//        margin-bottom: 8px;
     }
     @include tablet{
-        font-size: 9.64px;
     }
     @include small{
-        margin-bottom: 6px;
-        line-height: 14px;
     }
 }
 
@@ -260,11 +277,14 @@ $product-phone: 200px;
 //  @include fourK {
 //    font-size: 40px;
 //  }
+    @include pc{
+//        font-size: 17.91px;
+        font-size: 24px;
+    }
     @include note{
-        font-size: 20px;
+//        font-size: 20px;
     }
     @include tablet{
-        font-size: 17.91px;
     }
     
 	span{
@@ -294,11 +314,13 @@ $product-phone: 200px;
 //    @include fourK {
 //      font-size: 35px;
 //    }
+    @include pc{
+        font-size: 14px;
+    }
     @include note{
-        font-size: 16px;
+//        font-size: 16px;
     }
     @include tablet{
-        font-size: 14px;
     }
     
 	&:after{
@@ -336,12 +358,16 @@ $product-phone: 200px;
 //      width: 80px;
 //      margin-right: 9%;
 //    }
-    @include note{
-        margin-top: 4px;
+    @include pc{
+        margin-top: 5px;
         width: 50px;
     }
+    @include note{
+//        margin-top: 4px;
+//        width: 50px;
+    }
     @include small{
-        margin-top: 3px;
+//        margin-top: 3px;
     }
 
 	input{
@@ -359,11 +385,14 @@ $product-phone: 200px;
 //          line-height: 35px;
 //          font-size: 30px;
 //        }
-        @include note{
+        @include pc{
             width: 50px;
             height: 25px;
             padding: 0px 16px 0 7px;
-            font-size: 14px;
+            font-size: 13.34px;
+        }
+        @include note{
+           
         }
         @include tablet{
             font-size: 13.34px;
@@ -443,13 +472,13 @@ $product-phone: 200px;
         font-weight: 700;
         color: #8e908f;
         
-        @include note{
-            top: -5px;
-            font-size: 10px;
-        }
-        @include small{
+        @include pc{
             top: -10px;
             font-size: 8.31px;
+        }
+        @include note{
+//            top: -5px;
+//            font-size: 10px;
         }
     }
 }

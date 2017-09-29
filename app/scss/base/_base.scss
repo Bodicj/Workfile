@@ -82,12 +82,12 @@ img {
     max-width: 620px;
   }
   @include small {
-    max-width: 460px;
+//    max-width: 460px;
+        max-width: 290px;
+      padding: 0;
   }
   @include phone {
-    max-width: 290px;
 //      padding: 0 15px;
-      padding: 0;
   }
 //
 //  @include small {

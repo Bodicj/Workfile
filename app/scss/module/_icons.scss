@@ -64,10 +64,19 @@
 //	}
 }
 
-.icon-facebook-white {
-	@extend %icon;
+%icon-soc-footer{
     width: 40px;
     height: 39px;
+    
+    @include pc{
+        width: 31px;
+        height: 31px;
+        transform: scale(1);
+    }
+}
+.icon-facebook-white {
+	@extend %icon;
+	@extend %icon-soc-footer;
     background-image: url(../img/svg/i-fb-white.svg);
 //	@include sprite($i-facebook-white);
 //	@include twoK {
@@ -79,8 +88,7 @@
 }
 .icon-insta-white {
 	@extend %icon;
-    width: 40px;
-    height: 39px;
+	@extend %icon-soc-footer;
     background-image: url(../img/svg/i-insta-white.svg);
 //	@include sprite($i-in-white);
 //	@include twoK {
@@ -92,8 +100,7 @@
 }
 .icon-gplus-white {
 	@extend %icon;
-    width: 40px;
-    height: 39px;
+	@extend %icon-soc-footer;
     background-image: url(../img/svg/i-gplus-white.svg);
 //	@include sprite($i-gplus-white);
 //	@include twoK {
@@ -105,8 +112,7 @@
 }
 .icon-youtube-white {
 	@extend %icon;
-    width: 40px;
-    height: 39px;
+	@extend %icon-soc-footer;
     background-image: url(../img/svg/i-youtube-white.svg);
 //	@include sprite($i-youtube-white);
 //	@include twoK {
@@ -115,6 +121,9 @@
 //	@include fourK {
 //		transform: scale(1.9);
 //	}
+    @include pc{
+        
+    }
 }
 .icon-account-black {
 	@extend %icon;
@@ -285,18 +294,10 @@
     background-image: url(../img/svg/i-star-empty.svg);
 	vertical-align: middle;
     
-    @include note{
-        width: 16px;
-        height: 16px;
+    @include pc{
+        width: 15px;
+        height: 15px;
         vertical-align: top;
-    }
-    @include tablet{
-        width: 14px;
-        height: 14px;
-    }
-    @include small{
-        width: 14px;
-        height: 14px;
         transform: scale(1);
     }
 }

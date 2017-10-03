@@ -11,7 +11,12 @@
 	text-align: center;
 	background-color: #d1d4d3;
 	cursor: pointer;
-    transition: opacity 0.2s;
+    opacity: 1;
+    transition: opacity 0.3s;
+    
+    &.hover{
+        opacity: 1;
+    }
     
     @include huge {
         width: 85px;
@@ -27,13 +32,10 @@
     @include laptop{
 	    left: auto;
         right: calc(50% - 590px);
-        opacity: .3;
+        opacity: .5;
         
-        &:hover{
-            opacity: 1;
-        }
     }
-    @include small{
+    @include pc{
         right: 5px;
         bottom: 5px;
         width: 65px;

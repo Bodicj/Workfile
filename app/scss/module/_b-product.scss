@@ -6,6 +6,7 @@ $product-small: 230px;
 
 .b-product{
 	max-width: 76.56%;
+    min-width: 230px;
 	margin: 0 30px 122px;
 	position: relative;
 //	width: 17.9%;
@@ -52,10 +53,10 @@ $product-small: 230px;
         padding: 12px 30px;
         
         @include pc{
-            min-height: 31px;
+            min-height: 36px;
             padding: 3px 0 0;
-            line-height: 27px;
-            font-size: 12.4px;
+            line-height: 31px;
+            font-size: 14.4px;
         }
     }
 }
@@ -78,7 +79,7 @@ $product-small: 230px;
     //	}
     @include pc{
         margin-bottom: 15px;
-        height: 200px;
+        height: $product-small;
 //        height: 230px;
     }
     @include note{
@@ -198,9 +199,9 @@ $product-small: 230px;
         @include pc{
 //            font-size: 13.78px;
 //            line-height: 18px;
-            font-size: 15.6px;
+            font-size: 15.3px;
             line-height: 19px;
-            letter-spacing: .012em;
+            letter-spacing: .02em;
         }
         @include note{
         }
@@ -232,7 +233,7 @@ $product-small: 230px;
        font-size: 11px;
         margin-bottom: 10px;
         line-height: 14px;
-        letter-spacing: -.02em;
+        letter-spacing: -.019em;
         font-weight: 600;
     }
     @include note{
@@ -249,6 +250,10 @@ $product-small: 230px;
     @include clearfix;
     margin: 0 auto;
 //    max-width: $productNarrow;
+    
+    @include pc{
+        margin-bottom: 4px;
+    }
 }
 .b-product__prices{
 	float: left;
@@ -279,7 +284,7 @@ $product-small: 230px;
 //  }
     @include pc{
 //        font-size: 17.91px;
-        font-size: 24px;
+        font-size: 20.8px;
     }
     @include note{
 //        font-size: 20px;
@@ -299,7 +304,7 @@ $product-small: 230px;
             font-size: 14px;
         }
         @include note{
-            font-size: 12.4px;
+            font-size: 14.4px;
         }
 	}
 }
@@ -315,7 +320,7 @@ $product-small: 230px;
 //      font-size: 35px;
 //    }
     @include pc{
-        font-size: 14px;
+        font-size: 17px;
     }
     @include note{
 //        font-size: 16px;
@@ -359,8 +364,8 @@ $product-small: 230px;
 //      margin-right: 9%;
 //    }
     @include pc{
-        margin-top: 5px;
-        width: 50px;
+        margin-top: 1px;
+        width: 56px;
     }
     @include note{
 //        margin-top: 4px;
@@ -386,16 +391,15 @@ $product-small: 230px;
 //          font-size: 30px;
 //        }
         @include pc{
-            width: 50px;
-            height: 25px;
+            width: 56px;
+            height: 29px;
             padding: 0px 16px 0 7px;
-            font-size: 13.34px;
+            font-size: 14.34px;
         }
         @include note{
            
         }
         @include tablet{
-            font-size: 13.34px;
         }
 	}
 
@@ -461,7 +465,7 @@ $product-small: 230px;
     }
     @include small{
         padding-top: 10px;
-        margin-bottom: 13px;
+        margin-bottom: 15px;
     }
     
     .b-action__note{
@@ -473,7 +477,7 @@ $product-small: 230px;
         color: #8e908f;
         
         @include pc{
-            top: -10px;
+            top: -9px;
             font-size: 8.31px;
         }
         @include note{

@@ -152,100 +152,12 @@
 
 <!-- MODAL -->
 <div style="display:none">
-
-    <!-- Form register -->
-    <div class="arcticmodal" id="register">
-        <form class="g-form js-form-register">
-            <div class="arcticmodal-close"><i class="icon-close"></i></div>
-            <div class="arcticmodal-header">Регистрация</div>
-
-            <div class="arcticmodal-body">
-                <div class="g-form__field">
-                    <input class="g-input" type="email" name="email" placeholder="e-mail">
-                </div>
-                <div class="g-form__field">
-                    <input class="g-input" type="password" name="password" placeholder="пароль">
-                </div>
-                <div class="g-form__field">
-                    <input class="g-input" type="password" name="comparePassword" placeholder="пароль еще раз">
-                </div>
-                <div class="g-form__field">
-                    <button class="g-btn">Дальше</button>
-                </div>
-            </div>
-
-            <div class="arcticmodal-footer">
-                <div class="g-form__alarm">
-                    <i class="icon-alarm"></i>
-                    <p>ваши личные данные защищены <a href="">политикой приватности</a></p>
-                </div>
-            </div>
-
-        </form>
-    </div>
-    <!-- /Form register -->
-
-    <!-- Form login -->
-    <div class="arcticmodal" id="login">
-        <form class="g-form js-form-login">
-            <div class="arcticmodal-close"><i class="icon-close"></i></div>
-            <div class="arcticmodal-header">Вход</div>
-
-            <div class="arcticmodal-body">
-                <div class="g-form__field">
-                    <input class="g-input" type="email" name="email" placeholder="e-mail">
-                </div>
-                <div class="g-form__field">
-                    <input class="g-input" type="password" name="password" placeholder="пароль">
-                </div>
-                <div class="g-form__field">
-                    <button class="g-btn">Войти</button>
-                    <a href="" class="g-btn g-btn--link">Забыли пароль?</a>
-                </div>
-            </div>
-
-            <div class="arcticmodal-footer">
-                <div class="g-text--center">
-                    <div class="g-h3">
-                        или <br> Войти через социальные сети:
-                    </div>
-                    <div class="b-social_modal">
-                        <img src="./img/icons/i-fb.png" alt="">
-                        <img src="./img/icons/i-gplus.png" alt="">
-                    </div>
-
-                    <a href="" class="g-btn g-btn--link">Нет учетной записи?</a>
-                    <a href="" class="g-btn g-btn--md g-btn--alt" data-modal="register">Зарегистрироваться</a>
-                </div>
-                <div class="g-form__alarm">
-                    <i class="icon-alarm"></i>
-                    <p>ваши личные данные защищены <a href="">политикой приватности</a></p>
-                </div>
-            </div>
-
-        </form>
-    </div>
-    <!-- /Form login -->
-
-    <!-- Form promo -->
-    <div class="arcticmodal arcticmodal--wide" id="promo">
-        <div class="arcticmodal-close"><i class="icon-close"></i></div>
-        <!--                        <img src="http://placehold.jp/430x510.png"  class="arcticmodal-promo__left" alt="">-->
-        <img src="./img/modals/promo-430.jpg" class="arcticmodal-promo__left" alt="">
-
-        <div class="arcticmodal-promo__right">
-            <p class="g-h2">Получи бесплатно живой подарок стомостью 190 грн<br>при покупке от 949 грн</p>
-            <p class="g-h2"><span>Промокод</span><span>fregood</span></p>
-            <form class="g-form js-form-promo">
-                <div class="g-form__field g-form__field--inline">
-                    <input class="g-input" type="text" name="code" placeholder="Промокод">
-                    <button class="g-btn g-btn--alt">Получить</button>
-                </div>
-            </form>
-        </div>
-
-    </div>
-    <!-- /Form promo -->
+    @@include('./modals-base.html')
+    
+    @@if (page === "index"){
+        @@include('../parts/modals-index.html')
+    }
+    
 </div>
 <!-- /MODAL -->
 

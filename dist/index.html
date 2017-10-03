@@ -31,7 +31,7 @@
 <body class="page">
 
 	<!-- HEADER -->
-	<header class="header @@modifier">
+	<header class="header " id="header">
 
 		<!-- Header TOP -->
 		<div class="header__top">
@@ -39,14 +39,24 @@
 
 				<!-- Logo -->
 				<div class="header__logo">
-					<a href="" class="b-logo">
-						<span class="b-logo__inner">
-							<img src="./img/logo-2x.png" alt="">
+					<a href="#" class="b-logo">
+					<img src="/img/svg/logo-full.svg" alt="">
+<!--
+                    <picture>
+                        <source media="(min-width: 1805px)" srcset="./img/logo-full-lg-2x.png">
+                        <source media="(max-width: 1804px)" srcset="./img/logo-full-md-2x.png">
+                        <img src="/img/svg/logo-full-lg-2x.png" alt="">
+                    </picture>
+-->
+<!--						<span class="b-logo__inner">-->
+<!--
+							    <img src="./img/logo-lg.png" alt="">
 							
 							<span class="b-logo__text">
 								<img src="./img/logo-text-2x.png" alt="">
 							</span>
 						</span>
+-->
 					</a>
 				</div>
 				<!-- /Logo -->
@@ -430,7 +440,6 @@
 
 
 
-
 <!-- SLIDER -->
 <section class="b-slider js-slider">
 	
@@ -457,7 +466,12 @@
                         <button class="g-btn g-btn--lg">Подписаться</button>
                     </div>
                 </form>
+                
+                <div class="g-text--center">
+                    <button href="#" class="g-btn g-btn--grey" data-modal="sliderSubmit-long">Подробнее</button>
+                </div>
             </div>
+            
         </div>
 
 	</div>
@@ -486,6 +500,10 @@
                         <button class="g-btn g-btn--lg">Подписаться</button>
                     </div>
                 </form>
+                
+                <div class="g-text--center">
+                    <button href="#" class="g-btn g-btn--grey" data-modal="sliderSubmit-long">Подробнее</button>
+                </div>
             </div>
         </div>
 
@@ -513,6 +531,10 @@
                         <button class="g-btn g-btn--md-2">Подписаться</button>
                     </div>
                 </form>
+                
+                <div class="g-text--center">
+                    <button href="#" class="g-btn g-btn--grey" data-modal="sliderSubmit-short">Подробнее</button>
+                </div>
             </div>
         </div>
 
@@ -540,6 +562,10 @@
                         <button class="g-btn g-btn--md-2">Подписаться</button>
                     </div>
                 </form>
+                
+                <div class="g-text--center">
+                    <button href="#" class="g-btn g-btn--grey" data-modal="sliderSubmit-short">Подробнее</button>
+                </div>
             </div>
         </div>
 
@@ -547,7 +573,7 @@
 	<!-- /slide 4 -->
 	
 	<!-- slide 5 -->
-	<div class="b-slider__slide visible-xs-block">
+	<div class="b-slider__slide">
 		
         <div class="container">
             <img src="./img/slider/s1.jpg" class="b-slide__bg" alt="">
@@ -568,7 +594,7 @@
 	<!-- /slide 5 -->
 	
 	<!-- slide 6 -->
-	<div class="b-slider__slide visible-xs-block">
+	<div class="b-slider__slide">
 		
         <div class="container">
             <img src="./img/slider/s2.jpg" class="b-slide__bg" alt="">
@@ -589,7 +615,7 @@
 	<!-- /slide 6 -->
 	
 	<!-- slide 7 -->
-	<div class="b-slider__slide visible-xs-block">
+	<div class="b-slider__slide">
 		
         <div class="container">
             <img src="./img/slider/s2.jpg" class="b-slide__bg" alt="">
@@ -610,7 +636,7 @@
 	<!-- /slide 7 -->
 	
 	<!-- slide 8 -->
-	<div class="b-slider__slide visible-xs-block">
+	<div class="b-slider__slide">
         
         <div class="container">
             <img src="./img/slider/s1.jpg" class="b-slide__bg" alt="">
@@ -1341,7 +1367,6 @@
 </section>
 <!-- /SUBSCRIBE -->
 
-
 <!-- FOOTER -->
 <footer class="footer">
     <div class="container">
@@ -1496,10 +1521,9 @@
 
 <!-- MODAL -->
 <div style="display:none">
-
-    <!-- Form register -->
+        <!-- Form register -->
     <div class="arcticmodal" id="register">
-        <form class="g-form js-form-register">
+        <form action="" class="g-form js-form-register">
             <div class="arcticmodal-close"><i class="icon-close"></i></div>
             <div class="arcticmodal-header">Регистрация</div>
 
@@ -1531,7 +1555,7 @@
 
     <!-- Form login -->
     <div class="arcticmodal" id="login">
-        <form class="g-form js-form-login">
+        <form action="" class="g-form js-form-login">
             <div class="arcticmodal-close"><i class="icon-close"></i></div>
             <div class="arcticmodal-header">Вход</div>
 
@@ -1580,7 +1604,7 @@
         <div class="arcticmodal-promo__right">
             <p class="g-h2">Получи бесплатно живой подарок стомостью 190 грн<br>при покупке от 949 грн</p>
             <p class="g-h2"><span>Промокод</span><span>fregood</span></p>
-            <form class="g-form js-form-promo">
+            <form action="" class="g-form js-form-promo">
                 <div class="g-form__field g-form__field--inline">
                     <input class="g-input" type="text" name="code" placeholder="Промокод">
                     <button class="g-btn g-btn--alt">Получить</button>
@@ -1590,6 +1614,123 @@
 
     </div>
     <!-- /Form promo -->
+    
+    
+    <!-- Callback Form -->
+    <div class="b-modal" id="callback">
+        <div class="arcticmodal-close"><i class="icon-close"></i></div>
+
+        <form action="" class="b-form js-form-callback">
+          <div class="b-form__inner">
+            <div class="b-form__header">Заказать звонок</div>
+            <div class="b-form__content">
+              <div class="b-form__field">
+                <i class="icon-user"></i>
+                <input type="text" name="name" placeholder="* Ваше имя:">
+              </div>
+              <div class="b-form__field">
+                <i class="icon-phone"></i>
+                <input type="tel" name="phone" placeholder="* Контактный телефон:">
+              </div>
+            </div>
+            <div class="b-form__action">
+              <input type="submit" class="g-btn" value="Отправить заявку">
+            </div>
+          </div>
+        </form>
+
+    </div>
+    <!-- /Callback Form -->
+
+    <!-- Calc Form -->
+    <div class="b-modal" id="calc">
+      <div class="arcticmodal-close"><i class="icon-close"></i></div>
+      <form action="" class="b-form js-form-calc">
+        <div class="b-form__inner">
+          <div class="b-form__header">Рассчитать стоимость</div>
+          <div class="b-form__content">
+            <div class="b-form__field">
+              <i class="icon-user"></i>
+              <input type="text" name="name" placeholder="* Ваше имя:">
+            </div>
+            <div class="b-form__field">
+              <i class="icon-phone"></i>
+              <input type="tel" name="phone" placeholder="* Контактный телефон:">
+            </div>
+            <div class="b-form__field">
+              <i class="icon-mail"></i>
+              <input type="email" name="email" placeholder="Ваш e-mail:">
+            </div>
+          </div>
+          <div class="b-form__action">
+            <input type="submit" class="g-btn" value="Отправить заявку">
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- /Calc Form -->
+    
+    
+            <!-- Slider modals -->
+    <div class="arcticmodal b-modal_slide" id="sliderSubmit-long">
+        <form action="" class="g-form">
+            <div class="arcticmodal-close"><i class="icon-close"></i></div>
+            
+            <div class="arcticmodal-header">Подписаться на рассылку</div>
+            
+            <div class="arcticmodal-body">
+                <p>Идейные соображения высшего порядка, а также укрепление и развитие структуры!</p>
+                <div class="g-form__field">
+                    <input type="text" name="name" class="g-input" placeholder="Ваше имя">
+                </div>
+                <div class="g-form__field">
+                    <input type="email" name="email" class="g-input" placeholder="Ваш e-mail">
+                </div>
+                <div class="g-form__field">
+                    <img src="./img/captcha.png" alt="">
+                </div>
+                <div class="g-form__field">
+                </div>
+            </div>
+            
+            <div class="arcticmodal-footer">
+                <div class="g-form__field g-text--left">
+                    <button type="submit" class="g-btn">Подписаться</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="arcticmodal b-modal_slide" id="sliderSubmit-short">
+        <form action="" class="g-form">
+            <div class="arcticmodal-close"><i class="icon-close"></i></div>
+            
+            <div class="arcticmodal-header">
+                Получи бесплатно 
+                <br>живой подарок 
+                <br>стоимостью 190 грн 
+                <br>при покупке от 949 грн
+            </div>
+
+            <div class="arcticmodal-body">
+                <p>Идейные соображения высшего порядка, а также укрепление и развитие структуры!</p>
+                <div class="g-form__field">
+                    <input type="email" name="email" aria-describedby=""class="g-input" placeholder="E-mail для промокода">
+                </div>
+                <div class="g-form__field">
+                </div>
+            </div>
+                       
+            <div class="arcticmodal-footer">
+                <div class="g-form__field g-text--left">
+                    <button type="submit" class="g-btn">Подписаться</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- /Slider modals -->
+    
+    
 </div>
 <!-- /MODAL -->
 

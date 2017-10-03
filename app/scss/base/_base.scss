@@ -320,6 +320,9 @@ font-weight: 800;
 //  padding-right: 13px;
 }
 
+.hidden{
+    display: none!important;
+}
 .visible-xs-inline{
     @include phone{
         display: inline !important;

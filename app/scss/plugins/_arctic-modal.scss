@@ -15,6 +15,24 @@ body{
 		max-width: 300px;
 	}
     
+    &.b-slider__desc{
+        position: static;
+        top: 0;
+        left: 0;
+        min-height: 0;
+        max-height: none;
+        transform: none;
+	    background:#fff;
+        
+        >form{
+            display: block;    
+        }
+    }
+    
+    p{
+        margin-top: 0;
+    }
+    
     .g-btn{
         font-size: 16px;
     }
@@ -31,12 +49,20 @@ body{
             font-size: 16px;
             font-weight: 300;
 //            background-color: #f5f5f5;
+            
+            @include small{
+                font-size: 13px;
+            }
         }
         
         .g-btn{
             width: 150px;
             height: 36px;
             padding: 7px 20px;
+            
+            @include small{
+                font-size: 15px;
+            }
         }
         
         .g-btn--link{
@@ -198,6 +224,18 @@ body{
         padding-bottom: 43px;
     }
 }
+.b-modal_slide{
+    .arcticmodal-header{
+        padding-top: 30px;
+    }
+    .arcticmodal-body{
+        padding-bottom: 0;
+    }
+    .arcticmodal-footer{
+        padding-top: 0;
+    }
+}
+
 .arcticmodal-overlay,
 .arcticmodal-container { 
 	position: fixed;

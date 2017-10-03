@@ -417,34 +417,34 @@ $(function() {
 				controls:false
 			});
 
-		$window.on("resize", function(){
-			if (window.innerWidth <= 480 && $slider[0]){
-				// $slider.reloadSlider();
-				$slider.destroySlider();
-				$('.js-slider').bxSlider({
-					slideSelector: ".b-slider__slide.visible-xs-block",
-					// auto: true,
-					// pager: true,
-					// controls:false
-				})
-			}
-		}).trigger("resize");		
+		// $window.on("resize", function(){
+		// 	if (window.innerWidth <= 480 && $slider[0]){
+		// 		// $slider.reloadSlider();
+		// 		$slider.destroySlider();
+		// 		$('.js-slider').bxSlider({
+		// 			slideSelector: ".b-slider__slide.visible-xs-block",
+		// 			// auto: true,
+		// 			// pager: true,
+		// 			// controls:false
+		// 		})
+		// 	}
+		// }).trigger("resize");		
 
-		$(window).on("load", function(){
+		// $(window).on("load", function(){
 			//verticalAlign( $('.b-slider__desc') );
-		});
+		// });
 
-		function verticalAlign($el){
-			var parentHeight = $el.parents('.b-slider__slide').outerHeight(); 
-			console.log(parentHeight);
+		// function verticalAlign($el){
+		// 	var parentHeight = $el.parents('.b-slider__slide').outerHeight(); 
+		// 	console.log(parentHeight);
 
-			$el.each(function(){
-				var h = $(this).outerHeight();
-				console.log(h);
-				console.log( (parentHeight-h)/2 );
-				$(this).css({ top: (parentHeight-h)/2 });
-			})
-		}
+		// 	$el.each(function(){
+		// 		var h = $(this).outerHeight();
+		// 		console.log(h);
+		// 		console.log( (parentHeight-h)/2 );
+		// 		$(this).css({ top: (parentHeight-h)/2 });
+		// 	})
+		// }
 
 	})();
 
@@ -543,9 +543,9 @@ $(function() {
 
 		$(window).scroll(function () {
 			if ( $(this).scrollTop() > limit ) {
-				$backToTop.fadeIn();
+				$backToTop.css("display", "block");
 			} else {
-				$backToTop.fadeOut();
+				$backToTop.css("display", "none");;
 			}
 		});
 
@@ -553,8 +553,15 @@ $(function() {
 			e.preventDefault();
 
 			$('body,html').animate({ scrollTop: 0 }, 1000);
-
 		});
+		$backToTop.hover(
+			function(){
+				$backToTop.addClass("hover");
+			},
+			function(){
+				$backToTop.removeClass("hover");
+			}
+		);
 
 	})();
 

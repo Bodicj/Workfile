@@ -23,11 +23,11 @@ $height-phone: 217px;
     }
     
     
-    &:nth-last-child(n+3){
-        @include phone{
-            display: none;
-        }
-    }
+//    &:nth-last-child(n+3){
+//        @include phone{
+//            display: none;
+//        }
+//    }
 
 //	&>img{
 //		min-height: 793px;
@@ -78,13 +78,20 @@ $height-phone: 217px;
  	@include huge {
 //        left: calc(50% - 590px);
     }
+    
  	@include pc {
 //        left: calc(50% - 485px);
         width: 545px;
         padding: 36px 27px;
     }
-    @include phone{
+    @include small{
+//        top: 0;
+//        bottom: 0;
+//        margin: auto;
+        top: 18px;
         width: 145px;
+        min-height: 165px;
+        max-height: 165px;
         padding: 15px 10px;
     }
 
@@ -112,6 +119,11 @@ $height-phone: 217px;
         @include pc{
             margin-bottom: 15px;
         }
+        @include small{
+            margin-bottom: 10px;
+            line-height: 15px;
+            font-size: 12px;
+        }
 	}
 	p {
 		font-family: 'PT Sans', sans-serif;
@@ -136,12 +148,26 @@ $height-phone: 217px;
         @include pc{
             margin-bottom: 25px;
         }
+        @include small{
+            margin-bottom: 10px;
+            overflow: hidden;
+            max-height: 40px;
+            padding: 0;
+            font-size: 10px;
+            line-height: normal;
+        }
 	}
     
     .b-desc__text_small{
         margin-bottom: 43px;
         line-height: 19px;
         font-size: 15.75px;
+        
+        @include small{
+            margin-bottom: 10px;
+            line-height: normal;
+            font-size: 10px;
+        }
     }
 
 	form {
@@ -205,7 +231,12 @@ $height-phone: 217px;
             }
         }
 	}
-
+    
+	&>form {
+        @include pc{
+            display: none;
+        }
+    }
 
 	.b-slider__desc-title{
 		margin: 0 0 25px;
@@ -257,6 +288,14 @@ $height-phone: 217px;
         max-width: none;
 		margin: 0 auto;
 	}
+    
+    button[data-modal]{
+        display: none;
+        
+        @include pc{
+            display: inline-block;
+        }
+    }
 }
 
 .b-slider__desc--right{
@@ -283,10 +322,21 @@ $height-phone: 217px;
     top: 72px;
     min-height: 540px;
     
+    
     @include pc{
-        top: 48px;
-        min-height: 510px;
+//        top: 48px;
+//        min-height: 510px;
     }
+ 	@include pc {
+        padding: 36px 27px;
+    }
+    @include small{
+        top: 23px;
+        min-height: 154px;
+        max-height: 154px;
+        padding: 15px 10px;
+    }
+    
 }
 .b-slider__desc--mid{
     top: 133px;
@@ -294,13 +344,28 @@ $height-phone: 217px;
     padding-top: 36px;
     
     @include pc{
-        top: 90px;
-        min-height: 430px; 
-        padding-top: auto;
+//        top: 90px;
+//        min-height: 430px;
+    }
+    
+ 	@include pc {
+        padding: 36px 27px;
+    }
+    @include small{
+        top: 18px;
+        min-height: 165px;
+        max-height: 165px;
+        padding: 10px 5px;
     }
     
     .b-slider__desc-title{
         margin-bottom: 17px;
+        
+        @include small{
+            margin-bottom: 10px;
+            max-height: 45px;
+            overflow: hidden;
+        }
     }
 }
 .b-slider__desc--low{
@@ -310,14 +375,23 @@ $height-phone: 217px;
     padding-top: 46px;
     
     @include pc{
-        top: 110px;
-        min-height: 395px;
-        padding-top: auto;
+//        top: 110px;
+//        min-height: 395px;
     }
-    @include phone{
+    @include small{
+//        top: 18px;
+//        min-height: 165px;
+//        max-height: 165px;
+//        padding: 15px 10px;
+    }
+    
+ 	@include pc {
+        padding: 36px 27px;
+    }
+    @include small{
         top: 18px;
         min-height: 165px;
-        padding-top: auto;
+        max-height: 165px;
         padding: 15px 10px;
     }
     
@@ -325,20 +399,20 @@ $height-phone: 217px;
         line-height: 44px;
         margin-bottom: 18px;
         
-        @include phone{
+        @include small{
             margin-bottom: 10px;
             line-height: 15px;
-            font-size: 12px;
+//            font-size: 12px;
         }
     }
     .b-desc__text_small{
         margin-bottom: 43px;
         
-        @include phone{
+        @include small{
             margin-bottom: 10px;
-            overflow: hidden;
-            max-height: 40px;
-            padding: 0;
+//            overflow: hidden;
+//            max-height: 40px;
+//            padding: 0;
             font-size: 10px;
             line-height: normal;
         }

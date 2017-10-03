@@ -29,7 +29,8 @@ $svgTransitionTime: 0.2s;
 	margin-bottom: 63px;
 }
 .header__logo{
-    $width: 22.5%;
+//    $width: 22.5%;
+    $width: 369px;
     
 	position: absolute;
 	top: -28px;
@@ -41,7 +42,8 @@ $svgTransitionTime: 0.2s;
 //    transform: translateX(-50%);
     
 	@include huge {
-        $width: 26.5%;
+//        $width: 26.5%;
+        $width: 270px;
         
         left: calc(50% - #{$width}/2);
         width: $width;

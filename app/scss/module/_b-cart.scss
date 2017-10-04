@@ -7,6 +7,12 @@
 //	@include twoK {
 //		padding: 5px 14px 0 0;
 //	}
+    @include pc{
+        top: 2px;
+    }
+    @include small{
+        top: auto;
+    }
     
 }
 .b-cart-icon{
@@ -41,6 +47,13 @@
     @include pc{
         top: 2px;
         right: -6px;
+        width: 20px;
+        height: 20px;
+        border-width: 2px;
+        line-height: 16px;
+        font-size: 10px;
+    }
+    @include small{
         width: 15px;
         height: 15px;
         border-width: 1px;

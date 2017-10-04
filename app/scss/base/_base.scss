@@ -21,7 +21,7 @@ body {
     @include pc{
         margin-top: 65px;
     }
-    @include tablet{
+    @include small{
         margin-top: 42px;
     }
     
@@ -311,7 +311,7 @@ font-weight: 800;
   font-weight: 700;
   text-transform: uppercase;
     
-    @include phone{
+    @include small{
         font-size: 14px;
     }
 }

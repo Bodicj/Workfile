@@ -1,4 +1,3 @@
-
 #news_content{
   padding-top: 15px;
 }
@@ -21,7 +20,7 @@
             display: block;
         }
     }
-    @include phone{
+    @include small{
         margin: 0 0 35px;
     }
 }
@@ -36,7 +35,7 @@
 //		}
 	}
     
-    @include phone{
+    @include small{
         margin: 0 0 12px;
     }
 }
@@ -68,7 +67,7 @@
 //		font-size: 35px;
 //		line-height: 40px;
 //	}
-    @include phone{
+    @include small{
         font-size: 16px;
         line-height: 19px;
     }
@@ -88,7 +87,7 @@
 //		font-size: 25px;
 //		line-height: 30px;
 //	}
-    @include phone{
+    @include small{
         margin: 0 0 6px;
         font-size: 12px;
         line-height: 16px;
@@ -97,7 +96,7 @@
 .b-news__meta-date{
 	margin-right: 58px;
     
-    @include phone{
+    @include small{
         margin-right: 37px;
     }
 }
@@ -121,7 +120,7 @@
 //		font-size: 30px;
 //		line-height: 35px;
 //	}
-    @include phone{
+    @include small{
         margin: 0 0 18px;
         max-height: 120px;
         padding-top: 0;
@@ -131,12 +130,12 @@
 }
 .b-news__action{
 //    padding-left: 18px;
-    @include phone{
+    @include small{
         text-align: center;
     }
     
     .g-btn{
-        @include phone{
+        @include small{
             border: none;
             padding: 0;
             font-size: 12px;

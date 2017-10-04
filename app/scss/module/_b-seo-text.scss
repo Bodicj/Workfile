@@ -4,7 +4,7 @@
 	clear: both;
 	padding-right: 89px;
     
-    @include phone{
+    @include small{
         padding: 0;
     }
 
@@ -39,7 +39,7 @@
 //		line-height: 40px;
 //	}
     
-    @include phone{
+    @include small{
         margin: 0 0 31px;
         font-size: 14px;
         line-height: 17px;
@@ -52,8 +52,8 @@
 //		@include fourK {
 //			max-height: 115px;
 //		}
-        @include phone{
-            max-height: 240px;
+        @include small{
+            max-height: 342px;
         }
 	}
 }
@@ -64,7 +64,7 @@
   font-weight: 700;
   text-transform: uppercase;
     
-    @include phone{
+    @include small{
         font-size: 12px;
     }
 }

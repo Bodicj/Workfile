@@ -162,11 +162,9 @@ $svgTransitionTime: 0.2s;
         padding: 0;
         
     }
-    @include tablet{
+    @include small{
         min-height: 42px;
         height: 42px;
-//        padding: 0;
-        
     }
     
     .container{
@@ -244,17 +242,17 @@ $svgTransitionTime: 0.2s;
 //        position: relative;
 //        margin-top: -10px;
 //    } 
- 	@include note {
-        margin-top: 4px;
-    }
     @include pc{
 //        position: static;
         float: left;
         margin-top: 0;
         margin-right: 6px;
-        margin-left: 19px;
+        margin-left: 30px;
         height: 100%;
         padding-top: 4px;
+    }
+ 	@include small {
+        margin-left: 19px;
     }
     
     .b-cart__wrapper{

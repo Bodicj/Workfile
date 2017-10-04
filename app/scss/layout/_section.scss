@@ -15,13 +15,17 @@
         margin-top: 100px;
     } 
     @include pc{
-        margin-top: 60px;
+//        margin-top: 60px;
 //        padding-top: 80px;
+        padding-bottom: 24px;
+        padding-top: 0;
+        margin-top: 90px;
     }
     @include note{
-        margin-top: 40px;
+//        margin-top: 40px;
     }
     @include small{
+        padding-bottom: 16px;
         margin-top: 0;
         padding-top: 51px;
     }
@@ -67,7 +71,10 @@
     .g-link--allinfo{
         bottom: 30px;
         
-        @include phone{
+        @include pc{
+            bottom: -24px;
+        }
+        @include small{
             bottom: -16px;
             right: -9px;
         }
@@ -88,7 +95,7 @@
 	.section__title{
 		margin-bottom: 65px;
         
-        @include phone{
+        @include small{
             margin-bottom: 36px;
         }
 	}
@@ -108,32 +115,38 @@
 //	padding-left: 5px;
     
     @include pc {
+        padding-top: 27px;
         padding-bottom: 190px;
     }
-    @include phone{
+    @include small{
+        padding-top: 18px;
         padding-bottom: 157px;
     }
     
     .container{
 //        padding: 0 10px;
-        @include phone{
+        @include small{
             padding: 0;
         }
     }
     .g-link--allinfo{
-        @include phone{
+        @include small{
             bottom: -13px;
             right: 3px;
         }
     }
 }
-#section_tite_services{
+#section_title_services{
 	margin: 0 0 79px;
     padding-left: 4px;
     
-    @include phone{
-        margin: 35px 0 60px;
+    @include pc{
+        margin: 50px 0 79px;
         padding-left: 2px;
+    }
+    @include small{
+        margin: 40px 0 49px;
+//        padding-left: 2px;
     }
 }
 .section--why-we{
@@ -142,7 +155,7 @@
 	padding-bottom: 60px;
 //	padding-left: 4px;
     
-    @include phone{
+    @include small{
         padding: 137px 0 35px;
     }
 
@@ -161,14 +174,19 @@
             background: url(../img/flowers/flowers-why-we-lg-2x.png) no-repeat -9px 0/100%;
         }
         
-        @include tablet{
-            top: -92px;
+        @include pc{
+//            top: -92px;
 //            width: 85.3%;
-            width: 397px;
+            width: 390px;
             transform: translateX(-50%);
-            background: url(../img/flowers-why-we.png) no-repeat 9px -2px/100%;
+            background: url(../img/flowers-why-we.png) no-repeat 9px 2px/100%;
+            
+            @include media("retina2x"){
+                background: url(../img/flowers-why-we.png) no-repeat 9px 2px/100%;
+            }
         }
         @include small{
+            top: -92px;
             background: url(../img/flowers/flowers-why-we-xs.png) no-repeat -5px -6px;
             width: 272px;
             
@@ -198,7 +216,7 @@
         @include note{
 //            font-size: 16px;
         }
-        @include phone{
+        @include small{
             margin-bottom: 69px;
             padding-right: 0;
         }
@@ -216,7 +234,7 @@
         margin-top: 60px;
         padding-bottom: 190px;
     }
-    @include phone{
+    @include small{
         margin-top: 21px;
         padding-bottom: 130px;
     }
@@ -230,7 +248,7 @@
 		margin-bottom: 81px;
         padding-right: 2px;
         
-        @include phone{
+        @include small{
             margin-bottom: 20px;
             padding-right: 0;
         }
@@ -255,7 +273,7 @@
 /* 	@include huge {
 	padding-top: 170px;
 } */
-    @include phone{
+    @include small{
         padding: 104px 0 35px;
     }
 
@@ -270,7 +288,7 @@
 		height: 380px;
 		background: url(../img/flowers-seo.png) no-repeat 0px 0px;
         
-        @include tablet{
+        @include pc{
             top: -112px;
             width: 100%;
             transform: translateX(-50%);
@@ -312,7 +330,7 @@
     }
     @include small{
     }
-    @include phone{
+    @include small{
         padding-top: 15px;
     }
 }
@@ -339,12 +357,12 @@
     }
     @include pc{
         line-height: normal;
-        font-size: 30px;
-    }
-    @include note{
+//        font-size: 30px;
         font-size: 26px;
     }
-    @include tablet{
+    @include note{
+    }
+    @include small{
         font-size: 21px;
     }
 }

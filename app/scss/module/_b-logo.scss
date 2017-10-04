@@ -25,12 +25,14 @@
 	@include pc {
         position: relative;
         right: 3.2%;
-        bottom: 3%;
 		display: block;
-	}
-	@include note {
-		width: 87px;
+        width: 152px;
         height: 100%;
+        padding-top: 3px;
+	}
+	@include small {
+		width: 87px;
+        bottom: 3%;
         padding-top: 5px;
         
 //        &:before{
@@ -42,7 +44,7 @@
     
 	img {
 		max-width: 100%;
-        @include note {
+        @include pc {
             display: block;
         }
 	}

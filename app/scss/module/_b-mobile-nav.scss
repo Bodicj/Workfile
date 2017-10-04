@@ -1,6 +1,6 @@
-$button-width: 42px;                    // The width of the button area
-$button-height: 42px;                   // The height of the button area
-$bar-thickness: 6px;                    // The thickness of the button bars
+$button-width: 30px;                    // The width of the button area
+$button-height: 25px;                   // The height of the button area
+$bar-thickness: 3px;                    // The thickness of the button bars
 $button-bar-space: 8px;                // The spacing between button bars
 
 $button-width-xs: 21px;                    // The width of the button area
@@ -32,7 +32,7 @@ $button-color: $color__primary;
       outline: none;
     }
     
-    @include note{
+    @include small{
         width: $button-width-xs;
         height: $button-height-xs;
     }
@@ -46,7 +46,7 @@ $button-color: $color__primary;
       height: $bar-thickness;
       background: $button-color;
         
-        @include note{
+        @include small{
             top: ($button-height-xs / 2) - ($bar-thickness-xs / 2);
             height: $bar-thickness-xs;
         }
@@ -62,7 +62,7 @@ $button-color: $color__primary;
       background-color: $button-color;
       content: "";
         
-        @include note{
+        @include small{
             height: $bar-thickness-xs;
         }
     }
@@ -70,7 +70,7 @@ $button-color: $color__primary;
     & span::before {
       top: -$bar-thickness - $button-bar-space;
         
-        @include note{
+        @include small{
             top: -$bar-thickness-xs - $button-bar-space-xs;
         }
     }
@@ -78,7 +78,7 @@ $button-color: $color__primary;
     & span::after {
       bottom: -$bar-thickness - $button-bar-space;
         
-        @include note{
+        @include small{
             bottom: -$bar-thickness-xs - $button-bar-space-xs;
         }
     }
@@ -212,9 +212,9 @@ body.is--mobile-active{
 //  } 
 }
 .b-mobile-nav__toggle{
-  position: absolute;
-    top: 34px;
-    right: -75px;
+    position: absolute;
+    top: 21px;
+    right: -50px;
     transition: transform $menu-transistion-duration;
     transform: translateX(0);
     
@@ -223,16 +223,16 @@ body.is--mobile-active{
     }
     
     
-    @include note{
+    @include small{
         top: 13px;
         right: -36px;
     }
 
     &.is--active{
 //        right: 6px;
-        transform: translateX(-105px);
+        transform: translateX(-64px);
         
-        @include note{
+        @include small{
             transform: translateX(-52px);
         }
     }
@@ -244,16 +244,16 @@ body.is--mobile-active{
   }
 }
 .b-mobile-nav__heading{
-    padding: 8px 15px;
+    padding: 8px 15px 9px;
     font-size: 18px;
-    line-height: 93px;
+    line-height: 48px;
     font-weight: 700;
     color: #fff;
 //    border-bottom: 1px solid #191c1f;
     
-    @include note{
-        padding: 8px 15px 6px;
-        line-height: 37px;
+    @include small{
+//        padding: 8px 15px 9px;
+        line-height: 25px;
     }
 }
 .b-mobile-nav_wrapper{

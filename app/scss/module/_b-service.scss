@@ -1,7 +1,7 @@
 .b-service{
 	margin-bottom: 45px;
     
-    @include phone{
+    @include small{
         margin: 0 0 23px;
     }
 }
@@ -10,6 +10,10 @@
 	margin: 0 0 32px;
     cursor: pointer;
     transition: opacity 0.3s;
+    
+    @include pc{
+        margin: 0 0 17px;
+    }
     
     &:hover{
         opacity: 0.7;
@@ -25,7 +29,7 @@
 //		}
 	}
     
-    @include phone{
+    @include small{
         margin: 0 0 5px;
     }
 }
@@ -74,7 +78,11 @@
 //		font-size: 40px;
 //		line-height: 45px;
 //	}
-    @include phone{
+    @include pc{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    @include small{
         font-size: 12px;
         line-height: 18px;
     }

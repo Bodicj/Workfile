@@ -46,7 +46,10 @@
 	bottom: 31px;
 	width: 100%;
     
-    @include phone{
+    @include pc{
+        bottom: 18px;
+    }
+    @include small{
         bottom: 12px;
     }
 }
@@ -74,7 +77,11 @@
 	color: #666;
 	padding-top: 20px;
     
-    @include phone{
+    @include pc{
+        padding-top: 0;
+        line-height: 15px;
+    }
+    @include small{
         line-height: 10px;
     }
 }
@@ -100,9 +107,15 @@
 	cursor: pointer;
 	transition: all .3s;
     
-    @include phone{
-        margin: 0 2.5px;
+    @include pc{
+        margin: 0 4px;
         border-width: 1px;
+        width: 15px;
+        height: 15px;
+    }
+    @include small{
+        margin: 0 2.5px;
+//        border-width: 1px;
         width: 10px;
         height: 10px;
     }

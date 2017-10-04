@@ -4,70 +4,189 @@ $(function() {
   		,ANIM_TIME_SM = 300		// ms
   		;
   
+// моб меню/фільтри/пошук/кошик - логіка:
+	//
+	// Переключатель для моб. версии главного меню сайта
+	//---------------------------------------------------------------------------------------
+	    // Показываем/Скрываем боковое меню
+	    function toggleMenuVisibility(){
+	      $('.b-mobile-nav').toggleClass('is--visible');
+	    }
+	    function removeMenuVisibility(){
+	      $('.b-mobile-nav').removeClass('is--visible');
+	    }
 
-  //
-  // Переключатель для моб. версии главного меню сайта
-  //---------------------------------------------------------------------------------------
-    // Показываем/Скрываем боковое меню
-    function toggleMenuVisibility(){
-      $('.b-mobile-nav').toggleClass('is--visible');
-    }
-    function removeMenuVisibility(){
-      $('.b-mobile-nav').removeClass('is--visible');
-    }
+	    // Показываем/Скрываем затемнение фона
+	    function toggleBodyBackground(){
+	      // $('body').toggleClass('is--mobile-active');
+	      console.log("toggle BG");
+	    }
+	    function removeBodyBackground(){
+	      // $('body').removeClass('is--mobile-active');
+	      console.log("remove BG");
+	    }
+	    
+	    // Добавляем/Удаляем активный класс для переключателя меню
+	    function toggleMenuTriggerClass(){
+	      $('.js-nav-toggle').toggleClass('is--active');
+	    }
+	    function removeMenuTriggerClass(){
+	      $('.js-nav-toggle').removeClass('is--active');
+	    }
 
-    // Показываем/Скрываем затемнение фона
-    function toggleBodyBackground(){
-      $('body').toggleClass('is--mobile-active');
-    }
-    function removeBodyBackground(){
-      $('body').removeClass('is--mobile-active');
-    }
-    
-    // Добавляем/Удаляем активный класс для переключателя меню
-    function toggleMenuTriggerClass(){
-      $('.js-nav-toggle').toggleClass('is--active');
-    }
-    function removeMenuTriggerClass(){
-      $('.js-nav-toggle').removeClass('is--active');
-    }
+	    // Закрываем мобильное меню - меняем состояния через классы
+	    function closeMobileMenu(){
+	      $('body').removeClass('is--mobile-active');
+	      $('.js-nav-toggle').removeClass('is--active');
+	    }
 
-    // Закрываем мобильное меню - меняем состояния через классы
-    function closeMobileMenu(){
-      $('body').removeClass('is--mobile-active');
-      $('.js-nav-toggle').removeClass('is--active');
-    }
+	    // filters:
+	    // Показываем/Скрываем бічне меню фільтрів
+	    function toggleFiltersMenuVisibility(){
+	      $('.js-filters').toggleClass('is--visible');
+	    }
 
-    // filters:
-    // Показываем/Скрываем бічне меню фільтрів
-    function toggleFiltersMenuVisibility(){
-      $('.js-filters').toggleClass('is--visible');
-    }
+	    // Закрываем бічне меню фільтрів
+	    function closeFiltersMenu(){
+	      $('body').removeClass('is--mobile-active');
+	      $('.js-filters').removeClass('is--visible');
+	      // $('.js-nav-toggle').removeClass('is--active');
+	    }
 
-    // Закрываем бічне меню фільтрів
-    function closeFiltersMenu(){
-      $('body').removeClass('is--mobile-active');
-      $('.js-filters').removeClass('is--visible');
-      // $('.js-nav-toggle').removeClass('is--active');
-    }
 
-    // Закрываем мобильное меню (і меню фільтрів) при клике на область вне его
-    function closeMobileMenuOnOutOfClick(){
-      $('body').mouseup(function(e) {
-        var subject = $('.is--visible');
+	// Mobile menu search and minicart
+	//---------------------------------------------------------------------------------------
+		var  $searchForm = $(".js-search")
+			,$searchIcon = $searchForm.children("button[type='submit']")
+			,$searchField = $searchForm.children(".js-minisearch")
+			,$minicartIcon = $(".js-cart")
+			,$minicart = $minicartIcon.find(".js-minicart")
+			;
 
-        if( subject.length
-          && !$(e.target).hasClass('js-nav-toggle')
-          && !$(e.target).hasClass('icon-nav')
-          && e.target.className != subject.attr('class')
-          && !subject.has(e.target).length){
-          removeMenuVisibility();
-      	  closeFiltersMenu();	// закриваємо бічне меню фільтрів
-          removeBodyBackground();
-          removeMenuTriggerClass();
-        }
-      });
-    }
+		var focusBlurSearchField = function(bBlur){	// focus/blur cursor on search field after searchButton press
+			if ($searchField.hasClass("is-focused") || bBlur){
+				$searchField.removeClass("is-focused");
+				$searchField.children("input").blur();
+				// console.log("blur");
+			} else {
+				$searchField.addClass("is-focused");
+				$searchField.children("input").focus();
+				// console.log("focus");
+			}
+		}
+
+		var hideSearch = function(iTime){
+			$searchField.fadeOut(iTime);
+			focusBlurSearchField(true);
+			console.log("Hide search");
+		}
+		var toggleSearch = function(iTime){
+			$searchField.fadeToggle(iTime);
+			focusBlurSearchField();
+			console.log("toggle search");
+		}
+
+		var hideCart = function(iTime){
+			$minicart.slideUp(iTime);
+			removeBodyBackground();
+			console.log("hide minicart");
+		}
+		var toggleCart = function(iTime){
+			$minicart.slideToggle(iTime);
+			toggleBodyBackground()
+			console.log("toggle minicart");
+		}
+
+		var hideSearchAndCart = function(iTime){
+			hideSearch(iTime);
+			hideCart(iTime);
+			focusBlurSearchField(true);
+		}
+
+
+		$searchIcon.on("click", function(e){	// prevent form submit
+			if(window.innerWidth < BREAKPOINT_RES){
+				e.preventDefault();
+				// console.log("search icon click")
+			}
+		});
+		$searchField.on("click", function(e){	//	prevent hiding search field on click
+			if(window.innerWidth < BREAKPOINT_RES){
+				e.stopPropagation();
+			}
+		})
+		$searchField.children("input").on("keypress", function(e){		// submit search form by enter press
+			if ( e.which == 13 ) {
+				$searchForm.trigger("submit");
+				// console.log("submit");
+			}
+
+		});
+
+		$minicartIcon.on("click", function(e){
+			e.stopPropagation();
+			if(window.innerWidth < BREAKPOINT_RES){
+				hideSearch(ANIM_TIME_SM);
+			}
+			toggleCart(ANIM_TIME_SM);
+		});
+
+		$window.on("resize", function(){
+			$searchForm.off("click");
+			hideSearchAndCart(0);
+			removeBodyBackground();
+
+			if(window.innerWidth < BREAKPOINT_RES){
+				$searchForm.on("click", function(e){
+					e.stopPropagation();
+					hideCart(ANIM_TIME_SM);
+					toggleSearch(ANIM_TIME_SM);
+				});
+			} else{
+				if ($searchField.is(":hidden")){$searchField.show(0)};
+			}
+
+		}).trigger("resize");
+
+
+
+	    // Закрываем мобильное меню (меню фільтрів, і кошик/пошук ) при клике на область вне его
+	    function closeMobileMenuOnOutOfClick(){
+	      $('body').on("mouseup", function(e) {
+	        var subject = $('.is--visible');
+
+	        if( subject.length	// якщо відкрита бічна панель головного меню (або меню фільтрів)
+	          && !$(e.target).hasClass('js-nav-toggle')	// і це не клік по діву з кнопкою-бутербродом
+	          && !$(e.target).hasClass('icon-nav')		// і це не іконка кнопки-бутерброда
+	          && e.target.className != subject.attr('class')	// і це не клік по бічній панелі меню (або меню фільтрів)
+	          && !subject.has(e.target).length){		// і це не клік по якомусь нащадку бічній панелі меню (або меню фільтрів)
+		          console.log("if");
+		          removeMenuVisibility();	// закриваємо бічне головне меню
+		      	  closeFiltersMenu();	// закриваємо бічне меню фільтрів
+		          removeBodyBackground();	// прибираємо затемнення фона
+		          removeMenuTriggerClass();	// вертаємо кнопку "X" в стан бутерброда
+				// if(window.innerWidth < BREAKPOINT_RES){
+				// 	$searchField.fadeOut(ANIM_TIME_SM);
+				// 	$minicart.slideUp(ANIM_TIME_SM);
+				// 	// removeBodyBackground();
+				// };
+	        } else if (window.innerWidth < BREAKPOINT_RES){
+		          console.log("else");
+				$searchField.fadeOut(ANIM_TIME_SM);
+				$minicart.slideUp(ANIM_TIME_SM);
+				removeBodyBackground();
+	        }
+	      });
+	    }
+
+		// $("body").on("mouseup", function(e){
+		// 	if(window.innerWidth < BREAKPOINT_RES){
+		// 		$searchField.fadeOut(ANIM_TIME_SM);
+		// 		$minicart.slideUp(ANIM_TIME_SM);
+		// 		removeBodyBackground();
+		// 	};
+
+		// });
 
     
     /* Подключаем обработчик моб. меню */
@@ -124,6 +243,7 @@ $(function() {
 		});
     };
 
+
     // акордеон + кастомна прокрутка (моб меню)
     (function(){
     	// var  $container = $(".b-mobile-nav_wrapper").jScrollPane({
@@ -149,111 +269,6 @@ $(function() {
    	// $(".js-scrollPane").jScrollPane({
     // 	showArrows: false
     // });
-
-	// Mobile menu search and minicart
-	//---------------------------------------------------------------------------------------
-	(function(){
-		var  $searchForm = $(".js-search")
-			,$searchIcon = $searchForm.children("button[type='submit']")
-			,$searchField = $searchForm.children(".js-minisearch")
-			,$minicartIcon = $(".js-cart")
-			,$minicart = $minicartIcon.find(".js-minicart")
-			;
-
-		var focusBlurSearchField = function(bBlur){	// focus/blur cursor on search field after searchButton press
-			if ($searchField.hasClass("is-focused") || bBlur){
-				$searchField.removeClass("is-focused");
-				$searchField.children("input").blur();
-				// console.log("blur");
-			} else {
-				$searchField.addClass("is-focused");
-				$searchField.children("input").focus();
-				// console.log("focus");
-			}
-		}
-
-		var hideSearch = function(iTime){
-			$searchField.fadeOut(iTime);
-			focusBlurSearchField(true);
-			// console.log("Hide search");
-		}
-		var toggleSearch = function(iTime){
-			$searchField.fadeToggle(iTime);
-			focusBlurSearchField();
-			// console.log("toggle search");
-		}
-
-		var hideCart = function(iTime){
-			$minicart.slideUp(iTime);
-			removeBodyBackground();
-			// console.log("hide minicart");
-		}
-		var toggleCart = function(iTime){
-			$minicart.slideToggle(iTime);
-			toggleBodyBackground()
-			// console.log("toggle minicart");
-		}
-
-		var hideSearchAndCart = function(iTime){
-			hideSearch(iTime);
-			hideCart(iTime);
-			focusBlurSearchField(true);
-		}
-
-
-		$searchIcon.on("click", function(e){	// prevent form submit
-			if(window.innerWidth < BREAKPOINT_RES){
-				e.preventDefault();
-				// console.log("search icon click")
-			}
-		});
-		$searchField.on("click", function(e){	//	prevent hiding search field on click
-			if(window.innerWidth < BREAKPOINT_RES){
-				e.stopPropagation();
-			}
-		})
-		$searchField.children("input").on("keypress", function(e){		// submit search form by enter press
-			if ( e.which == 13 ) {
-				$searchForm.trigger("submit");
-				console.log("submit");
-			}
-
-		});
-
-		$minicartIcon.on("click", function(e){
-			e.stopPropagation();
-			if(window.innerWidth < BREAKPOINT_RES){
-				hideSearch(ANIM_TIME_SM);
-			}
-			toggleCart(ANIM_TIME_SM);
-		});
-
-		$window.on("resize", function(){
-			$searchForm.off("click");
-			hideSearchAndCart(0);
-
-			if(window.innerWidth < BREAKPOINT_RES){
-				$searchForm.on("click", function(e){
-					e.stopPropagation();
-					hideCart(ANIM_TIME_SM);
-					toggleSearch(ANIM_TIME_SM);
-				});
-			} else{
-				if ($searchField.is(":hidden")){$searchField.show(0)};
-			}
-
-		}).trigger("resize");
-
-
-		$window.on("click", function(){
-			if(window.innerWidth < BREAKPOINT_RES){
-				$searchField.fadeOut(ANIM_TIME_SM);
-				$minicart.slideUp(ANIM_TIME_SM);
-			};
-
-		});
-
-	})();
 
   //
   // Modal Popup

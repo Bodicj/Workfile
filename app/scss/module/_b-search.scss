@@ -15,7 +15,7 @@
         background-color: transparent;
         width: auto;
         height: 100%;
-        line-height: 42px;
+        line-height: 65px;
 	}
 	@include note {
 //		min-width: 220px;
@@ -24,40 +24,47 @@
 //        width: 180px;
 	}
     @include small {
+        line-height: 42px;
     }
 
     .b-wrapper_search{
         @include pc{
             display: none;
             position: absolute;
-            top: 42px;
+            top: 65px;
             right: 0;
 //            z-index: -1;
             width: 320px;
+        }
             
-            &:before{    // white triangle
-                content: '';
-                position: absolute;
-                bottom: 100%;
+        &:before{    // white triangle
+            content: '';
+            position: absolute;
+            bottom: 100%;
+//            top: 81px;
+            width: 0;
+            height: 0;
+            border-top: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 7px solid #fff;
+            
+            @include pc{
+                right: 91px;
+            }
+            @include small{
                 right: 65px;
-                width: 0;
-                height: 0;
-                border-top: 0;
-                border-left: 5px solid transparent;
-                border-right: 5px solid transparent;
-                border-bottom: 7px solid #fff;
-                
             }
-            
-            &:after{    // black line
-                content: '';
-                position: absolute;
-                right: 15px;
-                bottom: 12px;
-                left: 15px;
-                border-top: 1px solid #222*2;
-                border-bottom: 1px solid #222;
-            }
+        }
+        
+        &:after{    // black line
+            content: '';
+            position: absolute;
+            right: 15px;
+            bottom: 12px;
+            left: 15px;
+            border-top: 1px solid #222*2;
+            border-bottom: 1px solid #222;
         }
         
         input {
@@ -132,10 +139,10 @@
             position: static;
             background-color: transparent;
             display: inline-block;
-            vertical-align: -16%;
-            transform: scale(0.9);
-            width: 21px;
-            height: 21px;
+            vertical-align: -14%;
+            width: 27px;
+            height: 27px;
+            transform: scale(1);
             background-image: url(../img/svg/i-search-white.svg);
 //            top: 3px;
 //            right: 3px;
@@ -145,6 +152,10 @@
 //            right: 3px;
         }
         @include small {
+            vertical-align: -16%;
+            transform: scale(0.9);
+            width: 21px;
+            height: 21px;
         }
 	}
 }

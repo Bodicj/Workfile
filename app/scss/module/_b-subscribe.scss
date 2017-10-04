@@ -13,7 +13,7 @@
     @include note{
         max-width: 100%;
     }
-    @include phone{
+    @include small{
         padding: 0;
     }
 }
@@ -32,7 +32,7 @@
     @include tablet{
         padding: 40px 0 45px;
     }
-    @include phone{
+    @include small{
         margin: 0 auto;
         padding: 22px 0 39px;
         width: calc(100% - 30px);
@@ -72,7 +72,7 @@
         text-align: center;
 //        text-transform: uppercase;
     }
-    @include phone{
+    @include small{
         margin-bottom: 25px;
         font-size: 18px;
         line-height: 22px;
@@ -80,6 +80,10 @@
     
     br{
         display: none;
+        
+        @include small{
+            display: inline;
+        }
     }
 }
 .b-subscribe__form{
@@ -137,7 +141,7 @@
         @include note{
             margin-bottom: 27px;
         }
-        @include phone{
+        @include small{
             width: 263px;
             margin-bottom: 27px;
             font-size: 12px;
@@ -168,7 +172,7 @@
         @include pc{
             width: 300px;
         }
-        @include phone{
+        @include small{
             width: 263px;
         }
 	}
@@ -195,7 +199,7 @@
         @include note{
             margin-bottom: 0;
         }
-        @include phone{
+        @include small{
             width: auto;
             font-size: 12px;
             line-height: 23px;

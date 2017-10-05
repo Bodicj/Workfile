@@ -41,6 +41,10 @@ body{
         margin-bottom: 20px;
         padding-right: 10px;
         
+        @include pc{
+            padding-right: 0;
+        }
+        
         .g-input{
             border-width: 1px;
             padding-left: 14px;
@@ -60,7 +64,13 @@ body{
             height: 36px;
             padding: 7px 20px;
             
+            @include pc{
+                width: 160px;
+                height: 47px;
+            }
             @include small{
+                width: 150px;
+                height: 36px;
                 font-size: 15px;
             }
         }
@@ -87,6 +97,11 @@ body{
     top: 23px;
 	right: 23px;
 	cursor: pointer;
+    
+    @include pc{
+        top: 15px;
+        right: 15px;
+    }
 }
 .arcticmodal--wide{
 	width: 983px;
@@ -225,8 +240,14 @@ body{
     }
 }
 .b-modal_slide{
+    text-align: center;
+    
     .arcticmodal-header{
         padding-top: 30px;
+        
+        @include pc{
+            padding-top: 35px;
+        }
     }
     .arcticmodal-body{
         padding-bottom: 0;
@@ -234,6 +255,10 @@ body{
     .arcticmodal-footer{
         padding-top: 0;
     }
+//    
+//    .g-form__field{
+//        padding-right: 0;
+//    }
 }
 
 .arcticmodal-overlay,

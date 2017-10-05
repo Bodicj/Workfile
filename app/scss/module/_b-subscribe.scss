@@ -7,21 +7,21 @@
         content: none;
     }
     
-    @include pc{
-        max-width: 815px;
-    }
-    @include note{
-        max-width: 100%;
-    }
-    @include small{
-        padding: 0;
-    }
+//    @include pc{
+//        max-width: 815px;
+//    }
+//    @include note{
+//        max-width: 100%;
+//    }
+//    @include small{
+//        padding: 0;
+//    }
 }
 
 .b-subscribe{
     height: 130px;
 	padding: 43px 0 47px;
-	background-color: #121212;
+	background-color: #0f0f0f;
     
     @include huge {
         height: 110px;
@@ -67,7 +67,7 @@
 //		text-transform: none;
 	}
     @include pc{
-        margin-bottom: 15px;
+        margin-bottom: 35px;
         width: 100%;
         text-align: center;
 //        text-transform: uppercase;
@@ -100,15 +100,19 @@
         padding: 0 12px;
     }
     @include pc{
+        padding: 0;
         flex-wrap: nowrap;
         flex-direction: column;
+//        font-size: 14px;
     }
     @include note{
-        flex-direction: column;
-        font-size: 14px;
+//        flex-direction: column;
     }
     @include tablet{
         font-size: 12px;
+    }
+    @include small{
+        padding: 0 12px;
     }
     
 	input {
@@ -136,14 +140,16 @@
 		}
         @include pc{
             width: 300px;
+            min-height: 35px;
             margin-right: 0;
+            font-size: 14px;
+            margin-bottom: 33px;
         }
         @include note{
-            margin-bottom: 27px;
         }
         @include small{
             width: 263px;
-            margin-bottom: 27px;
+//            margin-bottom: 27px;
             font-size: 12px;
             min-height: 31px;
             padding: 2px 14px;
@@ -196,8 +202,10 @@
             width: 125px;
             font-size: 12px;
         }
-        @include note{
+        @include pc{
             margin-bottom: 0;
+            width: 155px;
+            font-size: 14px;
         }
         @include small{
             width: auto;

@@ -141,7 +141,7 @@
     padding-left: 4px;
     
     @include pc{
-        margin: 50px 0 79px;
+        margin: 50px 0 75px;
         padding-left: 2px;
     }
     @include small{
@@ -155,8 +155,11 @@
 	padding-bottom: 60px;
 //	padding-left: 4px;
     
+    @include pc{
+        padding-top: 185px;
+    }
     @include small{
-        padding: 137px 0 35px;
+        padding: 137px 0 50px;
     }
 
 	&:before{
@@ -231,7 +234,7 @@
         margin-top: 100px;
     } 
     @include pc{
-        margin-top: 60px;
+        margin-top: 53px;
         padding-bottom: 190px;
     }
     @include small{
@@ -248,9 +251,12 @@
 		margin-bottom: 81px;
         padding-right: 2px;
         
+        @include pc{
+            margin-bottom: 45px;
+            padding-right: 0;
+        }
         @include small{
             margin-bottom: 20px;
-            padding-right: 0;
         }
 	}
 
@@ -273,6 +279,9 @@
 /* 	@include huge {
 	padding-top: 170px;
 } */
+    @include pc{
+        padding-top: 154px;
+    }
     @include small{
         padding: 104px 0 35px;
     }
@@ -289,20 +298,27 @@
 		background: url(../img/flowers-seo.png) no-repeat 0px 0px;
         
         @include pc{
-            top: -112px;
-            width: 100%;
+            top: -105px;
+            width: 390px;
+            height: 208px;
             transform: translateX(-50%);
-            background: url(../img/flowers-seo-xs.png) no-repeat 50% 0px /contain;
-        }
-        @include small{
-            top: -56px;
-            width: 290px;
-            transform: translate(-50%,-10px);
-            background: url(../img/flowers/flowers-seo-xs.png) no-repeat 50% 0;
+            background: url(../img/flowers/flowers-seo-sm.png) no-repeat 50% 0px /100%;
             
             @include media("retina2x"){
-                background: url(../img/flowers/flowers-seo-xs-2x.png) no-repeat 50% 0 /95%;
+                background: url(../img/flowers/flowers-seo-sm-2x.png) no-repeat 50% 0 /100%;
             }
+        }
+        @include small{
+            width: 275px;
+            height: 147px;
+            top: -90px;
+            background: url(../img/flowers-seo.png) no-repeat 50% 0 /100%;
+//            top: -67px;
+//            background: url(../img/flowers/flowers-seo-xs.png) no-repeat 50% 0 /100%;
+//            
+//            @include media("retina2x"){
+//                background: url(../img/flowers/flowers-seo-xs-2x.png) no-repeat 50% 0  /100%;
+//            }
         }
 	}
 }

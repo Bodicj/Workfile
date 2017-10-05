@@ -39,6 +39,11 @@
 //		line-height: 40px;
 //	}
     
+    @include pc{
+        margin: 0 0 46px;
+        font-size: 16px;
+        line-height: 17px;
+    }
     @include small{
         margin: 0 0 31px;
         font-size: 14px;
@@ -52,6 +57,15 @@
 //		@include fourK {
 //			max-height: 115px;
 //		}
+        @include pc{
+            max-height: 154px;
+        }
+//        @include note{
+//            max-height: 154px;
+//        }
+        @include tablet{
+            max-height: 206px;
+        }
         @include small{
             max-height: 342px;
         }

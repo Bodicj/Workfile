@@ -230,7 +230,7 @@ body.is--mobile-active{
 
     &.is--active{
 //        right: 6px;
-        transform: translateX(-64px);
+        transform: translateX(-62px);
         
         @include small{
             transform: translateX(-52px);
@@ -244,7 +244,7 @@ body.is--mobile-active{
   }
 }
 .b-mobile-nav__heading{
-    padding: 8px 15px 9px;
+    padding: 9px 15px 8px;
     font-size: 18px;
     line-height: 48px;
     font-weight: 700;
@@ -268,7 +268,7 @@ body.is--mobile-active{
   @extend %list;
     border-top: 2px solid #191c1f;
     
-    @include note{
+    @include pc{
         border-top: none;
         padding: 12px 0;
         border-bottom: 2px solid #191c1f;
@@ -283,11 +283,7 @@ body.is--mobile-active{
 }
 .b-mobile-nav__item{
     display: block;
-    margin: 4px 0;
-    
-    @include tablet{
-        margin: 2px 0;
-    }
+    margin: 2px 0;
     
     &.opened{
         
@@ -311,7 +307,7 @@ body.is--mobile-active{
         text-decoration: underline;
     }
   
-    @include note{
+    @include pc{
         padding: 3px 15px;
     }
     

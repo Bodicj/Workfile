@@ -1,5 +1,5 @@
 body{
-  overflow: auto !important;
+//  overflow: auto !important;
 }
 .arcticmodal{
 	position: relative;
@@ -13,6 +13,7 @@ body{
 	@include small {
 		min-width: 260px;
 		max-width: 300px;
+//		max-width: 272px;
 	}
     
     &.b-slider__desc{
@@ -35,6 +36,10 @@ body{
     
     .g-btn{
         font-size: 16px;
+        
+        @include small{
+            font-size: 15px;
+        }
     }
     
     .g-form__field{
@@ -240,7 +245,7 @@ body{
     }
 }
 .b-modal_slide{
-    text-align: center;
+//    text-align: center;
     
     .arcticmodal-header{
         padding-top: 30px;
@@ -289,6 +294,10 @@ body{
 	margin: 0;
 	border: 0;
 	vertical-align: middle;
+    
+    @include small {
+        padding: 10px;
+    }
 }
 .arcticmodal-error { 
 	padding: 20px;

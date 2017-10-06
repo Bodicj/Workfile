@@ -29,13 +29,22 @@
 
     .b-wrapper_search{
         @include pc{
-            display: none;
             position: absolute;
             top: 65px;
             right: 0;
 //            z-index: -1;
             width: 320px;
+            
+            visibility: hidden;
+            opacity: 0;
+            transition:  opacity $time_short, visibility 0s $time_short;
+            &.is--visible{
+                visibility: visible;    
+                opacity: 1;
+                transition: opacity $time_short, visibility 0s;
+            }
         }
+        
         @include small{
             top: 42px;
         }

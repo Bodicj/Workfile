@@ -1,6 +1,8 @@
 html{
     transform-origin: 0 0;    // for document scale script
-    box-sizing:border-box
+    box-sizing:border-box;
+    overflow-x: hidden;
+    height: 100%;
 }
 *,:after,:before{box-sizing:inherit}
 
@@ -9,6 +11,8 @@ body {
   min-width: 320px;
 //  min-width: 1920px;
   width: 100%;
+//    height: 100%;
+  overflow-x: hidden;
   font-family: "Open Sans", Arial, sans-serif;
   
   font-size: $fs--base;
@@ -20,9 +24,11 @@ body {
 //	}
     @include pc{
         margin-top: 65px;
+        height: calc(100% - 65px);
     }
     @include small{
         margin-top: 42px;
+        height: calc(100% - 42px);
     }
     
 }

@@ -18,7 +18,8 @@ $product-small: 230px;
         width: $productNarrow - 10px;
     }
     @include pc{
-        margin-bottom: 35px;
+//        margin-bottom: 30px;
+        margin-bottom: 50px;
         width: $product-small;
     }
     @include note{

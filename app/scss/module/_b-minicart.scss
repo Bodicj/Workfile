@@ -91,6 +91,11 @@ $imgContainerWidth: 103px;
             span{
                 line-height: 33px;
                 cursor: pointer;
+                
+                &:first-child{
+                    line-height: 32px;
+                    transform: scaleX(1.7);
+                }
             }
             
             input{

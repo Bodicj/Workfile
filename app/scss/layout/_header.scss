@@ -22,7 +22,7 @@ $svgTransitionTime: 0.2s;
         top: 0; 
         left: 0;
         right: 0;
-        z-index: 100;
+        z-index: 99;
     }
 }
 .header--simple{
@@ -256,8 +256,7 @@ $svgTransitionTime: 0.2s;
     }
     
     .b-cart__wrapper{
-        display: none;
-//        visibility: hidden;
+//        display: none;
         position: absolute;
 //        top: 42px;
         top: 100%;
@@ -267,36 +266,52 @@ $svgTransitionTime: 0.2s;
         width: 288px;
         max-height: calc(100vh - 160px);
         padding: 5px 5px 25px;
-//        opacity: 0;
-        transition: opacity .3s;
         background-color: #fff;
         box-shadow: 0 0px 5px 1px rgba(76, 64, 40, 0.23);
         
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity $time_short, visibility 0s $time_short;
+        
+         @include pc{
+//            width: 288px;
+            right: 15px;
+//            left: 0;
+//            margin: auto;
+            max-height: calc(100vh - 65px);
+         }
+        @include small{
+            max-height: calc(100vh - 42px);
+        }
+    }
+    .b-minicart{
         &:before{    // white triangle
             content: '';
             position: absolute;
-            bottom: 100%;
-            right: 36px;
+            bottom: 0;
+            right: 32px;
             width: 0;
             height: 0;
             border-top: 0;
             border-left: 5.5px solid transparent;
             border-right: 5.5px solid transparent;
             border-bottom: 10px solid #fff;
+            
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity $time_short, visibility 0s $time_short;
+            
+            @include pc{
+                right: 29px;
+            }
+            @include small{
+                 right: 24px;
+            }
         }
-        
-         @include tablet{
-//            width: 288px;
-            right: 15px;
-//            left: 0;
-//            margin: auto;
-             &:before{
-                 right: 8px;
-             }
-         }
-        @include phone{
-            max-height: calc(100vh - 42px);
-            overflow: auto;
+        &.is--visible .b-cart__wrapper, &.is--visible:before{
+            visibility: visible;    
+            opacity: 1;
+            transition: opacity $time_short, visibility 0s;
         }
     }
     

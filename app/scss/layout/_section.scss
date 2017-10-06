@@ -190,12 +190,13 @@
         }
         @include small{
             top: -92px;
-            background: url(../img/flowers/flowers-why-we-xs.png) no-repeat -5px -6px;
             width: 272px;
-            
-            @include media("retina2x"){
-                background: url(../img/flowers/flowers-why-we-xs-2x.png) no-repeat -5px -6px/107%;
-            }
+            background: url(../img/flowers-why-we-xs.png) no-repeat 8px 0;
+//            background: url(../img/flowers/flowers-why-we-xs.png) no-repeat -5px -6px;
+//            
+//            @include media("retina2x"){
+//                background: url(../img/flowers/flowers-why-we-xs-2x.png) no-repeat -5px -6px/107%;
+//            }
         }
 	}
     
@@ -312,7 +313,7 @@
             width: 275px;
             height: 147px;
             top: -90px;
-            background: url(../img/flowers-seo.png) no-repeat 50% 0 /100%;
+            background: url(../img/flowers-seo.png) no-repeat calc(50% - 11px) 0 /100%;
 //            top: -67px;
 //            background: url(../img/flowers/flowers-seo-xs.png) no-repeat 50% 0 /100%;
 //            

@@ -10,16 +10,24 @@
 //			margin-left: 18px;
 //		}
 	}
-	i{
+    
+    i[class^="icon-"]{
 		margin-right: 9.6px;
-	}
+	
+        @include huge{
+            width: 21px;
+            height: 21px;
+            transform: scale(1);
+        }
+    }
     span{
         vertical-align: -6%;
         letter-spacing: .004em;
     }
 
 	@include huge {
-		font-size: 16.38px;
+		line-height: 16.38px;
+		font-size: 13.84px;
 	}
 //	@include twoK {
 //		font-size:24px;

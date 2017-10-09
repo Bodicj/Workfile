@@ -11,7 +11,7 @@
 //	}
 	@include huge{
         padding-top: 35px;
-		font-size: 17px;
+		font-size: 14px;
 	}
 	@include pc {
 //		font-size: 17px;
@@ -19,7 +19,7 @@
     @include note{
         order: 1;
         padding: 15px 0 5px;
-        font-size: 14px;
+        font-size: 13px;
     }
     @include tablet{
         font-size: 12px;

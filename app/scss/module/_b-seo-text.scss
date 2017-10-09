@@ -58,13 +58,13 @@
 //			max-height: 115px;
 //		}
         @include pc{
-            max-height: 154px;
+            max-height: 138px;
         }
-//        @include note{
-//            max-height: 154px;
-//        }
-        @include tablet{
+        @include note{
             max-height: 206px;
+        }
+        @include tablet{
+            max-height: 273px;
         }
         @include small{
             max-height: 342px;

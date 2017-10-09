@@ -12,7 +12,8 @@ body {
 //  min-width: 1920px;
   width: 100%;
 //    height: 100%;
-  overflow-x: hidden;
+//  overflow-x: hidden;
+    overflow: visible;
   font-family: "Open Sans", Arial, sans-serif;
   
   font-size: $fs--base;
@@ -71,7 +72,7 @@ img {
   @include clearfix();
     
   @include huge{
-    width: 1205px;
+    width: 1200px;
   }
   
 //  @include huge {

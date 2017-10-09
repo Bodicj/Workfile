@@ -173,9 +173,9 @@
 		height: 261px;
 		background: url(../img/flowers/flowers-why-we-lg.png) no-repeat -9px 0;
         
-        @include media("retina2x"){
-            background: url(../img/flowers/flowers-why-we-lg-2x.png) no-repeat -9px 0/100%;
-        }
+//        @include media("retina2x"){
+//            background: url(../img/flowers/flowers-why-we-lg-2x.png) no-repeat -9px 0/100%;
+//        }
         
         @include pc{
 //            top: -92px;
@@ -184,14 +184,14 @@
             transform: translateX(-50%);
             background: url(../img/flowers-why-we.png) no-repeat 9px 2px/100%;
             
-            @include media("retina2x"){
-                background: url(../img/flowers-why-we.png) no-repeat 9px 2px/100%;
-            }
+//            @include media("retina2x"){
+//                background: url(../img/flowers-why-we.png) no-repeat 9px 2px/100%;
+//            }
         }
         @include small{
             top: -92px;
             width: 272px;
-            background: url(../img/flowers-why-we-xs.png) no-repeat 8px 0;
+            background: url(../img/flowers-why-we.png) no-repeat 8px 0/100%;
 //            background: url(../img/flowers/flowers-why-we-xs.png) no-repeat -5px -6px;
 //            
 //            @include media("retina2x"){
@@ -299,15 +299,16 @@
 		background: url(../img/flowers-seo.png) no-repeat 0px 0px;
         
         @include pc{
-            top: -105px;
+            top: -127px;
             width: 390px;
             height: 208px;
             transform: translateX(-50%);
-            background: url(../img/flowers/flowers-seo-sm.png) no-repeat 50% 0px /100%;
+//            background: url(../img/flowers/flowers-seo-sm.png) no-repeat 50% 0px /100%;
+            background: url(../img/flowers-seo.png) no-repeat 50% 0px /100%;
             
-            @include media("retina2x"){
-                background: url(../img/flowers/flowers-seo-sm-2x.png) no-repeat 50% 0 /100%;
-            }
+//            @include media("retina2x"){
+//                background: url(../img/flowers/flowers-seo-sm-2x.png) no-repeat 50% 0 /100%;
+//            }
         }
         @include small{
             width: 275px;

@@ -226,13 +226,30 @@
     height: 535px;
     background: #fff url(../img/flowers/flowers-subscribe-lg.jpg) no-repeat top;
     
-    @include media("retina2x"){
-        background: #fff url(../img/flowers/flowers-subscribe-lg.jpg) no-repeat top/78.34%;
-    }
+//    @include media("retina2x"){
+//        background: #fff url(../img/flowers/flowers-subscribe-lg.jpg) no-repeat top/78.34%;
+//    }
     
+    @include pc{
+        background-size: 1065px;
+    }
+    @include note{
+//        height: 505px;
+//        background: #fff url(../img/flowers-subscribe.jpg) top no-repeat /contain;
+        background: #fff url(../img/flowers/flowers-subscribe-md.jpg) no-repeat top;
+        
+        @include media("retina2x"){
+            background: #fff url(../img/flowers/flowers-subscribe-md-2x.jpg) no-repeat top /100%;
+        }
+    }
     @include tablet{
         height: 505px;
 //        background: #fff url(../img/flowers-subscribe.jpg) top no-repeat /contain;
+        background: #fff url(../img/flowers/flowers-subscribe-sm.jpg) no-repeat top;
+        
+        @include media("retina2x"){
+            background: #fff url(../img/flowers/flowers-subscribe-sm-2x.jpg) no-repeat top /100%;
+        }
     }
     @include small{
         height: 207px;

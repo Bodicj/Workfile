@@ -9,6 +9,10 @@
 	letter-spacing: -.001em;
 	margin-top: -1px;
 
+    @include huge {
+        padding-left: 30px;
+    }
+    
 	&:before{
 		content: '';
 		position: absolute;
@@ -16,9 +20,13 @@
         width: 29px;
         height: 36px;
         background-image: url(../img/svg/i-location.svg);
+        background-repeat: no-repeat;
 //        filter: brightness(0);
         @include huge {
-            transform: scale(0.9);
+//            transform: scale(0.9);
+            transform: scale(1);
+            width: 21px;
+            height: 26px;
         }
 //		@include sprite($i-location-lg-black);
 //		@include fourK {
@@ -29,7 +37,8 @@
 	}
 
 	@include huge {
-		font-size: 16.38px;
+		line-height: 16.38px;
+		font-size: 13.84px;
 	}
 //
 //	@include twoK {

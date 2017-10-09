@@ -401,17 +401,11 @@ $(function() {
   //---------------------------------------------------------------------------------------
   (function(){
     $.arcticmodal('setDefault', {
-      beforeOpen: function() {
-        $('body').css({
-          'overflow': 'auto',
-          'margin-right': '0px'
-        })
+      afterOpen: function() {
+        // $body.removeAttr("style")
       },
       afterClose: function() {
-        $('body').css({
-          'overflow': 'auto',
-          'margin-right': '0px'
-        })
+        // $body.removeAttr("style")
       }
     });
     $('[data-modal]').on('click', function (e) {
@@ -526,14 +520,14 @@ $(function() {
   // Fixed Header
   //---------------------------------------------------------------------------------------
   (function(){
-  	$(window).on("load",function(){
+  	$window.on("load",function(){
 
 	  	var fixedHeader = $('.js-fixed-header');
 	  	var servicesTop = $('.section--services').length 
 	  										? $('.section--services').offset().top 
 	  										: 600;
 
-	  	$(window).scroll(function(e){
+	  	$window.scroll(function(e){
 
 	  		if ( servicesTop > document.body.scrollTop ){
 	  			fixedHeader.removeClass('is--active');
@@ -679,10 +673,12 @@ $(function() {
 	// Slide Up
 	//---------------------------------------------------------------------------------------
 	(function(){
-		var limit     = $(window).height(),
-				$backToTop = $('.js-up');
+		var 
+			 limit = $window.height()
+			,$backToTop = $('.js-up')
+			;
 
-		$(window).scroll(function () {
+		$window.on("scroll", function () {
 			if ( $(this).scrollTop() > limit ) {
 				$backToTop.css("display", "block");
 			} else {
@@ -692,7 +688,6 @@ $(function() {
 
 		$backToTop.on('click',function(e){
 			e.preventDefault();
-
 			$('body,html').animate({ scrollTop: 0 }, 1000);
 		});
 		$backToTop.hover(

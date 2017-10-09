@@ -20,6 +20,20 @@
             stroke: $headerTopSvgColorHover;
         }
     }
+    
+    .b-social__item{
+        @include huge{
+            margin-right: 8px;
+        }
+        
+        i[class^="icon-"]{
+            @include huge{
+                width: 21px;
+                height: 21px;
+                transform: scale(1);
+            }
+        }
+    }
 }
 .b-social__item{
 	float: left;
@@ -39,14 +53,6 @@
 	&:last-child{
 		margin-right: 0;
 	}
-    
-    i[class^="icon-"]{
-        @include huge{
-            width: 21px;
-            height: 21px;
-            transform: scale(1);
-        }
-    }
 }
 .b-social__icon{
     width: 29px;

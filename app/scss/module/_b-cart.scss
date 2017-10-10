@@ -7,6 +7,9 @@
 //	@include twoK {
 //		padding: 5px 14px 0 0;
 //	}
+    @include huge{
+        padding-top: 5px;
+    }
     @include pc{
         top: 2px;
     }
@@ -14,11 +17,18 @@
         top: auto;
     }
     
+    i[class^="icon-"]{
+        @include huge{
+            width: 20px;
+            height: 27px;
+            transform: scale(1);
+        }
+    }
 }
-.b-cart-icon{
-    width: 28px;
-    height: 38px;
-}
+//.b-cart-icon{
+//    width: 28px;
+//    height: 38px;
+//}
 .b-cart__total{
 	position: absolute;
 	top: 1px;
@@ -44,6 +54,14 @@
 //		padding-top: 8px;
 //		padding-left: 2px;;
 //	}
+    @include huge{
+        top: 2px;
+        right: -8px;
+        width: 16px;
+        height: 16px;
+        line-height: 13px;
+        font-size: 8.74px;
+    }
     @include pc{
         top: 2px;
         right: -6px;

@@ -296,7 +296,7 @@
     background-image: url(../img/svg/i-star-empty.svg);
 	vertical-align: middle;
     
-    @include pc{
+    @include huge{
         width: 15px;
         height: 15px;
         vertical-align: top;

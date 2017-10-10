@@ -34,7 +34,7 @@
         
         @include huge{
             left: 0;
-            transform: scale(0.9);
+            transform: scale(0.75);
         }
 	}
 
@@ -52,12 +52,17 @@
 //		width: 9%;
 //	}
     @include huge{
-        padding: 21px 0 20px 50px;
+        padding: 20px 0 20px 47px;
     }
 }
 .b-nav__item-1 {
 //	margin-left: 0;
 	padding-left: 46px;
+    
+    @include huge{
+        padding-left: 34px;
+    }
+    
 	&:before{
         top: 28px;
 //		left: 6px;
@@ -67,13 +72,18 @@
         background-image: url(../img/svg/i-menu-item-1.svg);
         
         @include huge{
-            top: 23px;
-            left: 0;
+            top: 14px;
+            left: -4px;
         }
 	}
 }
 .b-nav__item-2{
 //	margin-left: 100px;
+    
+    @include huge{
+        padding-left: 34px;
+    }
+    
 	&:before{
         top: 27px;
 		left: 3px;
@@ -83,13 +93,19 @@
         background-image: url(../img/svg/i-menu-item-2.svg);
 
         @include huge {
-            top: 22px;
+            top: 14px;
+            left: -5px;
         }
 	}
 }
 .b-nav__item-3{
 //	margin-left: 34px;
 	padding-left: 60px;
+    
+    @include huge{
+        padding-left: 50px;
+    }
+    
 	&:before{
 		top: 16px;
 		left: -2px;
@@ -99,13 +115,18 @@
         background-image: url(../img/svg/i-menu-item-3.svg);
 
         @include huge {
-            top: 11px;
+            top: 4px;
         }
 	}
 }
 .b-nav__item-4{
 //	margin-left: 95px;
 	padding-left: 52px;
+    
+    @include huge{
+        padding-left: 43px;
+    }
+    
 	&:before{
 		top: 25px;
         width: 40px;
@@ -114,13 +135,18 @@
         background-image: url(../img/svg/i-menu-item-4.svg);
 
         @include huge {
-            top: 20px;
+            top: 12px;
         }
 	}
 }
 .b-nav__item-5{
 //	margin-left: 114px;
 	padding-left: 68px;
+    
+    @include huge{
+        padding-left: 58px;
+    }
+    
 	&:before{
 		top: 31px;
         width: 56px;
@@ -129,7 +155,7 @@
         background-image: url(../img/svg/i-menu-item-5.svg);
         
         @include huge {
-            top: 26px;
+            top: 17px;
         }
 	}
 }
@@ -138,6 +164,10 @@
 //    margin-left: 56px;
         padding-left: 50px;
 //        margin-left: 30px;
+    
+    @include huge{
+        padding-left: 44px;
+    }
     
 	&:before{
 		top: 30px;
@@ -149,7 +179,7 @@
 //		@include sprite($i-menu-item-6);
         
         @include huge {
-            top: 25px;
+            top: 16px;
         }
 	}
 
@@ -181,9 +211,11 @@
 
 
 	@include huge {
-		font-size: 15px;
 //		max-width: 105px;
         max-width: none;
+        line-height: 17px;
+		font-size: 15px;
+        letter-spacing: normal;
 	}
 //	@include twoK{
 //		font-size: 24px;
@@ -209,7 +241,7 @@
 	z-index: 200;
     
     @include huge {
-        width: 340px;
+        width: 295px;
     }
 }
 .b-nav__sublist-item{
@@ -220,6 +252,11 @@
     transition-property: background-color;
 //    transition-duration: .3s;
 //	margin-left: -9px;
+    
+    @include huge{
+        border-width: 7px;
+    }
+    
     &:hover{
         background-color: #000;
         
@@ -230,7 +267,7 @@
 }
 .b-nav__sublist-link{
 	display: block;
-	padding: 18.5px 51px 18.5px 49px;
+	padding: 18.5px 49px;
 	font-size: 20px;
 	line-height: 23px;
 	font-weight: 400;
@@ -244,7 +281,9 @@
     }
     
     @include huge {
-        font-size: 16px;
+        padding: 12px 36px;
+        line-height: normal;
+        font-size: 14.57px;
     }
 }
 

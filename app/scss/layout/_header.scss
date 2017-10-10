@@ -163,10 +163,16 @@ $svgTransitionTime: 0.2s;
 //      padding-top: 33px;
 //      margin-top: 34px;
 //    }
+    @include huge{
+        min-height: 43px;
+        height: 43px;
+//        padding: 0;
+        
+    }
     @include pc{
         min-height: 65px;
         height: 65px;
-        padding: 0;
+//        padding: 0;
         
     }
     @include small{
@@ -178,17 +184,19 @@ $svgTransitionTime: 0.2s;
         position: relative;
         max-width: 100%;
         height: 100%;
-        padding: 0 15px;
+        padding: 0 10px;
     }
     
 }
 .header__bottom-left{
 	float: left;
 	width: percentage(1/2);
-	padding-right: 11.52%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+	padding: 15px 11.52% 15px 0;
     
+	@include huge {
+        padding: 8px 11.52% 5px 0;
+		
+	}
     @include pc{
         display: none;
     }
@@ -198,13 +206,11 @@ $svgTransitionTime: 0.2s;
 	float: right;
 	width: 50%;
     height: 100%;
-	padding-left: 11.82%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+	padding: 15px 0 15px 11.52%;
 
-/* 	@include huge {
-	padding-left: 169px;
-} */
+ 	@include huge {
+        padding: 11px 0 11px 11.52%;
+    } 
  	@include pc {
         float: right;
 //        margin-top: 25px;
@@ -225,7 +231,7 @@ $svgTransitionTime: 0.2s;
 	margin-left: 29px;
     
  	@include huge {
-        margin-left: 43px;
+        margin-left: 23px;
     } 
  	@include pc {
         margin-top: 0;
@@ -245,10 +251,10 @@ $svgTransitionTime: 0.2s;
     margin-right: 9px;
     line-height: 33px;
     
-// 	@include pc {
-//        position: relative;
-//        margin-top: -10px;
-//    } 
+ 	@include huge{
+        margin-right: 7px;
+        line-height: 26px;
+    } 
     @include pc{
 //        position: static;
         float: left;
@@ -257,6 +263,7 @@ $svgTransitionTime: 0.2s;
         margin-left: 30px;
         height: 100%;
         padding-top: 4px;
+        line-height: 33px;
     }
  	@include small {
         margin-left: 19px;

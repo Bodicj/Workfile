@@ -12,7 +12,7 @@
 	padding-bottom: 16px;
 
  	@include huge {
-        margin-top: 100px;
+        margin-top: 77px;
     } 
     @include pc{
 //        margin-top: 60px;
@@ -57,6 +57,9 @@
 	.section__title{
 		margin: 0 0 108px;
         
+        @include huge {
+            margin-bottom: 66px;
+        }
         @include note{
             margin-bottom: 65px;
         }
@@ -114,9 +117,12 @@
 	padding-bottom: 252px;
 //	padding-left: 5px;
     
+    @include huge {
+        padding-bottom: 166px;
+    }
     @include pc {
-        padding-top: 27px;
-        padding-bottom: 190px;
+//        padding-top: 27px;
+//        padding-bottom: 190px;
     }
     @include small{
         padding-top: 18px;
@@ -140,9 +146,14 @@
 	margin: 0 0 79px;
     padding-left: 4px;
     
+    @include huge{
+        margin: -6px 0 55px;
+        padding-left: 0;
+        padding-top: 115px;
+    }
     @include pc{
         margin: 50px 0 75px;
-        padding-left: 2px;
+//        padding-left: 2px;
     }
     @include small{
         margin: 40px 0 49px;
@@ -155,8 +166,12 @@
 	padding-bottom: 60px;
 //	padding-left: 4px;
     
+    @include huge{
+        padding-top: 115px;
+        padding-bottom: 100px;
+    }
     @include pc{
-        padding-top: 185px;
+//        padding-top: 185px;
     }
     @include small{
         padding: 137px 0 50px;
@@ -173,30 +188,43 @@
 		height: 261px;
 		background: url(../img/flowers/flowers-why-we-lg.png) no-repeat -9px 0;
         
-//        @include media("retina2x"){
-//            background: url(../img/flowers/flowers-why-we-lg-2x.png) no-repeat -9px 0/100%;
-//        }
-        
-        @include pc{
-//            top: -92px;
-//            width: 85.3%;
-            width: 390px;
-            transform: translateX(-50%);
-            background: url(../img/flowers-why-we.png) no-repeat 9px 2px/100%;
-            
-//            @include media("retina2x"){
-//                background: url(../img/flowers-why-we.png) no-repeat 9px 2px/100%;
-//            }
+        @include media("retina2x"){
+            background: url(../img/flowers/flowers-why-we-lg-2x.png) no-repeat -16px -5px/103%;
         }
-        @include small{
+        
+        @include huge{
             top: -92px;
             width: 272px;
-            background: url(../img/flowers-why-we.png) no-repeat 8px 0/100%;
-//            background: url(../img/flowers/flowers-why-we-xs.png) no-repeat -5px -6px;
+            transform: translateX(-50%);
+//            background: url(../img/flowers-why-we.png) no-repeat 8px 0/100%;
+            background: url(../img/flowers/flowers-why-we-xs.png) no-repeat -9px -7px;
+            
+            @include media("retina2x"){
+                background: url(../img/flowers/flowers-why-we-xs-2x.png) no-repeat -9px -7px/107%;
+            }
+        }
+//        @include pc{
+////            top: -92px;
+////            width: 85.3%;
+//            width: 390px;
+//            transform: translateX(-50%);
+//            background: url(../img/flowers/flowers-why-we-lg.png) no-repeat 9px 2px;
 //            
 //            @include media("retina2x"){
-//                background: url(../img/flowers/flowers-why-we-xs-2x.png) no-repeat -5px -6px/107%;
+//                background: url(../img/flowers/flowers-why-we-lg-2x.png) no-repeat 3px -3px/103%;
 //            }
+//        }
+        @include small{
+//            top: -92px;
+//            width: 272px;
+//            background: url(../img/flowers-why-we.png) no-repeat 8px 0/100%;
+//            background: url(../img/flowers/flowers-why-we-xs.png) no-repeat -6px -7px;
+            background-position: -6px -7px;
+            
+            @include media("retina2x"){
+//                background: url(../img/flowers/flowers-why-we-xs-2x.png) no-repeat -7px -7px/107%;
+                background-position: -7px -7px;
+            }
         }
 	}
     
@@ -214,15 +242,19 @@
 /* 		@include huge {
 	padding-bottom: 5px;
 } */
+        @include huge {
+            margin-bottom: 76px;
+            padding-right: 0;
+        } 
         @include pc{
-            margin-bottom: 90px;
+//            margin-bottom: 90px;
         }
         @include note{
 //            font-size: 16px;
         }
         @include small{
             margin-bottom: 69px;
-            padding-right: 0;
+//            padding-right: 0;
         }
 	}
 }
@@ -232,7 +264,8 @@
 	margin-top: 109px;
     
 	@include huge {
-        margin-top: 100px;
+        margin-top: 66px;
+        padding-bottom: 186px;
     } 
     @include pc{
         margin-top: 53px;
@@ -252,9 +285,12 @@
 		margin-bottom: 81px;
         padding-right: 2px;
         
+        @include huge{
+            margin-bottom: 52px;
+            padding-right: 0;
+        }
         @include pc{
             margin-bottom: 45px;
-            padding-right: 0;
         }
         @include small{
             margin-bottom: 20px;
@@ -277,11 +313,11 @@
 	padding-top: 194px;
 	padding-bottom: 0px;
 
-/* 	@include huge {
-	padding-top: 170px;
-} */
+ 	@include huge {
+        padding-top: 140px;
+    } 
     @include pc{
-        padding-top: 154px;
+//        padding-top: 154px;
     }
     @include small{
         padding: 104px 0 35px;
@@ -293,34 +329,53 @@
 		left: 50%;
 		top: -214px;
 //		margin-left: -339px;
-        transform: translateX(calc(-50% - 20px));
+//        transform: translateX(calc(-50% - 20px));
+        transform: translateX(calc(-50% - 32px));
 		width: 622px;
 		height: 380px;
-		background: url(../img/flowers-seo.png) no-repeat 0px 0px;
+//		background: url(../img/flowers-seo.png) no-repeat 0 0;
+		background: url(../img/flowers/flowers-seo-lg.png) no-repeat 0 40px;
         
-        @include pc{
-            top: -127px;
+        @include media("retina2x"){
+            background: url(../img/flowers/flowers-seo-lg-2x.png) no-repeat 1px 40px/101.7%;
+        }
+        
+        @include huge{
+            top: -97px;
             width: 390px;
             height: 208px;
-            transform: translateX(-50%);
+            transform: translateX(-51%);
 //            background: url(../img/flowers/flowers-seo-sm.png) no-repeat 50% 0px /100%;
-            background: url(../img/flowers-seo.png) no-repeat 50% 0px /100%;
+            background: url(../img/flowers/flowers-seo-sm.png) no-repeat 0 0;
             
-//            @include media("retina2x"){
-//                background: url(../img/flowers/flowers-seo-sm-2x.png) no-repeat 50% 0 /100%;
-//            }
+            @include media("retina2x"){
+                background: url(../img/flowers/flowers-seo-sm-2x.png) no-repeat 0 0 /100%;
+            }
         }
+        
+//        @include pc{
+//            top: -97px;
+//            width: 390px;
+//            height: 208px;
+//            transform: translateX(-51%);
+////            background: url(../img/flowers/flowers-seo-sm.png) no-repeat 50% 0px /100%;
+//            background: url(../img/flowers/flowers-seo-sm.png) no-repeat 0 0;
+//            
+//            @include media("retina2x"){
+//                background: url(../img/flowers/flowers-seo-sm-2x.png) no-repeat 0 0 /100%;
+//            }
+//        }
         @include small{
             width: 275px;
             height: 147px;
-            top: -90px;
-            background: url(../img/flowers-seo.png) no-repeat calc(50% - 11px) 0 /100%;
-//            top: -67px;
-//            background: url(../img/flowers/flowers-seo-xs.png) no-repeat 50% 0 /100%;
-//            
-//            @include media("retina2x"){
-//                background: url(../img/flowers/flowers-seo-xs-2x.png) no-repeat 50% 0  /100%;
-//            }
+            top: -67px;
+//            top: -90px;
+//            background: url(../img/flowers-seo.png) no-repeat calc(50% - 11px) 0 /100%;
+            background: url(../img/flowers/flowers-seo-xs.png) no-repeat 0 0;
+            
+            @include media("retina2x"){
+                background: url(../img/flowers/flowers-seo-xs-2x.png) no-repeat 0 0  /100%;
+            }
         }
 	}
 }
@@ -368,13 +423,13 @@
 //		font-size: 55px;
 //	}
     @include huge{
-        font-size: 35px;
+        line-height: normal;
+        font-size: 26.22px;
     }
     @include laptop{
-        font-size: 33px;
     }
     @include pc{
-        line-height: normal;
+//        line-height: normal;
 //        font-size: 30px;
         font-size: 26px;
     }

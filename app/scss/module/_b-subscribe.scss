@@ -226,12 +226,16 @@
     height: 535px;
     background: #fff url(../img/flowers/flowers-subscribe-lg.jpg) no-repeat top;
     
-//    @include media("retina2x"){
-//        background: #fff url(../img/flowers/flowers-subscribe-lg.jpg) no-repeat top/78.34%;
-//    }
+    @include media("retina2x"){
+        background: #fff url(../img/flowers/flowers-subscribe-lg-2x.jpg) no-repeat center -8px/79.4%;
+    }
     
     @include pc{
         background-size: 1065px;
+        
+        @include media("retina2x"){
+            
+        }
     }
     @include note{
 //        height: 505px;
@@ -239,7 +243,7 @@
         background: #fff url(../img/flowers/flowers-subscribe-md.jpg) no-repeat top;
         
         @include media("retina2x"){
-            background: #fff url(../img/flowers/flowers-subscribe-md-2x.jpg) no-repeat top /100%;
+            background: #fff url(../img/flowers/flowers-subscribe-md-2x.jpg) no-repeat top /88%;
         }
     }
     @include tablet{
@@ -248,7 +252,7 @@
         background: #fff url(../img/flowers/flowers-subscribe-sm.jpg) no-repeat top;
         
         @include media("retina2x"){
-            background: #fff url(../img/flowers/flowers-subscribe-sm-2x.jpg) no-repeat top /100%;
+            background: #fff url(../img/flowers/flowers-subscribe-sm-2x.jpg) no-repeat top /93%;
         }
     }
     @include small{

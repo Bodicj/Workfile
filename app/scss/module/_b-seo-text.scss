@@ -4,6 +4,12 @@
 	clear: both;
 	padding-right: 89px;
     
+    @include huge{
+        padding: 0 69px 69px;
+    }
+    @include pc{
+        padding: 0 100px 98px;
+    }
     @include small{
         padding: 0;
     }
@@ -26,10 +32,6 @@
 	text-align: center;
 	@extend %transition;
 
-//	@include huge {
-//		font-size: 16px;
-//		line-height: 21px;
-//	}
 //	@include twoK {
 //		font-size: 23px;
 //		line-height: 26px;
@@ -38,7 +40,11 @@
 //		font-size: 35px;
 //		line-height: 40px;
 //	}
-    
+	@include huge {
+        margin-left: 0;
+		font-size: 13.84px;
+		line-height: 21px;
+	}
     @include pc{
         margin: 0 0 46px;
         font-size: 16px;
@@ -57,6 +63,9 @@
 //		@include fourK {
 //			max-height: 115px;
 //		}
+        @include huge{
+            max-height: 192px;
+        }
         @include pc{
             max-height: 138px;
         }

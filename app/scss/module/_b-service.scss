@@ -14,6 +14,9 @@
 //		@include twoK {
 //			width: 100%;
 //		}
+    @include huge{
+        margin: 0 0 25px;
+    }
     @include pc{
 //        margin: 0 0 17px;
         margin: 0 0 10px;
@@ -65,10 +68,6 @@
 	line-height: 28px;
 	color: #121212;
     
-	@include huge {
-		font-size: 16px;
-		line-height: 21px;
-	}
 //	@include twoK {
 //		font-size: 27px;
 //		line-height: 33px;
@@ -77,6 +76,10 @@
 //		font-size: 40px;
 //		line-height: 45px;
 //	}
+	@include huge {
+		font-size: 15.3px;
+		line-height: 19px;
+	}
     @include pc{
         font-size: 14px;
         line-height: 20px;

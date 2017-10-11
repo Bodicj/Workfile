@@ -35,9 +35,14 @@ $breakpoints: (
   'phone': 480px,
   'small': 640px,
   'tablet': 768px,
-  'note': 992px,
-  'pc': 1250px,
-  'huge': 1650px,
+  'note': 1024px,
+//  'note': 992px,
+  'pc': 1220px,
+//  'pc': 1250px,
+  'laptop': 1366px,
+//  'huge': 1650px,
+  'huge': 1805px,
+  'hd' : 1920px,
   'twoK': 2560px,
   'fourK': 4000px
 ) !default;
@@ -120,6 +125,7 @@ $im-media-support: true !default;
 ///  $im-no-media-breakpoint: 'desktop';
 ///  @include media('>=tablet') {
 ///    .foo {
+///      color: tomato;
 ///      color: tomato;
 ///    }
 ///  }

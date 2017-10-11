@@ -35,12 +35,12 @@ textarea{
 %formElement{
   display: inline-block;
   vertical-align: middle;
-  padding: 6px 15px 8px 20px;
+  padding: 4px 15px 7px 19px;
   outline: 0;
   border: 2px solid #121212;
   background-color: #ffffff;
   font-size: 18px;
-  line-height: 20px;
+  line-height: 21px;
   font-weight: 600;
   color: #343735;
 
@@ -59,9 +59,9 @@ textarea{
   width: 100%;
   margin: 0 auto;
   z-index: 10;
-  @include note {
-    width: 100%;
-  }
+//  @include note {
+//    width: 100%;
+//  }
 }
 .g-form__alarm{
   position: relative;
@@ -86,18 +86,18 @@ textarea{
 .g-form--right{
   float: right;
   
-  @include note {
-    float: none;
-    margin: 0 auto;
-  }
+//  @include note {
+//    float: none;
+//    margin: 0 auto;
+//  }
 }
 .g-form--left{
   float: left;
   
-  @include note {
-    float: none;
-    margin: 0 auto;
-  }
+//  @include note {
+//    float: none;
+//    margin: 0 auto;
+//  }
 }
 .g-form__inner{
   padding: 20px 30px 30px;
@@ -118,13 +118,12 @@ textarea{
   padding-top: 10px;
   text-align: center;
   .g-btn + .g-btn { margin-left: 20px; }
-  @include small {
-    .g-btn + .g-btn { margin-left: 0; margin-top: 20px; }
-  }
+//  @include small {
+//    .g-btn + .g-btn { margin-left: 0; margin-top: 20px; }
+//  }
 }
 .g-form__field{
   position: relative;
-  width: 97%;
   margin-bottom: 32px;
   
   &.is--required{
@@ -142,11 +141,11 @@ textarea{
   select,
   textarea{
     @extend %formElement;
-    width: 101%;
-    @include fourK {
-      font-size: 35px;
-      line-height: 40px;
-    }
+    width: 100%;
+//    @include fourK {
+//      font-size: 35px;
+//      line-height: 40px;
+//    }
   }
   select{
     @extend %select;
@@ -156,11 +155,18 @@ textarea{
   }
 }
 .g-form__field--inline{
+    text-align: center;
+    margin-right: 0;
+    width: 100%;
   input,
   select,
   textarea{
     width: auto;
   }
+    
+    .g-input{
+//        margin-right: 12px;
+    }
 }
 .g-form__field--select{
   position: relative;
@@ -177,11 +183,6 @@ textarea{
 .g-select,
 .g-textarea {
   @extend %formElement;
-}
-
-.g-input--md{
-  font-style: 18px !important;
-  padding: 12px 13px 12px 13px!important;
 }
 
 %select{
@@ -333,13 +334,14 @@ textarea{
   left: 0;
   width: 22px;
   height: 22px;
-  border: 1px solid #0f0f0f;
+//  border: 1px solid #0f0f0f;
+  border: 1px solid currentColor;
   background-color: #ffffff;
-  @include fourK {
-    top: 5px;
-    width: 30px;
-    height: 30px;
-  }
+//  @include fourK {
+//    top: 5px;
+//    width: 30px;
+//    height: 30px;
+//  }
 }
 
 .g-checkbox:not(checked) + label:after {
@@ -349,7 +351,8 @@ textarea{
   left: 7px;
   width: 9px;
   height: 13px;
-  border: solid #0f0f0f;
+//  border: solid #0f0f0f;
+  border: solid currentColor;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
   opacity: 0;

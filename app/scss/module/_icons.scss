@@ -5,166 +5,309 @@
  **/
  %icon{
 	display: inline-block;
+    background-repeat: no-repeat;
+     
+    @include huge {
+        transform: scale(0.92);
+    }
 }
 .icon-facebook-black {
 	@extend %icon;
-	@include sprite($i-fb-black);
-	@include twoK {
-		transform: scale(1.2);
-	}
-	@include fourK {
-		transform: scale(1.9);
-	}
+    width: 29px;
+    height: 29px;
+    background-image: url(../img/svg/i-fb.svg);
+//	@include sprite($i-fb-black);
+//	@include twoK {
+//		transform: scale(1.2);
+//	}
+//	@include fourK {
+//		transform: scale(1.9);
+//	}
 }
-.icon-in-black {
+.icon-insta-black {
 	@extend %icon;
-	@include sprite($i-in-black);
-	@include twoK {
-		transform: scale(1.2);
-	}
-	@include fourK {
-		transform: scale(1.9);
-	}
+    width: 29px;
+    height: 29px;
+    background-image: url(../img/svg/i-insta.svg);
+//	@include sprite($i-in-black);
+//	@include twoK {
+//		transform: scale(1.2);
+//	}
+//	@include fourK {
+//		transform: scale(1.9);
+//	}
 }
 .icon-gplus-black {
 	@extend %icon;
-	@include sprite($i-gplus-black);
-	@include twoK {
-		transform: scale(1.2);
-	}
-	@include fourK {
-		transform: scale(1.9);
-	}
+    width: 29px;
+    height: 29px;
+    background-image: url(../img/svg/i-gplus.svg);
+//	@include sprite($i-gplus-black);
+//	@include twoK {
+//		transform: scale(1.2);
+//	}
+//	@include fourK {
+//		transform: scale(1.9);
+//	}
 }
 .icon-youtube-black {
 	@extend %icon;
-	@include sprite($i-youtube-black);
-	@include twoK {
-		transform: scale(1.2);
-	}
-	@include fourK {
-		transform: scale(1.9);
-	}
+    width: 29px;
+    height: 29px;
+    background-image: url(../img/svg/i-youtube.svg);
+//	@include sprite($i-youtube-black);
+//	@include twoK {
+//		transform: scale(1.2);
+//	}
+//	@include fourK {
+//		transform: scale(1.9);
+//	}
 }
 
+%icon-soc-footer{
+    width: 40px;
+    height: 39px;
+    
+    @include huge{
+        width: 31px;
+        height: 31px;
+        transform: scale(1);
+    }
+}
 .icon-facebook-white {
 	@extend %icon;
-	@include sprite($i-facebook-white);
-	@include twoK {
-		transform: scale(1.2);
-	}
-	@include fourK {
-		transform: scale(1.9);
-	}
+	@extend %icon-soc-footer;
+    background-image: url(../img/svg/i-fb-white.svg);
+//	@include sprite($i-facebook-white);
+//	@include twoK {
+//		transform: scale(1.2);
+//	}
+//	@include fourK {
+//		transform: scale(1.9);
+//	}
 }
-.icon-in-white {
+.icon-insta-white {
 	@extend %icon;
-	@include sprite($i-in-white);
-	@include twoK {
-		transform: scale(1.2);
-	}
-	@include fourK {
-		transform: scale(1.9);
-	}
+	@extend %icon-soc-footer;
+    background-image: url(../img/svg/i-insta-white.svg);
+//	@include sprite($i-in-white);
+//	@include twoK {
+//		transform: scale(1.2);
+//	}
+//	@include fourK {
+//		transform: scale(1.9);
+//	}
 }
 .icon-gplus-white {
 	@extend %icon;
-	@include sprite($i-gplus-white);
-	@include twoK {
-		transform: scale(1.2);
-	}
-	@include fourK {
-		transform: scale(1.9);
-	}
-
+	@extend %icon-soc-footer;
+    background-image: url(../img/svg/i-gplus-white.svg);
+//	@include sprite($i-gplus-white);
+//	@include twoK {
+//		transform: scale(1.2);
+//	}
+//	@include fourK {
+//		transform: scale(1.9);
+//	}
 }
 .icon-youtube-white {
 	@extend %icon;
-	@include sprite($i-youtube-white);
-	@include twoK {
-		transform: scale(1.2);
-	}
-	@include fourK {
-		transform: scale(1.9);
-	}
+	@extend %icon-soc-footer;
+    background-image: url(../img/svg/i-youtube-white.svg);
+//	@include sprite($i-youtube-white);
+//	@include twoK {
+//		transform: scale(1.2);
+//	}
+//	@include fourK {
+//		transform: scale(1.9);
+//	}
+    @include pc{
+        
+    }
 }
 .icon-account-black {
 	@extend %icon;
-	@include sprite($i-account-black);
-	@include twoK {
-		transform: scale(1.2);
-	}
-	@include fourK {
-		transform: scale(1.9);
-	}
+//	@include sprite($i-account-black);
+    width: 29px;
+    height: 29px;
+    background-image: url(../img/svg/i-account.svg);
+//	@include twoK {
+//		transform: scale(1.2);
+//	}
+//	@include fourK {
+//		transform: scale(1.9);
+//	}
 }
 .icon-search {
 	@extend %icon;
-	@include sprite($i-search);
+//	@include sprite($i-search);
+    width: 17px;
+    height: 17px;
+    background-image: url(../img/svg/i-search.svg);
 }
 .icon-cart-white {
 	@extend %icon;
-	@include sprite($i-cart-white);
-	@include twoK {
-		transform: scale(1.2);
-	}
-	@include fourK {
-		transform: scale(1.9);
-		margin-top: 13px;
-	}
+//	@include sprite($i-cart-white);
+    width: 28px;
+    height: 38px;
+    background-image: url(../img/svg/i-cart-white.svg);
+//	@include twoK {
+//		transform: scale(1.2);
+//	}
+//	@include fourK {
+//		transform: scale(1.9);
+//		margin-top: 13px;
+//	}
+    @include huge {
+        width: 20px;
+        height: 27px;
+        transform: scale(1);
+    }
+    @include pc {
+        transform: scale(1);
+        background-image: url(../img/svg/i-cart-white-sm.svg);
+    }
+    @include note {
+//        width: 18px;
+//        height: 25px;
+//        transform: scale(1);
+    }
+    @include small {
+        width: 18px;
+        height: 25px;
+    }
 }
 .icon-cart-black {
 	@extend %icon;
-	@include sprite($i-cart-black);
-	@include twoK {
-		transform: scale(1.2);
-	}
-	@include fourK {
-		transform: scale(1.9);
-		margin-top: 20px;
-	}
+//	@include sprite($i-cart-black);
+    width: 28px;
+    height: 38px;
+    background-image: url(../img/svg/i-cart.svg)
+//	@include twoK {
+//		transform: scale(1.2);
+//	}
+//	@include fourK {
+//		transform: scale(1.9);
+//		margin-top: 20px;
+//	}
 }
+//.icon-phone{
+//    position: absolute;
+//    left: 0;
+//    top: 5px;
+//    width: 27px;
+//    height: 36px;
+//    background-image: url(../img/svg/i-phone.svg);
+//}
 .icon-phone-small-white {
 	@extend %icon;
-	@include sprite($i-phone-small-white);
+//	@include sprite($i-phone-small-white);
+    width: 14px;
+    height: 19px;
+    background-image: url(../img/svg/i-phone-white.svg);
+    
+    @include tablet{
+        transform: scale(0.78);
+    }
 }
 .icon-location-small-white {
 	@extend %icon;
-	@include sprite($i-location-small-white);
+//	@include sprite($i-location-small-white);
+    width: 15px;
+    height: 19px;
+    background-image: url(../img/svg/i-location-white.svg);
+    
+    @include tablet{
+        transform: scale(0.78);
+    }
 }
 
 
 .icon-close {
 	@extend %icon;
-	@include sprite($i-close);
+//	@include sprite($i-close);
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/svg/i-close.svg);
+}
+.icon-close-white {
+	@extend %icon;
+    width: 18px;
+    height: 18px;
+    background-image: url(../img/svg/i-close-white.svg);
+}
+.icon-close-small {
+	@extend %icon;
+    width: 13px;
+    height: 14px;
+    background-image: url(../img/svg/i-close-small.svg);
 }
 .icon-alarm {
 	@extend %icon;
-	@include sprite($i-alarm);
+//	@include sprite($i-alarm);
+    width: 32px;
+    height: 28px;
+    background-image: url(../img/svg/i-alarm.svg);
 }
 .icon-arrow-up {
 	@extend %icon;
-	@include sprite($i-arrow-up);
+//	@include sprite($i-arrow-up);
+    width: 42px;
+    height: 34px;
+    background-image: url(../img/svg/i-arrow-up.svg);
 	vertical-align: middle;
 }
 
 .icon-qty-up {
 	@extend %icon;
-	@include sprite($i-qty-up);
+//	@include sprite($i-qty-up);
+    width: 7px;
+    height: 4px;
+    background-image: url(../img/svg/i-qty-up.svg);
 	vertical-align: middle;
 }
 .icon-qty-down {
 	@extend %icon;
-	@include sprite($i-qty-down);
+//	@include sprite($i-qty-down);
+    width: 7px;
+    height: 4px;
+    background-image: url(../img/svg/i-qty-down.svg);
 	vertical-align: middle;
 }
-.icon-sort-down {
-	@extend %icon;
-	@include sprite($i-qty-down);
-	vertical-align: middle;
-}
+//.icon-sort-down {
+//	@extend %icon;
+//	@include sprite($i-qty-down);
+//	vertical-align: middle;
+//}
 .icon-toggler {
 	@extend %icon;
-	@include sprite($i-arrow-toggle-up);
+//	@include sprite($i-arrow-toggle-up);
+    width: 17px;
+    height: 10px;
 	vertical-align: middle;
+    background-image: url(../img/svg/i-toggler.svg);
+}
+.icon-toggler-white {
+	@extend %icon;
+    width: 17px;
+    height: 10px;
+	vertical-align: middle;
+    background-image: url(../img/svg/i-toggler-white.svg);
+}
+.icon-star{
+	@extend %icon;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img/svg/i-star-empty.svg);
+	vertical-align: middle;
+    
+    @include huge{
+        width: 15px;
+        height: 15px;
+        vertical-align: top;
+        transform: scale(1);
+    }
+}
+.icon-star_filled{
+    background-image: url(../img/svg/i-star-filled.svg);
 }

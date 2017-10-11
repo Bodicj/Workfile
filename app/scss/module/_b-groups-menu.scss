@@ -19,13 +19,13 @@
 	text-transform: uppercase;
 	color: #0f0f0f;
 
-	@include twoK {
-		font-size: 24px;
-	}
-	@include fourK {
-		font-size: 40px;
-		line-height: 45px;
-	}
+//	@include twoK {
+//		font-size: 24px;
+//	}
+//	@include fourK {
+//		font-size: 40px;
+//		line-height: 45px;
+//	}
 
 	&:hover,
 	&.is--current {

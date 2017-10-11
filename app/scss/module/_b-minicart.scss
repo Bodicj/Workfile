@@ -1,0 +1,134 @@
+$imgContainerWidth: 103px;
+
+.b-minicart{
+    overflow: auto;
+//    padding: 0 15px;
+    line-height: normal;
+    
+    .b-minicart__item{
+        @include clearfix;
+//        padding: 5px;
+        padding: 3px 0;
+    }
+    .b-item__img{
+        float: left;
+        position: relative;
+        width: $imgContainerWidth;
+        height: $imgContainerWidth;
+        
+        img{
+            position: absolute;
+            top: 4px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            max-width: $imgContainerWidth - 10px;
+            max-height: 100%;
+        }
+    }
+
+    .b-item__content{
+//        position: relative;
+//        padding-left: 110px;
+        padding-left: 2px;
+        float: left;
+        width: calc(100% - #{$imgContainerWidth});
+//        padding-left: 10px;
+        
+        .b-item__heading{
+            font-size: 13.05px;
+            line-height: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .b-item__desc{
+            margin-top: 4px;
+            margin-bottom: 7px;
+            font-size: 11.19px;
+        }
+        .b-item__articul{
+            margin-bottom: 4px;
+            padding-left: 1px;
+            font-size: 11.19px;
+            font-weight: 600;
+            text-transform: uppercase;
+            
+            .b-articul{
+                display: inline-block;
+                margin-left: 6px;
+            }
+        }
+        .b-item__price{
+            padding-left: 1px;
+            font-size: 18.64px;
+        }
+    }
+    
+    .b-item__controls{
+        float: left;
+        width: 100%;
+        height: 33px;
+        padding-left: 43px;
+        padding-right: 3px;
+            
+        .b-item__del{
+            float: left;
+            line-height: 33px;
+            
+            i{
+                vertical-align: middle;
+            }
+        }
+        .b-item__counter{
+            float: right;
+            font-size: 18.64px;
+            font-weight: 600;
+            
+            *{
+                float: left;
+                line-height: 33px;
+            }
+            
+            span{
+                line-height: 33px;
+                cursor: pointer;
+                
+                &:first-child{
+                    line-height: 32px;
+                    transform: scaleX(1.7);
+                }
+            }
+            
+            input{
+                border: none;
+                padding: 0;
+                width: 29px;
+                text-align: center;
+            }
+        }
+    }
+    
+    .b-minicart__total{
+        margin-bottom: 28px;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 35px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    
+    .g-btn{
+        display: block;
+        margin: 0 auto;
+        width: 250px;
+        padding: 10px 29px;
+        line-height: 21px;
+
+        @include tablet{
+            width: 199px;
+            padding: 8px 29px;
+            line-height: 20px;
+            font-size: 14px;
+        }
+    }
+}

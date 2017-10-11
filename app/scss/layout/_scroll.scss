@@ -1,4 +1,5 @@
 .scroll{
+    display: none;
 	position: fixed;
 	top: -100%;
 	left: 0;
@@ -6,7 +7,7 @@
 	z-index: 300;
 	transition: top 300ms;
 	background-color: #d1d4d3;
-	box-shadow: 0 3px 10px rgba(#d1d4d3, 0.5); 
+	box-shadow: 0 3px 6px rgba(209, 212, 211, 1); 
 
 	&.is--active{
 		top: -1px;
@@ -25,7 +26,7 @@
 	float: right;
 	padding-top: 21px;
 
-	@include twoK{
-		padding-top: 16px;
-	}
+//	@include twoK{
+//		padding-top: 16px;
+//	}
 }

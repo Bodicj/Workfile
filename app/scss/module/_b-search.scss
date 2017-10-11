@@ -1,58 +1,184 @@
 .b-search{
   position: relative;
   vertical-align: middle;
-  min-width: 365px;
+  min-width: 364px;
 	background-color: #f5f5f5;
   text-align: left;
 
 	@include huge {
-		min-width: 320px;
+		min-width: 266px;
 	}
+	@include pc {
+		min-width: 0;
+//		min-width: 245px;
+        position: static;
+        background-color: transparent;
+        width: auto;
+        height: 100%;
+        line-height: 65px;
+	}
+	@include note {
+//		min-width: 220px;
+	}
+	@include tablet {
+//        width: 180px;
+	}
+    @include small {
+        line-height: 42px;
+    }
 
+    .b-wrapper_search{
+        @include pc{
+            position: absolute;
+            top: 65px;
+            right: 0;
+//            z-index: -1;
+            width: 320px;
+            
+            visibility: hidden;
+            opacity: 0;
+            transition:  opacity $time_short, visibility 0s $time_short;
+            &.is--visible{
+                visibility: visible;    
+                opacity: 1;
+                transition: opacity $time_short, visibility 0s;
+            }
+        }
+        
+        @include small{
+            top: 42px;
+        }
+            
+        &:before{    // white triangle
+            position: absolute;
+            bottom: 100%;
+//            top: 81px;
+            width: 0;
+            height: 0;
+            border-top: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 7px solid #fff;
+            
+            @include pc{
+                content: '';
+                right: 91px;
+            }
+            @include small{
+                right: 65px;
+            }
+        }
+        
+        &:after{    // black line
+            position: absolute;
+            right: 15px;
+            bottom: 12px;
+            left: 15px;
+            border-top: 1px solid #222*2;
+            border-bottom: 1px solid #222;
+            
+            @include pc{
+                content: '';
+            }
+        }
+        
+        input {
+            position: absolute;
+            top: -1px; left: 0;
+            right: 0;
+            width: 100%;
+        padding: 7px 32px 6px 17px;
+        border: 0;
+          box-shadow: none;
+          box-sizing: border-box;
+          line-height: 18px;
+          font-size: 14px;
+          font-weight: 600;
+          text-transform: uppercase;
+          background:#f5f5f5;
+          color: #343735;
+          user-select: none;
+          appearance: none;
+          outline:none;
+    //		@include twoK{
+    //			line-height: 24px;
+    //			font-size: 15px;
+    //		}
+    //		@include fourK{
+    //			line-height: 45px;
+    //			font-size: 30px;
+    //			width:160%;
+    //		}
+            @include huge {
+                padding: 2px 30px 3px 13px;
+                font-size: 10.2px;
+            }
+            @include pc{
+                position: static;
+                display: block;
+                width: 100%;
+                height: 43px;
+                padding: 0 25px 14px;
+                font-size: 13px;
+                text-transform: none;
+                box-shadow: 0 0px 5px 1px rgba(76, 64, 40, 0.23);
+
+            }
+            @include note{
+//                font-size: 12px;
+//                line-height: 21px;
+//                padding: 1px 25px 0px 10px;
+            }
+            @include small {
+                
+            }
+        }
+    }
+    
 	button {
 		position: absolute;
-		top: 6px; right: 20px;
+		top: 7px; right: 19px;
 		padding: 0; margin: 0;
 		background-color:#f5f5f5;
 		border: 0;
 		outline:0;
 		cursor: pointer;
 		z-index: 10;
-		@include twoK {
-			transform: scale(1.2);
-		}
-		@include fourK {
-			transform: scale(1.9);
-			top: 16px;
-			right: -193px;
-		}
-	}
-	input {
-		position: absolute;
-		top: 0; left: 0;
-		right: 0;
-		width: 100%;
-  	padding: 5px 32px 5px 18px;
-  	border: 0;
-	  box-shadow: none;
-	  box-sizing: border-box;
-	  line-height: 20px;
-	  font-size: 14px;
-	  font-weight: 600;
-	  text-transform: uppercase;
-	  background:#f5f5f5;
-	  color: #343735;
-	  user-select: none;
-	  appearance: none;
-	  outline:none;
-		@include twoK{
-			line-height: 24px;
-			font-size: 15px;
-		}
-		@include fourK{
-			line-height: 45px;
-			font-size: 30px;
-			width:160%;
-		}
+//		@include twoK {
+//			transform: scale(1.2);
+//		}
+//		@include fourK {
+//			transform: scale(1.9);
+//			top: 16px;
+//			right: -193px;
+//		}
+        @include huge{
+            top: 5px;
+            right: 15px;
+            width: 12px;
+            height: 12px;
+        }
+        @include pc{
+            position: static;
+            background-color: transparent;
+            display: inline-block;
+            vertical-align: -14%;
+            width: 27px;
+            height: 27px;
+            transform: scale(1);
+            background-image: url(../img/svg/i-search-white.svg);
+//            top: 3px;
+//            right: 3px;
+        }
+        @include note{
+//            top: 3px;
+//            right: 3px;
+        }
+        @include small {
+            vertical-align: -16%;
+            transform: scale(0.9);
+            width: 21px;
+            height: 21px;
+        }
 	}
 }

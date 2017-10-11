@@ -1,22 +1,22 @@
 .b-testimonials{
-	@include note {
-		width: 620px;
-		margin: 0 auto;
-	}
-	@include tablet {
-		width: 300px;
-	}
-	@include small {
-		width: 280px;
-	}
+//	@include note {
+//		width: 620px;
+//		margin: 0 auto;
+//	}
+//	@include tablet {
+//		width: 300px;
+//	}
+//	@include small {
+//		width: 280px;
+//	}
 
 	.bx-viewport{
 		padding-top: 40px;
 		padding-bottom: 40px;
 
-		@include note {
-			padding: 0;
-		}
+//		@include note {
+//			padding: 0;
+//		}
 	}
 }
 .b-testimonial{
@@ -53,12 +53,12 @@
 	line-height: 22px;
 	color: #424852;
 
-  @include media('screen','>pc') {
-		.is--active & {
-			font-size: 22px;
-			color: #ffffff;
-		}
-	}
+//  @include media('screen','>pc') {
+//		.is--active & {
+//			font-size: 22px;
+//			color: #ffffff;
+//		}
+//	}
 }
 .b-testimonial__post{
 	margin-bottom: 20px;
@@ -67,12 +67,12 @@
 	line-height: 22px;
 	color: #eb1c23;
 
-  @include media('screen','>pc') {
-		.is--active & {
-			font-size: 14px;
-			color: #000000;
-		}
-	}
+//  @include media('screen','>pc') {
+//		.is--active & {
+//			font-size: 14px;
+//			color: #000000;
+//		}
+//	}
 }
 .b-testimonial__post--bb{
 	padding-bottom: 10px;
@@ -85,12 +85,12 @@
 	line-height: 22px;
 	color: #282828;
 
-  @include media('screen','>pc') {
-		.is--active & {
-			font-size: 14px;
-			color: #fff;
-		}
-	}
+//  @include media('screen','>pc') {
+//		.is--active & {
+//			font-size: 14px;
+//			color: #fff;
+//		}
+//	}
 }
 
 
@@ -101,15 +101,15 @@
 	background:transparent;
 	border: none;
 
-	@include note {
-		min-height: 0;
-		padding: 0 0 50px;
-	}
+//	@include note {
+//		min-height: 0;
+//		padding: 0 0 50px;
+//	}
 	&.with--map{
 		background:transparent url('../img/testimonials/t-map.png') left top no-repeat;
-		@include note {
-			background:transparent;
-		}
+//		@include note {
+//			background:transparent;
+//		}
 	}
 	.b-testimonial__content{
 		position: relative;
@@ -125,10 +125,10 @@
 			border: 1px solid #eaebec;
 			box-shadow: 0 12px 45px rgba(182, 186, 189, 0.5);
 			background:#fff;
-			@include note {
-				margin: 0;
-				max-width: 100%;
-			}
+//			@include note {
+//				margin: 0;
+//				max-width: 100%;
+//			}
 
 
 			// Triangle

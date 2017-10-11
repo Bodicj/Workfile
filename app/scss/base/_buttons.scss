@@ -7,9 +7,9 @@
 .g-btn{
   display: inline-block;
   vertical-align: middle;
-  padding: 12px 14px;
+  padding: 14px 29px;
   min-width: 128px;
-  margin-right: -.25em;
+//  margin-right: -.25em;
   font-size: 18px;
   line-height: 21px;
   font-weight: 600;
@@ -22,6 +22,20 @@
   background:#0f0f0f;
   color: #ffffff;
   cursor: pointer;
+
+//  @include twoK {
+//    font-size: 24px;
+//  }
+//  @include fourK {
+//    font-size: 35px;
+//    line-height: 40px;
+//  }
+    @include note{
+        font-size: 14px;
+    }
+    @include tablet{
+        font-size: 12.4px;
+    }
 
   &:hover{
     background-color: #d6d6d4;
@@ -36,25 +50,17 @@
     margin-right: 8px;
   }
 
-  @include twoK {
-    font-size: 24px;
-  }
-  @include fourK {
-    font-size: 35px;
-    line-height: 40px;
-  }
-
 }
 
 .g-btn--md{
-  font-size: 16px;
+//  font-size: 16px;
   line-height: 20px;
   padding: 8px 16px;
 }
 .g-btn--md-2{
-  font-size: 16px;
+//  font-size: 16px;
   line-height: 20px;
-  padding: 10px 16px;
+  padding: 14px 22px;
 }
 .g-btn--link{
   font-size: 16px;
@@ -76,7 +82,7 @@
   margin: 0;
 }
 .g-btn--bordered{
-  padding: 8px 18px;
+  padding: 8px 17px;
   background-color: #fff;
   border: 2px solid #0f0f0f;
   font-size: 15px;
@@ -84,14 +90,14 @@
   font-weight: 700;
   text-transform: uppercase;
   color: #0f0f0f;
-  @include twoK {
-    font-size: 20px;
-    line-height: 28px;
-  }
-  @include fourK {
-    font-size: 30px;
-    line-height: 35px;
-  }
+//  @include twoK {
+//    font-size: 20px;
+//    line-height: 28px;
+//  }
+//  @include fourK {
+//    font-size: 30px;
+//    line-height: 35px;
+//  }
   
   &:hover{
     background:  #d6d6d4;

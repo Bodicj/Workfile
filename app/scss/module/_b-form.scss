@@ -3,33 +3,33 @@
 	width: 100%;
 	margin: 0 auto;
 	z-index: 10;
-	@include note {
-		width: 100%;
-	}
+//	@include note {
+//		width: 100%;
+//	}
 }
 .b-form--right{
 	float: right;
 	
-	@include note {
-		float: none;
-		margin: 0 auto;
-	}
+//	@include note {
+//		float: none;
+//		margin: 0 auto;
+//	}
 }
 .b-form--left{
 	float: left;
 	
-	@include note {
-		float: none;
-		margin: 0 auto;
-	}
+//	@include note {
+//		float: none;
+//		margin: 0 auto;
+//	}
 }
 .b-form__inner{}
 .b-form__content{}
 .b-form__action{
 	.g-btn + .g-btn { margin-left: 20px; }
-	@include small {
-		.g-btn + .g-btn { margin-left: 0; margin-top: 20px; }
-	}
+//	@include small {
+//		.g-btn + .g-btn { margin-left: 0; margin-top: 20px; }
+//	}
 }
 .b-form__field{
 	position: relative;

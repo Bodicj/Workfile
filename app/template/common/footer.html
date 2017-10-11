@@ -1,242 +1,177 @@
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__left">
+            <div class="footer__block footer__block--1">
 
-	<!-- FOOTER -->
-	<footer class="footer">
-		<div class="container">
-			<div class="footer__left">
-				<div class="footer__block footer__block--1">
-				
-					<nav class="g-menu footer__block-menu--information">
-						<h4 class="g-menu__title">Иформация</h4>
-						<ul class="g-menu__list">
-							<li class="g-menu__item">
-								<a href="" class="g-menu__link">Новости</a>
-							</li>
-							<li class="g-menu__item">
-								<a href="" class="g-menu__link">Наши услуги</a>
-							</li>
-							<li class="g-menu__item">
-								<a href="" class="g-menu__link">Политика конфиденциальности</a>
-							</li>
-							<li class="g-menu__item">
-								<a href="" class="g-menu__link">Связаться с нами</a>
-							</li>
-						</ul>
-					</nav>
-					
-				</div>
+                <nav class="g-menu footer__block-menu--information">
+                    <h4 class="g-menu__title">Информация</h4>
+                    <ul class="g-menu__list">
+                        <li class="g-menu__item">
+                            <a href="" class="g-menu__link">Новости</a>
+                        </li>
+                        <li class="g-menu__item">
+                            <a href="" class="g-menu__link">Наши услуги</a>
+                        </li>
+                        <li class="g-menu__item">
+                            <a href="" class="g-menu__link">Политика конфиденциальности</a>
+                        </li>
+                        <li class="g-menu__item">
+                            <a href="" class="g-menu__link">Связаться с нами</a>
+                        </li>
+                    </ul>
+                </nav>
 
-				<div class="footer__block footer__block--2">
-				
-					<nav class="g-menu footer__block-menu--delivery">
-						<h4 class="g-menu__title">Доставка цветов</h4>
-						<ul class="g-menu__list">
-							<li class="g-menu__item">
-								<a href="" class="g-menu__link">Доставка</a>
-							</li>
-							<li class="g-menu__item">
-								<a href="" class="g-menu__link">Оплата</a>
-							</li>
-						</ul>
-					</nav>
-					
-					<nav class="g-menu footer__block-menu--account">
-						<h4 class="g-menu__title">Личный кабинет</h4>
-						<ul class="g-menu__list">
-							<li class="g-menu__item">
-								<a href="" class="g-menu__link">Мои заказы</a>
-							</li>
-							<li class="g-menu__item">
-								<a href="" class="g-menu__link">Личная иформаци</a>
-							</li>
-						</ul>
-					</nav>
-					
-				</div>
-
-				<div class="footer__block footer__block--3">
-
-					<div class="g-menu footer__block-menu--contacts">
-						<h4 class="g-menu__title">Контакты</h4>
-						<ul class="g-menu__list">
-							<li class="g-menu__item">
-								<i class="icon-phone-small-white"></i>
-								<span">+380 99-99-71-12</span>
-							</li>
-							<li class="g-menu__item">
-								<i class="icon-phone-small-white"></i>
-								<span">+380 44-19-11-12</span>
-							</li>
-							<li class="g-menu__item">&nbsp;</li>
-							<li class="g-menu__item">
-								<i class="icon-location-small-white"></i>
-								<span id="all_adresses">Киев, все адреса <a href="">здесь</a></span>
-							</li>
-						</ul>
-					</div>
-					
-					<div class="b-social b-social--footer">
-						<a href="" class="b-social__item"><i class="icon-facebook-white"></i></a>
-						<a href="" class="b-social__item"><i class="icon-in-white"></i></a>
-						<a href="" class="b-social__item"><i class="icon-gplus-white"></i></a>
-						<a href="" class="b-social__item"><i class="icon-youtube-white"></i></a>
-					</div>
-
-				</div>
-			
-			</div>
-
-			<div class="footer__right">
-				<div id="map">
-					<script>
-						function initMap() {
-							var university = {lat: 50.444248, lng: 30.505879};
-							var center = {lat:50.442441, lng: 30.509395};
-							var square = {lat:50.439360, lng: 30.516294};
-							var map = new google.maps.Map(document.getElementById('map'), {
-								zoom: 14,
-								center: center
-							});
-							var marker1 = new google.maps.Marker({
-								position: university,
-								map: map
-							});
-							var marker2 = new google.maps.Marker({
-								position: square,
-								map: map
-							});
-						}
-					</script>
-					<script async defer
-							src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbYdRSX_XQ-p7xlVH9V2KiuXZq1FqQKIo&callback=initMap">
-					</script>
-
-				</div>
-			</div>
-
-			<div class="footer__bottom">
-				<div class="b-counters">
-					<img src="./img/flags/undp.png" class="b-counters__item" alt="">
-					<img src="./img/flags/japan.png" class="b-counters__item" alt="">
-				</div>
-				<div class="b-copyrights">Интернет-магазин PassifloRa 2017 © </div>
-			</div>
-		</div>
-	</footer>
-	<!-- /FOOTER -->
-
-	<a href="#header" class="b-up js-up"><i class="icon-arrow-up"></i></a>
-
-	<!-- MODAL -->
-	<div style="display:none">
-
-	    <!-- Form register -->
-	    <div class="arcticmodal" id="register">
-	      <form class="g-form js-form-register">
-	        <div class="arcticmodal-close"><i class="icon-close"></i></div>
-	        <div class="arcticmodal-header">Регистрация</div>
-	        
-	        <div class="arcticmodal-body">
-            <div class="g-form__field">
-              <input class="g-input" type="email" name="email" placeholder="e-mail">
             </div>
-            <div class="g-form__field">
-              <input class="g-input" type="password" name="password" placeholder="пароль">
+
+            <div class="footer__block footer__block--2">
+
+                <nav class="g-menu footer__block-menu--delivery">
+                    <h4 class="g-menu__title">Доставка цветов</h4>
+                    <ul class="g-menu__list">
+                        <li class="g-menu__item">
+                            <a href="" class="g-menu__link">Доставка</a>
+                        </li>
+                        <li class="g-menu__item">
+                            <a href="" class="g-menu__link">Оплата</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="g-menu footer__block-menu--account">
+                    <h4 class="g-menu__title">Личный кабинет</h4>
+                    <ul class="g-menu__list">
+                        <li class="g-menu__item">
+                            <a href="" class="g-menu__link">Мои заказы</a>
+                        </li>
+                        <li class="g-menu__item">
+                            <a href="" class="g-menu__link">Личная информация</a>
+                        </li>
+                    </ul>
+                </nav>
+
             </div>
-            <div class="g-form__field">
-              <input class="g-input" type="password" name="comparePassword" placeholder="пароль еще раз">
+
+            <div class="footer__block footer__block--3">
+
+                <div class="g-menu footer__block-menu--contacts">
+                    <h4 class="g-menu__title">Контакты</h4>
+                    <ul class="g-menu__list">
+                        <li class="g-menu__item">
+                            <a href="tel:+38099997112" class="b-phones__link_footer">
+                                <i class="icon-phone-small-white"></i>
+                                <!--
+                                    <svg class="b-phones__icon" viewBox="0 0 25.92 35.06">
+                                        <use xlink:href="#svg-phone"></use>
+                                    </svg>
+    -->
+                                <span>+380 99-99-71-12</span>
+                            </a>
+                        </li>
+                        <li class="g-menu__item">
+                            <a href="tel:+38044191112" class="b-phones__link_footer">
+                                <i class="icon-phone-small-white"></i>
+                                <!--
+                                    <svg>
+                                        <use xlink:href="#svg-phone"></use>
+                                    </svg>
+    -->
+                                <span>+380 44-19-11-12</span>
+                            </a>
+                        </li>
+                        <!--							<li class="g-menu__item">&nbsp;</li>-->
+                        <li class="g-menu__item">
+                            <i class="icon-location-small-white"></i>
+                            <span id="all_adresses">Киев, все адреса <a href="">здесь</a></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="b-social b-social--footer">
+                    <a href="#" class="b-social__item"><i class="icon-facebook-white"></i></a>
+                    <a href="#" class="b-social__item"><i class="icon-insta-white"></i></a>
+                    <a href="#" class="b-social__item"><i class="icon-gplus-white"></i></a>
+                    <a href="#" class="b-social__item"><i class="icon-youtube-white"></i></a>
+                </div>
+
             </div>
-            <div class="g-form__field">
-	            <button class="g-btn">Дальше</button>
+
+        </div>
+
+        <div class="footer__right">
+            <div id="map">
+                <script>
+                    function initMap() {
+                        var university = {
+                            lat: 50.444248,
+                            lng: 30.505879
+                        };
+                        var center = {
+                            lat: 50.442441,
+                            lng: 30.509395
+                        };
+                        var square = {
+                            lat: 50.439360,
+                            lng: 30.516294
+                        };
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 14,
+                            center: center
+                        });
+                        var marker1 = new google.maps.Marker({
+                            position: university,
+                            map: map
+                        });
+                        var marker2 = new google.maps.Marker({
+                            position: square,
+                            map: map
+                        });
+                    }
+
+                </script>
+                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbYdRSX_XQ-p7xlVH9V2KiuXZq1FqQKIo&callback=initMap">
+
+
+                </script>
+
             </div>
-	        </div>
+        </div>
 
-	        <div class="arcticmodal-footer">
-	        	<div class="g-form__alarm">
-	        		<i class="icon-alarm"></i>
-	        		<p>ваши личные данные защищены <a href="">политикой приватности</a></p>
-	        	</div>  
-	        </div>
-
-	      </form>
-	    </div>
-	    <!-- /Form register -->
-
-	    <!-- Form login -->
-	    <div class="arcticmodal" id="login">
-	      <form class="g-form js-form-login">
-	        <div class="arcticmodal-close"><i class="icon-close"></i></div>
-	        <div class="arcticmodal-header">Вход</div>
-	        
-	        <div class="arcticmodal-body">
-            <div class="g-form__field">
-              <input class="g-input" type="email" name="email" placeholder="e-mail">
+        <div class="footer__bottom">
+            <div class="b-counters">
+<!--                <a href="#"><img src="./img/flags/undp.png" class="b-counters__item" width="45" height="22" alt=""></a>-->
+                <a href="#"><img src="./img/svg/undp.svg" class="b-counters__item" width="45" height="22" alt=""></a>
+<!--                <a href="#"><img src="./img/flags/japan.png" class="b-counters__item" width="33" height="22" alt=""></a>-->
+                <a href="#"><img src="./img/svg/japan.svg" class="b-counters__item" width="33" height="22" alt=""></a>
             </div>
-            <div class="g-form__field">
-              <input class="g-input" type="password" name="password" placeholder="пароль">
-            </div>
-            <div class="g-form__field">
-	            <button class="g-btn">Войти</button>
-	            <a href="" class="g-btn g-btn--link">Забыли пароль?</a>
-            </div>
-	        </div>
+            <div class="b-copyrights">Интернет-магазин PassifloRa 2017 © </div>
+        </div>
+    </div>
+</footer>
+<!-- /FOOTER -->
 
-	        <div class="arcticmodal-footer">
-	        	<div class="g-text--center">
-	        		<div class="g-h3">
-	        			или <br>
-	        			Войти через социальные сети:
-	        		</div>
-	        	
-        			<img src="./img/icons/i-fb.png" alt="">
-        			<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        			<img src="./img/icons/i-gplus.png" alt="">
-        			<br><br>
-        	
-            	<a href="" class="g-btn g-btn--link">Нет учетной записи?</a>
-        			<br><br>
-            	<a href="" class="g-btn g-btn--md g-btn--alt" data-modal="register">Зарегистрироваться</a>
-        			<br><br>
-	        	</div>
-	        	<div class="g-form__alarm">
-	        		<i class="icon-alarm"></i>
-	        		<p>ваши личные данные защищены <a href="">политикой приватности</a></p>
-	        	</div>  
-	        </div>
+<a href="#header" class="b-up js-up"><i class="icon-arrow-up"></i></a>
 
-	      </form>
-	    </div>
-	    <!-- /Form login -->
+<!-- MODAL -->
+<div style="display:none">
+    @@include('./modals-base.html')
+    
+    @@if (page === "index"){
+        @@include('../parts/modals-index.html')
+    }
+    
+</div>
+<!-- /MODAL -->
 
-	    <!-- Form promo -->
-	    <div class="arcticmodal arcticmodal--wide" id="promo">
-	        <div class="arcticmodal-close"><i class="icon-close"></i></div>
-	        
-	        <div class="arcticmodal-promo">
-						<div class="arcticmodal-promo__left">
-							<img src="http://placehold.jp/430x510.png" alt="">
-						</div>
-						<div class="arcticmodal-promo__right">
-							<p class="g-h2">Получи бесплатно живой подарок стомостью 190 грн при покупке от 949 грн</p>
-							<p class="g-h2">Промокод <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> fregood</p>
-				      <form class="g-form js-form-promo">
-		            <div class="g-form__field g-form__field--inline">
-		              <input class="g-input" type="text" name="code" placeholder="Промокод">
-			            <button class="g-btn g-btn--bordered g-btn--alt">Получить</button>
-		            </div>
-				      </form>
-				    </div>
-	        </div>
+<script src="./js/script.min.js"></script>
 
-	    </div>
-	    <!-- /Form promo -->
-	</div>
-	<!-- /MODAL -->
-
-	<script src="./js/script.min.js"></script>
-  
-	<script id="__bs_script__">//<![CDATA[
-	    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.8'><\/script>".replace("HOST", location.hostname));
-	//]]></script>
+<!--
+<script id="__bs_script__">
+    //<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.8'><\/script>".replace("HOST", location.hostname));
+    //]]>
+</script>
+-->
 
 </body>
 </html>

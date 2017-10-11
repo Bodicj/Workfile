@@ -1,9 +1,9 @@
 .b-widget{
 	margin-bottom: 54px;
 	img{
-		@include twoK {
-			width: 100%;
-		}
+//		@include twoK {
+//			width: 100%;
+//		}
 	}
 }
 .b-widget__title{
@@ -14,13 +14,19 @@
 	text-transform: uppercase;
 	text-align: center;
 	color: #121212;
-	@include twoK {
-		font-size: 27px;
-	}
-	@include fourK {
-		font-size: 40px;
-		line-height: 45px;
-	}
+//	@include twoK {
+//		font-size: 27px;
+//	}
+//	@include fourK {
+//		font-size: 40px;
+//		line-height: 45px;
+//	}
+    @include small{
+        margin: 0 0 29px;
+        padding: 0 20px;
+        line-height: 25px;
+        font-size: 20px;
+    }
 }
 .b-widget__text{
 	margin: 0 0 40px;
@@ -28,14 +34,41 @@
 	line-height: 21px;
 	font-weight: 400;
 	color: #121212;
-	@include twoK {
-		font-size: 19px;
-		line-height: 25px;
-	}
-	@include  fourK {
-		font-size: 30px;
-		line-height: 35px;
-	}
+//	@include twoK {
+//		font-size: 19px;
+//		line-height: 25px;
+//	}
+//	@include  fourK {
+//		font-size: 30px;
+//		line-height: 35px;
+//	}
+    @include small{
+        margin: 0 0 38px;
+        line-height: 18px;
+        font-size: 15px;
+    }
+}
+.b-widget__body{
+    .g-form__field{
+        @include small{
+            margin-bottom: 22px;
+        }
+        
+        &:last-child{
+            @include small{
+                padding-top: 11px;   
+            }
+        }
+        
+        .g-input--md{
+            padding: 9px 10px;
+
+            @include small{
+                font-size: 14px;
+                line-height: 15px;
+            }
+        }
+    }
 }
 .b-widget__btn{
 	display: block;
@@ -54,10 +87,16 @@
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.16);
 	transition: all .3s;
 
-	@include  fourK {
-		font-size: 35px;
-		line-height: 40px;
-	}
+//	@include  fourK {
+//		font-size: 35px;
+//		line-height: 40px;
+//	}
+    @include small{
+        margin-bottom: 22px;
+        height: auto;
+        line-height: 20px;
+        font-size: 14px;
+    }
 
 	&:hover{
 		background-color: darken(#d1d4d3, 5%);

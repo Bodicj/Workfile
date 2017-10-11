@@ -1,8 +1,58 @@
 .b-counters{
 	@include clearfix();
-	margin-left: -4px;
-}
-.b-counters__item{
-	float: left;
-	margin-right: 10px;
+    padding-top: 1px;
+//	margin-left: -4px;
+    
+    @include note{
+        order: 2;
+        padding: 0 15px;
+        line-height: 22px;
+    }
+    @include small{
+        display: flex;
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    a{
+
+        .b-counters__item{
+            float: left;
+            margin-right: 10px;
+            height: auto;
+
+            @include huge{
+                width: 33px;
+            }
+            @include note{
+                float: none;
+                width: 45px;
+            }
+            @include small{
+                margin-right: 0;
+            }
+
+        }
+
+        &:first-child{
+
+        }
+        &:last-child{
+            @include small{
+                margin-right: 17px;
+            }
+
+            .b-counters__item{
+                @include huge{
+                    width: 24px;
+                }
+                @include note{
+                    margin-right: 0;
+                    width: 33px;
+                }
+            }
+        }
+    }
 }

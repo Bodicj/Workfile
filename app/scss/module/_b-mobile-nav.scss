@@ -1,9 +1,16 @@
-$button-width: 42px;                    // The width of the button area
-$button-height: 42px;                   // The height of the button area
-$bar-thickness: 6px;                    // The thickness of the button bars
-$button-pad: 0;                      // The left/right padding between button area and bars.
+$button-width: 30px;                    // The width of the button area
+$button-height: 25px;                   // The height of the button area
+$bar-thickness: 3px;                    // The thickness of the button bars
 $button-bar-space: 8px;                // The spacing between button bars
-$button-transistion-duration: 0.3s;     // The transition duration
+
+$button-width-xs: 21px;                    // The width of the button area
+$button-height-xs: 16px;                   // The height of the button area
+$bar-thickness-xs: 2px;                    // The thickness of the button bars
+$button-bar-space-xs: 5px;                // The spacing between button bars
+
+$button-pad: 0;                      // The left/right padding between button area and bars.
+$menu-transistion-duration: 0.5s;
+$button-transistion-duration: $menu-transistion-duration;     // The transition duration
 $button-color: $color__primary;
 
 @mixin hamburger-icon {
@@ -19,8 +26,15 @@ $button-color: $color__primary;
     box-shadow: none;
     border-radius: none;
     border: none;
-    cursor: pointer;    &:focus {
+    cursor: pointer;    
+    
+    &:focus {
       outline: none;
+    }
+    
+    @include small{
+        width: $button-width-xs;
+        height: $button-height-xs;
     }
 
     & span {
@@ -31,6 +45,11 @@ $button-color: $color__primary;
       right: $button-pad;
       height: $bar-thickness;
       background: $button-color;
+        
+        @include small{
+            top: ($button-height-xs / 2) - ($bar-thickness-xs / 2);
+            height: $bar-thickness-xs;
+        }
     }
 
     & span::before,
@@ -42,14 +61,26 @@ $button-color: $color__primary;
       height: $bar-thickness;
       background-color: $button-color;
       content: "";
+        
+        @include small{
+            height: $bar-thickness-xs;
+        }
     }
 
     & span::before {
       top: -$bar-thickness - $button-bar-space;
+        
+        @include small{
+            top: -$bar-thickness-xs - $button-bar-space-xs;
+        }
     }
 
     & span::after {
       bottom: -$bar-thickness - $button-bar-space;
+        
+        @include small{
+            bottom: -$bar-thickness-xs - $button-bar-space-xs;
+        }
     }
 
     & span {
@@ -97,49 +128,69 @@ body:after{
   position: fixed;
   top: 0;
   right: 0;
-  width: 0;
-  height: 0;
-  background: rgba(0,0,0,0.3);
-  content: '';
-  opacity: 0;
-  transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
-}
-body.is--mobile-active{
-  &:after{
+  z-index: 97;
     width: 100%;
     height: 100%;
+  background: rgba(0,0,0,0.3);
+    
+    visibility: hidden;
+  opacity: 0;
+    transition: opacity $menu-transistion-duration, visibility 0s $menu-transistion-duration;
+      
+    @include pc{
+        content: '';
+    }
+}
+body.is--mobile-active{
+    @include pc{
+        overflow: hidden !important;
+    }
+    
+  &:after{
+      visibility: visible;
     opacity: 1;
-    transition: opacity 0.5s;
-    z-index: 100;
+    transition: opacity $menu-transistion-duration, visibility 0s;
   }
 }
 .b-mobile-nav{
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
+//  bottom: 0;
   z-index: 1000;
   visibility: hidden;
-  overflow: auto;
-  width: 300px;
+//  overflow: auto;
+  width: 305px;
   height: 100%;
-  padding-top: 54px;
+//  padding-top: 5px;
   background: $color__primary;
   transform: translate3d(-100%, 0, 0);
-  transition: all 0.5s;
+  transition: transform $menu-transistion-duration;
+    text-transform: uppercase;
+    color: #fff;
   
+    @include pc{
+        visibility: visible;
+    }
 
   &.is--visible{
-    visibility: visible;
+//    visibility: visible;
     transform: translate3d(0, 0, 0);
+      
+    @include pc{
+        visibility: visible;
+    }
   }
+    &:hover{
+        will-change: transform;
+    }
 }
 .b-mobile-nav-icon,
 .b-mobile-nav__toggle{
   display: none;
   @include hamburger-icon;
 
-  @include note {
+  @include pc {
     display: block;
   } 
 }
@@ -153,45 +204,156 @@ body.is--mobile-active{
     background:$color__primary;
   }
 
-  @include note {
+  @include pc {
     display: block;
   } 
-  @include tablet {
-    left: auto;
-    margin-left: 0;
-    right: 20px;
-  }
-  @include small {
-    right: 5px;
-  } 
+//  @include tablet {
+//    left: auto;
+//    margin-left: 0;
+//    right: 20px;
+//  }
+//  @include small {
+//    right: 5px;
+//  } 
 }
 .b-mobile-nav__toggle{
-  position: absolute;
-  top: 6px; right: 6px;
+    position: absolute;
+    top: 21px;
+    right: -50px;
+    transition: transform $menu-transistion-duration;
+    transform: translateX(0);
+    
+    &:hover{
+        will-change: transform;
+    }
+    
+    
+    @include small{
+        top: 13px;
+        right: -36px;
+    }
+
+    &.is--active{
+//        right: 6px;
+        transform: translateX(-62px);
+        
+        @include small{
+            transform: translateX(-52px);
+        }
+    }
+
   span,
   span:after,
   span:before{
     background: #ffffff;
   }
 }
+.b-mobile-nav__heading{
+    padding: 9px 15px 8px;
+    font-size: 18px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #fff;
+//    border-bottom: 1px solid #191c1f;
+    
+    @include small{
+//        padding: 8px 15px 9px;
+        line-height: 25px;
+    }
+}
+.b-mobile-nav_wrapper{
+    height: calc(100% - 109px);
+    overflow: auto;
+    
+    @include note{
+        height: calc(100% - 52px);
+    }
+}
 .b-mobile-nav__list{
   @extend %list;
+    border-top: 2px solid #191c1f;
+    
+    @include pc{
+        border-top: none;
+        padding: 12px 0;
+        border-bottom: 2px solid #191c1f;
+    }
+    
+    &:first-child{
+        padding-top: 0;
+    }
+    &:last-child{
+        border-bottom: 0;
+    }
 }
 .b-mobile-nav__item{
-  display: block;
-  margin-bottom: 5px;
+    display: block;
+    margin: 2px 0;
+    
+    &.opened{
+        
+        .b-mobile-nav__link_accordion{
+            &:after{
+                transform: rotate(0deg)
+            }
+        }
+    }
 }
 .b-mobile-nav__link{
   display: block;
-  padding: 12px 24px;
-  font-size: 22px;
-  line-height: 28px;
+    padding: 8px 15px;
+  font-size: 14px;
+//  line-height: 28px;
   background: $color__primary;
   color: #ffffff;
+    cursor: pointer;
+    
+    &:hover{
+        text-decoration: underline;
+    }
   
-  &:hover,
-  &.is--current{
-    background: #ffffff;
-    color: $color__primary;
-  }
+    @include pc{
+        padding: 3px 15px;
+    }
+    
+//  &:hover,
+//  &.is--current{
+//    background: #ffffff;
+//    color: $color__primary;
+//  }
+}
+
+.b-mobile-nav__link_accordion{
+    position: relative;
+    &:after{
+        position: absolute;
+        top: 0;
+        right: 20px;
+        bottom: 0;
+        margin: auto;
+        content: '';
+        width: 14px;
+        height: 8px;
+        background-image: url(../img/svg/i-toggler-white.svg);
+        transform: rotate(-180deg);
+        transition: transform $time_short;
+    }
+    
+//    &:hover{
+//        &:after{
+//            background-image: url(../img/svg/i-toggler.svg);
+//        }
+//    }
+}
+
+.b-mobile-subnav{
+    padding-left: 30px;
+    display: none;
+    
+    &.closed{
+        display: none;
+    }
+    &.opened{
+//        display: none;
+    }
 }

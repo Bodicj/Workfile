@@ -1,45 +1,84 @@
 .b-seo-text{
-	padding: 0 102px 59px;
+	padding: 0 100px 98px;
 	margin: 0 auto;
 	clear: both;
-	padding-right: 86px;
+	padding-right: 89px;
+    
+    @include huge{
+        padding: 0 69px 34px;
+    }
+    @include pc{
+        padding: 0 100px 98px;
+    }
+    @include small{
+        padding: 0;
+    }
 
 	p {
 		margin: 0;
+        letter-spacing: -.001em;
 	}
 }
 .b-seo-text__inner{
-	margin-bottom: 20px;
+//	margin-top: -1px;
+//	margin-left: 2px;
+//	margin-bottom: 20px;
+    margin: -1px 0 20px 2px;
 	font-family: PT Sans,sans-serif;
 	font-size: 19px;
-	line-height: 22.6px;
+	line-height: 23px;
 	font-weight: 400;
 	color: #1a1a1a;
 	text-align: center;
-	margin-top: -1px;
-	margin-left: 5px;
 	@extend %transition;
 
+//	@include twoK {
+//		font-size: 23px;
+//		line-height: 26px;
+//	}
+//	@include fourK {
+//		font-size: 35px;
+//		line-height: 40px;
+//	}
 	@include huge {
-		font-size: 16px;
-		line-height: 21px;
+        margin: 0 0 15px;
+		font-size: 13.84px;
+//		line-height: 21px;
+        line-height: 17px;
 	}
-	@include twoK {
-		font-size: 23px;
-		line-height: 26px;
-	}
-	@include fourK {
-		font-size: 35px;
-		line-height: 40px;
-	}
+    @include pc{
+        margin: 0 0 46px;
+        font-size: 16px;
+//        line-height: 17px;
+    }
+    @include small{
+        margin: 0 0 31px;
+        font-size: 14px;
+//        line-height: 17px;
+    }
 
 	&.is--short{
 		max-height: 115px;
 		overflow: hidden;
 		@extend %transition;
-		@include fourK {
-			max-height: 115px;
-		}
+//		@include fourK {
+//			max-height: 115px;
+//		}
+        @include huge{
+            max-height: 192px;
+        }
+        @include pc{
+            max-height: 138px;
+        }
+        @include note{
+            max-height: 206px;
+        }
+        @include tablet{
+            max-height: 273px;
+        }
+        @include small{
+            max-height: 342px;
+        }
 	}
 }
 .b-seo-text__action{
@@ -48,4 +87,8 @@
 .b-seo-text__btn{
   font-weight: 700;
   text-transform: uppercase;
+    
+    @include small{
+        font-size: 12px;
+    }
 }

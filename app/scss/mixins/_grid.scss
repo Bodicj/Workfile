@@ -14,12 +14,29 @@
     clear: both;
   }
 }
+@mixin laptop {
+
+  @include media('screen','<laptop') {
+    @content;
+  }
+
+}
 @mixin huge {
 
   @include media('screen','<huge') {
     @content;
   }
 
+}
+@mixin HDminus {
+  @include media('screen', '<=hd'){
+    @content;
+  }
+}
+@mixin HDplus {
+  @include media('screen', '>hd'){
+    @content;
+  }
 }
 @mixin twoK {
   @include media('screen', '>=twoK'){

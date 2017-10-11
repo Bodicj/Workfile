@@ -1,0 +1,53 @@
+.catalog{
+	width: percentage(1200/1620);
+	vertical-align: top;
+	float: right;
+    
+    @include small{
+        width: 100%;
+    }
+    
+    .selectric-wrapper{
+        
+        @include phone{
+            float: left;
+            width: 120px;
+        }
+        
+        .selectric {
+            
+            .label{
+                font-weight: 600;
+
+                @include phone{
+                    margin: 0px 25px 0 11px;
+                    height: 28px;
+                    line-height: 29px;
+                }
+            }
+            .button{
+                @include phone{
+                    right: 9px;
+                    top: 0px;
+                    width: 15px;
+                    height: 30px;
+//                    line-height: 28px;
+                }
+                
+                &:after{
+                    border-width: 5px;
+                }
+            }
+        }
+    }
+    
+    .selectric-wrapper{
+        display: inline-block;
+        vertical-align: middle;
+        width: 174px;
+        
+        @include phone{
+            width: 120px;
+        }
+    }
+}

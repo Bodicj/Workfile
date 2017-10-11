@@ -1,5 +1,6 @@
 var gulp         = require('gulp'), // Подключаем Gulp
 	sass         = require('gulp-ruby-sass'), //Подключаем Sass пакет,
+	sourcemaps   = require('gulp-sourcemaps'),
 	fileinclude  = require('gulp-file-include'),
 	spritesmith  = require('gulp.spritesmith'),
 	notify       = require('gulp-notify'),
@@ -29,10 +30,23 @@ var config = {
 
 	gulp.task('js', function() {
 		return gulp.src([
-				'app/libs/jquery/dist/jquery.min.js',
-				'app/js/script.js'])
-				.pipe(concat('script.min.js'))
-				//.pipe(uglify()) // Сжимаем JS файл
+				'app/js/libs/jquery.min.js',
+				'app/js/libs/arcticmodal.min.js',
+				'app/js/libs/jquery.validate.min.js',
+				'app/js/libs/jquery.bxslider.min.js',
+				'app/js/libs/ion.rangeSlider.min.js',
+				'app/js/libs/jquery.mousewheel.min.js',
+				'app/js/libs/jquery.jscrollpane.min.js',
+				'app/js/libs/jquery.selectric.min.js',
+				'app/js/script.js',
+				])
+				.pipe(sourcemaps.init())
+				.pipe(concat("script.min.js"))
+				// .pipe(sourcemaps.init({loadMaps: true}))
+				// .pipe(concat('script.min.js'))
+				// .pipe(uglify({outSourceMap: true})) // Об'єднуємо js файли і стискаємо їх
+				// .pipe(uglify({outSourceMap: true})) // Об'єднуємо js файли і стискаємо їх
+				.pipe(sourcemaps.write('.'))
 				.pipe(gulp.dest('dist/js')); // Выгружаем в папку app/js
 	});
 
@@ -47,10 +61,12 @@ var config = {
 	gulp.task('scss', function(){ // Создаем таск Sass
 		return sass('app/scss/style.scss',{
                 style: 'compressed',
-                "sourcemap=none": true
+                sourcemap: true
              })
-			.pipe(autoprefixer(['last 3 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
-			.pipe(cssnano())
+			.pipe(autoprefixer(['last 10 major versions', "Firefox > 20", '> 0.1%', 'ie 10-11'])) // Создаем префиксы
+			// .pipe(autoprefixer(['last 3 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
+			// .pipe(cssnano())
+	        .pipe(sourcemaps.write('.'))
 			.pipe(gulp.dest('dist/css'))
 			.pipe(notify({ message: 'CSS done!' }));
 	});
@@ -83,15 +99,15 @@ var config = {
 	gulp.task('serve', ['js','scss','html'], function () {
 
 	    // Serve files from the root of this project
-	    browserSync.init({
-	        baseDir: "./app/"
-	    });
+	    // browserSync.init({
+	    //     baseDir: "./app/"
+	    // });
 
 	    // add browserSync.reload to the tasks array to make
 	    // all browsers reload after tasks are complete.
 	    gulp.watch('app/img/sprite/*.*', ['sprite']);
 	    gulp.watch('app/img/**/*.*', ['img']);
-	    gulp.watch(['libs/**/*.js', 'app/js/script.js'], ['js-watch']);
+	    gulp.watch(['app/js/libs/*.js', 'app/js/script.js'], ['js-watch']);
 	    gulp.watch('app/scss/**/*.scss', ['scss-watch']);
 	    gulp.watch('app/template/**/*.html', ['html-watch']);
 	});
@@ -129,10 +145,10 @@ var config = {
 
 	gulp.task('build', ['clean', 'img', 'scss', 'html'], function() {
 
-		var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
+		var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшн
 		.pipe(gulp.dest('dist/fonts'));
 
-		var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
+		var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшн
 		.pipe(gulp.dest('dist/js'));
 	});
 

@@ -12,7 +12,7 @@
   <div class="container">
     <!-- SIDEBAR -->
     <aside class="sidebar">
-      <div class="b-groups-menu">
+      <div class="b-groups-menu hidden-xs">
         <ul class="b-groups-menu__list">
           <li class="b-groups-menu__item"><a href="" class="b-groups-menu__link">букеты</a></li>
           <li class="b-groups-menu__item"><a href="" class="b-groups-menu__link">букет за час</a></li>
@@ -25,7 +25,7 @@
       @@include('./../parts/filter.html')
 
       <!-- form simple order -->
-      <div class="b-widget">
+      <div class="b-widget hidden-xs">
         <div class="b-wiget__body">
           <a href="">
             <img src="./img/banners/b-1.png" alt="">
@@ -39,7 +39,7 @@
         <h3 class="b-widget__title">заказать уникальный букет</h3>
         <p class="b-widget__text">Если Вы не нашли букет, который хотели бы купить, мы можем выполнить индивидуальный заказ. Для этого достаточно оставить заявкусвяжеться с Вами!</p>
 
-        <div class="b-wiget__body">
+        <div class="b-widget__body">
           <form class="g-form js-form-simple-order">
             <div class="g-form__field">
               <input class="g-input g-input--md" type="text" name="name" placeholder="Имя">
@@ -58,13 +58,21 @@
     </aside>
     <!-- /SIDEBAR -->
 
-    <!-- MAIN -->
-    <div class="main">
+    <!-- CATALOG -->
+    <div class="catalog">
       <!-- PRODUCTS -->
-      <div class="row">
-        <div class="col col--4-of-12 col--push-8-of-12 col--d-last">
-          <div id="sort" class="b-sort" tabindex="100">
-            <div class="b-sort__text">Сортировать:</div>
+      <div class="b-row">
+<!--        <div class="col col--4-of-12 col--push-8-of-12 col--d-last">-->
+          <form id="sort" class="b-sort" tabindex="100">
+            <label class="b-sort__text" for="sortBy">Сортировать:</label>
+            <select class="js-selectric" name="sortBy" id="sortBy">
+                <option value="" class="label" hidden selected disabled>Сортировать</option>
+                <option value="name">По названию</option>
+                <option value="rating">По рейтингу</option>
+                <option value="priceUp">По цене &uarr;</option>
+                <option value="priceDown">По цене &darr;</option>
+            </select>
+<!--
             <div class="b-sort__dropdown">
               <i class="icon-sort-down"></i>
               <span class="b-sort__selected">По названию</span>
@@ -75,20 +83,17 @@
                   <li class="b-sort__item"><a href="">По названию</a></label></li>
               </ul>
             </div>
-          </div>
-        </div>
+-->
+             <div class="g-btn g-btn--bordered g-btn--grey js-filters-toggle">ФИЛЬТРОВАТЬ</div>
+          </form>
+<!--        </div>-->
       </div>
 
-      <div class="content-block" id="catalog_product1">
-      @@for (i=1; i<=4; i++){
+    <div class="content-block" id="catalog_product1">
+      @@for (i=1; i<=15; i++){
           @@include('./../parts/product.html', {"index": "`+i+`"})
       }
-      </div>
-      <div class="content-block" id="catalog_product2">
-        @@for (i=1; i<=4; i++){
-        @@include('./../parts/product.html', {"index": "`+i+`"})
-        }
-      </div>
+    </div>
       <!-- /PRODUCTS -->
 
       <div class="b-pagination">
@@ -103,7 +108,7 @@
 
 
     </div>
-    <!-- /MAIN -->
+    <!-- /CATALOG -->
   </div>
 
 </section>

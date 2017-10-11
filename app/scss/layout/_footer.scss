@@ -1,71 +1,209 @@
+$footerListHeadingMB: 45px;
+$footerSvgColor: #FFFFFF;
+
 .footer{
 	position: relative;
+    height: 600px;
 	@extend %clearfix;
-	padding: 120px 0 0;
-	background-color: #121212;
+//	padding: 120px 0 0;
+	padding: 100px 0 0;
+	background-color: #0f0f0f;
 
-/* 	@include huge {
-	padding: 60px 0 0;
-} */
+ 	@include huge {
+        height: 438px;
+        padding: 83px 0 0;
+    }
+ 	@include pc {
+        height: 445px;
+        padding: 58px 0 0;
+    }
+    @include note{
+        height: auto;
+        padding: 55px 0 10px;
+    }
+    @include small{
+        
+        padding: 54px 0 10px;
+    }
+    
+    .container{
+//        padding: 0 4px;
+        @include note{
+            max-width: 100%;
+        }
+    }
+    
+    
+    svg{
+        .filled{
+            fill: $footerSvgColor;
+        }
+        .stroked{
+            stroke: $footerSvgColor;
+        }
+    }
 }
 .footer__left{
 	float: left;
 	width: 65%;
-	padding-left: 11px;
+//	padding-left: 11px;
+    @include huge{
+        width: 65%;
+    }
+    @include pc{
+        width: 71%;
+    }
+    @include note{
+        float: none;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 35px;
+    }
+    @include small{
+        margin-bottom: 35px;
+        flex-direction: column;
+        text-align: center;
+    }
 }
 .footer__right{
+//	width: 37.3%;
 	position: absolute;
-	width: 37%;
+    left: calc(50% + 960px - 1620px * 0.441);
 	right: 0;
 	top: 0;
 	bottom: 0;
+    
+	@include huge {
+        left: calc(50% + 1180px * 0.15);
+	}
+	@include pc {
+        left: calc(50% + 970px * 0.21);    // 970px = (container - padding)/2 
+                                           // 0.21 = 71% - 0.5; 71% = footer_left.width
+	}
+    @include note{
+        position: static;
+        height: 305px;
+//        width: 100%;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    @include small{
+        margin: 0;
+        height: 300px;
+    }
 }
 .footer__bottom{
 	clear: both;
+//    padding-left: 12px;
+    @include note{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
 }
 .footer__block{
 	display: inline-block;
-	width: percentage(1/3);
+//	width: percentage(1/3);
+	width: 33%;
 	margin-right: -.25em;
 	vertical-align: top;
+    
+    @include huge{
+        width: 31%;
+    }
+    @include note{
+        margin-right: 0;    
+    }
+    @include small{
+        flex-shrink: 0;
+    }
+    
+    h4{
+//        margin-bottom: $footerListHeadingMB;
+    }
 }
 .footer__block--1{
-	width: 29%;
-	padding-left: 4px;
+//	width: 29%;
+//	padding-left: 4px;
+    @include note{
+        width: 195px;
+        padding-left: 25px;
+    }
+    @include small{
+        width: 100%;
+        padding-left: 0;
+    }
 }
 .footer__block--2{
-	width: 33%;
-	padding-left: 9px;
+//	width: 33%;
+//	padding-left: 10px;
+    padding-left: 5px;
+    
+    @include note{
+        width: 245px;
+        padding-left: 25px;
+    }
+    @include small{
+        width: 100%;
+        padding-left: 0;
+    }
 }
 .footer__block--3{
-	width: 38%;
-	padding-left: 108px;
-	margin-top: -4px;
+//	width: 37%;
+//	padding-left: 102px;
+//	margin-top: -3px;
+    padding-left: 64px;
+    
+    @include huge{
+        width: 38%;
+        padding-left: 77px;
+    }
+    @include note{
+        width: 220px;
+        padding-left: 25px;
+    }
+    @include small{
+        width: 100%;
+        flex-shrink: 0;
+        padding-left: 0;
+    }
 }
 .footer__block-menu--information{
 
 }
 .footer__block-menu--delivery{
-	margin-bottom: 72px;
+	margin-bottom: 78px;
 
-/* 	@include huge {
-	margin-bottom: 55px;
-} */
+ 	@include huge {
+        margin-bottom: 55px;
+    } 
+ 	@include tablet {
+//        margin-bottom: 62px;
+    } 
+    @include small{
+        margin-bottom: 45px;
+    }
 
 	ul {
-		padding-top: 6px;
+//		padding-top: 6px;
 	}
 }
 .footer__block-menu--account{
-	margin-left: -4px;
-	margin-bottom: 0px;
+//	margin-left: -8px;
+	margin-bottom: 11px;
 
-/* 	@include huge {
-	margin-bottom: 60px;
-} */
+ 	@include huge {
+//        margin-bottom: 60px;
+        margin-bottom: 4px;
+    } 
+    @include small{
+        margin-bottom: 48px;
+    }
 
 	h4{
-		margin-bottom: 49px;
+//		margin-bottom: 45px;
 
 /* 		@include huge {
 	margin-bottom: 27px;
@@ -73,22 +211,85 @@
 	}
 }
 .footer__block-menu--contacts{
-	margin-bottom: 24px;
+	margin-bottom: 26px;
 
+    @include huge {
+        margin-bottom: 13px;
+    }
+    @include small{
+        vertical-align: 22px;
+    }
+    
 	h4{
-		margin-bottom: 53px;
+//		margin-bottom: 45px;
+        @include small{
+            margin-bottom: 31px;
+            letter-spacing: 0.012em;
+        }
 
-/* 		@include huge {
-	margin-bottom: 33px;
-} */
 	}
 
-	ul li {
-		margin-bottom: 0;
-		padding-bottom: 0;
+	.g-menu__item {
+//        margin-top: 0;
+//		margin-bottom: 0;
+//        padding-top: 2px;
+//		padding-bottom: 0;
+        
+        @include small{
+            font-size: 12.31px;
+            &:not(:last-child){
+                letter-spacing: .038em;
+            }
+        }
+        
+        &:nth-child(2){
+            margin-top: -10px;
+            
+            @include small{
+                margin-top: 0;
+            }
+        }
+        
+        &:last-child{
+            margin-top: 44px;
+            
+            @include huge{
+                margin-top: 26px;    
+            }
+            @include small{
+                margin: 11px 0 29px;
+                line-height: 16px;
+            }
+            
+            i{
+                margin-right: 2px;
+                
+                @include huge{
+                    width: 12px;
+                }
+                @include tablet{
+                    width: 15px;
+                }
+                @include small{
+                    vertical-align: -4px;
+                }
+            }
+        }
 	}
 
 }
 #all_adresses{
 	font-size: 22px;
+//    letter-spacing: .003em;
+    
+    @include huge {
+        font-size: 16px;
+    }
+    @include tablet{
+        font-size: 14px;
+    }
+    @include small{
+//        line-height: 21px;
+        font-size: 11.83px;
+    }
 }

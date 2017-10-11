@@ -20,12 +20,12 @@
 	height: 229px;
 	overflow: hidden;
 	
-	@include phone {
-		width: 100%;
-	}
-	@include tablet {
-		width: 316px;
-	}
+//	@include phone {
+//		width: 100%;
+//	}
+//	@include tablet {
+//		width: 316px;
+//	}
 	
 	img{
 		display: block;

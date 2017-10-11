@@ -3,13 +3,13 @@
 	margin: 0 auto;
 	text-align: center;
 	line-height: 0;
-	font-style: 0;
+//	font-style: 0;
 }
 .b-pagination__item{
 	display: inline-block;
 	min-width: 50px;
 	padding: 0 15px;
-	margin: 0 17px 20px 0;
+	margin: 0 16px 20px 0;
 	background:#d1d4d3;
 	font-size: 24px;
 	line-height: 50px;
@@ -18,9 +18,20 @@
 	text-align: center;
 	transition: all .3s;
 
-	@include fourK {
-		font-size: 41px;
-	}
+//	@include fourK {
+//		font-size: 41px;
+//	}
+    @include small{
+        margin: 0 9px 20px 0;
+        min-width: 31px;
+        padding: 0 10px;
+        line-height: 31px;
+        font-size: 14.88px;
+    }
+    
+    &:last-child{
+        margin-right: 0;
+    }
 
 	&:hover{
 		background:#0f0f0f;
@@ -42,8 +53,14 @@
 			background: transparent;
 			color: #0f0f0f;
 		}
-		@include fourK {
-			line-height: 37px;
-		}
+//		@include fourK {
+//			line-height: 37px;
+//		}
+        @include phone{
+            margin: 0px 0px 20px -8px;
+            padding: 0px 5px 0 5px;
+            min-width: initial;
+            line-height: 11px;
+        }
 	}
 }

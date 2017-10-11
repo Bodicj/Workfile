@@ -16,14 +16,6 @@
     @include small{
         top: auto;
     }
-    
-    i[class^="icon-"]{
-        @include huge{
-            width: 20px;
-            height: 27px;
-            transform: scale(1);
-        }
-    }
 }
 //.b-cart-icon{
 //    width: 28px;

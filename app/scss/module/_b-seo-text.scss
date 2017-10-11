@@ -5,7 +5,7 @@
 	padding-right: 89px;
     
     @include huge{
-        padding: 0 69px 69px;
+        padding: 0 69px 34px;
     }
     @include pc{
         padding: 0 100px 98px;
@@ -20,9 +20,9 @@
 	}
 }
 .b-seo-text__inner{
-	margin-top: -1px;
-	margin-left: 2px;
-	margin-bottom: 20px;
+//	margin-top: -1px;
+//	margin-left: 2px;
+//	margin-bottom: 20px;
     margin: -1px 0 20px 2px;
 	font-family: PT Sans,sans-serif;
 	font-size: 19px;
@@ -41,19 +41,20 @@
 //		line-height: 40px;
 //	}
 	@include huge {
-        margin-left: 0;
+        margin: 0 0 15px;
 		font-size: 13.84px;
-		line-height: 21px;
+//		line-height: 21px;
+        line-height: 17px;
 	}
     @include pc{
         margin: 0 0 46px;
         font-size: 16px;
-        line-height: 17px;
+//        line-height: 17px;
     }
     @include small{
         margin: 0 0 31px;
         font-size: 14px;
-        line-height: 17px;
+//        line-height: 17px;
     }
 
 	&.is--short{

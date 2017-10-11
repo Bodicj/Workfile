@@ -61,6 +61,9 @@
 .b-social--footer{
 	margin-left: -2px;
     
+    @include huge{
+        margin-left: -4px;
+    }
     @include pc{
         margin-left: -8px;
     }
@@ -76,8 +79,8 @@
 //			margin-top: 25px;
 //		}
 		@include huge {
-            margin-left: -5px;
-			margin-right: 10px;
+            margin-left: -4px;
+			margin-right: 19px;
             transform: scale(0.9)
 		}
 		@include pc {
@@ -105,10 +108,8 @@
             display: inline-block;
         }
         
-
 		&:last-child{
 			margin-right: 0;
 		}
 	}
-
 }

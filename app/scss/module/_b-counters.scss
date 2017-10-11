@@ -15,23 +15,44 @@
         justify-content: center;
         align-items: flex-start;
     }
-}
-.b-counters__item{
-	float: left;
-	margin-right: 10px;
     
-    @include note{
-        float: none;
-        
-        &:last-child{
-            margin-right: 0;
+    a{
+
+        .b-counters__item{
+            float: left;
+            margin-right: 10px;
+            height: auto;
+
+            @include huge{
+                width: 33px;
+            }
+            @include note{
+                float: none;
+                width: 45px;
+            }
+            @include small{
+                margin-right: 0;
+            }
+
         }
-    }
-    @include small{
-        margin-right: 0;
-        
+
+        &:first-child{
+
+        }
         &:last-child{
-            margin-right: 17px;
+            @include small{
+                margin-right: 17px;
+            }
+
+            .b-counters__item{
+                @include huge{
+                    width: 24px;
+                }
+                @include note{
+                    margin-right: 0;
+                    width: 33px;
+                }
+            }
         }
     }
 }

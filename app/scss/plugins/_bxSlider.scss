@@ -46,9 +46,12 @@
 	bottom: 31px;
 	width: 100%;
     
-    @include pc{
-        bottom: 18px;
+    @include huge{
+        bottom: 23px;
     }
+//    @include pc{
+//        bottom: 18px;
+//    }
     @include small{
         bottom: 12px;
     }
@@ -107,15 +110,21 @@
 	cursor: pointer;
 	transition: all .3s;
     
-    @include pc{
+    @include huge{
         margin: 0 4px;
-        border-width: 1px;
-        width: 15px;
-        height: 15px;
-    }
+        border-width: 2px;
+        width: 14px;
+        height: 14px;
+    } 
+//    @include pc{
+//        margin: 0 4px;
+//        border-width: 1px;
+//        width: 15px;
+//        height: 15px;
+//    }
     @include small{
         margin: 0 2.5px;
-//        border-width: 1px;
+        border-width: 1px;
         width: 10px;
         height: 10px;
     }

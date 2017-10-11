@@ -10,6 +10,10 @@ $footerSvgColor: #FFFFFF;
 	background-color: #0f0f0f;
 
  	@include huge {
+        height: 438px;
+        padding: 83px 0 0;
+    }
+ 	@include pc {
         height: 445px;
         padding: 58px 0 0;
     }
@@ -44,7 +48,7 @@ $footerSvgColor: #FFFFFF;
 	width: 65%;
 //	padding-left: 11px;
     @include huge{
-        width: 70%;
+        width: 65%;
     }
     @include pc{
         width: 71%;
@@ -70,6 +74,9 @@ $footerSvgColor: #FFFFFF;
 	top: 0;
 	bottom: 0;
     
+	@include huge {
+        left: calc(50% + 1180px * 0.15);
+	}
 	@include pc {
         left: calc(50% + 970px * 0.21);    // 970px = (container - padding)/2 
                                            // 0.21 = 71% - 0.5; 71% = footer_left.width
@@ -103,6 +110,9 @@ $footerSvgColor: #FFFFFF;
 	margin-right: -.25em;
 	vertical-align: top;
     
+    @include huge{
+        width: 31%;
+    }
     @include note{
         margin-right: 0;    
     }
@@ -147,7 +157,8 @@ $footerSvgColor: #FFFFFF;
     padding-left: 64px;
     
     @include huge{
-        padding-left: 60px;
+        width: 38%;
+        padding-left: 77px;
     }
     @include note{
         width: 220px;
@@ -185,7 +196,7 @@ $footerSvgColor: #FFFFFF;
 
  	@include huge {
 //        margin-bottom: 60px;
-        margin-bottom: 13px;
+        margin-bottom: 4px;
     } 
     @include small{
         margin-bottom: 48px;
@@ -203,7 +214,7 @@ $footerSvgColor: #FFFFFF;
 	margin-bottom: 26px;
 
     @include huge {
-        margin-bottom: 11px;
+        margin-bottom: 13px;
     }
     @include small{
         vertical-align: 22px;
@@ -243,7 +254,7 @@ $footerSvgColor: #FFFFFF;
             margin-top: 44px;
             
             @include huge{
-                margin-top: 34px;    
+                margin-top: 26px;    
             }
             @include small{
                 margin: 11px 0 29px;
@@ -253,6 +264,12 @@ $footerSvgColor: #FFFFFF;
             i{
                 margin-right: 2px;
                 
+                @include huge{
+                    width: 12px;
+                }
+                @include tablet{
+                    width: 15px;
+                }
                 @include small{
                     vertical-align: -4px;
                 }

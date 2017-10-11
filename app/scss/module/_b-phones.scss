@@ -75,4 +75,13 @@
             text-decoration: underline;
         }
     }
+    
+    i[class^="icon"]{
+        @include huge{
+            width: 12px;
+        }
+        @include tablet{
+            width: 15px;
+        }
+    }
 }

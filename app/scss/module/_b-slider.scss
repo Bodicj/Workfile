@@ -1,5 +1,5 @@
 $height-hd: 700px;
-//$height-pc: 659px;
+$height-huge: 585px;
 $height-pc: 333px;
 $height-small: 217px;
 
@@ -16,6 +16,9 @@ $height-small: 217px;
     overflow: hidden;
     background-color: #f7f7f7;
     
+    @include huge{
+        height: $height-huge;
+    }
     @include pc{
         height: $height-pc;
     }
@@ -53,6 +56,9 @@ $height-small: 217px;
     height: $height-hd;
 //    transform: translateX(-50%);
     
+    @include huge{
+        height: $height-huge;
+    }
     @include pc{
         height: $height-pc;
     }

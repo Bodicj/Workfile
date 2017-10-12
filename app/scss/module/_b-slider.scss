@@ -9,6 +9,18 @@ $height-small: 217px;
 		display: block;
 //		width: 103%;
 	}
+    
+    &>.b-slider__slide:nth-child(n+2){
+        display: none;
+    }
+}
+
+.bx-wrapper{
+    .b-slider{
+        &>.b-slider__slide:nth-child(n+1){
+            display: block;
+        }
+    }
 }
 
 .b-slider__slide{

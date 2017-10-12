@@ -21,10 +21,10 @@ $why-we-pl-xs: 71px;
         padding-right: 30px;
         padding-left: 98px;
     }  
-    @include pc{
+  /*  @include pc{
         padding-right: 0;
-    }  
-    @include note{
+    }  */
+    @include pc{
         padding-left: $why-we-pl-sm;    
     }    
     @include small{
@@ -37,7 +37,7 @@ $why-we-pl-xs: 71px;
 	@include huge {
 		padding-left: 114px;
 	}
-    @include note{
+    @include pc{
         padding-left: $why-we-pl-sm;    
     } 
     @include small{
@@ -50,7 +50,7 @@ $why-we-pl-xs: 71px;
 	@include huge {
 		padding-left: 148px;
 	}
-    @include note{
+    @include pc{
         padding-left: $why-we-pl-sm;    
     } 
     @include small{
@@ -66,6 +66,14 @@ $why-we-pl-xs: 71px;
 	text-transform: uppercase;
 	color: #121212;
 
+//	@include fourK {
+//		font-size: 35px;
+//		line-height: 40px;
+//	}
+//	@include twoK {
+//		font-size: 30px;
+//		line-height: 30px;
+//	}
 	@include huge {
 		font-size: 18.94px;
 		line-height: 24px;
@@ -76,14 +84,6 @@ $why-we-pl-xs: 71px;
         line-height: 20px;
 //        margin-bottom: 7px;
     }
-//	@include twoK {
-//		font-size: 30px;
-//		line-height: 30px;
-//	}
-//	@include fourK {
-//		font-size: 35px;
-//		line-height: 40px;
-//	}
 }
 .b-why-we__text{
 	margin: 0;
@@ -103,11 +103,12 @@ $why-we-pl-xs: 71px;
 //		line-height: 35px;
 //	}
 	@include huge {
-		font-size: 11.65px;
         line-height: 14px;
+		font-size: 11.65px;
 	}
 	@include pc {
-//		font-size: 14px;
+        line-height: 18px;
+		font-size: 14px;
 	}
     @include small{
         padding-left: 0;
@@ -124,6 +125,9 @@ $why-we-pl-xs: 71px;
             
         @include huge{
             transform: scale(1)
+        }   
+        @include pc{
+            transform: scale(0.9)
         }
     }
 }
@@ -141,7 +145,11 @@ $why-we-pl-xs: 71px;
         left: 13px;
         width: 64px;
     }  
-    @include note{
+    @include pc{
+        width: 89px;
+    /*}
+    @include note{*/
+        top: 2px;
         left: 10px;
     }    
     @include small{
@@ -161,16 +169,19 @@ $why-we-pl-xs: 71px;
 	left: 17px;
     width: 83px;
 
+//	@include fourK {
+//		top: 8px;
+//		left: 6px;
+//	}
 	@include huge {
         top: -8px;
 		left: 34px;
         width: 60px;
 	}
-//	@include fourK {
-//		top: 8px;
-//		left: 6px;
-//	}
-    @include note{
+    @include pc{
+        width: 83px;
+    /*}
+    @include note{*/
         left: 11px;
     }    
     @include small{
@@ -190,17 +201,21 @@ $why-we-pl-xs: 71px;
 	left: 23px;
     width: 117px;
 
+//	@include fourK {
+//		left: 17px;
+//		top: 29px;
+//	}
 	@include huge {
         top: 2px;
 		left: 49px;
         width: 86px;
 	}
-//	@include fourK {
-//		left: 17px;
-//		top: 29px;
-//	}
-    @include note{
-        left: 0;
+    @include pc{
+        width: 117px;
+    /*}
+    @include note{*/
+//        left: 0;
+        left: -5px;
     }    
     @include small{
         top: 2px;
@@ -220,10 +235,10 @@ $why-we-pl-xs: 71px;
 	@include huge {
 		max-width: 33%;
 	}
-    @include pc{
+    /*@include pc{
         max-width: 32%;
-    }
-    @include note{
+    }*/
+    @include pc{
         max-width: none;
         min-height: 115px;
         margin-bottom: 30px;

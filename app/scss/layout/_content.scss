@@ -46,7 +46,7 @@
   justify-content: space-between;
     
     @include tablet{
-        justify-content: space-around;
+//        justify-content: space-around;
     }
     @include small{
         flex-direction: column;

@@ -164,6 +164,8 @@
         transform: scale(1);
     }
     @include pc {
+        width: 28px;
+        height: 38px;
         transform: scale(1);
         background-image: url(../img/svg/i-cart-white-sm.svg);
     }

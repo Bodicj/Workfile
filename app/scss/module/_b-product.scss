@@ -19,7 +19,7 @@ $product-small: 230px;
     }
     @include pc{
 //        margin-bottom: 30px;
-        margin-bottom: 50px;
+        margin: 0 0 50px;
         width: $product-small;
     }
     @include note{
@@ -60,10 +60,10 @@ $product-small: 230px;
             font-size: 13.11px;
         }
         @include pc{
-            /*min-height: 36px;
+            min-height: 36px;
             padding: 3px 0 0;
             line-height: 31px;
-            font-size: 14.4px;*/
+            font-size: 14.4px;
         }
     }
 }
@@ -150,14 +150,14 @@ $product-small: 230px;
         width: 31px;
         min-width: 31px;
         height: 31px;
-        line-height: 25px;
+        line-height: 26px;
     }
     @include pc{
-//        margin-left: 8px;
-//        min-width: 35px;
-//        width: 38px;
-//        height: 38px;
-//        line-height: 32px;
+        margin-left: 8px;
+        min-width: 35px;
+        width: 38px;
+        height: 38px;
+        line-height: 32px;
     }
 }
 .b-product__tag--sale{
@@ -170,7 +170,8 @@ $product-small: 230px;
         font-size: 11.47px;
     }
     @include pc{
-//        font-size: 12px;
+        border-width: 3px;
+        font-size: 12px;
     }
 }
 .b-product__tag--small{
@@ -185,7 +186,9 @@ $product-small: 230px;
         font-size: 10.2px;
     }
     @include pc{
-//        font-size: 12px;
+        border-width: 3px;
+        line-height: 32px;
+        font-size: 12px;
     }
 }
 .b-product__tag--new{
@@ -199,7 +202,8 @@ $product-small: 230px;
         font-size: 11.47px;
     }
     @include pc{
-//        font-size: 12px;
+        border-width: 3px;
+        font-size: 12px;
     }
 }
 .b-product__title{
@@ -227,9 +231,9 @@ $product-small: 230px;
             font-size: 14.57px;
         }
         @include pc{
-//            font-size: 13.78px;
-//            line-height: 18px;
-//            font-size: 15.3px;
+            font-size: 13.78px;
+            line-height: 18px;
+            font-size: 15.3px;
             line-height: 19px;
             letter-spacing: .02em;
         }
@@ -262,9 +266,9 @@ $product-small: 230px;
         font-size: 10.2px;
     }
     @include pc{
-//        margin-bottom: 6px;
-//        line-height: 14px;
-//        font-size: 9.64px;
+        margin-bottom: 6px;
+        line-height: 14px;
+        font-size: 9.64px;
        font-size: 11px;
         margin-bottom: 10px;
         line-height: 14px;
@@ -324,6 +328,7 @@ $product-small: 230px;
     }
     @include pc{
 //        font-size: 17.91px;
+        line-height: 30px;
         font-size: 20.8px;
     }
     @include note{
@@ -343,8 +348,11 @@ $product-small: 230px;
 //        @include note{
 //            font-size: 14.4px;
 //        }
+        @include pc{
+            font-size: 14.4px;
+        }
         @include small{
-            font-size: 12.4px;
+//            font-size: 12.4px;
         }
 	}
 }
@@ -365,7 +373,7 @@ $product-small: 230px;
         font-size: 15.4px;
     }
     @include pc{
-//        font-size: 17px;
+        font-size: 17px;
     }
     @include note{
 //        font-size: 16px;
@@ -392,6 +400,9 @@ $product-small: 230px;
 //        }
         @include huge{
             font-size: 13px;
+        }
+        @include pc{
+            
         }
         @include note{
             font-size: 12px;

@@ -52,7 +52,7 @@
 //		width: 9%;
 //	}
     @include huge{
-        padding: 20px 0 20px 47px;
+        padding: 18px 0 20px 47px;
     }
 }
 .b-nav__item-1 {
@@ -72,7 +72,7 @@
         background-image: url(../img/svg/i-menu-item-1.svg);
         
         @include huge{
-            top: 14px;
+            top: 13px;
             left: -4px;
         }
 	}
@@ -93,7 +93,7 @@
         background-image: url(../img/svg/i-menu-item-2.svg);
 
         @include huge {
-            top: 14px;
+            top: 12px;
             left: -5px;
         }
 	}
@@ -115,7 +115,7 @@
         background-image: url(../img/svg/i-menu-item-3.svg);
 
         @include huge {
-            top: 4px;
+            top: 2px;
         }
 	}
 }
@@ -135,7 +135,7 @@
         background-image: url(../img/svg/i-menu-item-4.svg);
 
         @include huge {
-            top: 12px;
+            top: 10px;
         }
 	}
 }
@@ -155,7 +155,7 @@
         background-image: url(../img/svg/i-menu-item-5.svg);
         
         @include huge {
-            top: 17px;
+            top: 15px;
         }
 	}
 }
@@ -179,7 +179,7 @@
 //		@include sprite($i-menu-item-6);
         
         @include huge {
-            top: 16px;
+            top: 14px;
         }
 	}
 
@@ -214,7 +214,7 @@
 //		max-width: 105px;
         max-width: none;
         line-height: 17px;
-		font-size: 15px;
+		font-size: 15.1px;
         letter-spacing: normal;
 	}
 //	@include twoK{

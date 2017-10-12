@@ -18,6 +18,7 @@
         background-repeat: no-repeat;
 //        filter: brightness(0);
         @include huge {
+            top: 4px;
 //            transform: scale(0.9);
             transform: scale(1);
             width: 19px;
@@ -49,7 +50,7 @@
 
 	@include huge {
 //		font-size: 16px;
-		line-height: 16.38px;
+		line-height: 17.38px;
 		font-size: 13.84px;
 	}
 //	@include twoK {
@@ -62,6 +63,10 @@
 }
 .b-phones__item + .b-phones__item{
     margin-top: 1px;
+    
+    @include huge{
+        margin-top: -1px;
+    }
 }
 .b-phones__link_header{ 
 	color: #3d3f3c;

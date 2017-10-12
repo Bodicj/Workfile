@@ -38,6 +38,12 @@
 .b-service-separate{
 	width: 31.5%;
 //	margin-left: 1px;
+    @include pc{
+        width: 32.17%;
+    }
+    @include note{
+        width: 230px;
+    }
     @include tablet{
 //        width: 100%;
         width: 47%;
@@ -81,7 +87,8 @@
 		line-height: 19px;
 	}
     @include pc{
-        font-size: 14px;
+//        font-size: 14px;
+        font-size: 13px;
         line-height: 20px;
     }
     @include small{

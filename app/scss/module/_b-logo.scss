@@ -25,15 +25,16 @@
 	@include pc {
         position: relative;
 //        right: 2%;
-        right: 6px;
+        right: 8px;
 		display: block;
         width: 152px;
         height: 100%;
-        padding-top: 3px;
+        padding-top: 4px;
 	}
 	@include small {
-		width: 87px;
+        right: 6px;
         bottom: 3%;
+		width: 87px;
         padding-top: 5px;
         
 //        &:before{

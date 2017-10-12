@@ -20,9 +20,10 @@
         padding-bottom: 24px;
         padding-top: 0;
         margin-top: 90px;
+        margin-top: 75px;
     }
     @include note{
-//        margin-top: 40px;
+        margin-top: 74px;
     }
     @include small{
         padding-bottom: 16px;
@@ -45,11 +46,11 @@
             @include huge {
                 margin: 0 -5px;
             }
-            @include note{
+            @include pc{
                 margin: 0;
             }
             @include tablet{
-                max-width: 492px;
+                max-width: 496px;
                 margin: 0 auto;
             }
         }
@@ -67,10 +68,10 @@
             margin-bottom: 39px;
         }
 	}
-    .content-block{
+//    .content-block{
 //      margin-left: -14px;
 //      margin-right: -9px;
-    }
+//    }
     .g-link--allinfo{
         bottom: 30px;
         
@@ -174,6 +175,7 @@
     }
     @include pc{
         padding-top: 185px;
+        padding-bottom: 60px;
     }
     @include small{
         padding: 137px 0 50px;
@@ -231,8 +233,12 @@
 	}
     
     .container{
-//        padding: 0 10px;
         padding: 0;
+        
+        @include pc{
+            width: 733px;
+            padding: 0 10px;
+        }
     }
 
 	.section__title{

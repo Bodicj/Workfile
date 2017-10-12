@@ -8,6 +8,9 @@
     @include huge{
         margin-bottom: 30px;
     }
+    @include note{
+        width: 230px;
+    }
     @include tablet{
         width: 47%;
         

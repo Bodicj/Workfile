@@ -26,9 +26,12 @@
             @include huge{
                 width: 33px;
             }
+            @include pc{
+                width: 45px;
+            }
             @include note{
                 float: none;
-                width: 45px;
+//                width: 45px;
             }
             @include small{
                 margin-right: 0;
@@ -49,9 +52,12 @@
                 @include huge{
                     width: 24px;
                 }
+                @include pc{
+                    width: 33px;
+                }
                 @include note{
                     margin-right: 0;
-                    width: 33px;
+//                    width: 33px;
                 }
             }
         }

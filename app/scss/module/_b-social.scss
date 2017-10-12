@@ -65,7 +65,10 @@
         margin-left: -4px;
     }
     @include pc{
-        margin-left: -8px;
+//        margin-left: -2px;
+    }
+    @include note{
+        margin-left: -2px;
     }
     @include small{
         margin-left: 0;
@@ -79,12 +82,12 @@
 //			margin-top: 25px;
 //		}
 		@include huge {
-            margin-left: -4px;
 			margin-right: 19px;
+            margin-left: -4px;
             transform: scale(0.9)
 		}
 		@include pc {
-			margin-right: 0;
+			margin-right: 4px;
             margin-left: 3px;
 //            transform: scale(0.8)
 		}
@@ -95,8 +98,8 @@
 		}
         @include tablet{
 //            margin: 0;
-            margin-left: 2px;
             margin-right: 8px;
+            margin-left: 2px;
             [class^="icon"]{
 //                transform: scale(0.83);
             }

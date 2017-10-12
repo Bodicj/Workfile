@@ -82,11 +82,13 @@ img {
     max-width: 990px;
   }
   @include note {
-    max-width: 750px;
+//    max-width: 750px;
+    max-width: 733px;
 //      padding: 0;
   }
   @include tablet {
-    max-width: 620px;
+//    max-width: 620px;
+    max-width: 605px;
   }
   @include small {
 //    max-width: 460px;
@@ -250,6 +252,15 @@ font-weight: 800;
         margin-right: 2px;
         vertical-align: middle;
     }
+    @include pc{
+        margin-left: -18px;
+    }
+    @include note{
+//        margin-left: -18px;
+    }
+    @include tablet{
+        margin-left: -21px;
+    }
     @include small{
 //        margin-right: 2px;
         margin-left: 0;
@@ -322,6 +333,9 @@ font-weight: 800;
     @include huge{
         font-size: 11.65px;
     }
+    @include pc{
+        font-size: 12px;
+    }
 }
 .g-link--allinfo{
 //  padding-right: 5px;
@@ -330,7 +344,7 @@ font-weight: 800;
   font-weight: 700;
   text-transform: uppercase;
     
-    @include small{
+    @include pc{
         font-size: 14px;
     }
 }

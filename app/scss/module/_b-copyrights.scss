@@ -14,7 +14,8 @@
 		font-size: 13.11px;
 	}
 	@include pc {
-//		font-size: 17px;
+        padding: 35px 0 15px;
+        font-size: 14px;
 	}
     @include note{
         order: 1;

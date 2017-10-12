@@ -8,7 +8,7 @@
         padding: 0 69px 34px;
     }
     @include pc{
-        padding: 0 100px 98px;
+        padding: 0 100px 55px;
     }
     @include small{
         padding: 0;
@@ -48,12 +48,12 @@
 	}
     @include pc{
         margin: 0 0 46px;
-        font-size: 16px;
+        font-size: 14px;
 //        line-height: 17px;
     }
     @include small{
         margin: 0 0 31px;
-        font-size: 14px;
+//        font-size: 14px;
 //        line-height: 17px;
     }
 
@@ -68,13 +68,15 @@
             max-height: 192px;
         }
         @include pc{
-            max-height: 138px;
+//            max-height: 138px;
+            max-height: 120px;
         }
         @include note{
-            max-height: 206px;
+//            max-height: 206px;
+            max-height: 190px;
         }
         @include tablet{
-            max-height: 273px;
+            max-height: 256px;
         }
         @include small{
             max-height: 342px;

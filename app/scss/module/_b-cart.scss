@@ -52,8 +52,10 @@
         right: -8px;
         width: 16px;
         height: 16px;
-        line-height: 13px;
-        font-size: 8.74px;
+//        line-height: 13px;
+//        font-size: 8.74px;
+        line-height: 12px;
+        font-size: 8px;
     }
     @include pc{
         top: 2px;

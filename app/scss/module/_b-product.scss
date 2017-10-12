@@ -19,7 +19,7 @@ $product-small: 230px;
     }
     @include pc{
 //        margin-bottom: 30px;
-        margin-bottom: 50px;
+        margin: 0 0 50px;
         width: $product-small;
     }
     @include note{
@@ -150,7 +150,7 @@ $product-small: 230px;
         width: 31px;
         min-width: 31px;
         height: 31px;
-        line-height: 25px;
+        line-height: 26px;
     }
     @include pc{
         margin-left: 8px;

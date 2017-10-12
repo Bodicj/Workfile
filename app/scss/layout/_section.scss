@@ -75,11 +75,12 @@
         bottom: 30px;
         
         @include pc{
-            bottom: -24px;
+//            bottom: -24px;
+            bottom: -16px;
+            right: 1px;
         }
         @include small{
-            bottom: 3px;
-            right: 1px;
+//            right: 1px;
         }
     }
 }
@@ -157,7 +158,7 @@
 //        padding-left: 2px;
     }
     @include small{
-        margin: 16px 0 59px;
+        margin: 40px 0 49px;
 //        padding-left: 2px;
     }
 }
@@ -172,10 +173,10 @@
         padding-bottom: 100px;
     }
     @include pc{
-//        padding-top: 185px;
+        padding-top: 185px;
     }
     @include small{
-        padding: 137px 0 35px;
+        padding: 137px 0 50px;
     }
 
 	&:before{

@@ -41,7 +41,8 @@
         }
         &:last-child{
             @include small{
-                margin-right: 17px;
+//                margin-right: 17px;
+                margin-right: 10px;
             }
 
             .b-counters__item{

@@ -12,6 +12,7 @@
 		min-width: 0;
 //		min-width: 245px;
         position: static;
+        display: inline-block;
         background-color: transparent;
         width: auto;
         height: 100%;
@@ -160,12 +161,14 @@
         }
         @include pc{
             position: static;
-            background-color: transparent;
-            display: inline-block;
-            vertical-align: -14%;
+            margin-top: 20px;
+            display: block;
+//            display: inline-block;
+//            vertical-align: -14%;
             width: 27px;
             height: 27px;
             transform: scale(1);
+            background-color: transparent;
             background-image: url(../img/svg/i-search-white.svg);
 //            top: 3px;
 //            right: 3px;
@@ -175,7 +178,8 @@
 //            right: 3px;
         }
         @include small {
-            vertical-align: -16%;
+            margin-top: 12px;
+//            vertical-align: -16%;
             transform: scale(0.9);
             width: 21px;
             height: 21px;

@@ -96,6 +96,8 @@ $height-small: 217px;
 
  	@include huge {
 //        left: calc(50% - 590px);
+          left: calc(25% - -33px);
+          width: 466px;
     }
     
  	@include pc {
@@ -136,7 +138,8 @@ $height-small: 217px;
 //          line-height: 60px;
 //        }
 		@include huge {
-//			font-size: 30px;
+			font-size: 26px;
+            margin: 0 0 18px;
 		}
         @include pc{
             margin-bottom: 10px;
@@ -168,6 +171,10 @@ $height-small: 217px;
 //      }
 		@include huge {
 //			font-size: 18px;
+            padding: 0px 34px;
+            margin: 0 0 23px;
+            font-size: 15.25px;
+            line-height: 21.5px;
 		}
         @include pc{
             overflow: hidden;
@@ -221,6 +228,11 @@ $height-small: 217px;
 //            min-height: 80px;
 //            font-size: 35px;
 //          }
+                
+            @include huge{
+                min-height: 38px;
+                font-size: 13px;
+            }
 		}
 
 		.g-btn--lg{
@@ -230,7 +242,14 @@ $height-small: 217px;
             min-height: 56px;
             padding: 17px 32px;
             font-size: 19.25px;
-            
+
+            @include huge{
+                margin: 0px;
+                min-width: 175px;
+                font-size: 16px;
+                min-height: 46px;
+                padding: 13px 27px;
+            }
             @include pc{
                 margin: 0px;
                 min-width: 180px;
@@ -242,6 +261,11 @@ $height-small: 217px;
 			margin-bottom: 21px;
             width: 95.3%;
             
+            @include huge{
+                margin-bottom: 18px;
+//                width: 98.3%;
+            }
+
             @include pc{
                 margin-bottom: 15px;
 //                width: 100%;
@@ -265,6 +289,10 @@ $height-small: 217px;
 	}
     
 	&>form {
+        @include huge{
+            max-width: 73%;
+        }
+
         @include pc{
             display: none;
         }
@@ -367,6 +395,13 @@ $height-small: 217px;
     top: 72px;
     min-height: 540px;
     
+    @include huge {
+        top: 61px;
+        min-height: 449px;
+        max-height: 449px;
+        padding: 28px 33px;
+    }
+
  	@include pc {
         top: 46px;
         min-height: 236px;

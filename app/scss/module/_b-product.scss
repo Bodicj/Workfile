@@ -6,7 +6,7 @@ $product-small: 230px;
 
 .b-product{
 	max-width: 76.56%;
-    min-width: 230px;
+    min-width: 212px;
 	margin: 0 30px 122px;
 	position: relative;
 //	width: 17.9%;
@@ -14,8 +14,9 @@ $product-small: 230px;
     width: $productNarrow;
     
     @include huge {
-        margin: 0 5px 77px;
-        width: $productNarrow - 10px;
+        margin: 0 36px 77px;
+        //width: $productNarrow - 10px;
+        width: $productNarrow - 78px;
     }
     @include pc{
 //        margin-bottom: 30px;
@@ -75,7 +76,7 @@ $product-small: 230px;
 	display: block;
     outline: 1px solid red;
 //	height: 310px;
-	height: 280px;
+	height: 212px;
 	margin-bottom: 21px;
 
     //	@include twoK {

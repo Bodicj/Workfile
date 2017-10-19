@@ -271,7 +271,7 @@ body.is--mobile-active{
 .b-mobile-nav_wrapper{
     height: calc(100% - 109px);
     overflow: auto;
-    
+    display: none;
     @include note{
         height: calc(100% - 52px);
     }

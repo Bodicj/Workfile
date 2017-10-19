@@ -260,7 +260,7 @@
         }
     }
     @include tablet{
-        height: 455px;
+        height: 300px;
 //        background: #fff url(../img/flowers-subscribe.jpg) top no-repeat /contain;
         background: #fff url(../img/flowers/flowers-subscribe-sm.jpg) no-repeat top;
         
@@ -269,7 +269,7 @@
         }
     }
     @include small{
-        height: 207px;
+        height: 175px;
 //        background: #fff url(../img/flowers-subscribe-xs.png) no-repeat top / 91%;
         background: #fff url(../img/flowers/flowers-subscribe-xs.jpg) no-repeat top;
         

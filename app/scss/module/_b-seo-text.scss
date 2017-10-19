@@ -48,8 +48,9 @@
 	}
     @include pc{
         margin: 0 0 46px;
-        font-size: 14px;
-//        line-height: 17px;
+        font-size: 13px;
+        font-family: "Open Sans";
+        line-height: 17px;
     }
     @include small{
         margin: 0 0 31px;
@@ -72,8 +73,8 @@
             max-height: 120px;
         }
         @include note{
-//            max-height: 206px;
-            max-height: 190px;
+            max-height: 206px;
+            //max-height: 196px;
         }
         @include tablet{
             max-height: 256px;

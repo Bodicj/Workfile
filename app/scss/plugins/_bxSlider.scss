@@ -83,6 +83,7 @@
     @include pc{
         padding-top: 0;
         line-height: 15px;
+        bottom: 16px;
     }
     @include small{
         line-height: 10px;
@@ -116,12 +117,12 @@
         width: 14px;
         height: 14px;
     } 
-//    @include pc{
+    @include pc{
 //        margin: 0 4px;
-//        border-width: 1px;
+        border-width: 1px;
 //        width: 15px;
 //        height: 15px;
-//    }
+    }
     @include small{
         margin: 0 2.5px;
         border-width: 1px;

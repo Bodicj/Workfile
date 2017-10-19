@@ -132,7 +132,8 @@ $footerSvgColor: #FFFFFF;
 //	padding-left: 4px;
     @include note{
         width: 195px;
-        padding-left: 25px;
+//      padding-left: 25px;
+        padding-left: 10px;
     }
     @include small{
         width: 100%;
@@ -172,7 +173,8 @@ $footerSvgColor: #FFFFFF;
     }
     @include note{
         width: 220px;
-        padding-left: 25px;
+ //     padding-left: 25px;
+        padding-left: 40px;
     }
     @include small{
         width: 100%;

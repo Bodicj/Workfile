@@ -23,7 +23,7 @@
         margin-top: 75px;
     }
     @include note{
-        margin-top: 74px;
+        margin-top: 65px;
     }
     @include small{
         padding-bottom: 16px;
@@ -276,12 +276,13 @@
         padding-bottom: 186px;
     } 
     @include pc{
-        margin-top: 53px;
+        margin-top: 20px;
         padding-bottom: 190px;
     }
     @include small{
-        margin-top: 21px;
+        margin-top: 0;
         padding-bottom: 130px;
+        padding-top: 35px;
     }
     
 	.container{

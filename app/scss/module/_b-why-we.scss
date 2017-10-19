@@ -18,7 +18,7 @@ $why-we-pl-xs: 71px;
 	padding-left: 122px;
     
     @include huge{
-        padding-right: 30px;
+        padding-right: 0px;
         padding-left: 98px;
     }  
   /*  @include pc{
@@ -153,7 +153,7 @@ $why-we-pl-xs: 71px;
         left: 10px;
     }    
     @include small{
-        top: 3px;
+        top: 2px;
         left: 6px;
         width: 53px;
     }
@@ -185,7 +185,7 @@ $why-we-pl-xs: 71px;
         left: 11px;
     }    
     @include small{
-        top: -2px;
+        top: 1px;
         left: 7px;
         width: 50px;
     }

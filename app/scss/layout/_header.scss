@@ -17,7 +17,8 @@ $svgTransitionTime: 0.2s;
 //		background-size: 100%;
 //	}
     @include pc{
-        background: none;
+       // background: none;
+       background: #0f0f0f;
         position: fixed;
         top: 0; 
         left: 0;
@@ -141,7 +142,7 @@ $svgTransitionTime: 0.2s;
 }
 .header__lang{
 	float: right;
-    margin-right: 2px;
+    margin-right: -1px;
 //	@include fourK {
 //		margin-top: 17px;
 //	}
@@ -198,7 +199,7 @@ $svgTransitionTime: 0.2s;
 	padding: 15px 11.52% 15px 0;
     
 	@include huge {
-        padding: 8px 11.52% 5px 0;
+        padding: 5px 11.52% 5px 0;
 		
 	}
     @include pc{

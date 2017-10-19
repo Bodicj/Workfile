@@ -1,10 +1,11 @@
 .b-lang{
     position: relative;
-	padding: 11px 15px;
+	padding: 10px 16px;
 	cursor: pointer;
 	transition: all .3s;
     
-    line-height: 22px;
+    line-height: 16px;
+    margin-top: 0;
 	font-size: 19px;
 	font-weight: 600;
 	color: #3d3f3c;
@@ -26,13 +27,13 @@
 	}
     
 	@include huge {
-		font-size: 16px;
-		padding-top: 5px;
+		font-size: 13.84px;
+    	padding-top: 6px;
 	}
 }
 .b-lang__current{
 	position: relative;
-	padding-right: 14px;
+//	padding-right: 14px;
 	line-height: 20px;
 //	font-size: 19px;
 	font-weight: 600;
@@ -42,7 +43,7 @@
 	&:after{
 		content: '';
 		position: absolute;
-		top: 9px; right: 2px;
+		top: 9px; right: -11px;
 		@include triangle(3.5px, #3d3f3c, 'down');
 //		@include twoK {
 //			@include triangle(4px, #3d3f3c, 'down')
@@ -76,7 +77,8 @@
 }
 
 .b-lang__item{
-    padding: 5px 2px;
+    padding: 7px 2px;
+    text-align: center;
     
     a{
 	    cursor: pointer;

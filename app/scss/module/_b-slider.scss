@@ -88,7 +88,8 @@ $height-small: 217px;
 //    left: 134px;
 //    left: calc(50% - 687px);
 //    left: 10px;
-    left: calc(25% - 5px);
+//    left: calc(25% - 5px);
+      left: calc(25%);
     transform: translateX(-50%);
     width: 561px;
 	padding: 40px 32.8px;
@@ -96,7 +97,8 @@ $height-small: 217px;
 
  	@include huge {
 //        left: calc(50% - 590px);
-          left: calc(25% - -33px);
+ //       left: calc(25% - -33px);
+          left: calc(25%);
           width: 466px;
     }
     
@@ -260,6 +262,8 @@ $height-small: 217px;
 		.g-form__field{
 			margin-bottom: 21px;
             width: 95.3%;
+            margin-left: auto;
+            margin-right: auto;
             
             @include huge{
                 margin-bottom: 18px;
@@ -334,11 +338,11 @@ $height-small: 217px;
 //        font-size: 35px;
 //      }
         @include pc{
-            min-height: 49px;
+            min-height: 46px;
             min-width: 164px;
             padding: 8px 17px;
-            line-height: 33px;
-            font-size: 18px;
+            line-height: 30px;
+            font-size: 16px;
         }
         @include small{
             min-height: 32px;
@@ -387,9 +391,10 @@ $height-small: 217px;
 //    @include twoK {
 //      width: 28.377%;
 //    }
-//	@include huge {
-//	right: calc(50% - 590px);
-//	}
+	@include huge {
+//	right: calc(25% + 33px);
+    right: calc(25%);
+	}
 }
 .b-slider__desc--high{
     top: 72px;
@@ -420,9 +425,14 @@ $height-small: 217px;
     top: 133px;
     min-height: 438px;
     padding-top: 36px;
-    
+
+    @include huge {
+        top: 61px;
+        
+    }
+
  	@include pc {
-        top: 37px;
+        top: 33px;
         max-height: 254px;
         min-height: 254px;
         padding: 12px 15px;
@@ -454,8 +464,13 @@ $height-small: 217px;
     padding: 0 20px;
     padding-top: 46px;
     
+     @include huge {
+        top: 100px;
+        
+    }
+
  	@include pc {
-        top: 44px;
+        top: 33px;
         min-height: 253px;
         max-height: 253px;
         padding: 22px 15px;

@@ -89,7 +89,9 @@ $(function() {
 	    // 	removeFiltersMenuVisibility();
 	    // 	// removeBodyBackground();
 	    // }
-
+	    $('.b-mobile-nav_wrapper').css({
+	    	display: 'block'
+	    });
 
 	// Mobile menu search and minicart
 	//---------------------------------------------------------------------------------------

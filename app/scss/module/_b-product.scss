@@ -6,7 +6,7 @@ $product-small: 230px;
 
 .b-product{
 	max-width: 76.56%;
-    min-width: 212px;
+    min-width: 230px;
 	margin: 0 30px 122px;
 	position: relative;
 //	width: 17.9%;
@@ -16,12 +16,14 @@ $product-small: 230px;
     @include huge {
         margin: 0 36px 77px;
         //width: $productNarrow - 10px;
+        min-width: 212px;
         width: $productNarrow - 78px;
     }
     @include pc{
 //        margin-bottom: 30px;
         margin: 0 0 50px;
         width: $product-small;
+        max-width: $product-small;
     }
     @include note{
 //        margin: 0 0 95px;
@@ -76,7 +78,7 @@ $product-small: 230px;
 	display: block;
     outline: 1px solid red;
 //	height: 310px;
-	height: 212px;
+	height: 280px;
 	margin-bottom: 21px;
 
     //	@include twoK {
@@ -85,6 +87,10 @@ $product-small: 230px;
     //	@include fourK {
     //		height: 580px;
     //	}
+
+    @include huge{
+        height: 212px;
+    }
     @include pc{
         margin-bottom: 15px;
         height: $product-small;
@@ -544,10 +550,11 @@ $product-small: 230px;
         padding-top: 14px;
     }
     @include pc{
+    	padding-top: 10px;
     }
     @include note{
         margin-bottom: 11px;
-        padding-top: 16px;
+        padding-top: 10px;
     }
     @include small{
         margin-bottom: 15px;

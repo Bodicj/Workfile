@@ -12,7 +12,8 @@ $(function() {
 		var 
 			 $mobNav = $('.js-mobile-nav')
 			,$menuTrigger = $('.js-nav-toggle')
-			,$filtersMenu = $('.js-filters')
+			,$filtersMenu = $('.js-filters')			// filters aside
+			,$filtersTriggers = $(".js-filters-toggle")	// button and X
 			;
 	    // Показываем/Скрываем боковое меню
 	    function addMenuVisibility(){
@@ -181,10 +182,10 @@ $(function() {
     		if (!$body.hasClass('is--mobile-active')){	// Якщо немає жодного відкритого попапа
     			openMainMenu();
     			addBodyBackground();
-    		} else if(!$mobNav.hasClass("is--visible")){
+    		} else if(!$mobNav.hasClass("is--visible")){// Якщо відкритий якийсь попап, але це не - головне меню
 				closeAllPopupMenus();
     			openMainMenu();
-    		} else {
+    		} else {									// Якщо відкрито саме - головне меню
     			closeMainMenu();
     			removeBodyBackground();
     		}
@@ -194,10 +195,23 @@ $(function() {
 		});
 
     	// Add listener for filters open/close buttons
-	    // $('.js-filters-toggle').on('click',function(){
-	    // 	toggleFiltersMenuVisibility();
-	    // 	// toggleBodyBackground();
-	    // });
+	    $filtersTriggers.on('click',function(e){
+	    	console.log("----------------");
+    		console.log("filtersTriggers click");
+    		e.stopPropagation();
+
+    		if (!$body.hasClass('is--mobile-active')){	// Якщо немає жодного відкритого попапа
+    			openFiltersMenu();
+    			addBodyBackground();
+    		} else if(!$filtersMenu.hasClass("is--visible")){// Якщо відкритий якийсь попап, але це не - меню фільтрів
+				closeAllPopupMenus();
+    			openFiltersMenu();
+    		} else {									// Якщо відкрито саме - меню фільтрів
+    			closeFiltersMenu();
+    			removeBodyBackground();
+    		}
+	    });
+
 	    $mobNav.on("click", function(e){	// 
 			e.stopPropagation();
 		});

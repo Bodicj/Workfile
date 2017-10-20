@@ -87,13 +87,13 @@
             transform: scale(0.9)
 		}
 		@include pc {
-			margin-right: 4px;
+			margin-right: 0px;
             margin-left: 3px;
 //            transform: scale(0.8)
 		}
 		@include note {
-			margin-right: 17px;
-            margin-left: 0;
+			margin-right: 8px;
+            margin-left: 2;
 //            transform: scale(0.83)
 		}
         @include tablet{

@@ -9,6 +9,9 @@
 	font-size: 19px;
 	font-weight: 600;
 	color: #3d3f3c;
+	@include huge {
+		padding: 1px 13px;
+	}
 	&:hover{
 		background:#f5f5f5;
         text-decoration: underline;
@@ -80,6 +83,9 @@
     padding: 7px 2px;
     text-align: center;
     
+    @include huge {
+		padding: 4px 2px;
+	}
     a{
 	    cursor: pointer;
     }

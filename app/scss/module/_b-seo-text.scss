@@ -41,15 +41,16 @@
 //		line-height: 40px;
 //	}
 	@include huge {
-        margin: 0 0 15px;
+//        margin: 0 0 15px;
+        margin: 0 0 30px;
 		font-size: 13.84px;
 //		line-height: 21px;
         line-height: 17px;
 	}
     @include pc{
         margin: 0 0 46px;
-        font-size: 13px;
-        font-family: "Open Sans";
+        font-size: 14px;
+        
         line-height: 17px;
     }
     @include small{

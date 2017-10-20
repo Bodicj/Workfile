@@ -25,14 +25,22 @@
 
             @include huge{
                 width: 33px;
+                height: 17px;
             }
             @include pc{
                 width: 45px;
+                height: 22px;
             }
             @include note{
                 float: none;
 //                width: 45px;
+                margin-right: 5px;
             }
+
+            @include tablet{
+                margin-right: 5px;
+            }
+
             @include small{
                 margin-right: 0;
             }
@@ -45,7 +53,7 @@
         &:last-child{
             @include small{
 //                margin-right: 17px;
-                margin-right: 10px;
+                margin-right: 3px;
             }
 
             .b-counters__item{

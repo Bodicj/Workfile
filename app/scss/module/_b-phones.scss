@@ -85,6 +85,11 @@
         @include huge{
             width: 12px;
         }
+
+        @include pc{
+            width: 14px;
+        }
+
         @include tablet{
             width: 15px;
         }

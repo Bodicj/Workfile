@@ -79,11 +79,14 @@ img {
 //    max-width: 1250px;
 //  }
   @include pc {
-    max-width: 990px;
+//    max-width: 990px;
+      max-width: 1005px;
+
   }
   @include note {
 //    max-width: 750px;
-    max-width: 733px;
+//    max-width: 733px;
+      max-width: 748px;
 //      padding: 0;
   }
   @include tablet {
@@ -253,7 +256,8 @@ font-weight: 800;
         vertical-align: middle;
     }
     @include pc{
-        margin-left: -18px;
+ //       margin-left: -18px;
+          margin-left: -23px;
     }
     @include note{
 //        margin-left: -18px;

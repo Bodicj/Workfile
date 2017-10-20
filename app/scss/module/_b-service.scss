@@ -33,6 +33,10 @@
 		margin: 0 auto;
 		width: 100%;
 
+        @include tablet{
+            height: 182px;
+        }
+
 	}
 }
 .b-service-separate{
@@ -46,7 +50,8 @@
     }
     @include tablet{
 //        width: 100%;
-        width: 47%;
+//        width: 47%;
+          width: 290px;
         
         &:last-child{
             display: none;

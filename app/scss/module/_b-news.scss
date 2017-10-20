@@ -3,16 +3,18 @@
 }
 .b-news{
 	margin-bottom: 45px;
-	width: 31.5%;
+ //   width: 31.5%;
+	width: 32.17%;
     
     @include huge{
-        margin-bottom: 30px;
+//        margin-bottom: 30px;
     }
     @include note{
         width: 230px;
     }
     @include tablet{
-        width: 47%;
+//        width: 47%;
+        width: 290px;
         
         &:last-child{
             display: none;
@@ -36,7 +38,7 @@
         margin: 0 0 19px;
     }
     @include pc{
-        margin: 0 0 12px;
+//        margin: 0 0 12px;
     }
     
 	img{
@@ -45,6 +47,10 @@
 //		@include twoK {
 //			width: 100%;
 //		}
+        
+        @include tablet{
+            height: 182px;
+        }
 	}
 }
 .b-news__title,

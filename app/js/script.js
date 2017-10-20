@@ -224,6 +224,9 @@ $(function() {
 		$cartPopup.on("click", function(e){	// 
 			e.stopPropagation();
 		});
+		$filtersMenu.on("click", function(e){	// 
+			e.stopPropagation();
+		});
 
 
 		$searchBtn.on("click", function(e){	// prevent form submit

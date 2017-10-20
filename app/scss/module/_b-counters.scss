@@ -7,10 +7,11 @@
         order: 2;
         padding: 0 15px;
         line-height: 22px;
-        padding-left: 9px;
+//        padding-left: 9px;
+        padding-right: 24px;
     }
     @include tablet{
-        padding-left: 9px;
+//        padding-left: 9px;
     }
     @include small{
         display: flex;

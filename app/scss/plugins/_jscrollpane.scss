@@ -25,10 +25,6 @@
 	width: 17px;
 	height: 100%;
 	background: red;
-    
-    @include phone{
-        width: 14px;
-    }
 }
 
 .jspHorizontalBar

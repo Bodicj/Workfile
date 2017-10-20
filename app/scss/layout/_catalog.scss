@@ -9,7 +9,7 @@
     
     .selectric-wrapper{
         
-        @include phone{
+        @include small{
             float: left;
             width: 120px;
         }
@@ -19,15 +19,17 @@
             .label{
                 font-weight: 600;
 
-                @include phone{
+                @include small{
                     margin: 0px 25px 0 11px;
                     height: 28px;
                     line-height: 29px;
                 }
             }
             .button{
-                @include phone{
-                    right: 9px;
+                height: 40px;
+                @include small{
+//                    right: 9px;
+                    right: 7px;
                     top: 0px;
                     width: 15px;
                     height: 30px;
@@ -35,7 +37,17 @@
                 }
                 
                 &:after{
-                    border-width: 5px;
+//                    border-width: 5px;
+                    border: none;
+                    width: 8px;
+                    height: 5px;
+                    background-image: url(../img/svg/i-qty-down.svg);
+                    background-repeat: no-repeat;
+                    
+                    @include small{
+                        width: 7px;
+                        height: 4px;
+                    }
                 }
             }
         }
@@ -46,7 +58,7 @@
         vertical-align: middle;
         width: 174px;
         
-        @include phone{
+        @include small{
             width: 120px;
         }
     }

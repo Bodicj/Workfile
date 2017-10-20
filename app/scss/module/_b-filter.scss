@@ -2,7 +2,7 @@
 	position: relative;
 	margin-bottom: 60px;
     
-    @include small{
+    @include pc{
         overflow: auto;
         position: fixed;
         top: 0;
@@ -26,14 +26,18 @@
     font-size: 21px;
     text-transform: uppercase;
     
-    @include phone{
+    @include pc{
         display: block;
     }
     
     .icon-close-white{
-        margin-top: 7px;
+        margin-top: 15px;
         float: right;
         cursor: pointer;
+        
+        @include small{
+            margin-top: 4px;
+        }
     }
 }
 .b-filter__title{
@@ -47,7 +51,7 @@
 	text-align: center;
 	color: #0f0f0f;
     
-    @include small{
+    @include pc{
         padding: 0;
         text-align: left;
         font-size: 16.61px;
@@ -102,7 +106,7 @@
 		margin-bottom: 0;
 	}
     
-    @include phone{
+    @include pc{
         padding: 0 15px;
     }
 }
@@ -113,7 +117,7 @@
 	transition: all .3s;
 	overflow-y: auto;
     
-    @include phone{
+    @include pc{
         max-height: 165px;
     }
 
@@ -127,14 +131,14 @@
 	}
     
     .g-checkbox:not(checked) + label:before {
-        @include phone{
+        @include pc{
             height: 20px;
             width: 20px;
             background-color: #000;
         }
     }
     .g-checkbox:not(checked) + label:after {
-        @include phone{
+        @include pc{
             top: 2px;
             left: 6px;
         }
@@ -153,14 +157,18 @@
 //          font-size: 30px;
 //          line-height: 39px;
 //        }
-        @include phone{
+        @include pc{
             line-height: 20px;
             font-size: 13.29px;
             color: #fff;
         }
 	}
     
-    
+    .jspVerticalBar{
+        @include pc{
+            width: 14px;
+        }
+    }
 }
 .b-filter__slider-wrapper{
 	margin-bottom: 35px;
@@ -168,12 +176,13 @@
 		margin-bottom: 0;
 	}
     
-    @include phone{
+    @include pc{
         padding: 0 15px;
     }
 }
 .b-filter__slider{
-	max-height: 150px;
+//	max-height: 150px;
+	max-height: 193px;
 	transition: all .3s;
 //    @include fourK {
 //      max-height: 167px;
@@ -186,7 +195,7 @@
     
     .b-filter__action{
         border: none;
-        @include phone{
+        @include pc{
             padding: 0;
         }
     }
@@ -196,18 +205,56 @@
 //    @include fourK {
 //      margin-bottom: 43px;
 //    }
+    .mfilter-price-inputs{
+        font-weight: 300;
+        text-align: center;
+        
+        @include pc{
+            color: #fff;
+        }
+        
+        input{
+            display: inline-block;
+            margin: 5px 7px;
+            width: 90px;
+            border: 2px solid #121212 !important;
+            padding: 4px 5px 4px 17px;
+            font-weight: 600;
+            
+            @include pc{
+                width: 80px;
+                margin: 5px 1px;
+                padding: 4px 10px;
+            }
+        }
+        
+        .mfilter-opts-price-min{
+            color: #535353;
+        }
+        .mfilter-opts-price-max{
+        }
+    }
+    
+    .irs-grid, .irs-from, .irs-to, .irs-min, .irs-max{
+        opacity: 0;
+    }
+    
+    #price_range{
+        visibility: hidden;
+        padding: 4px 15px;
+    }
 }
 
 .b-filter__action{
 	text-align: center;
     
-    @include phone{
+    @include pc{
         border-top: 1px solid #fff;
         padding: 18px 25px;
     }
     
     &:after{
-        @include phone{
+        @include pc{
             content: '';
             display: table;
             clear: both;
@@ -218,7 +265,7 @@
 		display: block;
 		width: 100%;
         
-        @include phone{
+        @include pc{
             margin: auto;
             width: 200px;
             border: 1px solid #fff;
@@ -253,7 +300,7 @@
 //      font-size: 29px;
 //      line-height: 30px;
 //    }
-    @include phone{
+    @include pc{
         float: right;
         width: auto;
         border: 1px solid currentColor;
@@ -268,7 +315,7 @@
     &:first-child{
         display: block;
         
-        @include phone{
+        @include pc{
             float: left;
             border-color: transparent;
             font-weight: 400;

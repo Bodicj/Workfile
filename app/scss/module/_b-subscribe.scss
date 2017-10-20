@@ -64,7 +64,7 @@
 //		padding-top: 10px;
 //	}
 	@include huge {
-		font-size: 21px;
+		font-size: 20.39px;
 //		text-transform: none;
 	}
     @include pc{
@@ -72,6 +72,7 @@
         width: 100%;
         text-align: center;
 //        text-transform: uppercase;
+        font-size: 21px;
     }
     @include small{
         margin-bottom: 25px;

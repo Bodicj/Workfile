@@ -35,6 +35,9 @@ $footerSvgColor: #FFFFFF;
         @include note{
             max-width: 100%;
         }
+        @include small{
+          padding-left: 0;
+        }
     }
     
     

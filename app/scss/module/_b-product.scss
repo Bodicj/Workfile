@@ -166,6 +166,13 @@ $product-small: 230px;
         height: 38px;
         line-height: 32px;
     }
+    @include small{
+      margin-left: 8px;
+      min-width: 30px;
+      width: 33px;
+      height: 33px;
+      line-height: 27px;
+    }
 }
 .b-product__tag--sale{
 	border: 3px solid #0f0f0f;
@@ -196,6 +203,9 @@ $product-small: 230px;
         border-width: 3px;
         line-height: 32px;
         font-size: 12px;
+    }
+    @include pc{
+        line-height: 27px;
     }
 }
 .b-product__tag--new{

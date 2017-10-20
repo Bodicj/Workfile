@@ -129,6 +129,9 @@ $why-we-pl-xs: 70px;
         @include pc{
             transform: scale(0.9)
         }
+      @include small{
+        transform: scale(1)
+      }
     }
 }
 .b-why-we__icon--1{
@@ -188,7 +191,7 @@ $why-we-pl-xs: 70px;
         left: 12px;
     }    
     @include small{
-        top: -9px;
+        top: -5px;
         left: 7px;
         width: 50px;
     }

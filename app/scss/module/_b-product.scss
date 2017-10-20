@@ -152,20 +152,36 @@ $product-small: 230px;
 //		font-size: 17px;
 //		padding-top: 5px;
 //	}
-    @include huge{
-        margin-left: 8px;
-        width: 31px;
-        min-width: 31px;
-        height: 31px;
-        line-height: 26px;
-    }
-    @include pc{
-        margin-left: 8px;
-        min-width: 35px;
-        width: 38px;
-        height: 38px;
-        line-height: 32px;
-    }
+
+
+  @include huge {
+    margin-left: 8px;
+    width: 31px;
+    min-width: 31px;
+    height: 31px;
+    line-height: 26px;
+  }
+  @include pc{
+    margin-left: 8px;
+    min-width: 35px;
+    width: 38px;
+    height: 38px;
+    line-height: 32px;
+  }
+  @include note{
+    margin-left: 8px;
+    min-width: 33px;
+    width: 33px;
+    height: 33px;
+    line-height: 27px;
+  }
+  @include tablet {
+    margin-left: 8px;
+    width: 33px;
+    min-width: 33px;
+    height: 33px;
+    line-height: 26px;
+  }
     @include small{
       margin-left: 8px;
       min-width: 30px;
@@ -204,7 +220,10 @@ $product-small: 230px;
         line-height: 32px;
         font-size: 12px;
     }
-    @include pc{
+  @include note{
+    line-height: 27px;
+  }
+    @include tablet{
         line-height: 27px;
     }
 }

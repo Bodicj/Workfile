@@ -225,6 +225,8 @@ $product-small: 230px;
   }
     @include tablet{
         line-height: 27px;
+      padding-right: 8px;
+      margin-right: -2px;
     }
 }
 .b-product__tag--new{

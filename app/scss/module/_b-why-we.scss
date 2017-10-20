@@ -144,7 +144,7 @@ $why-we-pl-xs: 70px;
 //		top: 25px;
 //	}
     @include huge{
-        top: 4px;
+        top: 5px;
         left: 13px;
         width: 64px;
     }  
@@ -156,7 +156,7 @@ $why-we-pl-xs: 70px;
         left: 10px;
     }    
     @include small{
-        top: 2px;
+        top: 4px;
         left: 6px;
         width: 53px;
     }
@@ -179,7 +179,7 @@ $why-we-pl-xs: 70px;
     
  
 	@include huge {
-        top: -9px;
+        top: -6px;
 		left: 17px;
         width: 60px;
 	}
@@ -212,7 +212,7 @@ $why-we-pl-xs: 70px;
 //		top: 29px;
 //	}
 	@include huge {
-        top: 2px;
+        top: 5px;
 		left: 23px;
         width: 86px;
 	}
@@ -224,7 +224,7 @@ $why-we-pl-xs: 70px;
         left: -5px;
     }    
     @include small{
-        top: 2px;
+      top: 4px;
     left: -3px;
     width: 64px;
     }

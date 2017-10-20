@@ -1,5 +1,5 @@
 $why-we-pl-sm: 130px;
-$why-we-pl-xs: 71px;
+$why-we-pl-xs: 70px;
 
 .b-why-we{
 	position: relative;
@@ -8,7 +8,7 @@ $why-we-pl-xs: 71px;
     
     @include huge{
         margin-bottom: 0;
-        padding-right: 10px;
+        /*padding-right: 10px;*/
     }
     @include pc{
         padding-right: 0;
@@ -35,7 +35,7 @@ $why-we-pl-xs: 71px;
 	padding-left: 129px;
 
 	@include huge {
-		padding-left: 114px;
+		padding-left: 98px;
 	}
     @include pc{
         padding-left: $why-we-pl-sm;    
@@ -48,7 +48,7 @@ $why-we-pl-xs: 71px;
 	padding-left: 160px;
 
 	@include huge {
-		padding-left: 148px;
+		padding-left: 138px;
 	}
     @include pc{
         padding-left: $why-we-pl-sm;    
@@ -129,6 +129,9 @@ $why-we-pl-xs: 71px;
         @include pc{
             transform: scale(0.9)
         }
+      @include small{
+        transform: scale(1)
+      }
     }
 }
 .b-why-we__icon--1{
@@ -177,7 +180,7 @@ $why-we-pl-xs: 71px;
  
 	@include huge {
         top: -9px;
-		left: 34px;
+		left: 17px;
         width: 60px;
 	}
     @include pc{
@@ -188,7 +191,7 @@ $why-we-pl-xs: 71px;
         left: 12px;
     }    
     @include small{
-        top: -9px;
+        top: -5px;
         left: 7px;
         width: 50px;
     }
@@ -210,7 +213,7 @@ $why-we-pl-xs: 71px;
 //	}
 	@include huge {
         top: 2px;
-		left: 49px;
+		left: 23px;
         width: 86px;
 	}
     @include pc{

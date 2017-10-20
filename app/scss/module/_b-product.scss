@@ -152,19 +152,42 @@ $product-small: 230px;
 //		font-size: 17px;
 //		padding-top: 5px;
 //	}
-    @include huge{
-        margin-left: 8px;
-        width: 31px;
-        min-width: 31px;
-        height: 31px;
-        line-height: 26px;
-    }
-    @include pc{
-        margin-left: 8px;
-        min-width: 35px;
-        width: 38px;
-        height: 38px;
-        line-height: 32px;
+
+
+  @include huge {
+    margin-left: 8px;
+    width: 28px;
+    min-width: 28px;
+    height: 28px;
+    line-height: 23px;
+  }
+  @include pc{
+    margin-left: 8px;
+    min-width: 35px;
+    width: 38px;
+    height: 38px;
+    line-height: 32px;
+  }
+  @include note{
+    margin-left: 8px;
+    min-width: 33px;
+    width: 33px;
+    height: 33px;
+    line-height: 27px;
+  }
+  @include tablet {
+    margin-left: 8px;
+    width: 33px;
+    min-width: 33px;
+    height: 33px;
+    line-height: 26px;
+  }
+    @include small{
+      margin-left: 8px;
+      min-width: 30px;
+      width: 33px;
+      height: 33px;
+      line-height: 27px;
     }
 }
 .b-product__tag--sale{
@@ -189,13 +212,19 @@ $product-small: 230px;
     
     @include huge{
         border-width: 2px;
-        line-height: 28px;
+        line-height: 23px;
         font-size: 10.2px;
     }
     @include pc{
         border-width: 3px;
         line-height: 32px;
         font-size: 12px;
+    }
+  @include note{
+    line-height: 27px;
+  }
+    @include tablet{
+        line-height: 27px;
     }
 }
 .b-product__tag--new{
@@ -331,7 +360,7 @@ $product-small: 230px;
 //  }
     @include huge{
         line-height: normal;
-        font-size: 21.85px;
+        font-size: 20.8px;
     }
     @include pc{
 //        font-size: 17.91px;
@@ -377,7 +406,7 @@ $product-small: 230px;
 //    }
     @include huge{
 //        line-height: normal;
-        font-size: 15.4px;
+        font-size: 17px;
     }
     @include pc{
         font-size: 17px;
@@ -571,7 +600,7 @@ $product-small: 230px;
         
         @include huge{
             top: -6px;
-            font-size: 10px;
+            font-size: 8.31px;
         }
         @include pc{
             top: -9px;

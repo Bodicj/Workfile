@@ -602,6 +602,21 @@ $(function() {
 
 	})();
 
+
+  //
+  // Menu Slider
+  //---------------------------------------------------------------------------------------
+	(function(){
+
+		var $slider = $('.js-slider_menu').bxSlider({
+			slideMargin: 10,
+			minSlides: 5,
+			// infiniteLoop: false,
+			pager: false,
+			controls:false
+		});
+	})();
+
 	//
 	// Catalog - Products Sort Block
 	//---------------------------------------------------------------------------------------

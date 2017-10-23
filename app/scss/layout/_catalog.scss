@@ -3,13 +3,13 @@
 	vertical-align: top;
 	float: right;
     
-    @include small{
+    @include note{
         width: 100%;
     }
     
     .selectric-wrapper{
         
-        @include small{
+        @include pc{
             float: left;
             width: 120px;
         }
@@ -19,7 +19,7 @@
             .label{
                 font-weight: 600;
 
-                @include small{
+                @include pc{
                     margin: 0px 25px 0 11px;
                     height: 28px;
                     line-height: 29px;
@@ -27,7 +27,7 @@
             }
             .button{
                 height: 40px;
-                @include small{
+                @include pc{
 //                    right: 9px;
                     right: 7px;
                     top: 0px;
@@ -44,7 +44,7 @@
                     background-image: url(../img/svg/i-qty-down.svg);
                     background-repeat: no-repeat;
                     
-                    @include small{
+                    @include pc{
                         width: 7px;
                         height: 4px;
                     }
@@ -58,7 +58,7 @@
         vertical-align: middle;
         width: 174px;
         
-        @include small{
+        @include pc{
             width: 120px;
         }
     }

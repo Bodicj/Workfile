@@ -13,9 +13,8 @@
 //		width: 100%;
 //		margin: 0 0 20px;
 //	}
-    @include small{
-        margin-top: 42px;
-        margin-right: 0;
-        width: auto;
+    @include note{
+        margin: 42px auto 0;
+        width: 290px;
     }
 }

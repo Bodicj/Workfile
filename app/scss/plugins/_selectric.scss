@@ -39,7 +39,7 @@ $selectric-font-size-xs: $selectric-font-size - 4px !default;
     height: $selectric-inner-height;
     user-select: none;
       
-      @include small{
+      @include pc{
           font-size: $selectric-font-size-xs;
       }
   }

@@ -28,6 +28,9 @@ $svgTransitionTime: 0.2s;
 }
 .header--simple{
 	margin-bottom: 63px;
+    @include huge{
+        margin-bottom: 46px;
+    }
 }
 .header__logo{
 //    $width: 22.5%;

@@ -33,3 +33,22 @@
 		text-decoration: none;
 	}
 }
+
+.b-groups-menu_slider {
+    .b-groups-menu__list{
+        overflow: hidden;
+        white-space: nowrap;
+        
+        .b-groups-menu__item{
+            margin-right: 5px;
+            display: inline-block;
+            width: auto!important;
+
+            .b-groups-menu__link{
+                &:hover{
+                    background: none;
+                }
+            }
+        }
+    }
+}

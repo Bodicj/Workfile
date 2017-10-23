@@ -2,9 +2,12 @@
 	margin-bottom: 92px;
 	min-height: 20px;
 
-    @include phone{
+    @include pc{
+        margin-bottom: 60px;
+    }
+    @include small{
         margin-bottom: 50px;
-        font-size: 10px;
+//        font-size: 10px;
     }
     
 	a {
@@ -35,7 +38,12 @@
 //		font-size: 30px;
 //		line-height: 35px;
 //	}
-    @include phone{
+    @include huge{
+        padding-left: 10px;
+        line-height: 16px;
+        font-size: 12px;
+    }
+    @include small{
         padding-left: 10px;
         line-height: 16px;
         font-size: 10px;
@@ -58,7 +66,13 @@
         transform: rotate(90deg);
         
         
-        @include phone{
+        @include huge{
+            top: 4px;
+            left: -2px;
+            width: 10px;
+            height: 7px;
+        }
+        @include small{
             top: 5px;
             left: 0;
             width: 8px;

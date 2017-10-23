@@ -148,7 +148,7 @@ $why-we-pl-xs: 70px;
         top: 5px;
         left: 13px;
         width: 64px;
-    }  
+    }
     @include pc{
         top: 4px;
         width: 89px;
@@ -219,6 +219,10 @@ $why-we-pl-xs: 70px;
 		left: 23px;
         width: 86px;
 	}
+
+  @include tablet{
+    top: 1px;
+  }
     @include pc{
         top: 2px;
         width: 117px;
@@ -226,7 +230,7 @@ $why-we-pl-xs: 70px;
     @include note{*/
 //        left: 0;
         left: -5px;
-    }    
+    }
     @include small{
         top: 4px;
         left: -3px;

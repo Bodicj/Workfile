@@ -157,16 +157,16 @@ $product-small: 230px;
   @include huge {
     margin-left: 8px;
     width: 28px;
-    min-width: 28px;
+    min-width: 29px;
     height: 28px;
     line-height: 23px;
   }
   @include pc{
     margin-left: 8px;
     min-width: 35px;
-    width: 38px;
-    height: 38px;
-    line-height: 32px;
+    width: 35px;
+    height: 35px;
+    line-height: 29px;
   }
   @include note{
     margin-left: 8px;
@@ -182,9 +182,9 @@ $product-small: 230px;
     height: 33px;
     line-height: 26px;
   }
-    @include small{
+    @include small {
       margin-left: 8px;
-      min-width: 30px;
+      min-width: 35px;
       width: 33px;
       height: 33px;
       line-height: 27px;
@@ -217,7 +217,7 @@ $product-small: 230px;
     }
     @include pc{
         border-width: 3px;
-        line-height: 32px;
+        line-height: 30px;
         font-size: 12px;
     }
   @include note{
@@ -225,8 +225,7 @@ $product-small: 230px;
   }
     @include tablet{
         line-height: 27px;
-      padding-right: 8px;
-      margin-right: -2px;
+      min-width: 35px;
     }
 }
 .b-product__tag--new{
@@ -237,11 +236,24 @@ $product-small: 230px;
     
     @include huge{
         border-width: 2px;
+      background-color: rgba(255,255,255,0.5);
         font-size: 11.47px;
     }
     @include pc{
-        border-width: 3px;
+      border-width: 2px;
+      background-color: rgba(255,255,255,0.5);
+      line-height: 30px;
         font-size: 12px;
+    }
+    @include tablet {
+      border-width: 2px;
+      background-color: rgba(255,255,255,0.5);
+      line-height: 29px;
+    }
+    @include small{
+        border-width: 2px;
+      background-color: rgba(255,255,255,0.5);
+      line-height: 29px;
     }
 }
 .b-product__title{

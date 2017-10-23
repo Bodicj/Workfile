@@ -360,6 +360,26 @@ font-weight: 800;
 .hidden{
     display: none!important;
 }
+.hidden-pc{
+    @include pc{
+        display: none !important;
+    }
+}
+.hidden-note{
+    @include note{
+        display: none !important;
+    }
+}
+.hidden-tablet{
+    @include tablet{
+        display: none !important;
+    }
+}
+.hidden-small{
+    @include small{
+        display: none !important;
+    }
+}
 .visible-xs-inline{
     @include phone{
         display: inline !important;

@@ -93,6 +93,12 @@
 /* 	@include huge {
 	padding-top: 80px;
 } */
+    @include pc{
+        padding: 40px 0 175px;
+    }
+    @include note{
+        padding: 40px 0 135px;
+    }
     @include small{
         padding: 13px 0 73px;
         
@@ -106,12 +112,50 @@
         }
 	}
     
+    .b-groups-menu{
+        @include pc{
+            display: none;
+        }
+    }
+    .b-groups-menu_slider{
+        display: none;
+
+        @include pc{
+            display: block;
+        }
+    }
+    
     >.container{
         display: flex;
         justify-content: space-between;
         
-        @include small {
+        @include note{
             flex-direction: column-reverse;
+        }
+        
+        .content-block{
+            @include media('screen', '>pc') {
+                margin-right: -30px;
+                margin-left: -30px;
+            }
+            
+            @include tablet{
+                max-width: 496px;
+                margin: 0 auto;
+                padding: 0 7px;
+            }
+            
+            .b-product{
+                
+                &:nth-child(n+15){
+                    @include note{
+                        display: none;
+                    }    
+                    @include small{
+                        display: block;
+                    }    
+                }
+            }
         }
     }
 }

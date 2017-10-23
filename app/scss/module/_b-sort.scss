@@ -12,15 +12,29 @@
 		outline:none;
 	}
     
-    @include small{
+    @include pc{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+//        flex-direction: row-reverse;
+        align-items: center;
+    }
+    
+    @include note{
+        display: block;
+        max-width: 290px;
         float: none;
-        margin-top: 0;
-        margin-bottom: 70px;
+        margin: 0 0 70px auto;
+    }
+    @include note{
+        margin-right: auto;   
     }
     
     select{
         border-width: 1px;
-        @include small{
+        @include pc{
             float: left;
             width: 120px;
             padding: 4px 0px 5px 7px;
@@ -33,15 +47,21 @@
         display: none;
         border-width: 1px;
         
-        @include small{
-            float: right;
+        @include pc{
             display: block;
+//        }
+//        
+//        @include tablet{
+            float: right;
             min-width: 120px;
             border: none;
             padding: 7px 13px 6px;
             line-height: 17px;
             font-size: 12px;
             font-weight: 700;
+        }
+        @include small{
+            float: right;
         }
     }
 }
@@ -62,7 +82,7 @@
 //		font-size: 35px;
 //		line-height: 40px;
 //	}
-    @include small{
+    @include pc{
         display: none;
     }
 }

@@ -21,6 +21,13 @@
 //		font-size: 40px;
 //		line-height: 45px;
 //	}
+    
+    @include pc{
+        margin-bottom: 35px;
+        width: 100%;
+        text-align: center;
+        font-size: 21px;
+    }
     @include small{
         margin: 0 0 29px;
         padding: 0 20px;
@@ -42,7 +49,7 @@
 //		font-size: 30px;
 //		line-height: 35px;
 //	}
-    @include small{
+    @include pc{
         margin: 0 0 38px;
         line-height: 18px;
         font-size: 15px;
@@ -61,11 +68,19 @@
         }
         
         .g-input--md{
+            border-width: 1px;
             padding: 9px 10px;
 
-            @include small{
+            @include pc{
+                margin-right: 0;
+                min-height: 35px;
+                border-width: 1px;
                 font-size: 14px;
                 line-height: 15px;
+            }
+            @include small{
+                font-size: 14px;
+                line-height: 16px;
             }
         }
     }
@@ -91,8 +106,15 @@
 //		font-size: 35px;
 //		line-height: 40px;
 //	}
+    @include pc{
+        margin-bottom: 0;
+        height: 36px;
+        padding: 1px 10px 0;
+        font-size: 14px;
+    }
     @include small{
         margin-bottom: 22px;
+        padding: 8px 16px;
         height: auto;
         line-height: 20px;
         font-size: 14px;

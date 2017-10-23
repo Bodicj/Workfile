@@ -17,10 +17,10 @@
     @include small{
         display: flex;
         width: 100%;
+        padding:0 15px;
         flex-direction: row-reverse;
         justify-content: center;
         align-items: flex-start;
-      padding-left: 15px;
     }
     
     a{

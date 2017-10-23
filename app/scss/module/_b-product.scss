@@ -184,7 +184,7 @@ $product-small: 230px;
   }
     @include small {
       margin-left: 8px;
-      min-width: 35px;
+      min-width: 33px;
       width: 33px;
       height: 33px;
       line-height: 27px;
@@ -220,12 +220,13 @@ $product-small: 230px;
         line-height: 30px;
         font-size: 12px;
     }
-  @include note{
-    line-height: 27px;
-  }
+    @include note{
+        text-indent: -1px;
+        line-height: 27px;
+    }
     @include tablet{
         line-height: 27px;
-      min-width: 35px;
+        min-width: 33px;
     }
 }
 .b-product__tag--new{

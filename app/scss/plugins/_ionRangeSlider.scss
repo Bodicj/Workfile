@@ -212,6 +212,12 @@
 }
 .irs-with-grid {
     height: 60px;
+    //top: 0;
+    
+    @include huge{
+        height: 49px;
+        top: -7px;
+    }
 }
 .irs-line {
     height: 8px; top: 25px;

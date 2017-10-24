@@ -25,6 +25,10 @@
 	width: 17px;
 	height: 100%;
 	background: red;
+
+	@include huge{
+		width: 14px;
+	}
 }
 
 .jspHorizontalBar

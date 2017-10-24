@@ -1,5 +1,9 @@
 .b-groups-menu{
 	margin-bottom: 47px;
+
+	@include huge{
+	margin-bottom: 29px;
+	}
 }
 .b-groups-menu__list{
 	margin: 0;
@@ -9,6 +13,10 @@
 .b-groups-menu__item{
 	display: block;
 	margin-bottom: 4px;
+
+	@include huge{
+	margin-bottom: 2px;
+	}
 }
 .b-groups-menu__link{
 	display: inline-block;
@@ -18,6 +26,12 @@
 	line-height: 30px;
 	text-transform: uppercase;
 	color: #0f0f0f;
+
+	@include huge{
+		padding: 0 7px;
+		font-size: 15px;
+		line-height: 23px;
+	}
 
 //	@include twoK {
 //		font-size: 24px;

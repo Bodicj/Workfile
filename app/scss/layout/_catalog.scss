@@ -3,6 +3,9 @@
 	vertical-align: top;
 	float: right;
     
+    @include pc{
+        width: 100%;
+    }
     @include note{
         width: 100%;
     }
@@ -27,6 +30,10 @@
             }
             .button{
                 height: 40px;
+
+                @include huge{
+                    height: 30px;
+                }
                 @include pc{
 //                    right: 9px;
                     right: 7px;
@@ -58,6 +65,10 @@
         vertical-align: middle;
         width: 174px;
         
+         @include huge{
+            width: 130px;
+        }
+
         @include pc{
             width: 120px;
         }

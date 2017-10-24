@@ -90,9 +90,9 @@
 	padding-top: 117px;
 	padding-bottom: 270px;
 
-/* 	@include huge {
-	padding-top: 80px;
-} */
+ 	@include huge {
+	padding-top: 83px;
+} 
     @include pc{
         padding: 40px 0 175px;
     }
@@ -106,7 +106,9 @@
 
 	.section__title{
 		margin-bottom: 65px;
-        
+        @include huge{
+            margin-bottom: 45px;
+        }
         @include small{
             margin-bottom: 36px;
         }
@@ -129,6 +131,10 @@
         display: flex;
         justify-content: space-between;
         
+        @include pc{
+            flex-direction: column-reverse;
+        }
+
         @include note{
             flex-direction: column-reverse;
         }
@@ -146,7 +152,15 @@
             }
             
             .b-product{
-                
+                 &:nth-child(n+13){
+                    @include pc{
+                        display: none;
+                    }
+
+                    @include note{
+                        display: block;
+                    }
+                 }
                 &:nth-child(n+15){
                     @include note{
                         display: none;

@@ -30,6 +30,12 @@
 //    font-size: 35px;
 //    line-height: 40px;
 //  }
+
+    @include huge{
+        font-size: 13px;
+        padding: 7px 29px;
+    }
+
     @include note{
         font-size: 14px;
     }

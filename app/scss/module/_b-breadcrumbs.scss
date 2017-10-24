@@ -2,6 +2,10 @@
 	margin-bottom: 92px;
 	min-height: 20px;
 
+	 @include huge{
+        margin-bottom: 61px;
+    }
+
     @include pc{
         margin-bottom: 60px;
     }
@@ -39,7 +43,7 @@
 //		line-height: 35px;
 //	}
     @include huge{
-        padding-left: 10px;
+        padding-left: 14px;
         line-height: 16px;
         font-size: 12px;
     }
@@ -69,7 +73,7 @@
         @include huge{
             top: 4px;
             left: -2px;
-            width: 10px;
+            width: 13px;
             height: 7px;
         }
         @include small{

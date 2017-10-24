@@ -44,6 +44,7 @@ textarea{
   font-weight: 600;
   color: #343735;
 
+
   &.error{
     border-color: #ec0202;
     color: #ec0202;
@@ -51,6 +52,10 @@ textarea{
   &:hover,
   &:focus{
     border: 2px solid #a5aaba;
+  }
+
+  @include huge{
+    font-size: 13.11px;
   }
 }
 
@@ -125,6 +130,10 @@ textarea{
 .g-form__field{
   position: relative;
   margin-bottom: 32px;
+
+  @include huge{
+        margin-bottom: 21px;
+    }
   
   &.is--required{
     &:after{
@@ -325,6 +334,14 @@ textarea{
 .g-checkbox:not(checked) + label {
   position: relative;
   padding: 0 0 0 36px;
+
+  @include huge {
+    padding: 0 0 0 27px;
+  }
+
+  @include pc {
+    padding: 0 0 0 36px;
+  }
 }
 
 .g-checkbox:not(checked) + label:before {
@@ -342,6 +359,20 @@ textarea{
 //    width: 30px;
 //    height: 30px;
 //  }
+
+    @include huge {
+      top: 3px;
+      left: 1px;
+      width: 16px;
+      height: 16px;
+    }
+
+    @include pc {
+      top: 0;
+      left: 0;
+      width: 22px;
+      height: 22px;
+    }
 }
 
 .g-checkbox:not(checked) + label:after {
@@ -357,6 +388,13 @@ textarea{
   transform: rotate(45deg);
   opacity: 0;
   transition: all 0.2s;
+
+   @include huge {
+      top: 3px;
+      left: 6px;
+      width: 6px;
+      height: 12px;
+    }
 }
 
 .g-checkbox:checked + label:after {

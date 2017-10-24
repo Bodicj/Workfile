@@ -12,14 +12,25 @@
 		outline:none;
 	}
     
+    @include huge{
+        margin-top: 4px;
+        margin-bottom: 73px;  
+    }
+
     @include pc{
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -o-flex;
-        display: flex;
+ //       display: -webkit-flex;
+ //       display: -moz-flex;
+  //      display: -ms-flex;
+  //      display: -o-flex;
+  //      display: flex;
 //        flex-direction: row-reverse;
-        align-items: center;
+  //      align-items: center;
+
+        display: block;
+        max-width: 290px;
+        float: none;
+        margin: 0 auto 70px auto;
+
     }
     
     @include note{
@@ -82,6 +93,12 @@
 //		font-size: 35px;
 //		line-height: 40px;
 //	}
+    
+    @include huge{
+        margin-right: 7px;
+        font-size: 12px;
+    }
+
     @include pc{
         display: none;
     }

@@ -39,6 +39,13 @@ $selectric-font-size-xs: $selectric-font-size - 4px !default;
     height: $selectric-inner-height;
     user-select: none;
       
+      @include huge{
+          margin: 0px 30px 0 12px;
+          font-size: 12px;
+          height: 30px;
+          line-height: 30px;
+      }
+
       @include pc{
           font-size: $selectric-font-size-xs;
       }
@@ -58,6 +65,10 @@ $selectric-font-size-xs: $selectric-font-size - 4px !default;
     font: 0/0 a;
     *font: 20px/#{$selectric-inner-height} Lucida Sans Unicode, Arial Unicode MS, Arial;
 
+    @include huge{
+          width: 31px;
+          line-height: 30px;
+      }
     &:after {
       content: " ";
       position: absolute;
@@ -193,6 +204,10 @@ $selectric-font-size-xs: $selectric-font-size - 4px !default;
     line-height: 20px;
     min-height: 20px;
       
+      @include huge{
+          font-size: 12px;
+          line-height: 12px;
+      }
       @include small{
           font-size: $selectric-font-size-xs;
       }
@@ -203,6 +218,10 @@ $selectric-font-size-xs: $selectric-font-size - 4px !default;
     padding: 10px;
     color: #666;
     cursor: pointer;
+
+    @include huge{
+        padding: 10px 12px;
+    }
 
     &.selected {
       background: #E0E0E0;

@@ -151,6 +151,12 @@ body.is--mobile-active{
     opacity: 1;
     transition: opacity $menu-transistion-duration, visibility 0s;
   }
+    
+    .b-mobile-nav{
+        @include pc{
+            display: block!important;
+        }
+    }
 }
 .b-mobile-nav{
   position: fixed;
@@ -158,7 +164,7 @@ body.is--mobile-active{
   left: 0;
 //  bottom: 0;
   z-index: 1000;
-    display: none;
+//    display: none;
   visibility: hidden;
 //    opacity: 0;
 //  overflow: auto;
@@ -171,10 +177,10 @@ body.is--mobile-active{
     text-transform: uppercase;
     color: #fff;
   
-    @include pc{
-        display: block;
-//        visibility: visible;
-    }
+//    @include pc{
+//        display: block;
+////        visibility: visible;
+//    }
 
   &.is--visible{
 //    visibility: visible;

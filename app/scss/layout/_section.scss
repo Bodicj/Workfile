@@ -44,7 +44,7 @@
             margin: 0 -30px;
             
             @include huge {
-                margin: 0 -34px;
+                margin: 0 -20px;
             }
             @include pc{
                 margin: 0;
@@ -325,6 +325,12 @@
 //            padding-right: 0;
         }
 	}
+    
+    .content-block{
+        @include pc{
+            display: block;
+        }
+    }
 }
 .section--news{
 	/*padding-top: 149px;*/

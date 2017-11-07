@@ -281,6 +281,8 @@ $(function() {
 			}
 		});
 
+		$(".js-mobile-nav").removeAttr("style");	// "visible menu while page loads" bug fix js part
+
 		// $minicartIcon.on("click", function(e){
 		// 	e.stopPropagation();
 		// 	if(window.innerWidth < BREAKPOINT_RES){
@@ -749,5 +751,4 @@ $(function() {
           postfix: " грн"
       });
   	})();
-
 });

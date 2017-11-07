@@ -62,10 +62,11 @@
 	margin-left: 2px;
     
     @include huge{
-        margin-left: 3px;
+//        margin-left: 3px;
+        margin-left: 0;
     }
     @include pc{
-//        margin-left: -2px;
+        margin-left: -3px;
     }
     @include note{
         margin-left: -2px;
@@ -83,29 +84,30 @@
 //		}
 		@include huge {
 			margin-right: 19px;
-            margin-left: -3px;
+//            margin-left: -3px;
+            margin-left: 0;
 //            transform: scale(0.9)
 		}
 		@include pc {
-			margin-right: 0px;
+			margin: 0 3px;
             margin-left: 3px;
 //            transform: scale(0.8)
 		}
 		@include note {
-			margin-right: 8px;
-            margin-left: 2;
+			margin-right: 13px;
+            margin-left: 2px;
 //            transform: scale(0.83)
 		}
         @include tablet{
 //            margin: 0;
-            margin-right: 8px;
-            margin-left: 2px;
+            margin-right: 1px;
+//            margin-left: 2px;
             [class^="icon"]{
 //                transform: scale(0.83);
             }
         }
         @include small{
-            margin-right: 7.3px;
+            margin-right: 10px;
 //            margin-left: -1px;
             float: none;
             display: inline-block;

@@ -14,7 +14,7 @@ $product-small: 230px;
     width: $productNarrow;
     
     @include huge {
-        margin: 0 36px 77px;
+        margin: 0 20px 77px;
         //width: $productNarrow - 10px;
         min-width: 212px;
         width: $productNarrow - 78px;

@@ -120,15 +120,16 @@ $imgContainerWidth: 103px;
     .g-btn{
         display: block;
         margin: 0 auto;
-        width: 250px;
-        padding: 10px 29px;
-        line-height: 21px;
+        width: 200px;
+        padding: 9px 29px;
+        line-height: 18px;
+        font-size: 14px;
 
-        @include tablet{
-            width: 199px;
-            padding: 8px 29px;
-            line-height: 20px;
-            font-size: 14px;
-        }
+//        @include tablet{
+//            width: 199px;
+//            padding: 8px 29px;
+//            line-height: 20px;
+//            font-size: 14px;
+//        }
     }
 }

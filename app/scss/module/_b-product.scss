@@ -78,7 +78,7 @@ $product-small: 230px;
 	display: block;
     outline: 1px solid red;
 //	height: 310px;
-	height: 280px;
+	height: $productNarrow;
 	margin-bottom: 21px;
 
     //	@include twoK {
@@ -89,6 +89,7 @@ $product-small: 230px;
     //	}
 
     @include huge{
+        margin: 0 0 15px;
         height: 212px;
     }
     @include pc{
@@ -133,6 +134,7 @@ $product-small: 230px;
     vertical-align: top;
 	display: inline-block;
 	margin-left: 12px;
+    width: 42px;
 	min-width: 42px;
 	height: 42px;
 	line-height: 36px;
@@ -156,24 +158,24 @@ $product-small: 230px;
 
   @include huge {
     margin-left: 8px;
-    width: 28px;
+    width: 29px;
     min-width: 29px;
-    height: 28px;
-    line-height: 23px;
+    height: 29px;
+    line-height: 24px;
   }
   @include pc{
     margin-left: 8px;
     min-width: 35px;
     width: 35px;
     height: 35px;
-    line-height: 29px;
+    line-height: 30px;
   }
   @include note{
     margin-left: 8px;
     min-width: 33px;
     width: 33px;
     height: 33px;
-    line-height: 27px;
+    line-height: 28px;
   }
   @include tablet {
     margin-left: 8px;
@@ -183,11 +185,11 @@ $product-small: 230px;
     line-height: 26px;
   }
     @include small {
-      margin-left: 8px;
-      min-width: 33px;
-      width: 33px;
-      height: 33px;
-      line-height: 27px;
+//      margin-left: 8px;
+//      min-width: 33px;
+//      width: 33px;
+//      height: 33px;
+//      line-height: 26px;
     }
 }
 .b-product__tag--sale{
@@ -212,20 +214,20 @@ $product-small: 230px;
     
     @include huge{
         border-width: 2px;
-        line-height: 23px;
+        line-height: 26px;
         font-size: 10.2px;
     }
     @include pc{
         border-width: 3px;
-        line-height: 30px;
+        line-height: 31px;
         font-size: 12px;
     }
     @include note{
         text-indent: -1px;
-        line-height: 27px;
+        line-height: 28px;
     }
     @include tablet{
-        line-height: 27px;
+        line-height: 26px;
         min-width: 33px;
     }
 }
@@ -243,18 +245,21 @@ $product-small: 230px;
     @include pc{
       border-width: 2px;
       background-color: rgba(255,255,255,0.5);
-      line-height: 30px;
+      line-height: 32px;
         font-size: 12px;
+    }
+    @include note{
+        line-height: 30px;
     }
     @include tablet {
       border-width: 2px;
       background-color: rgba(255,255,255,0.5);
-      line-height: 29px;
+      line-height: 28px;
     }
     @include small{
-        border-width: 2px;
-      background-color: rgba(255,255,255,0.5);
-      line-height: 29px;
+//        border-width: 2px;
+//      background-color: rgba(255,255,255,0.5);
+//      line-height: 29px;
     }
 }
 .b-product__title{
@@ -280,6 +285,7 @@ $product-small: 230px;
 //		}
         @include huge{
             font-size: 14.57px;
+            line-height: normal;
         }
         @include pc{
             font-size: 13.78px;

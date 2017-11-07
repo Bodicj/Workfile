@@ -248,10 +248,11 @@ font-weight: 800;
   }
 }
 .g-menu__item i {
-  margin-left: -25px;
+  margin-left: -23px;
   margin-right: 4px;
     
     @include huge{
+        margin-left: -18px;
         margin-right: 2px;
         vertical-align: middle;
     }

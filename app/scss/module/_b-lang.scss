@@ -1,6 +1,6 @@
 .b-lang{
     position: relative;
-	padding: 10px 16px;
+	padding: 10px 16px 8px;
 	cursor: pointer;
 	transition: all .3s;
     
@@ -9,9 +9,11 @@
 	font-size: 19px;
 	font-weight: 600;
 	color: #3d3f3c;
+    
 	@include huge {
-		padding: 1px 13px;
+		padding: 5px 13px 4px;
 	}
+    
 	&:hover{
 		background:#f5f5f5;
         text-decoration: underline;
@@ -20,12 +22,6 @@
             opacity: 1;
             visibility: visible;
             background:#f5f5f5;
-			
-			.b-lang__item{
-				&:hover{
-					background: #a5aeb6;
-				};
-			}
         }
 	}
     
@@ -46,15 +42,23 @@
 	&:after{
 		content: '';
 		position: absolute;
-		top: 9px; right: -11px;
+		top: 9px;
+        right: -11px;
 		@include triangle(3.5px, #3d3f3c, 'down');
-//		@include twoK {
-//			@include triangle(4px, #3d3f3c, 'down')
-//		}
+        border-top: 4px solid #3d3f3c;
+        
 //		@include fourK {
 //			@include triangle(6px, #3d3f3c, 'down');
 //			top: 17px;
 //		}
+//		@include twoK {
+//			@include triangle(4px, #3d3f3c, 'down')
+//		}
+        @include huge{
+            right: -9px;
+            @include triangle(3px, #3d3f3c, 'down');
+            border-top: 3px solid #3d3f3c;
+        }
 	}
 
 //	@include twoK {
@@ -80,13 +84,27 @@
 }
 
 .b-lang__item{
-    padding: 7px 2px;
+    padding: 8px 16px;
     text-align: center;
     
+    &:hover{
+        background: #a5aeb6;
+    }
+    
     @include huge {
-		padding: 4px 2px;
+		padding: 4px 13px;
 	}
+    
+    &:last-child{
+        padding-bottom: 10px;
+            
+        @include huge{
+            padding-bottom: 5px;
+        }
+    }
+    
     a{
+        color: #3d3f3c;
 	    cursor: pointer;
     }
 }

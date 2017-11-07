@@ -67,14 +67,15 @@
 //			max-height: 115px;
 //		}
         @include huge{
-            max-height: 192px;
+//            max-height: 192px;
+            max-height: 87px;
         }
         @include pc{
 //            max-height: 138px;
             max-height: 120px;
         }
         @include note{
-            max-height: 206px;
+            max-height: 188px;
             //max-height: 196px;
         }
         @include tablet{

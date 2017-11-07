@@ -3,8 +3,8 @@
 }
 .b-news{
 	margin-bottom: 45px;
- //   width: 31.5%;
-	width: 32.17%;
+    width: 31.5%;
+//	width: 32.17%;
     
     @include huge{
 //        margin-bottom: 30px;
@@ -38,7 +38,7 @@
         margin: 0 0 19px;
     }
     @include pc{
-//        margin: 0 0 12px;
+        margin: 0 0 12px;
     }
     
 	img{

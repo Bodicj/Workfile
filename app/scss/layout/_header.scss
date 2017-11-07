@@ -145,7 +145,7 @@ $svgTransitionTime: 0.2s;
 }
 .header__lang{
 	float: right;
-    margin-right: -1px;
+//    margin-right: -1px;
 //	@include fourK {
 //		margin-top: 17px;
 //	}
@@ -260,7 +260,7 @@ $svgTransitionTime: 0.2s;
     line-height: 33px;
     
  	@include huge{
-        margin-right: 7px;
+        margin-right: 8px;
         line-height: 26px;
     } 
     @include pc{
@@ -282,11 +282,12 @@ $svgTransitionTime: 0.2s;
         position: absolute;
 //        top: 42px;
         top: 100%;
-        right: -10px;
+        right: 10px;
         z-index: 10;
         overflow: auto;
         width: 288px;
-        max-height: calc(100vh - 160px);
+//        max-height: calc(100vh - 160px);
+        max-height: 700px;
         background-color: #fff;
         box-shadow: 0 0px 5px 1px rgba(76, 64, 40, 0.23);
         
@@ -294,6 +295,10 @@ $svgTransitionTime: 0.2s;
         opacity: 0;
         transition: opacity $time_short, visibility 0s $time_short;
         
+        @include huge{
+            max-height: 585px;
+        }
+             
          @include pc{
 //            width: 288px;
             right: 15px;
@@ -322,7 +327,7 @@ $svgTransitionTime: 0.2s;
             content: '';
             position: absolute;
             bottom: 0;
-            right: 22px;
+            right: 27px;
             width: 0;
             height: 0;
             border-top: 0;
@@ -334,6 +339,9 @@ $svgTransitionTime: 0.2s;
             opacity: 0;
             transition: opacity $time_short, visibility 0s $time_short;
             
+            @include huge{
+                right: 21px;
+            }
             @include pc{
                 right: 29px;
             }

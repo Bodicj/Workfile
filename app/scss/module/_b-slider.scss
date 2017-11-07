@@ -104,8 +104,9 @@ $height-small: 217px;
  	@include huge {
 //        left: calc(50% - 590px);
  //       left: calc(25% - -33px);
-          left: calc(25%);
-          width: 466px;
+        left: 25%;
+        padding: 31px;
+        width: 460px;
     }
     
  	@include pc {
@@ -147,6 +148,7 @@ $height-small: 217px;
 //        }
 		@include huge {
 			font-size: 26px;
+            line-height: 36px;
             margin: 0 0 18px;
 		}
         @include pc{
@@ -195,8 +197,9 @@ $height-small: 217px;
         }
         @include small{
             margin-bottom: 10px;
-            max-height: 52px;
+            max-height: 54px;
             padding: 0;
+            line-height: 12px;
             font-size: 10px;
         }
 	}
@@ -206,6 +209,11 @@ $height-small: 217px;
         line-height: 19px;
         font-size: 15.75px;
         
+        @include huge{
+            margin-bottom: 30px;
+            padding: 0 10px;
+            font-size: 14px;
+        }
         @include pc{
             margin-bottom: 15px;
             line-height: normal;
@@ -217,10 +225,14 @@ $height-small: 217px;
         }
     }
 
-	form {
+	form{
 		max-width: 70%;
 		margin: 0 auto;
 //		margin-left: 14.8%;
+        
+        @include pc{
+            display: none;
+        }
 		
 		input {
 			min-height: 45px;
@@ -239,6 +251,7 @@ $height-small: 217px;
                 
             @include huge{
                 min-height: 38px;
+                padding: 4px 14px 5px;
                 font-size: 13px;
             }
 		}
@@ -294,19 +307,14 @@ $height-small: 217px;
             .g-input{
                 margin-right: 6px;
                 padding-left: 16px;
+                
+                @include huge{
+                    margin-right: 2px;
+                    padding-left: 14px;
+                }
             }
         }
 	}
-    
-	&>form {
-        @include huge{
-            max-width: 73%;
-        }
-
-        @include pc{
-            display: none;
-        }
-    }
 
 	.b-slider__desc-title{
 		margin: 0 0 25px;
@@ -318,8 +326,8 @@ $height-small: 217px;
 		text-align: center;
 
 		@include huge {
-//			font-size: 30px;
-//			line-height: 42px;
+			font-size: 26px;
+			line-height: 36px;
 		}
         @include pc{
             line-height: 23px;
@@ -343,6 +351,13 @@ $height-small: 217px;
 //        min-height: 80px;
 //        font-size: 35px;
 //      }
+        
+        @include huge{
+            min-width: 145px;
+            min-height: 38px;
+            padding: 9px 11px;
+            font-size: 16px;
+        }
         @include pc{
             min-height: 46px;
             min-width: 164px;
@@ -363,6 +378,14 @@ $height-small: 217px;
             @include pc{
                 margin-left: 0;
             }
+        }
+    }
+    
+    .g-btn--md-2{
+        @include huge{
+            min-height: 38px;
+            min-width: 140px;
+            padding: 8px 11px;
         }
     }
     
@@ -407,10 +430,10 @@ $height-small: 217px;
     min-height: 540px;
     
     @include huge {
-        top: 61px;
-        min-height: 449px;
-        max-height: 449px;
-        padding: 28px 33px;
+        top: 67px;
+        min-height: 445px;
+        max-height: 445px;
+        padding: 35px 31px;
     }
 
  	@include pc {
@@ -420,7 +443,7 @@ $height-small: 217px;
         padding: 17px 15px;
     }
     @include small{
-        top: 23px;
+        top: 25px;
         min-height: 154px;
         max-height: 154px;
         padding: 10px;
@@ -433,12 +456,14 @@ $height-small: 217px;
     padding-top: 36px;
 
     @include huge {
-        top: 61px;
-        
+//        top: 61px;
+        top: 112px;
+        min-height: 360px;
+        padding: 31px;
     }
 
  	@include pc {
-        top: 33px;
+        top: 30px;
         max-height: 254px;
         min-height: 254px;
         padding: 12px 15px;
@@ -453,6 +478,9 @@ $height-small: 217px;
     .b-slider__desc-title{
         margin-bottom: 17px;
         
+        @include huge{
+            margin-bottom: 15px;
+        }
         @include pc{
             margin-bottom: 15px;
             max-height: 72px;
@@ -470,16 +498,17 @@ $height-small: 217px;
     padding: 0 20px;
     padding-top: 46px;
     
-     @include huge {
-        top: 100px;
-        
+     @include huge{
+        top: 130px;
+        min-height: 325px;
+        padding: 45px 35px;
     }
 
  	@include pc {
         top: 33px;
         min-height: 253px;
         max-height: 253px;
-        padding: 22px 15px;
+        padding: 15px;
     }
     @include small{
         top: 18px;
@@ -492,6 +521,9 @@ $height-small: 217px;
         line-height: 44px;
         margin-bottom: 18px;
         
+        @include huge{
+            line-height: 36px;
+        }
         @include pc{
             margin-bottom: 15px;
             line-height: 23px;
@@ -504,6 +536,10 @@ $height-small: 217px;
     }
     .b-desc__text_small{
         margin-bottom: 43px;
+        
+        @include huge{
+            margin-bottom: 35px;
+        }
         
         @include pc{
             margin-bottom: 16px;

@@ -143,7 +143,7 @@ body:after{
 }
 body.is--mobile-active{
     @include pc{
-        overflow: visible !important;
+        overflow: hidden !important;
     }
     
   &:after{

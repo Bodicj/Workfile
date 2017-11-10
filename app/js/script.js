@@ -697,11 +697,17 @@ $(function() {
   	// Filter (blocks with checkboxes)
     //---------------------------------------------------------------------------------------
     (function(){
-	    var $filter = $('.b-filter');
+	    var 
+             $filter = $('.b-filter')
+            ,filterSP
+//            ,callbackSP
+            ;
 
-		$filter.find('.b-filter__block-items').jScrollPane({
+		filterSP = $filter.find('.b-filter__block-items').jScrollPane({
 	    	showArrows: false
 	    });
+        
+        
 
 	})();
 

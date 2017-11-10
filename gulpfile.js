@@ -82,7 +82,10 @@ var config = {
 			.src(['./app/template/*.html'])
 			.pipe(fileinclude({
 		      prefix: '@@',
-	          basepath: '@file'
+	          basepath: '@file',
+	          context:{
+	          	arr: ["цветок", "цветы", "кому", "повод", "тип букета", "вид", "сезон", "букет из", "количество", "вид композиции", "фильтр"]
+	          }
 		    }))
 		    .pipe(gulp.dest('./dist'))
 	        .pipe(notify({ message: 'HTML done!', onLast: true  }));

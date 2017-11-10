@@ -4,10 +4,12 @@
 .b-news{
 	margin-bottom: 45px;
     width: 31.5%;
-//	width: 32.17%;
     
     @include huge{
 //        margin-bottom: 30px;
+    }
+    @include pc{
+        width: 32.17%;
     }
     @include note{
         width: 230px;

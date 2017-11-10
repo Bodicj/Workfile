@@ -1,0 +1,48 @@
+
+<!-- Filter -->
+<form class="b-filter js-filters">
+  
+  <div class="b-mobile-nav__heading b-mobile-nav__heading_filter">
+      Фильтр
+      <i class="icon-close-white js-close_filters js-filters-toggle"></i>
+  </div>
+
+  <!-- filter block -->
+  <div class="b-filter__slider-wrapper">
+    <h4 class="b-filter__title">Цена
+        <i class="icon-toggler"></i>
+        <i class="icon-toggler-white"></i>
+    </h4>
+    <div class="b-filter__slider">
+      <div class="b-filter__slider-inner">
+          <div class="mfilter-price-inputs">
+              от <input id="mfilter-opts-price-min" type="text" class="form-control" value="">
+              до <input id="mfilter-opts-price-max" type="text" class="form-control" value="">
+              грн.
+          </div>
+          <input type="text" id="price_range" name="price">
+      </div>
+      <div class="b-filter__action">
+        <a href="#" class="g-btn g-btn--primary">поиск по цене</a>
+      </div>
+    </div>
+  </div>
+  <!-- /filter block -->
+
+  @@for (i=1; i<=arr.length; i++){
+      @@include('./../parts/filter.html', {"title":"`+arr[i-1]+`", "index": "`+i+`"})
+  }
+
+
+
+  <!-- filter action -->
+  <div class="b-filter__action">
+<!--    <input type="reset" class="b-filter__action-btn" value="сбросить все фильтры">-->
+    <button type="reset" class="b-filter__action-btn">сбросить<span class="c-text"> все фильтры</span></button>
+    <button type="submit" class="b-filter__action-btn">показать</button>
+  </div>
+  <!-- /filter action -->
+
+
+</form>
+<!-- /Filter -->

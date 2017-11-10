@@ -19,8 +19,9 @@
 //	}
 
 	@include pc{
-        margin: 42px auto 0;
-        width: 334px;
+        margin-right: 5px;
+//        margin: 42px auto 0;
+//        width: 334px;
     }
 
     @include note{

@@ -1,89 +1,17 @@
 
-<!-- Filter -->
-<form class="b-filter js-filters">
-  
-  <div class="b-mobile-nav__heading b-mobile-nav__heading_filter">
-      Фильтр
-      <i class="icon-close-white js-close_filters js-filters-toggle"></i>
-  </div>
-
-  <!-- filter block -->
-  <div class="b-filter__slider-wrapper">
-    <h4 class="b-filter__title">Цена
-        <i class="icon-toggler"></i>
-        <i class="icon-toggler-white"></i>
-    </h4>
-    <div class="b-filter__slider">
-      <div class="b-filter__slider-inner">
-          <div class="mfilter-price-inputs">
-              от <input id="mfilter-opts-price-min" type="text" class="form-control" value="">
-              до <input id="mfilter-opts-price-max" type="text" class="form-control" value="">
-              грн.
-          </div>
-          <input type="text" id="price_range" name="price">
-      </div>
-      <div class="b-filter__action">
-        <a href="#" class="g-btn g-btn--primary">поиск по цене</a>
-      </div>
-    </div>
-  </div>
-  <!-- /filter block -->
-
-  @@for (i=1; i<=9; i++){
   <!-- filter block -->
   <div class="b-filter__block">
-    <h4 class="b-filter__title">кому
+    <h4 class="b-filter__title">@@title
         <i class="icon-toggler"></i>
         <i class="icon-toggler-white"></i>
     </h4>
     <ul class="b-filter__block-items">
-      <li>
-        <input id="r-`+i+`1" type="checkbox" name="o-`+i+`1" class="g-checkbox">
-        <label for="r-`+i+`1">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-`+i+`2" type="checkbox" name="o-`+i+`2" class="g-checkbox">
-        <label for="r-`+i+`2">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-`+i+`3" type="checkbox" name="o-`+i+`3" class="g-checkbox">
-        <label for="r-`+i+`3">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-`+i+`4" type="checkbox" name="o-`+i+`4" class="g-checkbox">
-        <label for="r-`+i+`4">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-`+i+`5" type="checkbox" name="o-`+i+`5" class="g-checkbox">
-        <label for="r-`+i+`5">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-`+i+`6" type="checkbox" name="o-`+i+`6" class="g-checkbox">
-        <label for="r-`+i+`6">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-`+i+`7" type="checkbox" name="o-`+i+`7" class="g-checkbox">
-        <label for="r-`+i+`7">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-`+i+`8" type="checkbox" name="o-`+i+`8" class="g-checkbox">
-        <label for="r-`+i+`8">Элемент выбора</label>
-      </li>
+        @@for (j=1; j<=8; j++){
+          <li>
+            <input id="r-@@index`+j+`" type="checkbox" name="o-@@index`+j+`" class="g-checkbox">
+            <label for="r-@@index1">Элемент выбора</label>
+          </li>          
+        }
     </ul>
   </div>
   <!-- /filter block -->
-  }
-
-
-
-  <!-- filter action -->
-  <div class="b-filter__action">
-<!--    <input type="reset" class="b-filter__action-btn" value="сбросить все фильтры">-->
-    <button type="reset" class="b-filter__action-btn">сбросить<span class="hidden-xs"> все фильтры</span></button>
-    <button type="submit" class="b-filter__action-btn visible-xs-block">показать</button>
-  </div>
-  <!-- /filter action -->
-
-
-</form>
-<!-- /Filter -->

@@ -12,11 +12,12 @@
      
   <div class="b-groups-menu b-groups-menu_slider">
     <ul class="b-groups-menu__list js-slider_menu">
-      <li class="b-groups-menu__item"><a href="" class="b-groups-menu__link">букеты</a></li>
-      <li class="b-groups-menu__item"><a href="" class="b-groups-menu__link">букет за час</a></li>
-      <li class="b-groups-menu__item"><a href="" class="b-groups-menu__link">композиции</a></li>
-      <li class="b-groups-menu__item"><a href="" class="b-groups-menu__link">бизнес-букет</a></li>
-      <li class="b-groups-menu__item"><a href="" class="b-groups-menu__link is--current">суккуленты</a></li>
+      <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букеты</a></li>
+      <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букет за час</a></li>
+      <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букет в коробках</a></li>
+      <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">композиции</a></li>
+      <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">бизнес-букет</a></li>
+      <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link is--current">суккуленты</a></li>
     </ul>
   </div>
       
@@ -25,19 +26,20 @@
     <aside class="sidebar">
       <div class="b-groups-menu">
         <ul class="b-groups-menu__list">
-          <li class="b-groups-menu__item"><a href="" class="b-groups-menu__link">букеты</a></li>
-          <li class="b-groups-menu__item"><a href="" class="b-groups-menu__link">букет за час</a></li>
-          <li class="b-groups-menu__item"><a href="" class="b-groups-menu__link">композиции</a></li>
-          <li class="b-groups-menu__item"><a href="" class="b-groups-menu__link">бизнес-букет</a></li>
-          <li class="b-groups-menu__item"><a href="" class="b-groups-menu__link is--current">суккуленты</a></li>
+          <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букеты</a></li>
+          <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букет за час</a></li>
+          <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букет в коробках</a></li>
+          <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">композиции</a></li>
+          <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">бизнес-букет</a></li>
+          <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link is--current">суккуленты</a></li>
         </ul>
       </div>
 
-      @@include('./../parts/filter.html')
+      @@include('./../parts/filters.html')
 
       <!-- form simple order -->
 <!--
-      <div class="b-widget hidden-xs">
+      <div class="b-widget">
         <div class="b-wiget__body">
           <a href="">
             <img src="./img/banners/b-1.png" alt="">
@@ -82,9 +84,10 @@
             <select class="js-selectric" name="sortBy" id="sortBy">
                 <option value="" class="label" hidden selected disabled>Сортировать</option>
                 <option value="name">По названию</option>
-                <option value="rating">По рейтингу</option>
                 <option value="priceUp">По цене &uarr;</option>
                 <option value="priceDown">По цене &darr;</option>
+                <option value="rating">По новизне</option>
+                <option value="rating">По рейтингу</option>
             </select>
 <!--
             <div class="b-sort__dropdown">

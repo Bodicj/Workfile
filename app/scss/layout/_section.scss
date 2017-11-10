@@ -115,7 +115,7 @@
 	}
     
     .b-groups-menu{
-        @include pc{
+        @include note{
             display: none;
         }
     }
@@ -131,9 +131,9 @@
         display: flex;
         justify-content: space-between;
         
-        @include pc{
-            flex-direction: column-reverse;
-        }
+//        @include pc{
+//            flex-direction: column-reverse;
+//        }
 
         @include note{
             flex-direction: column-reverse;

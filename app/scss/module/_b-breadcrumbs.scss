@@ -67,13 +67,14 @@
 		position: absolute;
 		left: 2px;
         top:5px;
+        width: 14px;
         transform: rotate(90deg);
-        
         
         @include huge{
             top: 4px;
             left: -2px;
-            width: 13px;
+//            width: 13px;
+            width: 10px;
             height: 7px;
         }
         @include small{

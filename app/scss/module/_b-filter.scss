@@ -8,8 +8,6 @@
         margin-bottom: 34px;
      }
 
-     
-
     @include note{
         overflow: auto;
         position: fixed;
@@ -19,13 +17,22 @@
         z-index: 1001;;
         margin-bottom: 0;
         width: 280px;
-//        padding: 0 15px;
+        padding: 0 0 69px;
         background-color: #000;
         transform: translateX(0);
         transition: transform 500ms;
         
         &.is--visible{
             transform: translateX(280px);
+        }
+    }
+    
+    &>.b-filter__action:last-child{
+        @include note{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
         }
     }
 
@@ -88,6 +95,10 @@
         transform: scale(1);
 		transition: transform .3s;
         
+        @include huge{
+            width: 15px;
+        }
+        
         @include pc{
             top: 9px;
         }
@@ -126,6 +137,9 @@
 	}
     
     @include pc{
+        margin-bottom: 20px;
+    }
+    @include note{
         padding: 0 15px;
     }
 
@@ -145,9 +159,13 @@
 	overflow-y: auto;
     
     @include huge{
-        max-height: 125px;
+//        max-height: 125px;
+        max-height: 83px;
     }
     @include pc{
+        
+    }
+    @include note{
         max-height: 165px;
     }
 
@@ -162,17 +180,19 @@
             margin-bottom: 0;
         }
 
-        @include pc{
+        @include note{
             margin-bottom: 8px;
         }
 	}
     
     .g-checkbox:not(checked) + label:before {
         @include pc{
-            height: 20px;
-            width: 20px;
+            height: 16px;
+            width: 16px;
         }
         @include note{
+            height: 20px;
+            width: 20px;
             background-color: #000;
         }
     }
@@ -204,10 +224,12 @@
         }
 
         @include pc{
-            line-height: 20px;
-            font-size: 13.29px;
+//            line-height: 20px;
+//            font-size: 13.29px;
         }
         @include note{
+            line-height: 20px;
+            font-size: 13.29px;
             color: #fff;
         }
 	}
@@ -228,7 +250,7 @@
         margin-bottom: 39px;
     }
 
-    @include pc{
+    @include note{
         padding: 0 15px;
     }
 }
@@ -312,13 +334,13 @@
 .b-filter__action{
 	text-align: center;
     
-    @include pc{
+    @include note{
         border-top: 1px solid #fff;
         padding: 18px 25px;
+        background-color: #000;
     }
-    
     &:after{
-        @include pc{
+        @include note{
             content: '';
             display: table;
             clear: both;
@@ -411,5 +433,15 @@
         @include note{
             display: none;
         }
+    }
+}
+
+.b-filters_scrolled{
+    @include note{
+        height: calc(100% - 65px);
+        overflow-y: auto;
+    }
+    @include small{
+        height: calc(100% - 42px);
     }
 }

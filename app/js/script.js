@@ -2,6 +2,7 @@ $(function() {
   var 	 $window = $(window)
 		,$body = $('body')
   		,BREAKPOINT_RES = 1220	// px
+  		,BREAKPOINT_RES_CATALOG = 1024	// px
   		,ANIM_TIME_SM = 300		// ms
   		;
   
@@ -29,14 +30,31 @@ $(function() {
 	    //   console.log("toggle Main Menu");
 	    // }
 
+        // ios body (h100p; ovh) prevent scroll hack after addBodyBackground
+        // fix body scroll position
+        function preventScroll(){
+            var scroll; // scroll position
+            if (!$body.hasClass('is--mobile-active')){  // якщо оверлей не відкрито
+                scroll = $window.scrollTop();       // зберігаємо величину скрола
+                $body.css({"position": "fixed", "top": -scroll});
+            } else {
+                scroll = -parseInt($body.css("top"));
+                console.log(scroll);
+                $body.css({'position': '', 'top': ''});
+                $("html, body").animate({scrollTop: scroll}, 0);
+            }
+        }
+    
 	    // Показываем/Скрываем затемнение фона
 	    function addBodyBackground(){
-	      $body.addClass('is--mobile-active');
-	      console.log("add BG");
+            preventScroll();
+            $body.addClass('is--mobile-active');
+            console.log("add BG");
 	    }
 	    function removeBodyBackground(){
-	      $body.removeClass('is--mobile-active');
-	      console.log("remove BG");
+            preventScroll();
+            $body.removeClass('is--mobile-active');
+            console.log("remove BG");
 	    }
 	    // function toggleBodyBackground(){
 	    //   $body.toggleClass('is--mobile-active');
@@ -605,19 +623,19 @@ $(function() {
 	})();
 
 
-  //
-  // Menu Slider
-  //---------------------------------------------------------------------------------------
-	(function(){
+	//
+	// Menu Slider
+	//---------------------------------------------------------------------------------------
+	// (function(){
 
-		var $slider = $('.js-slider_menu').bxSlider({
-			slideMargin: 10,
-			minSlides: 5,
-			// infiniteLoop: false,
-			pager: false,
-			controls:false
-		});
-	})();
+	// 	var $slider = $('.js-slider_menu').bxSlider({
+	// 		slideMargin: 10,
+	// 		minSlides: 5,
+	// 		// infiniteLoop: false,
+	// 		pager: false,
+	// 		controls:false
+	// 	});
+	// })();
 
 	//
 	// Catalog - Products Sort Block
@@ -626,7 +644,7 @@ $(function() {
 			var  $sort = $('.b-sort')
 				,$select = $sort.find(".js-selectric")	// "Сортировать"
 				,$optionLabeled = $select.children(".label")
-				,bPrevWindowWidthMore =  $window.outerWidth() >= BREAKPOINT_RES
+				,bPrevWindowWidthMore =  $window.outerWidth() >= BREAKPOINT_RES_CATALOG
 				;
 
 			var SelectricSettings = {
@@ -640,17 +658,17 @@ $(function() {
 				}
 
 			var  selectInit = function(bInitialization){	// if bInitialization == true then first init select
-				if ($window.outerWidth() >= BREAKPOINT_RES && (bInitialization?true:!bPrevWindowWidthMore)){
+				if ($window.outerWidth() >= BREAKPOINT_RES_CATALOG && (bInitialization?true:!bPrevWindowWidthMore)){
 					$optionLabel = $select.children(".label");
 					$select.children(".label").remove();	// hide "Сортировать" option on desktops
-				} else if ($window.outerWidth() < BREAKPOINT_RES && (bInitialization?true:bPrevWindowWidthMore)){
+				} else if ($window.outerWidth() < BREAKPOINT_RES_CATALOG && (bInitialization?true:bPrevWindowWidthMore)){
 					if(!$select.children(".label").length){	// show "Сортировать" option on tablets
 						$select.prepend($optionLabeled);
 					}
 				}
 
 				$select.selectric(SelectricSettings);
-				bPrevWindowWidthMore =  $window.outerWidth() >= BREAKPOINT_RES;
+				bPrevWindowWidthMore =  $window.outerWidth() >= BREAKPOINT_RES_CATALOG;
 			}
 
 			if ( $sort.length ){	// if page has Sort block
@@ -706,9 +724,14 @@ $(function() {
 		filterSP = $filter.find('.b-filter__block-items').jScrollPane({
 	    	showArrows: false
 	    });
-        
-        
 
+		// reinitialize jScrollPane (fixed .jspScrollable width after resize bugFix)
+	    $window.on("resize", function(){
+	    	filterSP.each(function(){
+	    		$(this).data('jsp').reinitialise()
+	    	});
+	    });
+        
 	})();
 
 	//

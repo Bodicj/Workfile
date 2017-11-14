@@ -17,7 +17,7 @@
         margin-bottom: 73px;  
     }
 
-    @include pc{
+    @include note{
  //       display: -webkit-flex;
  //       display: -moz-flex;
   //      display: -ms-flex;
@@ -52,18 +52,21 @@
             line-height: 21px;
             font-size: 12px;
         }
+        @include note{
+            float: right;
+        }
     }
     
     .g-btn--bordered{
         display: none;
         border-width: 1px;
         
-        @include pc{
+        @include note{
             display: block;
 //        }
 //        
 //        @include tablet{
-            float: right;
+            float: left;
             min-width: 120px;
             border: none;
             padding: 7px 13px 6px;
@@ -72,7 +75,7 @@
             font-weight: 700;
         }
         @include small{
-            float: right;
+//            float: right;
         }
     }
 }
@@ -99,7 +102,7 @@
         font-size: 12px;
     }
 
-    @include pc{
+    @include note{
         display: none;
     }
 }

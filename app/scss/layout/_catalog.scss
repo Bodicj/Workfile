@@ -12,8 +12,8 @@
     
     .selectric-wrapper{
         
-        @include pc{
-            float: left;
+        @include note{
+            float: right;
             width: 120px;
         }
         

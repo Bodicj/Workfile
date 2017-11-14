@@ -19,10 +19,10 @@ var config = {
 		server: {
 			baseDir: "./dist"
 		},
-		tunnel: true,
+		// tunnel: true,
 		host: 'localhost',
 		port: 9000,
-		logPrefix: "Frontend_Devil"
+		logPrefix: "browserSync"
 	};
 
 

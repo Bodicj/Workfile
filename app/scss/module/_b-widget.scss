@@ -32,7 +32,7 @@
         margin-bottom: 35px;
         width: 100%;
         text-align: center;
-        font-size: 21px;
+        font-size: 20px;
     }
     @include small{
         margin: 0 0 29px;
@@ -74,6 +74,11 @@
             margin-bottom: 22px;
         }
         
+        &:nth-last-child(2){
+            @include pc{
+                margin-bottom: 34px;
+            }
+        }
         &:last-child{
             @include small{
                 padding-top: 11px;   

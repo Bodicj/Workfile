@@ -122,7 +122,7 @@
     .b-groups-menu_slider{
         display: none;
 
-        @include pc{
+        @include note{
             display: block;
         }
     }
@@ -161,14 +161,14 @@
                         display: block;
                     }
                  }
-                &:nth-child(n+15){
-                    @include note{
-                        display: none;
-                    }    
-                    @include small{
-                        display: block;
-                    }    
-                }
+//                &:nth-child(n+15){
+//                    @include note{
+//                        display: none;
+//                    }    
+//                    @include small{
+//                        display: block;
+//                    }    
+//                }
             }
         }
     }

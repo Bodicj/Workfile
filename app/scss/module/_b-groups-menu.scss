@@ -1,3 +1,7 @@
+$menuLinkHorizPaddingNote: 7px;
+$menuLinkHorizPaddingTablet: 10px;
+$menuLinkHorizPaddingSmall: 7px;
+
 .b-groups-menu{
 	margin-bottom: 47px;
 
@@ -15,8 +19,19 @@
 	margin-bottom: 4px;
 
 	@include huge{
-	margin-bottom: 2px;
+        margin-bottom: 2px;
 	}
+	@include note{
+        margin: 0;
+//        float: left;
+        display: inline-block;
+	}
+    
+    &:last-child{
+        @include note{
+//            margin-right: 10px;
+        }
+    }
 }
 .b-groups-menu__link{
 	display: inline-block;
@@ -32,6 +47,16 @@
 		font-size: 15px;
 		line-height: 23px;
 	}
+    @include note{
+        padding: 3.5px $menuLinkHorizPaddingNote;
+        font-size: 13px;
+    }
+    @include tablet{
+        padding: 3.5px $menuLinkHorizPaddingTablet;
+    }
+    @include small{
+        padding: 3.5px $menuLinkHorizPaddingSmall;
+    }
 
 //	@include twoK {
 //		font-size: 24px;
@@ -45,24 +70,43 @@
 	&.is--current {
 		background-color: #d1d4d3;
 		text-decoration: none;
+        
+        @include note{
+            background: none;
+        }
 	}
 }
 
 .b-groups-menu_slider {
-    .b-groups-menu__list{
-        overflow: hidden;
+    white-space: nowrap;
+    background-color: #d1d4d3;
+      
+    @include note{
+        padding: 0 calc(50% - 728px / 2 - #{$menuLinkHorizPaddingNote});
+        overflow-x: auto;
         white-space: nowrap;
-        
-        .b-groups-menu__item{
-            margin-right: 5px;
-            display: inline-block;
-            width: auto!important;
-
-            .b-groups-menu__link{
-                &:hover{
-                    background: none;
-                }
-            }
-        }
+    }
+    @include tablet{
+        padding: 0 calc(50% - 600px / 2 - #{$menuLinkHorizPaddingTablet});
+    }
+    @include small{
+        padding: 0 calc(50% - 290px / 2 - #{$menuLinkHorizPaddingSmall});
     }
 }
+//
+//.b-groups-menu__list{
+//    overflow: hidden;
+//    white-space: nowrap;
+//
+//    .b-groups-menu__item{
+//        margin-right: 5px;
+//        display: inline-block;
+////            width: auto!important;
+//
+//        .b-groups-menu__link{
+//            &:hover{
+//                background: none;
+//            }
+//        }
+//    }
+//}

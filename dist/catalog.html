@@ -589,14 +589,15 @@
 
   <h2 class="section__title">Букеты и композиции</h2>
      
-  <div class="b-groups-menu b-groups-menu_slider">
+  <div class="b-groups-menu b-groups-menu_slider" id="frame">
     <ul class="b-groups-menu__list js-slider_menu">
       <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букеты</a></li>
       <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букет за час</a></li>
-      <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букет в коробках</a></li>
+      <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букеты в коробках</a></li>
       <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">композиции</a></li>
       <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">бизнес-букет</a></li>
       <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link is--current">суккуленты</a></li>
+      <li class="b-groups-menu__item"></li>
     </ul>
   </div>
       
@@ -607,7 +608,7 @@
         <ul class="b-groups-menu__list">
           <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букеты</a></li>
           <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букет за час</a></li>
-          <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букет в коробках</a></li>
+          <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букеты в коробках</a></li>
           <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">композиции</a></li>
           <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">бизнес-букет</a></li>
           <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link is--current">суккуленты</a></li>
@@ -623,31 +624,31 @@
       <i class="icon-close-white js-close_filters js-filters-toggle"></i>
   </div>
 
-  <!-- filter block -->
-  <div class="b-filter__slider-wrapper">
-    <h4 class="b-filter__title">Цена
-        <i class="icon-toggler"></i>
-        <i class="icon-toggler-white"></i>
-    </h4>
-    <div class="b-filter__slider">
-      <div class="b-filter__slider-inner">
-          <div class="mfilter-price-inputs">
-              от <input id="mfilter-opts-price-min" type="text" class="form-control" value="">
-              до <input id="mfilter-opts-price-max" type="text" class="form-control" value="">
-              грн.
+    <div class="b-filters_scrolled">
+        <!-- filter price block -->
+        <div class="b-filter__slider-wrapper">
+          <h4 class="b-filter__title">Цена
+              <i class="icon-toggler"></i>
+              <i class="icon-toggler-white"></i>
+          </h4>
+          <div class="b-filter__slider">
+            <div class="b-filter__slider-inner">
+                <div class="mfilter-price-inputs">
+                    от <input id="mfilter-opts-price-min" type="text" class="form-control" value="">
+                    до <input id="mfilter-opts-price-max" type="text" class="form-control" value="">
+                    грн.
+                </div>
+                <input type="text" id="price_range" name="price">
+            </div>
+            <div class="b-filter__action">
+              <a href="#" class="g-btn g-btn--primary">поиск по цене</a>
+            </div>
           </div>
-          <input type="text" id="price_range" name="price">
-      </div>
-      <div class="b-filter__action">
-        <a href="#" class="g-btn g-btn--primary">поиск по цене</a>
-      </div>
-    </div>
-  </div>
-  <!-- /filter block -->
+        </div>
+        <!-- /filter price block -->
 
-  
-      
-  <!-- filter block -->
+        
+              <!-- filter block -->
   <div class="b-filter__block">
     <h4 class="b-filter__title">цветок
         <i class="icon-toggler"></i>
@@ -699,8 +700,8 @@
   </div>
   <!-- /filter block -->
   
-      
-  <!-- filter block -->
+        
+              <!-- filter block -->
   <div class="b-filter__block">
     <h4 class="b-filter__title">цветы
         <i class="icon-toggler"></i>
@@ -752,8 +753,8 @@
   </div>
   <!-- /filter block -->
   
-      
-  <!-- filter block -->
+        
+              <!-- filter block -->
   <div class="b-filter__block">
     <h4 class="b-filter__title">кому
         <i class="icon-toggler"></i>
@@ -805,8 +806,8 @@
   </div>
   <!-- /filter block -->
   
-      
-  <!-- filter block -->
+        
+              <!-- filter block -->
   <div class="b-filter__block">
     <h4 class="b-filter__title">повод
         <i class="icon-toggler"></i>
@@ -858,8 +859,8 @@
   </div>
   <!-- /filter block -->
   
-      
-  <!-- filter block -->
+        
+              <!-- filter block -->
   <div class="b-filter__block">
     <h4 class="b-filter__title">тип букета
         <i class="icon-toggler"></i>
@@ -911,8 +912,8 @@
   </div>
   <!-- /filter block -->
   
-      
-  <!-- filter block -->
+        
+              <!-- filter block -->
   <div class="b-filter__block">
     <h4 class="b-filter__title">вид
         <i class="icon-toggler"></i>
@@ -964,8 +965,8 @@
   </div>
   <!-- /filter block -->
   
-      
-  <!-- filter block -->
+        
+              <!-- filter block -->
   <div class="b-filter__block">
     <h4 class="b-filter__title">сезон
         <i class="icon-toggler"></i>
@@ -1017,8 +1018,8 @@
   </div>
   <!-- /filter block -->
   
-      
-  <!-- filter block -->
+        
+              <!-- filter block -->
   <div class="b-filter__block">
     <h4 class="b-filter__title">букет из
         <i class="icon-toggler"></i>
@@ -1070,8 +1071,8 @@
   </div>
   <!-- /filter block -->
   
-      
-  <!-- filter block -->
+        
+              <!-- filter block -->
   <div class="b-filter__block">
     <h4 class="b-filter__title">количество
         <i class="icon-toggler"></i>
@@ -1123,8 +1124,8 @@
   </div>
   <!-- /filter block -->
   
-      
-  <!-- filter block -->
+        
+              <!-- filter block -->
   <div class="b-filter__block">
     <h4 class="b-filter__title">вид композиции
         <i class="icon-toggler"></i>
@@ -1176,8 +1177,8 @@
   </div>
   <!-- /filter block -->
   
-      
-  <!-- filter block -->
+        
+              <!-- filter block -->
   <div class="b-filter__block">
     <h4 class="b-filter__title">фильтр
         <i class="icon-toggler"></i>
@@ -1229,8 +1230,8 @@
   </div>
   <!-- /filter block -->
   
-
-
+        
+    </div>
 
   <!-- filter action -->
   <div class="b-filter__action">

@@ -239,7 +239,11 @@ $(function() {
 		$cartBtn.on("click", function(e){	// 
 			e.stopPropagation();
 		});
-		$cartPopup.on("click", function(e){	// 
+		// $cartPopup.on("click", function(e){	// 
+		$cartPopup.find(".b-minicart__item").on("click", function(e){	// 
+			e.stopPropagation();
+		});
+		$cartPopup.find(".b-minicart__total").on("click", function(e){	// 
 			e.stopPropagation();
 		});
 		$filtersMenu.on("click", function(e){	// 

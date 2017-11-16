@@ -82,6 +82,7 @@ $menuLinkHorizPaddingSmall: 7px;
     background-color: #d1d4d3;
       
     @include note{
+        margin-bottom: 27px;
         padding: 0 calc(50% - 728px / 2 - #{$menuLinkHorizPaddingNote});
         overflow-x: auto;
         white-space: nowrap;
@@ -90,7 +91,8 @@ $menuLinkHorizPaddingSmall: 7px;
         padding: 0 calc(50% - 600px / 2 - #{$menuLinkHorizPaddingTablet});
     }
     @include small{
-        padding: 0 calc(50% - 290px / 2 - #{$menuLinkHorizPaddingSmall});
+//        padding: 0 calc(50% - 290px / 2 - #{$menuLinkHorizPaddingSmall});
+        padding: 0 7px;
     }
 }
 //

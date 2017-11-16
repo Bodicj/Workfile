@@ -10,67 +10,77 @@
         width: 100%;
     }
     
-    .selectric-wrapper{
-        
-        @include note{
-            float: right;
-            width: 120px;
+    .b-row{
+        @include tablet{
+            margin: 0 auto;
+            width: 482px;
+        }
+        @include small{
+            width: 100%;
         }
         
-        .selectric {
-            
-            .label{
-                font-weight: 600;
+        .selectric-wrapper{
 
-                @include pc{
-                    margin: 0px 25px 0 11px;
-                    height: 28px;
-                    line-height: 29px;
-                }
+            @include note{
+                float: right;
+                width: 120px;
             }
-            .button{
-                height: 40px;
 
-                @include huge{
-                    height: 30px;
-                }
-                @include pc{
-//                    right: 9px;
-                    right: 7px;
-                    top: 0px;
-                    width: 15px;
-                    height: 30px;
-//                    line-height: 28px;
-                }
-                
-                &:after{
-//                    border-width: 5px;
-                    border: none;
-                    width: 8px;
-                    height: 5px;
-                    background-image: url(../img/svg/i-qty-down.svg);
-                    background-repeat: no-repeat;
-                    
+            .selectric {
+
+                .label{
+                    font-weight: 600;
+
                     @include pc{
-                        width: 7px;
-                        height: 4px;
+                        margin: 0px 25px 0 11px;
+                        height: 28px;
+                        line-height: 29px;
+                    }
+                }
+                .button{
+                    height: 40px;
+
+                    @include huge{
+                        height: 30px;
+                    }
+                    @include pc{
+    //                    right: 9px;
+                        right: 7px;
+                        top: 0px;
+                        width: 15px;
+                        height: 30px;
+    //                    line-height: 28px;
+                    }
+
+                    &:after{
+    //                    border-width: 5px;
+                        border: none;
+                        width: 8px;
+                        height: 5px;
+                        background-image: url(../img/svg/i-qty-down.svg);
+                        background-repeat: no-repeat;
+
+                        @include pc{
+                            width: 7px;
+                            height: 4px;
+                        }
                     }
                 }
             }
         }
-    }
-    
-    .selectric-wrapper{
-        display: inline-block;
-        vertical-align: middle;
-        width: 174px;
-        
-         @include huge{
-            width: 130px;
-        }
 
-        @include pc{
-            width: 120px;
+        .selectric-wrapper{
+            display: inline-block;
+            vertical-align: middle;
+            width: 174px;
+
+             @include huge{
+                width: 130px;
+            }
+
+            @include pc{
+                width: 120px;
+            }
         }
     }
 }

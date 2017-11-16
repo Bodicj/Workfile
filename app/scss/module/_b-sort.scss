@@ -35,12 +35,14 @@
     
     @include note{
         display: block;
-        max-width: 290px;
         float: none;
-        margin: 0 0 70px auto;
+        max-width: 267px;
+//        margin: 0 0 70px auto;
+        margin: 0 0 21px auto;
     }
-    @include note{
+    @include small{
         margin-right: auto;   
+        max-width: 290px;
     }
     
     select{
@@ -73,6 +75,8 @@
             line-height: 17px;
             font-size: 12px;
             font-weight: 700;
+            color: #000;
+            background-color: #d1d4d3;
         }
         @include small{
 //            float: right;

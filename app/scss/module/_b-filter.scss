@@ -2,7 +2,7 @@
 	position: relative;
 //	margin-bottom: 60px;
 //	margin-bottom: 62px;
-	margin-bottom: 64px;
+	margin-bottom: 58px;
     
      @include huge{
         margin-bottom: 34px;
@@ -16,14 +16,16 @@
         bottom: 0;
         z-index: 1001;;
         margin-bottom: 0;
-        width: 280px;
+//        width: 280px;
+        width: 305px;
         padding: 0 0 69px;
         background-color: #000;
         transform: translateX(0);
         transition: transform 500ms;
         
         &.is--visible{
-            transform: translateX(280px);
+//            transform: translateX(280px);
+            transform: translateX(305px);
         }
     }
     
@@ -51,14 +53,23 @@
         float: right;
         cursor: pointer;
         
+        @include note{
+            margin-top: 12px;
+            width: 25px;
+            height: 25px;
+        }
         @include small{
-            margin-top: 4px;
+            margin-top: 3px;
+            margin-right: 2px;
+            width: 18px;
+            height: 18px;
         }
     }
 }
 .b-filter__title{
 	position: relative;
-	margin: 0 0 27px;
+//	margin: 0 0 27px;
+	margin: 0;
 //	padding: 0 15px;
 	font-size: 20px;
 	font-weight: 600;
@@ -66,11 +77,12 @@
 	text-transform: uppercase;
 //	text-align: center;
 	color: #0f0f0f;
+    cursor: pointer;
     
     @include huge{
-        
+        margin: 0;
+//        margin: 0 0 25px;
         font-size: 14.57px;
-        margin: 0 0 25px;
         
     }
 
@@ -80,6 +92,8 @@
         font-size: 16.61px;
     }
     @include note{
+        font-size: 14px;
+        font-weight: 400;
         color: #fff;
     }
     
@@ -130,7 +144,8 @@
 .b-filter__block{
 	padding:0;
 //	margin-bottom: 21px;
-	margin-bottom: 28px;
+//	margin-bottom: 28px;
+	margin-bottom: 0;
 
 	&.is--closed{
 		margin-bottom: 0;
@@ -140,21 +155,23 @@
         margin-bottom: 20px;
     }
     @include note{
-        padding: 0 15px;
+//        padding: 0 15px;
+        padding: 0 17px 0 15px;
     }
 
     .b-filter__title{
         @include huge{
-            margin-bottom: 16px;
+//            margin-bottom: 16px;
         }
     }
 }
 .b-filter__block-items{
 	list-style-type: none;
-	margin: 0; padding: 0;
+	margin: 27px 0 28px;
+    padding: 0;
 //	max-height: 175px;
 //	max-height: 181px;
-	max-height: 135px;
+	max-height: 157px;
 	transition: all .3s;
 	overflow-y: auto;
     
@@ -170,8 +187,13 @@
     }
 
 	.is--closed & {
+        margin: 5px 0;
 		max-height: 0;
 		overflow: hidden;
+        
+        @include note{
+            margin: 2px 0;
+        }
 	}
 
 	li {
@@ -249,12 +271,12 @@
     @include huge{
         margin-bottom: 39px;
     }
-
     @include note{
-        padding: 0 15px;
+        padding: 3px 17px 0 15px;
     }
 }
 .b-filter__slider{
+    margin: 27px 0 28px;
 //	max-height: 150px;
 	max-height: 193px;
 	transition: all .3s;
@@ -263,8 +285,13 @@
 //    }
 
 	.is--closed & {
+        margin: 5px 0;
 		max-height: 0;
 		overflow: hidden;
+        
+        @include note{
+            margin: 2px 0;
+        }
 	}
     
     .b-filter__action{
@@ -401,6 +428,14 @@
         font-weight: 700;
         color: #fff;
         
+    }
+    
+    &:hover{
+        text-decoration: underline;
+        
+        @include note{
+            text-decoration: none;
+        }
     }
     
     &:first-child{

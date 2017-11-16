@@ -344,6 +344,7 @@ $svgTransitionTime: 0.2s;
             }
             @include pc{
                 right: 29px;
+                pointer-events: none
             }
             @include small{
                  right: 24px;

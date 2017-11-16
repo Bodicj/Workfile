@@ -97,10 +97,10 @@
         padding: 40px 0 175px;
     }
     @include note{
-        padding: 40px 0 135px;
+        padding: 11px 0 135px;
     }
     @include small{
-        padding: 13px 0 73px;
+        padding: 11px 0 73px;
         
     }
 
@@ -108,6 +108,9 @@
 		margin-bottom: 65px;
         @include huge{
             margin-bottom: 45px;
+        }
+        @include note{
+            margin-bottom: 38px;
         }
         @include small{
             margin-bottom: 36px;
@@ -124,6 +127,12 @@
 
         @include note{
             display: block;
+        }
+        
+        &::-webkit-scrollbar{
+            @include tablet{   
+                display: none;
+            }
         }
     }
     

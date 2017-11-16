@@ -9,9 +9,13 @@
     @include pc{
         margin-bottom: 60px;
     }
+    @include note{
+        margin-bottom: 48px;
+    }
     @include small{
-        margin-bottom: 50px;
+//        margin-bottom: 50px;
 //        font-size: 10px;
+        margin-bottom: 38px;
     }
     
 	a {

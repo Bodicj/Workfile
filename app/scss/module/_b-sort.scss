@@ -13,8 +13,10 @@
 	}
     
     @include huge{
-        margin-top: 4px;
-        margin-bottom: 73px;  
+//        margin-top: 4px;
+//        margin-bottom: 73px;  
+        margin-top: 7px;
+        margin-bottom: 70px;
     }
 
     @include note{
@@ -25,30 +27,33 @@
   //      display: flex;
 //        flex-direction: row-reverse;
   //      align-items: center;
-
-        display: block;
-        max-width: 290px;
-        float: none;
-        margin: 0 auto 70px auto;
+//
+//        display: block;
+//        max-width: 290px;
+//        float: none;
+//        margin: 0 auto 70px auto;
 
     }
     
     @include note{
         display: block;
         float: none;
-        max-width: 267px;
+        max-width: 263px;
 //        margin: 0 0 70px auto;
-        margin: 0 0 21px auto;
+        margin: 0 0 24px auto;
+    }
+    @include tablet{
+        margin: 0 0 27px auto;
     }
     @include small{
-        margin-right: auto;   
-        max-width: 290px;
+        margin: 0 auto 25px;   
+        max-width: 264px;
     }
     
     select{
         border-width: 1px;
         @include pc{
-            float: left;
+//            float: left;
             width: 120px;
             padding: 4px 0px 5px 7px;
             line-height: 21px;

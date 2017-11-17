@@ -94,13 +94,14 @@
 	padding-top: 83px;
 } 
     @include pc{
-        padding: 40px 0 175px;
+//        padding: 40px 0 175px;
+        padding: 14px 0 175px;
     }
     @include note{
         padding: 11px 0 135px;
     }
     @include small{
-        padding: 11px 0 73px;
+        padding: 8px 0 73px;
         
     }
 
@@ -160,25 +161,17 @@
                 padding: 0 7px;
             }
             
-            .b-product{
-                 &:nth-child(n+13){
-                    @include pc{
-                        display: none;
-                    }
-
-                    @include note{
-                        display: block;
-                    }
-                 }
-//                &:nth-child(n+15){
-//                    @include note{
+//            .b-product{
+//                 &:nth-child(n+13){
+//                    @include pc{
 //                        display: none;
-//                    }    
-//                    @include small{
+//                    }
+//
+//                    @include note{
 //                        display: block;
-//                    }    
-//                }
-            }
+//                    }
+//                 }
+//            }
         }
     }
 }

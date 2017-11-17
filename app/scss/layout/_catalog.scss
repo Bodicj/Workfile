@@ -20,10 +20,19 @@
         }
         
         .selectric-wrapper{
+            display: inline-block;
+            vertical-align: middle;
+            width: 174px;
 
+            @include huge{
+                width: 130px;
+            }
+            @include pc{
+                width: 120px;
+            }
             @include note{
                 float: right;
-                width: 120px;
+//                width: 120px;
             }
 
             .selectric {
@@ -68,19 +77,9 @@
                 }
             }
         }
-
-        .selectric-wrapper{
-            display: inline-block;
-            vertical-align: middle;
-            width: 174px;
-
-             @include huge{
-                width: 130px;
-            }
-
-            @include pc{
-                width: 120px;
-            }
-        }
+    }
+    
+    .b-product{
+        display: block!important;
     }
 }

@@ -82,15 +82,19 @@ $menuLinkHorizPaddingSmall: 7px;
     background-color: #d1d4d3;
       
     @include note{
-        margin-bottom: 27px;
-        padding: 0 calc(50% - 728px / 2 - #{$menuLinkHorizPaddingNote});
+        margin-bottom: 24px;
+//        padding: 0 calc(50% - 728px / 2 - #{$menuLinkHorizPaddingNote});//по стакану
+        padding: 0 19px;
         overflow-x: auto;
         white-space: nowrap;
+        text-align: center;
     }
     @include tablet{
-        padding: 0 calc(50% - 600px / 2 - #{$menuLinkHorizPaddingTablet});
+        margin-bottom: 27px;
+//        padding: 0 calc(50% - 600px / 2 - #{$menuLinkHorizPaddingTablet});//по стакану
     }
     @include small{
+        margin-bottom: 23px;
 //        padding: 0 calc(50% - 290px / 2 - #{$menuLinkHorizPaddingSmall});
         padding: 0 7px;
     }

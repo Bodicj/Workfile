@@ -237,7 +237,7 @@
 	position: absolute;
 	left: 0; top: 100%;
 	width: 405px;
-	background-color: #ffffff;
+//	background-color: #ffffff;
 	z-index: 200;
     
     @include huge {
@@ -246,7 +246,8 @@
 }
 .b-nav__sublist-item{
 	display: block;
-	border-top: 10px solid #fff;
+    margin-top: 10px;
+//	border-top: 10px solid #fff;
 //	padding: 18.5px 51px 18.5px 49px;
 	background-color: #d1d4d3;
     transition-property: background-color;
@@ -254,7 +255,8 @@
 //	margin-left: -9px;
     
     @include huge{
-        border-width: 7px;
+        margin-top: 7px;
+//        border-width: 7px;
     }
     
     &:hover{
@@ -336,6 +338,7 @@
 }
 
 .b-nav_services{
+    position: relative;
     width: 1620px;
     margin: 0 auto;
      
@@ -350,15 +353,35 @@
         display: flex;
         justify-content: center;
         width: auto;
-        overflow: auto;
+//        overflow: auto;
+    }
+    
+    &::-webkit-scrollbar{
+        @include note{   
+            display: none;
+        }
     }
 }
 .b-nav__list_services{
-    flex-basis: 100%;
+//    flex-basis: 100%;
+        width: 100%;
+        overflow: auto;
+    
+    &::-webkit-scrollbar{
+        @include note{   
+            display: none;
+        }
+    }
 }
 .b-nav__item_services{
-    position: relative;
+//    position: relative;
     background-color: #d1d4d3;
+    
+    @include pc{
+//        position: static;
+        flex-shrink: 0;
+        margin: 0 2.5px;
+    }
     
     &:first-child{
         margin-left: 0;
@@ -367,16 +390,11 @@
         margin-right: 0;
     }
     
-    @include pc{
-        flex-shrink: 0;
-        margin: 0 2.5px;
-    }
-    
-	&.with--subnav:hover{
-		.b-nav__sublist{
-			display: block;
-		}
-	}
+//	&.with--subnav:hover{
+//		.b-nav__sublist{
+//			display: block;
+//		}
+//	}
 }
 .b-nav__link_services{
     display: inline-block;
@@ -388,6 +406,7 @@
     text-transform: uppercase;
     color: #0f0f0f;
     transition: none;
+    cursor: pointer;
     
     &:hover{
         text-decoration: none;
@@ -396,14 +415,16 @@
     }
     
     @include huge{
-        font-size: 12px;
+        padding: 7px 14px;
+        font-size: 13px;
     }
 }
 .b-nav__sublist_services{
     text-align: center;
     width: 100%;
+//    background-color: transparent;
 }
-//.b-nav__sublist-item{}
+//.b-nav__subzlist-item{}
 .b-nav__sublist-link_services{
     display: inline-block;
     width: 100%;
@@ -412,6 +433,7 @@
     line-height: normal;
     font-size: 18px;
     font-weight: 600;
+    cursor: pointer;
     
     @include huge{
         font-size: 12px;

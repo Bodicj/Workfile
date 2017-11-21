@@ -1,0 +1,48 @@
+.b-advantages{
+    margin: 0 -60px;
+    counter-reset: advNum;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.b-advantage{
+    margin: 0 59px 133px;
+    max-width: 461px;
+    
+//    &:first-child{
+//        margin-left: 0;
+//    }
+//    &:nth-child(3){
+//        margin-right: 0;
+//    }
+    
+    @include huge{
+        max-width: 345px;
+    }
+    
+    &::before{
+        counter-increment: advNum;
+        content: counter(advNum);
+        margin: 0 30px 0 0;
+        float: left;
+        line-height: 56px;
+        font-size: 72px;
+        font-weight: 800;
+        
+        @include huge{
+            line-height: 52.45px;
+            font-size: 52.45px;
+        }
+    }
+}
+.b-advantage__text{
+    margin: 0;
+    overflow: hidden;
+    padding: 1px 0;
+    line-height: 19px;
+    font-size: 16px;
+    
+    @include huge{
+        font-size: 11.65px;
+    }
+}

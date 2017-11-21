@@ -154,3 +154,13 @@
 		background-color: darken(#d1d4d3, 5%);
 	}
 }
+
+.b-widget__btn_services{
+    @extend .b-widget__btn;
+    margin: 14px auto 114px;
+    padding: 8px 45px 7px;
+//    width: 251px;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+}

@@ -230,6 +230,10 @@
 	}
 }
 
+.b-subscribe__before{
+    @extend .b-subscribe__after;
+    transform: rotate(180deg);
+}
 .b-subscribe__after{
     height: 535px;
     background: #fff url(../img/flowers/flowers-subscribe-lg.jpg) no-repeat top;
@@ -280,4 +284,11 @@
             background: #fff url(../img/flowers/flowers-subscribe-xs-2x.jpg) no-repeat top /100%;
         }
     }
+}
+
+.b-subscribe__before_services{
+    height: 506px;
+}
+.b-subscribe__after_services{
+    height: 451px;
 }

@@ -1,0 +1,35 @@
+.b-responces{
+    display: flex;
+    justify-content: space-between;
+}
+.b-responce{
+    margin-bottom: 78px;
+    max-width: 360px;
+    padding: 33px;
+}
+.b-responce__rating{
+    margin-bottom: 41px;
+}
+.b-responce__header{
+    display: flex;
+    margin-bottom: 14px;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.b-responce__heading{
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.b-responce__time{
+//    float: right;
+    font-weight: 600;
+}
+.b-responce__text{
+    margin: 0;
+    line-height: 17px;
+}
+.b-responces__button{
+    padding:  12px 19px;
+    font-size: 16px;
+}

@@ -87,9 +87,8 @@
     }
 }
 .section--catalog{
-	padding-top: 117px;
-	padding-bottom: 270px;
-
+	padding: 117px 0 270px;
+    
  	@include huge {
 	padding-top: 83px;
 } 
@@ -520,4 +519,70 @@
     @include small{
         font-size: 21px;
     }
+}
+
+.section_services{
+	padding: 117px 0 270px;
+
+ 	@include huge {
+	    padding-top: 83px;
+    }
+    @include pc{
+        padding: 14px 0 175px;
+    }
+    @include note{
+        padding: 11px 0 135px;
+    }
+    @include small{
+        padding: 8px 0 73px;
+        
+    }
+}
+
+.section__title_services{
+    margin-bottom: 88px;
+
+    @include huge{
+        margin-bottom: 62px;
+    }
+}
+
+.section--slides_service{
+    margin-top: 125px;
+    padding-bottom: 69px;
+    
+    @include huge{
+        margin-top: 80px;
+    }
+}
+
+.section-text_services{
+    padding: 110px 0;
+    
+    .b-seo-text{
+        padding-bottom: 0;
+        
+        .b-seo-text__inner{
+            margin: 0;
+            line-height: 29px;
+            font-size: 24px;
+            
+            p{
+                letter-spacing: -.0025em;
+            }
+        }
+    }
+}
+.section--products_services{
+    margin-top: 208px;
+}
+.section--advantages{
+    padding: 89px 0 3px;
+}
+.section__title_advantage{
+    margin-bottom: 100px;
+    line-height: 36px;
+}
+.section--responces{
+    padding-bottom: 200px;
 }

@@ -2,10 +2,7 @@
 <!-- MAIN MENU -->
 @@include('./../parts/nav.html')
 <!-- /MAIN MENU -->
-
-
-<section class="section section--catalog">
-
+<section class="section_services">
     <!-- breadcrumbs -->
     <div class="b-breadcrumbs">
         <div class="container">
@@ -15,14 +12,104 @@
     </div>
     <!-- /breadcrumbs -->
 
-    <h2 class="section__title">Оформление праздников</h2>
-    
-    @@include('./../parts/nav-services.html')    
-      
-    <div class="container">
-      
-    </div>
+    <h2 class="section__title section__title_services">Оформление праздников</h2>
 
+    @@include('./../parts/nav-services.html')
+
+    <!-- SLIDES SERVICES -->
+    <section class="section section--slides_service">
+      <div class="container">
+
+        <div class="content-block">
+        @@for (i=1; i<=3; i++){
+            @@include('./../parts/slide-services.html', {"index": "`+i+`"})
+        }
+        </div>
+
+      </div>
+    </section>
+    <!-- /SLIDES SERVICES -->
+
+    @@include('./../parts/services-text.html')
+
+    <!-- SUBSCRIBE TOP-->
+    <section class="section section--subscribe">
+      <div class="b-subscribe__before b-subscribe__before_services"></div>
+      <article class="b-subscribe">
+        <div class="container" id="subscribe_container">
+          <form action="" class="b-subscribe__form">
+            <h4 class="b-subscribe__title">Оформление праздников</h4>
+            <input type="text" name="name" placeholder="Ваше имя">
+            <input type="email" name="email" placeholder="Ваш e-mail">
+            <input type="submit" value="Подписаться" class="g-btn g-btn--bordered-white">
+          </form>
+        </div>
+      </article>
+    </section>
+    <!-- /SUBSCRIBE TOP-->
+
+    <!-- PRODUCTS SERVICES-->
+    <section class="section section--products section--products_services">
+      <div class="container">
+
+        <div class="content-block">
+            @@for (i=1; i<=4; i++){
+                @@include('./../parts/product.html', {"index": "`+i+`"})
+            }
+        </div>
+        
+        <button class="b-widget__btn b-widget__btn_services">Показать еще</button>
+
+      </div>
+    </section>
+    <!-- /PRODUCTS SERVICES -->
+
+    <!-- ADVANTAGES -->
+    <section class="section section--advantages section--grey">
+        <h2 class="section__title section__title_advantage">5 очевидных преимуществ<br>оформления праздника вместе с нами</h2>
+
+        <div class="container">
+            <div class="b-advantages">
+                @@for (i=1; i<=5; i++){
+                    @@include('./../parts/advantage.html', {"index": "`+i+`"})
+                }
+            </div>
+        </div>
+    </section>
+    <!-- ADVANTAGES END-->
+
+    <!-- SUBSCRIBE BOTTOM-->
+    <section class="section section--subscribe">
+      <article class="b-subscribe">
+        <div class="container" id="subscribe_container">
+          <form action="" class="b-subscribe__form">
+            <h4 class="b-subscribe__title">Оформление праздников</h4>
+            <input type="text" name="name" placeholder="Ваше имя">
+            <input type="email" name="email" placeholder="Ваш e-mail">
+            <input type="submit" value="Подписаться" class="g-btn g-btn--bordered-white">
+          </form>
+        </div>
+      </article>
+      <div class="b-subscribe__after b-subscribe__after_services"></div>
+    </section>
+    <!-- /SUBSCRIBE BOTTOM-->
+
+    <!-- RESPONCES -->
+    <section class="section section--responces">
+        <h2 class="section__title">Отзывы</h2>
+
+        <div class="container">
+            <div class="b-responces">
+                @@for (i=1; i<=4; i++){
+                    @@include('./../parts/responce.html', {"index": "`+i+`"})
+                }
+            </div>
+        <div class="g-text--center">
+            <button class="g-btn g-btn--bordered b-responces__button">Написать отзыв</button>
+        </div>
+        </div>
+    </section>
+    <!-- /RESPONCES -->
 </section>
 
 @@include('./../parts/seo-text.html')

@@ -34,6 +34,25 @@
 }
 .b-news_service{
     width: 30.85%;
+    
+    @include tablet{
+        margin-right: 15px;
+        width: 222px;
+        flex-shrink: 0;
+    }
+    
+    &:first-child{
+        @include tablet{
+            margin-left: auto;
+        }
+    }
+    &:last-child{
+        display: inline-block;
+        
+        @include tablet{
+            margin-right: auto;
+        }
+    }
 }
 .b-news__photo{
 	display: block;

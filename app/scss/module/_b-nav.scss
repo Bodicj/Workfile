@@ -418,6 +418,12 @@
         padding: 7px 14px;
         font-size: 13px;
     }
+    @include pc{
+        font-size: 12px;
+    }
+    @include small{
+        font-size: 8.66px;
+    }
 }
 .b-nav__sublist_services{
     text-align: center;
@@ -436,6 +442,12 @@
     cursor: pointer;
     
     @include huge{
+        font-size: 13px;
+    }
+    @include pc{
         font-size: 12px;
+    }
+    @include small{
+        font-size: 8.66px;
     }
 }

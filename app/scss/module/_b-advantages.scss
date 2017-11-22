@@ -4,6 +4,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
+    @include huge{
+        margin: 0 -46px;
+    }
+    @include pc{
+        margin: 0px -30px;
+    }
 }
 .b-advantage{
     margin: 0 59px 133px;
@@ -17,7 +24,12 @@
 //    }
     
     @include huge{
-        max-width: 345px;
+        margin: 0 44px 85px;
+        max-width: 336px;
+    }
+    @include pc{
+        margin: 0 30px 70px;
+        max-width: 287px;
     }
     
     &::before{
@@ -43,6 +55,12 @@
     font-size: 16px;
     
     @include huge{
+        padding: 7px 0;
+        line-height: 14px;
         font-size: 11.65px;
+    }
+    
+    @include small{
+        font-size: 12px;
     }
 }

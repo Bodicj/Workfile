@@ -525,16 +525,16 @@
 	padding: 117px 0 270px;
 
  	@include huge {
-	    padding-top: 83px;
+	    padding: 83px 0 47px;
     }
     @include pc{
-        padding: 14px 0 175px;
+        padding-top: 14px;
     }
     @include note{
-        padding: 11px 0 135px;
+        padding-top: 11px;
     }
     @include small{
-        padding: 8px 0 73px;
+        padding-top: 8px;
         
     }
 }
@@ -554,10 +554,35 @@
     @include huge{
         margin-top: 80px;
     }
+    @include note{
+        margin-top: 60px;
+        padding-bottom: 60px;
+    }
+    
+    .container{
+        @include tablet{
+            max-width: 100%;
+            padding: 0;
+        }
+    }
+    .content-block{
+        @include tablet{
+            overflow: auto;
+            flex-wrap: nowrap;
+//            justify-content: center;
+        }
+    }
 }
 
 .section-text_services{
     padding: 110px 0;
+    
+    @include huge{
+        padding: 82px 0;
+    }
+    @include note{
+        padding: 70px 0;
+    }
     
     .b-seo-text{
         padding-bottom: 0;
@@ -567,6 +592,20 @@
             line-height: 29px;
             font-size: 24px;
             
+            @include huge{
+                line-height: 21px;
+                font-size: 17.48px;
+            }
+            @include note{
+                font-size: 16px;
+            }
+            @include tablet{
+                font-size: 14px;
+            }
+            @include small{
+                font-size: 13px;
+            }
+            
             p{
                 letter-spacing: -.0025em;
             }
@@ -575,14 +614,53 @@
 }
 .section--products_services{
     margin-top: 208px;
+    
+    @include huge{
+        margin-top: 138px;
+    }
+    @include pc{
+        margin: 75px 0;
+        padding: 0;
+    }
+    
+    .b-product:nth-child(n+4){
+        @include note{
+            display: none;
+        }
+        @include tablet{
+            display: block;
+        }
+    }
 }
 .section--advantages{
     padding: 89px 0 3px;
+    
+    @include huge{
+        padding: 65px 0 5px;
+    }
 }
 .section__title_advantage{
     margin-bottom: 100px;
     line-height: 36px;
+    
+    @include huge{
+        margin-bottom: 67px;
+        line-height: 26px;
+    }
 }
 .section--responces{
     padding-bottom: 200px;
+    
+    @include pc{
+        padding-bottom: 160px;
+    }
+    @include note{
+        padding-bottom: 110px;
+    }
+    
+    .section__title{
+        @include huge{
+            margin-bottom: 67px;
+        }
+    }
 }

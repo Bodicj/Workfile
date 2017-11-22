@@ -1,35 +1,96 @@
 .b-responces{
     display: flex;
     justify-content: space-between;
+    
+    @include note{
+        overflow: auto;
+    }
+    &::-webkit-scrollbar{
+        @include note{   
+            display: none;
+        }
+    }
 }
 .b-responce{
     margin-bottom: 78px;
     max-width: 360px;
     padding: 33px;
+    
+    @include huge{
+        margin-bottom: 55px;
+        max-width: 262px;
+        padding: 26px 28px 26px 23px;
+    }
+    @include pc{
+        max-width: 230px;
+        padding: 25px;
+    }
+    @include note{
+        flex-shrink: 0;
+        margin-right: 15px;
+        max-width: 250px;
+        padding: 20px 15px 15px;
+    }
 }
 .b-responce__rating{
     margin-bottom: 41px;
+    
+    @include huge{
+        margin-bottom: 20px;
+    }
+    @include pc{
+        margin-bottom: 12px;
+    }
 }
 .b-responce__header{
     display: flex;
     margin-bottom: 14px;
     justify-content: space-between;
     align-items: baseline;
+    
+    @include huge{
+        margin-bottom: 10px;
+    }
+    @include note{
+        margin-bottom: 17px;
+    }
 }
 .b-responce__heading{
     font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
+    
+    @include huge{
+        font-size: 14.57px;
+    }
 }
 .b-responce__time{
 //    float: right;
     font-weight: 600;
+    
+    @include huge{
+        font-size: 10.2px;
+    }
 }
 .b-responce__text{
     margin: 0;
     line-height: 17px;
+    
+    @include huge{
+        line-height: 12px;
+        font-size: 10.2px;
+    }
+    @include note{
+        line-height: 18px;
+        font-size: 12px;
+    }
 }
 .b-responces__button{
     padding:  12px 19px;
     font-size: 16px;
+    
+    @include huge{
+        padding: 7px 13px 6px;
+        font-size: 11.65px;
+    }
 }

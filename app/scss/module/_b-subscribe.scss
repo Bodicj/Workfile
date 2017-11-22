@@ -288,7 +288,21 @@
 
 .b-subscribe__before_services{
     height: 506px;
+    
+    @include huge{
+        height: 368px;
+    }
+    @include note{
+        height: 280px;
+    }
 }
 .b-subscribe__after_services{
     height: 451px;
+    
+    @include huge{
+        height: 315px;
+    }
+    @include note{
+        height: 210px;
+    }
 }

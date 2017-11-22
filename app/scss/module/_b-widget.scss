@@ -163,4 +163,14 @@
     width: auto;
     height: auto;
     font-size: 20px;
+    
+    @include huge{
+        margin: 18px auto 79px;
+        padding: 8px 33px 7px;
+        line-height: 21px;
+        font-size: 14.57px;
+    }
+    @include pc{
+        margin-bottom: 0;
+    }
 }

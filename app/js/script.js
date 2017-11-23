@@ -816,6 +816,11 @@ $(function() {
 	  				"display": "none",	//hide submnenu
 	  			});
 			}
+			,hideAllSubmenus = function(){
+				$serviceMenuItems.each(function(){
+	  				hideSubmenu(this);		
+	  			});
+			}
   			;
 
   		$serviceMenuItems.on("mouseenter", function(){
@@ -825,10 +830,33 @@ $(function() {
   		});
 
   		$serviceMenu.on("scroll", function(){
-  			$serviceMenuItems.each(function(){
-  				hideSubmenu(this);		
-  			});
+  			hideAllSubmenus();
+  		});
+
+  		$window.on("resize", function(){
+  			hideAllSubmenus();
   		});
 
   	})();
+
+
+	//
+	// Center scrolled blocks
+	//---------------------------------------------------------------------------------------
+	$.fn.horizCenterScrolled = function() {
+	  this.each(function(index, elem) {
+	    var
+	    	 elemWidth = elem.offsetWidth
+	    	,elemScrollWidth = elem.scrollWidth
+	    	;
+
+	    if (elemScrollWidth > elemWidth)
+	    	elem.scrollLeft = Math.round((elemScrollWidth - elemWidth)/2)
+	    console.log(elem.scrollLeft);
+	  });
+	  return this;
+	};
+
+  	
+	$(".js-scroll_centered").horizCenterScrolled();
 });

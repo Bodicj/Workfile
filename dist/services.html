@@ -586,7 +586,7 @@
 
     <!-- services navigation -->
 <div class="b-nav_services js-menu_services">
-    <ul class="b-nav__list b-nav__list_services">
+    <ul class="b-nav__list b-nav__list_services js-scroll_centered">
         <li class="b-nav__item_services with--subnav">
             <span class="b-nav__link_services">корпоративная флористика</span>
             <ul class="b-nav__sublist b-nav__sublist_services">
@@ -695,7 +695,7 @@
     <section class="section section--slides_service">
       <div class="container">
 
-        <div class="content-block">
+        <div class="content-block js-scroll_centered">
         
             
 <!-- service slide -->
@@ -940,7 +940,7 @@
         <h2 class="section__title section__title_advantage">5 очевидных преимуществ<br>оформления праздника вместе с нами</h2>
 
         <div class="container">
-            <div class="b-advantages">
+            <div class="b-advantages js-scroll_centered">
                 
                     <div class="b-advantage">
 	<p class="b-advantage__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в ко</p>
@@ -988,7 +988,7 @@
         <h2 class="section__title">Отзывы</h2>
 
         <div class="container">
-            <div class="b-responces">
+            <div class="b-responces js-scroll_centered">
                 
                     
             <article class="b-responce section--grey" data-stars="3">
@@ -1056,7 +1056,7 @@
                 
             </div>
         <div class="g-text--center">
-            <button class="g-btn g-btn--bordered b-responces__button">Написать отзыв</button>
+            <button class="g-btn g-btn--bordered b-responces__button" data-modal="responce">Написать отзыв</button>
         </div>
         </div>
     </section>
@@ -1237,8 +1237,9 @@
 
 <!-- MODAL -->
 <div style="display:none">
-        <!-- Form register -->
-    <div class="arcticmodal" id="register">
+    <!--    next modals (IDs) is here: register, login, promo, callback, calc-->
+    <!-- Form register -->
+    <div class="arcticmodal b-modal_register" id="register">
         <form action="" class="g-form js-form-register">
             <div class="arcticmodal-close"><i class="icon-close"></i></div>
             <div class="arcticmodal-header">Регистрация</div>
@@ -1270,7 +1271,7 @@
     <!-- /Form register -->
 
     <!-- Form login -->
-    <div class="arcticmodal" id="login">
+    <div class="arcticmodal b-modal_login" id="login">
         <form action="" class="g-form js-form-login">
             <div class="arcticmodal-close"><i class="icon-close"></i></div>
             <div class="arcticmodal-header">Вход</div>
@@ -1312,12 +1313,12 @@
     <!-- /Form login -->
 
     <!-- Form promo -->
-    <div class="arcticmodal arcticmodal--wide" id="promo">
+    <div class="arcticmodal b-modal_promo" id="promo">
         <div class="arcticmodal-close"><i class="icon-close"></i></div>
-        <!--                        <img src="http://placehold.jp/430x510.png"  class="arcticmodal-promo__left" alt="">-->
-        <img src="./img/modals/promo-430.jpg" class="arcticmodal-promo__left" alt="">
+        <!--                        <img src="http://placehold.jp/430x510.png"  class="b-modal_promo__left" alt="">-->
+        <img src="./img/modals/promo-430.jpg" class="b-modal_promo__left" alt="">
 
-        <div class="arcticmodal-promo__right">
+        <div class="b-modal_promo__right">
             <p class="g-h2">Получи бесплатно живой подарок стомостью 190 грн<br>при покупке от 949 грн</p>
             <p class="g-h2"><span>Промокод</span><span>fregood</span></p>
             <form action="" class="g-form js-form-promo">
@@ -1333,7 +1334,7 @@
     
     
     <!-- Callback Form -->
-    <div class="b-modal" id="callback">
+    <div class="b-modal b-modal_callback" id="callback">
         <div class="arcticmodal-close"><i class="icon-close"></i></div>
 
         <form action="" class="b-form js-form-callback">
@@ -1359,7 +1360,7 @@
     <!-- /Callback Form -->
 
     <!-- Calc Form -->
-    <div class="b-modal" id="calc">
+    <div class="b-modal b-modal_calc" id="calc">
       <div class="arcticmodal-close"><i class="icon-close"></i></div>
       <form action="" class="b-form js-form-calc">
         <div class="b-form__inner">
@@ -1386,6 +1387,40 @@
     </div>
     <!-- /Calc Form -->
     
+    
+    
+    
+        <!--    next modals (IDs) is here: responce-->
+    <!-- Responce form modal -->
+    <div class="arcticmodal b-modal_responce" id="responce">
+        <form action="" class="g-form">
+            <div class="arcticmodal-close"><i class="icon-close"></i></div>
+            
+            <div class="b-modal__heading">добавить отзыв</div>
+            
+            <div class="g-form__field">
+                <textarea name="responce" class="g-input" placeholder="Ваш отзыв"></textarea>
+            </div>
+            
+            <div class="b-rating">
+                <input type="radio" id="star5" name="rating" value="5" required="">
+                <label for="star5" title="восхитительно"></label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4" title="отлично"></label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3" title="хорошо"></label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2" title="удовлетворительно"></label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1" title="плохо"></label>
+            </div>
+
+            <div class="g-form__field g-text--left">
+                <button type="submit" class="g-btn">Подписаться</button>
+            </div>
+        </form>
+    </div>
+    <!-- /Responce form modal -->
     
     
 </div>

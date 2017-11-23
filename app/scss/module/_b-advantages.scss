@@ -9,12 +9,30 @@
         margin: 0 -46px;
     }
     @include pc{
-        margin: 0px -30px;
+        margin: 0 -30px;
+    }
+    @include note{
+        margin: 0;
+        overflow: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    
+    &::-webkit-scrollbar{
+        @include note{   
+            display: none;
+        }
+    }
+    
+    &::after{
+        @include note{
+            content: "";
+        }
     }
 }
 .b-advantage{
     margin: 0 59px 133px;
-    max-width: 461px;
+    max-width: 462px;
     
 //    &:first-child{
 //        margin-left: 0;
@@ -31,6 +49,16 @@
         margin: 0 30px 70px;
         max-width: 287px;
     }
+    @include note{
+        margin-left: 0;
+        margin-right: 30px;
+        max-width: 195px;
+        flex-shrink: 0;
+    }
+    @include small{
+        margin-right: 25px;
+        margin-bottom: 10px;
+    }
     
     &::before{
         counter-increment: advNum;
@@ -44,6 +72,16 @@
         @include huge{
             line-height: 52.45px;
             font-size: 52.45px;
+            margin-right: 22px;
+        }
+        @include note{
+            margin: 0;
+            display: block;
+            float: none;
+            line-height: normal;
+            line-height: 64px;
+            font-size: 50px;
+            text-align: center;
         }
     }
 }
@@ -60,7 +98,9 @@
         font-size: 11.65px;
     }
     
-    @include small{
+    @include note{
+        line-height: 18px;
         font-size: 12px;
+        text-align: justify;
     }
 }

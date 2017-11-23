@@ -295,6 +295,12 @@
     @include note{
         height: 280px;
     }
+    @include tablet{
+        height: 240px;
+    }
+    @include small{
+        height: 101px;
+    }
 }
 .b-subscribe__after_services{
     height: 451px;
@@ -304,5 +310,11 @@
     }
     @include note{
         height: 210px;
+    }
+    @include tablet{
+        height: 200px;
+    }
+    @include small{
+        height: 94px;
     }
 }

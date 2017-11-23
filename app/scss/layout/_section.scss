@@ -490,6 +490,8 @@
 }
 .section__title{
 	margin: 0 0 80px;
+    padding-right: 5px;
+    padding-left: 5px;
 	font-size: 36px;
 	font-weight: 700;
 	line-height: 42px;
@@ -525,25 +527,39 @@
 	padding: 117px 0 270px;
 
  	@include huge {
-	    padding: 83px 0 47px;
+	    padding: 83px 0 176px;
     }
     @include pc{
-        padding-top: 14px;
+        padding: 14px 0 100px;
     }
     @include note{
-        padding-top: 11px;
+        padding: 11px 0 90px;
+    }
+    @include tablet{
+        padding: 10px 0 60px;
     }
     @include small{
-        padding-top: 8px;
-        
+        padding: 8px 0 47px;
     }
 }
 
 .section__title_services{
     margin-bottom: 88px;
-
+//
     @include huge{
         margin-bottom: 62px;
+    }
+    
+//    margin-bottom: 65px;
+//    @include huge{
+//        margin-bottom: 45px;
+//    }
+    @include note{
+        margin-bottom: 38px;
+    }
+    @include small{
+        margin-bottom: 34px;
+        line-height: 25px;
     }
 }
 
@@ -555,8 +571,16 @@
         margin-top: 80px;
     }
     @include note{
-        margin-top: 60px;
-        padding-bottom: 60px;
+        margin-top: 50px;
+        padding-bottom: 33px;
+    }
+    @include tablet{
+        margin-top: 30px;
+        padding-bottom: 13px;
+    }
+    @include small{
+        margin-top: 10px;
+        padding-bottom: 0px;
     }
     
     .container{
@@ -571,11 +595,15 @@
             flex-wrap: nowrap;
 //            justify-content: center;
         }
+        @include small{
+            flex-direction: row;
+            justify-content: flex-start;
+        }
     }
 }
 
 .section-text_services{
-    padding: 110px 0;
+    padding: 111px 0;
     
     @include huge{
         padding: 82px 0;
@@ -583,9 +611,22 @@
     @include note{
         padding: 70px 0;
     }
+    @include tablet{
+        padding: 50px 0;
+    }
+    @include small{
+        padding: 33px 0;
+    }
     
     .b-seo-text{
         padding-bottom: 0;
+        
+        @include huge{
+            padding: 0 75px;
+        }
+        @include small{
+            padding: 0 20px;
+        }
         
         .b-seo-text__inner{
             margin: 0;
@@ -600,9 +641,11 @@
                 font-size: 16px;
             }
             @include tablet{
+                line-height: 20px;
                 font-size: 14px;
             }
             @include small{
+                line-height: 18px;
                 font-size: 13px;
             }
             
@@ -638,18 +681,39 @@
     @include huge{
         padding: 65px 0 5px;
     }
+    @include small{
+        padding: 39px 0 35px;
+    }
+    
+    .container{
+        @include note{
+            margin: 0;
+            max-width: 100%;
+            padding: 0;
+        }
+    }
 }
 .section__title_advantage{
     margin-bottom: 100px;
     line-height: 36px;
+    font-weight: 600;
     
     @include huge{
         margin-bottom: 67px;
         line-height: 26px;
     }
+    @include note{
+        margin-bottom: 50px;
+    }
+    @include small{
+        margin-bottom: 16px;
+        line-height: 23px;
+        font-size: 19px;
+    }
 }
 .section--responces{
-    padding-bottom: 200px;
+    padding-bottom: 71px;
+//    padding-bottom: 200px;
     
     @include pc{
         padding-bottom: 160px;
@@ -657,10 +721,24 @@
     @include note{
         padding-bottom: 110px;
     }
+    @include small{
+        padding-bottom: 62px;
+    }
     
     .section__title{
         @include huge{
             margin-bottom: 67px;
+        }
+        @include small{
+            margin-bottom: 38px;
+        }
+    }
+    
+    .container{
+        @include note{
+            margin: 0;
+            max-width: 100%;
+            padding: 0;
         }
     }
 }

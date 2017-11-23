@@ -1637,8 +1637,9 @@
 
 <!-- MODAL -->
 <div style="display:none">
-        <!-- Form register -->
-    <div class="arcticmodal" id="register">
+    <!--    next modals (IDs) is here: register, login, promo, callback, calc-->
+    <!-- Form register -->
+    <div class="arcticmodal b-modal_register" id="register">
         <form action="" class="g-form js-form-register">
             <div class="arcticmodal-close"><i class="icon-close"></i></div>
             <div class="arcticmodal-header">Регистрация</div>
@@ -1670,7 +1671,7 @@
     <!-- /Form register -->
 
     <!-- Form login -->
-    <div class="arcticmodal" id="login">
+    <div class="arcticmodal b-modal_login" id="login">
         <form action="" class="g-form js-form-login">
             <div class="arcticmodal-close"><i class="icon-close"></i></div>
             <div class="arcticmodal-header">Вход</div>
@@ -1712,12 +1713,12 @@
     <!-- /Form login -->
 
     <!-- Form promo -->
-    <div class="arcticmodal arcticmodal--wide" id="promo">
+    <div class="arcticmodal b-modal_promo" id="promo">
         <div class="arcticmodal-close"><i class="icon-close"></i></div>
-        <!--                        <img src="http://placehold.jp/430x510.png"  class="arcticmodal-promo__left" alt="">-->
-        <img src="./img/modals/promo-430.jpg" class="arcticmodal-promo__left" alt="">
+        <!--                        <img src="http://placehold.jp/430x510.png"  class="b-modal_promo__left" alt="">-->
+        <img src="./img/modals/promo-430.jpg" class="b-modal_promo__left" alt="">
 
-        <div class="arcticmodal-promo__right">
+        <div class="b-modal_promo__right">
             <p class="g-h2">Получи бесплатно живой подарок стомостью 190 грн<br>при покупке от 949 грн</p>
             <p class="g-h2"><span>Промокод</span><span>fregood</span></p>
             <form action="" class="g-form js-form-promo">
@@ -1733,7 +1734,7 @@
     
     
     <!-- Callback Form -->
-    <div class="b-modal" id="callback">
+    <div class="b-modal b-modal_callback" id="callback">
         <div class="arcticmodal-close"><i class="icon-close"></i></div>
 
         <form action="" class="b-form js-form-callback">
@@ -1759,7 +1760,7 @@
     <!-- /Callback Form -->
 
     <!-- Calc Form -->
-    <div class="b-modal" id="calc">
+    <div class="b-modal b-modal_calc" id="calc">
       <div class="arcticmodal-close"><i class="icon-close"></i></div>
       <form action="" class="b-form js-form-calc">
         <div class="b-form__inner">
@@ -1785,6 +1786,8 @@
       </form>
     </div>
     <!-- /Calc Form -->
+    
+    
     
     
     

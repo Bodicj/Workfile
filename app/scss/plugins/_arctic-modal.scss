@@ -108,22 +108,6 @@ body{
         right: 15px;
     }
 }
-.arcticmodal--wide{
-	width: 983px;
-	max-width: 983px;
-}
-.arcticmodal-promo__left{
-//	float: left;
-    max-width: 429px;
-    align-self: center;
-	width: 430px;
-	margin-right: 35px;
-}
-.arcticmodal-promo__right{
-//	float: left;
-	padding-top: 50px;
-//	width: 450px;
-}
 .arcticmodal-header{
 	padding: 45px 45px 18px;
 	margin: 0;	
@@ -155,115 +139,6 @@ body{
             line-height: 14px;
         }
     }
-}
-#promo{
-//	@include clearfix();
-    display: flex;
-	background:#fff;
-	padding: 25px 30px;
-    
-    .arcticmodal-close {
-        top: 19px;
-        right: 19px;
-    }
-    
-    .g-h2{
-        margin-bottom: 35px;
-        
-        &:first-child{
-            margin-bottom: 36px;
-        }
-        
-        span{
-            display: inline-block;
-            + span{
-                margin-left: 80px;
-            }
-        }
-    }
-    .g-form__field{
-    
-        .g-input{
-            padding: 8px 14px;
-            width: 156px;
-            margin-right: 6px;
-        }
-        .g-btn{
-            min-width: 124px;
-            width: 124px;
-            height: 39px;
-            padding: 8px 10px 7px;
-            font-size: 14px;
-            background-color: #d6d6d4;
-        }
-    }
-}
-#login{
-    .arcticmodal-body{
-        padding-bottom: 26px;
-    }
-    
-    .arcticmodal-footer{
-
-        .g-h3{
-            font-size: 16px;
-            line-height: 38px;
-            margin-bottom: 22px;
-        }
-        .b-social_modal{
-            margin-bottom: 10px;
-            
-            img{
-                margin-right: 10px;
-                display: inline-block;
-                +img{
-                    margin-right: 0;
-                    margin-left: 10px;
-                }
-            }
-        }
-        
-        .g-btn--link{
-            padding: 18px 0 15px;
-//                padding-left: 18px;
-        }
-        
-        .g-form__alarm{
-            margin-top: 35px;
-            margin-left: 29px;
-            
-            p{
-                padding-top: 3px;
-                line-height: 14px;
-            }
-        }
-    }
-}
-#register{
-    .arcticmodal-footer{
-        padding-bottom: 43px;
-    }
-}
-.b-modal_slide{
-//    text-align: center;
-    
-    .arcticmodal-header{
-        padding-top: 30px;
-        
-        @include pc{
-            padding-top: 35px;
-        }
-    }
-    .arcticmodal-body{
-        padding-bottom: 0;
-    }
-    .arcticmodal-footer{
-        padding-top: 0;
-    }
-//    
-//    .g-form__field{
-//        padding-right: 0;
-//    }
 }
 
 .arcticmodal-overlay,

@@ -4,7 +4,9 @@
     
     @include note{
         overflow: auto;
+        justify-content: flex-start;
     }
+    
     &::-webkit-scrollbar{
         @include note{   
             display: none;
@@ -14,7 +16,7 @@
 .b-responce{
     margin-bottom: 78px;
     max-width: 360px;
-    padding: 33px;
+    padding: 33px 38px 33px 33px;
     
     @include huge{
         margin-bottom: 55px;
@@ -30,6 +32,9 @@
         margin-right: 15px;
         max-width: 250px;
         padding: 20px 15px 15px;
+    }
+    @include small{
+        margin-bottom: 35px;
     }
 }
 .b-responce__rating{

@@ -811,3 +811,71 @@
         }
     }
 }
+
+.section_product{
+    
+}
+
+.section__title_product{
+    text-align: left;
+    padding: 0;
+}
+
+.section-product_details{}
+
+.section--products_gifts{
+    @extend .section--slides_service;
+    
+//    .container{
+//        width: 1201px;
+//        
+//        @include huge{
+//            width: 1639px;
+//        } 
+//        @include pc{
+//            width: 1006px;
+//        }
+//        @inc
+//    }
+    
+    .container{
+        display: block;
+        
+        @include note{
+            display: flex;
+//            padding: 0;
+        }
+        
+        .content-block{
+            @include tablet{
+                padding: 0;
+            }
+        }
+    }
+       
+    .swiper-pagination{
+        position: static;
+//        margin-bottom: 89px;
+        line-height: 0;
+        font-size: 0;
+        
+        @include huge{
+//            margin-bottom: 65px;
+        }
+        @include note{
+            display: none;
+        }
+    }
+    
+    .swiper-container-horizontal{
+        .b-product_gift{
+//            flex-shrink: 1;
+//            margin-left: 0;
+            &:not(:first-child){
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+     
+    }
+}

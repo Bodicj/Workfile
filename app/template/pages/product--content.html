@@ -1,0 +1,73 @@
+
+<!-- MAIN MENU -->
+@@include('./../parts/nav.html')
+<!-- /MAIN MENU -->
+<section class="section_product section_services">
+    <!-- breadcrumbs -->
+    <div class="b-breadcrumbs">
+        <div class="container">
+            <a href="" class="b-breadcrumbs__item">Главная</a>
+            <span class="b-breadcrumbs__item">Оформление мероприятий</span>
+        </div>
+    </div>
+    <!-- /breadcrumbs -->
+
+    <div class="container">
+        <h2 class="section__title section__title_product">название букета несколько слов</h2>
+    </div>
+    
+    <!-- PRODUCT DETAILS-->
+        <section class="section-product_details">
+            <div class="b-product__slider_details">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper gallery_product-top">
+                        <div class="swiper-slide"></div>
+                    </div>
+                </div>
+                <div class="swiper-container gallery_product-thumbs">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- /PRODUCT DETAILS-->
+
+    <!-- RESPONCES -->
+    <section class="section section--responces">
+        <h2 class="section__title">Отзывы</h2>
+
+        <div class="container" id="sliderServicesResponses">
+<!--        <div class="container swiper-container" id="sliderServicesResponses">-->
+<!--            <div class="b-responces owl-carousel js-slider_responces">-->
+            <div class="swiper-pagination"></div>
+            <div class="b-responces">
+                @@for (i=1; i<=8; i++){
+                    @@include('./../parts/responce.html', {"index": "`+i+`"})
+                }
+            </div>
+            <div class="g-text--center">
+                <button class="g-btn g-btn--bordered b-responces__button" data-modal="responce">Написать отзыв</button>
+            </div>
+        </div>
+    </section>
+    <!-- /RESPONCES -->
+    
+    <!-- PRODUCT GIFTS-->
+    <section class="section section--products section--products_gifts">
+        <h2 class="section__title">подарки</h2>
+            <div class="container container_gift" id="sliderProductGifts">
+
+                <div class="content-block">
+                    @@for (i=1; i<=8; i++){
+                        @@include('./../parts/product-gift.html', {"index": "`+i+`"})
+                    }
+                </div>
+                <div class="swiper-pagination"></div>
+
+            </div>
+    </section>
+    <!-- /PRODUCT GIFTS -->
+</section>
+
+@@include('./../parts/seo-text.html')

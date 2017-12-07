@@ -113,7 +113,16 @@ img {
 //  @include phone {
 //    width: 100%;
 //  }
-
+}
+.container_gift{    
+    width: 1201px;
+        
+    @include huge{
+        width: 1639px;
+    } 
+    @include pc{
+        width: 1006px;
+    }
 }
 .title{
   margin:0 0 20px;

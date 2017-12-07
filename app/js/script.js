@@ -641,60 +641,69 @@ $(function() {
 	// 	});
 	// })();
 
+
+	//
+	// Products match height
+	//---------------------------------------------------------------------------------------
+	(function(){
+		$(".b-product").find(".b-product__title").matchHeight();
+		$(".b-product").find(".b-product__desc").matchHeight();
+	})();
+
 	//
 	// Catalog - Products Sort Block
 	//---------------------------------------------------------------------------------------
-		(function(){
-			var  $sort = $('.b-sort')
-				,$select = $sort.find(".js-selectric")	// "Сортировать"
-				,$optionLabeled = $select.children(".label")
-				,bPrevWindowWidthMore =  $window.outerWidth() >= BREAKPOINT_RES_CATALOG
-				;
+	(function(){
+		var  $sort = $('.b-sort')
+			,$select = $sort.find(".js-selectric")	// "Сортировать"
+			,$optionLabeled = $select.children(".label")
+			,bPrevWindowWidthMore =  $window.outerWidth() >= BREAKPOINT_RES_CATALOG
+			;
 
-			var SelectricSettings = {
-					onInit: function() {
-						$(this).parents(".selectric-wrapper").children(".selectric-items").find("ul").children("li.disabled").remove();	//прибираємо з меню неактивний пункт (placeholder)
-					},
-					onChange: function(){
-						// $(this).change();
-						$(this).parents("form").trigger("submit");
-					}
+		var SelectricSettings = {
+				onInit: function() {
+					$(this).parents(".selectric-wrapper").children(".selectric-items").find("ul").children("li.disabled").remove();	//прибираємо з меню неактивний пункт (placeholder)
+				},
+				onChange: function(){
+					// $(this).change();
+					$(this).parents("form").trigger("submit");
 				}
-
-			var  selectInit = function(bInitialization){	// if bInitialization == true then first init select
-				if ($window.outerWidth() >= BREAKPOINT_RES_CATALOG && (bInitialization?true:!bPrevWindowWidthMore)){
-					$optionLabel = $select.children(".label");
-					$select.children(".label").remove();	// hide "Сортировать" option on desktops
-				} else if ($window.outerWidth() < BREAKPOINT_RES_CATALOG && (bInitialization?true:bPrevWindowWidthMore)){
-					if(!$select.children(".label").length){	// show "Сортировать" option on tablets
-						$select.prepend($optionLabeled);
-					}
-				}
-
-				$select.selectric(SelectricSettings);
-				bPrevWindowWidthMore =  $window.outerWidth() >= BREAKPOINT_RES_CATALOG;
 			}
 
-			if ( $sort.length ){	// if page has Sort block
-				// $sort.find('.b-sort__selected').on('click',function(){
-				// 	$(this).parents('.b-sort').toggleClass('is--open');
-				// });
-				selectInit(true);
-				$window.on("resize", selectInit);	// hide/show "Сортировать" option on resize
+		var  selectInit = function(bInitialization){	// if bInitialization == true then first init select
+			if ($window.outerWidth() >= BREAKPOINT_RES_CATALOG && (bInitialization?true:!bPrevWindowWidthMore)){
+				$optionLabel = $select.children(".label");
+				$select.children(".label").remove();	// hide "Сортировать" option on desktops
+			} else if ($window.outerWidth() < BREAKPOINT_RES_CATALOG && (bInitialization?true:bPrevWindowWidthMore)){
+				if(!$select.children(".label").length){	// show "Сортировать" option on tablets
+					$select.prepend($optionLabeled);
+				}
 			}
-		})();
+
+			$select.selectric(SelectricSettings);
+			bPrevWindowWidthMore =  $window.outerWidth() >= BREAKPOINT_RES_CATALOG;
+		}
+
+		if ( $sort.length ){	// if page has Sort block
+			// $sort.find('.b-sort__selected').on('click',function(){
+			// 	$(this).parents('.b-sort').toggleClass('is--open');
+			// });
+			selectInit(true);
+			$window.on("resize", selectInit);	// hide/show "Сортировать" option on resize
+		}
+	})();
 
 	//
 	// Catalog - Filter Toggle
 	//---------------------------------------------------------------------------------------
-		(function(){
-			var $filter = $('.b-filter');
-			if ( $filter.length ){
-				$filter.on('click', '.b-filter__title', function(){
-					$(this).parent().toggleClass('is--closed');
-				});
-			}
-		})();
+	(function(){
+		var $filter = $('.b-filter');
+		if ( $filter.length ){
+			$filter.on('click', '.b-filter__title', function(){
+				$(this).parent().toggleClass('is--closed');
+			});
+		}
+	})();
 
 	//
 	// SEO text
@@ -843,20 +852,249 @@ $(function() {
 	//
 	// Center scrolled blocks
 	//---------------------------------------------------------------------------------------
-	$.fn.horizCenterScrolled = function() {
-	  this.each(function(index, elem) {
-	    var
-	    	 elemWidth = elem.offsetWidth
-	    	,elemScrollWidth = elem.scrollWidth
-	    	;
+	// $.fn.horizCenterScrolled = function() {
+	//   this.each(function(index, elem) {
+	//     var
+	//     	 elemWidth = elem.offsetWidth
+	//     	,elemScrollWidth = elem.scrollWidth
+	//     	;
 
-	    if (elemScrollWidth > elemWidth)
-	    	elem.scrollLeft = Math.round((elemScrollWidth - elemWidth)/2)
-	    console.log(elem.scrollLeft);
-	  });
-	  return this;
-	};
+	//     if (elemScrollWidth > elemWidth)
+	//     	elem.scrollLeft = Math.round((elemScrollWidth - elemWidth)/2)
+	//     console.log(elem.scrollLeft);
+	//   });
+	//   return this;
+	// };
 
   	
-	$(".js-scroll_centered").horizCenterScrolled();
+	// $(".js-scroll_centered").horizCenterScrolled();	// scroll to center such blocks with overflow auto/scroll
+
+
+	//---------------------------------------------------------------------------------------
+	// Services Sliders
+	(function(){
+		// var
+			 // servicesPhotos = document.getElementById("sliderServicesPhotos")			// Services photos Slider wrapper
+			// ,servicesResponses = document.getElementById("sliderServicesResponses")	// Services responses Slider wrapper
+			// ,$servicesPhotosSlider = $(servicesPhotos)
+			// ,$servicesResponsesSlider = $(servicesResponses)
+			// ,sFuncInitSlider = "bxSlider"
+			// ,sFuncDestroySlider = "destroySlider"
+			// ,servicesPhotosSliderOpt = {
+			// 	infinite: false,
+			// 	arrows: false,
+			// 	// fade: true,
+			// 	// dots: false,
+			// 	slidesToShow: 3,
+			// 	// slidesToScroll: 3,
+			// 	// variableWidth: true
+			// }
+			// ,servicesResponsesSliderOpt = {
+			// 	infinite: false,
+			// 	arrows: false,
+			// 	// fade: true,
+			// 	// dots: true,
+			// 	slidesToShow: 4,
+			// 	// slidesToScroll: 4,
+			// 	// variableWidth: true
+			// }
+			// ,sFuncInitSlider = "slick"		// for slick slider
+			// ,sFuncDestroySlider = "destroy"	// for slick slider
+			// ,servicesPhotosSliderOpt = {		// for slick slider
+			// 	infinite: false,
+			// 	arrows: false,
+			// 	// fade: true,
+			// 	// dots: false,
+			// 	slidesToShow: 3,
+			// 	// slidesToScroll: 3,
+			// 	// variableWidth: true
+			// }
+			// ,servicesResponsesSliderOpt = {	// for slick slider
+			// 	infinite: false,
+			// 	arrows: false,
+			// 	// fade: true,
+			// 	// dots: true,
+			// 	slidesToShow: 4,
+			// 	// slidesToScroll: 4,
+			// 	// variableWidth: true
+			// }
+		// var initServiceSlider = function (oContainerNode, iBreakpoint, oSliderSettings, sFuncInitSlider, sFuncDestroySlider){
+		// 	if (!oContainerNode){return};	// stop function run if no slider on a page
+
+		// 	var 
+		// 		 $slider = $(oContainerNode)
+		// 		,windowWidth = window.outerWidth
+		// 		;
+
+		// 	if (windowWidth >= iBreakpoint){
+		// 		$(oContainerNode)[sFuncInitSlider](oSliderSettings);
+		// 	};
+
+		// 	window.addEventListener("resize", function(){
+		// 		var currentWindowWidth = window.outerWidth;
+
+		// 		if (!((currentWindowWidth >= iBreakpoint && windowWidth >= iBreakpoint) ||
+		// 			  (currentWindowWidth < iBreakpoint && windowWidth < iBreakpoint))){
+		// 			windowWidth = currentWindowWidth;
+
+		// 			if (windowWidth >= iBreakpoint){
+		// 				$slider[sFuncInitSlider](oSliderSettings);
+		// 			} else {
+		// 				$slider[sFuncInitSlider](sFuncDestroySlider);	// for slick slider
+		// 				// $slider[sFuncDestroySlider]();						// for bx slider
+		// 			}
+		// 		}
+		// 	}, false);
+
+		// };
+		var
+			 servicesPhotosSliderOpt = {		// for swiper slider
+				slidesPerView: 3,
+				spaceBetween: 44.797,
+				// wrapperClass: "swiper-wrapper",
+				// slideClass: "b-news_service",
+				wrapperClass: "content-block",
+				breakpoints: {
+				    1804: {
+				    	spaceBetween: 32.438
+				    },
+				    1219:{
+				    	spaceBetween: 17.422
+				    }
+				}
+			}
+			,servicesResponsesSliderOpt = {	// for swiper slider
+				// slidesPerView: "auto",
+				slidesPerView: 4,
+		    	slidesPerGroup: 4,
+				spaceBetween: 60,
+				// wrapperClass: "swiper-wrapper",
+				wrapperClass: "b-responces",
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'bullets',
+					clickable: true
+				},
+				breakpoints: {
+				    1804: {
+				    	spaceBetween: 44
+				    },
+				    1219:{
+				    	spaceBetween: 20
+				    }
+				}
+			};
+
+		var initServiceSlider = function (sContainerSelector, iBreakpoint, oSliderSettings, sFuncInitSlider, sFuncDestroySlider){
+			if (!document.querySelector(sContainerSelector)){return};	// stop function run if no slider on a page
+
+			var 
+				 mySwiper
+				,windowWidth = window.innerWidth
+				;
+
+			if (windowWidth >= iBreakpoint){
+				mySwiper = new Swiper(sContainerSelector, oSliderSettings)
+			};
+
+			window.addEventListener("resize", function(){
+				var currentWindowWidth = window.innerWidth;
+
+				if (!((currentWindowWidth >= iBreakpoint && windowWidth >= iBreakpoint) ||
+					  (currentWindowWidth < iBreakpoint && windowWidth < iBreakpoint))){
+					windowWidth = currentWindowWidth;
+
+					if (windowWidth >= iBreakpoint){
+						mySwiper = new Swiper(sContainerSelector, oSliderSettings)
+					} else {
+						console.log("destroy");
+						mySwiper.destroy();
+					}
+				}
+			}, false);
+
+		};
+
+
+		// initServiceSlider(servicesPhotos, BREAKPOINT_RES_CATALOG, servicesPhotosSliderOpt, sFuncInitSlider, sFuncDestroySlider);
+		// initServiceSlider(servicesResponses, BREAKPOINT_RES_CATALOG, servicesResponsesSliderOpt, sFuncInitSlider, sFuncDestroySlider);
+
+		initServiceSlider("#sliderServicesPhotos", BREAKPOINT_RES_CATALOG, servicesPhotosSliderOpt);
+		initServiceSlider("#sliderServicesResponses", BREAKPOINT_RES_CATALOG, servicesResponsesSliderOpt);
+
+			// if (window.outerWidth >= BREAKPOINT_RES_CATALOG){	
+			// 	$servicesPhotosSlider.bxSlider(servicesPhotosSliderOpt);
+				
+			// }
+
+			
+
+			// if (window.outerWidth >= BREAKPOINT_RES_CATALOG && (servicesPhotos || servicesResponses)){	
+			// 	$servicesPhotosSlider.bxSlider(servicesPhotosSliderOpt);
+			// }
+
+		// window.addEventListener("resize", function(){})
+		// $window.on("resize", function(){
+		// 	if (window.outerWidth <= 480 && $slider[0]){
+		// 		// $slider.reloadSlider();
+		// 		$slider.destroySlider();
+		// 		$('.js-slider').bxSlider({
+		// 			slideSelector: ".b-slider__slide.visible-xs-block",
+		// 			// auto: true,
+		// 			// pager: true,
+		// 			// controls:false
+		// 		})
+		// 	}
+		// }).trigger("resize");		
+		// }
+
+	//
+	// Services photos Slider
+	// 	$(".js-slider_responces").owlCarousel({
+	// 	    // center: true,
+	// 	    // items:4,
+	// 	    // loop:true,
+	// 	    // margin:10,
+
+	// 	    responsive:{
+	// 	        0:{
+	// 	        	autoWidth: true,
+	// 	        	loop: true,
+	// 	            // center: true,
+	// 	            // items: 1.2,
+	// 	            // slideBy: 2,
+	// 	            // items: 2,
+	// 	            // freeDrag: true
+	// 	        },
+	// 	        480:{
+	// 	            // center: false
+	// 	        },
+	// 	        768:{
+	// 	        	// center: true,
+	// 	        	dots: true,
+	// 	        	// items: 4
+	// 	        	slides: 3
+	// 	        },
+	// 	        1024:{
+	// 	        	// center: false,
+	// 	        	autoWidth: false,
+	// 	        	loop: false,
+	// 	        	// items: 4,
+	// 	            // freeDrag: false
+	// 	        }
+	// 	    }
+	// 	});
+	// 	$(".js-slider_responces").slick({
+	// 		// infinite: false,
+	// 		// slidesToShow: 4,
+	// 		arrows: false,
+	// 		variableWidth: true,
+	// 		// swipeToSlide: true
+	// 	});
+
+	//
+	// Services responces Slider
+	})();
+	//---------------------------------------------------------------------------------------
+
 });

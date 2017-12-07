@@ -570,34 +570,77 @@
     @include huge{
         margin-top: 80px;
     }
-    @include note{
-        margin-top: 50px;
-        padding-bottom: 33px;
-    }
-    @include tablet{
+    @include pc{
         margin-top: 30px;
-        padding-bottom: 13px;
+        padding-bottom: 20px;
     }
-    @include small{
+    @include note{
+//        margin-top: 50px;
+//        padding-bottom: 33px;
         margin-top: 10px;
         padding-bottom: 0px;
     }
+    @include tablet{
+//        margin-top: 30px;
+//        padding-bottom: 13px;
+    }
+    @include small{
+//        margin-top: 10px;
+//        padding-bottom: 0px;
+    }
     
     .container{
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        
+        @include pc{
+//            display: flex;
+//            justify-content: center;
+//            max-width: 100%;
+//            padding: 0;
+        }
         @include tablet{
+//            display: flex;
+//            justify-content: center;
             max-width: 100%;
             padding: 0;
         }
     }
     .content-block{
-        @include tablet{
+        min-width: 100%;
+        flex-wrap: nowrap;
+        
+//        @include pc{
+//        }
+        @include note{
             overflow: auto;
-            flex-wrap: nowrap;
-//            justify-content: center;
+            justify-content: flex-start;
         }
         @include small{
             flex-direction: row;
-            justify-content: flex-start;
+//            justify-content: flex-start;
+        }
+        
+        &:before, &:after{
+            border: 0px solid transparent;
+
+            @include note{
+                border-width: 4.5px;
+            }
+            @include tablet{
+                content: '';
+                border-width: 3.5px;
+            }
+            @include small{
+                border-width: 2.5px;
+            }
+        }
+        
+        &::-webkit-scrollbar{
+            @include note{   
+                display: none;
+            }
         }
     }
 }
@@ -656,10 +699,12 @@
     }
 }
 .section--products_services{
-    margin-top: 208px;
+//    margin-top: 208px;
+    margin-top: 158px;
     
     @include huge{
-        margin-top: 138px;
+//        margin-top: 138px;
+        margin-top: 100px;
     }
     @include pc{
         margin: 75px 0;
@@ -677,6 +722,7 @@
 }
 .section--advantages{
     padding: 89px 0 3px;
+    overflow: hidden;
     
     @include huge{
         padding: 65px 0 5px;
@@ -704,11 +750,13 @@
     }
     @include note{
         margin-bottom: 50px;
+        line-height: 23px;
+        font-size: 19px;
     }
     @include small{
         margin-bottom: 16px;
-        line-height: 23px;
-        font-size: 19px;
+//        line-height: 23px;
+//        font-size: 19px;
     }
 }
 .section--responces{
@@ -718,7 +766,7 @@
     @include pc{
         padding-bottom: 160px;
     }
-    @include note{
+    @include pc{
         padding-bottom: 110px;
     }
     @include small{
@@ -726,7 +774,12 @@
     }
     
     .section__title{
+        margin-bottom: 41px;
+        
         @include huge{
+            margin-bottom: 27px;
+        }
+        @include note{
             margin-bottom: 67px;
         }
         @include small{
@@ -735,10 +788,26 @@
     }
     
     .container{
+        overflow: hidden;
         @include note{
+            overflow: visible;
             margin: 0;
             max-width: 100%;
             padding: 0;
+        }
+    }
+    
+    .swiper-pagination{
+        position: static;
+        margin-bottom: 89px;
+        line-height: 0;
+        font-size: 0;
+        
+        @include huge{
+            margin-bottom: 65px;
+        }
+        @include note{
+            display: none;
         }
     }
 }

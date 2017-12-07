@@ -32,12 +32,14 @@ var config = {
 		return gulp.src([
 				'app/js/libs/jquery.min.js',
 				'app/js/libs/arcticmodal.min.js',
+				'app/js/libs/jquery.matchHeight-min.js',
 				'app/js/libs/jquery.validate.min.js',
 				'app/js/libs/jquery.bxslider.min.js',
 				'app/js/libs/ion.rangeSlider.min.js',
 				'app/js/libs/jquery.mousewheel.min.js',
 				'app/js/libs/jquery.jscrollpane.min.js',
 				'app/js/libs/jquery.selectric.min.js',
+				'app/js/libs/swiper.min.js',
 				'app/js/script.js',
 				])
 				.pipe(sourcemaps.init())

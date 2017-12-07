@@ -18,9 +18,12 @@
 
     <!-- SLIDES SERVICES -->
     <section class="section section--slides_service">
-      <div class="container">
+      <div class="container" id="sliderServicesPhotos">
 
-        <div class="content-block js-scroll_centered">
+        <div class="content-block">
+        @@for (i=1; i<=3; i++){
+            @@include('./../parts/slide-services.html', {"index": "`+i+`"})
+        }
         @@for (i=1; i<=3; i++){
             @@include('./../parts/slide-services.html', {"index": "`+i+`"})
         }
@@ -41,7 +44,7 @@
             <h4 class="b-subscribe__title">Оформление праздников</h4>
             <input type="text" name="name" placeholder="Ваше имя">
             <input type="email" name="email" placeholder="Ваш e-mail">
-            <input type="submit" value="Подписаться" class="g-btn g-btn--bordered-white">
+            <input type="submit" value="заказать" class="g-btn g-btn--bordered-white">
           </form>
         </div>
       </article>
@@ -69,7 +72,7 @@
         <h2 class="section__title section__title_advantage">5 очевидных преимуществ<br>оформления праздника вместе с нами</h2>
 
         <div class="container">
-            <div class="b-advantages js-scroll_centered">
+            <div class="b-advantages">
                 @@for (i=1; i<=5; i++){
                     @@include('./../parts/advantage.html', {"index": "`+i+`"})
                 }
@@ -86,7 +89,7 @@
             <h4 class="b-subscribe__title">Оформление праздников</h4>
             <input type="text" name="name" placeholder="Ваше имя">
             <input type="email" name="email" placeholder="Ваш e-mail">
-            <input type="submit" value="Подписаться" class="g-btn g-btn--bordered-white">
+            <input type="submit" value="заказать" class="g-btn g-btn--bordered-white">
           </form>
         </div>
       </article>
@@ -98,15 +101,18 @@
     <section class="section section--responces">
         <h2 class="section__title">Отзывы</h2>
 
-        <div class="container">
-            <div class="b-responces js-scroll_centered">
-                @@for (i=1; i<=4; i++){
+        <div class="container" id="sliderServicesResponses">
+<!--        <div class="container swiper-container" id="sliderServicesResponses">-->
+<!--            <div class="b-responces owl-carousel js-slider_responces">-->
+            <div class="swiper-pagination"></div>
+            <div class="b-responces">
+                @@for (i=1; i<=8; i++){
                     @@include('./../parts/responce.html', {"index": "`+i+`"})
                 }
             </div>
-        <div class="g-text--center">
-            <button class="g-btn g-btn--bordered b-responces__button" data-modal="responce">Написать отзыв</button>
-        </div>
+            <div class="g-text--center">
+                <button class="g-btn g-btn--bordered b-responces__button" data-modal="responce">Написать отзыв</button>
+            </div>
         </div>
     </section>
     <!-- /RESPONCES -->

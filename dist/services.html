@@ -586,7 +586,7 @@
 
     <!-- services navigation -->
 <div class="b-nav_services js-menu_services">
-    <ul class="b-nav__list b-nav__list_services js-scroll_centered">
+    <ul class="b-nav__list b-nav__list_services">
         <li class="b-nav__item_services with--subnav">
             <span class="b-nav__link_services">корпоративная флористика</span>
             <ul class="b-nav__sublist b-nav__sublist_services">
@@ -693,13 +693,13 @@
 
     <!-- SLIDES SERVICES -->
     <section class="section section--slides_service">
-      <div class="container">
+      <div class="container" id="sliderServicesPhotos">
 
-        <div class="content-block js-scroll_centered">
+        <div class="content-block">
         
             
 <!-- service slide -->
-<article class="b-news b-news_service">
+<article class="b-news b-news_service swiper-slide">
   <a href="" class="b-news__photo">
     <img src="./img/news/n-1.jpg" alt="">
   </a>
@@ -708,7 +708,7 @@
         
             
 <!-- service slide -->
-<article class="b-news b-news_service">
+<article class="b-news b-news_service swiper-slide">
   <a href="" class="b-news__photo">
     <img src="./img/news/n-2.jpg" alt="">
   </a>
@@ -717,7 +717,35 @@
         
             
 <!-- service slide -->
-<article class="b-news b-news_service">
+<article class="b-news b-news_service swiper-slide">
+  <a href="" class="b-news__photo">
+    <img src="./img/news/n-3.jpg" alt="">
+  </a>
+</article>
+<!-- /service slide -->
+        
+        
+            
+<!-- service slide -->
+<article class="b-news b-news_service swiper-slide">
+  <a href="" class="b-news__photo">
+    <img src="./img/news/n-1.jpg" alt="">
+  </a>
+</article>
+<!-- /service slide -->
+        
+            
+<!-- service slide -->
+<article class="b-news b-news_service swiper-slide">
+  <a href="" class="b-news__photo">
+    <img src="./img/news/n-2.jpg" alt="">
+  </a>
+</article>
+<!-- /service slide -->
+        
+            
+<!-- service slide -->
+<article class="b-news b-news_service swiper-slide">
   <a href="" class="b-news__photo">
     <img src="./img/news/n-3.jpg" alt="">
   </a>
@@ -754,7 +782,7 @@
             <h4 class="b-subscribe__title">Оформление праздников</h4>
             <input type="text" name="name" placeholder="Ваше имя">
             <input type="email" name="email" placeholder="Ваш e-mail">
-            <input type="submit" value="Подписаться" class="g-btn g-btn--bordered-white">
+            <input type="submit" value="заказать" class="g-btn g-btn--bordered-white">
           </form>
         </div>
       </article>
@@ -940,7 +968,7 @@
         <h2 class="section__title section__title_advantage">5 очевидных преимуществ<br>оформления праздника вместе с нами</h2>
 
         <div class="container">
-            <div class="b-advantages js-scroll_centered">
+            <div class="b-advantages">
                 
                     <div class="b-advantage">
 	<p class="b-advantage__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в ко</p>
@@ -975,7 +1003,7 @@
             <h4 class="b-subscribe__title">Оформление праздников</h4>
             <input type="text" name="name" placeholder="Ваше имя">
             <input type="email" name="email" placeholder="Ваш e-mail">
-            <input type="submit" value="Подписаться" class="g-btn g-btn--bordered-white">
+            <input type="submit" value="заказать" class="g-btn g-btn--bordered-white">
           </form>
         </div>
       </article>
@@ -987,11 +1015,14 @@
     <section class="section section--responces">
         <h2 class="section__title">Отзывы</h2>
 
-        <div class="container">
-            <div class="b-responces js-scroll_centered">
+        <div class="container" id="sliderServicesResponses">
+<!--        <div class="container swiper-container" id="sliderServicesResponses">-->
+<!--            <div class="b-responces owl-carousel js-slider_responces">-->
+            <div class="swiper-pagination"></div>
+            <div class="b-responces">
                 
                     
-            <article class="b-responce section--grey" data-stars="3">
+            <article class="b-responce section--grey swiper-slide" data-stars="3">
                 <div class="b-responce__rating">
                     <span class="icon-star icon-star_filled" aria-hidden="true"></span>
                     <span class="icon-star icon-star_filled" aria-hidden="true"></span>
@@ -1000,14 +1031,14 @@
                     <span class="icon-star" aria-hidden="true"></span>
                 </div>
                 <div class="b-responce__header">
-                    <span class="b-responce__heading">Петр Иванов</span>
+                    <span class="b-responce__heading">Петр Иванов 1</span>
                     <time class="b-responce__time">12.03.2015</time>
                 </div>
                 <p class="b-responce__text">Благодарю за своевременную доставку и прриятные впечатления у получитальницы! Вы молодцы, цветы шикарны! Пока могу утвердительно отметить, что мне посчастливилось найти Вашу компанию и я очень доволен результатом сотрудничества. Надеюсь оно будет долгосрочным! Спасибо вам!</p>
             </article>
                 
                     
-            <article class="b-responce section--grey" data-stars="3">
+            <article class="b-responce section--grey swiper-slide" data-stars="3">
                 <div class="b-responce__rating">
                     <span class="icon-star icon-star_filled" aria-hidden="true"></span>
                     <span class="icon-star icon-star_filled" aria-hidden="true"></span>
@@ -1016,14 +1047,14 @@
                     <span class="icon-star" aria-hidden="true"></span>
                 </div>
                 <div class="b-responce__header">
-                    <span class="b-responce__heading">Петр Иванов</span>
+                    <span class="b-responce__heading">Петр Иванов 2</span>
                     <time class="b-responce__time">12.03.2015</time>
                 </div>
                 <p class="b-responce__text">Благодарю за своевременную доставку и прриятные впечатления у получитальницы! Вы молодцы, цветы шикарны! Пока могу утвердительно отметить, что мне посчастливилось найти Вашу компанию и я очень доволен результатом сотрудничества. Надеюсь оно будет долгосрочным! Спасибо вам!</p>
             </article>
                 
                     
-            <article class="b-responce section--grey" data-stars="3">
+            <article class="b-responce section--grey swiper-slide" data-stars="3">
                 <div class="b-responce__rating">
                     <span class="icon-star icon-star_filled" aria-hidden="true"></span>
                     <span class="icon-star icon-star_filled" aria-hidden="true"></span>
@@ -1032,14 +1063,14 @@
                     <span class="icon-star" aria-hidden="true"></span>
                 </div>
                 <div class="b-responce__header">
-                    <span class="b-responce__heading">Петр Иванов</span>
+                    <span class="b-responce__heading">Петр Иванов 3</span>
                     <time class="b-responce__time">12.03.2015</time>
                 </div>
                 <p class="b-responce__text">Благодарю за своевременную доставку и прриятные впечатления у получитальницы! Вы молодцы, цветы шикарны! Пока могу утвердительно отметить, что мне посчастливилось найти Вашу компанию и я очень доволен результатом сотрудничества. Надеюсь оно будет долгосрочным! Спасибо вам!</p>
             </article>
                 
                     
-            <article class="b-responce section--grey" data-stars="3">
+            <article class="b-responce section--grey swiper-slide" data-stars="3">
                 <div class="b-responce__rating">
                     <span class="icon-star icon-star_filled" aria-hidden="true"></span>
                     <span class="icon-star icon-star_filled" aria-hidden="true"></span>
@@ -1048,16 +1079,80 @@
                     <span class="icon-star" aria-hidden="true"></span>
                 </div>
                 <div class="b-responce__header">
-                    <span class="b-responce__heading">Петр Иванов</span>
+                    <span class="b-responce__heading">Петр Иванов 4</span>
+                    <time class="b-responce__time">12.03.2015</time>
+                </div>
+                <p class="b-responce__text">Благодарю за своевременную доставку и прриятные впечатления у получитальницы! Вы молодцы, цветы шикарны! Пока могу утвердительно отметить, что мне посчастливилось найти Вашу компанию и я очень доволен результатом сотрудничества. Надеюсь оно будет долгосрочным! Спасибо вам!</p>
+            </article>
+                
+                    
+            <article class="b-responce section--grey swiper-slide" data-stars="3">
+                <div class="b-responce__rating">
+                    <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                    <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                    <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                    <span class="icon-star" aria-hidden="true"></span>
+                    <span class="icon-star" aria-hidden="true"></span>
+                </div>
+                <div class="b-responce__header">
+                    <span class="b-responce__heading">Петр Иванов 5</span>
+                    <time class="b-responce__time">12.03.2015</time>
+                </div>
+                <p class="b-responce__text">Благодарю за своевременную доставку и прриятные впечатления у получитальницы! Вы молодцы, цветы шикарны! Пока могу утвердительно отметить, что мне посчастливилось найти Вашу компанию и я очень доволен результатом сотрудничества. Надеюсь оно будет долгосрочным! Спасибо вам!</p>
+            </article>
+                
+                    
+            <article class="b-responce section--grey swiper-slide" data-stars="3">
+                <div class="b-responce__rating">
+                    <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                    <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                    <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                    <span class="icon-star" aria-hidden="true"></span>
+                    <span class="icon-star" aria-hidden="true"></span>
+                </div>
+                <div class="b-responce__header">
+                    <span class="b-responce__heading">Петр Иванов 6</span>
+                    <time class="b-responce__time">12.03.2015</time>
+                </div>
+                <p class="b-responce__text">Благодарю за своевременную доставку и прриятные впечатления у получитальницы! Вы молодцы, цветы шикарны! Пока могу утвердительно отметить, что мне посчастливилось найти Вашу компанию и я очень доволен результатом сотрудничества. Надеюсь оно будет долгосрочным! Спасибо вам!</p>
+            </article>
+                
+                    
+            <article class="b-responce section--grey swiper-slide" data-stars="3">
+                <div class="b-responce__rating">
+                    <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                    <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                    <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                    <span class="icon-star" aria-hidden="true"></span>
+                    <span class="icon-star" aria-hidden="true"></span>
+                </div>
+                <div class="b-responce__header">
+                    <span class="b-responce__heading">Петр Иванов 7</span>
+                    <time class="b-responce__time">12.03.2015</time>
+                </div>
+                <p class="b-responce__text">Благодарю за своевременную доставку и прриятные впечатления у получитальницы! Вы молодцы, цветы шикарны! Пока могу утвердительно отметить, что мне посчастливилось найти Вашу компанию и я очень доволен результатом сотрудничества. Надеюсь оно будет долгосрочным! Спасибо вам!</p>
+            </article>
+                
+                    
+            <article class="b-responce section--grey swiper-slide" data-stars="3">
+                <div class="b-responce__rating">
+                    <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                    <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                    <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                    <span class="icon-star" aria-hidden="true"></span>
+                    <span class="icon-star" aria-hidden="true"></span>
+                </div>
+                <div class="b-responce__header">
+                    <span class="b-responce__heading">Петр Иванов 8</span>
                     <time class="b-responce__time">12.03.2015</time>
                 </div>
                 <p class="b-responce__text">Благодарю за своевременную доставку и прриятные впечатления у получитальницы! Вы молодцы, цветы шикарны! Пока могу утвердительно отметить, что мне посчастливилось найти Вашу компанию и я очень доволен результатом сотрудничества. Надеюсь оно будет долгосрочным! Спасибо вам!</p>
             </article>
                 
             </div>
-        <div class="g-text--center">
-            <button class="g-btn g-btn--bordered b-responces__button" data-modal="responce">Написать отзыв</button>
-        </div>
+            <div class="g-text--center">
+                <button class="g-btn g-btn--bordered b-responces__button" data-modal="responce">Написать отзыв</button>
+            </div>
         </div>
     </section>
     <!-- /RESPONCES -->

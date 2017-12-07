@@ -24,11 +24,26 @@
         }
     }
     
-    &::after{
+    
+    &:before, &:after{
+        border: 0px solid transparent;
+
         @include note{
-            content: "";
+            content: '';
+            border-width: 4.5px;
+        }
+        @include tablet{
+            border-width: 3.5px;
+        }
+        @include small{
+            border-width: 2.5px;
         }
     }
+//    &::after{
+//        @include note{
+//            content: "";
+//        }
+//    }
 }
 .b-advantage{
     margin: 0 59px 133px;
@@ -58,6 +73,12 @@
     @include small{
         margin-right: 25px;
         margin-bottom: 10px;
+    }
+    
+    &:last-of-type{
+        @include note{
+            margin-right: 0;
+        }
     }
     
     &::before{

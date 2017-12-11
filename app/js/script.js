@@ -1048,18 +1048,21 @@ $(function() {
 		initServiceSlider("#sliderProductGifts", BREAKPOINT_RES_CATALOG, productGiftsSliderOpt);	// product page Gifts slider
 
 //  product page gallery
-        var
-             productTopGalleryOpts = {
-                spaceBetween: 15
-            }
-            ,productThumbsGalleryOpts = {
-                spaceBetween: 15,
-    //            slidesPerView: 'auto',
-                slidesPerView: 4,
-                touchRatio: 0.2,
-                slideToClickedSlide: true,
-            }
-            ;
+       //  var 	//swiper
+       //       productTopGalleryOpts = {
+       //          spaceBetween: 15,
+       //          // loop: true
+       //      }
+       //      ,productThumbsGalleryOpts = {
+       //          spaceBetween: 15,
+       //          // loop: true,
+		    	// // centeredSlides: true,
+       //      	// slidesPerView: 'auto',
+       //      	slidesPerView: 4,
+       //          touchRatio: 0.2,
+       //          slideToClickedSlide: true
+       //      }
+       //      ;
         
         var initProductViewsGallery = function(sTopGallerySelector, sThumbsGallerySelector, oTopGalleryOpts, oThumbsGalleryOpts){
             if (!(document.querySelector(sTopGallerySelector) && 
@@ -1067,14 +1070,27 @@ $(function() {
             
             var galleryTop = new Swiper(sTopGallerySelector, oTopGalleryOpts);
             var galleryThumbs = new Swiper(sThumbsGallerySelector, productThumbsGalleryOpts);
-            galleryTop.controller.control = galleryThumbs;
-            galleryThumbs.controller.control = galleryTop;
-            
+            // galleryTop.controller.control = galleryThumbs;
+            // galleryThumbs.controller.control = galleryTop;
         };
         
-        initProductViewsGallery('.gallery_product-top', '.gallery_product-thumbs', productTopGalleryOpts, productThumbsGalleryOpts);
+        // initProductViewsGallery('.gallery_product-top', '.gallery_product-thumbs', productTopGalleryOpts, productThumbsGalleryOpts);
         
-		
+		$('.js-slider_prodViews').slick({
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+		  arrows: false,
+		  fade: true,
+		  asNavFor: '.js-slider_prodThumbs'
+		});
+		$('.js-slider_prodThumbs').slick({
+		  slidesToShow: 5,
+		  slidesToScroll: 1,
+		  asNavFor: '.js-slider_prodViews',
+		  dots: true,
+		  // centerMode: true,
+		  focusOnSelect: true
+		});
 
 			// if (window.outerWidth >= BREAKPOINT_RES_CATALOG){	
 			// 	$servicesPhotosSlider.bxSlider(servicesPhotosSliderOpt);
@@ -1150,5 +1166,18 @@ $(function() {
 	// Services responces Slider
 	})();
 	//---------------------------------------------------------------------------------------
+
+	// Responses text overflow
+	//---------------------------------------------------------------------------------------
+	var responsesTexts = document.querySelectorAll(".b-responce__text");
+
+	for (var i = 0; i < responsesTexts.length; ++i){
+		$clamp(responsesTexts[i], {clamp: 'auto'});
+	}
+
+	//
+	// ProductPage product type select
+	//---------------------------------------------------------------------------------------
+	$(".js-product__type").selectric();
 
 });

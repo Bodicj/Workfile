@@ -17,20 +17,131 @@
     </div>
     
     <!-- PRODUCT DETAILS-->
-        <section class="section-product_details">
-            <div class="b-product__slider_details">
-                <div class="swiper-container">
-                    <div class="swiper-wrapper gallery_product-top">
-                        <div class="swiper-slide"></div>
+    <section class="section-product_details">
+        <div class="container">
+            <div class="b-product__details">
+                <div class="b-product__slider_details">
+                    <div class="b-product__views js-slider_prodViews">
+                            <div class="b-product__view">
+                                <img src="./img/products/product-view-1.jpg" alt="">
+                            </div>
+                            <div class="b-product__view">
+                                <img src="./img/products/product-view-2.jpg" alt="">
+                            </div>
+                            <div class="b-product__view">
+                                <img src="./img/products/product-view-3.jpg" alt="">
+                            </div>
+                            <div class="b-product__view">
+                                <img src="./img/products/product-view-4.jpg" alt="">
+                            </div>
+                            <div class="b-product__view">
+                                <img src="./img/products/product-view-5.jpg" alt="">
+                            </div>
+                    </div>
+                    <div class="b-product__thumbs js-slider_prodThumbs">
+                            <div class="b-product__thumb">
+                                <img src="./img/products/product-view-1.jpg" alt="">
+                            </div>
+                            <div class="b-product__thumb">
+                                <img src="./img/products/product-view-2.jpg" alt="">
+                            </div>
+                            <div class="b-product__thumb">
+                                <img src="./img/products/product-view-3.jpg" alt="">
+                            </div>
+                            <div class="b-product__thumb">
+                                <img src="./img/products/product-view-4.jpg" alt="">
+                            </div>
+                            <div class="b-product__thumb">
+                                <img src="./img/products/product-view-5.jpg" alt="">
+                            </div>
                     </div>
                 </div>
-                <div class="swiper-container gallery_product-thumbs">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"></div>
+                <div class="b-product__content_details">
+                    <div class="b-product__header">
+                        <div class="b-product__articul">Артикул: 2435</div>
+                        <div class="b-product__rating js-stars_rating" data-stars="3">
+                            <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                            <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                            <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                            <span class="icon-star" aria-hidden="true"></span>
+                            <span class="icon-star" aria-hidden="true"></span>
+                        </div>
                     </div>
+                    <form action="" class="b-product__form_toCart">
+                        <div class="b-product__type">
+                            <span class="b-product__qty-title">Объем букета:</span>
+                            <select name="type" class="js-product__type">
+                                <option value="1">Красный</option>
+                                <option value="2">эконом</option>
+                                <option value="3">пабагатаму</option>
+                            </select>
+                        </div>
+                        <div class="b-product__qty-field">
+                            <span class="b-product__qty-title">Количество:</span>
+                            <div class="b-product__qty">
+                                <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+                                <input type="text" value="1" class="js-qty-input">
+                                <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+                            </div>
+                        </div>
+                        <div class="b-product__prices">
+                            <ins class="b-product__price b-product__price--old">800 <span>грн.</span></ins>
+                            <ins class="b-product__price b-product__price--new">600 <span>грн.</span></ins>
+                        </div>
+                        <div class="b-product__action">
+                            <button type="button" class="g-btn">Добавить подарок</button>
+                        </div>
+                    </form>
+                    <p>
+                        <span class="g-bold">Размер:</span> высота 50 см, диаметр 25 см
+                    </p>
+                    <p>
+                        <span class="g-bold">Состав:</span> Гиацинт, Тюльпан, Хвоя
+                    </p>
+                    <p>
+                        Королевой цветов у всех народов признается красная роза за ее яркость, аромат и изящество. Древние греки считали красную розу цветком богини любви Афродиты.<br><br>30% букета может быть заменено без изменения общего вида и стиля букета.<br><br><span class="g-bold">Этот товар можно заказать минимум за сутки до доставки</span>
+                    </p>
+                    <p class="b-product__share">
+                        <span class="g-bold">Поделиться:</span>
+                        <span class="b-share">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//127.0.0.1%3A9000/product.html" class="b-social__item">
+							    <i class="icon-facebook-black"></i>
+                            </a>
+                            <a href="https://www.instagram.com/passi/" class="b-social__item">
+							    <i class="icon-insta-black"></i>
+                            </a>
+                            <a href="https://plus.google.com/share?url=http%3A//127.0.0.1%3A9000/product.html" class="b-social__item">
+							    <i class="icon-gplus-black"></i>
+                            </a>
+                            <a href="https://www.youtube.com/channel/passi/" class="b-social__item">
+							    <i class="icon-youtube-black"></i>
+                            </a>
+                        </span>
+                    </p>
                 </div>
             </div>
-        </section>
+            <div class="b-product__details_payAndDeliv section--grey">
+                <div class="b-product__block_payDeliv">
+                    <div class="b-heading_payDeliv">Доставка</div>
+                    <ul class="b-list_payDeliv">
+                        <li><span class="g-semibold">Бесплатная</span> по Киеву на сумму больше 600 грн.</li>
+                        <li>60 грн. - по Киеву при заказе на сумму меньше 600 грн.</li>
+                        <li>Доставка Новой Почтой по Украине (по тарифу перевозчика)</li>
+                        <li>Самовывоз из пункта выдачи заказов м. Льва Толстого - <span class="g-semibold">бесплатно</span></li>
+                        <li>Доставка в пригород (стоимость уточняйте у менеджера)</li>
+                    </ul>
+                </div>
+                <div class="b-product__block_payDeliv">
+                    <div class="b-heading_payDeliv">Оплата</div>
+                    <ul class="b-list_payDeliv">
+                        <li>Безналичный расчет/Приват24</li>
+                        <li>Наличными курьеру по Киеву</li>
+                        <li class="s-dark">Минимальная сумма заказа 150 грн. Заказы менее 150 грн. в обработку попадать не будут</li>
+                        <li class="s-dark">Заказы от 200 шт. обрабатываются по телефону</li>
+                    </ul>
+            </div>
+        </div>
+    </section>
     <!-- /PRODUCT DETAILS-->
 
     <!-- RESPONCES -->

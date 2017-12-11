@@ -40,6 +40,8 @@ var config = {
 				'app/js/libs/jquery.jscrollpane.min.js',
 				'app/js/libs/jquery.selectric.min.js',
 				'app/js/libs/swiper.min.js',
+				'app/js/libs/slick.min.js',
+				'app/js/libs/clamp.min.js',
 				'app/js/script.js',
 				])
 				.pipe(sourcemaps.init())

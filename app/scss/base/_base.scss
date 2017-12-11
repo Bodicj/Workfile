@@ -115,10 +115,10 @@ img {
 //  }
 }
 .container_gift{    
-    width: 1201px;
+    width: 1639px;
         
     @include huge{
-        width: 1639px;
+        width: 1201px;
     } 
     @include pc{
         width: 1006px;
@@ -312,6 +312,12 @@ font-weight: 800;
 //  background:url('../img/rating.png') -23px 0 no-repeat;
 //}
 
+.g-bold{
+    font-weight: 700;
+}
+.g-semibold{
+    font-weight: 600;
+}
 .g-text--right{
   text-align: right;
 }

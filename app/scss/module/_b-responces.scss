@@ -1,6 +1,7 @@
 .b-responces{
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 //    overflow: hidden;
     
     @include note{
@@ -81,6 +82,33 @@
     &:last-child{
         margin-right: 0;
     }
+    
+    &_modal{
+        position: relative;
+        max-width: 1104px;
+        padding: 45px 45px 70px;
+        background-color: #f5f5f5;
+        
+        @include huge{
+            max-width: 806px;
+            padding: 35px 35px 50px;
+        }
+        @include note{
+            max-width: 640px;
+            padding: 40px 30px 45px;
+        }
+        @include tablet{
+            max-width: 480px;
+        }
+        @include small{
+            max-width: 300px;
+            padding: 30px 25px 30px;
+        }
+        
+        .b-responce__header{
+            justify-content: flex-start;
+        }
+    }
 }
 .b-responce__rating{
     margin-bottom: 41px;
@@ -106,12 +134,19 @@
     }
 }
 .b-responce__heading{
+    margin-right: 20px;
     font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
     
     @include huge{
         font-size: 14.57px;
+    }
+    @include pc{
+        margin-right: 15px;
+    }
+    @include note{
+        margin-right: 10px;
     }
 }
 .b-responce__time{
@@ -123,14 +158,21 @@
     }
 }
 .b-responce__text{
+    max-height: 136px;
+    overflow: hidden;
     margin: 0;
     line-height: 17px;
     
     @include huge{
+        max-height: 96px;
         line-height: 12px;
         font-size: 10.2px;
     }
+    @include pc{
+        max-height: 120px;
+    }
     @include note{
+        max-height: 180px;
         line-height: 18px;
         font-size: 12px;
     }

@@ -817,11 +817,18 @@
 }
 
 .section__title_product{
+    margin-bottom: 56px;
     text-align: left;
     padding: 0;
+    
+    @include huge{
+        margin-bottom: 38px;
+    }
 }
 
-.section-product_details{}
+.section-product_details{
+    margin-bottom: 77px;
+}
 
 .section--products_gifts{
     @extend .section--slides_service;

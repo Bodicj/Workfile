@@ -389,7 +389,8 @@
     }
     
     &::-webkit-scrollbar{
-        @include note{   
+        @include pc{   
+//        @include note{   
             display: none;
         }
     }

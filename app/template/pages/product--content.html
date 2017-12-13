@@ -68,7 +68,7 @@
                         </div>
                     </div>
                     <form action="" class="b-product__form_toCart">
-                        <div class="b-product__type">
+                        <div class="b-product__type b-product__field">
                             <span class="b-product__qty-title">Объем букета:</span>
                             <select name="type" class="js-product__type">
                                 <option value="1">Красный</option>
@@ -76,13 +76,25 @@
                                 <option value="3">пабагатаму</option>
                             </select>
                         </div>
-                        <div class="b-product__qty-field">
+                        <div class="b-product__type b-product__field">
+                            <span class="b-product__qty-title">Высота:</span>
+                            <select name="height" class="js-product__type">
+                                <option value="0">0 см</option>
+                                <option value="100">100 см</option>
+                                <option value="200">200 см</option>
+                            </select>
+                        </div>
+                        <div class="b-product__qty-field b-product__field">
                             <span class="b-product__qty-title">Количество:</span>
                             <div class="b-product__qty">
                                 <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
                                 <input type="text" value="1" class="js-qty-input">
                                 <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
                             </div>
+                        </div>
+                        <div class="b-product__additional-field">
+                            <input id="bud" type="checkbox" name="bud" class="g-checkbox">
+                            <label for="bud">Бутоньерка жениха<br> в стиле букета (+100 грн)</label>
                         </div>
                         <div class="b-product__prices">
                             <ins class="b-product__price b-product__price--old">800 <span>грн.</span></ins>
@@ -121,9 +133,9 @@
                 </div>
             </div>
             <div class="b-product__details_payAndDeliv section--grey">
-                <div class="b-product__block_payDeliv">
-                    <div class="b-heading_payDeliv">Доставка</div>
-                    <ul class="b-list_payDeliv">
+                <div class="b-product__block_payDeliv js-block_toggle is--closed">
+                    <div class="b-heading_payDeliv js-toggler">Доставка<i class="icon-toggler"></i></div>
+                    <ul class="b-list_payDeliv js-content_toggle">
                         <li><span class="g-semibold">Бесплатная</span> по Киеву на сумму больше 600 грн.</li>
                         <li>60 грн. - по Киеву при заказе на сумму меньше 600 грн.</li>
                         <li>Доставка Новой Почтой по Украине (по тарифу перевозчика)</li>
@@ -131,14 +143,15 @@
                         <li>Доставка в пригород (стоимость уточняйте у менеджера)</li>
                     </ul>
                 </div>
-                <div class="b-product__block_payDeliv">
-                    <div class="b-heading_payDeliv">Оплата</div>
-                    <ul class="b-list_payDeliv">
+                <div class="b-product__block_payDeliv js-block_toggle is--closed">
+                    <div class="b-heading_payDeliv js-toggler">Оплата<i class="icon-toggler"></i></div>
+                    <ul class="b-list_payDeliv js-content_toggle">
                         <li>Безналичный расчет/Приват24</li>
                         <li>Наличными курьеру по Киеву</li>
                         <li class="s-dark">Минимальная сумма заказа 150 грн. Заказы менее 150 грн. в обработку попадать не будут</li>
                         <li class="s-dark">Заказы от 200 шт. обрабатываются по телефону</li>
                     </ul>
+                </div>
             </div>
         </div>
     </section>

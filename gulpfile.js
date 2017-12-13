@@ -42,6 +42,7 @@ var config = {
 				'app/js/libs/swiper.min.js',
 				'app/js/libs/slick.min.js',
 				'app/js/libs/clamp.min.js',
+				'app/js/libs/tooltipster.bundle.min.js',
 				'app/js/script.js',
 				])
 				.pipe(sourcemaps.init())
@@ -94,12 +95,22 @@ var config = {
 		    .pipe(gulp.dest('./dist'))
 	        .pipe(notify({ message: 'HTML done!', onLast: true  }));
 	    
+			// gulp
+			// .src(['./app/template/ajax/*.html'])
+			// .pipe(fileinclude({
+		 //      prefix: '@@',
+	  //         basepath: '@file'
+		 //    }))
+		 //    .pipe(gulp.dest('./dist/ajax'))
+	  //       .pipe(notify({ message: 'HTML ./ajax/ done!', onLast: true  }));
+	    
 	});
 	gulp.task('html-watch', ['html'], function (done) {
 		setTimeout(function() {
 		    browserSync.reload();
 		    done();
-		},2000);
+		},0);
+		// },2000);
 	});
 
 	// use default task to launch Browsersync and watch JS files

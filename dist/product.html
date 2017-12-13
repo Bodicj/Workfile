@@ -638,7 +638,7 @@
                         </div>
                     </div>
                     <form action="" class="b-product__form_toCart">
-                        <div class="b-product__type">
+                        <div class="b-product__type b-product__field">
                             <span class="b-product__qty-title">Объем букета:</span>
                             <select name="type" class="js-product__type">
                                 <option value="1">Красный</option>
@@ -646,13 +646,25 @@
                                 <option value="3">пабагатаму</option>
                             </select>
                         </div>
-                        <div class="b-product__qty-field">
+                        <div class="b-product__type b-product__field">
+                            <span class="b-product__qty-title">Высота:</span>
+                            <select name="height" class="js-product__type">
+                                <option value="0">0 см</option>
+                                <option value="100">100 см</option>
+                                <option value="200">200 см</option>
+                            </select>
+                        </div>
+                        <div class="b-product__qty-field b-product__field">
                             <span class="b-product__qty-title">Количество:</span>
                             <div class="b-product__qty">
                                 <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
                                 <input type="text" value="1" class="js-qty-input">
                                 <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
                             </div>
+                        </div>
+                        <div class="b-product__additional-field">
+                            <input id="bud" type="checkbox" name="bud" class="g-checkbox">
+                            <label for="bud">Бутоньерка жениха<br> в стиле букета (+100 грн)</label>
                         </div>
                         <div class="b-product__prices">
                             <ins class="b-product__price b-product__price--old">800 <span>грн.</span></ins>
@@ -691,9 +703,9 @@
                 </div>
             </div>
             <div class="b-product__details_payAndDeliv section--grey">
-                <div class="b-product__block_payDeliv">
-                    <div class="b-heading_payDeliv">Доставка</div>
-                    <ul class="b-list_payDeliv">
+                <div class="b-product__block_payDeliv js-block_toggle is--closed">
+                    <div class="b-heading_payDeliv js-toggler">Доставка<i class="icon-toggler"></i></div>
+                    <ul class="b-list_payDeliv js-content_toggle">
                         <li><span class="g-semibold">Бесплатная</span> по Киеву на сумму больше 600 грн.</li>
                         <li>60 грн. - по Киеву при заказе на сумму меньше 600 грн.</li>
                         <li>Доставка Новой Почтой по Украине (по тарифу перевозчика)</li>
@@ -701,14 +713,15 @@
                         <li>Доставка в пригород (стоимость уточняйте у менеджера)</li>
                     </ul>
                 </div>
-                <div class="b-product__block_payDeliv">
-                    <div class="b-heading_payDeliv">Оплата</div>
-                    <ul class="b-list_payDeliv">
+                <div class="b-product__block_payDeliv js-block_toggle is--closed">
+                    <div class="b-heading_payDeliv js-toggler">Оплата<i class="icon-toggler"></i></div>
+                    <ul class="b-list_payDeliv js-content_toggle">
                         <li>Безналичный расчет/Приват24</li>
                         <li>Наличными курьеру по Киеву</li>
                         <li class="s-dark">Минимальная сумма заказа 150 грн. Заказы менее 150 грн. в обработку попадать не будут</li>
                         <li class="s-dark">Заказы от 200 шт. обрабатываются по телефону</li>
                     </ul>
+                </div>
             </div>
         </div>
     </section>
@@ -1011,11 +1024,11 @@
 
                 <div class="content-block">
                     
-                        <article class="b-product_gift">
+                        <article class="b-gift">
     <a href="" class="b-product__photo">
         <img src="./img/products/p-1.png" alt="">
     </a>
-    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <h3 class="b-product__title js-tooltip_gift" data-tooltip-content="#tooltip_gift-1"><a href="">Букет Красивое Название</a></h3>
     <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
     
     <div class="b-product__nums">
@@ -1043,14 +1056,132 @@
             <span class="icon-star"></span>
         </i>
     </div>
+    <div class="hidden">
+        <!-- GIFT DETAILS-->
+        <div class="b-gift__popup b-product__details" id="tooltip_gift-1" data-gift="1">
+            <h2 class="section__title b-gift__title_popup">оформление дня рождения</h2>
+            <div class="b-product__slider_details">
+                <div class="b-product__views js-slider_giftViews" data-gift="1">
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-1.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-2.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-3.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-4.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-5.jpg" alt="">
+                        </div>
+                </div>
+                <div class="b-product__thumbs js-slider_giftThumbs" data-gift="1">
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-1.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-2.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-3.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-4.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-5.jpg" alt="">
+                        </div>
+                </div>
+            </div>
+            <div class="b-product__content_details">
+                <div class="b-product__header">
+                    <div class="b-product__articul">Артикул: 2435</div>
+                    <div class="b-product__rating js-stars_rating" data-stars="3">
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star" aria-hidden="true"></span>
+                        <span class="icon-star" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <form action="" class="b-product__form_toCart">
+                    <div class="b-product__type b-product__field">
+                        <span class="b-product__qty-title">Объем букета:</span>
+                        <select name="type" class="js-product__type">
+                            <option value="1">Красный</option>
+                            <option value="2">эконом</option>
+                            <option value="3">пабагатаму</option>
+                        </select>
+                    </div>
+                    <div class="b-product__type b-product__field">
+                        <span class="b-product__qty-title">Высота:</span>
+                        <select name="height" class="js-product__type">
+                            <option value="0">0 см</option>
+                            <option value="100">100 см</option>
+                            <option value="200">200 см</option>
+                        </select>
+                    </div>
+                    <div class="b-product__qty-field b-product__field">
+                        <span class="b-product__qty-title">Количество:</span>
+                        <div class="b-product__qty">
+                            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+                            <input type="text" value="1" class="js-qty-input">
+                            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+                        </div>
+                    </div>
+                    <div class="b-product__additional-field">
+                        <input id="bud-1" type="checkbox" name="bud-1" class="g-checkbox">
+                        <label for="bud-1">Бутоньерка жениха<br> в стиле букета (+100 грн)</label>
+                    </div>
+                    <div class="b-product__prices">
+                        <ins class="b-product__price b-product__price--old">800 <span>грн.</span></ins>
+                        <ins class="b-product__price b-product__price--new">600 <span>грн.</span></ins>
+                    </div>
+                    <div class="b-product__action">
+                        <button type="button" class="g-btn">Добавить подарок</button>
+                    </div>
+                </form>
+                <p>
+                    <span class="g-bold">Размер:</span> высота 50 см, диаметр 25 см
+                </p>
+                <p>
+                    <span class="g-bold">Состав:</span> Гиацинт, Тюльпан, Хвоя
+                </p>
+                <p>
+                    Королевой цветов у всех народов признается красная роза за ее яркость, аромат и изящество. Древние греки считали красную розу цветком богини любви Афродиты.<br><br>30% букета может быть заменено без изменения общего вида и стиля букета.<br><br><span class="g-bold">Этот товар можно заказать минимум за сутки до доставки</span>
+                </p>
+                <p class="b-product__share">
+                    <span class="g-bold">Поделиться:</span>
+                    <span class="b-share">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//127.0.0.1%3A9000/product.html" class="b-social__item">
+                            <i class="icon-facebook-black"></i>
+                        </a>
+                        <a href="https://www.instagram.com/passi/" class="b-social__item">
+                            <i class="icon-insta-black"></i>
+                        </a>
+                        <a href="https://plus.google.com/share?url=http%3A//127.0.0.1%3A9000/product.html" class="b-social__item">
+                            <i class="icon-gplus-black"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/passi/" class="b-social__item">
+                            <i class="icon-youtube-black"></i>
+                        </a>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!-- /GIFT DETAILS-->
+    </div>
 </article>
 
                     
-                        <article class="b-product_gift">
+                        <article class="b-gift">
     <a href="" class="b-product__photo">
         <img src="./img/products/p-2.png" alt="">
     </a>
-    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <h3 class="b-product__title js-tooltip_gift" data-tooltip-content="#tooltip_gift-2"><a href="">Букет Красивое Название</a></h3>
     <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
     
     <div class="b-product__nums">
@@ -1078,14 +1209,132 @@
             <span class="icon-star"></span>
         </i>
     </div>
+    <div class="hidden">
+        <!-- GIFT DETAILS-->
+        <div class="b-gift__popup b-product__details" id="tooltip_gift-2" data-gift="2">
+            <h2 class="section__title b-gift__title_popup">оформление дня рождения</h2>
+            <div class="b-product__slider_details">
+                <div class="b-product__views js-slider_giftViews" data-gift="2">
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-1.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-2.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-3.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-4.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-5.jpg" alt="">
+                        </div>
+                </div>
+                <div class="b-product__thumbs js-slider_giftThumbs" data-gift="2">
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-1.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-2.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-3.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-4.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-5.jpg" alt="">
+                        </div>
+                </div>
+            </div>
+            <div class="b-product__content_details">
+                <div class="b-product__header">
+                    <div class="b-product__articul">Артикул: 2435</div>
+                    <div class="b-product__rating js-stars_rating" data-stars="3">
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star" aria-hidden="true"></span>
+                        <span class="icon-star" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <form action="" class="b-product__form_toCart">
+                    <div class="b-product__type b-product__field">
+                        <span class="b-product__qty-title">Объем букета:</span>
+                        <select name="type" class="js-product__type">
+                            <option value="1">Красный</option>
+                            <option value="2">эконом</option>
+                            <option value="3">пабагатаму</option>
+                        </select>
+                    </div>
+                    <div class="b-product__type b-product__field">
+                        <span class="b-product__qty-title">Высота:</span>
+                        <select name="height" class="js-product__type">
+                            <option value="0">0 см</option>
+                            <option value="100">100 см</option>
+                            <option value="200">200 см</option>
+                        </select>
+                    </div>
+                    <div class="b-product__qty-field b-product__field">
+                        <span class="b-product__qty-title">Количество:</span>
+                        <div class="b-product__qty">
+                            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+                            <input type="text" value="1" class="js-qty-input">
+                            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+                        </div>
+                    </div>
+                    <div class="b-product__additional-field">
+                        <input id="bud-2" type="checkbox" name="bud-2" class="g-checkbox">
+                        <label for="bud-2">Бутоньерка жениха<br> в стиле букета (+100 грн)</label>
+                    </div>
+                    <div class="b-product__prices">
+                        <ins class="b-product__price b-product__price--old">800 <span>грн.</span></ins>
+                        <ins class="b-product__price b-product__price--new">600 <span>грн.</span></ins>
+                    </div>
+                    <div class="b-product__action">
+                        <button type="button" class="g-btn">Добавить подарок</button>
+                    </div>
+                </form>
+                <p>
+                    <span class="g-bold">Размер:</span> высота 50 см, диаметр 25 см
+                </p>
+                <p>
+                    <span class="g-bold">Состав:</span> Гиацинт, Тюльпан, Хвоя
+                </p>
+                <p>
+                    Королевой цветов у всех народов признается красная роза за ее яркость, аромат и изящество. Древние греки считали красную розу цветком богини любви Афродиты.<br><br>30% букета может быть заменено без изменения общего вида и стиля букета.<br><br><span class="g-bold">Этот товар можно заказать минимум за сутки до доставки</span>
+                </p>
+                <p class="b-product__share">
+                    <span class="g-bold">Поделиться:</span>
+                    <span class="b-share">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//127.0.0.1%3A9000/product.html" class="b-social__item">
+                            <i class="icon-facebook-black"></i>
+                        </a>
+                        <a href="https://www.instagram.com/passi/" class="b-social__item">
+                            <i class="icon-insta-black"></i>
+                        </a>
+                        <a href="https://plus.google.com/share?url=http%3A//127.0.0.1%3A9000/product.html" class="b-social__item">
+                            <i class="icon-gplus-black"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/passi/" class="b-social__item">
+                            <i class="icon-youtube-black"></i>
+                        </a>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!-- /GIFT DETAILS-->
+    </div>
 </article>
 
                     
-                        <article class="b-product_gift">
+                        <article class="b-gift">
     <a href="" class="b-product__photo">
         <img src="./img/products/p-3.png" alt="">
     </a>
-    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <h3 class="b-product__title js-tooltip_gift" data-tooltip-content="#tooltip_gift-3"><a href="">Букет Красивое Название</a></h3>
     <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
     
     <div class="b-product__nums">
@@ -1113,14 +1362,132 @@
             <span class="icon-star"></span>
         </i>
     </div>
+    <div class="hidden">
+        <!-- GIFT DETAILS-->
+        <div class="b-gift__popup b-product__details" id="tooltip_gift-3" data-gift="3">
+            <h2 class="section__title b-gift__title_popup">оформление дня рождения</h2>
+            <div class="b-product__slider_details">
+                <div class="b-product__views js-slider_giftViews" data-gift="3">
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-1.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-2.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-3.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-4.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-5.jpg" alt="">
+                        </div>
+                </div>
+                <div class="b-product__thumbs js-slider_giftThumbs" data-gift="3">
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-1.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-2.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-3.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-4.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-5.jpg" alt="">
+                        </div>
+                </div>
+            </div>
+            <div class="b-product__content_details">
+                <div class="b-product__header">
+                    <div class="b-product__articul">Артикул: 2435</div>
+                    <div class="b-product__rating js-stars_rating" data-stars="3">
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star" aria-hidden="true"></span>
+                        <span class="icon-star" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <form action="" class="b-product__form_toCart">
+                    <div class="b-product__type b-product__field">
+                        <span class="b-product__qty-title">Объем букета:</span>
+                        <select name="type" class="js-product__type">
+                            <option value="1">Красный</option>
+                            <option value="2">эконом</option>
+                            <option value="3">пабагатаму</option>
+                        </select>
+                    </div>
+                    <div class="b-product__type b-product__field">
+                        <span class="b-product__qty-title">Высота:</span>
+                        <select name="height" class="js-product__type">
+                            <option value="0">0 см</option>
+                            <option value="100">100 см</option>
+                            <option value="200">200 см</option>
+                        </select>
+                    </div>
+                    <div class="b-product__qty-field b-product__field">
+                        <span class="b-product__qty-title">Количество:</span>
+                        <div class="b-product__qty">
+                            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+                            <input type="text" value="1" class="js-qty-input">
+                            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+                        </div>
+                    </div>
+                    <div class="b-product__additional-field">
+                        <input id="bud-3" type="checkbox" name="bud-3" class="g-checkbox">
+                        <label for="bud-3">Бутоньерка жениха<br> в стиле букета (+100 грн)</label>
+                    </div>
+                    <div class="b-product__prices">
+                        <ins class="b-product__price b-product__price--old">800 <span>грн.</span></ins>
+                        <ins class="b-product__price b-product__price--new">600 <span>грн.</span></ins>
+                    </div>
+                    <div class="b-product__action">
+                        <button type="button" class="g-btn">Добавить подарок</button>
+                    </div>
+                </form>
+                <p>
+                    <span class="g-bold">Размер:</span> высота 50 см, диаметр 25 см
+                </p>
+                <p>
+                    <span class="g-bold">Состав:</span> Гиацинт, Тюльпан, Хвоя
+                </p>
+                <p>
+                    Королевой цветов у всех народов признается красная роза за ее яркость, аромат и изящество. Древние греки считали красную розу цветком богини любви Афродиты.<br><br>30% букета может быть заменено без изменения общего вида и стиля букета.<br><br><span class="g-bold">Этот товар можно заказать минимум за сутки до доставки</span>
+                </p>
+                <p class="b-product__share">
+                    <span class="g-bold">Поделиться:</span>
+                    <span class="b-share">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//127.0.0.1%3A9000/product.html" class="b-social__item">
+                            <i class="icon-facebook-black"></i>
+                        </a>
+                        <a href="https://www.instagram.com/passi/" class="b-social__item">
+                            <i class="icon-insta-black"></i>
+                        </a>
+                        <a href="https://plus.google.com/share?url=http%3A//127.0.0.1%3A9000/product.html" class="b-social__item">
+                            <i class="icon-gplus-black"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/passi/" class="b-social__item">
+                            <i class="icon-youtube-black"></i>
+                        </a>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!-- /GIFT DETAILS-->
+    </div>
 </article>
 
                     
-                        <article class="b-product_gift">
+                        <article class="b-gift">
     <a href="" class="b-product__photo">
         <img src="./img/products/p-4.png" alt="">
     </a>
-    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <h3 class="b-product__title js-tooltip_gift" data-tooltip-content="#tooltip_gift-4"><a href="">Букет Красивое Название</a></h3>
     <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
     
     <div class="b-product__nums">
@@ -1148,14 +1515,132 @@
             <span class="icon-star"></span>
         </i>
     </div>
+    <div class="hidden">
+        <!-- GIFT DETAILS-->
+        <div class="b-gift__popup b-product__details" id="tooltip_gift-4" data-gift="4">
+            <h2 class="section__title b-gift__title_popup">оформление дня рождения</h2>
+            <div class="b-product__slider_details">
+                <div class="b-product__views js-slider_giftViews" data-gift="4">
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-1.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-2.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-3.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-4.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-5.jpg" alt="">
+                        </div>
+                </div>
+                <div class="b-product__thumbs js-slider_giftThumbs" data-gift="4">
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-1.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-2.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-3.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-4.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-5.jpg" alt="">
+                        </div>
+                </div>
+            </div>
+            <div class="b-product__content_details">
+                <div class="b-product__header">
+                    <div class="b-product__articul">Артикул: 2435</div>
+                    <div class="b-product__rating js-stars_rating" data-stars="3">
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star" aria-hidden="true"></span>
+                        <span class="icon-star" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <form action="" class="b-product__form_toCart">
+                    <div class="b-product__type b-product__field">
+                        <span class="b-product__qty-title">Объем букета:</span>
+                        <select name="type" class="js-product__type">
+                            <option value="1">Красный</option>
+                            <option value="2">эконом</option>
+                            <option value="3">пабагатаму</option>
+                        </select>
+                    </div>
+                    <div class="b-product__type b-product__field">
+                        <span class="b-product__qty-title">Высота:</span>
+                        <select name="height" class="js-product__type">
+                            <option value="0">0 см</option>
+                            <option value="100">100 см</option>
+                            <option value="200">200 см</option>
+                        </select>
+                    </div>
+                    <div class="b-product__qty-field b-product__field">
+                        <span class="b-product__qty-title">Количество:</span>
+                        <div class="b-product__qty">
+                            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+                            <input type="text" value="1" class="js-qty-input">
+                            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+                        </div>
+                    </div>
+                    <div class="b-product__additional-field">
+                        <input id="bud-4" type="checkbox" name="bud-4" class="g-checkbox">
+                        <label for="bud-4">Бутоньерка жениха<br> в стиле букета (+100 грн)</label>
+                    </div>
+                    <div class="b-product__prices">
+                        <ins class="b-product__price b-product__price--old">800 <span>грн.</span></ins>
+                        <ins class="b-product__price b-product__price--new">600 <span>грн.</span></ins>
+                    </div>
+                    <div class="b-product__action">
+                        <button type="button" class="g-btn">Добавить подарок</button>
+                    </div>
+                </form>
+                <p>
+                    <span class="g-bold">Размер:</span> высота 50 см, диаметр 25 см
+                </p>
+                <p>
+                    <span class="g-bold">Состав:</span> Гиацинт, Тюльпан, Хвоя
+                </p>
+                <p>
+                    Королевой цветов у всех народов признается красная роза за ее яркость, аромат и изящество. Древние греки считали красную розу цветком богини любви Афродиты.<br><br>30% букета может быть заменено без изменения общего вида и стиля букета.<br><br><span class="g-bold">Этот товар можно заказать минимум за сутки до доставки</span>
+                </p>
+                <p class="b-product__share">
+                    <span class="g-bold">Поделиться:</span>
+                    <span class="b-share">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//127.0.0.1%3A9000/product.html" class="b-social__item">
+                            <i class="icon-facebook-black"></i>
+                        </a>
+                        <a href="https://www.instagram.com/passi/" class="b-social__item">
+                            <i class="icon-insta-black"></i>
+                        </a>
+                        <a href="https://plus.google.com/share?url=http%3A//127.0.0.1%3A9000/product.html" class="b-social__item">
+                            <i class="icon-gplus-black"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/passi/" class="b-social__item">
+                            <i class="icon-youtube-black"></i>
+                        </a>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!-- /GIFT DETAILS-->
+    </div>
 </article>
 
                     
-                        <article class="b-product_gift">
+                        <article class="b-gift">
     <a href="" class="b-product__photo">
         <img src="./img/products/p-5.png" alt="">
     </a>
-    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <h3 class="b-product__title js-tooltip_gift" data-tooltip-content="#tooltip_gift-5"><a href="">Букет Красивое Название</a></h3>
     <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
     
     <div class="b-product__nums">
@@ -1183,14 +1668,132 @@
             <span class="icon-star"></span>
         </i>
     </div>
+    <div class="hidden">
+        <!-- GIFT DETAILS-->
+        <div class="b-gift__popup b-product__details" id="tooltip_gift-5" data-gift="5">
+            <h2 class="section__title b-gift__title_popup">оформление дня рождения</h2>
+            <div class="b-product__slider_details">
+                <div class="b-product__views js-slider_giftViews" data-gift="5">
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-1.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-2.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-3.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-4.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-5.jpg" alt="">
+                        </div>
+                </div>
+                <div class="b-product__thumbs js-slider_giftThumbs" data-gift="5">
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-1.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-2.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-3.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-4.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-5.jpg" alt="">
+                        </div>
+                </div>
+            </div>
+            <div class="b-product__content_details">
+                <div class="b-product__header">
+                    <div class="b-product__articul">Артикул: 2435</div>
+                    <div class="b-product__rating js-stars_rating" data-stars="3">
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star" aria-hidden="true"></span>
+                        <span class="icon-star" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <form action="" class="b-product__form_toCart">
+                    <div class="b-product__type b-product__field">
+                        <span class="b-product__qty-title">Объем букета:</span>
+                        <select name="type" class="js-product__type">
+                            <option value="1">Красный</option>
+                            <option value="2">эконом</option>
+                            <option value="3">пабагатаму</option>
+                        </select>
+                    </div>
+                    <div class="b-product__type b-product__field">
+                        <span class="b-product__qty-title">Высота:</span>
+                        <select name="height" class="js-product__type">
+                            <option value="0">0 см</option>
+                            <option value="100">100 см</option>
+                            <option value="200">200 см</option>
+                        </select>
+                    </div>
+                    <div class="b-product__qty-field b-product__field">
+                        <span class="b-product__qty-title">Количество:</span>
+                        <div class="b-product__qty">
+                            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+                            <input type="text" value="1" class="js-qty-input">
+                            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+                        </div>
+                    </div>
+                    <div class="b-product__additional-field">
+                        <input id="bud-5" type="checkbox" name="bud-5" class="g-checkbox">
+                        <label for="bud-5">Бутоньерка жениха<br> в стиле букета (+100 грн)</label>
+                    </div>
+                    <div class="b-product__prices">
+                        <ins class="b-product__price b-product__price--old">800 <span>грн.</span></ins>
+                        <ins class="b-product__price b-product__price--new">600 <span>грн.</span></ins>
+                    </div>
+                    <div class="b-product__action">
+                        <button type="button" class="g-btn">Добавить подарок</button>
+                    </div>
+                </form>
+                <p>
+                    <span class="g-bold">Размер:</span> высота 50 см, диаметр 25 см
+                </p>
+                <p>
+                    <span class="g-bold">Состав:</span> Гиацинт, Тюльпан, Хвоя
+                </p>
+                <p>
+                    Королевой цветов у всех народов признается красная роза за ее яркость, аромат и изящество. Древние греки считали красную розу цветком богини любви Афродиты.<br><br>30% букета может быть заменено без изменения общего вида и стиля букета.<br><br><span class="g-bold">Этот товар можно заказать минимум за сутки до доставки</span>
+                </p>
+                <p class="b-product__share">
+                    <span class="g-bold">Поделиться:</span>
+                    <span class="b-share">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//127.0.0.1%3A9000/product.html" class="b-social__item">
+                            <i class="icon-facebook-black"></i>
+                        </a>
+                        <a href="https://www.instagram.com/passi/" class="b-social__item">
+                            <i class="icon-insta-black"></i>
+                        </a>
+                        <a href="https://plus.google.com/share?url=http%3A//127.0.0.1%3A9000/product.html" class="b-social__item">
+                            <i class="icon-gplus-black"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/passi/" class="b-social__item">
+                            <i class="icon-youtube-black"></i>
+                        </a>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!-- /GIFT DETAILS-->
+    </div>
 </article>
 
                     
-                        <article class="b-product_gift">
+                        <article class="b-gift">
     <a href="" class="b-product__photo">
         <img src="./img/products/p-6.png" alt="">
     </a>
-    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <h3 class="b-product__title js-tooltip_gift" data-tooltip-content="#tooltip_gift-6"><a href="">Букет Красивое Название</a></h3>
     <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
     
     <div class="b-product__nums">
@@ -1218,14 +1821,132 @@
             <span class="icon-star"></span>
         </i>
     </div>
+    <div class="hidden">
+        <!-- GIFT DETAILS-->
+        <div class="b-gift__popup b-product__details" id="tooltip_gift-6" data-gift="6">
+            <h2 class="section__title b-gift__title_popup">оформление дня рождения</h2>
+            <div class="b-product__slider_details">
+                <div class="b-product__views js-slider_giftViews" data-gift="6">
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-1.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-2.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-3.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-4.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-5.jpg" alt="">
+                        </div>
+                </div>
+                <div class="b-product__thumbs js-slider_giftThumbs" data-gift="6">
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-1.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-2.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-3.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-4.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-5.jpg" alt="">
+                        </div>
+                </div>
+            </div>
+            <div class="b-product__content_details">
+                <div class="b-product__header">
+                    <div class="b-product__articul">Артикул: 2435</div>
+                    <div class="b-product__rating js-stars_rating" data-stars="3">
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star" aria-hidden="true"></span>
+                        <span class="icon-star" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <form action="" class="b-product__form_toCart">
+                    <div class="b-product__type b-product__field">
+                        <span class="b-product__qty-title">Объем букета:</span>
+                        <select name="type" class="js-product__type">
+                            <option value="1">Красный</option>
+                            <option value="2">эконом</option>
+                            <option value="3">пабагатаму</option>
+                        </select>
+                    </div>
+                    <div class="b-product__type b-product__field">
+                        <span class="b-product__qty-title">Высота:</span>
+                        <select name="height" class="js-product__type">
+                            <option value="0">0 см</option>
+                            <option value="100">100 см</option>
+                            <option value="200">200 см</option>
+                        </select>
+                    </div>
+                    <div class="b-product__qty-field b-product__field">
+                        <span class="b-product__qty-title">Количество:</span>
+                        <div class="b-product__qty">
+                            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+                            <input type="text" value="1" class="js-qty-input">
+                            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+                        </div>
+                    </div>
+                    <div class="b-product__additional-field">
+                        <input id="bud-6" type="checkbox" name="bud-6" class="g-checkbox">
+                        <label for="bud-6">Бутоньерка жениха<br> в стиле букета (+100 грн)</label>
+                    </div>
+                    <div class="b-product__prices">
+                        <ins class="b-product__price b-product__price--old">800 <span>грн.</span></ins>
+                        <ins class="b-product__price b-product__price--new">600 <span>грн.</span></ins>
+                    </div>
+                    <div class="b-product__action">
+                        <button type="button" class="g-btn">Добавить подарок</button>
+                    </div>
+                </form>
+                <p>
+                    <span class="g-bold">Размер:</span> высота 50 см, диаметр 25 см
+                </p>
+                <p>
+                    <span class="g-bold">Состав:</span> Гиацинт, Тюльпан, Хвоя
+                </p>
+                <p>
+                    Королевой цветов у всех народов признается красная роза за ее яркость, аромат и изящество. Древние греки считали красную розу цветком богини любви Афродиты.<br><br>30% букета может быть заменено без изменения общего вида и стиля букета.<br><br><span class="g-bold">Этот товар можно заказать минимум за сутки до доставки</span>
+                </p>
+                <p class="b-product__share">
+                    <span class="g-bold">Поделиться:</span>
+                    <span class="b-share">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//127.0.0.1%3A9000/product.html" class="b-social__item">
+                            <i class="icon-facebook-black"></i>
+                        </a>
+                        <a href="https://www.instagram.com/passi/" class="b-social__item">
+                            <i class="icon-insta-black"></i>
+                        </a>
+                        <a href="https://plus.google.com/share?url=http%3A//127.0.0.1%3A9000/product.html" class="b-social__item">
+                            <i class="icon-gplus-black"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/passi/" class="b-social__item">
+                            <i class="icon-youtube-black"></i>
+                        </a>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!-- /GIFT DETAILS-->
+    </div>
 </article>
 
                     
-                        <article class="b-product_gift">
+                        <article class="b-gift">
     <a href="" class="b-product__photo">
         <img src="./img/products/p-7.png" alt="">
     </a>
-    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <h3 class="b-product__title js-tooltip_gift" data-tooltip-content="#tooltip_gift-7"><a href="">Букет Красивое Название</a></h3>
     <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
     
     <div class="b-product__nums">
@@ -1252,15 +1973,133 @@
             <span class="icon-star"></span>
             <span class="icon-star"></span>
         </i>
+    </div>
+    <div class="hidden">
+        <!-- GIFT DETAILS-->
+        <div class="b-gift__popup b-product__details" id="tooltip_gift-7" data-gift="7">
+            <h2 class="section__title b-gift__title_popup">оформление дня рождения</h2>
+            <div class="b-product__slider_details">
+                <div class="b-product__views js-slider_giftViews" data-gift="7">
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-1.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-2.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-3.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-4.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-5.jpg" alt="">
+                        </div>
+                </div>
+                <div class="b-product__thumbs js-slider_giftThumbs" data-gift="7">
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-1.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-2.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-3.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-4.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-5.jpg" alt="">
+                        </div>
+                </div>
+            </div>
+            <div class="b-product__content_details">
+                <div class="b-product__header">
+                    <div class="b-product__articul">Артикул: 2435</div>
+                    <div class="b-product__rating js-stars_rating" data-stars="3">
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star" aria-hidden="true"></span>
+                        <span class="icon-star" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <form action="" class="b-product__form_toCart">
+                    <div class="b-product__type b-product__field">
+                        <span class="b-product__qty-title">Объем букета:</span>
+                        <select name="type" class="js-product__type">
+                            <option value="1">Красный</option>
+                            <option value="2">эконом</option>
+                            <option value="3">пабагатаму</option>
+                        </select>
+                    </div>
+                    <div class="b-product__type b-product__field">
+                        <span class="b-product__qty-title">Высота:</span>
+                        <select name="height" class="js-product__type">
+                            <option value="0">0 см</option>
+                            <option value="100">100 см</option>
+                            <option value="200">200 см</option>
+                        </select>
+                    </div>
+                    <div class="b-product__qty-field b-product__field">
+                        <span class="b-product__qty-title">Количество:</span>
+                        <div class="b-product__qty">
+                            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+                            <input type="text" value="1" class="js-qty-input">
+                            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+                        </div>
+                    </div>
+                    <div class="b-product__additional-field">
+                        <input id="bud-7" type="checkbox" name="bud-7" class="g-checkbox">
+                        <label for="bud-7">Бутоньерка жениха<br> в стиле букета (+100 грн)</label>
+                    </div>
+                    <div class="b-product__prices">
+                        <ins class="b-product__price b-product__price--old">800 <span>грн.</span></ins>
+                        <ins class="b-product__price b-product__price--new">600 <span>грн.</span></ins>
+                    </div>
+                    <div class="b-product__action">
+                        <button type="button" class="g-btn">Добавить подарок</button>
+                    </div>
+                </form>
+                <p>
+                    <span class="g-bold">Размер:</span> высота 50 см, диаметр 25 см
+                </p>
+                <p>
+                    <span class="g-bold">Состав:</span> Гиацинт, Тюльпан, Хвоя
+                </p>
+                <p>
+                    Королевой цветов у всех народов признается красная роза за ее яркость, аромат и изящество. Древние греки считали красную розу цветком богини любви Афродиты.<br><br>30% букета может быть заменено без изменения общего вида и стиля букета.<br><br><span class="g-bold">Этот товар можно заказать минимум за сутки до доставки</span>
+                </p>
+                <p class="b-product__share">
+                    <span class="g-bold">Поделиться:</span>
+                    <span class="b-share">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//127.0.0.1%3A9000/product.html" class="b-social__item">
+                            <i class="icon-facebook-black"></i>
+                        </a>
+                        <a href="https://www.instagram.com/passi/" class="b-social__item">
+                            <i class="icon-insta-black"></i>
+                        </a>
+                        <a href="https://plus.google.com/share?url=http%3A//127.0.0.1%3A9000/product.html" class="b-social__item">
+                            <i class="icon-gplus-black"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/passi/" class="b-social__item">
+                            <i class="icon-youtube-black"></i>
+                        </a>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!-- /GIFT DETAILS-->
     </div>
 </article>
 
                     
-                        <article class="b-product_gift">
+                        <article class="b-gift">
     <a href="" class="b-product__photo">
         <img src="./img/products/p-8.png" alt="">
     </a>
-    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <h3 class="b-product__title js-tooltip_gift" data-tooltip-content="#tooltip_gift-8"><a href="">Букет Красивое Название</a></h3>
     <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
     
     <div class="b-product__nums">
@@ -1287,6 +2126,124 @@
             <span class="icon-star"></span>
             <span class="icon-star"></span>
         </i>
+    </div>
+    <div class="hidden">
+        <!-- GIFT DETAILS-->
+        <div class="b-gift__popup b-product__details" id="tooltip_gift-8" data-gift="8">
+            <h2 class="section__title b-gift__title_popup">оформление дня рождения</h2>
+            <div class="b-product__slider_details">
+                <div class="b-product__views js-slider_giftViews" data-gift="8">
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-1.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-2.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-3.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-4.jpg" alt="">
+                        </div>
+                        <div class="b-product__view">
+                            <img src="./img/products/product-view-5.jpg" alt="">
+                        </div>
+                </div>
+                <div class="b-product__thumbs js-slider_giftThumbs" data-gift="8">
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-1.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-2.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-3.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-4.jpg" alt="">
+                        </div>
+                        <div class="b-product__thumb">
+                            <img src="./img/products/product-view-5.jpg" alt="">
+                        </div>
+                </div>
+            </div>
+            <div class="b-product__content_details">
+                <div class="b-product__header">
+                    <div class="b-product__articul">Артикул: 2435</div>
+                    <div class="b-product__rating js-stars_rating" data-stars="3">
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star icon-star_filled" aria-hidden="true"></span>
+                        <span class="icon-star" aria-hidden="true"></span>
+                        <span class="icon-star" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <form action="" class="b-product__form_toCart">
+                    <div class="b-product__type b-product__field">
+                        <span class="b-product__qty-title">Объем букета:</span>
+                        <select name="type" class="js-product__type">
+                            <option value="1">Красный</option>
+                            <option value="2">эконом</option>
+                            <option value="3">пабагатаму</option>
+                        </select>
+                    </div>
+                    <div class="b-product__type b-product__field">
+                        <span class="b-product__qty-title">Высота:</span>
+                        <select name="height" class="js-product__type">
+                            <option value="0">0 см</option>
+                            <option value="100">100 см</option>
+                            <option value="200">200 см</option>
+                        </select>
+                    </div>
+                    <div class="b-product__qty-field b-product__field">
+                        <span class="b-product__qty-title">Количество:</span>
+                        <div class="b-product__qty">
+                            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+                            <input type="text" value="1" class="js-qty-input">
+                            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+                        </div>
+                    </div>
+                    <div class="b-product__additional-field">
+                        <input id="bud-8" type="checkbox" name="bud-8" class="g-checkbox">
+                        <label for="bud-8">Бутоньерка жениха<br> в стиле букета (+100 грн)</label>
+                    </div>
+                    <div class="b-product__prices">
+                        <ins class="b-product__price b-product__price--old">800 <span>грн.</span></ins>
+                        <ins class="b-product__price b-product__price--new">600 <span>грн.</span></ins>
+                    </div>
+                    <div class="b-product__action">
+                        <button type="button" class="g-btn">Добавить подарок</button>
+                    </div>
+                </form>
+                <p>
+                    <span class="g-bold">Размер:</span> высота 50 см, диаметр 25 см
+                </p>
+                <p>
+                    <span class="g-bold">Состав:</span> Гиацинт, Тюльпан, Хвоя
+                </p>
+                <p>
+                    Королевой цветов у всех народов признается красная роза за ее яркость, аромат и изящество. Древние греки считали красную розу цветком богини любви Афродиты.<br><br>30% букета может быть заменено без изменения общего вида и стиля букета.<br><br><span class="g-bold">Этот товар можно заказать минимум за сутки до доставки</span>
+                </p>
+                <p class="b-product__share">
+                    <span class="g-bold">Поделиться:</span>
+                    <span class="b-share">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//127.0.0.1%3A9000/product.html" class="b-social__item">
+                            <i class="icon-facebook-black"></i>
+                        </a>
+                        <a href="https://www.instagram.com/passi/" class="b-social__item">
+                            <i class="icon-insta-black"></i>
+                        </a>
+                        <a href="https://plus.google.com/share?url=http%3A//127.0.0.1%3A9000/product.html" class="b-social__item">
+                            <i class="icon-gplus-black"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/passi/" class="b-social__item">
+                            <i class="icon-youtube-black"></i>
+                        </a>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <!-- /GIFT DETAILS-->
     </div>
 </article>
 

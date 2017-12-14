@@ -655,7 +655,7 @@ $product-small: 230px;
 
 // product page 
 .b-product__details{
-    margin-bottom: 100px;
+    margin-bottom: 93px;
     display: flex;
     flex-wrap: nowrap;
     
@@ -702,7 +702,9 @@ $product-small: 230px;
         }
     }
 }
-.b-product__slider_details{}
+.b-product__slider_details{
+//    overflow: hidden;
+}
 .b-product__views{
     height: 586px;
     overflow: hidden;
@@ -744,22 +746,49 @@ $product-small: 230px;
 }
 .b-product__thumbs{
     @extend %clearfix;
+    
     overflow: hidden;
-    margin: 7px -7px;
-    max-height: 177px;
+//    overflow: hidden;
+    margin: 7px -3.05px 7px -7px;
+    height: 203px;
     cursor: pointer;
     
     @include huge{
-        margin: 8px -4px 7px; 
+//        margin: 8px -2px 7px -4px;
+        margin: 8px -1.04px 7px -4px;
+        height: 143px;
+    }
+    @include pc{
+        height: 113px;
+    }
+    @include note{
+        margin: 8px -3.01px 7px -4px;
+        height: 147px;
+    }
+    @include tablet{
+        margin: 8px -1.11px 7px -4px;
+        height: 122px;
     }
     @include small{
-        margin: 5px -7px;
+        margin: 5px -4.01px 5px -5.09px;
+        height: 60px;
+    }
+    
+    .slick-list, .slick-track{
+        height: 100%;
+    }
+    
+    .b-product__thumb{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
 .b-product__thumb{
     float: left;
     width: 20%;
+//    max-height: 162px;
     height: 100%;
     padding: 7px;
     
@@ -775,9 +804,10 @@ $product-small: 230px;
     }
 
     img{
-        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
         height: auto;
-        display: block;
+//        display: block;
 //            max-width: calc(100% -14px);
 //            max-height: calc(100% -14px);
     }
@@ -829,7 +859,8 @@ $product-small: 230px;
     
     .b-product__share{
         margin-top: auto;
-        margin-bottom: -6px;
+//        margin-bottom: -6px;
+        margin-bottom: 0;
         
         @include huge{
             margin-bottom: -3px;
@@ -1140,7 +1171,7 @@ $product-small: 230px;
         }
         
         >span{
-            font-size: 49px;
+            font-size: 48px;
             
             @include huge{
                 font-size: 36px;
@@ -1173,8 +1204,8 @@ $product-small: 230px;
             line-height: normal;
             font-size: 24px;
             font-weight: 800;
-            padding-right: 33px;
-            padding-left: 33px;
+            padding-right: 32px;
+            padding-left: 32px;
             
             @include huge{
                 padding: 10px 20px;
@@ -1418,11 +1449,11 @@ $product-small: 230px;
 }
 
 .b-product__block_payDeliv{
-    padding: 44px 90px 25px 30px;
+    padding: 44px 90px 27px 30px;
     width: 50%;
     
     @include huge{
-        padding: 29px 90px 15px 21px;
+        padding: 29px 90px 18px 21px;
     }
     @include pc{
         padding-right: 21px;

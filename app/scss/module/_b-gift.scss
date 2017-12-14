@@ -1,26 +1,16 @@
-
 .b-gift{
     @extend .b-product;
     margin-left: 0;
-//    margin-right: 76.5px;
-//    margin-left: 76.5px;
     margin-right: 153px;
 
     @include huge{
-//        margin-right: 55.2px;
-//        margin-left: 55.2px;
-//        margin-right: 110.4px;
         margin-right: 111px;
     }
     @include pc{
-//        margin-right: 10.7px;
-//        margin-left: 10.7px;
         margin-right: 21.4px;
     }
 
     @include note{
-//        margin-right: 9.5px;
-//        margin-left: 9.5px;
         margin-right: 19px;
         @for $i from 7 through 8{
             &:nth-child(#{$i}){
@@ -42,33 +32,113 @@
     &:last-child{
         margin-right: 0;
     }
-    
-    .b-product__title{
-        position: relative;
-        
-        &:hover{
-            .b-gift__popup{
-                display: block;
-//                visibility: visible;
-                opacity: 1;
-                transition: opacity 400ms, display 0s 400ms;
-            }
-        }
-    }   
 }
+
 .b-gift__popup{
     flex-wrap: wrap;
-    width: 805px;
-    padding: 29px 21px;
+    margin-bottom: 0;
+//    padding: 29px 21px;
+    width: 1006px;
+    padding: 41px 33px;
+    position: relative;
+    box-sizing: content-box;
+    
+    @include huge{
+        width: 749px;
+        padding: 25px 21px;
+    }
+    
+    >*{
+        box-sizing: border-box;
+    }
     
     .b-product__slider_details{
-        margin-right: 0;
-        width: 100%;
+        margin-right: 36px;
+        width: 542px;
+        
+        @include huge{
+            margin-right: 26px;
+            width: 395px;
+        }
+        
+        .b-product__views{
+            height: 542px;
+            
+            @include huge{
+                height: 395px;
+            }
+        }
+        .b-product__thumbs{
+            height: 111px;
+            
+            @include huge{
+//                height: 395px;
+                height: 81px;
+            }
+        }
+    }
+    .b-product__content_details{
+        flex-basis: 0;
+        padding-top: 11px;
+        
+        @include huge{
+            padding-top: 8px;
+        }
+        
+        .b-product__header{
+//            margin-bottom: 34px;
+            @include huge{
+                margin-bottom: 25px;
+            }
+        }
+        .b-product__qty-title{
+            min-width: 0;
+        }
+        .b-product__qty{
+            input{
+                min-width: 85px;
+                
+                @include huge{
+                    min-width: 61px;
+                }
+            }
+        }
+        .b-product__prices{
+            margin-bottom: 31px;
+            
+            @include huge{
+                margin-bottom: 23px;    
+            }
+        }
+        .b-product__price--new{
+            font-weight: 800;
+        }
+        .b-product__action{
+            margin-bottom: 33px;
+            
+            @include huge{
+                margin-bottom: 24px;    
+            }
+        }
+    }
+    
+    .arcticmodal-close{
+        top: 28px;
+        right: 22px;
+        
+        @include huge{
+            top: 16px;
+            right: 13px;
+        }
     }
 }
 .b-gift__title_popup{
-    margin-bottom: 35px;
+    margin-bottom: 45px;
     width: 100%;
     padding: 0;
     text-align: left;
+    
+    @include huge{
+        margin-bottom: 31px;
+    }
 }

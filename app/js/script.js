@@ -991,7 +991,7 @@ $(function() {
 				spaceBetween: 153,
 				// wrapperClass: "swiper-wrapper",
 				wrapperClass: "content-block",
-				slideClass: "b-product_gift",
+				slideClass: "b-gift",
 				pagination: {
 					el: '.swiper-pagination',
 					type: 'bullets',
@@ -1095,22 +1095,99 @@ $(function() {
 		initProductViewsGallery(".js-slider_prodViews", ".js-slider_prodThumbs");
 
 
-		// gift popup sliders
+		// gift popups + sliders
 		//---------------------------------------------------------------------------------------
-		var initGiftSlider = function(instance){	// instance -- tooltipster object
+		var tooltipsWithGallery = function(){
+			var initGiftSlider = function(sViewsSliderSelector, sThumbsSliderSelector, sDataAttr){
+				$(sViewsSliderSelector).each(function(){
+					var 
+						 index = $(this).data(sDataAttr)	// current gift index
+						,strToAdd = "[data-" + sDataAttr + "='" + index + "']"
+						;
+					
+					initProductViewsGallery(sViewsSliderSelector + strToAdd, sThumbsSliderSelector + strToAdd);	// init current gift gallery
 
-		};
-		$(".js-tooltip_gift").tooltipster({
-			trigger: 'click',	// only for tooltip test
-			side: ["bottom", "top"],
-			contentAsHTML: true,
-			interactive: true,
-			theme: 'tooltipster-light',
-			functionBefore(instance, helper){
-				initGiftSlider(instance);
+				});
 			}
-		});
-		$(".js-tooltip_gift").on("click", function(e){e.preventDefault()});	// only for tooltip test
+
+			var reInitGiftSlider = function(instance){	// instance -- tooltipster object
+				var 
+					 index = instance.content().data("gift")	// current gift index
+					,strToAdd = "[data-gift='" + index + "']"
+					;
+				
+				// initProductViewsGallery(".js-slider_giftViews" + strToAdd, ".js-slider_giftThumbs" + strToAdd);	// init current gift gallery
+				$(".js-slider_giftViews" + strToAdd).slick("refresh");
+				$(".js-slider_giftThumbs" + strToAdd).slick("refresh");
+			};
+			var closeTooltipIcon = function(instance){
+				var $closeIcon = instance.content().find(".arcticmodal-close");
+				$closeIcon.on("click", function(){
+					instance.close();
+					return false;
+				});
+			};
+
+			var disableGiftTooltips = function(){
+				$giftHeaderToolptip.each(function(){
+					$(this).tooltipster("disable")
+				});
+			};
+			var enableGiftTooltips = function(){
+				$giftHeaderToolptip.each(function(){
+					$(this).tooltipster("enable")
+				});
+			};
+
+			var giftTooltipsResponsiveSwitch = function(iBreakpoint, fLessBreakpoint, fMoreBreakpoint){
+				var windowWidth = window.innerWidth;
+
+				console.log(windowWidth);
+
+				if (windowWidth >= iBreakpoint){
+					fMoreBreakpoint();
+				} else {
+					fLessBreakpoint();
+				}
+
+				window.addEventListener("resize", function(){
+					var currentWindowWidth = window.innerWidth;
+
+					console.log(currentWindowWidth);
+
+					if (!((currentWindowWidth >= iBreakpoint && windowWidth >= iBreakpoint) ||
+						  (currentWindowWidth < iBreakpoint && windowWidth < iBreakpoint))){
+						windowWidth = currentWindowWidth;
+
+						if (windowWidth >= iBreakpoint){
+							fMoreBreakpoint();
+						} else {
+							fLessBreakpoint();
+						}
+					}
+				}, false);
+			};
+
+			initGiftSlider(".js-slider_giftViews", ".js-slider_giftThumbs", "gift");
+			var $giftHeaderToolptip = $(".js-tooltip_gift"); 
+			$giftHeaderToolptip.tooltipster({
+				// trigger: 'click',	// only for tooltip test
+				side: ["bottom"],
+				contentAsHTML: true,
+				interactive: true,
+				theme: 'tooltipster-light',
+				functionReady(instance, helper){
+					reInitGiftSlider(instance);
+					closeTooltipIcon(instance);
+				}
+			});
+			// $giftHeaderToolptip.on("click", function(e){e.preventDefault()});	// only for tooltip test
+			giftTooltipsResponsiveSwitch(BREAKPOINT_RES_CATALOG, disableGiftTooltips, enableGiftTooltips);
+		};
+		tooltipsWithGallery();
+		// gift popups + sliders END
+		//---------------------------------------------------------------------------------------
+
 	})();
 	//---------------------------------------------------------------------------------------
 
@@ -1165,7 +1242,5 @@ $(function() {
 	}
 	toggler();
 	//---------------------------------------------------------------------------------------
-
-
 
 });

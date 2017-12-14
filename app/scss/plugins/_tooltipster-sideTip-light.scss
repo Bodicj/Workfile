@@ -6,6 +6,7 @@ $textColor: #4a505a;
 	border-radius: 3px; 
 	border: 1px solid $borderColor;
 	background: $backgroundColor;
+    box-shadow: 0 0 16px -6px rgba(0,0,0,0.5);
 }
 
 .tooltipster-sidetip.tooltipster-light .tooltipster-content {

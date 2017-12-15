@@ -81,3 +81,216 @@
 //	background:#d1d4d3;
     background: #fff;
 }
+
+.b-cart_section{
+    
+}
+.b-form_cart{
+    display: flex;
+    flex-wrap: wrap;
+    
+    .b-form__footer_cart{
+        margin-top: 16px;
+        display: flex;
+        width: 100%;
+    }
+    .b-cart__promo, .b-cart__checkout{
+        flex-basis: 290px;
+        display: flex;
+        flex-direction: column;
+        
+        @include huge{
+            flex-basis: 212px; 
+        }
+        
+        >.g-btn{
+            margin-top: auto;
+            width: 100%;
+            padding: 12px 29px;
+            font-size: 17px;
+            
+            @include huge{
+                font-size: 12.38px;
+            }
+        }
+    }
+    .b-cart__promo{
+        margin-top: 3px;
+        margin-right: auto;
+        
+        .arcticmodal{
+            width: 100%;
+            min-width: 0;
+            max-width: 100%;
+            
+            .g-form__field{
+                margin-bottom: 30px;
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            input{
+                width: 156px;
+                
+                @include huge{
+                    width: 114px;
+                }
+            }
+            
+            .g-btn{
+                width: auto;
+                min-width: 0;
+                height: auto;
+                padding: 10px 17px 8px;
+                font-size: 14px;
+                font-weight: 700;
+                
+                @include huge{
+                    font-size: 10.2px;
+                }
+            }
+        }
+    }
+    .b-cart__checkout{
+        margin-left: auto;
+        
+        .b-cart__total_price{
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+.b-cart__item{
+    width: 100%;
+    display: flex;
+    padding: 22px 0 0;
+    margin-bottom: 37px;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    
+    @include huge{
+        font-size: 14.57px;
+    }
+    
+    .b-item__img{
+        margin-top: -22px;
+        flex-basis: 184px;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        
+        @include huge{
+            flex-basis: 133px;
+        }
+        
+        img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    .b-item__content{
+        flex-basis: 548px;
+        padding: 0 50px 0 16px;
+        
+        @include huge{
+            flex-basis: 401px; 
+            padding: 0 50px 0 13px;
+        }
+        
+        .b-item__heading{
+        }
+        .b-item__desc{
+            text-transform: none;
+            font-size: 14px;
+            font-weight: 400;
+            
+            @include huge{
+                font-size: 10.2px;
+            }
+        }
+        
+        .b-item__articul, .b-item__price{
+            display: none;
+            
+            @include small{
+                
+            }
+        }
+        .b-item__articul{
+        }
+        .b-item__price{
+            
+        }
+    }
+    .b-item__articul{
+        flex-basis: 345px;
+        padding-right: 40px;
+        
+        @include huge{
+            flex-basis: 251px; 
+        }
+        
+        .b-articul{
+            display: inline-block;
+            padding-left: 10px;
+        }
+    }
+    .b-item__counter{
+        flex-basis: 230px;
+        padding-right: 30px;
+        display: flex;
+        align-items: flex-start;
+        
+        @include huge{
+            flex-basis: 168px; 
+            
+        }
+        
+        span{
+            cursor: pointer;
+            
+            &:first-child{
+                transform: scaleX(1.7) translateY(-7%);
+            }
+        }
+        
+        input{
+            width: 39px;
+            padding: 0;
+            border: none;
+            text-align: center;
+        }
+    }
+    .b-item__price{
+        line-height: 0.7;
+        font-weight: 400;
+        flex-basis: 197px;
+        padding-right: 50px;
+        text-transform: none;
+        
+        @include huge{
+            flex-basis: 144px; 
+        }
+    }
+    .b-item__del{
+//        margin-left: auto;
+        cursor: pointer;
+        
+        i{
+            transform: translateY(-16%);
+        }
+    }
+}
+
+.b-cart__total_price{
+    text-transform: uppercase;
+    font-size: 23px;
+    font-weight: 600;
+//    margin-left: auto;
+    
+    @include huge{
+        font-size: 16.57px;
+    }
+}

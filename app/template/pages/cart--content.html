@@ -1,0 +1,63 @@
+
+<!-- MAIN MENU -->
+@@include('./../parts/nav.html')
+<!-- /MAIN MENU -->
+<section class="section_cart">
+    <!-- breadcrumbs -->
+    <div class="b-breadcrumbs">
+        <div class="container">
+            <a href="" class="b-breadcrumbs__item">Главная</a>
+            <span class="b-breadcrumbs__item">корзина</span>
+        </div>
+    </div>
+    <!-- /breadcrumbs -->
+
+    <div class="container">
+        <h2 class="section__title">Корзина</h2>
+    </div>
+    
+    <!-- CART BLOCK-->
+    <section class="b-cart_section">
+        <div class="container">
+            <form action="" class="b-form_cart">
+                @@for (i=1; i<=5; i++){
+                    @@include('./../parts/cart-item.html', {"index": "`+i+`"})
+                }
+                <div class="b-form__footer_cart">
+                    <div class="b-cart__promo">
+                        <div class="arcticmodal">
+                            <div class="g-form__field">
+                                <input class="g-input" type="text" name="code" placeholder="Промокод">
+                                <button type="button" class="g-btn g-btn--alt">Применить</button>
+                            </div>
+                        </div>
+                        <a href="./catalog.html" class="g-btn g-btn--grey">продолжить покупки</a>
+                    </div>
+                    <div class="b-cart__checkout">
+                        <div class="b-cart__total_price">итого: 6 000 грн</div>
+                        <button type="submit" class="g-btn">оформить заказ</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- /CART BLOCK-->
+
+
+    
+    <!-- PRODUCT GIFTS-->
+    <section class="section section--products section--products_gifts">
+        <h2 class="section__title">подарки</h2>
+            <div class="container container_gift" id="sliderProductGifts">
+
+                <div class="content-block">
+                    @@for (i=1; i<=8; i++){
+                        @@include('./../parts/product-gift.html', {"index": "`+i+`"})
+                    }
+                </div>
+                <div class="swiper-pagination"></div>
+
+            </div>
+    </section>
+    <!-- /PRODUCT GIFTS -->
+</section>

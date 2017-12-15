@@ -74,6 +74,7 @@ $imgContainerWidth: 103px;
         .b-item__del{
             float: left;
             line-height: 33px;
+            cursor: pointer;
             
             i{
                 vertical-align: middle;
@@ -109,7 +110,7 @@ $imgContainerWidth: 103px;
         }
     }
     
-    .b-minicart__total{
+    .b-minicart__total_price{
         margin-bottom: 28px;
         text-align: center;
         text-transform: uppercase;

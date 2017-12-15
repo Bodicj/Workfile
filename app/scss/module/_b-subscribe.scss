@@ -292,11 +292,14 @@
     @include huge{
         height: 368px;
     }
+    @include pc{
+        height: 315px;
+    }
     @include note{
-        height: 280px;
+        height: 220px;
     }
     @include tablet{
-        height: 240px;
+        height: 185px;
     }
     @include small{
         height: 101px;
@@ -308,11 +311,14 @@
     @include huge{
         height: 315px;
     }
+    @include pc{
+        height: 290px;
+    }
     @include note{
-        height: 210px;
+        height: 190px;
     }
     @include tablet{
-        height: 200px;
+        height: 140px;
     }
     @include small{
         height: 94px;

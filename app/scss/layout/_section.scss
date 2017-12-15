@@ -90,11 +90,11 @@
 	padding: 117px 0 270px;
     
  	@include huge {
-	padding-top: 83px;
+	padding: 83px 0 180px;
 } 
     @include pc{
 //        padding: 40px 0 175px;
-        padding: 14px 0 175px;
+        padding: 14px 0 170px;
     }
     @include note{
         padding: 11px 0 135px;
@@ -527,19 +527,19 @@
 	padding: 117px 0 270px;
 
  	@include huge {
-	    padding: 83px 0 176px;
+	    padding: 83px 0 130px;
     }
     @include pc{
-        padding: 14px 0 100px;
+        padding: 14px 0 70px;
     }
     @include note{
-        padding: 11px 0 90px;
+        padding: 11px 0 50px;
     }
     @include tablet{
-        padding: 10px 0 60px;
+        padding: 10px 0 47px;
     }
     @include small{
-        padding: 8px 0 47px;
+        padding: 8px 0 45px;
     }
 }
 
@@ -569,6 +569,7 @@
     
     @include huge{
         margin-top: 80px;
+        padding-bottom: 43px;
     }
     @include pc{
         margin-top: 30px;

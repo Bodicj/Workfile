@@ -735,7 +735,7 @@ $(function() {
 
 		filterSP = $filter.find('.b-filter__block-items').jScrollPane({
 	    	showArrows: false,
-	    	// autoReinitialise: true
+	    	autoReinitialise: true
 	    });
 
 		// reinitialize jScrollPane (fixed .jspScrollable width after resize bugFix)
@@ -1142,8 +1142,6 @@ $(function() {
 			var giftTooltipsResponsiveSwitch = function(iBreakpoint, fLessBreakpoint, fMoreBreakpoint){
 				var windowWidth = window.innerWidth;
 
-				console.log(windowWidth);
-
 				if (windowWidth >= iBreakpoint){
 					fMoreBreakpoint();
 				} else {
@@ -1152,8 +1150,6 @@ $(function() {
 
 				window.addEventListener("resize", function(){
 					var currentWindowWidth = window.innerWidth;
-
-					console.log(currentWindowWidth);
 
 					if (!((currentWindowWidth >= iBreakpoint && windowWidth >= iBreakpoint) ||
 						  (currentWindowWidth < iBreakpoint && windowWidth < iBreakpoint))){

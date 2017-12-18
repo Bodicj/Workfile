@@ -935,11 +935,40 @@
 }
 .section_cart{
     @extend .section_product;
+    padding-bottom: 0;
+    
+    @include huge{
+        padding-bottom: 33px;
+    }
         
     .b-cart_section{
         
     }
     .section--products_gifts{
         margin-top: 41px;
+        padding-bottom: 46px;
+        
+        @include huge{
+            margin-top: 16px;
+            padding-bottom: 40px;
+        }
+        @include pc{
+            margin-top: 48px;
+        }
+        @include note{
+            margin-top: 64px;
+        }
+        @include small{
+            margin-top: 52px;
+            padding-bottom: 28px;
+        }
+    }
+}
+.section__title_cart{
+    @include huge{
+        margin: 0 0 55px;
+    }
+    @include small{
+        margin: 0 0 25px;
     }
 }

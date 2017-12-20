@@ -1,0 +1,63 @@
+.b-payDeliv{
+    display: flex;
+    padding-left: 5px;
+    font-size: 20px;
+    color: #444a55;
+    
+    @include huge{
+        padding-left: 3px;
+        font-size: 14.5px;
+    }
+    
+    &__heading{
+        flex-basis: 239px;
+        font-size: 0.961em;
+        font-weight: 700;
+    }
+    
+    &__options{
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+        flex-basis: 535px;
+    } 
+    &__option{
+        margin-bottom: 31px;
+        
+        @include huge{
+            margin-bottom: 20px;
+        }
+        
+        .b-option__heading{
+//            margin-bottom: 2px;
+            margin-bottom: 0.1em;
+            
+            @include huge{
+                margin-bottom: 0;
+            }
+        }
+        .b-option__info{
+            list-style: none;
+            padding-left: 54px;
+            font-size: 0.9em;
+            color: #848484;
+            
+            @include huge{
+                padding-left: 38px;
+                line-height: 1.2;
+            }
+            
+            li{
+                position: relative;
+                padding-left: 10px;
+//                line-height: 1.2;
+                
+                &:before{
+                    content: '-';
+                    position: absolute;
+                    left: 0;
+                }
+            }
+        }
+    }    
+}

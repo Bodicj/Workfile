@@ -1,0 +1,261 @@
+.b-checkout{
+    margin-bottom: 92px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.b-checkout__heading{
+    margin-bottom: 43px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+    
+    @include huge{
+        margin-bottom: 27px;
+        font-size: 17.48px;
+    }
+}
+.b-checkout__contacts{
+    flex-basis: 841px;
+    
+    @include huge{
+        flex-basis: 612px;
+    }
+    
+    .b-cart__checkout{
+        margin-left: 0;
+        margin-bottom: 50px;
+//        flex-basis: 511px;
+        flex-direction: row;
+//        justify-content: space-between;
+        
+        @include huge{
+            margin-bottom: 37px;
+        }
+        
+        >.g-btn{
+            width: auto;
+            min-width: 0;
+            white-space: nowrap;
+            padding: 12px 5px;
+            font-size: 18px;
+            
+            @include huge{
+                padding: 6px 12px;
+                font-size: 13.11px;
+            }
+            
+            &:first-of-type{
+                width: 260px;
+                margin-right: 6px;
+                
+                @include huge{
+                    margin-right: 4px;
+                    width: 190px;
+                }
+            }
+            &:last-of-type{
+                width: 245px;
+                
+                @include huge{
+                    width: 180px;
+                }
+            }
+        }
+    }
+    .g-form__field{
+        @include huge{
+            margin-bottom: 16px;
+        }
+        
+        .g-input{
+            @include huge{
+                height: 28px;
+                padding: 0.5em 0.9em;
+                font-size: 11.65px;
+            }
+            @include small{
+                height: auto;
+                font-size: 16px;
+            }
+        }
+    }
+}
+.b-checkout__login{
+    display: flex;
+    min-width: 0;
+    max-width: none;
+    
+    .arcticmodal-body{
+        margin-right: 6px;
+        width: 260px;
+        padding: 0;
+        
+        @include huge{
+            margin-right: 4px;
+            width: 190px;
+        }
+    }
+    .g-form__field{
+        padding: 0;
+    }
+    .arcticmodal-footer{
+        width: 245px;
+        padding: 0 14px;
+        
+        @include huge{
+            width: 180px;
+        }
+    }
+    .g-form__alarm{
+//        margin: 0 -20px 0 14px;
+        margin-right: -50px;
+    }
+    .g-h3{
+        margin-bottom: 24px;
+        line-height: 1.2;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    .b-social_modal{
+        margin-bottom: 22px;
+        line-height: 0;
+    }
+}
+.b-checkout__register{
+    display: none;
+    min-width: 0;
+    max-width: none;
+    
+    label{
+        display: block;
+        
+        >span{
+            display: inline-block;
+            vertical-align: top;
+            line-height: 36px;
+            font-size: 16px;
+        }
+    }
+    input, textarea{
+        margin-right: 12px;
+        display: inline-block;
+        width: 511px;
+    }
+    textarea{
+        height: 162px;
+        resize: none;
+    }
+}
+.b-checkout__payDeliv{
+    flex-basis: 779px;
+    
+    @include huge{
+        flex-basis: 567px;
+    }
+    
+    .b-checkout__heading{
+        margin-bottom: 79px;
+        
+        
+        @include huge{
+            margin-bottom: 51px;
+        }
+    }
+    .b-payDeliv{}
+    .b-payDeliv+.b-payDeliv{
+        margin-top: 61px;
+        
+        @include huge{
+            margin-top: 41px;    
+        }
+    }
+    .b-payDeliv__options{
+        
+    }
+}
+.b-checkout__checkboxes{
+    margin-bottom: 95px;
+    width: 100%;
+    
+    @include huge{
+        margin-bottom: 66px;
+    }
+    
+    label{
+        margin-bottom: 8px;
+        display: block;
+        
+        @include huge{
+            margin-bottom: 7px;
+            line-height: 15px;
+            font-size: 13px;
+        }
+    }
+    label:last-of-type{
+        margin-bottom: 0;
+    }
+}
+.b-checkout__products{
+    .b-checkout__heading{
+        margin-bottom: 65px;
+        width: 100%;
+        
+        @include huge{
+            margin-bottom: 44px;
+        }
+    }
+    
+    .b-form__footer_checkout{
+        margin-bottom: 5px;
+        width: 100%;
+        padding: 0 45px 0 201px;
+        
+        @include huge{
+            margin-bottom: 3px;
+            padding: 0 33px 0 147px;
+        }
+        
+        .b-checkout__field_price{
+            display: flex;
+            justify-content: space-between;
+//            padding: 5px 0 8px;
+            padding: 0.25em 0 0.4em;
+            line-height: normal;
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            
+            @include huge{
+                font-size: 14.57px;
+            }
+            
+            .b-checkout__desc{
+                padding-right: 15px;
+            }
+            .b-checkout__price{
+                
+            }
+        }
+    }
+    
+    .b-cart__promo{
+        flex-basis: auto;
+        >.g-btn{
+            &, &:hover{
+                background-color: transparent;
+            }
+        }
+    }
+    .b-cart__checkout{
+        .b-cart__total_price{
+            margin-bottom: 42px;
+            padding-right: 44px;
+            text-align: right;
+            
+            @include huge{
+                margin-bottom: 27px;
+                padding-right: 33px;
+            }
+        }
+    }
+}

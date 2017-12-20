@@ -815,22 +815,26 @@
     }
 }
 .section--responces_product{
-    @include note{
-        padding-bottom: 100px;
+    @include pc{
+        padding-bottom: 71px;
     }
-    @include tablet{
-        padding-bottom: 85px;
-    }
-    @include small{
-        padding-bottom: 70px;
-    }
+//    @include note{
+//        padding-bottom: 100px;
+//    }
+//    @include tablet{
+//        padding-bottom: 85px;
+//    }
+//    @include small{
+//        padding-bottom: 70px;
+//    }
 }
 
 .section_product{
-    padding: 117px 0 270px;
+//    padding: 117px 0 270px;
+    padding: 117px 0 200px;
 
  	@include huge {
-	    padding: 83px 0 130px;
+	    padding: 83px 0 120px;
     }
     @include pc{
         padding: 14px 0 70px;
@@ -869,24 +873,27 @@
 
 .section--products_gifts{
     @extend .section--slides_service;
-    margin-top: 64px;
+//    margin-top: 64px;
+    margin-top: 5px;
     
     @include huge{
-        margin-top: 13px;
+//        margin-top: 13px;
+        margin-top: 0;
+        padding-top: 12px;
     }
     @include pc{
         margin-top: 0;
-        padding-bottom: 135px;
+        padding-bottom: 90px;
     }
     @include note{
-        padding-bottom: 115px;
+        padding-bottom: 100px;
     }
-    @include tablet{
-        padding-bottom: 110px;
-    }
+//    @include tablet{
+//        padding-bottom: 110px;
+//    }
     @include small{
         padding-top: 0;
-        padding-bottom: 80px;
+        padding-bottom: 65px;
     }
     
     .container{
@@ -900,6 +907,21 @@
         .content-block{
             @include note{
                 margin-bottom: 0;
+                
+                &:before, &:after{
+                    border: 0px solid transparent;
+
+                    @include note{
+                        content: '';
+                        border-width: 4.5px;
+                    }
+                    @include tablet{
+                        border-width: 3.5px;
+                    }
+                    @include small{
+                        border-width: 2.5px;
+                    }
+                }
             }
             @include tablet{
                 padding: 0;
@@ -908,13 +930,18 @@
     }
        
     .swiper-pagination{
+        margin-top: -60px;
         position: static;
 //        margin-bottom: 89px;
         line-height: 0;
         font-size: 0;
         
         @include huge{
+            margin-top: -40px;
 //            margin-bottom: 65px;
+        }
+        @include pc{
+            margin-top: -10px;
         }
         @include note{
             display: none;
@@ -946,11 +973,14 @@
     }
     .section--products_gifts{
         margin-top: 41px;
-        padding-bottom: 46px;
+//        padding-bottom: 46px;
+        padding-bottom: 106px;
         
         @include huge{
-            margin-top: 16px;
-            padding-bottom: 40px;
+//            margin-top: 16px;
+//            padding-bottom: 40px;
+            margin-top: 44px;
+            padding-bottom: 47px;
         }
         @include pc{
             margin-top: 48px;
@@ -971,4 +1001,7 @@
     @include small{
         margin: 0 0 25px;
     }
+}
+.section_checkout{
+    @extend .section_cart;
 }

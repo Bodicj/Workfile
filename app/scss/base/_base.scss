@@ -121,7 +121,12 @@ img {
         width: 1201px;
     } 
     @include pc{
-        width: 1006px;
+        max-width: 1006px;
+    } 
+    @include note{
+        max-width: 100%;
+        padding-right: 0;
+        padding-left: 0;
     }
 }
 .title{

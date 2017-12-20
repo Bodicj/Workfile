@@ -229,8 +229,8 @@ textarea{
 }
 .g-radio {
   vertical-align: top;
-  width: 13px;
-  height: 13px;
+  width: 28px;
+  height: 26px;
   margin: 0 3px 0 0;
 }
 .g-radio + label {
@@ -241,31 +241,50 @@ textarea{
   opacity: 0;
 }
 .g-radio:not(checked) + label {
+  display: inline-block;
   position: relative;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 53px;
+    
+    @include huge{
+        padding-left: 38px;
+    }
 }
 .g-radio:not(checked) + label:before {
   content: '';
   position: absolute;
-  top: 2px;
+  top: -1px;
   left: 0;
-  width: 13px;
-  height: 13px;
-  border: 1px solid $color__primary;
+  width: 27px;
+  height: 27px;
+  border: 5px solid $color__third;
+  box-shadow: 0 0 1px $color__primary;
   border-radius: 50%;
-  background: #FFF;
+  background: $color__radio_inactive;
+    
+    @include huge{
+        top: 2px;
+        width: 20px;
+        height: 20px;
+    }
 }
 .g-radio:not(checked) + label:after {
   content: '';
   position: absolute;
-  top: 5px;
-  left: 3px;
-  width: 7px;
-  height: 7px;
+  top: 4px;
+  left: 5px;
+  width: 17px;
+  height: 17px;
   border-radius: 50%;
   background: $color__primary;
   opacity: 0;
   transition: all .2s;
+    
+    @include huge{
+        top: 6px;
+        left: 4px;
+        width: 12px;
+        height: 12px;
+    }
 }
 .g-radio:checked + label:after {
   opacity: 1;
@@ -390,9 +409,9 @@ textarea{
   transition: all 0.2s;
 
    @include huge {
-      top: 3px;
+      top: 1px;
       left: 6px;
-      width: 6px;
+      width: 5px;
       height: 12px;
     }
 }

@@ -90,6 +90,7 @@
 .b-form_cart{
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
     
     .b-form__footer_cart{
         margin-top: 16px;
@@ -136,7 +137,7 @@
                 font-size: 12.38px;
             }
             @include small{
-                padding: 12px 29px;
+                padding: 12px 25px;
                 font-size: 17px;
             }
         }
@@ -425,7 +426,7 @@
                 font-size: 14.57px;
             }
             @include small{
-                width: 39px;
+                width: 33px;
                 font-size: 20px;
             }
         }
@@ -474,25 +475,26 @@
 .b-cart__item_checkout{
     @extend .b-cart__item;
     
+    @include small{
+        justify-content: flex-end;
+    }
+    
     .b-item__content{
         flex-basis: 628px;
         
-        @include huge{
-//            flex-basis: 458px;
+        @include small{
+            flex-basis: 193px;
         }
     }
     .b-item__articul{
         flex-basis: 375px;
-        
-        @include huge{
-//            fxb
-        }
     }
     .b-item__counter{
         flex-basis: 269px;
         
-        @include huge{
-//            fxb
+        @include tablet{
+            flex-basis: auto;
+            padding: 0;
         }
     }
     .b-item__price{
@@ -500,7 +502,7 @@
         padding: 0;
         
         @include huge{
-//            fxb
+            flex-basis: 170px;
         }
     }
 }

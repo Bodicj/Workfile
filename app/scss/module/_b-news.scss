@@ -32,6 +32,21 @@
         }
     }
 }
+.b-news_news{
+    @extend .b-news;
+    margin-bottom: 63px;
+    
+    @include huge{
+        margin-bottom: 44px;
+    }
+    @include tablet{
+        margin: 0 0 35px;
+        
+        &:last-child{
+            display: block;
+        }
+    }
+}
 .b-news_service{
 //    width: 30.85%;
     flex-shrink: 0;

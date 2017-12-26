@@ -228,28 +228,29 @@
 	}
     
     .g-checkbox:not(checked) + label:before {
-        @include pc{
-            height: 16px;
-            width: 16px;
-        }
+//        @include pc{
+//            height: 16px;
+//            width: 16px;
+//        }
         @include note{
-            height: 20px;
-            width: 20px;
+//            height: 20px;
+//            width: 20px;
             background-color: #000;
         }
     }
     .g-checkbox:not(checked) + label:after {
-        @include pc{
-            top: 2px;
-            left: 6px;
-        }
+//        @include pc{
+//            top: 2px;
+//            left: 7px;
+//            width: 6px;
+//        }
     }
 
 	label{
 		display: block;
-		font-size: 16px;
+//		line-height: 22px;
+//		font-size: 16px;
 		font-weight: 400;
-		line-height: 22px;
 		color: #0f0f0f;
 //		@include twoK {
 //			font-size: 21px;
@@ -261,8 +262,8 @@
 
         @include huge{
 //            line-height: 22px;
-            line-height: 16px;
-            font-size: 11.65px;
+//            line-height: 16px;
+//            font-size: 11.65px;
             
         }
 
@@ -271,8 +272,8 @@
 //            font-size: 13.29px;
         }
         @include note{
-            line-height: 20px;
-            font-size: 13.29px;
+//            line-height: 20px;
+//            font-size: 13.29px;
             color: #fff;
         }
 	}

@@ -4,6 +4,23 @@
 	text-align: center;
 	line-height: 0;
 //	font-style: 0;
+    
+    &_news{
+        margin-top: 96px;
+        
+        @include huge{
+            margin-top: 71px;
+        }
+        @include pc{
+            margin-top: 40px;
+        }
+        @include tablet{
+            margin-top: 30px;
+        }
+        @include small{
+            margin-top: 15px;
+        }
+    }
 }
 .b-pagination__item{
 	display: inline-block;

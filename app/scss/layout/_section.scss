@@ -379,15 +379,19 @@
 	}
 
 }
-	.section__title{
-		margin: 0 0 147px;
-		font-size: 36px;
-		font-weight: 700;
-		line-height: 42px;
-		text-transform: uppercase;
-		text-align: center;
-		color: #121212;
-
+.section--news_post{
+    padding-bottom: 86px;
+    
+    @include huge{
+        margin-top: 27px;
+        padding-bottom: 44px;
+    }
+    @include pc{
+        margin-top: 20px;
+    }
+    @include note{
+        margin-top: 0;
+    }
 }
 .section--text{
 	position: relative;
@@ -742,6 +746,17 @@
         }
     }
 }
+.section--advantages_about{
+    .section__title{
+        margin: 0 0 24px;   
+        font-size: 32px;
+        
+        @include huge{
+            margin: 0 0 17px;
+            font-size: 23.31px;
+        }
+    }
+}
 .section__title_advantage{
     margin-bottom: 100px;
     line-height: 36px;
@@ -1064,4 +1079,48 @@
             padding-bottom: 70px;
         }
     }
+}
+.section_contacts{
+    @extend .section_cart;
+    
+    @include huge{
+        padding-bottom: 0;
+    }
+}
+.section__title_contacts{
+    @extend .section__title_cart;
+}
+.section__title_post{
+    @extend .section__title_cart;
+    
+    text-align: left;
+}
+.section__title_about{
+    @extend .section__title_cart;
+}
+.section_post{
+    @extend .section_news;
+    
+    @include pc{
+        padding-bottom: 25px;
+    }
+    
+    @include small{
+        padding-bottom: 0;
+    }
+}
+.section--post{
+    padding-bottom: 10px;
+    
+    
+    .content-block{
+        display: block;
+        
+        @include small{
+            display: flex;
+        }
+    }
+}
+.section_about{
+    @extend .section_news;
 }

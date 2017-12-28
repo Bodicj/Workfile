@@ -896,6 +896,51 @@ $product-small: 230px;
         }
     }
 }
+.b-product__share_post{
+    margin-bottom: 20px;
+    font-size: 0;
+    
+    @include huge{
+        margin-bottom: 9px;
+    }
+    @include small{
+        align-self: flex-start;
+        margin-bottom: 25px;
+    }
+    
+    >span:first-child{
+        vertical-align: 0.5em;
+        margin-right: 0.5em;
+        display: inline-block;
+        font-size: 19.2px;
+        font-weight: 700;
+        
+        @include huge{
+            font-size: 14.57px;
+        }
+    }
+    
+    .b-social__item{
+        float: none;
+        display: inline-block;
+        line-height: 0;
+        
+        i{
+            @include huge{
+                width: 23px;
+                height: 23px;
+            }
+        }
+    }
+    
+    & + .g-link--allinfo{
+        @include small{
+            float: none;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+    }
+}
 .b-product__header{
     margin-bottom: 33px;
     display: flex;

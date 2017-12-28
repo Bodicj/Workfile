@@ -44,6 +44,17 @@
 //            content: "";
 //        }
 //    }
+    
+    &_about{
+        counter-reset: advNumAbout;
+        margin: 0 0 168px;
+        list-style: none;
+        padding-left: 0;
+        
+        @include huge{
+            margin: 0 0 89px;
+        }
+    }
 }
 .b-advantage{
     margin: 0 59px 133px;
@@ -105,6 +116,44 @@
             text-align: center;
         }
     }
+    
+    &_about{
+        margin: 0 0 36px;
+        
+        @include huge{
+            margin: 0 0 27px;
+        }
+        @include pc{
+            margin: 0 0 17px;
+        }
+        
+        &::before{
+            counter-increment: advNumAbout;
+            content: counter(advNumAbout);
+            margin-right: 13px;
+            float: left;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: #000;
+            text-align: center;
+            line-height: 35px;
+            font-size: 22.16px;
+            font-weight: 700;
+            color: #fff;
+            
+            @include huge{
+                margin-right: 10px;
+                width: 27px;
+                height: 27px;
+                line-height: 28px;
+                font-size: 16.14px;
+            }
+            @include small{
+                margin-right: 15px;
+            }
+        }
+    }
 }
 .b-advantage__text{
     margin: 0;
@@ -123,5 +172,17 @@
         line-height: 18px;
         font-size: 12px;
         text-align: justify;
+    }
+    
+    
+    &_about{
+        overflow: hidden;
+        margin: 0;
+        line-height: 2;
+        font-size: 18px;
+        
+        @include huge{
+            font-size: 13.11px;
+        }
     }
 }

@@ -1,0 +1,31 @@
+.b-about{
+    @include tablet{
+        padding-bottom: 15px;
+    }
+    &__img{
+        margin-bottom: 70px;
+        display: block;
+        width: 100%;
+        
+        @include huge{
+            margin-bottom: 51px;
+        }
+        @include tablet{
+            margin-bottom: 40px;
+        }
+    }
+    &__text{
+        margin: 0 0 110px;
+        line-height: 1.45;
+        font-size: 18px;
+        
+        @include huge{
+            margin: 0 0 68px;
+            font-size: 13.11px;
+        }
+        @include small{
+            text-align: justify;
+            font-size: 14px;
+        }
+    }
+}

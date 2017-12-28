@@ -36,7 +36,10 @@ $(function() {
             var scroll; // scroll position
             if (!$body.hasClass('is--mobile-active')){  // якщо оверлей не відкрито
                 scroll = $window.scrollTop();       // зберігаємо величину скрола
-                $body.css({"position": "fixed", "top": -scroll});
+                
+                if (window.innerWidth <= BREAKPOINT_RES_CATALOG){
+                	$body.css({"position": "fixed", "top": -scroll});
+                }
             } else {
                 scroll = -parseInt($body.css("top"));
                 console.log(scroll);
@@ -590,7 +593,7 @@ $(function() {
 	(function(){
 
 		var $slider = $('.js-slider').bxSlider({
-				// auto: true,
+				auto: true,
 				pager: true,
 				controls:false
 			});
@@ -1286,5 +1289,28 @@ $(function() {
 	}
 
 	$(".js-tabs").jsTabs();
+	//---------------------------------------------------------------------------------------
+
+	//---------------------------------------------------------------------------------------
+	// Stars rating filling
+	//---------------------------------------------------------------------------------------
+	var fillStar = function(){	// ф-я для зафарбовування зірочок для кожного контейнера $("РейтингКонтейнер").each(fillStar)
+		var  starsNum = $(this).attr("data-rating")	// к-ть зірочок для зафарбування в атрибуті "data-rating" контейнера
+			,$stars = $(this).children("span.icon-star")
+			,i
+			;
+		
+		for (i=0; i<starsNum; ++i){
+			$stars.eq(i).addClass("icon-star_filled");
+		}
+	};
+
+	// ф-я заповнення зірочок відповідно до рейтинга
+	var fillAllStars = function(sSelector){	// sSelector - селектор контейнера із зрочками
+		var $ratings = $(sSelector);	// контейнер із зірочками
+			$ratings.each(fillStar);
+	}
+
+	fillAllStars(".js-stars_rating");
 
 });

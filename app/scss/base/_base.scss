@@ -405,6 +405,11 @@ font-weight: 800;
         display: none !important;
     }
 }
+.visible-tablet-block{
+    @include tablet{
+        display: block !important;
+    }
+}
 .visible-xs-inline{
     @include phone{
         display: inline !important;

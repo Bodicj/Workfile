@@ -589,8 +589,8 @@
                                 или Войти через социальные сети:
                             </div>
                             <div class="b-social_modal">
-                                <img src="./img/icons/i-fb.png" alt="">
-                                <img src="./img/icons/i-gplus.png" alt="">
+                                <img src="./img/icons/i-fb.svg" alt="">
+                                <img src="./img/icons/i-gplus.svg" alt="">
                             </div>
 
                         </div>
@@ -991,16 +991,16 @@
 
             <div class="arcticmodal-body">
                 <div class="g-form__field">
-                    <input class="g-input" type="email" name="email" placeholder="e-mail">
+                    <input class="g-input" type="email" name="email" required placeholder="e-mail">
                 </div>
                 <div class="g-form__field">
-                    <input class="g-input" type="password" name="password" placeholder="пароль">
+                    <input class="g-input" type="password" name="password" required pattern=".{5,}" placeholder="пароль">
                 </div>
                 <div class="g-form__field">
-                    <input class="g-input" type="password" name="comparePassword" placeholder="пароль еще раз">
+                    <input class="g-input" type="password" name="comparePassword" required pattern=".{5,}" placeholder="пароль еще раз">
                 </div>
                 <div class="g-form__field">
-                    <button class="g-btn">Дальше</button>
+                    <button type="submit" class="g-btn">Дальше</button>
                 </div>
             </div>
 
@@ -1023,14 +1023,14 @@
 
             <div class="arcticmodal-body">
                 <div class="g-form__field">
-                    <input class="g-input" type="email" name="email" placeholder="e-mail">
+                    <input class="g-input" type="email" name="email" required placeholder="e-mail">
                 </div>
                 <div class="g-form__field">
-                    <input class="g-input" type="password" name="password" placeholder="пароль">
+                    <input class="g-input" type="password" name="password" required placeholder="пароль">
                 </div>
                 <div class="g-form__field">
-                    <button class="g-btn">Войти</button>
-                    <a href="" class="g-btn g-btn--link">Забыли пароль?</a>
+                    <button type="submit" class="g-btn">Войти</button>
+                    <button class="g-btn g-btn--link">Забыли пароль?</button>
                 </div>
             </div>
 
@@ -1040,12 +1040,12 @@
                         или <br> Войти через социальные сети:
                     </div>
                     <div class="b-social_modal">
-                        <img src="./img/icons/i-fb.png" alt="">
-                        <img src="./img/icons/i-gplus.png" alt="">
+                        <img src="./img/icons/i-fb.svg" width="36" alt="">
+                        <img src="./img/icons/i-gplus.svg" width="36" alt="">
                     </div>
 
                     <a href="" class="g-btn g-btn--link">Нет учетной записи?</a>
-                    <a href="" class="g-btn g-btn--md g-btn--alt" data-modal="register">Зарегистрироваться</a>
+                    <button class="g-btn g-btn--md g-btn--alt" data-modal="register">Зарегистрироваться</button>
                 </div>
                 <div class="g-form__alarm">
                     <i class="icon-alarm"></i>
@@ -1068,8 +1068,8 @@
             <p class="g-h2"><span>Промокод</span><span>fregood</span></p>
             <form action="" class="g-form js-form-promo">
                 <div class="g-form__field g-form__field--inline">
-                    <input class="g-input" type="text" name="code" placeholder="Промокод">
-                    <button class="g-btn g-btn--alt">Получить</button>
+                    <input class="g-input" type="text" name="code" required pattern="[A-Za-z0-9]{2,}" placeholder="Промокод">
+                    <button type="submit" class="g-btn g-btn--alt">Получить</button>
                 </div>
             </form>
         </div>
@@ -1088,7 +1088,7 @@
             <div class="b-form__content">
               <div class="b-form__field">
                 <i class="icon-user"></i>
-                <input type="text" name="name" placeholder="* Ваше имя:">
+                <input type="text" name="name" pattern="[A-Za-zА-Яа-яЁёІіЇї\s]{2,}" placeholder="* Ваше имя:">
               </div>
               <div class="b-form__field">
                 <i class="icon-phone"></i>
@@ -1113,15 +1113,15 @@
           <div class="b-form__content">
             <div class="b-form__field">
               <i class="icon-user"></i>
-              <input type="text" name="name" placeholder="* Ваше имя:">
+              <input type="text" name="name" pattern="[A-Za-zА-Яа-яЁёІіЇї\s]{2,}" placeholder="* Ваше имя:">
             </div>
             <div class="b-form__field">
               <i class="icon-phone"></i>
-              <input type="tel" name="phone" placeholder="* Контактный телефон:">
+              <input type="tel" name="phone" required placeholder="* Контактный телефон:">
             </div>
             <div class="b-form__field">
               <i class="icon-mail"></i>
-              <input type="email" name="email" placeholder="Ваш e-mail:">
+              <input type="email" name="email" required placeholder="Ваш e-mail:">
             </div>
           </div>
           <div class="b-form__action">

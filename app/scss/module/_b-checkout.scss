@@ -282,13 +282,14 @@
         }
         
         img{
+            width: 36px;
             @include huge{
                 width: 27px;
                 height: auto;
             }
             @include small{
                 width: 36px;
-                height: 36px;
+//                height: 36px;
             }
             
             &:first-child{

@@ -441,28 +441,35 @@
 	<div class="b-slider__slide">
 		
         <div class="container">
-		    <img src="./img/slider/s3.jpg" class="b-slide__bg" alt="">
+<!--            Для реальних слайдів треба буде використати таку конструкцію, щоб не завантажувати на мобільних пристроях важкі картинки-->
+            <picture>
+                <source srcset="./img/slider/s3-434x1587.jpg 2x,  ./img/slider/s3-217x794.jpg 1x" media="(max-width: 640px)">
+                <source srcset="./img/slider/s3-666x2436.jpg 2x, ./img/slider/s3-333x1218.jpg 1x" media="(max-width: 1220px)">
+                <source srcset="./img/slider/s3-1170x4279.jpg 2x, ./img/slider/s3-585x2139.jpg 1x" media="(max-width: 1804px)">
+                <source srcset="./img/slider/s3-1400x5120.jpg 2x, ./img/slider/s3-700x2560.jpg 1x">
+                <img src="./img/slider/s3-700x2560.jpg"  class="b-slide__bg" alt="">
+            </picture>
            
             <div class="b-slider__desc b-slider__desc--high">
                 <h3>Подписаться на рассылку</h3>
                 <p>Идейные соображения высшего порядка, а также укрепление и развитие структуры!</p>
                 <form action="" class="g-form">
                     <div class="g-form__field">
-                        <input type="text" name="name" class="g-input" placeholder="Ваше имя">
+                        <input type="text" name="name" class="g-input" required pattern="[A-Za-zА-Яа-яЁёІіЇї\s]{2,}" placeholder="Ваше имя">
                     </div>
                     <div class="g-form__field">
-                        <input type="email" name="email" class="g-input" placeholder="Ваш e-mail">
+                        <input type="email" name="email" class="g-input" required placeholder="Ваш e-mail">
                     </div>
                     <div class="g-form__field">
                         <img src="./img/captcha.png" alt="">
                     </div>
                     <div class="g-form__field g-text--right">
-                        <button class="g-btn g-btn--lg">Подписаться</button>
+                        <button type="submit" class="g-btn g-btn--lg">Подписаться</button>
                     </div>
                 </form>
                 
                 <div class="g-text--center">
-                    <button href="#" class="g-btn" data-modal="sliderSubmit-long">Подписаться</button>
+                    <button class="g-btn" data-modal="sliderSubmit-long">Подписаться</button>
                 </div>
             </div>
             
@@ -482,21 +489,21 @@
                 <p>Идейные соображения высшего порядка, а также укрепление и развитие структуры!</p>
                 <form action="" class="g-form">
                     <div class="g-form__field">
-                        <input type="text" name="name" class="g-input" placeholder="Ваше имя">
+                        <input type="text" name="name" class="g-input" required pattern="[A-Za-zА-Яа-яЁёІіЇї\s]{2,}" placeholder="Ваше имя">
                     </div>
                     <div class="g-form__field">
-                        <input type="email" name="email" class="g-input" placeholder="Ваш e-mail">
+                        <input type="email" name="email" class="g-input" required placeholder="Ваш e-mail">
                     </div>
                     <div class="g-form__field">
                         <img src="./img/captcha.png" alt="">
                     </div>
                     <div class="g-form__field g-text--right">
-                        <button class="g-btn g-btn--lg">Подписаться</button>
+                        <button type="submit" class="g-btn g-btn--lg">Подписаться</button>
                     </div>
                 </form>
                 
                 <div class="g-text--center">
-                    <button href="#" class="g-btn" data-modal="sliderSubmit-long">Подписаться</button>
+                    <button class="g-btn" data-modal="sliderSubmit-long">Подписаться</button>
                 </div>
             </div>
         </div>
@@ -521,13 +528,13 @@
 
                 <form action="" class="g-form b-slider__desc-action">
                     <div class="g-form__field g-form__field--inline">
-                        <input type="email" name="email" aria-describedby=""class="g-input" placeholder="E-mail для промокода">
-                        <button class="g-btn g-btn--md-2">Получить</button>
+                        <input type="email" name="email" aria-describedby="" class="g-input" required placeholder="E-mail для промокода">
+                        <button class="g-btn g-btn--md-2" type="submit">Получить</button>
                     </div>
                 </form>
                 
                 <div class="g-text--center">
-                    <button href="#" class="g-btn" data-modal="sliderSubmit-short">Получить</button>
+                    <button class="g-btn" class="g-btn" data-modal="sliderSubmit-short">Получить</button>
                 </div>
             </div>
         </div>
@@ -552,13 +559,13 @@
 
                 <form action="" class="g-form b-slider__desc-action">
                     <div class="g-form__field g-form__field--inline">
-                        <input type="email" name="email" class="g-input" placeholder="E-mail для промокода">
-                        <button class="g-btn g-btn--md-2">Получить</button>
+                        <input type="email" name="email" class="g-input" required placeholder="E-mail для промокода">
+                        <button class="g-btn g-btn--md-2" type="submit">Получить</button>
                     </div>
                 </form>
                 
                 <div class="g-text--center">
-                    <button href="#" class="g-btn" data-modal="sliderSubmit-short">Получить</button>
+                    <button class="g-btn" data-modal="sliderSubmit-short">Получить</button>
                 </div>
             </div>
         </div>
@@ -656,7 +663,13 @@
 	<div class="b-slider__slide">
 
         <div class="container">
-            <img src="./img/slider/s3.jpg" class="b-slide__bg" alt="">
+            <picture>
+                <source srcset="./img/slider/s3-434x1587.jpg 2x,  ./img/slider/s3-217x794.jpg 1x" media="(max-width: 640px)">
+                <source srcset="./img/slider/s3-666x2436.jpg 2x, ./img/slider/s3-333x1218.jpg 1x" media="(max-width: 1220px)">
+                <source srcset="./img/slider/s3-1170x4279.jpg 2x, ./img/slider/s3-585x2139.jpg 1x" media="(max-width: 1804px)">
+                <source srcset="./img/slider/s3-1400x5120.jpg 2x, ./img/slider/s3-700x2560.jpg 1x">
+                <img src="./img/slider/s3-700x2560.jpg"  class="b-slide__bg" alt="">
+            </picture>
         </div>
 
 	</div>
@@ -1562,16 +1575,16 @@
 
             <div class="arcticmodal-body">
                 <div class="g-form__field">
-                    <input class="g-input" type="email" name="email" placeholder="e-mail">
+                    <input class="g-input" type="email" name="email" required placeholder="e-mail">
                 </div>
                 <div class="g-form__field">
-                    <input class="g-input" type="password" name="password" placeholder="пароль">
+                    <input class="g-input" type="password" name="password" required pattern=".{5,}" placeholder="пароль">
                 </div>
                 <div class="g-form__field">
-                    <input class="g-input" type="password" name="comparePassword" placeholder="пароль еще раз">
+                    <input class="g-input" type="password" name="comparePassword" required pattern=".{5,}" placeholder="пароль еще раз">
                 </div>
                 <div class="g-form__field">
-                    <button class="g-btn">Дальше</button>
+                    <button type="submit" class="g-btn">Дальше</button>
                 </div>
             </div>
 
@@ -1594,14 +1607,14 @@
 
             <div class="arcticmodal-body">
                 <div class="g-form__field">
-                    <input class="g-input" type="email" name="email" placeholder="e-mail">
+                    <input class="g-input" type="email" name="email" required placeholder="e-mail">
                 </div>
                 <div class="g-form__field">
-                    <input class="g-input" type="password" name="password" placeholder="пароль">
+                    <input class="g-input" type="password" name="password" required placeholder="пароль">
                 </div>
                 <div class="g-form__field">
-                    <button class="g-btn">Войти</button>
-                    <a href="" class="g-btn g-btn--link">Забыли пароль?</a>
+                    <button type="submit" class="g-btn">Войти</button>
+                    <button class="g-btn g-btn--link">Забыли пароль?</button>
                 </div>
             </div>
 
@@ -1611,12 +1624,12 @@
                         или <br> Войти через социальные сети:
                     </div>
                     <div class="b-social_modal">
-                        <img src="./img/icons/i-fb.png" alt="">
-                        <img src="./img/icons/i-gplus.png" alt="">
+                        <img src="./img/icons/i-fb.svg" width="36" alt="">
+                        <img src="./img/icons/i-gplus.svg" width="36" alt="">
                     </div>
 
                     <a href="" class="g-btn g-btn--link">Нет учетной записи?</a>
-                    <a href="" class="g-btn g-btn--md g-btn--alt" data-modal="register">Зарегистрироваться</a>
+                    <button class="g-btn g-btn--md g-btn--alt" data-modal="register">Зарегистрироваться</button>
                 </div>
                 <div class="g-form__alarm">
                     <i class="icon-alarm"></i>
@@ -1639,8 +1652,8 @@
             <p class="g-h2"><span>Промокод</span><span>fregood</span></p>
             <form action="" class="g-form js-form-promo">
                 <div class="g-form__field g-form__field--inline">
-                    <input class="g-input" type="text" name="code" placeholder="Промокод">
-                    <button class="g-btn g-btn--alt">Получить</button>
+                    <input class="g-input" type="text" name="code" required pattern="[A-Za-z0-9]{2,}" placeholder="Промокод">
+                    <button type="submit" class="g-btn g-btn--alt">Получить</button>
                 </div>
             </form>
         </div>
@@ -1659,7 +1672,7 @@
             <div class="b-form__content">
               <div class="b-form__field">
                 <i class="icon-user"></i>
-                <input type="text" name="name" placeholder="* Ваше имя:">
+                <input type="text" name="name" pattern="[A-Za-zА-Яа-яЁёІіЇї\s]{2,}" placeholder="* Ваше имя:">
               </div>
               <div class="b-form__field">
                 <i class="icon-phone"></i>
@@ -1684,15 +1697,15 @@
           <div class="b-form__content">
             <div class="b-form__field">
               <i class="icon-user"></i>
-              <input type="text" name="name" placeholder="* Ваше имя:">
+              <input type="text" name="name" pattern="[A-Za-zА-Яа-яЁёІіЇї\s]{2,}" placeholder="* Ваше имя:">
             </div>
             <div class="b-form__field">
               <i class="icon-phone"></i>
-              <input type="tel" name="phone" placeholder="* Контактный телефон:">
+              <input type="tel" name="phone" required placeholder="* Контактный телефон:">
             </div>
             <div class="b-form__field">
               <i class="icon-mail"></i>
-              <input type="email" name="email" placeholder="Ваш e-mail:">
+              <input type="email" name="email" required placeholder="Ваш e-mail:">
             </div>
           </div>
           <div class="b-form__action">
@@ -1715,10 +1728,10 @@
             <div class="arcticmodal-body">
                 <p>Идейные соображения высшего порядка, а также укрепление и развитие структуры!</p>
                 <div class="g-form__field">
-                    <input type="text" name="name" class="g-input" placeholder="Ваше имя">
+                    <input type="text" name="name" class="g-input" required pattern="[A-Za-zА-Яа-яЁёІіЇї\s]{2,}" placeholder="Ваше имя">
                 </div>
                 <div class="g-form__field">
-                    <input type="email" name="email" class="g-input" placeholder="Ваш e-mail">
+                    <input type="email" name="email" class="g-input" required placeholder="Ваш e-mail">
                 </div>
                 <div class="g-form__field">
                     <img src="./img/captcha.png" alt="">
@@ -1749,7 +1762,7 @@
             <div class="arcticmodal-body">
                 <p>Идейные соображения высшего порядка, а также укрепление и развитие структуры!</p>
                 <div class="g-form__field">
-                    <input type="email" name="email" aria-describedby=""class="g-input" placeholder="E-mail для промокода">
+                    <input type="email" name="email" aria-describedby="" class="g-input" required placeholder="E-mail для промокода">
                 </div>
                 <div class="g-form__field">
                 </div>

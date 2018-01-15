@@ -5,28 +5,35 @@
 	<div class="b-slider__slide">
 		
         <div class="container">
-		    <img src="./img/slider/s3.jpg" class="b-slide__bg" alt="">
+<!--            Для реальних слайдів треба буде використати таку конструкцію, щоб не завантажувати на мобільних пристроях важкі картинки-->
+            <picture>
+                <source srcset="./img/slider/s3-434x1587.jpg 2x,  ./img/slider/s3-217x794.jpg 1x" media="(max-width: 640px)">
+                <source srcset="./img/slider/s3-666x2436.jpg 2x, ./img/slider/s3-333x1218.jpg 1x" media="(max-width: 1220px)">
+                <source srcset="./img/slider/s3-1170x4279.jpg 2x, ./img/slider/s3-585x2139.jpg 1x" media="(max-width: 1804px)">
+                <source srcset="./img/slider/s3-1400x5120.jpg 2x, ./img/slider/s3-700x2560.jpg 1x">
+                <img src="./img/slider/s3-700x2560.jpg"  class="b-slide__bg" alt="">
+            </picture>
            
             <div class="b-slider__desc b-slider__desc--high">
                 <h3>Подписаться на рассылку</h3>
                 <p>Идейные соображения высшего порядка, а также укрепление и развитие структуры!</p>
                 <form action="" class="g-form">
                     <div class="g-form__field">
-                        <input type="text" name="name" class="g-input" placeholder="Ваше имя">
+                        <input type="text" name="name" class="g-input" required pattern="[A-Za-zА-Яа-яЁёІіЇї\s]{2,}" placeholder="Ваше имя">
                     </div>
                     <div class="g-form__field">
-                        <input type="email" name="email" class="g-input" placeholder="Ваш e-mail">
+                        <input type="email" name="email" class="g-input" required placeholder="Ваш e-mail">
                     </div>
                     <div class="g-form__field">
                         <img src="./img/captcha.png" alt="">
                     </div>
                     <div class="g-form__field g-text--right">
-                        <button class="g-btn g-btn--lg">Подписаться</button>
+                        <button type="submit" class="g-btn g-btn--lg">Подписаться</button>
                     </div>
                 </form>
                 
                 <div class="g-text--center">
-                    <button href="#" class="g-btn" data-modal="sliderSubmit-long">Подписаться</button>
+                    <button class="g-btn" data-modal="sliderSubmit-long">Подписаться</button>
                 </div>
             </div>
             
@@ -46,21 +53,21 @@
                 <p>Идейные соображения высшего порядка, а также укрепление и развитие структуры!</p>
                 <form action="" class="g-form">
                     <div class="g-form__field">
-                        <input type="text" name="name" class="g-input" placeholder="Ваше имя">
+                        <input type="text" name="name" class="g-input" required pattern="[A-Za-zА-Яа-яЁёІіЇї\s]{2,}" placeholder="Ваше имя">
                     </div>
                     <div class="g-form__field">
-                        <input type="email" name="email" class="g-input" placeholder="Ваш e-mail">
+                        <input type="email" name="email" class="g-input" required placeholder="Ваш e-mail">
                     </div>
                     <div class="g-form__field">
                         <img src="./img/captcha.png" alt="">
                     </div>
                     <div class="g-form__field g-text--right">
-                        <button class="g-btn g-btn--lg">Подписаться</button>
+                        <button type="submit" class="g-btn g-btn--lg">Подписаться</button>
                     </div>
                 </form>
                 
                 <div class="g-text--center">
-                    <button href="#" class="g-btn" data-modal="sliderSubmit-long">Подписаться</button>
+                    <button class="g-btn" data-modal="sliderSubmit-long">Подписаться</button>
                 </div>
             </div>
         </div>
@@ -85,13 +92,13 @@
 
                 <form action="" class="g-form b-slider__desc-action">
                     <div class="g-form__field g-form__field--inline">
-                        <input type="email" name="email" aria-describedby=""class="g-input" placeholder="E-mail для промокода">
-                        <button class="g-btn g-btn--md-2">Получить</button>
+                        <input type="email" name="email" aria-describedby="" class="g-input" required placeholder="E-mail для промокода">
+                        <button class="g-btn g-btn--md-2" type="submit">Получить</button>
                     </div>
                 </form>
                 
                 <div class="g-text--center">
-                    <button href="#" class="g-btn" data-modal="sliderSubmit-short">Получить</button>
+                    <button class="g-btn" class="g-btn" data-modal="sliderSubmit-short">Получить</button>
                 </div>
             </div>
         </div>
@@ -116,13 +123,13 @@
 
                 <form action="" class="g-form b-slider__desc-action">
                     <div class="g-form__field g-form__field--inline">
-                        <input type="email" name="email" class="g-input" placeholder="E-mail для промокода">
-                        <button class="g-btn g-btn--md-2">Получить</button>
+                        <input type="email" name="email" class="g-input" required placeholder="E-mail для промокода">
+                        <button class="g-btn g-btn--md-2" type="submit">Получить</button>
                     </div>
                 </form>
                 
                 <div class="g-text--center">
-                    <button href="#" class="g-btn" data-modal="sliderSubmit-short">Получить</button>
+                    <button class="g-btn" data-modal="sliderSubmit-short">Получить</button>
                 </div>
             </div>
         </div>
@@ -220,7 +227,13 @@
 	<div class="b-slider__slide">
 
         <div class="container">
-            <img src="./img/slider/s3.jpg" class="b-slide__bg" alt="">
+            <picture>
+                <source srcset="./img/slider/s3-434x1587.jpg 2x,  ./img/slider/s3-217x794.jpg 1x" media="(max-width: 640px)">
+                <source srcset="./img/slider/s3-666x2436.jpg 2x, ./img/slider/s3-333x1218.jpg 1x" media="(max-width: 1220px)">
+                <source srcset="./img/slider/s3-1170x4279.jpg 2x, ./img/slider/s3-585x2139.jpg 1x" media="(max-width: 1804px)">
+                <source srcset="./img/slider/s3-1400x5120.jpg 2x, ./img/slider/s3-700x2560.jpg 1x">
+                <img src="./img/slider/s3-700x2560.jpg"  class="b-slide__bg" alt="">
+            </picture>
         </div>
 
 	</div>

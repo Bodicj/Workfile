@@ -43,6 +43,7 @@ var config = {
 				'app/js/libs/slick.min.js',
 				'app/js/libs/clamp.min.js',
 				'app/js/libs/tooltipster.bundle.min.js',
+				'app/js/libs/jquery.maskedinput.min.js',
 				'app/js/script.js',
 				])
 				.pipe(sourcemaps.init())
@@ -64,7 +65,8 @@ var config = {
 
 
 	gulp.task('scss', function(){ // Создаем таск Sass
-		return sass('app/scss/style.scss',{
+		// return sass('app/scss/style.scss',{
+		return sass('app/scss/*.scss',{
                 style: 'compressed',
                 sourcemap: true
              })

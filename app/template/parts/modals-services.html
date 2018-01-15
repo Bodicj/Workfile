@@ -7,11 +7,14 @@
             <div class="b-modal__heading b-modal__heading_responce">добавить отзыв</div>
             
             <div class="g-form__field">
-                <textarea name="responce" class="g-input" placeholder="Ваш отзыв"></textarea>
+                <input type="text" name="name" class="g-input" required="" pattern="[A-Za-zА-Яа-яЁёІіЇї\s]{2,}" placeholder="Ваше имя">
+            </div>
+            <div class="g-form__field">
+                <textarea name="responce" class="g-input" required placeholder="Ваш отзыв"></textarea>
             </div>
             
             <div class="b-rating">
-                <input type="radio" id="star5" name="rating" value="5" required="">
+                <input type="radio" id="star5" name="rating" value="5" required>
                 <label for="star5" title="восхитительно"></label>
                 <input type="radio" id="star4" name="rating" value="4">
                 <label for="star4" title="отлично"></label>

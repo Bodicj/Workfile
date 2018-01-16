@@ -73,15 +73,15 @@
         }
         .b-social_modal{
             margin-bottom: 10px;
-
-            img{
-                margin-right: 10px;
-                display: inline-block;
-                +img{
-                    margin-right: 0;
-                    margin-left: 10px;
+            
+                a{
+                    margin-right: 10px;
+                    display: inline-block;
+                    +a{
+                        margin-right: 0;
+                        margin-left: 10px;
+                    }
                 }
-            }
         }
 
         .g-btn--link{

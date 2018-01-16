@@ -184,7 +184,7 @@
         a.g-btn{
             @include huge{
                 display: block;
-                text-align: left;
+//                text-align: left;
                 padding: 12px 9px 0;
             }
             @include small{
@@ -281,6 +281,11 @@
             margin-bottom: 23px;
         }
         
+        a:first-child{
+            img{
+                margin-right: 10px;
+            }
+        }
         img{
             width: 36px;
             @include huge{
@@ -292,9 +297,6 @@
 //                height: 36px;
             }
             
-            &:first-child{
-                margin-right: 10px;
-            }
         }
     }
 }
@@ -311,16 +313,40 @@
             vertical-align: top;
             line-height: 36px;
             font-size: 16px;
+            
+            @include huge{
+                line-height: 28px;
+                font-size: 10.2px;
+            }
+            @include note{
+                display: none;
+            }
         }
     }
     input, textarea{
         margin-right: 12px;
         display: inline-block;
         width: 511px;
+        
+        @include huge{
+            width: 374px;
+        }
+        @include note{
+            width: 347px;
+        }
+        @include small{
+            width: 100%;
+        }
     }
-    textarea{
-        height: 162px;
-        resize: none;
+    .g-form__field{
+        textarea.g-input{
+            resize: none;
+            height: 205px;
+            
+            @include huge{
+                height: 162px;
+            }
+        }
     }
 }
 .b-checkout__payDeliv{
@@ -475,16 +501,23 @@
         .b-cart__total_price{
             margin-bottom: 42px;
             padding-right: 44px;
+            text-transform: uppercase;
+            font-size: 23px;
             text-align: right;
             
             @include huge{
                 margin-bottom: 27px;
                 padding-right: 33px;
+                font-size: 16.57px;
             }
             @include small{
+                text-align: center;
                 margin-bottom: 35px;
-                padding-right: 56px;
-            }
+//                padding-right: 56px;
+                padding-right: 0;
+                font-size: 20px;
+                font-weight: 400;
+            } 
         }
     }
 }

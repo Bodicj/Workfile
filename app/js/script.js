@@ -956,11 +956,18 @@ $(function() {
 		// };
 		var
 			 servicesPhotosSliderOpt = {		// for swiper slider
+				autoplay: true,
+				autoplaySpeed: 4000,
 				slidesPerView: 3,
 				spaceBetween: 44.797,
 				// wrapperClass: "swiper-wrapper",
 				// slideClass: "b-news_service",
 				wrapperClass: "content-block",
+				pagination: {
+					el: '.swiper-pagination',
+					type: 'bullets',
+					clickable: true
+				},
 				breakpoints: {
 				    1804: {
 				    	spaceBetween: 32.438
@@ -992,6 +999,8 @@ $(function() {
 				}
 			}
 			,productGiftsSliderOpt = {	// for swiper slider
+				autoplay: true,
+				autoplaySpeed: 4000,
 				// slidesPerView: "auto",
 				slidesPerView: 4,
 		    	slidesPerGroup: 4,
@@ -1174,8 +1183,7 @@ $(function() {
 			initGiftSlider(".js-slider_giftViews", ".js-slider_giftThumbs", "gift");
 			var $giftHeaderToolptip = $(".js-tooltip_gift"); 
 			$giftHeaderToolptip.tooltipster({
-				trigger: 'click',	// only for tooltip test
-				contentCloning: true,	// prevent blank content issue
+				// trigger: 'click',	// only for tooltip test
 				side: ["bottom"],
 				contentAsHTML: true,
 				interactive: true,
@@ -1185,7 +1193,7 @@ $(function() {
 					closeTooltipIcon(instance);
 				}
 			});
-			$giftHeaderToolptip.on("click", function(e){return false});	// only for tooltip test
+			// $giftHeaderToolptip.on("click", function(e){return false});	// only for tooltip test
 			giftTooltipsResponsiveSwitch(BREAKPOINT_RES_CATALOG, disableGiftTooltips, enableGiftTooltips);
 		};
 		tooltipsWithGallery();

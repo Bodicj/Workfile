@@ -32,6 +32,10 @@ textarea{
   @extend %formElement;
 }
 
+@include placeholder{
+    color: #757575;
+}
+
 %formElement{
   display: inline-block;
   vertical-align: middle;

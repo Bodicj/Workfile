@@ -65,8 +65,8 @@ var config = {
 
 
 	gulp.task('scss', function(){ // Создаем таск Sass
-		// return sass('app/scss/style.scss',{
-		return sass('app/scss/*.scss',{
+		return sass('app/scss/style.scss',{
+		// return sass('app/scss/*.scss',{
                 style: 'compressed',
                 sourcemap: true
              })

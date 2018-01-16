@@ -1,8 +1,9 @@
 .b-payDeliv{
     display: flex;
     padding-left: 5px;
-    font-size: 20px;
-    color: #444a55;
+    font-size: 18px;
+    color: #1a1a1a;
+//    color: #444a55;
     
     @include huge{
         padding-left: 3px;
@@ -59,7 +60,8 @@
             list-style: none;
             padding-left: 54px;
             font-size: 0.9em;
-            color: #848484;
+//            color: #848484;
+            color: #757575;
             
             @include huge{
                 padding-left: 38px;

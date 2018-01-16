@@ -156,31 +156,39 @@
             max-width: 100%;
             
             .g-form__field{
-                margin-bottom: 30px;
+//                margin-bottom: 30px;
+                margin-bottom: 8px;
                 display: flex;
                 justify-content: space-between;
                 
                 @include huge{
-                    margin-bottom: 22px;
+//                    margin-bottom: 22px;
                 }
                 @include small{
                     margin-bottom: 42px;
+                }
+                
+                &:first-child{
+                    padding-right: 0;
                 }
             }
             
             input{
                 width: 156px;
+                padding-right: 7px;
+                padding-left: 7px;
+                font-size: 14px;
                 
                 @include huge{
                     width: 114px;
                     height: 28px;
-                    padding: 0.5em 0.9em;
-                    font-size: 11.65px;
+                    padding: 0.5em;
+                    font-size: 10px;
                 }
                 @include small{
                     width: 156px;
                     height: auto;
-                    font-size: 16px;
+                    font-size: 14px;
                 }
             }
             
@@ -205,6 +213,14 @@
             }
         }
         
+        .b-cart__total_part{
+            margin-bottom: 10px;
+            
+            @include small{
+                margin-bottom: 9px;
+            }
+        }
+        
         >.g-btn{
             @include small{
                 display: none;
@@ -214,14 +230,30 @@
     .b-cart__checkout{
         margin-left: auto;
         
+        .b-cart__total_part{
+            @include small{
+                margin-bottom: 9px;
+//                text-align: center;
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+        .b-cart__total_price, .b-cart__total_part{
+            text-align: left;
+        }
         .b-cart__total_price{
+            margin-bottom: 10px;
             width: 100%;
-            text-align: center;
+            font-size: 18px;
+//            text-align: center;
+            @include huge{
+                font-size: 14px;
+            }
             
             @include small{
                 margin-bottom: 20px;
-                font-size: 20px;
-                font-weight: 400;
+                font-size: 18px;
+                font-weight: 600;
             }
         }
     }
@@ -318,11 +350,12 @@
             font-weight: 400;
             
             @include huge{
-                margin: 0.5em 0;
-                font-size: 10.2px;
+                margin: 0.2em 0;
+                line-height: normal;
+                font-size: 11px;
             }
             @include small{
-                margin: 2px 0 3px;
+                margin: 4px 0;
                 font-size: 12px;
             }
         }
@@ -408,10 +441,10 @@
                 transform: scaleX(1.7) translateY(-7%);
                 
                 @include huge{
-                    transform: scaleX(1.7);
+//                    transform: scaleX(1.7);
                 }
                 @include small{
-                    transform: scaleX(1.7);
+//                    transform: scaleX(1.7);
                 }
             }
         }
@@ -508,8 +541,20 @@
     }
 }
 
+.b-cart__total_part{
+    font-size: 18px;
+//    font-weight: 600;
+//    margin-left: auto;
+    
+    @include huge{
+        font-size: 13px;
+    }
+    @include small{
+        font-size: 18px;
+    }
+}
 .b-cart__total_price{
-    text-transform: uppercase;
+//    text-transform: uppercase;
     font-size: 23px;
     font-weight: 600;
 //    margin-left: auto;

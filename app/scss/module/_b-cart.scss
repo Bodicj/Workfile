@@ -188,17 +188,18 @@
                 width: auto;
                 min-width: 0;
                 height: auto;
-                padding: 10px 17px 8px;
+                padding: 8px 17px;
                 font-size: 14px;
                 font-weight: 700;
+                background-color: #d6d6d4;
                 
                 @include huge{
-                    padding: 8px 12px 6px;
+                    padding: 6px 12px;
                     line-height: normal;
                     font-size: 10.2px;
                 }
                 @include small{
-                    padding: 10px 17px 8px;
+                    padding: 8px 17px;
                     font-size: 14px;
                 }
             }

@@ -11,8 +11,16 @@
 //		}
 	}
     
+    &:hover{
+        i[class^="icon-"]{
+            filter: brightness(2);
+        }
+    }
+    
     i[class^="icon-"]{
 		margin-right: 9.6px;
+        filter: brightness(1);
+        transition: filter .3s;
 	
         @include huge{
             margin-right: 7px;

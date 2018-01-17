@@ -173,6 +173,10 @@
         @include huge{
 //            margin-bottom: 16px;
         }
+        
+        &:hover + .b-filter__block-items{
+            will-change: auto;
+        }
     }
 }
 .b-filter__block-items{
@@ -299,6 +303,7 @@
     }
 }
 .b-filter__slider{
+    overflow: hidden;
     margin: 27px 0 28px;
 //	max-height: 150px;
 	max-height: 193px;
@@ -316,7 +321,7 @@
 		max-height: 0;
 		overflow: hidden;
         
-        @include pc{
+        @include huge{
             margin: 1px 0;
         }
         @include note{

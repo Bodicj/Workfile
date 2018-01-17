@@ -184,5 +184,11 @@
         @include huge{
             font-size: 13.11px;
         }
+        @include pc{
+            line-height: 1.8;
+        }
+        @include small{
+            font-size: 14px;
+        }
     }
 }

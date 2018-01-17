@@ -38,21 +38,30 @@
 .b-social__item{
 	float: left;
 	margin-right: 10px;
-//    filter: brightness(1);
-//    transition: filter 200ms;
+    transition: filter 200ms;
 //	@include twoK {
 //		margin-right: 20px;
 //	}
 //	@include fourK {
 //		margin-right: 48px;
 //	}
-//    &:hover{
-//        filter: brightness(0);
-//    }
 
 	&:last-child{
 		margin-right: 0;
 	}
+    
+    i[class^="icon-"]{
+        filter: brightness(1);
+        transition: filter .3s;
+        
+        
+    }
+    
+    &:hover{
+        i[class^="icon-"]{
+            filter: brightness(2);
+        }
+    }
 }
 .b-social__icon{
     width: 29px;

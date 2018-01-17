@@ -324,3 +324,11 @@
         height: 94px;
     }
 }
+.b-subscribe__after_post{
+    @include tablet{
+        height: 180px;
+    }
+    @include small{
+        height: 105px;
+    }
+}

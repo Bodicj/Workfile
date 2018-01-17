@@ -769,7 +769,14 @@
         
         @include huge{
             margin: 0 0 17px;
-            font-size: 23.31px;
+            line-height: normal;
+            font-size: 26.22px;
+        }
+        @include pc{
+            font-size: 26px;
+        }
+        @include small{
+            font-size: 21px;
         }
     }
 }
@@ -883,7 +890,7 @@
 
 .section__title_product{
     margin-bottom: 56px;
-    text-align: left;
+//    text-align: left;
     padding: 0;
     
     @include huge{
@@ -1038,6 +1045,7 @@
 }
 .section__title_checkout{
     @extend .section__title_product;
+    text-align: left;
     margin-bottom: 43px;
     
     @include huge{
@@ -1126,6 +1134,7 @@
     }
 }
 .section--post{
+    @include clearfix;
     padding-bottom: 10px;
     
     
@@ -1135,6 +1144,10 @@
         @include small{
             display: flex;
         }
+    }
+    
+    .g-link--allinfo{
+        clear: both;
     }
 }
 .section_about{

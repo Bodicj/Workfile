@@ -457,6 +457,7 @@
         font-size: 13.11px;
     }
     @include pc{
+        padding: 7px 13px;
         font-size: 12px;
     }
     @include small{

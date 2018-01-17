@@ -54,6 +54,12 @@
     @include huge{
         margin-bottom: 22px;
     }
+    
+    .b-news__photo_post{
+        margin-bottom: 5px;
+        float: left;
+        padding-right: 20px;
+    }
 }
 .b-news_service{
 //    width: 30.85%;
@@ -127,15 +133,15 @@
 	}
 }
 .b-news__photo_post{
-    margin-bottom: 30px;
-    width: 100%;
+//    margin-bottom: 5px;
+    width: 50%;
     
-    @include huge{
-        margin-bottom: 22px;
-    }
-    @include small{
-        margin-bottom: 16px;
-    }
+//    @include huge{
+//        margin-bottom: 22px;
+//    }
+//    @include small{
+//        margin-bottom: 16px;
+//    }
     
 }
 .b-news__title,
@@ -267,6 +273,8 @@
     }
 }
 .b-news__text_post{
+    overflow: visible;
+    
     max-height: none;
     line-height: 1.6;
     font-size: 18px;

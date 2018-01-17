@@ -653,8 +653,8 @@ $(function() {
 	// Products match height
 	//---------------------------------------------------------------------------------------
 	(function(){
-		$(".b-product").find(".b-product__title").matchHeight();
-		$(".b-product").find(".b-product__desc").matchHeight();
+		$(".b-product, .b-gift").find(".b-product__title").matchHeight();
+		$(".b-product, .b-gift").find(".b-product__desc").matchHeight();
 	})();
 
 	//
@@ -740,19 +740,47 @@ $(function() {
             ,filterSP
             ;
 
-		filterSP = $filter.find('.b-filter__block-items').jScrollPane({
-	    	showArrows: false,
-	    	autoReinitialise: true
-	    });
+		filterSP = $filter.find('.b-filter__block-items');
+		// filterSP = $filter.find('.b-filter__block-items').jScrollPane({
+	 //    	showArrows: false,
+	 //    	autoReinitialise: true	// fixes height bugs, but cause low FPS filter dropout
+	 //    	,autoReinitialiseDelay: 0
+	 //    });
 
 		// reinitialize jScrollPane (fixed .jspScrollable width after resize bugFix)
-	    $window.on("resize", function(){
-	    	filterSP.each(function(){
-	    		// console.log("reinitialise");
-	    		$(this).data('jsp').reinitialise();	// width changes
-	    		// $(this).data('jsp').destroy();
-	    	});
-	    });
+	    // $window.on("resize", function(){
+	    // 	filterSP.each(function(){
+	    // 		// console.log("reinitialise");
+	    // 		$(this).data('jsp').reinitialise();	// width changes, (fix changed height and width bugs)
+	    // 		// $(this).data('jsp').destroy();
+	    // 	});
+	    // });
+    	filterSP.each(function(){
+			$(this).jScrollPane({
+		    	showArrows: false,
+		    	// autoReinitialise: true	// fixes height bugs, but cause low FPS filter dropout
+		    	// ,autoReinitialiseDelay: 0
+		    });
+
+			var api = $(this).data('jsp');
+	    	var throttleTimeout;
+
+		    $window.on("resize", function(){
+		    	if (!throttleTimeout) {
+					throttleTimeout = setTimeout(
+						function()
+						{
+							api.reinitialise();
+							throttleTimeout = null;
+						},
+						50
+					);
+				}
+		    		// console.log("reinitialise");
+		    		// api.reinitialise();	// width changes, (fix changed height and width bugs)
+		    		// $(this).data('jsp').destroy();
+		    });
+    	});
         
 	})();
 
@@ -978,6 +1006,8 @@ $(function() {
 				}
 			}
 			,servicesResponsesSliderOpt = {	// for swiper slider
+				// autoplay: true,
+				// autoplaySpeed: 4000,
 				// slidesPerView: "auto",
 				slidesPerView: 4,
 		    	slidesPerGroup: 4,
@@ -994,13 +1024,13 @@ $(function() {
 				    	spaceBetween: 44
 				    },
 				    1219:{
-				    	spaceBetween: 20
+				    	spaceBetween: 21
 				    }
 				}
 			}
 			,productGiftsSliderOpt = {	// for swiper slider
-				autoplay: true,
-				autoplaySpeed: 4000,
+				// autoplay: true,
+				// autoplaySpeed: 4000,
 				// slidesPerView: "auto",
 				slidesPerView: 4,
 		    	slidesPerGroup: 4,
@@ -1057,11 +1087,15 @@ $(function() {
 
 		// initServiceSlider(servicesPhotos, BREAKPOINT_RES_CATALOG, servicesPhotosSliderOpt, sFuncInitSlider, sFuncDestroySlider);
 		// initServiceSlider(servicesResponses, BREAKPOINT_RES_CATALOG, servicesResponsesSliderOpt, sFuncInitSlider, sFuncDestroySlider);
-
-		initServiceSlider("#sliderServicesPhotos", BREAKPOINT_RES_CATALOG, servicesPhotosSliderOpt);		// service photos slider
-		initServiceSlider("#sliderServicesResponses", BREAKPOINT_RES_CATALOG, servicesResponsesSliderOpt);	// service responses slider
-
-		initServiceSlider("#sliderProductGifts", BREAKPOINT_RES_CATALOG, productGiftsSliderOpt);	// product page Gifts slider
+		if (document.getElementById("sliderServicesPhotos")){
+			initServiceSlider("#sliderServicesPhotos", BREAKPOINT_RES_CATALOG, servicesPhotosSliderOpt);		// service photos slider
+		}
+		if (document.getElementById("sliderServicesResponses")){
+			initServiceSlider("#sliderServicesResponses", BREAKPOINT_RES_CATALOG, servicesResponsesSliderOpt);	// service responses slider
+		}
+		if (document.getElementById("sliderProductGifts")){
+			initServiceSlider("#sliderProductGifts", BREAKPOINT_RES_CATALOG, productGiftsSliderOpt);	// product page Gifts slider
+		}
 
 //  product page gallery
        //  var 	//swiper
@@ -1108,7 +1142,9 @@ $(function() {
 			  focusOnSelect: true
 			});
 		};
-		initProductViewsGallery(".js-slider_prodViews", ".js-slider_prodThumbs");
+		if (document.querySelector(".js-slider_prodViews")){
+			initProductViewsGallery(".js-slider_prodViews", ".js-slider_prodThumbs");
+		}
 
 
 		// gift popups + sliders
@@ -1196,7 +1232,10 @@ $(function() {
 			// $giftHeaderToolptip.on("click", function(e){return false});	// only for tooltip test
 			giftTooltipsResponsiveSwitch(BREAKPOINT_RES_CATALOG, disableGiftTooltips, enableGiftTooltips);
 		};
-		tooltipsWithGallery();
+
+		if (document.getElementById("sliderProductGifts")){
+			tooltipsWithGallery();
+		}
 		// gift popups + sliders END
 		//---------------------------------------------------------------------------------------
 

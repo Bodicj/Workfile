@@ -236,7 +236,8 @@ $product-small: 230px;
 .b-product__tag--new{
 	border: 3px solid #0f0f0f;
 	font-size: 16px;
-	background-color: #fff;
+//	background-color: #fff;
+	background-color: rgba(255,255,255,0.7);
 	color: #0f0f0f;
     
     @include huge{

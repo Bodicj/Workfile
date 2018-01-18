@@ -59,7 +59,7 @@
 					<div class="header__location">
 						<div class="b-location">
 							<div class="b-location__current">Киев</div>
-							<div class="b-location__more">Все адреса <a href="" data-modal="promo">здесь</a></div>
+							<div class="b-location__more">Все адреса <a href="">здесь</a></div>
 						</div>
 					</div>
 					<!-- /location -->
@@ -69,16 +69,16 @@
 					<!-- social -->
 					<div class="header__social">
 						<div class="b-social b-social--header">
-							<a href="" class="b-social__item">
+							<a href="" class="b-social__item" data-modal="promo">
 							    <i class="icon-facebook-black"></i>
 							</a>
-							<a href="" class="b-social__item">
+							<a href="" class="b-social__item" data-modal="promoAlt">
 							    <i class="icon-insta-black"></i>
 							</a>
-							<a href="" class="b-social__item">
+							<a href="" class="b-social__item" data-modal="info">
 							    <i class="icon-gplus-black"></i>
 				            </a>
-							<a href="" class="b-social__item">
+							<a href="" class="b-social__item" data-modal="">
 							    <i class="icon-youtube-black"></i>
 							</a>
 						</div>
@@ -846,6 +846,32 @@
     </div>
     <!-- /Form promo -->
     
+    <!-- Form promo alt -->
+    <div class="arcticmodal b-modal_promoAlt" id="promoAlt">
+        <div class="arcticmodal-close"><i class="icon-close"></i></div>
+        <!--                        <img src="http://placehold.jp/430x510.png"  class="b-modal_promo__left" alt="">-->
+        <img src="./img/modals/promo-430.jpg" class="b-modal_promo__left" alt="">
+
+        <div class="b-modal_promo__right">
+            <p class="g-h2">Получи бесплатно живой подарок стомостью 190 грн<br>при покупке от 949 грн</p>
+            <p class="">Промокод fregood</p>
+            <form action="" class="g-form js-form-promo">
+                <div class="g-form__field g-form__field--inline">
+                    <input class="g-input" type="email" name="code" required placeholder="E-mail">
+                    <button type="submit" class="g-btn g-btn--alt">Подписаться</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <!-- /Form promo alt -->
+    
+    <!-- Info form modal -->
+    <div class="arcticmodal b-modal_info" id="info">
+        <div class="arcticmodal-close"><i class="icon-close"></i></div>
+        <p class="g-h2">Получи бесплатно живой подарок стомостью 190 грн<br>при покупке от 949 грн</p>
+    </div>
+    <!-- /Info form modal -->
     
     <!-- Callback Form -->
     <div class="b-modal b-modal_callback" id="callback">

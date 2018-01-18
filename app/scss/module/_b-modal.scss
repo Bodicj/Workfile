@@ -4,14 +4,41 @@
 
 .b-modal_promo{
 //	@include clearfix();
+//    margin: 0 auto;
     display: flex;
+//    justify-content: space-between;
 	max-width: 983px;
     padding: 25px 30px;
     background:#fff;
+    
+    @include note{
+        align-items: center;
+        padding: 25px;
+//        max-width: 100%;
+    }
+    @include tablet{
+        padding: 20px;
+    }
+    @include small{
+        flex-direction: column;
+    }
+    @include phone{
+        max-width: 300px;
+        padding: 20px 15px;
+    }
 
     .arcticmodal-close {
         top: 19px;
         right: 19px;
+        
+        @include note{
+            top: 15px;
+            right: 18px;
+        }
+        @include tablet{
+            top: 15px;
+            right: 15px;
+        }
     }
     
     &__left{
@@ -20,15 +47,50 @@
         align-self: center;
         width: 430px;
         margin-right: 35px;
+        
+        @include note{
+            margin-right: 25px;
+            max-width: 40%;
+        }
+        @include tablet{
+            margin-right: 20px;
+//            max-width: calc(45% - 15px);
+        }
+        @include small{
+            margin: 0 0 15px;
+            max-width: 200px;
+        }
     }
     &__right{
     //	float: left;
         padding-top: 50px;
     //	width: 450px;
+        
+        @include note{
+            padding: 20px 0;
+//            max-width: 55%;
+        }
+        @include tablet{
+            padding: 10px 0;
+        }
+        @include small{
+            padding: 0;
+        }
     }
 
     .g-h2{
         margin-bottom: 35px;
+        
+        @include note{
+            line-height: 1.6;
+            font-size: 18px;
+        }
+        @include tablet{
+            font-size: 17px;
+        }
+        @include small{
+            font-size: 15px;
+        }
 
         &:first-child{
             margin-bottom: 36px;
@@ -42,11 +104,20 @@
         }
     }
     .g-form__field{
+        @include note{
+            display: flex;
+        }
 
         .g-input{
             padding: 8px 14px;
             width: 156px;
             margin-right: 6px;
+            
+            @include note{
+                width: 0;
+                flex-grow: 1;
+                flex-shrink: 1;
+            }
         }
         .g-btn{
             min-width: 124px;
@@ -55,6 +126,28 @@
             padding: 8px 10px 7px;
             font-size: 14px;
             background-color: #d6d6d4;
+            
+            @include note{
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+
+.b-modal_promoAlt{
+    @extend .b-modal_promo;
+    
+    .g-form__field{
+        display: flex;
+
+        .g-input{
+            width: 0;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+        .g-btn{
+            margin-left: auto;
         }
     }
 }
@@ -137,7 +230,7 @@
     min-height: 670px;
     
     @include huge{
-            padding: 70px 148px;
+        padding: 70px 148px;
         width: 571px;
         min-height: 489px;
     }
@@ -254,5 +347,43 @@
         margin-bottom: 25px;
         line-height: 26px;
         font-size: 22px;
+    }
+}
+.b-modal_info{
+    @extend .b-modal_responce;
+    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @include huge{
+        padding: 70px;
+        min-height: 450px;
+    }
+    @include pc{
+        padding: 60px;
+        min-height: 300px;
+    }
+    @include small{
+        min-height: 340px;
+    }
+    
+    >.g-h2:only-of-type{
+        margin-bottom: 0;
+    }
+    
+    .g-h2{
+        
+        @include note{
+            line-height: 1.6;
+            font-size: 18px;
+        }
+        @include tablet{
+            font-size: 17px;
+        }
+        @include small{
+            font-size: 15px;
+        }
     }
 }

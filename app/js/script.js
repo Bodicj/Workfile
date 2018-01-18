@@ -987,6 +987,7 @@ $(function() {
 				autoplay: true,
 				autoplaySpeed: 4000,
 				slidesPerView: 3,
+		    	slidesPerGroup: 3,
 				spaceBetween: 44.797,
 				// wrapperClass: "swiper-wrapper",
 				// slideClass: "b-news_service",
@@ -1006,8 +1007,8 @@ $(function() {
 				}
 			}
 			,servicesResponsesSliderOpt = {	// for swiper slider
-				// autoplay: true,
-				// autoplaySpeed: 4000,
+				autoplay: true,
+				autoplaySpeed: 4000,
 				// slidesPerView: "auto",
 				slidesPerView: 4,
 		    	slidesPerGroup: 4,
@@ -1029,8 +1030,8 @@ $(function() {
 				}
 			}
 			,productGiftsSliderOpt = {	// for swiper slider
-				// autoplay: true,
-				// autoplaySpeed: 4000,
+				autoplay: true,
+				autoplaySpeed: 4000,
 				// slidesPerView: "auto",
 				slidesPerView: 4,
 		    	slidesPerGroup: 4,

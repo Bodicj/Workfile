@@ -318,7 +318,7 @@
                 line-height: 28px;
                 font-size: 10.2px;
             }
-            @include note{
+            @include pc{
                 display: none;
             }
         }
@@ -366,10 +366,12 @@
     }
     
     .b-checkout__heading{
-        margin-bottom: 79px;
+//        margin-bottom: 79px;
+        margin-bottom: 40px;
         
         @include huge{
-            margin-bottom: 51px;
+//            margin-bottom: 51px;
+            margin-bottom: 22px;
         }
         @include tablet{
             margin-bottom: 27px;

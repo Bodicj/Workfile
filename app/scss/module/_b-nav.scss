@@ -370,7 +370,7 @@
 }
 .b-nav__list_services{
 //    flex-basis: 100%;
-//        width: 100%;
+        width: 100%;
         overflow: auto;
     
     &:before, &:after{
@@ -378,7 +378,11 @@
         
         @include pc{
             content: '';
-            border-right-width: 4.5px;
+//            border-right-width: 4.5px;
+            border-right-width: 15px;
+        }
+        @include note{
+            border-right-width: 1px;
         }
         @include tablet{
             border-right-width: 3.5px;
@@ -457,11 +461,13 @@
         font-size: 13.11px;
     }
     @include pc{
-        padding: 7px 13px;
         font-size: 12px;
     }
+    @include tablet{
+        padding: 7px 12px;
+    }
     @include small{
-        padding: 6px 11px;
+        padding: 6px 9.5px;
         font-size: 9.74px;
     }
 }
@@ -484,7 +490,7 @@
     display: inline-block;
     width: 100%;
     max-width: none;
-    padding: 12px 19px 11px;
+    padding: 12px 19px 10px;
     line-height: normal;
     font-size: 16px;
     font-size: 16px;
@@ -500,8 +506,11 @@
         line-height: 15px;
         font-size: 11px;
     }
+    @include tablet{
+        padding: 8px 12px;
+    }
     @include small{
-        padding: 7px 11px 6px;
+        padding: 7px 9.5px 6px;
         line-height: normal;
         font-size: 8.66px;
     }

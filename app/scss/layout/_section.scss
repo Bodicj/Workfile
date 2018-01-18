@@ -207,7 +207,7 @@
 }
 #section_title_services{
 	margin: 0 0 79px;
-    padding-left: 4px;
+//    padding-left: 4px;
     
     @include huge{
         margin: -6px 0 66px;
@@ -306,7 +306,7 @@
 	.section__title{
 		margin-bottom: 107px;
 //		padding-bottom: 27px;
-        padding-right: 2px;
+//        padding-right: 2px;
 //		padding-left: 1px;
 
 /* 		@include huge {
@@ -314,7 +314,7 @@
 } */
         @include huge {
             margin-bottom: 76px;
-            padding-right: 0;
+//            padding-right: 0;
         } 
         @include pc{
 //            margin-bottom: 90px;
@@ -1045,7 +1045,7 @@
 }
 .section__title_checkout{
     @extend .section__title_product;
-    text-align: left;
+//    text-align: left;
     margin-bottom: 43px;
     
     @include huge{
@@ -1117,7 +1117,7 @@
 .section__title_post{
     @extend .section__title_cart;
     
-    text-align: left;
+//    text-align: left;
 }
 .section__title_about{
     @extend .section__title_cart;

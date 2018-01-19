@@ -1,4 +1,6 @@
 .b-about{
+    padding-top: 0;
+    
     @include tablet{
         padding-bottom: 15px;
     }

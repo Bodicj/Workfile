@@ -236,52 +236,76 @@
 }
 .b-subscribe__after{
     height: 535px;
-    background: #fff url(../img/flowers/flowers-subscribe-lg.jpg) no-repeat top;
+//    background: #fff url(../img/flowers/flowers-subscribe-lg.jpg) no-repeat top;
+//    background: #fff url(../img/flowers/flowers-subscribe-lg.jpg) no-repeat top/1530px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 1370px;
+//    background: #fff url(../img/flowers/flowers-subscribe-xl-1X.jpg) no-repeat top/1370px;
+    background-image: url(../img/flowers/flowers-subscribe-xl-1X.jpg);
     
     @include media("retina2x"){
-        background: #fff url(../img/flowers/flowers-subscribe-lg-2x.jpg) no-repeat center -8px/79.4%;
+//        background: #fff url(../img/flowers/flowers-subscribe-lg-2x.jpg) no-repeat center -8px/79.4%;
+//        background: #fff url(../img/flowers/flowers-subscribe-xl-2X.jpg) no-repeat top/1370px;
+        background-image: url(../img/flowers/flowers-subscribe-xl-2X.jpg);
     }
     
     @include huge{
         height: 389px;
-        background-size: 1116px;
+//        background-size: 1116px;
+        background-size: 1000px;
+        background-image: url(../img/flowers/flowers-subscribe-lg-1X.jpg);
         
         @include media("retina2x"){
-            
+            background-image: url(../img/flowers/flowers-subscribe-lg-2X.jpg);
         }
     }
     @include pc{
-        background-size: 1065px;
+//        background-size: 1065px;
+        background-size: 950px;
+        background-image: url(../img/flowers/flowers-subscribe-ml-1X.jpg);
         
         @include media("retina2x"){
-            
+            background-image: url(../img/flowers/flowers-subscribe-ml-2X.jpg);
         }
     }
     @include note{
 //        height: 505px;
 //        background: #fff url(../img/flowers-subscribe.jpg) top no-repeat /contain;
-        background: #fff url(../img/flowers/flowers-subscribe-md.jpg) no-repeat top;
+//        background: #fff url(../img/flowers/flowers-subscribe-md.jpg) no-repeat top/765px;
+        background-size: 690px;
+        background-image: url(../img/flowers/flowers-subscribe-md-1X.jpg);
         
         @include media("retina2x"){
-            background: #fff url(../img/flowers/flowers-subscribe-md-2x.jpg) no-repeat top /88%;
+//            background: #fff url(../img/flowers/flowers-subscribe-md-2x.jpg) no-repeat top /88%;
+            background-image: url(../img/flowers/flowers-subscribe-md-2X.jpg);
         }
     }
     @include tablet{
         height: 300px;
 //        background: #fff url(../img/flowers-subscribe.jpg) top no-repeat /contain;
-        background: #fff url(../img/flowers/flowers-subscribe-sm.jpg) no-repeat top;
+//        background: #fff url(../img/flowers/flowers-subscribe-sm.jpg) no-repeat top;
+//        background: #fff url(../img/flowers/flowers-subscribe-sm.jpg) no-repeat top/640px;
+        background-size: 580px;
+        background-image: url(../img/flowers/flowers-subscribe-sm-1X.jpg);
         
         @include media("retina2x"){
-            background: #fff url(../img/flowers/flowers-subscribe-sm-2x.jpg) no-repeat top /93%;
+//            background: #fff url(../img/flowers/flowers-subscribe-sm-2x.jpg) no-repeat top /93%;
+            background-image: url(../img/flowers/flowers-subscribe-sm-2X.jpg);
         }
     }
     @include small{
         height: 175px;
 //        background: #fff url(../img/flowers-subscribe-xs.png) no-repeat top / 91%;
-        background: #fff url(../img/flowers/flowers-subscribe-xs.jpg) no-repeat top;
+//        background: #fff url(../img/flowers/flowers-subscribe-xs.jpg) no-repeat top;
+//        background: #fff url(../img/flowers/flowers-subscribe-xs.jpg) no-repeat top/320px;
+        background-size: 288px;
+        background-image: url(../img/flowers/flowers-subscribe-xs-1X.jpg);
         
         @include media("retina2x"){
-            background: #fff url(../img/flowers/flowers-subscribe-xs-2x.jpg) no-repeat top /100%;
+//            background: #fff url(../img/flowers/flowers-subscribe-xs-2x.jpg) no-repeat top /100%;
+            background-image: url(../img/flowers/flowers-subscribe-xs-2X.jpg);
         }
     }
 }

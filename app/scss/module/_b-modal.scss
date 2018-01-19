@@ -193,6 +193,43 @@
         }
     }
 }
+.b-modal_ware{
+    @extend .b-modal_login;
+    
+    width: 600px;
+    max-width: 100%;
+    padding-bottom: 20px;
+    
+    @include small{
+        width: 290px;
+        padding-bottom: 10px;
+    }
+    
+    .arcticmodal-header{
+        margin-bottom: 20px;
+    }
+    
+    .g-form__field{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+           
+        @include small{
+            flex-direction: column;
+        }
+        .g-btn{
+            width: auto;
+            height: auto;
+            padding: 7px 20px;
+            
+            &+.g-btn{
+                @include small{
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
 
 .b-modal_register{
     .arcticmodal-footer{

@@ -27,10 +27,19 @@
         }
         
         i[class^="icon-"]{
+            filter: brightness(1);
+            transition: filter .3s;
+            
             @include huge{
                 width: 21px;
                 height: 21px;
                 transform: scale(1);
+            }
+        }
+
+        &:hover{
+            i[class^="icon-"]{
+                filter: brightness(2);
             }
         }
     }
@@ -49,19 +58,6 @@
 	&:last-child{
 		margin-right: 0;
 	}
-    
-    i[class^="icon-"]{
-        filter: brightness(1);
-        transition: filter .3s;
-        
-        
-    }
-    
-    &:hover{
-        i[class^="icon-"]{
-            filter: brightness(2);
-        }
-    }
 }
 .b-social__icon{
     width: 29px;

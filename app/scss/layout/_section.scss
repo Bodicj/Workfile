@@ -100,6 +100,9 @@
     @include note{
         padding: 11px 0 135px;
     }
+    @include tablet{
+        padding: 10px 0 135px;
+    }
     @include small{
         padding: 8px 0 73px;
         
@@ -114,7 +117,7 @@
             margin-bottom: 38px;
         }
         @include small{
-            margin-bottom: 36px;
+            margin-bottom: 34px;
         }
 	}
     
@@ -252,10 +255,14 @@
 //		margin-left: -180px;
 		width: 390px;
 		height: 261px;
-		background: url(../img/flowers/flowers-why-we-lg.png) no-repeat -9px 0;
+//		background: url(../img/flowers/flowers-why-we-lg.png) no-repeat -9px 0;
+//		background: url(../img/flowers/flowers-why-we-lg.png) no-repeat -9px 0/390px;
+		background: url(../img/flowers/flowers-why-we-lg-1X.png) no-repeat 14px 25px/339px;
         
         @include media("retina2x"){
-            background: url(../img/flowers/flowers-why-we-lg-2x.png) no-repeat -16px -5px/103%;
+//            background: url(../img/flowers/flowers-why-we-lg-2x.png) no-repeat -16px -5px/103%;
+//            background: url(../img/flowers/flowers-why-we-lg-2X.png) no-repeat 17px 26px/339px;
+            background-image: url(../img/flowers/flowers-why-we-lg-2X.png);
         }
         
         @include huge{
@@ -263,10 +270,13 @@
             width: 272px;
             transform: translateX(-50%);
 //            background: url(../img/flowers-why-we.png) no-repeat 8px 0/100%;
-            background: url(../img/flowers/flowers-why-we-xs.png) no-repeat -9px -7px;
+//            background: url(../img/flowers/flowers-why-we-xs.png) no-repeat -9px -7px;
+//            background: url(../img/flowers/flowers-why-we-xs.png) no-repeat -9px -7px/290px;
+            background: url(../img/flowers/flowers-why-we-xs-1X.png) no-repeat 15px 16px/243px;
             
             @include media("retina2x"){
-                background: url(../img/flowers/flowers-why-we-xs-2x.png) no-repeat -9px -7px/107%;
+//                background: url(../img/flowers/flowers-why-we-xs-2x.png) no-repeat -9px -7px/107%;
+                background: url(../img/flowers/flowers-why-we-xs-2X.png) no-repeat 15px 16px/243px;
             }
         }
 //        @include pc{
@@ -285,12 +295,13 @@
 //            width: 272px;
 //            background: url(../img/flowers-why-we.png) no-repeat 8px 0/100%;
 //            background: url(../img/flowers/flowers-why-we-xs.png) no-repeat -6px -7px;
-            background-position: -6px -7px;
+//            background-position: -6px -7px;
+            background-position: 18px 16px;
             
-            @include media("retina2x"){
+//            @include media("retina2x"){
 //                background: url(../img/flowers/flowers-why-we-xs-2x.png) no-repeat -7px -7px/107%;
-                background-position: -7px -7px;
-            }
+//                background-position: -7px -7px;
+//            }
         }
 	}
     
@@ -420,10 +431,13 @@
 		width: 622px;
 		height: 380px;
 //		background: url(../img/flowers-seo.png) no-repeat 0 0;
-		background: url(../img/flowers/flowers-seo-lg.png) no-repeat 0 40px;
+//		background: url(../img/flowers/flowers-seo-lg.png) no-repeat 0 40px;
+//		background: url(../img/flowers/flowers-seo-lg.png) no-repeat 0 40px/635px;
+        background: url(../img/flowers/flowers-seo-lg-1X.png) no-repeat -35px 30px/744px;
         
         @include media("retina2x"){
-            background: url(../img/flowers/flowers-seo-lg-2x.png) no-repeat 1px 40px/101.7%;
+//            background: url(../img/flowers/flowers-seo-lg-2x.png) no-repeat 1px 40px/101.7%;
+            background: url(../img/flowers/flowers-seo-lg-2X.png) no-repeat -35px 30px/744px;
         }
         
         @include huge{
@@ -432,10 +446,12 @@
             height: 208px;
             transform: translateX(-51%);
 //            background: url(../img/flowers/flowers-seo-sm.png) no-repeat 50% 0px /100%;
-            background: url(../img/flowers/flowers-seo-sm.png) no-repeat 0 0;
+//            background: url(../img/flowers/flowers-seo-sm.png) no-repeat 0 0/390px;
+            background: url(../img/flowers/flowers-seo-sm-1X.png) no-repeat -22px -5px/460px;
             
             @include media("retina2x"){
-                background: url(../img/flowers/flowers-seo-sm-2x.png) no-repeat 0 0 /100%;
+                background: url(../img/flowers/flowers-seo-sm-2X.png) no-repeat -22px -5px/460px;
+//                background: url(../img/flowers/flowers-seo-sm-2x.png) no-repeat 0 0 /100%;
             }
         }
         
@@ -457,10 +473,12 @@
             top: -67px;
 //            top: -90px;
 //            background: url(../img/flowers-seo.png) no-repeat calc(50% - 11px) 0 /100%;
-            background: url(../img/flowers/flowers-seo-xs.png) no-repeat 0 0;
+//            background: url(../img/flowers/flowers-seo-xs.png) no-repeat 0 0/275px;
+            background: url(../img/flowers/flowers-seo-xs-1X.png) no-repeat -16px -4px /325px;
             
             @include media("retina2x"){
-                background: url(../img/flowers/flowers-seo-xs-2x.png) no-repeat 0 0  /100%;
+//                background: url(../img/flowers/flowers-seo-xs-2x.png) no-repeat 0 0 /100%;
+                background: url(../img/flowers/flowers-seo-xs-2X.png) no-repeat -16px -4px /325px;
             }
         }
 	}
@@ -549,10 +567,12 @@
 }
 
 .section__title_services{
-    margin-bottom: 88px;
+//    margin-bottom: 88px;
+    margin-bottom: 73px;
 //
     @include huge{
-        margin-bottom: 62px;
+//        margin-bottom: 62px;
+        margin-bottom: 52px;
     }
     
 //    margin-bottom: 65px;
@@ -564,7 +584,7 @@
     }
     @include small{
         margin-bottom: 34px;
-        line-height: 25px;
+//        line-height: 25px;
     }
 }
 
@@ -868,37 +888,48 @@
 }
 
 .section_product{
-//    padding: 117px 0 270px;
-    padding: 67px 0 200px;
-
- 	@include huge {
-	    padding: 42px 0 120px;
+    @extend .section_services;
+    
+//    padding: 67px 0 200px;
+    
+    @include media(">huge"){
+        padding-bottom: 200px;
     }
-    @include pc{
-        padding: 14px 0 70px;
+    @include media(">note","<=huge"){
+        padding-bottom: 120px;
     }
-    @include note{
-        padding: 11px 0 50px;
-    }
-    @include tablet{
-        padding: 10px 0 47px;
-    }
-    @include small{
-        padding: 8px 0 45px;
-    }
+    
+// 	@include huge {
+//	    padding: 49px 0 120px;
+//    }
+//    @include pc{
+//        padding: 14px 0 70px;
+//    }
+//    @include note{
+//        padding: 11px 0 50px;
+//    }
+//    @include tablet{
+//        padding: 10px 0 47px;
+//    }
+//    @include small{
+//        padding: 8px 0 45px;
+//    }
 }
 
 .section__title_product{
-    margin-bottom: 56px;
+    @extend .section__title_services;
+//    margin-bottom: 56px;
+//    margin-bottom: 73px;
 //    text-align: left;
-    padding: 0;
+//    padding: 0;
     
-    @include huge{
-        margin: 0 0 38px;
-    }
-    @include small{
-        margin: 0 0 20px;
-    }
+//    @include huge{
+////        margin: 0 0 38px;
+//        margin: 0 0 52px;
+//    }
+//    @include small{
+//        margin: 0 0 20px;
+//    }
 }
 
 .section-product_details{
@@ -1033,12 +1064,15 @@
     }
 }
 .section__title_cart{
-    @include huge{
-        margin: 0 0 55px;
-    }
-    @include small{
-        margin: 0 0 25px;
-    }
+    @extend .section__title_services;
+//    margin: 0 0 73px;
+//    
+//    @include huge{
+//        margin: 0 0 52px;
+//    }
+//    @include small{
+//        margin: 0 0 25px;
+//    }
 }
 .section_checkout{
     @extend .section_cart;
@@ -1046,14 +1080,15 @@
 .section__title_checkout{
     @extend .section__title_product;
 //    text-align: left;
-    margin-bottom: 43px;
+//    margin-bottom: 43px;
+//    margin-bottom: 73px;
     
     @include huge{
-        margin-bottom: 26px;
+//        margin-bottom: 26px;
     }
     @include small{
         margin-bottom: 15px;
-        text-align: center;
+//        text-align: center;
     }
 }
 
@@ -1081,7 +1116,9 @@
     }
     
     .section__title_news{
+        @extend .section__title_services;
 //        margin-bottom: 46px;
+//        margin: 0 0 73px;
         
         @include huge{
 //            margin-bottom: 31px;
@@ -1135,8 +1172,7 @@
 }
 .section--post{
     @include clearfix;
-    padding-bottom: 10px;
-    
+    padding: 0 0 10px;
     
     .content-block{
         display: block;

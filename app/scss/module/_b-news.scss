@@ -59,6 +59,11 @@
         margin-bottom: 5px;
         float: left;
         padding-right: 20px;
+        
+        @include small{
+            float: none;
+            padding: 0;
+        }
     }
 }
 .b-news_service{
@@ -139,9 +144,10 @@
 //    @include huge{
 //        margin-bottom: 22px;
 //    }
-//    @include small{
+    @include small{
 //        margin-bottom: 16px;
-//    }
+        width: 100%;
+    }
     
 }
 .b-news__title,

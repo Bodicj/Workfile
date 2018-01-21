@@ -31,6 +31,7 @@ var config = {
 	gulp.task('js', function() {
 		return gulp.src([
 				'app/js/libs/jquery.min.js',
+				'app/js/libs/user-agent.js',
 				'app/js/libs/arcticmodal.min.js',
 				'app/js/libs/jquery.matchHeight-min.js',
 				'app/js/libs/jquery.validate.min.js',
@@ -52,7 +53,7 @@ var config = {
 				// .pipe(concat('script.min.js'))
 				// .pipe(uglify({outSourceMap: true})) // Об'єднуємо js файли і стискаємо їх
 				// .pipe(uglify({outSourceMap: true})) // Об'єднуємо js файли і стискаємо їх
-				.pipe(sourcemaps.write('.'))
+				.pipe(sourcemaps.write('.'))	// Після мінімізації чомусь неробочий sourcemap файл
 				.pipe(gulp.dest('dist/js')); // Выгружаем в папку app/js
 	});
 

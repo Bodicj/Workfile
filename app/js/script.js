@@ -1,10 +1,15 @@
 $(function() {
-  var 	 $window = $(window)
+var	 
+		$window = $(window)
 		,$body = $('body')
   		,BREAKPOINT_RES = 1220	// px
   		,BREAKPOINT_RES_CATALOG = 1024	// px
   		,ANIM_TIME_SM = 300		// ms
   		;
+		
+    if (userAgent.isIos()) {
+        document.querySelector('html').classList.add('is-ios');
+    }
   
 // моб меню/фільтри/пошук/кошик - логіка:
 	//
@@ -249,7 +254,7 @@ $(function() {
 		$cartPopup.find(".b-minicart__total").on("click", function(e){	// 
 			e.stopPropagation();
 		});
-		$filtersMenu.on("click", function(e){	// 
+		$filtersMenu.on("click touchstart", function(e){	// 
 			e.stopPropagation();
 		});
 
@@ -298,8 +303,8 @@ $(function() {
 				console.log("submit searchForm");
 			}
 		});
-
-		$('body').on("click", function(e) {
+		
+		$('body').on("click touchstart", function(e) {
 			if ($body.hasClass('is--mobile-active')){	// якщо відкрито оверлей
 				closeAllPopupMenus();
 				removeBodyBackground();

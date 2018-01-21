@@ -8,6 +8,10 @@ html{
 //        overflow: visible;
         overflow-x: visible;
     }
+    
+    &.is-ios *{
+        cursor: pointer !important;    // ios events bubbling fix
+    }
 }
 *,:after,:before{box-sizing:inherit}
 

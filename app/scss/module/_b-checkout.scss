@@ -67,6 +67,12 @@
                 padding: 6px 12px;
                 font-size: 13.11px;
             }
+            @include pc{                
+                &:hover{
+                    color: #fff;
+                    background-color: #0f0f0f;
+                }
+            }
             @include note{
                 font-size: 11.65px;
             }
@@ -111,6 +117,13 @@
         }
         @include small{
             margin-bottom: 24px;
+        }
+        
+        &:last-child{
+            margin-bottom: 20px;
+            @include media(">=tablet", "<huge"){
+                margin-bottom: 16px;
+            }
         }
         
         .g-input{
@@ -344,7 +357,7 @@
             height: 205px;
             
             @include huge{
-                height: 162px;
+                height: 142px;
             }
         }
     }
@@ -402,9 +415,9 @@
     @include huge{
         margin-bottom: 66px;
     }
-    @include small{
-        display: none;
-    }
+//    @include small{
+//        display: none;
+//    }
     
     label{
         margin-bottom: 7px;
@@ -442,6 +455,12 @@
         @include huge{
             margin-bottom: 3px;
             padding: 0 33px 0 147px;
+        }
+        @include pc{
+            padding-left: 117px;
+        }
+        @include tablet{
+            padding-left: 124px;
         }
         @include small{
             padding: 0;

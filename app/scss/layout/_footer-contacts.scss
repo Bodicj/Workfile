@@ -1,11 +1,11 @@
 .footer__left{
-    @include media(">note"){
+    @include media(">=note"){
         margin-bottom: 89px;
         width: 100%;
         float: none;
     }
     
-    @include media(">note","<=huge"){
+    @include media(">=note","<huge"){
         margin-bottom: 29px;
     }
 }
@@ -13,30 +13,30 @@
     display: none;
 }
 .footer__block{
-    @include media(">note"){
+    @include media(">=note"){
         width: 25%;
     }
 }
 .footer__block--2{
-    @include media(">note"){
+    @include media(">=note"){
         width: 50%;
         display: inline-flex;
     }
     
-    @include media(">note","<=huge"){
+    @include media(">=note","<huge"){
         width: 55%;
     }
 }
 .footer__block--3{
-    @include media(">note"){
+    @include media(">=note"){
         padding-left: 79px;
         width: 20%;
     }
     
-    @include media(">note","<=huge"){
+    @include media(">=note","<huge"){
         padding-left: 60px;
     }
-    @include media(">note","<=pc"){
+    @include media(">=note","<pc"){
         padding-left: 40px;
     }
     
@@ -44,18 +44,18 @@
 //        margin-bottom: 50px;
     }
     .g-menu__list{
-        @include media(">note"){
+        @include media(">=note"){
             padding: 0;
         }
     }
 }
 .footer__block-menu--delivery{
-    @include media(">note"){
+    @include media(">=note"){
         width: 53%;
     }
 }
 .footer__block-menu--account{
-    @include media(">note"){
+    @include media(">=note"){
         width: 47%;
     }
 }

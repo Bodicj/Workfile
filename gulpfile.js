@@ -65,8 +65,8 @@ var config = {
 
 
 	gulp.task('scss', function(){ // Создаем таск Sass
-		return sass('app/scss/style.scss',{
-		// return sass('app/scss/*.scss',{
+		// return sass('app/scss/style.scss',{	// compile only style.css
+		return sass('app/scss/*.scss',{	// compile all root css files (added contacts.scss for custom footer)
                 style: 'compressed',
                 sourcemap: true
              })

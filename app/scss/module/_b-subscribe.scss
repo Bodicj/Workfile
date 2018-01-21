@@ -171,7 +171,6 @@
         }
 	}
 	input[type="email"]{
-		border: none;
 //		padding-top: 10px;
 //		padding-bottom: 10px;
 		width: 320px;
@@ -189,11 +188,10 @@
             width: 263px;
         }
 	}
-	input[type="text"]{
+    input[type="email"],
+	input[type="text"], 
+    input[type="tel"],{
 		border: none;
-//		padding-top: 10px;
-//		padding-bottom: 10px;
-//		margin-left: 29px;
 	}
 	input[type="submit"] {
 //		min-width: 0;

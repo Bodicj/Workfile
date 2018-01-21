@@ -8,7 +8,7 @@
 
   @@include('./../parts/breadcrumbs.html')
 
-  <h2 class="section__title">Букеты и композиции</h2>
+  <h2 class="section__title section__title_catalog">Букеты и композиции</h2>
      
   <div class="b-groups-menu b-groups-menu_slider" id="frame">
     <ul class="b-groups-menu__list js-slider_menu">
@@ -83,8 +83,8 @@
           <form id="sort" class="b-sort" tabindex="100">
             <label class="b-sort__text" for="sortBy">Сортировать:</label>
             <select class="js-selectric" name="sortBy" id="sortBy">
-                <option value="" class="label" hidden selected disabled>Сортировать</option>
-                <option value="name">По названию</option>
+                <option value="" class="label" hidden disabled>Сортировать</option>
+                <option value="name" selected>По названию</option>
                 <option value="priceUp">По цене &uarr;</option>
                 <option value="priceDown">По цене &darr;</option>
                 <option value="rating">По новизне</option>

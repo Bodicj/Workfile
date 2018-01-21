@@ -887,22 +887,22 @@ $(function() {
 	//
 	// Center scrolled blocks
 	//---------------------------------------------------------------------------------------
-	// $.fn.horizCenterScrolled = function() {
-	//   this.each(function(index, elem) {
-	//     var
-	//     	 elemWidth = elem.offsetWidth
-	//     	,elemScrollWidth = elem.scrollWidth
-	//     	;
+	$.fn.horizCenterScrolled = function() {
+	  this.each(function(index, elem) {
+	    var
+	    	 elemWidth = elem.offsetWidth
+	    	,elemScrollWidth = elem.scrollWidth
+	    	;
 
-	//     if (elemScrollWidth > elemWidth)
-	//     	elem.scrollLeft = Math.round((elemScrollWidth - elemWidth)/2)
-	//     console.log(elem.scrollLeft);
-	//   });
-	//   return this;
-	// };
+	    if (elemScrollWidth > elemWidth)
+	    	elem.scrollLeft = Math.round((elemScrollWidth - elemWidth)/2)
+	    console.log(elem.scrollLeft);
+	  });
+	  return this;
+	};
 
   	
-	// $(".js-scroll_centered").horizCenterScrolled();	// scroll to center such blocks with overflow auto/scroll
+	$(".js-scroll_centered").horizCenterScrolled();	// scroll to center such blocks with overflow auto/scroll
 
 
 	//---------------------------------------------------------------------------------------
@@ -984,8 +984,10 @@ $(function() {
 		// };
 		var
 			 servicesPhotosSliderOpt = {		// for swiper slider
-				autoplay: true,
-				autoplaySpeed: 4000,
+				autoplay: {
+					delay: 4000,
+				},
+				speed: 2000,
 				slidesPerView: 3,
 		    	slidesPerGroup: 3,
 				spaceBetween: 44.797,
@@ -1007,8 +1009,10 @@ $(function() {
 				}
 			}
 			,servicesResponsesSliderOpt = {	// for swiper slider
-				autoplay: true,
-				autoplaySpeed: 4000,
+				autoplay: {
+					delay: 4000,
+				},
+				speed: 2000,
 				// slidesPerView: "auto",
 				slidesPerView: 4,
 		    	slidesPerGroup: 4,
@@ -1025,13 +1029,15 @@ $(function() {
 				    	spaceBetween: 44
 				    },
 				    1219:{
-				    	spaceBetween: 21
+				    	spaceBetween: 21.9
 				    }
 				}
 			}
 			,productGiftsSliderOpt = {	// for swiper slider
-				autoplay: true,
-				autoplaySpeed: 4000,
+				autoplay: {
+					delay: 4000,
+				},
+				speed: 2000,
 				// slidesPerView: "auto",
 				slidesPerView: 4,
 		    	slidesPerGroup: 4,
@@ -1216,6 +1222,12 @@ $(function() {
 					}
 				}, false);
 			};
+			var pauseGiftsSlider = function(){
+				document.getElementById("sliderProductGifts").swiper.autoplay.stop();
+			}
+			var playGiftsSlider = function(){
+				document.getElementById("sliderProductGifts").swiper.autoplay.start();
+			}
 
 			initGiftSlider(".js-slider_giftViews", ".js-slider_giftThumbs", "gift");
 			var $giftHeaderToolptip = $(".js-tooltip_gift"); 
@@ -1226,8 +1238,12 @@ $(function() {
 				interactive: true,
 				theme: 'tooltipster-light',
 				functionReady(instance, helper){
+					pauseGiftsSlider();
 					reInitGiftSlider(instance);
 					closeTooltipIcon(instance);
+				},
+				functionAfter(){
+					playGiftsSlider()
 				}
 			});
 			// $giftHeaderToolptip.on("click", function(e){return false});	// only for tooltip test

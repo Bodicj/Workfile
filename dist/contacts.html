@@ -113,6 +113,9 @@
 		<!-- Header BOTTOM -->
 		<div class="header__bottom">
 			<div class="container">
+			    <div class="js-nav-toggle b-mobile-nav__toggle">
+			        <span class="icon-nav">toggle menu</span>
+			     </div>
 				<div class="header__bottom-left">
 					<!-- menu -->
 					<nav class="header__menu">
@@ -316,8 +319,17 @@
 
 	<!-- mobile navigation -->
 	<div class="b-mobile-nav js-mobile-nav" style="display:none">
-    <div class="js-nav-toggle b-mobile-nav__toggle"><span class="icon-nav">toggle menu</span></div>
-    <div class="b-mobile-nav__heading">Меню</div>
+<!--
+    <div class="js-nav-toggle b-mobile-nav__toggle is--active">
+        <span class="icon-nav">toggle menu</span>
+    </div>
+-->
+    <div class="b-mobile-nav__heading">
+        Меню
+        <div class="b-wrapper_icon-close js-nav-toggle">
+            <i class="icon-close-white"></i>
+        </div>
+    </div>
     <div class="b-mobile-nav_wrapper js-scrollPane">
         <ul class="b-mobile-nav__list">
             <li class="b-mobile-nav__item">

@@ -83,13 +83,11 @@ var
 	    // Закрываем/Open мобильное меню - меняем состояния через классы
 		function openMainMenu(){
 	    	addMenuVisibility();
-	    	addMenuTriggerClass();
-	    	// addBodyBackground();
+	    	// addMenuTriggerClass();
 	    }
 	    function closeMainMenu(){
 	    	removeMenuVisibility();
-	    	removeMenuTriggerClass();
-	    	// removeBodyBackground();
+	    	// removeMenuTriggerClass();
 	    }
 
 	    // filters:
@@ -238,25 +236,34 @@ var
     		}
 	    });
 
-	    $mobNav.on("click", function(e){	// 
+	    $mobNav.on("click touchstart", function(e){	// 
 			e.stopPropagation();
 		});
-		$searchForm.on("click", function(e){	// prevent form submit
+		$searchForm.on("click touchstart", function(e){	// prevent form submit
 			e.stopPropagation();
 		});
 		$cartBtn.on("click", function(e){	// 
 			e.stopPropagation();
 		});
-		// $cartPopup.on("click", function(e){	// 
-		$cartPopup.find(".b-minicart__item").on("click", function(e){	// 
+		$cartPopup.on("click touchstart", function(e){	//
 			e.stopPropagation();
-		});
-		$cartPopup.find(".b-minicart__total").on("click", function(e){	// 
-			e.stopPropagation();
-		});
+		}); 
+		// $cartPopup.find(".b-minicart__item").on("click", function(e){	// 
+			// e.stopPropagation();
+		// });
+		// $cartPopup.find(".b-minicart__total").on("click", function(e){	// 
+			// e.stopPropagation();
+		// });
 		$filtersMenu.on("click touchstart", function(e){	// 
 			e.stopPropagation();
 		});
+		
+		// for ios added touchstart
+		// if (userAgent.isIos()) {
+			// $filtersMenu.on("touchstart", function(e){	// 
+				// e.stopPropagation();
+			// });
+		// }
 
 
 		$searchBtn.on("click", function(e){	// prevent form submit
@@ -304,12 +311,25 @@ var
 			}
 		});
 		
-		$('body').on("click touchstart", function(e) {
-			if ($body.hasClass('is--mobile-active')){	// якщо відкрито оверлей
-				closeAllPopupMenus();
-				removeBodyBackground();
-			}
-		});
+		// $('body').on("click", function(e) {
+		if (!userAgent.isIos()) {
+			$('body').on("click", function(e) {
+				if ($body.hasClass('is--mobile-active')){	// якщо відкрито оверлей
+					closeAllPopupMenus();
+					removeBodyBackground();
+				}
+			});
+		}
+		
+		// for ios added touchstart
+		if (userAgent.isIos()) {
+			$('body').on("touchstart", function(e) {
+				if ($body.hasClass('is--mobile-active')){	// якщо відкрито оверлей
+					closeAllPopupMenus();
+					removeBodyBackground();
+				}
+			});
+		}
 
 		$(".js-mobile-nav").removeAttr("style");	// "visible menu while page loads" bug fix js part
 

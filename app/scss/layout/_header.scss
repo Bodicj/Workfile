@@ -193,6 +193,15 @@ $svgTransitionTime: 0.2s;
         @include pc{
             padding: 0 15px;
         }
+        
+        .b-mobile-nav__toggle{
+            right: auto;
+            left: 15px;
+            
+//            @include small{
+//                left: 15px;
+//            }
+        }
     }
     
 }

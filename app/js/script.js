@@ -217,6 +217,9 @@ var
     		// toggleMenuTriggerClass();
     		// toggleBodyBackground();
 		});
+		$menuTrigger.on('touchstart', function(e){
+			e.stopPropagation();
+		});
 
     	// Add listener for filters open/close buttons
 	    $filtersTriggers.on('click',function(e){
@@ -242,7 +245,7 @@ var
 		$searchForm.on("click touchstart", function(e){	// prevent form submit
 			e.stopPropagation();
 		});
-		$cartBtn.on("click", function(e){	// 
+		$cartBtn.on("click touchstart", function(e){	// 
 			e.stopPropagation();
 		});
 		$cartPopup.on("click touchstart", function(e){	//

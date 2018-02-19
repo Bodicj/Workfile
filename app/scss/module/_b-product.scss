@@ -525,17 +525,11 @@ $product-small: 230px;
             padding: 0px 16px 0 7px;
             font-size: 14.34px;
         }
-        @include note{
-           
-        }
-        @include tablet{
-        }
 	}
 
-	span{
+	> span{
         position: absolute;
         right: 1px;
-//		display: block;
 		width: 15px;
 		height: 14px;
 		font-size: 0;
@@ -544,16 +538,9 @@ $product-small: 230px;
 		transition: background-color .3s;
 		cursor: pointer;
 		margin-bottom: 0px;
-//		margin-right: 8px;
-//		margin-top: 5px;
-//        &:before{
-//            content: '';
-//            vertical-align: middle;
-//        }
-        
         
         @include huge{
-            height: 50%;
+            height: 48%;
             line-height: 11px;
         }
         @include pc{
@@ -565,24 +552,15 @@ $product-small: 230px;
 		}
         i{
             vertical-align: middle;
+            transform: none;
         }
 	}
 }
 .b-product__qty-plus{
-//	position: absolute;
 	top: 1px;
-//	right: 0;
-//    i{
-//        vertical-align: -35%;
-//    }
 }
 .b-product__qty-minus{
-//	position: absolute;
 	bottom: 1px;
-//	right: 0;
-//    i{
-//        vertical-align: 0%;
-//    }
 }
 .b-product__action{
     position: relative;

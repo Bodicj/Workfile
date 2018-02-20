@@ -646,8 +646,8 @@
 //        @include pc{
 //        }
         @include note{
-            margin-bottom: 18px;
-            overflow: auto;
+            margin-bottom: 24px;
+//            overflow: auto;
             justify-content: flex-start;
             align-items: flex-end;
         }
@@ -672,7 +672,7 @@
         }
         
         &::-webkit-scrollbar{
-            @include note{   
+            @include small{   
                 display: none;
             }
         }
@@ -689,6 +689,9 @@
             bottom: 18px;
         }
         @include note{
+            bottom: 11px;
+        }
+        @include small{
             display: none;
         }
     }
@@ -982,6 +985,7 @@
         
         .content-block{
             @include note{
+                overflow: auto;
                 margin-bottom: 0;
                 
                 &:before, &:after{

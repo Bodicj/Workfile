@@ -4,6 +4,7 @@ var
 		,$body = $('body')
   		,BREAKPOINT_RES = 1220	// px
   		,BREAKPOINT_RES_CATALOG = 1024	// px
+  		,BREAKPOINT_RES_TABLET = 768	// px
   		,ANIM_TIME_SM = 300		// ms
   		;
 		
@@ -1123,7 +1124,7 @@ var
 		// initServiceSlider(servicesPhotos, BREAKPOINT_RES_CATALOG, servicesPhotosSliderOpt, sFuncInitSlider, sFuncDestroySlider);
 		// initServiceSlider(servicesResponses, BREAKPOINT_RES_CATALOG, servicesResponsesSliderOpt, sFuncInitSlider, sFuncDestroySlider);
 		if (document.getElementById("sliderServicesPhotos")){
-			initServiceSlider("#sliderServicesPhotos", BREAKPOINT_RES_CATALOG, servicesPhotosSliderOpt);		// service photos slider
+			initServiceSlider("#sliderServicesPhotos", BREAKPOINT_RES_TABLET, servicesPhotosSliderOpt);		// service photos slider
 		}
 		if (document.getElementById("sliderServicesResponses")){
 			initServiceSlider("#sliderServicesResponses", BREAKPOINT_RES_CATALOG, servicesResponsesSliderOpt);	// service responses slider

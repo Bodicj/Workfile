@@ -933,7 +933,11 @@ var
   	
 	$(".js-scroll_centered").horizCenterScrolled();	// scroll to center such blocks with overflow auto/scroll
 
-
+	//---------------------------------------------------------------------------------------
+	// Services img slider lightbox gallery
+	$(".js-gallery__photo", ".js-gallery_service").simpleLightbox();
+	
+	
 	//---------------------------------------------------------------------------------------
 	// Services Sliders
 	(function(){

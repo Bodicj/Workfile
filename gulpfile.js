@@ -45,6 +45,7 @@ var config = {
 				'app/js/libs/clamp.min.js',
 				'app/js/libs/tooltipster.bundle.min.js',
 				'app/js/libs/jquery.maskedinput.min.js',
+				'app/js/libs/simple-lightbox.min.js',
 				'app/js/script.js',
 				])
 				.pipe(sourcemaps.init())

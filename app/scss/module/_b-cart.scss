@@ -165,7 +165,8 @@
 //                    margin-bottom: 22px;
                 }
                 @include small{
-                    margin-bottom: 42px;
+//                    margin-bottom: 42px;
+                    margin-bottom: 9px;
                 }
                 
                 &:first-child{
@@ -217,11 +218,14 @@
             }
         }
         
-        .b-cart__total_part{
+        .b-promo_applied{
             margin-bottom: 10px;
+            font-size: 10px;
+            color: #757575;
             
             @include small{
-                margin-bottom: 9px;
+                margin-bottom: 18px;
+                font-size: 14px;
             }
         }
         

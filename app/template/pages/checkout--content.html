@@ -30,10 +30,10 @@
                 <div class="b-checkout__login arcticmodal js-tabcontent" id="registered">
                     <div class="arcticmodal-body">
                         <div class="g-form__field">
-                            <input class="g-input" type="email" name="email" placeholder="E-mail">
+                            <input class="g-input" type="email" name="email" placeholder="E-mail" required>
                         </div>
                         <div class="g-form__field">
-                            <input class="g-input" type="password" name="password" placeholder="Пароль">
+                            <input class="g-input" type="password" name="password" placeholder="Пароль" pattern="[^\s]{4,}" required>
                         </div>
                         <div class="g-form__field">
                             <button class="g-btn">Войти</button>
@@ -59,22 +59,22 @@
                 </div>
                 <div class="b-checkout__register arcticmodal js-tabcontent" id="new">
                     <div class="g-form__field">
-                        <input class="g-input" type="text" name="name" placeholder="Имя">
+                        <input class="g-input" type="text" name="name" placeholder="Имя" pattern="([A-Za-zА-Яа-яЁёІіЇї]{2,}\s*)+" required>
                     </div>
                     <div class="g-form__field">
                         <label>
-                            <input class="g-input" type="email" name="email" placeholder="E-mail">
+                            <input class="g-input" type="email" name="email" placeholder="E-mail" required>
                             <span>Введите ваш e-mail</span>
                         </label>
                     </div>
                     <div class="g-form__field">
                         <label>
-                            <input class="g-input" type="tel" name="phoneNum" placeholder="Ваш номер телефона">
+                            <input class="g-input" type="tel" name="phoneNum" placeholder="Ваш номер телефона" required>
                             <span>Ваш номер телефона</span>
                         </label>
                     </div>
                     <div class="g-form__field">
-                        <input class="g-input" type="text" name="address" placeholder="Адрес доставки">
+                        <input class="g-input" type="text" name="address" placeholder="Адрес доставки" pattern="(\s*[A-Za-zА-Яа-яЁёІіЇї0-9]+\s*)+" required>
                     </div>
                     <div class="g-form__field">
                         <textarea class="g-input" name="comment" placeholder="Добавить открытку (бесплатно) или комментарий к заказу"></textarea>

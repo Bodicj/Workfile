@@ -577,8 +577,6 @@ var
   // Product Qty Block 
   //---------------------------------------------------------------------------------------
    (function(){
-    if ( $('.b-product__qty').length ){
-     
      $('.js-qty-plus').on('click', function(){
        var qty = parseInt( $(this).parent().find('.js-qty-input').val() );
         qty = qty+1;
@@ -592,7 +590,6 @@ var
        
        $(this).parent().find('.js-qty-input').val(qty);
      });
-    }
    })();
 
   //
@@ -1270,12 +1267,12 @@ var
 				contentAsHTML: true,
 				interactive: true,
 				theme: 'tooltipster-light',
-				functionReady(instance, helper){
+				functionReady: function(instance, helper){
 					pauseGiftsSlider();
 					reInitGiftSlider(instance);
 					closeTooltipIcon(instance);
 				},
-				functionAfter(){
+				functionAfter: function(){
 					playGiftsSlider()
 				}
 			});

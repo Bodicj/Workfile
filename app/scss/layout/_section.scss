@@ -251,7 +251,7 @@
 		position: absolute;
 		left: 50%;
 		top: -130px;
-        transform: translateX(calc(20px - 50%));
+        transform: translateX(calc(22px - 50%));
 //		margin-left: -180px;
 		width: 390px;
 		height: 261px;
@@ -272,11 +272,11 @@
 //            background: url(../img/flowers-why-we.png) no-repeat 8px 0/100%;
 //            background: url(../img/flowers/flowers-why-we-xs.png) no-repeat -9px -7px;
 //            background: url(../img/flowers/flowers-why-we-xs.png) no-repeat -9px -7px/290px;
-            background: url(../img/flowers/flowers-why-we-xs-1X.png) no-repeat 15px 16px/243px;
+            background: url(../img/flowers/flowers-why-we-xs-1X.png) no-repeat 23px 16px/243px;
             
             @include media("retina2x"){
 //                background: url(../img/flowers/flowers-why-we-xs-2x.png) no-repeat -9px -7px/107%;
-                background: url(../img/flowers/flowers-why-we-xs-2X.png) no-repeat 15px 16px/243px;
+                background-image: url(../img/flowers/flowers-why-we-xs-2X.png);
             }
         }
 //        @include pc{
@@ -296,7 +296,7 @@
 //            background: url(../img/flowers-why-we.png) no-repeat 8px 0/100%;
 //            background: url(../img/flowers/flowers-why-we-xs.png) no-repeat -6px -7px;
 //            background-position: -6px -7px;
-            background-position: 18px 16px;
+            background-position: 19px 16px;
             
 //            @include media("retina2x"){
 //                background: url(../img/flowers/flowers-why-we-xs-2x.png) no-repeat -7px -7px/107%;
@@ -427,7 +427,7 @@
 		top: -214px;
 //		margin-left: -339px;
 //        transform: translateX(calc(-50% - 20px));
-        transform: translateX(calc(-50% - 32px));
+        transform: translateX(calc(-50% - 44px));
 		width: 622px;
 		height: 380px;
 //		background: url(../img/flowers-seo.png) no-repeat 0 0;
@@ -442,15 +442,15 @@
         
         @include huge{
             top: -97px;
-            width: 390px;
+            width: 460px;
             height: 208px;
             transform: translateX(-51%);
 //            background: url(../img/flowers/flowers-seo-sm.png) no-repeat 50% 0px /100%;
 //            background: url(../img/flowers/flowers-seo-sm.png) no-repeat 0 0/390px;
-            background: url(../img/flowers/flowers-seo-sm-1X.png) no-repeat -22px -5px/460px;
+            background: url(../img/flowers/flowers-seo-sm-1X.png) no-repeat -10px -5px/460px;
             
             @include media("retina2x"){
-                background: url(../img/flowers/flowers-seo-sm-2X.png) no-repeat -22px -5px/460px;
+                background-image: url(../img/flowers/flowers-seo-sm-2X.png);
 //                background: url(../img/flowers/flowers-seo-sm-2x.png) no-repeat 0 0 /100%;
             }
         }
@@ -468,17 +468,17 @@
 //            }
 //        }
         @include small{
-            width: 275px;
+            width: 320px;
             height: 147px;
             top: -67px;
 //            top: -90px;
 //            background: url(../img/flowers-seo.png) no-repeat calc(50% - 11px) 0 /100%;
 //            background: url(../img/flowers/flowers-seo-xs.png) no-repeat 0 0/275px;
-            background: url(../img/flowers/flowers-seo-xs-1X.png) no-repeat -16px -4px /325px;
+            background: url(../img/flowers/flowers-seo-xs-1X.png) no-repeat -5px -4px /325px;
             
             @include media("retina2x"){
 //                background: url(../img/flowers/flowers-seo-xs-2x.png) no-repeat 0 0 /100%;
-                background: url(../img/flowers/flowers-seo-xs-2X.png) no-repeat -16px -4px /325px;
+                background-image: url(../img/flowers/flowers-seo-xs-2X.png);
             }
         }
 	}

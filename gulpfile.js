@@ -140,7 +140,7 @@ var config = {
 	            .pipe(spritesmith({
 	                imgName: 'sprite.png',
 	                imgPath: '../img/sprite.png',
-	                cssName: 'sprite.scss',
+	                cssName: '_sprite.scss',
 	                cssFormat: 'scss',
 	                padding: 15
 	            }));
@@ -155,7 +155,7 @@ var config = {
 	});
 
 	gulp.task('img', function() {
-		return gulp.src('app/img/**/*') // Берем все изображения из app
+		return gulp.src(['app/img/**/*', '!app/img/sprite/*']) // Берем все изображения из app, окрім спрайтів
 			.pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками с учетом кеширования
 				interlaced: true,
 				progressive: true,
@@ -165,13 +165,13 @@ var config = {
 			.pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
 	});
 
-	gulp.task('build', ['clean', 'img', 'scss', 'html'], function() {
+	gulp.task('build', ['clean', 'img', 'js', 'sprite', 'scss', 'html'], function() {
 
 		var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшн
 		.pipe(gulp.dest('dist/fonts'));
 
-		var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшн
-		.pipe(gulp.dest('dist/js'));
+		// var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшн
+		// .pipe(gulp.dest('dist/js'));
 	});
 
 	gulp.task('clear', function (callback) {

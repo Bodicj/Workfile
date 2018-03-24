@@ -1164,25 +1164,60 @@ var
         // initProductViewsGallery('.gallery_product-top', '.gallery_product-thumbs', productTopGalleryOpts, productThumbsGalleryOpts);
         var initProductViewsGallery = function(sViewSelector, sThumbsSelector){
 			$(sViewSelector).slick({
-			  slidesToShow: 1,
-			  slidesToScroll: 1,
-			  arrows: false,
-			  fade: true,
-			  asNavFor: sThumbsSelector
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				fade: true,
+				asNavFor: sThumbsSelector
 			});
 			$(sThumbsSelector).slick({
-			  slidesToShow: 5,
-			  slidesToScroll: 1,
-			  asNavFor: sViewSelector,
-			  dots: true,
-			  // centerMode: true,
-			  focusOnSelect: true
+				slidesToShow: 4,
+				slidesToScroll: 4,
+				arrows: false,
+				vertical: true,
+				verticalSwiping: true,
+				asNavFor: sViewSelector,
+				focusOnSelect: true,
+				responsive: [
+				{
+					breakpoint: 1804,
+					settings: {
+						slidesToShow: 5,
+						slidesToScroll: 5
+					}
+				},
+				{
+					breakpoint: 1219,
+					settings: {
+						slidesToShow: 5,
+						slidesToScroll: 5,
+						vertical: false,
+						verticalSwiping: false
+					}
+				}
+				]
 			});
 		};
 		if (document.querySelector(".js-slider_prodViews")){
 			initProductViewsGallery(".js-slider_prodViews", ".js-slider_prodThumbs");
 		}
 
+        var initGiftViewsGallery = function(sViewSelector, sThumbsSelector){
+			$(sViewSelector).slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				fade: true,
+				asNavFor: sThumbsSelector
+			});
+			$(sThumbsSelector).slick({
+				slidesToShow: 5,
+				slidesToScroll: 5,
+				arrows: false,
+				asNavFor: sViewSelector,
+				focusOnSelect: true
+			});
+		};
 
 		// gift popups + sliders
 		//---------------------------------------------------------------------------------------
@@ -1194,7 +1229,7 @@ var
 						,strToAdd = "[data-" + sDataAttr + "='" + index + "']"
 						;
 					
-					initProductViewsGallery(sViewsSliderSelector + strToAdd, sThumbsSliderSelector + strToAdd);	// init current gift gallery
+					initGiftViewsGallery(sViewsSliderSelector + strToAdd, sThumbsSliderSelector + strToAdd);	// init current gift gallery
 
 				});
 			}

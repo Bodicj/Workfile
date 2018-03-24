@@ -657,6 +657,7 @@ $product-small: 230px;
         flex-grow: 0;
         flex-shrink: 0;
         margin-right: 35px;
+        display: flex;
         
         @include huge{
             margin-right: 30px;
@@ -664,6 +665,7 @@ $product-small: 230px;
         }
         @include pc{
             margin-right: 25px;
+            display: block;
             width: 555px;
         }
         @include note{
@@ -685,10 +687,21 @@ $product-small: 230px;
     overflow: hidden;
 }
 .b-product__views{
-    height: 586px;
+    margin-right: 8px;
+    flex-shrink: 0;
+    width: 791px;
+    height: 791px;
+//    height: 586px;
     overflow: hidden;
     
+    @include huge{
+        margin-right: 5px;
+        width: 582px;
+        height: 582px;
+    }
     @include pc{
+        margin-right: 0;
+        width: auto;
         height: 555px;
     }
     @include note{
@@ -734,29 +747,34 @@ $product-small: 230px;
     @extend %clearfix;
     
     overflow: hidden;
-//    overflow: hidden;
-    margin: 7px -3.05px 7px -7px;
-    height: 203px;
+    margin-top: -8px;
+    height: 800px;
+//    margin: 7px -3.05px 7px -7px;
+//    height: 203px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
     cursor: pointer;
     
     @include huge{
+        margin-top: -5px;
+        height: 587px;
 //        margin: 8px -2px 7px -4px;
-        margin: 8px -1.04px 7px -4px;
-        height: 143px;
+//        height: 143px;
     }
     @include pc{
+        margin: 4px -1.04px 7px -4px;
+//        display: block;
         height: 113px;
     }
     @include note{
-        margin: 8px -3.01px 7px -4px;
+        margin: 4px -3.01px 7px -4px;
         height: 147px;
     }
     @include tablet{
-        margin: 8px -1.11px 7px -4px;
+        margin: 4px -1.11px 7px -4px;
         height: 122px;
     }
     @include small{
-        margin: 5px -4.01px 5px -5.09px;
+        margin: 6px -4.01px 5px -5.09px;
         height: 60px;
     }
     
@@ -772,14 +790,19 @@ $product-small: 230px;
 }
 
 .b-product__thumb{
-    float: left;
-    width: 20%;
+//    float: left;
+//    width: 20%;
 //    max-height: 162px;
-    height: 100%;
+//    height: 20%;
     padding: 7px;
     
     @include huge{
         padding: 4px;
+    }
+    @include pc{
+        float: left;
+        width: 20%;
+        height: 100%;
     }
     @include small{
         padding: 6px;

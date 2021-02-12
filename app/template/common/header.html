@@ -9,29 +9,24 @@
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+<!--
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=cyrillic" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:900&amp;subset=cyrillic" rel="stylesheet">
+-->
 	<link rel="stylesheet" href="./css/style.css">
 
 	<!--[if lt IE 9]>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
 	<![endif]-->
 
-	<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#0f0f0f">
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#0f0f0f">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#0f0f0f">
-
 </head>
 
 <body class="page">
 
 	<!-- HEADER -->
-	<header class="header @@modifier">
+	<header class="header @@modifier" id="header">
 
 		<!-- Header TOP -->
 		<div class="header__top">
@@ -39,14 +34,8 @@
 
 				<!-- Logo -->
 				<div class="header__logo">
-					<a href="" class="b-logo">
-						<span class="b-logo__inner">
-							<img src="./img/logo.png" alt="">
-							
-							<span class="b-logo__text">
-								<img src="./img/logo-text.png" alt="">
-							</span>
-						</span>
+					<a href="#" class="b-logo">
+                        <img src="./img/svg/logo-full.svg" alt="">
 					</a>
 				</div>
 				<!-- /Logo -->
@@ -55,8 +44,8 @@
 					<!-- phones -->
 					<div class="header__phones">
 						<ul class="b-phones">
-							<li class="b-phones__item">+380 99-99-71-12</li>
-							<li class="b-phones__item">+380 44-19-11-12</li>
+							<li class="b-phones__item"><a href="tel:+38099997112" class="b-phones__link_header">+380 99-99-71-12</a></li>
+                            <li class="b-phones__item"><a href="tel:+38044191112" class="b-phones__link_header">+380 44-19-11-12</a></li>
 						</ul>
 					</div>
 					<!-- /phones -->
@@ -65,7 +54,7 @@
 					<div class="header__location">
 						<div class="b-location">
 							<div class="b-location__current">Киев</div>
-							<div class="b-location__more">Все адреса <a href="" data-modal="promo">здесь</a></div>
+							<div class="b-location__more">Все адреса <a href="">здесь</a></div>
 						</div>
 					</div>
 					<!-- /location -->
@@ -74,15 +63,35 @@
 				<div class="header__top-right">
 					<!-- social -->
 					<div class="header__social">
-						<div class="b-social">
-							<a href="" class="b-social__item"><i class="icon-facebook-black"></i></a>
-							<a href="" class="b-social__item"><i class="icon-in-black"></i></a>
-							<a href="" class="b-social__item"><i class="icon-gplus-black"></i></a>
-							<a href="" class="b-social__item"><i class="icon-youtube-black"></i></a>
+						<div class="b-social b-social--header">
+							<a href="" class="b-social__item" data-modal="promo">
+							    <i class="icon-facebook-black"></i>
+							</a>
+							<a href="" class="b-social__item" data-modal="promoAlt">
+							    <i class="icon-insta-black"></i>
+							</a>
+							<a href="" class="b-social__item" data-modal="info">
+							    <i class="icon-gplus-black"></i>
+				            </a>
+							<a href="" class="b-social__item" data-modal="ware">
+							    <i class="icon-youtube-black"></i>
+							</a>
 						</div>
 					</div>
 					<!-- /social -->
 
+					<!-- lang -->
+					<div class="header__lang">
+						<div class="b-lang">
+							<div class="b-lang__current"><span>Ru</span></div>
+							<ul class="b-lang__list">
+								<li class="b-lang__item"><a href="">En</a></li>
+								<li class="b-lang__item"><a href="">Ua</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- /lang -->
+					
 					<!-- account -->
 					<div class="header__account">
 						<a href="" class="b-account" data-modal="login">
@@ -91,17 +100,6 @@
 					</div>
 					<!-- /account -->
 
-					<!-- lang -->
-					<div class="header__lang">
-						<div class="b-lang">
-							<div class="b-lang__current"><span>Ru</span></div>
-							<ul class="b-lang__list">
-								<li class="b-lang__item">En</li>
-								<li class="b-lang__item">Ua</li>
-							</ul>
-						</div>
-					</div>
-					<!-- /lang -->
 				</div>
 			</div>
 		</div>
@@ -110,6 +108,9 @@
 		<!-- Header BOTTOM -->
 		<div class="header__bottom">
 			<div class="container">
+			    <div class="js-nav-toggle b-mobile-nav__toggle">
+			        <span class="icon-nav">toggle menu</span>
+			     </div>
 				<div class="header__bottom-left">
 					<!-- menu -->
 					<nav class="header__menu">
@@ -133,27 +134,50 @@
 					</nav>
 					<!-- /menu -->
 				</div>
+				
 				<div class="header__bottom-right">
 					<!-- search -->
 					<div class="header__search">
 
-						<form class="b-search">
-							<input type="text" placeholder="Поиск">
-							<button class="icon-search"></button>
+						<form action="" class="b-search js-search">
+                            <div class="b-wrapper_search js-minisearch">
+                                <input type="text" name="search" placeholder="Поиск">
+                            </div>
+                            <button type="submit" class="icon-search"></button>
 						</form>
 
 					</div>
 					<!-- /search -->
 
 					<!-- cart -->
-					<div class="header__cart">
-						<a href="/" class="b-cart">
+					<div class="header__cart js-cart">
+						<span class="b-cart">
 							<i class="icon-cart-white"></i>
-							<span class="b-cart__total b-cart__total--white">1</span>
-						</a>
+							<span class="b-cart__total b-cart__total--white">20</span>
+						</span>
+                        <div class="js-minicart b-minicart">
+                            <div class="b-cart__wrapper">
+                                <form action="" class="">
+                                    @@for (i=1; i<=5; i++){
+                                        @@include('./../parts/minicart-item.html', {"index": "`+i+`"})
+                                    }
+                                    <div class="b-minicart__total_price">итого: 6 000 грн</div>
+                                    <button type="submit" class="g-btn">оформить заказ</button>
+                                        
+                                    <div class="g-text--center">
+                                        <a class="b-minicart__link" href="">Перейти в корзину</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
 					</div>
 					<!-- /cart -->
 				</div>
+				
+                <a href="#" class="b-logo b-logo--simple">
+                    <img src="./img/svg/logo-simple.svg" alt="">
+                </a>
+                
 			</div>
 		</div>
 		<!-- /Header BOTTOM -->
@@ -162,6 +186,7 @@
 	<!-- /HEADER -->
 
 	<!-- scroll -->
+<!--
 	<div class="scroll js-fixed-header">
 		<div class="container">
 			<div class="scroll__logo">
@@ -170,7 +195,8 @@
 				</a>
 			</div>
 			<div class="scroll__nav">
-				@@include('./../parts/nav-simple.html')
+				@@
+				include('./../parts/nav-simple.html')
 			</div>
 			<div class="scroll__cart">
 				<a href="/" class="b-cart">
@@ -180,6 +206,7 @@
 			</div>
 		</div>
 	</div>
+-->
 	<!-- /scroll -->
 
 	<!-- mobile navigation -->

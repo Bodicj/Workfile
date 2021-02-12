@@ -1,3 +1,6 @@
+// Icons
+@import 'icons';
+
 @import 'b-contacts';
 @import 'b-lang';
 @import 'b-logo';
@@ -8,6 +11,7 @@
 @import 'b-info-menu';
 @import 'b-search';
 @import 'b-cart';
+@import 'b-minicart';
 
 @import 'b-service';
 @import 'b-why-we';
@@ -23,15 +27,20 @@
 @import 'b-widget';
 @import 'b-sort';
 
-@import 'b-itrm';
+@import 'b-item';
 @import 'b-slider';
 @import 'b-breadcrumbs';
 @import 'b-pagination';
 @import 'b-nav';
 @import 'b-mobile-nav';
 @import 'b-copyrights';
-@import 'icons';
-@import 'jscrollpane';
-@import 'bxSlider';
-@import 'ionRangeSlider';
-@import 'arctic-modal';
+
+@import 'b-modal';
+@import 'b-advantages';
+@import 'b-responces';
+@import 'b-rating';
+
+@import 'b-gift';
+@import 'b-checkout';
+@import 'b-payDeliv';
+@import 'b-about';

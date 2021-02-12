@@ -1,0 +1,86 @@
+<!-- MAIN MENU -->
+@@include('./../parts/nav.html')
+<!-- /MAIN MENU -->
+<section class="section_post">
+    <!-- breadcrumbs -->
+    <div class="b-breadcrumbs">
+        <div class="container">
+            <a href="" class="b-breadcrumbs__item">Главная</a>
+            <a href="" class="b-breadcrumbs__item">новости</a>
+            <span class="b-breadcrumbs__item">заголовок новости</span>
+        </div>
+    </div>
+    <!-- /breadcrumbs -->
+
+    <!-- NEWS POST -->
+    <section class="section section--post">
+        <div class="container">
+            <h2 class="section__title section__title_post">заголовок новости</h2>
+
+            <div class="content-block">
+                <article class="b-news_post">
+                    <img src="./img/news/n-1.jpg" class="b-news__photo b-news__photo_post" alt="">
+                    <p class="b-news__text b-news__text_post">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium asperiores ratione reprehenderit aliquid excepturi, aperiam, nihil voluptate voluptatem cupiditate delectus saepe eum dolores nesciunt doloremque sint minima dolor quis labore!</p>
+                    <div class="b-news__meta b-news__meta_post">
+                        <span class="b-news__meta-date">04.01.2017</span>
+                        <span class="b-news__meta-time">11:21</span>
+                    </div>
+                </article>
+                <div class="b-product__share_post">
+                    <span class="g-bold">Поделиться:</span>
+                    <span class="b-share">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//127.0.0.1%3A9000/product.html" class="b-social__item">
+                            <i class="icon-facebook-black"></i>
+                        </a>
+                        <a href="https://www.instagram.com/passi/" class="b-social__item">
+                            <i class="icon-insta-black"></i>
+                        </a>
+                        <a href="https://plus.google.com/share?url=http%3A//127.0.0.1%3A9000/product.html" class="b-social__item">
+                            <i class="icon-gplus-black"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/passi/" class="b-social__item">
+                            <i class="icon-youtube-black"></i>
+                        </a>
+                    </span>
+                </div>
+                <a href="" class="g-link g-link--allinfo">назад ко всем новостям</a>
+            </div>
+
+        </div>
+    </section>
+    <!-- /NEWS POST -->
+</section>
+
+
+<!-- NEWS -->
+<section class="section section--news section--news_post">
+  <div class="container">
+    <h2 class="section__title">последние новости</h2>
+
+    <div class="content-block" id="news_content">
+    @@for (i=1; i<=3; i++){
+        @@include('./../parts/news.html', {"index": "`+i+`"})
+    }
+    </div>
+
+    <a href="" class="g-link g-link--allinfo">Все новости</a>
+
+  </div>
+</section>
+<!-- /NEWS -->
+
+<!-- SUBSCRIBE -->
+<section class="section section--subscribe">
+  <article class="b-subscribe">
+    <div class="container" id="subscribe_container">
+      <form action="" class="b-subscribe__form">
+        <h4 class="b-subscribe__title">Подпишись<br> на Эксклюзивные предложения</h4>
+        <input type="text" name="name" placeholder="Ваше имя">
+        <input type="email" name="email" placeholder="Ваш e-mail">
+        <input type="submit" value="Подписаться" class="g-btn g-btn--bordered-white">
+      </form>
+    </div>
+  </article>
+  <div class="b-subscribe__after b-subscribe__after_post"></div>
+</section>
+<!-- /SUBSCRIBE -->

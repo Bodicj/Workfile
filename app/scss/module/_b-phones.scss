@@ -1,35 +1,97 @@
 .b-phones{
 	position: relative;
 	margin: 0;
-	padding: 0 0 0 40px;
+	padding-left: 38px;
 	list-style-type: none;
+    
+    @include huge {
+        padding-left: 28px;
+    }
 
 	&:before{
 		content: '';
 		position: absolute;
 		left: 0; top: 5px;
-		@include sprite($i-phone-lg-black);
-		@include fourK {
-			transform: scale(2);
-			margin-top: 18px;
-			margin-right: 5px;
-		}
+        width: 27px;
+        height: 36px;
+        background-image: url(../img/svg/i-phone.svg);
+        background-repeat: no-repeat;
+//        filter: brightness(0);
+        @include huge {
+            top: 4px;
+//            transform: scale(0.9);
+            transform: scale(1);
+            width: 19px;
+            height: 27px;
+            
+        }
+//		@include sprite($i-phone-lg-black);
+//		@include fourK {
+//			transform: scale(2);
+//			margin-top: 18px;
+//			margin-right: 5px;
+//		}
+        
 	}
+}
+.b-phones__icon{
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 27px;
+    height: 36px;
 }
 .b-phones__item{
 	font-size: 19px;
 	font-weight: 600;
-	line-height: 22px;
+	line-height: 22.49px;
+    letter-spacing: -.001em;
 	color: #3d3f3c;
 
 	@include huge {
-		font-size: 16px;
+//		font-size: 16px;
+		line-height: 17.38px;
+		font-size: 13.84px;
 	}
-	@include twoK {
-		font-size: 24px;
-	}
-	@include fourK {
-		font-size: 40px;
-		line-height: 45px;
-	}
+//	@include twoK {
+//		font-size: 24px;
+//	}
+//	@include fourK {
+//		font-size: 40px;
+//		line-height: 45px;
+//	}
+}
+.b-phones__item + .b-phones__item{
+    margin-top: 1px;
+    
+    @include huge{
+        margin-top: -1px;
+    }
+}
+.b-phones__link_header{ 
+	color: #3d3f3c;
+}
+.b-phones__link_footer{ 
+	color: #fff;
+    
+    &:hover{
+        text-decoration: none;
+        span{
+            text-decoration: underline;
+        }
+    }
+    
+    i[class^="icon"]{
+        @include huge{
+            width: 12px;
+        }
+
+        @include pc{
+            width: 14px;
+        }
+
+        @include tablet{
+            width: 15px;
+        }
+    }
 }

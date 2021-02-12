@@ -1,133 +1,563 @@
+$height-hd: 700px;
+$height-huge: 585px;
+$height-pc: 333px;
+$height-small: 217px;
+
 .b-slider{
-	min-height: 793px;
-	img{
+//	height: 800px;
+	img, picture{
 		display: block;
-		width: 103%;
+//		width: 103%;
 	}
+    
+    &>.b-slider__slide:nth-child(n+2){
+        display: none;
+    }
+}
+
+.bx-wrapper{
+    .b-slider{
+        &>.b-slider__slide:nth-child(n+1){
+            display: block;
+        }
+    }
 }
 
 .b-slider__slide{
-	min-height: 793px;
+	height: $height-hd;
+    overflow: hidden;
+    background-color: #f7f7f7;
+    
+    @include huge{
+        height: $height-huge;
+    }
+    @include pc{
+        height: $height-pc;
+    }
+    @include small{
+        height: $height-small;
+    }
+    
+    
+//    &:nth-last-child(n+3){
+//        @include phone{
+//            display: none;
+//        }
+//    }
 
-	&>img{
-		min-height: 793px;
-	}
+//	&>img{
+//		min-height: 793px;
+//		height: 800px;
+//	}
+    .container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        
+        @include pc{
+            width: 100%;
+            max-width: 100%;
+            padding: 0;
+        }
+        
+        &:before, &:after{
+            content: none;
+        }
+    }
+}
+.b-slide__bg{
+//    position: absolute;
+//    left: 50%;
+//    z-index: 0;
+    max-width: none;
+    height: $height-hd;
+//    transform: translateX(-50%);
+    
+    @include huge{
+        height: $height-huge;
+    }
+    @include pc{
+        height: $height-pc;
+    }
+    @include small{
+        height: $height-small;
+        
+    }
 }
 .b-slider__desc{
 	position: absolute;
-	top: 81px;
-	left: 14.1%;
-	width: 33.6315%;
-	padding: 49px 45px;
-	background-color: rgba(250, 250, 250, 0.69);
+//	top: 81px;
+//	left: 14.1%;
+//	width: 33.6315%;
+//    margin-left: 125px;
+//    left: 134px;
+//    left: calc(50% - 687px);
+//    left: 10px;
+//    left: calc(25% - 5px);
+      left: calc(25%);
+    transform: translateX(-50%);
+    width: 561px;
+	padding: 40px 32.8px;
+	background-color: rgba(250, 250, 250, 0.8);
 
-
-/* 	@include huge {
-	left: 60px;
-	padding: 35px 25px;
-} */
+ 	@include huge {
+//        left: calc(50% - 590px);
+ //       left: calc(25% - -33px);
+        left: 25%;
+        padding: 31px;
+        width: 460px;
+    }
+    
+ 	@include pc {
+//        left: calc(50% - 485px);
+//        width: 545px;
+        width: 223px;
+        
+//        padding: 36px 27px;
+        padding: 22px 15px;
+    }
+    @include small{
+//        top: 0;
+//        bottom: 0;
+//        margin: auto;
+        top: 18px;
+        width: 145px;
+        min-height: 165px;
+        max-height: 165px;
+        padding: 15px 10px;
+    }
 
 	h3{
-		margin: 0 0 27px;
-		font-size: 36px;
-		line-height: 40px;
+		margin: 0 0 25px;
+		font-size: 31.5px;
+        line-height: normal;
+//		line-height: 40px;
 		font-weight: 700;
 		text-transform: uppercase;
 		color: #121212;
 		text-align: center;
 
+//        @include twoK {
+//          font-size: 44px;
+//          margin-bottom: 35px;
+//        }
+//        @include fourK {
+//          font-size: 57px;
+//          line-height: 60px;
+//        }
 		@include huge {
-			font-size: 30px;
+			font-size: 26px;
+            line-height: 36px;
+            margin: 0 0 18px;
 		}
-        @include twoK {
-          font-size: 44px;
-          margin-bottom: 35px;
+        @include pc{
+            margin-bottom: 10px;
+            line-height: 23px;
+            font-size: 18px;
         }
-        @include fourK {
-          font-size: 57px;
-          line-height: 60px;
+        @include small{
+            margin-bottom: 10px;
+            line-height: 15px;
+            font-size: 12px;
         }
 	}
 	p {
 		font-family: 'PT Sans', sans-serif;
-		padding: 0 60px;
-		margin: 0 0 33px;
-		font-size: 22px;
-		line-height: 27px;
+		padding: 0 56px;
+		margin: 0 0 30px;
+		font-size: 19.25px;
+        line-height: 23.5px;
 		font-weight: 400;
 		color: #121212;
 		text-align: center;
 
+//        @include twoK {
+//          font-size: 24px;
+//        }
+//      @include fourK {
+//        font-size: 39px;
+//        line-height: 45px;
+//      }
 		@include huge {
-			font-size: 18px;
+//			font-size: 18px;
+            padding: 0px 34px;
+            margin: 0 0 23px;
+            font-size: 15.25px;
+            line-height: 21.5px;
 		}
-        @include twoK {
-          font-size: 24px;
+        @include pc{
+            overflow: hidden;
+            max-height: 76px;
+//            margin-bottom: 25px;
+            margin-bottom: 16px;
+            padding: 0;
+            font-size: 15px;
+            line-height: normal;
         }
-      @include fourK {
-        font-size: 39px;
-        line-height: 45px;
-      }
+        @include small{
+            margin-bottom: 10px;
+            max-height: 54px;
+            padding: 0;
+            line-height: 12px;
+            font-size: 10px;
+        }
 	}
+    
+    .b-desc__text_small{
+        margin-bottom: 43px;
+        line-height: 19px;
+        font-size: 15.75px;
+        
+        @include huge{
+            margin-bottom: 30px;
+            padding: 0 10px;
+            font-size: 14px;
+        }
+        @include pc{
+            margin-bottom: 15px;
+            line-height: normal;
+            font-size: 15px;
+        }
+        @include small{
+            margin-bottom: 10px;
+            font-size: 10px;
+        }
+    }
 
-	form {
-		max-width: 70.093%;
+	form{
+		max-width: 70%;
 		margin: 0 auto;
-		margin-left: 14.8%;
+//		margin-left: 14.8%;
+        
+        @include pc{
+            display: none;
+        }
 		
-		.g-btn,
 		input {
-			min-height: 50px;
-            @include twoK {
-              min-height: 70px;
-              font-size: 24px;
-              margin-top: 29px;
+			min-height: 45px;
+            font-size: 15.75px;
+            background-color: transparent;
+            
+//            @include twoK {
+//              min-height: 70px;
+//              font-size: 24px;
+//              margin-top: 29px;
+//            }
+//          @include fourK {
+//            min-height: 80px;
+//            font-size: 35px;
+//          }
+                
+            @include huge{
+                min-height: 38px;
+                padding: 4px 14px 5px;
+                font-size: 13px;
             }
-          @include fourK {
-            min-height: 80px;
-            font-size: 35px;
-          }
 		}
 
 		.g-btn--lg{
-			margin-top: 7px;
-			margin-right: 1px;
+			margin-top: 6px;
+			margin-right: 2px;
+            min-width: 211px;
+            min-height: 56px;
+            padding: 17px 32px;
+            font-size: 19.25px;
+
+            @include huge{
+                margin: 0px;
+                min-width: 175px;
+                font-size: 16px;
+                min-height: 46px;
+                padding: 13px 27px;
+            }
+            @include pc{
+                margin: 0px;
+                min-width: 180px;
+                font-size: 18px;
+            }
 		}
 
 		.g-form__field{
-			margin-bottom: 25px;
-		}
-	}
+			margin-bottom: 21px;
+            width: 95.3%;
+            margin-left: auto;
+            margin-right: auto;
+            
+            @include huge{
+                margin-bottom: 18px;
+//                width: 98.3%;
+            }
 
+            @include pc{
+                margin-bottom: 15px;
+//                width: 100%;
+            }
+            
+            img{
+                width: 100%;
+            }
+		}
+        
+        .g-form__field--inline{
+            margin-right: 0;
+            margin-bottom: 27px;
+            width: 100%;
+            
+            .g-input{
+                margin-right: 6px;
+                padding-left: 16px;
+                
+                @include huge{
+                    margin-right: 2px;
+                    padding-left: 14px;
+                }
+            }
+        }
+	}
 
 	.b-slider__desc-title{
 		margin: 0 0 25px;
 		color: #121212;
-		font-size: 36px;
+		font-size: 31.5px;
 		font-weight: 700;
-		line-height: 50px;
+		line-height: 44px;
 		text-transform: none;
 		text-align: center;
 
 		@include huge {
-			font-size: 30px;
-			line-height: 42px;
+			font-size: 26px;
+			line-height: 36px;
 		}
+        @include pc{
+            line-height: 23px;
+            font-size: 18px;
+        }
+        @include small{
+            line-height: 15px;
+            font-size: 12px;
+        }
 	}
+    .g-btn{
+        min-height: 45px;
+        min-width: 159px;
+        padding: 12px 11px;
+//        @include twoK {
+//          min-height: 70px;
+//          font-size: 24px;
+//          margin-top: 29px;
+//        }
+//      @include fourK {
+//        min-height: 80px;
+//        font-size: 35px;
+//      }
+        
+        @include huge{
+            min-width: 145px;
+            min-height: 38px;
+            padding: 9px 11px;
+            font-size: 16px;
+        }
+        @include pc{
+            min-height: 46px;
+            min-width: 164px;
+            padding: 8px 17px;
+            line-height: 30px;
+            font-size: 16px;
+        }
+        @include small{
+            min-height: 32px;
+            min-width: 107px;
+            padding: 5px 11px;
+            line-height: 21px;
+            font-size: 12.4px;
+        }
+        
+        & + .g-btn{
+            margin-left: 20px;
+            @include pc{
+                margin-left: 0;
+            }
+        }
+    }
+    
+    .g-btn--md-2{
+        @include huge{
+            min-height: 38px;
+            min-width: 140px;
+            padding: 8px 11px;
+        }
+    }
+    
 	.b-slider__desc-action{
-		max-width: 400px;
+//		max-width: 400px;
+        max-width: none;
 		margin: 0 auto;
 	}
+    
+    button[data-modal]{
+        display: none;
+        
+        @include pc{
+            display: inline-block;
+        }
+    }
 }
-.b-slider__desc--right{
-	right: 120px; left: auto;
-	width: 540px;
 
+.b-slider__desc--right{
+//    margin-right: 125px;
+//    margin-left: auto;
+    left: auto;
+//	right: 134px;
+//	right: calc(50% - 687px);
+//    right: 10px;
+    
+    right: calc(25% - 5px);
+    transform: translateX(50%);
+//    left: auto;
+//	width: 540px;
+
+//    @include twoK {
+//      width: 28.377%;
+//    }
 	@include huge {
-		right: 60px;
-		left: auto;
+//	right: calc(25% + 33px);
+    right: calc(25%);
 	}
-    @include twoK {
-      width: 28.377%;
+}
+.b-slider__desc--high{
+    top: 72px;
+    min-height: 540px;
+    
+    @include huge {
+        top: 67px;
+        min-height: 445px;
+        max-height: 445px;
+        padding: 35px 31px;
+    }
+
+ 	@include pc {
+        top: 46px;
+        min-height: 236px;
+        max-height: 236px;
+        padding: 17px 15px;
+    }
+    @include small{
+        top: 25px;
+        min-height: 154px;
+        max-height: 154px;
+        padding: 10px;
+    }
+    
+}
+.b-slider__desc--mid{
+    top: 133px;
+    min-height: 438px;
+    padding-top: 36px;
+
+    @include huge {
+//        top: 61px;
+        top: 112px;
+        min-height: 360px;
+        padding: 31px;
+    }
+
+ 	@include pc {
+        top: 30px;
+        max-height: 254px;
+        min-height: 254px;
+        padding: 12px 15px;
+    }
+    @include small{
+        top: 20px;
+        min-height: 165px;
+        max-height: 165px;
+        padding: 7px 5px;
+    }
+    
+    .b-slider__desc-title{
+        margin-bottom: 17px;
+        
+        @include huge{
+            margin-bottom: 15px;
+        }
+        @include pc{
+            margin-bottom: 15px;
+            max-height: 72px;
+            overflow: hidden;
+        }
+        @include small{
+            margin-bottom: 10px;
+            max-height: 45px;
+        }
+    }
+}
+.b-slider__desc--low{
+    top: 150px;
+    min-height: 351px;
+    padding: 0 20px;
+    padding-top: 46px;
+    
+     @include huge{
+        top: 130px;
+        min-height: 325px;
+        padding: 45px 35px;
+    }
+
+ 	@include pc {
+        top: 33px;
+        min-height: 253px;
+        max-height: 253px;
+        padding: 15px;
+    }
+    @include small{
+        top: 18px;
+        min-height: 165px;
+        max-height: 165px;
+        padding: 7px 10px;
+    }
+    
+    h3{
+        line-height: 44px;
+        margin-bottom: 18px;
+        
+        @include huge{
+            line-height: 36px;
+        }
+        @include pc{
+            margin-bottom: 15px;
+            line-height: 23px;
+        }
+        @include small{
+            margin-bottom: 10px;
+            line-height: 15px;
+//            font-size: 12px;
+        }
+    }
+    .b-desc__text_small{
+        margin-bottom: 43px;
+        
+        @include huge{
+            margin-bottom: 35px;
+        }
+        
+        @include pc{
+            margin-bottom: 16px;
+            line-height: normal;
+        }
+        @include small{
+            margin-bottom: 10px;
+//            overflow: hidden;
+//            max-height: 40px;
+//            padding: 0;
+            font-size: 10px;
+            line-height: normal;
+        }
+    }
+    
+    .g-btn--grey{
+        @include pc{
+            display: none;
+        }
     }
 }

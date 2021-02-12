@@ -1,0 +1,32 @@
+<!--    next modals (IDs) is here: responce-->
+    <!-- Responce form modal -->
+    <div class="arcticmodal b-modal_responce" id="responce">
+        <form action="" class="g-form">
+            <div class="arcticmodal-close"><i class="icon-close"></i></div>
+            
+            <div class="b-modal__heading b-modal__heading_responce">добавить отзыв</div>
+            
+            <div class="g-form__field">
+                <input type="text" name="name" class="g-input" required="" pattern="[A-Za-zА-Яа-яЁёІіЇї\s]{2,}" placeholder="Ваше имя">
+            </div>
+            <div class="g-form__field">
+                <textarea name="responce" class="g-input" required placeholder="Ваш отзыв"></textarea>
+            </div>
+            
+            <div class="b-rating">
+                <input type="radio" id="star5" name="rating" value="5" required>
+                <label for="star5" title="восхитительно"></label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4" title="отлично"></label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3" ttitle="хорошо"></label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2" title="удовлетворительно"></label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1" title="плохо"></label>
+            </div>
+
+            <button type="submit" class="g-btn g-btn--lg">добавить</button>
+        </form>
+    </div>
+    <!-- /Responce form modal -->

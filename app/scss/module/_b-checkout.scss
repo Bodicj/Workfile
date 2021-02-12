@@ -1,0 +1,545 @@
+.b-checkout{
+    margin-bottom: 92px;
+    display: flex;
+    flex-wrap: wrap;
+    
+    @include huge{
+        margin-bottom: 34px;
+        justify-content: space-between;
+    }
+}
+.b-checkout__heading{
+    margin-bottom: 43px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+    
+    @include huge{
+        margin-bottom: 27px;
+        font-size: 17.48px;
+    }
+    @include small{
+        margin-bottom: 39px;
+        font-size: 14px;
+    }
+}
+.b-checkout__contacts{
+    flex-basis: 841px;
+    
+    @include huge{
+        flex-basis: 612px;
+    }
+    @include pc{
+        flex-basis: 50%;
+    }
+    @include note{
+        flex-basis: 347px;
+    }
+    @include tablet{
+        margin-bottom: 40px;
+    }
+    @include small{
+        margin-bottom: 81px;
+    }
+    
+    .b-cart__checkout{
+        margin-left: 0;
+        margin-bottom: 50px;
+//        flex-basis: 511px;
+        flex-direction: row;
+//        justify-content: space-between;
+        
+        @include huge{
+            margin-bottom: 37px;
+        }
+        @include small{
+            margin-bottom: 30px;
+        }
+        
+        >.g-btn{
+            width: auto;
+            min-width: 0;
+            white-space: nowrap;
+            padding: 12px 5px;
+            font-size: 18px;
+            
+            @include huge{
+                padding: 6px 12px;
+                font-size: 13.11px;
+            }
+            @include pc{                
+                &:hover{
+                    color: #fff;
+                    background-color: #0f0f0f;
+                }
+            }
+            @include note{
+                font-size: 11.65px;
+            }
+            @include small{
+                padding: 2px 10px;
+                font-size: 10px;
+            }
+            
+            &:first-of-type{
+                width: 260px;
+                margin-right: 6px;
+                
+                @include huge{
+                    margin-right: 4px;
+                    width: 190px;
+                }
+                @include note{
+                    width: 176px;
+                }
+                @include small{
+                    width: 147px;
+                }
+            }
+            &:last-of-type{
+                width: 245px;
+                
+                @include huge{
+                    width: 180px;
+                }
+                @include note{
+                    width: 166px;
+                }
+                @include small{
+                    width: 138px;
+                }
+            }
+        }
+    }
+    .g-form__field{
+        @include huge{
+            margin-bottom: 16px;
+        }
+        @include small{
+            margin-bottom: 24px;
+        }
+        
+        &:last-child{
+            margin-bottom: 20px;
+            @include media(">=tablet", "<huge"){
+                margin-bottom: 16px;
+            }
+        }
+        
+        .g-input{
+            @include huge{
+                height: 28px;
+                padding: 0.5em 0.9em;
+                font-size: 11.65px;
+            }
+            @include small{
+                height: auto;
+                padding: 0.4em 0.9em;
+                font-size: 16px;
+            }
+        }
+    }
+}
+.b-checkout__login{
+    display: flex;
+    min-width: 0;
+    max-width: none;
+    
+    @include small{
+        flex-direction: column;
+    }
+    
+    .arcticmodal-body{
+        margin-right: 6px;
+        width: 260px;
+        padding: 0;
+        
+        @include huge{
+            margin-right: 4px;
+            width: 190px;
+        }
+        @include note{
+            width: 176px;
+        }
+        @include small{
+            margin: 0 0 35px;
+            width: 100%;
+        }
+    }
+    .g-form__field{
+        padding: 0;
+        
+        &:last-child{
+            text-align: center;
+        }
+        
+        .g-btn{
+            @include huge{
+                font-size: 11.65px;
+                line-height: normal;
+                width: auto;
+                min-width: 0;
+                height: auto;
+            }
+        }
+           
+        button.g-btn{
+            @include huge{
+                padding: 5px 34px 6px;
+            }
+            @include small{
+                padding: 7px 34px;
+                font-size: 15.98px;
+            }
+        }
+
+
+        a.g-btn{
+            @include huge{
+                display: block;
+//                text-align: left;
+                padding: 12px 9px 0;
+            }
+            @include small{
+                margin-top: 20px;
+                padding: 0;
+                text-align: center;
+                font-size: 14.21px;
+            }
+        }
+        
+    }
+    .arcticmodal-footer{
+        width: 245px;
+        padding: 0 14px;
+        
+        @include huge{
+            width: 180px;
+            padding: 0 8px;
+        }
+        @include note{
+            width: 166px;
+        }
+        @include small{
+            width: 100%;
+            padding: 0 14px;
+        }
+        
+        .g-text--center{
+            padding: 0 30px;
+        }
+    }
+    .g-form__alarm{
+//        margin: 0 -20px 0 14px;
+        margin-right: -50px;
+        
+        @include huge{
+            padding-left: 30px;
+        }
+        @include small{
+            margin-right: -5px;
+            padding-left: 40px;
+        }
+        
+        i{
+            width: 25px;
+            height: 22px;
+            
+            @include small{
+                width: 35px;
+                height: 32px;
+            }
+        }
+        
+        p, p>a{
+            @include huge{
+                line-height: 1.2;
+                font-size: 8.74px;
+            }
+            @include small{
+                font-size: 12px;
+            }
+        }
+        
+        p{
+            @include huge{
+                padding-top: 4px;
+            }
+        }
+    }
+    .g-h3{
+        margin-bottom: 24px;
+        line-height: 1.2;
+        font-size: 14px;
+        font-weight: 400;
+        
+        @include huge{
+            margin-bottom: 19px;
+            font-size: 11.65px;
+            font-weight: 700;
+        }
+        @include small{
+            margin-bottom: 26px;
+            font-size: 14px;
+        }
+    }
+    .b-social_modal{
+        margin-bottom: 22px;
+        line-height: 0;
+        
+        @include huge{
+            margin-bottom: 16px;
+        }
+        @include small{
+            margin-bottom: 23px;
+        }
+        
+        a:first-child{
+            img{
+                margin-right: 10px;
+            }
+        }
+        img{
+            width: 36px;
+            @include huge{
+                width: 27px;
+                height: auto;
+            }
+            @include small{
+                width: 36px;
+//                height: 36px;
+            }
+            
+        }
+    }
+}
+.b-checkout__register{
+    display: none;
+    min-width: 0;
+    max-width: none;
+    
+    label{
+        display: block;
+        
+        >span{
+            display: inline-block;
+            display: none;
+            vertical-align: top;
+            line-height: 36px;
+            font-size: 16px;
+            
+            @include huge{
+                line-height: 28px;
+                font-size: 10.2px;
+            }
+            @include pc{
+                display: none;
+            }
+        }
+    }
+    input, textarea{
+        margin-right: 12px;
+        display: inline-block;
+        width: 511px;
+        
+        @include huge{
+            width: 374px;
+        }
+        @include note{
+            width: 347px;
+        }
+        @include small{
+            width: 100%;
+        }
+    }
+    .g-form__field{
+        textarea.g-input{
+            resize: none;
+            height: 205px;
+            
+            @include huge{
+                height: 142px;
+            }
+        }
+    }
+}
+.b-checkout__payDeliv{
+    flex-basis: 779px;
+    
+    @include huge{
+        flex-basis: 567px;
+    }
+    @include pc{
+        flex-basis: 50%;
+    }
+    @include note{
+        flex-basis: 347px;
+    }
+    @include tablet{
+        flex-basis: 100%;
+    }
+    
+    .b-checkout__heading{
+//        margin-bottom: 79px;
+        margin-bottom: 40px;
+        
+        @include huge{
+//            margin-bottom: 51px;
+            margin-bottom: 22px;
+        }
+        @include tablet{
+            margin-bottom: 27px;
+        }
+        @include small{
+            margin-bottom: 47px;
+        }
+    }
+    .b-payDeliv{}
+    .b-payDeliv+.b-payDeliv{
+        margin-top: 61px;
+        
+        @include huge{
+            margin-top: 41px;    
+        }
+        @include small{
+            margin: 36px 0 47px;
+        }
+    }
+    .b-payDeliv__options{
+        
+    }
+}
+.b-checkout__checkboxes{
+    margin-bottom: 95px;
+    width: 100%;
+    
+    @include huge{
+        margin-bottom: 66px;
+    }
+//    @include small{
+//        display: none;
+//    }
+    
+    label{
+        margin-bottom: 7px;
+        display: block;
+//        font-size: 14px;
+        
+        @include huge{
+//            margin-bottom: 7px;
+//            line-height: 15px;
+//            font-size: 13px;
+        }
+    }
+    label:last-of-type{
+        margin-bottom: 0;
+    }
+}
+.b-checkout__products{
+    .b-checkout__heading{
+        margin-bottom: 65px;
+        width: 100%;
+        
+        @include huge{
+            margin-bottom: 44px;
+        }
+        @include small{
+            margin-bottom: 41px;
+        }
+    }
+    
+    .b-form__footer_checkout{
+        margin-bottom: 5px;
+        width: 100%;
+        padding: 0 45px 0 201px;
+        
+        @include huge{
+            margin-bottom: 3px;
+            padding: 0 33px 0 147px;
+        }
+        @include pc{
+            padding-left: 117px;
+        }
+        @include tablet{
+            padding-left: 124px;
+        }
+        @include small{
+            padding: 0;
+        }
+        
+        .b-checkout__field_price{
+            display: flex;
+            justify-content: space-between;
+//            padding: 5px 0 8px;
+            padding: 0.25em 0 0.4em;
+            line-height: normal;
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            
+            @include small{
+                padding: 0.2em 0 0.8em;
+            }
+            
+            @include huge{
+                font-size: 14.57px;
+            }
+            
+            .b-checkout__desc{
+                padding-right: 15px;
+            }
+            .b-checkout__price{
+                @include small{
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+    
+    .b-cart__promo{
+        flex-basis: auto;
+        
+        @include small{
+            order: 2;
+            flex-basis: 100%;
+        }
+        
+        >.g-btn{
+            @include small{
+                display: block;
+                font-size: 14.05px;
+            }
+            
+            &, &:hover{
+                background-color: transparent;
+            }
+        }
+    }
+    .b-cart__checkout{
+        @include small{
+            margin-bottom: 93px;
+        }
+        
+        .b-cart__total_price{
+            margin-bottom: 42px;
+            padding-right: 44px;
+            text-transform: uppercase;
+            font-size: 23px;
+            text-align: right;
+            
+            @include huge{
+                margin-bottom: 27px;
+                padding-right: 33px;
+                font-size: 16.57px;
+            }
+            @include small{
+                text-align: center;
+                margin-bottom: 35px;
+//                padding-right: 56px;
+                padding-right: 0;
+                font-size: 20px;
+                font-weight: 400;
+            } 
+        }
+    }
+}

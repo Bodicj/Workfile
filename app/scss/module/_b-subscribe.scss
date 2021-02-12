@@ -1,90 +1,356 @@
 #subscribe_container{
-	@extend %flexrow;
-	justify-content: unset;
-	margin-left: 8.05% !important;
+//	@extend %flexrow;
+//    display: flex;
+//	justify-content: space-between;
+//	margin-left: 8.05% !important;
+    &:before, &:after{
+        content: none;
+    }
+    
+//    @include pc{
+//        max-width: 815px;
+//    }
+//    @include note{
+//        max-width: 100%;
+//    }
+//    @include small{
+//        padding: 0;
+//    }
 }
 
 .b-subscribe{
+    height: 130px;
 	padding: 43px 0 47px;
-	background-color: #121212;
+	background-color: #0f0f0f;
+    
+    @include huge {
+        height: 95px;
+        padding: 47px 0 47px;
+    }
+    @include pc {
+        height: auto;
+    }
+    @include tablet{
+        padding: 40px 0 45px;
+    }
+    @include small{
+        margin: 0 auto;
+        padding: 22px 0 39px;
+        width: calc(100% - 30px);
+    }
+    
+    .container{
+        height: 100%;
+    }
+    
 }
 .b-subscribe__title{
-	display: inline-block;
-	margin: 0 0 0 0;
+//	display: inline-block;
+	margin: 0 29px 0 0;
 	font-size: 28px;
-	line-height: 40px;
+//	line-height: 40px;
+	line-height: normal;
 	font-weight: 700;
 	text-transform: uppercase;
 	color: #fff;
 	vertical-align: middle;
 
+//	@include twoK {
+//		font-size: 30px;
+//	}
+//	@include fourK {
+//		font-size: 40px;
+//		line-height: 40px;
+//		padding-top: 10px;
+//	}
 	@include huge {
-		font-size: 21px;
-		text-transform: none;
+        margin: 0 20px 0 0;
+		font-size: 20.39px;
+//		text-transform: none;
 	}
-	@include twoK {
-		font-size: 30px;
-	}
-	@include fourK {
-		font-size: 40px;
-		line-height: 40px;
-		padding-top: 10px;
-	}
+    @include pc{
+        margin: 0 0 35px;
+        width: 100%;
+        text-align: center;
+//        text-transform: uppercase;
+        font-size: 21px;
+    }
+    @include small{
+        margin-bottom: 25px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    
+    br{
+        display: none;
+        
+        @include small{
+            display: inline;
+        }
+    }
 }
 .b-subscribe__form{
-	display: inline-block;
+//	display: inline-block;
 	vertical-align: middle;
-
+    display: flex;
+//    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+    
+    @include huge {
+        padding: 0 12px;
+    }
+    @include pc{
+        padding: 0;
+        flex-wrap: nowrap;
+        flex-direction: column;
+//        font-size: 14px;
+    }
+    @include note{
+//        flex-direction: column;
+    }
+    @include tablet{
+        font-size: 12px;
+    }
+    @include small{
+        padding: 0 12px;
+    }
+    
 	input {
-		width: auto;
-		min-width: 310px;
+//		width: auto;
+		width: 310px;
+        min-height: 40px;
 		box-sizing: border-box;
 		display: inline-block;
 		margin-right: 29px;
 		font-size: 16px;
-		padding-left: 17px !important;
+		padding: 4px 17px;
 
+//		@include twoK {
+//			font-size: 21px;
+//		}
+//		@include fourK {
+//			font-size: 33px;
+//			line-height: 33px;
+//			min-width: 524px;
+//		}
 		@include huge {
-			min-width: 235px;
+            margin-right: 20px;
+            width: 226px;
+//			min-width: 235px;
+            min-height: 29px;
+            padding: 4px 12px;
+            font-size: 11.65px;
 		}
-		@include twoK {
-			font-size: 21px;
-		}
-		@include fourK {
-			font-size: 33px;
-			line-height: 33px;
-			min-width: 524px;
-		}
+        @include pc{
+            width: 300px;
+            min-height: 35px;
+            margin-right: 0;
+            font-size: 14px;
+            margin-bottom: 33px;
+        }
+        @include note{
+        }
+        @include small{
+            width: 263px;
+            margin-bottom: 27px;
+            font-size: 12px;
+            min-height: 31px;
+            padding: 2px 14px;
+        }
 
 		&:last-child{
 			margin-right: 0;
 		}
+        
+        &:hover{
+//	        border:none;
+        }
 	}
 	input[type="email"]{
-		border: none;
-		padding-top: 9.5px;
-		padding-bottom: 9.5px;
+//		padding-top: 10px;
+//		padding-bottom: 10px;
 		width: 320px;
-		margin-left: -4px;
-		margin-right: 28px;
+//		margin-left: -4px;
+//		margin-right: 26px;
+        
+        @include huge{
+//            width: auto;
+            width: 233px;
+        }
+        @include pc{
+            width: 300px;
+        }
+        @include small{
+            width: 263px;
+        }
 	}
-	input[type="text"]{
+    input[type="email"],
+	input[type="text"], 
+    input[type="tel"],{
 		border: none;
-		padding-top: 10px;
-		padding-bottom: 10px;
-		margin-left: 31px;
 	}
 	input[type="submit"] {
-		min-width: 0;
-		width: 135px;
-		padding: 8px 20px 6px 0;
+//		min-width: 0;
+		width: 137px;
+		padding: 9px 13px 7px;
 		font-weight: 500;
 		font-size: 14px;
-		@include fourK {
-			line-height: 40px;
-		}
+        letter-spacing: .016em;
+//		@include fourK {
+//			line-height: 40px;
+//		}
+        @include huge{
+            width: auto;
+            min-width: 0;
+            padding: 1px 10px 0;
+            font-size: 10.2px;
+        }
+        @include pc{
+            margin-bottom: 0;
+            width: 155px;
+            font-size: 14px;
+        }
+        @include small{
+            width: auto;
+            font-size: 12px;
+            line-height: 23px;
+            padding: 2px 13px;
+            min-width: initial;
+        }
+        
+        &:hover{
+            border: 2px solid transparent;
+        }
 	}
 }
-.b-subscribe__form input:hover {
-	border:none;
+
+.b-subscribe__before{
+    @extend .b-subscribe__after;
+    transform: rotate(180deg);
+}
+.b-subscribe__after{
+    height: 535px;
+//    background: #fff url(../img/flowers/flowers-subscribe-lg.jpg) no-repeat top;
+//    background: #fff url(../img/flowers/flowers-subscribe-lg.jpg) no-repeat top/1530px;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 1370px;
+//    background: #fff url(../img/flowers/flowers-subscribe-xl-1X.jpg) no-repeat top/1370px;
+    background-image: url(../img/flowers/flowers-subscribe-xl-1X.jpg);
+    
+    @include media("retina2x"){
+//        background: #fff url(../img/flowers/flowers-subscribe-lg-2x.jpg) no-repeat center -8px/79.4%;
+//        background: #fff url(../img/flowers/flowers-subscribe-xl-2X.jpg) no-repeat top/1370px;
+        background-image: url(../img/flowers/flowers-subscribe-xl-2X.jpg);
+    }
+    
+    @include huge{
+        height: 389px;
+//        background-size: 1116px;
+        background-size: 1000px;
+        background-image: url(../img/flowers/flowers-subscribe-lg-1X.jpg);
+        
+        @include media("retina2x"){
+            background-image: url(../img/flowers/flowers-subscribe-lg-2X.jpg);
+        }
+    }
+    @include pc{
+//        background-size: 1065px;
+        background-size: 950px;
+        background-image: url(../img/flowers/flowers-subscribe-ml-1X.jpg);
+        
+        @include media("retina2x"){
+            background-image: url(../img/flowers/flowers-subscribe-ml-2X.jpg);
+        }
+    }
+    @include note{
+//        height: 505px;
+//        background: #fff url(../img/flowers-subscribe.jpg) top no-repeat /contain;
+//        background: #fff url(../img/flowers/flowers-subscribe-md.jpg) no-repeat top/765px;
+        background-size: 690px;
+        background-image: url(../img/flowers/flowers-subscribe-md-1X.jpg);
+        
+        @include media("retina2x"){
+//            background: #fff url(../img/flowers/flowers-subscribe-md-2x.jpg) no-repeat top /88%;
+            background-image: url(../img/flowers/flowers-subscribe-md-2X.jpg);
+        }
+    }
+    @include tablet{
+        height: 300px;
+//        background: #fff url(../img/flowers-subscribe.jpg) top no-repeat /contain;
+//        background: #fff url(../img/flowers/flowers-subscribe-sm.jpg) no-repeat top;
+//        background: #fff url(../img/flowers/flowers-subscribe-sm.jpg) no-repeat top/640px;
+        background-size: 580px;
+        background-image: url(../img/flowers/flowers-subscribe-sm-1X.jpg);
+        
+        @include media("retina2x"){
+//            background: #fff url(../img/flowers/flowers-subscribe-sm-2x.jpg) no-repeat top /93%;
+            background-image: url(../img/flowers/flowers-subscribe-sm-2X.jpg);
+        }
+    }
+    @include small{
+        height: 175px;
+//        background: #fff url(../img/flowers-subscribe-xs.png) no-repeat top / 91%;
+//        background: #fff url(../img/flowers/flowers-subscribe-xs.jpg) no-repeat top;
+//        background: #fff url(../img/flowers/flowers-subscribe-xs.jpg) no-repeat top/320px;
+        background-size: 288px;
+        background-image: url(../img/flowers/flowers-subscribe-xs-1X.jpg);
+        
+        @include media("retina2x"){
+//            background: #fff url(../img/flowers/flowers-subscribe-xs-2x.jpg) no-repeat top /100%;
+            background-image: url(../img/flowers/flowers-subscribe-xs-2X.jpg);
+        }
+    }
+}
+
+.b-subscribe__before_services{
+    height: 506px;
+    
+    @include huge{
+        height: 368px;
+    }
+    @include pc{
+        height: 315px;
+    }
+    @include note{
+        height: 220px;
+    }
+    @include tablet{
+        height: 185px;
+    }
+    @include small{
+        height: 101px;
+    }
+}
+.b-subscribe__after_services{
+    height: 451px;
+    
+    @include huge{
+        height: 315px;
+    }
+    @include pc{
+        height: 290px;
+    }
+    @include note{
+        height: 190px;
+    }
+    @include tablet{
+        height: 140px;
+    }
+    @include small{
+        height: 94px;
+    }
+}
+.b-subscribe__after_post{
+    @include tablet{
+        height: 180px;
+    }
+    @include small{
+        height: 105px;
+    }
 }

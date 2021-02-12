@@ -1,0 +1,31 @@
+.b-rating{
+    position: relative;
+    text-align: center;
+    direction: rtl;
+    font-size: 0;
+    cursor: default;
+    
+    input[type=radio]:not(checked){
+        position: absolute;
+        bottom: 0;
+        left: 48.5%;
+//        visibility: hidden;
+        clip: rect(0,0,0,0);
+    }
+    label{
+        @extend .icon-star;
+        width: 24px;
+        background-position: center;
+        cursor: pointer;
+        @include huge{
+            width: 18px;
+        }
+        
+        &:hover, &:hover~label{
+            @extend .icon-star_filled;
+        }
+    }
+    input[type=radio]:checked~label{
+        @extend .icon-star_filled;
+    }
+}

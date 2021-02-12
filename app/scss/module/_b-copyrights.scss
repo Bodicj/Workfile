@@ -1,16 +1,37 @@
 .b-copyrights{
-	padding: 41px 0 25px;
+//	padding: 41px 0 15px 3px;
+	padding: 41px 0 15px;
 	font-size: 18px;
-	line-height: 24px;
+	line-height: 30px;
 	font-weight: 300;
 	text-transform: uppercase;
 	color: #ffffff;
+    
+//	@include fourK {
+//		font-size: 24px;
+//	}
+	@include huge{
+        padding: 23px 0 11px;
+		font-size: 13.11px;
+	}
+	@include pc {
+        padding: 35px 0 15px;
+        font-size: 14px;
+	}
+    @include note{
+        order: 1;
+        padding: 15px 0 5px;
+        font-size: 13px;
+    }
+    @include tablet{
+        font-size: 12px;
+    }
+    @include small{
+        padding-bottom: 2px;
+        font-size: 9.53px;
+    }
 
 	a, span{
 		color: #ffffff;
-	}
-
-	@include fourK {
-		font-size: 24px;
 	}
 }

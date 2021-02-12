@@ -1,0 +1,50 @@
+
+<!-- MAIN MENU -->
+@@include('./../parts/nav.html')
+<!-- /MAIN MENU -->
+<section class="section_news">
+    <!-- breadcrumbs -->
+    <div class="b-breadcrumbs">
+        <div class="container">
+            <a href="" class="b-breadcrumbs__item">Главная</a>
+            <span class="b-breadcrumbs__item">новости</span>
+        </div>
+    </div>
+    <!-- /breadcrumbs -->
+    
+    <!-- NEWS -->
+    <section class="section section--news">
+        <div class="container">
+            <h2 class="section__title section__title_news">Новости</h2>
+
+            <div class="content-block">
+                @@for (i=1; i<=3; i++){
+                    @@include('./../parts/news-news.html', {"index": "`+i+`"})
+                }
+                @@for (i=1; i<=3; i++){
+                    @@include('./../parts/news-news.html', {"index": "`+i+`"})
+                }
+                @@for (i=1; i<=3; i++){
+                    @@include('./../parts/news-news.html', {"index": "`+i+`"})
+                }
+                @@for (i=1; i<=3; i++){
+                    @@include('./../parts/news-news.html', {"index": "`+i+`"})
+                }
+            </div>
+
+        
+            <div class="b-pagination b-pagination_news">
+                <span class="b-pagination__item is--current">1</span>
+                <a href="" class="b-pagination__item">2</a>
+                <a href="" class="b-pagination__item">3</a>
+                <a href="" class="b-pagination__item">4</a>
+                <a href="" class="b-pagination__item is--ellipsis">...</a>
+                <a href="" class="b-pagination__item">99</a>
+                <a href="" class="b-pagination__item">100</a>
+            </div>
+
+        </div>
+    </section>
+    <!-- /NEWS -->
+    
+</section>

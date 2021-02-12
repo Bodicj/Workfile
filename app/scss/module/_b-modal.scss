@@ -1,0 +1,426 @@
+.b-modal{
+    
+}
+
+.b-modal_promo{
+//	@include clearfix();
+//    margin: 0 auto;
+    display: flex;
+//    justify-content: space-between;
+	max-width: 983px;
+    padding: 25px 30px;
+    background:#fff;
+    
+    @include note{
+        align-items: center;
+        padding: 25px;
+//        max-width: 100%;
+    }
+    @include tablet{
+        padding: 20px;
+    }
+    @include small{
+        flex-direction: column;
+    }
+    @include phone{
+        max-width: 300px;
+        padding: 20px 15px;
+    }
+
+    .arcticmodal-close {
+        top: 19px;
+        right: 19px;
+        
+        @include note{
+            top: 15px;
+            right: 18px;
+        }
+        @include tablet{
+            top: 15px;
+            right: 15px;
+        }
+    }
+    
+    &__left{
+    //	float: left;
+        max-width: 429px;
+        align-self: center;
+        width: 430px;
+        margin-right: 35px;
+        
+        @include note{
+            margin-right: 25px;
+            max-width: 40%;
+        }
+        @include tablet{
+            margin-right: 20px;
+//            max-width: calc(45% - 15px);
+        }
+        @include small{
+            margin: 0 0 15px;
+            max-width: 200px;
+        }
+    }
+    &__right{
+    //	float: left;
+        padding-top: 50px;
+    //	width: 450px;
+        
+        @include note{
+            padding: 20px 0;
+//            max-width: 55%;
+        }
+        @include tablet{
+            padding: 10px 0;
+        }
+        @include small{
+            padding: 0;
+        }
+    }
+
+    .g-h2{
+        margin-bottom: 35px;
+        
+        @include note{
+            line-height: 1.6;
+            font-size: 18px;
+        }
+        @include tablet{
+            font-size: 17px;
+        }
+        @include small{
+            font-size: 15px;
+        }
+
+        &:first-child{
+            margin-bottom: 36px;
+        }
+
+        span{
+            display: inline-block;
+            + span{
+                margin-left: 80px;
+            }
+        }
+    }
+    .g-form__field{
+        @include note{
+            display: flex;
+        }
+
+        .g-input{
+            padding: 8px 14px;
+            width: 156px;
+            margin-right: 6px;
+            
+            @include note{
+                width: 0;
+                flex-grow: 1;
+                flex-shrink: 1;
+            }
+        }
+        .g-btn{
+            min-width: 124px;
+            width: 124px;
+            height: 39px;
+            padding: 8px 10px 7px;
+            font-size: 14px;
+            background-color: #d6d6d4;
+            
+            @include note{
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+
+.b-modal_promoAlt{
+    @extend .b-modal_promo;
+    
+    .g-form__field{
+        display: flex;
+
+        .g-input{
+            width: 0;
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+        .g-btn{
+            margin-left: auto;
+        }
+    }
+}
+
+.b-modal_login{
+    .arcticmodal-body{
+        padding-bottom: 26px;
+    }
+
+    .arcticmodal-footer{
+
+        .g-h3{
+            font-size: 16px;
+            line-height: 38px;
+            margin-bottom: 22px;
+        }
+        .b-social_modal{
+            margin-bottom: 10px;
+            
+                a{
+                    margin-right: 10px;
+                    display: inline-block;
+                    +a{
+                        margin-right: 0;
+                        margin-left: 10px;
+                    }
+                }
+        }
+
+        .g-btn--link{
+            padding: 18px 0 15px;
+//                padding-left: 18px;
+        }
+
+        .g-form__alarm{
+            margin-top: 35px;
+            margin-left: 29px;
+
+            p{
+                padding-top: 3px;
+                line-height: 14px;
+            }
+        }
+    }
+}
+.b-modal_ware{
+    @extend .b-modal_login;
+    
+    width: 600px;
+    max-width: 100%;
+    padding-bottom: 20px;
+    
+    @include small{
+        width: 290px;
+        padding-bottom: 10px;
+    }
+    
+    .arcticmodal-header{
+        margin-bottom: 20px;
+    }
+    
+    .g-form__field{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+           
+        @include small{
+            flex-direction: column;
+        }
+        .g-btn{
+            width: auto;
+            height: auto;
+            padding: 7px 20px;
+            
+            &+.g-btn{
+                @include small{
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+.b-modal_register{
+    .arcticmodal-footer{
+        padding-bottom: 43px;
+    }
+}
+
+
+.b-modal_slide{
+//    text-align: center;
+
+    .arcticmodal-header{
+        padding-top: 30px;
+
+        @include pc{
+            padding-top: 35px;
+        }
+    }
+    .arcticmodal-body{
+        padding-bottom: 0;
+    }
+    .arcticmodal-footer{
+        padding-top: 0;
+    }
+//    
+//    .g-form__field{
+//        padding-right: 0;
+//    }
+}
+
+.b-modal_responce{;
+    padding: 96px 202px 75px;
+    max-width: none;
+    width: 782px;
+    min-height: 670px;
+    
+    @include huge{
+        padding: 70px 148px;
+        width: 571px;
+        min-height: 489px;
+    }
+    @include pc{
+        padding: 60px 100px;
+        width: 578px;
+        min-height: 520px;
+    }
+    @include small{
+        padding: 35px 45px;
+        width: 300px;
+        min-height: 385px;
+    }
+    
+    .arcticmodal-close{
+        @include huge{   
+            top: 16px;
+            right: 19px;
+        }
+        
+        i{
+            @include huge{
+                width: 14px;
+                height: 14px;
+            }
+        }
+    }
+    .g-form{
+        position: static;
+    }
+    .g-form__field{
+        margin-bottom: 36px;
+        padding: 0;
+        
+        @include huge{
+            margin-bottom: 25px;
+        }
+        @include small{
+            margin-bottom: 20px;
+        }
+        input.g-input,
+        textarea.g-input{
+            padding: 13px 20px;
+            @include huge{
+                padding: 7px 15px;
+                line-height: normal;
+                font-size: 14px;
+            }
+        }
+        textarea.g-input{
+            resize: none;
+//            padding: 13px 20px;
+            height: 220px;
+            @include huge{
+//                padding: 7px 15px;
+                height: 160px;
+//                line-height: normal;
+//                font-size: 14px;
+            }
+        }
+    }
+    .b-rating{
+        margin-bottom: 65px;
+        @include huge{
+            margin-bottom: 42px;
+        }
+        @include pc{
+            margin-bottom: 50px;
+        }
+        @include small{
+            margin-bottom: 25px;
+        }
+    }
+    .g-btn.g-btn--lg{
+        margin: 0 auto;
+        display: block;
+        width: auto;
+        padding: 7px 31px;
+        font-size: 22px;
+        font-weight: 600;
+        
+        @include huge{
+            font-size: 16px;
+            min-height: 46px;
+            padding: 7px 22px
+        }
+        @include pc{
+//            min-height: 47px;
+//            font-size: 16px;mm
+        }
+        @include small{
+            min-height: 36px;
+            padding: 7px 20px;
+            line-height: 21px;
+            font-size: 15px;
+        }
+    }
+}
+.b-modal__heading_responce{
+    margin-bottom: 45px;
+    line-height: normal;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    
+    @include huge{
+        font-size: 26.22px;
+        margin-bottom: 34px;
+    }
+//    @include pc{
+//    }
+    @include small{
+        margin-bottom: 25px;
+        line-height: 26px;
+        font-size: 22px;
+    }
+}
+.b-modal_info{
+    @extend .b-modal_responce;
+    
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @include huge{
+        padding: 70px;
+        min-height: 450px;
+    }
+    @include pc{
+        padding: 60px;
+        min-height: 300px;
+    }
+    @include small{
+        min-height: 340px;
+    }
+    
+    >.g-h2:only-of-type{
+        margin-bottom: 0;
+    }
+    
+    .g-h2{
+        
+        @include note{
+            line-height: 1.6;
+            font-size: 18px;
+        }
+        @include tablet{
+            font-size: 17px;
+        }
+        @include small{
+            font-size: 15px;
+        }
+    }
+}

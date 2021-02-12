@@ -1,0 +1,85 @@
+.catalog{
+	width: percentage(1200/1620);
+	vertical-align: top;
+	float: right;
+    
+    @include pc{
+        width: 100%;
+    }
+    @include note{
+        width: 100%;
+    }
+    
+    .b-row{
+        @include tablet{
+            margin: 0 auto;
+            width: 482px;
+        }
+        @include small{
+            width: 100%;
+        }
+        
+        .selectric-wrapper{
+            display: inline-block;
+            vertical-align: middle;
+            width: 174px;
+
+            @include huge{
+                width: 130px;
+            }
+            @include pc{
+                width: 120px;
+            }
+            @include note{
+                float: right;
+//                width: 120px;
+            }
+
+            .selectric {
+
+                .label{
+                    font-weight: 600;
+
+                    @include pc{
+                        margin: 0px 25px 0 11px;
+                        height: 28px;
+                        line-height: 29px;
+                    }
+                }
+                .button{
+                    height: 40px;
+
+                    @include huge{
+                        height: 30px;
+                    }
+                    @include pc{
+    //                    right: 9px;
+                        right: 7px;
+                        top: 0px;
+                        width: 15px;
+                        height: 30px;
+    //                    line-height: 28px;
+                    }
+
+                    &:after{
+    //                    border-width: 5px;
+                        border: none;
+                        width: 8px;
+                        height: 5px;
+                        background-image: url(../img/svg/i-qty-down.svg);
+                        background-repeat: no-repeat;
+
+                        @include pc{
+                            width: 7px;
+                            height: 4px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .b-product{
+        display: block!important;
+    }
+}

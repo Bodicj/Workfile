@@ -1,0 +1,182 @@
+
+<!-- MAIN MENU -->
+@@include('./../parts/nav.html')
+<!-- /MAIN MENU -->
+<section class="section_checkout">
+    <!-- breadcrumbs -->
+    <div class="b-breadcrumbs">
+        <div class="container">
+            <a href="" class="b-breadcrumbs__item">Главная</a>
+            <span class="b-breadcrumbs__item">оформление заказа</span>
+        </div>
+    </div>
+    <!-- /breadcrumbs -->
+    
+    <div class="container">
+<!--        <h2 class="section__title section__title_checkout">Оформление заказа <span class="hidden-small">в 3 шага</span></h2>-->
+        <h2 class="section__title section__title_checkout">Оформление заказа в 3 шага</h2>
+<!--        <div class="section__subtitle section__subtitle_checkout">оформление заказа в 3 шага!</div>-->
+        
+        <!-- CHECKOUT BLOCK-->
+        <form action="" class="b-checkout">
+            <div class="b-checkout__contacts js-tabs">
+                <div class="b-checkout__heading">1. Контактные данные</div>
+                <div class="b-form_cart">
+                    <div class="b-cart__checkout">
+                        <a data-tab="#registered" class="g-btn js-tab js-tab_default">я постоянный клиент</a>
+                        <a data-tab="#new" class="g-btn g-btn--grey js-tab">я новый покупатель</a>
+                    </div>
+                </div>
+                <div class="b-checkout__login arcticmodal js-tabcontent" id="registered">
+                    <div class="arcticmodal-body">
+                        <div class="g-form__field">
+                            <input class="g-input" type="email" name="email" placeholder="E-mail" required>
+                        </div>
+                        <div class="g-form__field">
+                            <input class="g-input" type="password" name="password" placeholder="Пароль" pattern="[^\s]{4,}" required>
+                        </div>
+                        <div class="g-form__field">
+                            <button class="g-btn">Войти</button>
+                            <a href="" class="g-btn g-btn--link">Забыли пароль?</a>
+                        </div>
+                    </div>
+                    <div class="arcticmodal-footer">
+                        <div class="g-text--center">
+                            <div class="g-h3">
+                                или Войти через социальные сети:
+                            </div>
+                            <div class="b-social_modal">
+                                <a href=""><img src="./img/icons/i-fb.svg" alt=""></a>
+                                <a href=""><img src="./img/icons/i-gplus.svg" alt=""></a>
+                            </div>
+
+                        </div>
+                        <div class="g-form__alarm">
+                            <i class="icon-alarm"></i>
+                            <p>ваши личные данные защищены <a href="">политикой конфиденциальности</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-checkout__register arcticmodal js-tabcontent" id="new">
+                    <div class="g-form__field">
+                        <input class="g-input" type="text" name="name" placeholder="Имя" pattern="([A-Za-zА-Яа-яЁёІіЇї]{2,}\s*)+" required>
+                    </div>
+                    <div class="g-form__field">
+                        <label>
+                            <input class="g-input" type="email" name="email" placeholder="E-mail" required>
+                            <span>Введите ваш e-mail</span>
+                        </label>
+                    </div>
+                    <div class="g-form__field">
+                        <label>
+                            <input class="g-input" type="tel" name="phoneNum" placeholder="Ваш номер телефона" required>
+                            <span>Ваш номер телефона</span>
+                        </label>
+                    </div>
+                    <div class="g-form__field">
+                        <input class="g-input" type="text" name="address" placeholder="Адрес доставки" pattern="(\s*[A-Za-zА-Яа-яЁёІіЇї0-9]+\s*)+" required>
+                    </div>
+                    <div class="g-form__field">
+                        <textarea class="g-input" name="comment" placeholder="Добавить открытку (бесплатно) или комментарий к заказу"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="b-checkout__payDeliv">
+                <div class="b-checkout__heading">2. способы доставки и оплаты</div>
+                <div class="b-payDeliv">
+                    <div class="b-payDeliv__heading">Доставка</div>
+                    <ul class="b-payDeliv__options">
+                        <li class="b-payDeliv__option">
+                            <input type="radio" name="delivery" value="courier" id="courier" class="g-radio" checked>
+                            <label for="courier" class="b-option__heading">Курьером по Киеву</label>
+                            <ul class="b-option__info">
+                                <li>доставка до отделения;</li>
+                                <li>сроки 1-3 рабочих дня;</li>
+                            </ul>
+                        </li>
+                        <li class="b-payDeliv__option">
+                            <input type="radio" name="delivery" value="subway" id="subway" class="g-radio">
+                            <label for="subway" class="b-option__heading">До ближайшей станции метро</label>
+                            <ul class="b-option__info">
+                                <li>lorem</li>
+                            </ul>
+                        </li>
+                        <li class="b-payDeliv__option">
+                            <input type="radio" name="delivery" value="bySelf" id="bySelf" class="g-radio">
+                            <label for="bySelf" class="b-option__heading">Самовывоз</label>
+                            <ul class="b-option__info">
+                                <li>стоимость доставки 40грн.</li>
+                            </ul>
+                        </li>
+                        <li class="b-payDeliv__option">
+                            <input type="radio" name="delivery" value="suburb" id="suburb" class="g-radio">
+                            <label for="suburb" class="b-option__heading">Доставка в пригород</label>
+                            <ul class="b-option__info">
+                                <li>lorem</li>
+                                <li>ipsum</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="b-payDeliv">
+                    <div class="b-payDeliv__heading">Оплата</div>
+                    <ul class="b-payDeliv__options">
+                        <li class="b-payDeliv__option">
+                            <input type="radio" name="pay" value="cash" id="cash" class="g-radio">
+                            <label for="cash" class="b-option__heading">Наличными</label>
+                            <ul class="b-option__info">
+                                <li>оплата при получении заказа</li>
+                            </ul>
+                        </li>
+                        <li class="b-payDeliv__option">
+                            <input type="radio" name="pay" value="cashless" id="cashless" class="g-radio">
+                            <label for="cashless" class="b-option__heading">Безналичный</label>
+                            <ul class="b-option__info">
+                                <li>оплата через  Приват24</li>
+                                <li>оплата квитанцией  в любом отделении банка</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="b-checkout__checkboxes">
+                <input id="ecobox" type="checkbox" name="ecobox" class="g-checkbox">
+                <label for="ecobox">Добавить эко-упаковку</label>
+                <input id="costume" type="checkbox" name="costume" class="g-checkbox">
+                <label for="costume">Доставка в костюме</label>
+            </div>
+            <div class="b-checkout__products b-form_cart">
+               <div class="b-checkout__heading">3. проверьте ваш заказ</div>
+                @@for (i=1; i<=5; i++){
+                    @@include('./../parts/checkout-item.html', {"index": "`+i+`"})
+                }
+                    
+                <div class="b-form__footer_checkout">
+                    <div class="b-checkout__field_price">
+                        <div class="b-checkout__desc">Доставка</div>
+                        <div class="b-checkout__price">90 грн</div>
+                    </div>
+                    <div class="b-checkout__field_price">
+                        <div class="b-checkout__desc">костюм</div>
+                        <div class="b-checkout__price">100 грн</div>
+                    </div>
+                    <div class="b-checkout__field_price">
+                        <div class="b-checkout__desc">эко-упаковка</div>
+                        <div class="b-checkout__price">30 грн</div>
+                    </div>
+                </div>
+                <div class="b-form__footer_cart">
+                    <div class="b-cart__promo">
+                        <a href="./cart.html" class="g-btn g-btn--grey">редактировать заказ</a>
+                    </div>
+                    <div class="b-cart__checkout">
+                        <div class="b-cart__total_price">итого: 6 000 грн</div>
+                        <button type="submit" class="g-btn">завершить оформление</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- /CHECKOUT BLOCK-->
+    </div>
+
+</section>

@@ -1,5 +1,6 @@
 var gulp         = require('gulp'), // Подключаем Gulp
 	sass         = require('gulp-ruby-sass'), //Подключаем Sass пакет,
+	sourcemaps   = require('gulp-sourcemaps'),
 	fileinclude  = require('gulp-file-include'),
 	spritesmith  = require('gulp.spritesmith'),
 	notify       = require('gulp-notify'),
@@ -18,10 +19,10 @@ var config = {
 		server: {
 			baseDir: "./dist"
 		},
-		tunnel: true,
+		// tunnel: true,
 		host: 'localhost',
 		port: 9000,
-		logPrefix: "Frontend_Devil"
+		logPrefix: "browserSync"
 	};
 
 
@@ -29,10 +30,31 @@ var config = {
 
 	gulp.task('js', function() {
 		return gulp.src([
-				'app/libs/jquery/dist/jquery.min.js',
-				'app/js/script.js'])
-				.pipe(concat('script.min.js'))
-				//.pipe(uglify()) // Сжимаем JS файл
+				'app/js/libs/jquery.min.js',
+				'app/js/libs/user-agent.js',
+				'app/js/libs/arcticmodal.min.js',
+				'app/js/libs/jquery.matchHeight-min.js',
+				'app/js/libs/jquery.validate.min.js',
+				'app/js/libs/jquery.bxslider.min.js',
+				'app/js/libs/ion.rangeSlider.min.js',
+				'app/js/libs/jquery.mousewheel.min.js',
+				'app/js/libs/jquery.jscrollpane.min.js',
+				'app/js/libs/jquery.selectric.min.js',
+				'app/js/libs/swiper.min.js',
+				'app/js/libs/slick.min.js',
+				'app/js/libs/clamp.min.js',
+				'app/js/libs/tooltipster.bundle.min.js',
+				'app/js/libs/jquery.maskedinput.min.js',
+				'app/js/libs/simple-lightbox.min.js',
+				'app/js/script.js',
+				])
+				.pipe(sourcemaps.init())
+				.pipe(concat("script.min.js"))
+				// .pipe(sourcemaps.init({loadMaps: true}))
+				// .pipe(concat('script.min.js'))
+				// .pipe(uglify({outSourceMap: true})) // Об'єднуємо js файли і стискаємо їх
+				// .pipe(uglify({outSourceMap: true})) // Об'єднуємо js файли і стискаємо їх
+				.pipe(sourcemaps.write('.'))	// Після мінімізації чомусь неробочий sourcemap файл
 				.pipe(gulp.dest('dist/js')); // Выгружаем в папку app/js
 	});
 
@@ -45,12 +67,15 @@ var config = {
 
 
 	gulp.task('scss', function(){ // Создаем таск Sass
-		return sass('app/scss/style.scss',{
+		// return sass('app/scss/style.scss',{	// compile only style.css
+		return sass('app/scss/*.scss',{	// compile all root css files (added contacts.scss for custom footer)
                 style: 'compressed',
-                "sourcemap=none": true
+                sourcemap: true
              })
-			.pipe(autoprefixer(['last 3 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
-			.pipe(cssnano())
+			.pipe(autoprefixer(['last 10 major versions', "Firefox > 20", '> 0.1%', 'ie 10-11'])) // Создаем префиксы
+			// .pipe(autoprefixer(['last 3 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true })) // Создаем префиксы
+			// .pipe(cssnano())
+	        .pipe(sourcemaps.write('.'))
 			.pipe(gulp.dest('dist/css'))
 			.pipe(notify({ message: 'CSS done!' }));
 	});
@@ -66,32 +91,45 @@ var config = {
 			.src(['./app/template/*.html'])
 			.pipe(fileinclude({
 		      prefix: '@@',
-	          basepath: '@file'
+	          basepath: '@file',
+	          context:{
+	          	arr: ["цветок", "цветы", "кому", "повод", "тип букета", "вид", "сезон", "букет из", "количество", "вид композиции"]
+	          }
 		    }))
 		    .pipe(gulp.dest('./dist'))
 	        .pipe(notify({ message: 'HTML done!', onLast: true  }));
+	    
+			// gulp
+			// .src(['./app/template/ajax/*.html'])
+			// .pipe(fileinclude({
+		 //      prefix: '@@',
+	  //         basepath: '@file'
+		 //    }))
+		 //    .pipe(gulp.dest('./dist/ajax'))
+	  //       .pipe(notify({ message: 'HTML ./ajax/ done!', onLast: true  }));
 	    
 	});
 	gulp.task('html-watch', ['html'], function (done) {
 		setTimeout(function() {
 		    browserSync.reload();
 		    done();
-		},2000);
+		},0);
+		// },2000);
 	});
 
 	// use default task to launch Browsersync and watch JS files
 	gulp.task('serve', ['js','scss','html'], function () {
 
 	    // Serve files from the root of this project
-	    browserSync.init({
-	        baseDir: "./app/"
-	    });
+	    // browserSync.init({
+	    //     baseDir: "./app/"
+	    // });
 
 	    // add browserSync.reload to the tasks array to make
 	    // all browsers reload after tasks are complete.
 	    gulp.watch('app/img/sprite/*.*', ['sprite']);
 	    gulp.watch('app/img/**/*.*', ['img']);
-	    gulp.watch(['libs/**/*.js', 'app/js/script.js'], ['js-watch']);
+	    gulp.watch(['app/js/libs/*.js', 'app/js/script.js'], ['js-watch']);
 	    gulp.watch('app/scss/**/*.scss', ['scss-watch']);
 	    gulp.watch('app/template/**/*.html', ['html-watch']);
 	});
@@ -102,7 +140,7 @@ var config = {
 	            .pipe(spritesmith({
 	                imgName: 'sprite.png',
 	                imgPath: '../img/sprite.png',
-	                cssName: 'sprite.scss',
+	                cssName: '_sprite.scss',
 	                cssFormat: 'scss',
 	                padding: 15
 	            }));
@@ -117,7 +155,7 @@ var config = {
 	});
 
 	gulp.task('img', function() {
-		return gulp.src('app/img/**/*') // Берем все изображения из app
+		return gulp.src(['app/img/**/*', '!app/img/sprite/*']) // Берем все изображения из app, окрім спрайтів
 			.pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками с учетом кеширования
 				interlaced: true,
 				progressive: true,
@@ -127,13 +165,13 @@ var config = {
 			.pipe(gulp.dest('dist/img')); // Выгружаем на продакшен
 	});
 
-	gulp.task('build', ['clean', 'img', 'scss', 'html'], function() {
+	gulp.task('build', ['clean', 'img', 'js', 'sprite', 'scss', 'html'], function() {
 
-		var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
+		var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшн
 		.pipe(gulp.dest('dist/fonts'));
 
-		var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
-		.pipe(gulp.dest('dist/js'));
+		// var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшн
+		// .pipe(gulp.dest('dist/js'));
 	});
 
 	gulp.task('clear', function (callback) {

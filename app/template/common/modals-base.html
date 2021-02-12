@@ -1,0 +1,191 @@
+<!--    next modals (IDs) is here: register, login, promo, callback, calc-->
+    <!-- Form register -->
+    <div class="arcticmodal b-modal_register" id="register">
+        <form action="" class="g-form js-form-register">
+            <div class="arcticmodal-close"><i class="icon-close"></i></div>
+            <div class="arcticmodal-header">Регистрация</div>
+
+            <div class="arcticmodal-body">
+                <div class="g-form__field">
+                    <input class="g-input" type="email" name="email" required placeholder="e-mail">
+                </div>
+                <div class="g-form__field">
+                    <input class="g-input" type="password" name="password" required pattern=".{5,}" placeholder="пароль">
+                </div>
+                <div class="g-form__field">
+                    <input class="g-input" type="password" name="comparePassword" required pattern=".{5,}" placeholder="пароль еще раз">
+                </div>
+                <div class="g-form__field">
+                    <button type="submit" class="g-btn">Дальше</button>
+                </div>
+            </div>
+
+            <div class="arcticmodal-footer">
+                <div class="g-form__alarm">
+                    <i class="icon-alarm"></i>
+                    <p>ваши личные данные защищены <a href="">политикой конфиденциальности</a></p>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <!-- /Form register -->
+
+    <!-- Form login -->
+    <div class="arcticmodal b-modal_login" id="login">
+        <form action="" class="g-form js-form-login">
+            <div class="arcticmodal-close"><i class="icon-close"></i></div>
+            <div class="arcticmodal-header">Вход</div>
+
+            <div class="arcticmodal-body">
+                <div class="g-form__field">
+                    <input class="g-input" type="email" name="email" required placeholder="e-mail">
+                </div>
+                <div class="g-form__field">
+                    <input class="g-input" type="password" name="password" required placeholder="пароль">
+                </div>
+                <div class="g-form__field">
+                    <button type="submit" class="g-btn">Войти</button>
+                    <a class="g-btn g-btn--link">Забыли пароль?</a>
+                </div>
+            </div>
+
+            <div class="arcticmodal-footer">
+                <div class="g-text--center">
+                    <div class="g-h3">
+                        или <br> Войти через социальные сети:
+                    </div>
+                    <div class="b-social_modal">
+                        <a href=""><img src="./img/icons/i-fb.svg" width="36" alt=""></a>
+                        <a href=""><img src="./img/icons/i-gplus.svg" width="36" alt=""></a>
+                    </div>
+
+                    <a href="" class="g-btn g-btn--link">Нет учетной записи?</a>
+                    <button class="g-btn g-btn--md g-btn--alt" data-modal="register">Зарегистрироваться</button>
+                </div>
+                <div class="g-form__alarm">
+                    <i class="icon-alarm"></i>
+                    <p>ваши личные данные защищены <a href="">политикой конфиденциальности</a></p>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <!-- /Form login -->
+
+    <!-- Form promo -->
+    <div class="arcticmodal b-modal_promo" id="promo">
+        <div class="arcticmodal-close"><i class="icon-close"></i></div>
+        <!--                        <img src="http://placehold.jp/430x510.png"  class="b-modal_promo__left" alt="">-->
+        <img src="./img/modals/promo-430.jpg" class="b-modal_promo__left" alt="">
+
+        <div class="b-modal_promo__right">
+            <p class="g-h2">Получи бесплатно живой подарок стомостью 190 грн<br>при покупке от 949 грн</p>
+            <p class="g-h2"><span>Промокод</span><span>fregood</span></p>
+            <form action="" class="g-form js-form-promo">
+                <div class="g-form__field g-form__field--inline">
+                    <input class="g-input" type="text" name="code" required pattern="[A-Za-z0-9]{2,}" placeholder="Промокод">
+                    <button type="submit" class="g-btn g-btn--alt">Получить</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <!-- /Form promo -->
+    
+    <!-- Form promo alt -->
+    <div class="arcticmodal b-modal_promoAlt" id="promoAlt">
+        <div class="arcticmodal-close"><i class="icon-close"></i></div>
+        <!--                        <img src="http://placehold.jp/430x510.png"  class="b-modal_promo__left" alt="">-->
+        <img src="./img/modals/promo-430.jpg" class="b-modal_promo__left" alt="">
+
+        <div class="b-modal_promo__right">
+            <p class="g-h2">Получи бесплатно живой подарок стомостью 190 грн<br>при покупке от 949 грн</p>
+            <p class="">Промокод fregood</p>
+            <form action="" class="g-form js-form-promo">
+                <div class="g-form__field g-form__field--inline">
+                    <input class="g-input" type="email" name="code" required placeholder="E-mail">
+                    <button type="submit" class="g-btn g-btn--alt">Подписаться</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <!-- /Form promo alt -->
+    
+    <!-- Info form modal -->
+    <div class="arcticmodal b-modal_info" id="info">
+        <div class="arcticmodal-close"><i class="icon-close"></i></div>
+        <p class="g-h2">Получи бесплатно живой подарок стомостью 190 грн<br>при покупке от 949 грн</p>
+    </div>
+    <!-- /Info form modal -->
+    
+    <!-- Form login -->
+    <div class="arcticmodal b-modal_ware" id="ware">
+        <form action="" class="g-form js-form-login">
+            <div class="arcticmodal-close"><i class="icon-close"></i></div>
+            <div class="arcticmodal-header g-text--center">Товар добавлен в корзину</div>
+
+            <div class="arcticmodal-body">
+                <div class="g-form__field">
+                    <button type="submit" class="g-btn">Оформить заказ</button>
+                    <a class="g-btn g-btn--link">Продолжить покупки</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- /Form login -->
+    
+    <!-- Callback Form -->
+    <div class="b-modal b-modal_callback" id="callback">
+        <div class="arcticmodal-close"><i class="icon-close"></i></div>
+
+        <form action="" class="b-form js-form-callback">
+          <div class="b-form__inner">
+            <div class="b-form__header">Заказать звонок</div>
+            <div class="b-form__content">
+              <div class="b-form__field">
+                <i class="icon-user"></i>
+                <input type="text" name="name" pattern="[A-Za-zА-Яа-яЁёІіЇї\s]{2,}" placeholder="* Ваше имя:">
+              </div>
+              <div class="b-form__field">
+                <i class="icon-phone"></i>
+                <input type="tel" name="phone" placeholder="* Контактный телефон:">
+              </div>
+            </div>
+            <div class="b-form__action">
+              <input type="submit" class="g-btn" value="Отправить заявку">
+            </div>
+          </div>
+        </form>
+
+    </div>
+    <!-- /Callback Form -->
+
+    <!-- Calc Form -->
+    <div class="b-modal b-modal_calc" id="calc">
+      <div class="arcticmodal-close"><i class="icon-close"></i></div>
+      <form action="" class="b-form js-form-calc">
+        <div class="b-form__inner">
+          <div class="b-form__header">Рассчитать стоимость</div>
+          <div class="b-form__content">
+            <div class="b-form__field">
+              <i class="icon-user"></i>
+              <input type="text" name="name" pattern="[A-Za-zА-Яа-яЁёІіЇї\s]{2,}" placeholder="* Ваше имя:">
+            </div>
+            <div class="b-form__field">
+              <i class="icon-phone"></i>
+              <input type="tel" name="phone" required placeholder="* Контактный телефон:">
+            </div>
+            <div class="b-form__field">
+              <i class="icon-mail"></i>
+              <input type="email" name="email" required placeholder="Ваш e-mail:">
+            </div>
+          </div>
+          <div class="b-form__action">
+            <input type="submit" class="g-btn" value="Отправить заявку">
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- /Calc Form -->

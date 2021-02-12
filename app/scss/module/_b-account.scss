@@ -6,22 +6,43 @@
 	i,
 	span {
 		vertical-align: middle;
-		@include fourK {
-			margin-left: 18px;
-		}
+//		@include fourK {
+//			margin-left: 18px;
+//		}
 	}
-	i{
-		margin-right: 10px;
-	}
+    
+    &:hover{
+        i[class^="icon-"]{
+            filter: brightness(2);
+        }
+    }
+    
+    i[class^="icon-"]{
+		margin-right: 9.6px;
+        filter: brightness(1);
+        transition: filter .3s;
+	
+        @include huge{
+            margin-right: 7px;
+            width: 21px;
+            height: 21px;
+            transform: scale(1);
+        }
+    }
+    span{
+        vertical-align: -6%;
+        letter-spacing: .004em;
+    }
 
 	@include huge {
-		font-size: 16px;
+		line-height: 16.38px;
+		font-size: 13.84px;
 	}
-	@include twoK {
-		font-size:24px;
-	}
-	@include fourK {
-		font-size: 40px;
-		line-height: 45px;
-	}
+//	@include twoK {
+//		font-size:24px;
+//	}
+//	@include fourK {
+//		font-size: 40px;
+//		line-height: 45px;
+//	}
 }

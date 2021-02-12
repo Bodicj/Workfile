@@ -1,8 +1,80 @@
 .b-counters{
 	@include clearfix();
-	margin-left: -4px;
-}
-.b-counters__item{
-	float: left;
-	margin-right: 10px;
+    padding-top: 1px;
+//	margin-left: -4px;
+    
+    @include note{
+        order: 2;
+        padding: 0 15px;
+        line-height: 22px;
+//        padding-left: 9px;
+        padding-right: 24px;
+    }
+    @include tablet{
+//        padding-left: 9px;
+        padding-left: 15px;
+    }
+    @include small{
+        display: flex;
+        width: 100%;
+        padding:0 15px;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    a{
+
+        .b-counters__item{
+            float: left;
+            margin-right: 10px;
+            height: auto;
+
+            @include huge{
+                width: 33px;
+                height: 17px;
+            }
+            @include pc{
+                width: 45px;
+                height: 22px;
+            }
+            @include note{
+                float: none;
+//                width: 45px;
+                margin-right: 5px;
+            }
+
+            @include tablet{
+                margin-right: 5px;
+            }
+
+            @include small{
+                margin-right: 0;
+            }
+
+        }
+
+        &:first-child{
+
+        }
+        &:last-child{
+            @include small{
+//                margin-right: 17px;
+                margin-right: 3px;
+            }
+
+            .b-counters__item{
+                @include huge{
+                    width: 24px;
+                }
+                @include pc{
+                    width: 33px;
+                }
+                @include note{
+                    margin-right: 0;
+//                    width: 33px;
+                }
+            }
+        }
+    }
 }

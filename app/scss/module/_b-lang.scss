@@ -1,16 +1,40 @@
 .b-lang{
-	padding: 11px 2px;
+    position: relative;
+	padding: 10px 16px 8px;
 	cursor: pointer;
 	transition: all .3s;
+    
+    line-height: 16px;
+    margin-top: 0;
+	font-size: 19px;
+	font-weight: 600;
+	color: #3d3f3c;
+    
+	@include huge {
+		padding: 5px 13px 4px;
+	}
+    
 	&:hover{
-		background:#fff;
+		background:#f5f5f5;
+        text-decoration: underline;
+        
+        .b-lang__list{
+            opacity: 1;
+            visibility: visible;
+            background:#f5f5f5;
+        }
+	}
+    
+	@include huge {
+		font-size: 13.84px;
+    	padding-top: 6px;
 	}
 }
 .b-lang__current{
 	position: relative;
-	padding-right: 15px;
+//	padding-right: 14px;
 	line-height: 20px;
-	font-size: 19px;
+//	font-size: 19px;
 	font-weight: 600;
 	color: #3d3f3c;
 	cursor: pointer;
@@ -18,31 +42,69 @@
 	&:after{
 		content: '';
 		position: absolute;
-		top: 8px; right: 4px;
-		@include triangle(3px, #3d3f3c, 'down');
-		@include twoK {
-			@include triangle(4px, #3d3f3c, 'down')
-		}
-		@include fourK {
-			@include triangle(6px, #3d3f3c, 'down');
-			top: 17px;
-		}
+		top: 9px;
+        right: -11px;
+		@include triangle(3.5px, #3d3f3c, 'down');
+        border-top: 4px solid #3d3f3c;
+        
+//		@include fourK {
+//			@include triangle(6px, #3d3f3c, 'down');
+//			top: 17px;
+//		}
+//		@include twoK {
+//			@include triangle(4px, #3d3f3c, 'down')
+//		}
+        @include huge{
+            right: -9px;
+            @include triangle(3px, #3d3f3c, 'down');
+            border-top: 3px solid #3d3f3c;
+        }
 	}
 
-	@include huge {
-		font-size: 16px;
-	}
-	@include twoK {
-		font-size: 24px;
-	}
-	@include fourK {
-		font-size: 40px;
-		line-height: 45px;
-	}
+//	@include twoK {
+//		font-size: 24px;
+//	}
+//	@include fourK {
+//		font-size: 40px;
+//		line-height: 45px;
+//	}
 }
 .b-lang__list{
-	display: none;
+	visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
 	padding: 0;
 	margin: 0;
 	list-style-type: none;
+    z-index: 10;
+	transition: all .3s;
+}
+
+.b-lang__item{
+    padding: 8px 16px;
+    text-align: center;
+    
+    &:hover{
+        background: #a5aeb6;
+    }
+    
+    @include huge {
+		padding: 4px 13px;
+	}
+    
+    &:last-child{
+        padding-bottom: 10px;
+            
+        @include huge{
+            padding-bottom: 5px;
+        }
+    }
+    
+    a{
+        color: #3d3f3c;
+	    cursor: pointer;
+    }
 }

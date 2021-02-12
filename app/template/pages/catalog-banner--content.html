@@ -1,0 +1,132 @@
+
+<!-- MAIN MENU -->
+@@include('./../parts/nav.html')
+<!-- /MAIN MENU -->
+
+
+<section class="section section--catalog">
+
+  @@include('./../parts/breadcrumbs.html')
+
+  <h2 class="section__title">Букеты и композиции</h2>
+     
+  <div class="b-groups-menu b-groups-menu_slider" id="frame">
+    <ul class="b-groups-menu__list js-slider_menu">
+      <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букеты</a></li>
+      <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букет за час</a></li>
+      <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букеты в коробках</a></li>
+      <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">композиции</a></li>
+      <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">бизнес-букет</a></li>
+      <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link is--current">суккуленты</a></li>
+      <li class="b-groups-menu__item"></li>
+    </ul>
+  </div>
+      
+  <div class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="b-groups-menu">
+        <ul class="b-groups-menu__list">
+          <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букеты</a></li>
+          <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букет за час</a></li>
+          <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букеты в коробках</a></li>
+          <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">композиции</a></li>
+          <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">бизнес-букет</a></li>
+          <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link is--current">суккуленты</a></li>
+        </ul>
+      </div>
+
+      @@include('./../parts/filters-few.html')
+
+      <!-- form simple order -->
+      <div class="b-widget">
+        <div class="b-wiget__body">
+          <a href="#">
+            <img src="./img/banners/b-1.png" alt="">
+          </a>
+        </div>
+      </div>
+      <!-- /form simple order -->
+
+      <!-- form simple order -->
+      <article class="b-widget">
+        <h3 class="b-widget__title">заказать уникальный букет</h3>
+        <p class="b-widget__text">Если Вы не нашли букет, который хотели бы купить, мы можем выполнить индивидуальный заказ. Для этого достаточно оставить заявкусвяжеться с Вами!</p>
+
+        <div class="b-widget__body">
+          <form class="g-form js-form-simple-order">
+            <div class="g-form__field">
+              <input class="g-input g-input--md" type="text" name="name" placeholder="Имя">
+            </div>
+            <div class="g-form__field">
+              <input class="g-input g-input--md" type="tel" name="phone" placeholder="Номер телефона">
+            </div>
+            <div class="g-form__field">
+              <button class="b-widget__btn">Оставить заявку</button>
+            </div>
+          </form>
+        </div>
+      </article>
+      <!-- /form simple order -->
+
+    </aside>
+    <!-- /SIDEBAR -->
+
+    <!-- CATALOG -->
+    <div class="catalog">
+      
+      <!-- PRODUCTS -->
+      <div class="b-row">
+<!--        <div class="col col--4-of-12 col--push-8-of-12 col--d-last">-->
+          <form id="sort" class="b-sort" tabindex="100">
+            <label class="b-sort__text" for="sortBy">Сортировать:</label>
+            <select class="js-selectric" name="sortBy" id="sortBy">
+                <option value="" class="label" hidden selected disabled>Сортировать</option>
+                <option value="name">По названию</option>
+                <option value="priceUp">По цене &uarr;</option>
+                <option value="priceDown">По цене &darr;</option>
+                <option value="rating">По новизне</option>
+                <option value="rating">По рейтингу</option>
+            </select>
+<!--
+            <div class="b-sort__dropdown">
+              <i class="icon-sort-down"></i>
+              <span class="b-sort__selected">По названию</span>
+              <ul id="sort_items" class="b-sort__list">
+                  <li class="b-sort__item"><a href="">По названию</a></label></li>
+                  <li class="b-sort__item"><a href="">По названию</a></label></li>
+                  <li class="b-sort__item"><a href="">По названию</a></label></li>
+                  <li class="b-sort__item"><a href="">По названию</a></label></li>
+              </ul>
+            </div>
+-->
+             <div class="g-btn g-btn--bordered g-btn--grey js-filters-toggle">ФИЛЬТРОВАТЬ</div>
+          </form>
+<!--        </div>-->
+      </div>
+
+    <div class="content-block" id="catalog_product1">
+      @@for (i=1; i<=15; i++){
+          @@include('./../parts/product.html', {"index": "`+i+`"})
+      }
+    </div>
+      <!-- /PRODUCTS -->
+
+      <div class="b-pagination">
+        <span class="b-pagination__item is--current">1</span>
+        <a href="" class="b-pagination__item">2</a>
+        <a href="" class="b-pagination__item">3</a>
+        <a href="" class="b-pagination__item">4</a>
+        <a href="" class="b-pagination__item is--ellipsis">...</a>
+        <a href="" class="b-pagination__item">99</a>
+        <a href="" class="b-pagination__item">100</a>
+      </div>
+
+
+    </div>
+    <!-- /CATALOG -->
+  </div>
+
+</section>
+
+@@include('./../parts/seo-text.html')

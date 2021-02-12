@@ -5,33 +5,28 @@
 
 	<meta charset="utf-8">
 
-	<title> Catalog page </title>
+	<title> Catalog </title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+<!--
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;subset=cyrillic" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:900&amp;subset=cyrillic" rel="stylesheet">
+-->
 	<link rel="stylesheet" href="./css/style.css">
 
 	<!--[if lt IE 9]>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
 	<![endif]-->
 
-	<!-- Chrome, Firefox OS and Opera -->
-	<meta name="theme-color" content="#0f0f0f">
-	<!-- Windows Phone -->
-	<meta name="msapplication-navbutton-color" content="#0f0f0f">
-	<!-- iOS Safari -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="#0f0f0f">
-
 </head>
 
 <body class="page">
 
 	<!-- HEADER -->
-	<header class="header header--simple">
+	<header class="header header--simple" id="header">
 
 		<!-- Header TOP -->
 		<div class="header__top">
@@ -39,14 +34,8 @@
 
 				<!-- Logo -->
 				<div class="header__logo">
-					<a href="" class="b-logo">
-						<span class="b-logo__inner">
-							<img src="./img/logo.png" alt="">
-							
-							<span class="b-logo__text">
-								<img src="./img/logo-text.png" alt="">
-							</span>
-						</span>
+					<a href="#" class="b-logo">
+                        <img src="./img/svg/logo-full.svg" alt="">
 					</a>
 				</div>
 				<!-- /Logo -->
@@ -55,8 +44,8 @@
 					<!-- phones -->
 					<div class="header__phones">
 						<ul class="b-phones">
-							<li class="b-phones__item">+380 99-99-71-12</li>
-							<li class="b-phones__item">+380 44-19-11-12</li>
+							<li class="b-phones__item"><a href="tel:+38099997112" class="b-phones__link_header">+380 99-99-71-12</a></li>
+                            <li class="b-phones__item"><a href="tel:+38044191112" class="b-phones__link_header">+380 44-19-11-12</a></li>
 						</ul>
 					</div>
 					<!-- /phones -->
@@ -65,7 +54,7 @@
 					<div class="header__location">
 						<div class="b-location">
 							<div class="b-location__current">Киев</div>
-							<div class="b-location__more">Все адреса <a href="" data-modal="promo">здесь</a></div>
+							<div class="b-location__more">Все адреса <a href="">здесь</a></div>
 						</div>
 					</div>
 					<!-- /location -->
@@ -74,15 +63,35 @@
 				<div class="header__top-right">
 					<!-- social -->
 					<div class="header__social">
-						<div class="b-social">
-							<a href="" class="b-social__item"><i class="icon-facebook-black"></i></a>
-							<a href="" class="b-social__item"><i class="icon-in-black"></i></a>
-							<a href="" class="b-social__item"><i class="icon-gplus-black"></i></a>
-							<a href="" class="b-social__item"><i class="icon-youtube-black"></i></a>
+						<div class="b-social b-social--header">
+							<a href="" class="b-social__item" data-modal="promo">
+							    <i class="icon-facebook-black"></i>
+							</a>
+							<a href="" class="b-social__item" data-modal="promoAlt">
+							    <i class="icon-insta-black"></i>
+							</a>
+							<a href="" class="b-social__item" data-modal="info">
+							    <i class="icon-gplus-black"></i>
+				            </a>
+							<a href="" class="b-social__item" data-modal="ware">
+							    <i class="icon-youtube-black"></i>
+							</a>
 						</div>
 					</div>
 					<!-- /social -->
 
+					<!-- lang -->
+					<div class="header__lang">
+						<div class="b-lang">
+							<div class="b-lang__current"><span>Ru</span></div>
+							<ul class="b-lang__list">
+								<li class="b-lang__item"><a href="">En</a></li>
+								<li class="b-lang__item"><a href="">Ua</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- /lang -->
+					
 					<!-- account -->
 					<div class="header__account">
 						<a href="" class="b-account" data-modal="login">
@@ -91,17 +100,6 @@
 					</div>
 					<!-- /account -->
 
-					<!-- lang -->
-					<div class="header__lang">
-						<div class="b-lang">
-							<div class="b-lang__current"><span>Ru</span></div>
-							<ul class="b-lang__list">
-								<li class="b-lang__item">En</li>
-								<li class="b-lang__item">Ua</li>
-							</ul>
-						</div>
-					</div>
-					<!-- /lang -->
 				</div>
 			</div>
 		</div>
@@ -110,6 +108,9 @@
 		<!-- Header BOTTOM -->
 		<div class="header__bottom">
 			<div class="container">
+			    <div class="js-nav-toggle b-mobile-nav__toggle">
+			        <span class="icon-nav">toggle menu</span>
+			     </div>
 				<div class="header__bottom-left">
 					<!-- menu -->
 					<nav class="header__menu">
@@ -133,27 +134,153 @@
 					</nav>
 					<!-- /menu -->
 				</div>
+				
 				<div class="header__bottom-right">
 					<!-- search -->
 					<div class="header__search">
 
-						<form class="b-search">
-							<input type="text" placeholder="Поиск">
-							<button class="icon-search"></button>
+						<form action="" class="b-search js-search">
+                            <div class="b-wrapper_search js-minisearch">
+                                <input type="text" name="search" placeholder="Поиск">
+                            </div>
+                            <button type="submit" class="icon-search"></button>
 						</form>
 
 					</div>
 					<!-- /search -->
 
 					<!-- cart -->
-					<div class="header__cart">
-						<a href="/" class="b-cart">
+					<div class="header__cart js-cart">
+						<span class="b-cart">
 							<i class="icon-cart-white"></i>
-							<span class="b-cart__total b-cart__total--white">1</span>
-						</a>
+							<span class="b-cart__total b-cart__total--white">20</span>
+						</span>
+                        <div class="js-minicart b-minicart">
+                            <div class="b-cart__wrapper">
+                                <form action="" class="">
+                                    
+                                        
+<div class="b-minicart__item">
+    <div class="b-item__img">
+        <img src="./img/minicart-product.png" alt="букет">
+    </div>
+    <div class="b-item__content">
+        <div class="b-item__heading">название букета несколько слов</div>
+        <p class="b-item__desc">роза, ромашка, пион, тюльпан</p>
+        <div class="b-item__articul">Артикул <span class="b-articul">12</span></div>
+        <div class="b-item__price">800 грн</div>
+    </div>
+    <div class="b-item__controls">
+        <div class="b-item__del js-item__del"><i class="icon-close-small"></i></div>
+        <div class="b-item__counter">
+            <span class="js-qty-minus">-</span>
+            <input type="text" name="articul-1" data-price="800" class="js-qty-input" value="2">
+            <span class="js-qty-plus">+</span>
+        </div>
+    </div>
+</div>
+                                    
+                                        
+<div class="b-minicart__item">
+    <div class="b-item__img">
+        <img src="./img/minicart-product.png" alt="букет">
+    </div>
+    <div class="b-item__content">
+        <div class="b-item__heading">название букета несколько слов</div>
+        <p class="b-item__desc">роза, ромашка, пион, тюльпан</p>
+        <div class="b-item__articul">Артикул <span class="b-articul">12</span></div>
+        <div class="b-item__price">800 грн</div>
+    </div>
+    <div class="b-item__controls">
+        <div class="b-item__del js-item__del"><i class="icon-close-small"></i></div>
+        <div class="b-item__counter">
+            <span class="js-qty-minus">-</span>
+            <input type="text" name="articul-2" data-price="800" class="js-qty-input" value="2">
+            <span class="js-qty-plus">+</span>
+        </div>
+    </div>
+</div>
+                                    
+                                        
+<div class="b-minicart__item">
+    <div class="b-item__img">
+        <img src="./img/minicart-product.png" alt="букет">
+    </div>
+    <div class="b-item__content">
+        <div class="b-item__heading">название букета несколько слов</div>
+        <p class="b-item__desc">роза, ромашка, пион, тюльпан</p>
+        <div class="b-item__articul">Артикул <span class="b-articul">12</span></div>
+        <div class="b-item__price">800 грн</div>
+    </div>
+    <div class="b-item__controls">
+        <div class="b-item__del js-item__del"><i class="icon-close-small"></i></div>
+        <div class="b-item__counter">
+            <span class="js-qty-minus">-</span>
+            <input type="text" name="articul-3" data-price="800" class="js-qty-input" value="2">
+            <span class="js-qty-plus">+</span>
+        </div>
+    </div>
+</div>
+                                    
+                                        
+<div class="b-minicart__item">
+    <div class="b-item__img">
+        <img src="./img/minicart-product.png" alt="букет">
+    </div>
+    <div class="b-item__content">
+        <div class="b-item__heading">название букета несколько слов</div>
+        <p class="b-item__desc">роза, ромашка, пион, тюльпан</p>
+        <div class="b-item__articul">Артикул <span class="b-articul">12</span></div>
+        <div class="b-item__price">800 грн</div>
+    </div>
+    <div class="b-item__controls">
+        <div class="b-item__del js-item__del"><i class="icon-close-small"></i></div>
+        <div class="b-item__counter">
+            <span class="js-qty-minus">-</span>
+            <input type="text" name="articul-4" data-price="800" class="js-qty-input" value="2">
+            <span class="js-qty-plus">+</span>
+        </div>
+    </div>
+</div>
+                                    
+                                        
+<div class="b-minicart__item">
+    <div class="b-item__img">
+        <img src="./img/minicart-product.png" alt="букет">
+    </div>
+    <div class="b-item__content">
+        <div class="b-item__heading">название букета несколько слов</div>
+        <p class="b-item__desc">роза, ромашка, пион, тюльпан</p>
+        <div class="b-item__articul">Артикул <span class="b-articul">12</span></div>
+        <div class="b-item__price">800 грн</div>
+    </div>
+    <div class="b-item__controls">
+        <div class="b-item__del js-item__del"><i class="icon-close-small"></i></div>
+        <div class="b-item__counter">
+            <span class="js-qty-minus">-</span>
+            <input type="text" name="articul-5" data-price="800" class="js-qty-input" value="2">
+            <span class="js-qty-plus">+</span>
+        </div>
+    </div>
+</div>
+                                    
+                                    <div class="b-minicart__total_price">итого: 6 000 грн</div>
+                                    <button type="submit" class="g-btn">оформить заказ</button>
+                                        
+                                    <div class="g-text--center">
+                                        <a class="b-minicart__link" href="">Перейти в корзину</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
 					</div>
 					<!-- /cart -->
 				</div>
+				
+                <a href="#" class="b-logo b-logo--simple">
+                    <img src="./img/svg/logo-simple.svg" alt="">
+                </a>
+                
 			</div>
 		</div>
 		<!-- /Header BOTTOM -->
@@ -162,6 +289,7 @@
 	<!-- /HEADER -->
 
 	<!-- scroll -->
+<!--
 	<div class="scroll js-fixed-header">
 		<div class="container">
 			<div class="scroll__logo">
@@ -170,33 +298,8 @@
 				</a>
 			</div>
 			<div class="scroll__nav">
-				
-<!-- navigation simple -->
-<div class="b-nav b-nav--simple">
-
-  <ul class="b-nav__list">
-    <li class="b-nav__item b-nav__item--simple-1">
-      <a href="" class="b-nav__link">Букеты и композиции</a>
-    </li>
-    <li class="b-nav__item b-nav__item--simple-2">
-      <a href="" class="b-nav__link">Букет невесты</a>
-    </li>
-    <li class="b-nav__item b-nav__item--simple-3">
-      <a href="" class="b-nav__link">Свадебная флористика</a>
-    </li>
-    <li class="b-nav__item b-nav__item--simple-4">
-      <a href="" class="b-nav__link">Оформление мероприятий</a>
-    </li>
-    <li class="b-nav__item b-nav__item--simple-5">
-      <a href="" class="b-nav__link">Собрать букет</a>
-    </li>
-    <li class="b-nav__item b-nav__item--simple-6">
-      <a href="" class="b-nav__link">Подарки и презенты</a>
-    </li>
-  </ul>
-
-</div>
-<!-- /navigation simple -->
+				@@
+				include('./../parts/nav-simple.html')
 			</div>
 			<div class="scroll__cart">
 				<a href="/" class="b-cart">
@@ -206,37 +309,126 @@
 			</div>
 		</div>
 	</div>
+-->
 	<!-- /scroll -->
 
 	<!-- mobile navigation -->
-	<div class="b-mobile-nav">
-	<div class="js-nav-toggle b-mobile-nav__toggle"><span class="icon-nav">toggle menu</span></div>
-	<ul class="b-mobile-nav__list">
-    <li class="b-mobile-nav__item">
-      <a href="" class="b-mobile-nav__link">Главная</a>
-    </li>
-    <li class="b-mobile-nav__item">
-      <a href="" class="b-mobile-nav__link">Лекарственные травы</a>
-    </li>
-    <li class="b-mobile-nav__item">
-      <a href="" class="b-mobile-nav__link">Оптовым покупателям</a>
-    </li>
-	</ul>
+	<div class="b-mobile-nav js-mobile-nav" style="display:none">
+<!--
+    <div class="js-nav-toggle b-mobile-nav__toggle is--active">
+        <span class="icon-nav">toggle menu</span>
+    </div>
+-->
+    <div class="b-mobile-nav__heading">
+        Меню
+        <div class="b-wrapper_icon-close js-nav-toggle">
+            <i class="icon-close-white"></i>
+        </div>
+    </div>
+    <div class="b-mobile-nav_wrapper js-scrollPane">
+        <ul class="b-mobile-nav__list">
+            <li class="b-mobile-nav__item">
+                <a href="" class="b-mobile-nav__link">Главная</a>
+            </li>
+            <li class="b-mobile-nav__item js-accordion__item">
+                <span class="b-mobile-nav__link b-mobile-nav__link_accordion js-accordion__trigger">Букеты и композиции</span>
+                <ul class="b-mobile-subnav js-accordion__content">
+                    <li class="b-mobile-nav__item">
+                        <a href="" class="b-mobile-nav__link">Lorem ipsum 1</a>
+                    </li>
+                    <li class="b-mobile-nav__item">
+                        <a href="" class="b-mobile-nav__link">Lorem ipsum 2</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="b-mobile-nav__item">
+                <a href="" class="b-mobile-nav__link">Букет невесты</a>
+            </li>
+            <li class="b-mobile-nav__item js-accordion__item">
+                <span class="b-mobile-nav__link b-mobile-nav__link_accordion js-accordion__trigger">Свадебная флористика</span>
+                <ul class="b-mobile-subnav js-accordion__content">
+                    <li class="b-mobile-nav__item">
+                        <a href="" class="b-mobile-nav__link">Lorem ipsum 1</a>
+                    </li>
+                    <li class="b-mobile-nav__item">
+                        <a href="" class="b-mobile-nav__link">Lorem ipsum 2</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="b-mobile-nav__item js-accordion__item">
+                <span class="b-mobile-nav__link b-mobile-nav__link_accordion js-accordion__trigger">Оформление мероприятий</span>
+                <ul class="b-mobile-subnav js-accordion__content">
+                    <li class="b-mobile-nav__item">
+                        <a href="" class="b-mobile-nav__link">Lorem ipsum 1</a>
+                    </li>
+                    <li class="b-mobile-nav__item">
+                        <a href="" class="b-mobile-nav__link">Lorem ipsum 2</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="b-mobile-nav__item">
+                <a href="" class="b-mobile-nav__link">Собрать букет</a>
+            </li>
+            <li class="b-mobile-nav__item js-accordion__item">
+                <span class="b-mobile-nav__link b-mobile-nav__link_accordion js-accordion__trigger">Подарки и призенты</span>
+                <ul class="b-mobile-subnav js-accordion__content">
+                    <li class="b-mobile-nav__item">
+                        <a href="" class="b-mobile-nav__link">Lorem ipsum 1</a>
+                    </li>
+                    <li class="b-mobile-nav__item">
+                        <a href="" class="b-mobile-nav__link">Lorem ipsum 2</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    
+        <ul class="b-mobile-nav__list">
+            <li class="b-mobile-nav__item js-accordion__item">
+                <span class="b-mobile-nav__link b-mobile-nav__link_accordion js-accordion__trigger">Ru</span>
+                <ul class="b-mobile-subnav js-accordion__content">
+                    <li class="b-mobile-nav__item">
+                        <a href="" class="b-mobile-nav__link">En</a>
+                    </li>
+                    <li class="b-mobile-nav__item">
+                        <a href="" class="b-mobile-nav__link">Ukr</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="b-mobile-nav__item">
+                <a href="" class="b-mobile-nav__link" data-modal="login">Личный кабинет</a>
+            </li>
+        </ul>
+        <ul class="b-mobile-nav__list">
+            <li class="b-mobile-nav__item">
+                <a href="" class="b-mobile-nav__link">О нас</a>
+            </li>
+            <li class="b-mobile-nav__item">
+                <a href="" class="b-mobile-nav__link">Услуги</a>
+            </li>
+            <li class="b-mobile-nav__item">
+                <a href="" class="b-mobile-nav__link">Доставка</a>
+            </li>
+            <li class="b-mobile-nav__item">
+                <a href="" class="b-mobile-nav__link">Оплата</a>
+            </li>
+            <li class="b-mobile-nav__item">
+                <a href="" class="b-mobile-nav__link">Контакты</a>
+            </li>
+        </ul>
+    </div>
 </div>
 	<!-- /mobile navigation -->
 	
 
 
 
-
 <!-- MAIN MENU -->
-
 <!-- navigation -->
 <div class="b-nav b-nav--header">
   <div class="container">
     <ul class="b-nav__list">
       <li class="b-nav__item b-nav__item-1 with--subnav">
-        <a href="" class="b-nav__link">Букеты и композиции</a>
+        <a href="" class="b-nav__link">Букеты и<br>композиции</a>
         <ul class="b-nav__sublist">
           <li class="b-nav__sublist-item">
             <a href="" class="b-nav__sublist-link">Сложившаяся структура </a>
@@ -252,20 +444,90 @@
           </li>
         </ul>
       </li>
-      <li class="b-nav__item b-nav__item-2">
-        <a href="" class="b-nav__link">Букет невесты</a>
+      <li class="b-nav__item b-nav__item-2 with--subnav">
+        <a href="" class="b-nav__link">Букет<br>невесты</a>
+        <ul class="b-nav__sublist">
+          <li class="b-nav__sublist-item">
+            <a href="" class="b-nav__sublist-link">Сложившаяся структура </a>
+          </li>
+          <li class="b-nav__sublist-item">
+            <a href="" class="b-nav__sublist-link">Организации позволяет </a>
+          </li>
+          <li class="b-nav__sublist-item">
+            <a href="" class="b-nav__sublist-link">Выполнять важные </a>
+          </li>
+          <li class="b-nav__sublist-item">
+            <a href="" class="b-nav__sublist-link">Задания по разработке </a>
+          </li>
+        </ul>
       </li>
-      <li class="b-nav__item b-nav__item-3">
-        <a href="" class="b-nav__link">Свадебная флористика</a>
+      <li class="b-nav__item b-nav__item-3 with--subnav">
+        <a href="" class="b-nav__link">Свадебная<br>флористика</a>
+        <ul class="b-nav__sublist">
+          <li class="b-nav__sublist-item">
+            <a href="" class="b-nav__sublist-link">Сложившаяся структура </a>
+          </li>
+          <li class="b-nav__sublist-item">
+            <a href="" class="b-nav__sublist-link">Организации позволяет </a>
+          </li>
+          <li class="b-nav__sublist-item">
+            <a href="" class="b-nav__sublist-link">Выполнять важные </a>
+          </li>
+          <li class="b-nav__sublist-item">
+            <a href="" class="b-nav__sublist-link">Задания по разработке </a>
+          </li>
+        </ul>
       </li>
-      <li class="b-nav__item b-nav__item-4">
-        <a href="" class="b-nav__link">Оформление мероприятий</a>
+      <li class="b-nav__item b-nav__item-4 with--subnav">
+        <a href="" class="b-nav__link">Оформление<br>мероприятий</a>
+        <ul class="b-nav__sublist">
+          <li class="b-nav__sublist-item">
+            <a href="" class="b-nav__sublist-link">Сложившаяся структура </a>
+          </li>
+          <li class="b-nav__sublist-item">
+            <a href="" class="b-nav__sublist-link">Организации позволяет </a>
+          </li>
+          <li class="b-nav__sublist-item">
+            <a href="" class="b-nav__sublist-link">Выполнять важные </a>
+          </li>
+          <li class="b-nav__sublist-item">
+            <a href="" class="b-nav__sublist-link">Задания по разработке </a>
+          </li>
+        </ul>
       </li>
-      <li class="b-nav__item b-nav__item-5">
-        <a href="" class="b-nav__link">Собрать букет</a>
+      <li class="b-nav__item b-nav__item-5 with--subnav">
+        <a href="" class="b-nav__link">Собрать<br>букет</a>
+        <ul class="b-nav__sublist">
+          <li class="b-nav__sublist-item">
+            <a href="" class="b-nav__sublist-link">Сложившаяся структура </a>
+          </li>
+          <li class="b-nav__sublist-item">
+            <a href="" class="b-nav__sublist-link">Организации позволяет </a>
+          </li>
+          <li class="b-nav__sublist-item">
+            <a href="" class="b-nav__sublist-link">Выполнять важные </a>
+          </li>
+          <li class="b-nav__sublist-item">
+            <a href="" class="b-nav__sublist-link">Задания по разработке </a>
+          </li>
+        </ul>
       </li>
-      <li class="b-nav__item b-nav__item-6">
-        <a href="" class="b-nav__link">Подарки<br />и презенты</a>
+      <li class="b-nav__item b-nav__item-6 with--subnav">
+        <a href="" class="b-nav__link">Подарки<br>и презенты</a>
+        <ul class="b-nav__sublist">
+          <li class="b-nav__sublist-item">
+            <a href="" class="b-nav__sublist-link">Сложившаяся структура </a>
+          </li>
+          <li class="b-nav__sublist-item">
+            <a href="" class="b-nav__sublist-link">Организации позволяет </a>
+          </li>
+          <li class="b-nav__sublist-item">
+            <a href="" class="b-nav__sublist-link">Выполнять важные </a>
+          </li>
+          <li class="b-nav__sublist-item">
+            <a href="" class="b-nav__sublist-link">Задания по разработке </a>
+          </li>
+        </ul>
       </li>
     </ul>
   </div>
@@ -286,325 +548,606 @@
 </div>
 <!-- /breadcrumbs -->
 
-  <h2 class="section__title">Букеты и композиции</h2>
+  <h2 class="section__title section__title_catalog">Букеты и композиции</h2>
+     
+  <div class="b-groups-menu b-groups-menu_slider" id="frame">
+    <ul class="b-groups-menu__list js-slider_menu">
+      <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букеты</a></li>
+      <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букет за час</a></li>
+      <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букеты в коробках</a></li>
+      <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">композиции</a></li>
+      <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">бизнес-букет</a></li>
+      <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link is--current">суккуленты</a></li>
+      <li class="b-groups-menu__item"></li>
+    </ul>
+  </div>
+      
   <div class="container">
     <!-- SIDEBAR -->
     <aside class="sidebar">
       <div class="b-groups-menu">
         <ul class="b-groups-menu__list">
-          <li class="b-groups-menu__item"><a href="" class="b-groups-menu__link">букеты</a></li>
-          <li class="b-groups-menu__item"><a href="" class="b-groups-menu__link">букет за час</a></li>
-          <li class="b-groups-menu__item"><a href="" class="b-groups-menu__link">композиции</a></li>
-          <li class="b-groups-menu__item"><a href="" class="b-groups-menu__link">бизнес-букет</a></li>
-          <li class="b-groups-menu__item"><a href="" class="b-groups-menu__link is--current">суккуленты</a></li>
+          <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букеты</a></li>
+          <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букет за час</a></li>
+          <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">букеты в коробках</a></li>
+          <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">композиции</a></li>
+          <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link">бизнес-букет</a></li>
+          <li class="b-groups-menu__item"><a href="#" class="b-groups-menu__link is--current">суккуленты</a></li>
         </ul>
       </div>
 
       
 <!-- Filter -->
-<form class="b-filter">
-
-  <!-- filter block -->
-  <div class="b-filter__slider-wrapper">
-    <h4 class="b-filter__title">Цена <i class="icon-toggler"></i></h4>
-    <div class="b-filter__slider">
-      <div class="b-filter__slider-inner">
-          <input type="text" id="price_range" name="price">
-      </div>
-      <div class="b-filter__action">
-        <a href="" class="g-btn g-btn--primary">поиск по цене</a>
-      </div>
+<form class="b-filter js-filters">
+  
+  <div class="b-mobile-nav__heading b-mobile-nav__heading_filter">
+    Фильтр
+    <div class="b-wrapper_icon-close js-close_filters js-filters-toggle">
+        <i class="icon-close-white"></i>
     </div>
   </div>
-  <!-- /filter block -->
 
-  
-  <!-- filter block -->
-  <div class="b-filter__block">
-    <h4 class="b-filter__title">кому <i class="icon-toggler"></i></h4>
-    <ul class="b-filter__block-items">
-      <li>
-        <input id="r-11" type="checkbox" name="o-11" class="g-checkbox">
-        <label for="r-11">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-12" type="checkbox" name="o-12" class="g-checkbox">
-        <label for="r-12">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-13" type="checkbox" name="o-13" class="g-checkbox">
-        <label for="r-13">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-14" type="checkbox" name="o-14" class="g-checkbox">
-        <label for="r-14">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-15" type="checkbox" name="o-15" class="g-checkbox">
-        <label for="r-15">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-16" type="checkbox" name="o-16" class="g-checkbox">
-        <label for="r-16">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-17" type="checkbox" name="o-17" class="g-checkbox">
-        <label for="r-17">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-18" type="checkbox" name="o-18" class="g-checkbox">
-        <label for="r-18">Элемент выбора</label>
-      </li>
-    </ul>
-  </div>
-  <!-- /filter block -->
-  
-  <!-- filter block -->
-  <div class="b-filter__block">
-    <h4 class="b-filter__title">кому <i class="icon-toggler"></i></h4>
-    <ul class="b-filter__block-items">
-      <li>
-        <input id="r-21" type="checkbox" name="o-21" class="g-checkbox">
-        <label for="r-21">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-22" type="checkbox" name="o-22" class="g-checkbox">
-        <label for="r-22">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-23" type="checkbox" name="o-23" class="g-checkbox">
-        <label for="r-23">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-24" type="checkbox" name="o-24" class="g-checkbox">
-        <label for="r-24">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-25" type="checkbox" name="o-25" class="g-checkbox">
-        <label for="r-25">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-26" type="checkbox" name="o-26" class="g-checkbox">
-        <label for="r-26">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-27" type="checkbox" name="o-27" class="g-checkbox">
-        <label for="r-27">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-28" type="checkbox" name="o-28" class="g-checkbox">
-        <label for="r-28">Элемент выбора</label>
-      </li>
-    </ul>
-  </div>
-  <!-- /filter block -->
-  
-  <!-- filter block -->
-  <div class="b-filter__block">
-    <h4 class="b-filter__title">кому <i class="icon-toggler"></i></h4>
-    <ul class="b-filter__block-items">
-      <li>
-        <input id="r-31" type="checkbox" name="o-31" class="g-checkbox">
-        <label for="r-31">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-32" type="checkbox" name="o-32" class="g-checkbox">
-        <label for="r-32">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-33" type="checkbox" name="o-33" class="g-checkbox">
-        <label for="r-33">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-34" type="checkbox" name="o-34" class="g-checkbox">
-        <label for="r-34">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-35" type="checkbox" name="o-35" class="g-checkbox">
-        <label for="r-35">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-36" type="checkbox" name="o-36" class="g-checkbox">
-        <label for="r-36">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-37" type="checkbox" name="o-37" class="g-checkbox">
-        <label for="r-37">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-38" type="checkbox" name="o-38" class="g-checkbox">
-        <label for="r-38">Элемент выбора</label>
-      </li>
-    </ul>
-  </div>
-  <!-- /filter block -->
-  
-  <!-- filter block -->
-  <div class="b-filter__block">
-    <h4 class="b-filter__title">кому <i class="icon-toggler"></i></h4>
-    <ul class="b-filter__block-items">
-      <li>
-        <input id="r-41" type="checkbox" name="o-41" class="g-checkbox">
-        <label for="r-41">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-42" type="checkbox" name="o-42" class="g-checkbox">
-        <label for="r-42">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-43" type="checkbox" name="o-43" class="g-checkbox">
-        <label for="r-43">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-44" type="checkbox" name="o-44" class="g-checkbox">
-        <label for="r-44">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-45" type="checkbox" name="o-45" class="g-checkbox">
-        <label for="r-45">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-46" type="checkbox" name="o-46" class="g-checkbox">
-        <label for="r-46">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-47" type="checkbox" name="o-47" class="g-checkbox">
-        <label for="r-47">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-48" type="checkbox" name="o-48" class="g-checkbox">
-        <label for="r-48">Элемент выбора</label>
-      </li>
-    </ul>
-  </div>
-  <!-- /filter block -->
-  
-  <!-- filter block -->
-  <div class="b-filter__block">
-    <h4 class="b-filter__title">кому <i class="icon-toggler"></i></h4>
-    <ul class="b-filter__block-items">
-      <li>
-        <input id="r-51" type="checkbox" name="o-51" class="g-checkbox">
-        <label for="r-51">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-52" type="checkbox" name="o-52" class="g-checkbox">
-        <label for="r-52">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-53" type="checkbox" name="o-53" class="g-checkbox">
-        <label for="r-53">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-54" type="checkbox" name="o-54" class="g-checkbox">
-        <label for="r-54">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-55" type="checkbox" name="o-55" class="g-checkbox">
-        <label for="r-55">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-56" type="checkbox" name="o-56" class="g-checkbox">
-        <label for="r-56">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-57" type="checkbox" name="o-57" class="g-checkbox">
-        <label for="r-57">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-58" type="checkbox" name="o-58" class="g-checkbox">
-        <label for="r-58">Элемент выбора</label>
-      </li>
-    </ul>
-  </div>
-  <!-- /filter block -->
-  
-  <!-- filter block -->
-  <div class="b-filter__block">
-    <h4 class="b-filter__title">кому <i class="icon-toggler"></i></h4>
-    <ul class="b-filter__block-items">
-      <li>
-        <input id="r-61" type="checkbox" name="o-61" class="g-checkbox">
-        <label for="r-61">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-62" type="checkbox" name="o-62" class="g-checkbox">
-        <label for="r-62">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-63" type="checkbox" name="o-63" class="g-checkbox">
-        <label for="r-63">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-64" type="checkbox" name="o-64" class="g-checkbox">
-        <label for="r-64">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-65" type="checkbox" name="o-65" class="g-checkbox">
-        <label for="r-65">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-66" type="checkbox" name="o-66" class="g-checkbox">
-        <label for="r-66">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-67" type="checkbox" name="o-67" class="g-checkbox">
-        <label for="r-67">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-68" type="checkbox" name="o-68" class="g-checkbox">
-        <label for="r-68">Элемент выбора</label>
-      </li>
-    </ul>
-  </div>
-  <!-- /filter block -->
-  
-  <!-- filter block -->
-  <div class="b-filter__block">
-    <h4 class="b-filter__title">кому <i class="icon-toggler"></i></h4>
-    <ul class="b-filter__block-items">
-      <li>
-        <input id="r-71" type="checkbox" name="o-71" class="g-checkbox">
-        <label for="r-71">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-72" type="checkbox" name="o-72" class="g-checkbox">
-        <label for="r-72">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-73" type="checkbox" name="o-73" class="g-checkbox">
-        <label for="r-73">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-74" type="checkbox" name="o-74" class="g-checkbox">
-        <label for="r-74">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-75" type="checkbox" name="o-75" class="g-checkbox">
-        <label for="r-75">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-76" type="checkbox" name="o-76" class="g-checkbox">
-        <label for="r-76">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-77" type="checkbox" name="o-77" class="g-checkbox">
-        <label for="r-77">Элемент выбора</label>
-      </li>
-      <li>
-        <input id="r-78" type="checkbox" name="o-78" class="g-checkbox">
-        <label for="r-78">Элемент выбора</label>
-      </li>
-    </ul>
-  </div>
-  <!-- /filter block -->
-  
+    <div class="b-filters_scrolled">
+        <!-- filter price block -->
+        <div class="b-filter__slider-wrapper">
+          <h4 class="b-filter__title">Цена
+              <i class="icon-toggler"></i>
+              <i class="icon-toggler-white"></i>
+          </h4>
+          <div class="b-filter__slider">
+            <div class="b-filter__slider-inner">
+                <div class="mfilter-price-inputs">
+                    от <input id="mfilter-opts-price-min" type="text" class="form-control" value="">
+                    до <input id="mfilter-opts-price-max" type="text" class="form-control" value="">
+                    грн.
+                </div>
+                <input type="text" id="price_range" name="price">
+            </div>
+            <div class="b-filter__action">
+              <a href="#" class="g-btn g-btn--primary">поиск по цене</a>
+            </div>
+          </div>
+        </div>
+        <!-- /filter price block -->
 
-
+        
+              <!-- filter block -->
+  <div class="b-filter__block">
+    <h4 class="b-filter__title">цветок
+        <i class="icon-toggler"></i>
+        <i class="icon-toggler-white"></i>
+    </h4>
+    <ul class="b-filter__block-items">
+        
+          <li>
+            <input id="r-11" type="checkbox" name="o-11" class="g-checkbox">
+            <label for="r-11">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-12" type="checkbox" name="o-12" class="g-checkbox">
+            <label for="r-12">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-13" type="checkbox" name="o-13" class="g-checkbox">
+            <label for="r-13">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-14" type="checkbox" name="o-14" class="g-checkbox">
+            <label for="r-14">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-15" type="checkbox" name="o-15" class="g-checkbox">
+            <label for="r-15">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-16" type="checkbox" name="o-16" class="g-checkbox">
+            <label for="r-16">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-17" type="checkbox" name="o-17" class="g-checkbox">
+            <label for="r-17">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-18" type="checkbox" name="o-18" class="g-checkbox">
+            <label for="r-18">Элемент выбора</label>
+          </li>          
+        
+    </ul>
+  </div>
+  <!-- /filter block -->
+  
+        
+              <!-- filter block -->
+  <div class="b-filter__block">
+    <h4 class="b-filter__title">цветы
+        <i class="icon-toggler"></i>
+        <i class="icon-toggler-white"></i>
+    </h4>
+    <ul class="b-filter__block-items">
+        
+          <li>
+            <input id="r-21" type="checkbox" name="o-21" class="g-checkbox">
+            <label for="r-21">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-22" type="checkbox" name="o-22" class="g-checkbox">
+            <label for="r-22">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-23" type="checkbox" name="o-23" class="g-checkbox">
+            <label for="r-23">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-24" type="checkbox" name="o-24" class="g-checkbox">
+            <label for="r-24">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-25" type="checkbox" name="o-25" class="g-checkbox">
+            <label for="r-25">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-26" type="checkbox" name="o-26" class="g-checkbox">
+            <label for="r-26">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-27" type="checkbox" name="o-27" class="g-checkbox">
+            <label for="r-27">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-28" type="checkbox" name="o-28" class="g-checkbox">
+            <label for="r-28">Элемент выбора</label>
+          </li>          
+        
+    </ul>
+  </div>
+  <!-- /filter block -->
+  
+        
+              <!-- filter block -->
+  <div class="b-filter__block">
+    <h4 class="b-filter__title">кому
+        <i class="icon-toggler"></i>
+        <i class="icon-toggler-white"></i>
+    </h4>
+    <ul class="b-filter__block-items">
+        
+          <li>
+            <input id="r-31" type="checkbox" name="o-31" class="g-checkbox">
+            <label for="r-31">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-32" type="checkbox" name="o-32" class="g-checkbox">
+            <label for="r-32">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-33" type="checkbox" name="o-33" class="g-checkbox">
+            <label for="r-33">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-34" type="checkbox" name="o-34" class="g-checkbox">
+            <label for="r-34">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-35" type="checkbox" name="o-35" class="g-checkbox">
+            <label for="r-35">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-36" type="checkbox" name="o-36" class="g-checkbox">
+            <label for="r-36">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-37" type="checkbox" name="o-37" class="g-checkbox">
+            <label for="r-37">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-38" type="checkbox" name="o-38" class="g-checkbox">
+            <label for="r-38">Элемент выбора</label>
+          </li>          
+        
+    </ul>
+  </div>
+  <!-- /filter block -->
+  
+        
+              <!-- filter block -->
+  <div class="b-filter__block">
+    <h4 class="b-filter__title">повод
+        <i class="icon-toggler"></i>
+        <i class="icon-toggler-white"></i>
+    </h4>
+    <ul class="b-filter__block-items">
+        
+          <li>
+            <input id="r-41" type="checkbox" name="o-41" class="g-checkbox">
+            <label for="r-41">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-42" type="checkbox" name="o-42" class="g-checkbox">
+            <label for="r-42">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-43" type="checkbox" name="o-43" class="g-checkbox">
+            <label for="r-43">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-44" type="checkbox" name="o-44" class="g-checkbox">
+            <label for="r-44">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-45" type="checkbox" name="o-45" class="g-checkbox">
+            <label for="r-45">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-46" type="checkbox" name="o-46" class="g-checkbox">
+            <label for="r-46">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-47" type="checkbox" name="o-47" class="g-checkbox">
+            <label for="r-47">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-48" type="checkbox" name="o-48" class="g-checkbox">
+            <label for="r-48">Элемент выбора</label>
+          </li>          
+        
+    </ul>
+  </div>
+  <!-- /filter block -->
+  
+        
+              <!-- filter block -->
+  <div class="b-filter__block">
+    <h4 class="b-filter__title">тип букета
+        <i class="icon-toggler"></i>
+        <i class="icon-toggler-white"></i>
+    </h4>
+    <ul class="b-filter__block-items">
+        
+          <li>
+            <input id="r-51" type="checkbox" name="o-51" class="g-checkbox">
+            <label for="r-51">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-52" type="checkbox" name="o-52" class="g-checkbox">
+            <label for="r-52">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-53" type="checkbox" name="o-53" class="g-checkbox">
+            <label for="r-53">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-54" type="checkbox" name="o-54" class="g-checkbox">
+            <label for="r-54">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-55" type="checkbox" name="o-55" class="g-checkbox">
+            <label for="r-55">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-56" type="checkbox" name="o-56" class="g-checkbox">
+            <label for="r-56">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-57" type="checkbox" name="o-57" class="g-checkbox">
+            <label for="r-57">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-58" type="checkbox" name="o-58" class="g-checkbox">
+            <label for="r-58">Элемент выбора</label>
+          </li>          
+        
+    </ul>
+  </div>
+  <!-- /filter block -->
+  
+        
+              <!-- filter block -->
+  <div class="b-filter__block">
+    <h4 class="b-filter__title">вид
+        <i class="icon-toggler"></i>
+        <i class="icon-toggler-white"></i>
+    </h4>
+    <ul class="b-filter__block-items">
+        
+          <li>
+            <input id="r-61" type="checkbox" name="o-61" class="g-checkbox">
+            <label for="r-61">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-62" type="checkbox" name="o-62" class="g-checkbox">
+            <label for="r-62">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-63" type="checkbox" name="o-63" class="g-checkbox">
+            <label for="r-63">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-64" type="checkbox" name="o-64" class="g-checkbox">
+            <label for="r-64">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-65" type="checkbox" name="o-65" class="g-checkbox">
+            <label for="r-65">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-66" type="checkbox" name="o-66" class="g-checkbox">
+            <label for="r-66">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-67" type="checkbox" name="o-67" class="g-checkbox">
+            <label for="r-67">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-68" type="checkbox" name="o-68" class="g-checkbox">
+            <label for="r-68">Элемент выбора</label>
+          </li>          
+        
+    </ul>
+  </div>
+  <!-- /filter block -->
+  
+        
+              <!-- filter block -->
+  <div class="b-filter__block">
+    <h4 class="b-filter__title">сезон
+        <i class="icon-toggler"></i>
+        <i class="icon-toggler-white"></i>
+    </h4>
+    <ul class="b-filter__block-items">
+        
+          <li>
+            <input id="r-71" type="checkbox" name="o-71" class="g-checkbox">
+            <label for="r-71">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-72" type="checkbox" name="o-72" class="g-checkbox">
+            <label for="r-72">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-73" type="checkbox" name="o-73" class="g-checkbox">
+            <label for="r-73">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-74" type="checkbox" name="o-74" class="g-checkbox">
+            <label for="r-74">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-75" type="checkbox" name="o-75" class="g-checkbox">
+            <label for="r-75">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-76" type="checkbox" name="o-76" class="g-checkbox">
+            <label for="r-76">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-77" type="checkbox" name="o-77" class="g-checkbox">
+            <label for="r-77">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-78" type="checkbox" name="o-78" class="g-checkbox">
+            <label for="r-78">Элемент выбора</label>
+          </li>          
+        
+    </ul>
+  </div>
+  <!-- /filter block -->
+  
+        
+              <!-- filter block -->
+  <div class="b-filter__block">
+    <h4 class="b-filter__title">букет из
+        <i class="icon-toggler"></i>
+        <i class="icon-toggler-white"></i>
+    </h4>
+    <ul class="b-filter__block-items">
+        
+          <li>
+            <input id="r-81" type="checkbox" name="o-81" class="g-checkbox">
+            <label for="r-81">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-82" type="checkbox" name="o-82" class="g-checkbox">
+            <label for="r-82">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-83" type="checkbox" name="o-83" class="g-checkbox">
+            <label for="r-83">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-84" type="checkbox" name="o-84" class="g-checkbox">
+            <label for="r-84">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-85" type="checkbox" name="o-85" class="g-checkbox">
+            <label for="r-85">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-86" type="checkbox" name="o-86" class="g-checkbox">
+            <label for="r-86">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-87" type="checkbox" name="o-87" class="g-checkbox">
+            <label for="r-87">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-88" type="checkbox" name="o-88" class="g-checkbox">
+            <label for="r-88">Элемент выбора</label>
+          </li>          
+        
+    </ul>
+  </div>
+  <!-- /filter block -->
+  
+        
+              <!-- filter block -->
+  <div class="b-filter__block">
+    <h4 class="b-filter__title">количество
+        <i class="icon-toggler"></i>
+        <i class="icon-toggler-white"></i>
+    </h4>
+    <ul class="b-filter__block-items">
+        
+          <li>
+            <input id="r-91" type="checkbox" name="o-91" class="g-checkbox">
+            <label for="r-91">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-92" type="checkbox" name="o-92" class="g-checkbox">
+            <label for="r-92">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-93" type="checkbox" name="o-93" class="g-checkbox">
+            <label for="r-93">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-94" type="checkbox" name="o-94" class="g-checkbox">
+            <label for="r-94">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-95" type="checkbox" name="o-95" class="g-checkbox">
+            <label for="r-95">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-96" type="checkbox" name="o-96" class="g-checkbox">
+            <label for="r-96">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-97" type="checkbox" name="o-97" class="g-checkbox">
+            <label for="r-97">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-98" type="checkbox" name="o-98" class="g-checkbox">
+            <label for="r-98">Элемент выбора</label>
+          </li>          
+        
+    </ul>
+  </div>
+  <!-- /filter block -->
+  
+        
+              <!-- filter block -->
+  <div class="b-filter__block">
+    <h4 class="b-filter__title">вид композиции
+        <i class="icon-toggler"></i>
+        <i class="icon-toggler-white"></i>
+    </h4>
+    <ul class="b-filter__block-items">
+        
+          <li>
+            <input id="r-101" type="checkbox" name="o-101" class="g-checkbox">
+            <label for="r-101">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-102" type="checkbox" name="o-102" class="g-checkbox">
+            <label for="r-102">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-103" type="checkbox" name="o-103" class="g-checkbox">
+            <label for="r-103">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-104" type="checkbox" name="o-104" class="g-checkbox">
+            <label for="r-104">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-105" type="checkbox" name="o-105" class="g-checkbox">
+            <label for="r-105">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-106" type="checkbox" name="o-106" class="g-checkbox">
+            <label for="r-106">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-107" type="checkbox" name="o-107" class="g-checkbox">
+            <label for="r-107">Элемент выбора</label>
+          </li>          
+        
+          <li>
+            <input id="r-108" type="checkbox" name="o-108" class="g-checkbox">
+            <label for="r-108">Элемент выбора</label>
+          </li>          
+        
+    </ul>
+  </div>
+  <!-- /filter block -->
+  
+        
+    </div>
 
   <!-- filter action -->
   <div class="b-filter__action">
-    <input type="reset" class="b-filter__action-btn" value="сбросить все фильтры">
+<!--    <input type="reset" class="b-filter__action-btn" value="сбросить все фильтры">-->
+    <button type="reset" class="b-filter__action-btn">сбросить<span class="c-text"> все фильтры</span></button>
+    <button type="submit" class="b-filter__action-btn">показать</button>
   </div>
   <!-- /filter action -->
 
@@ -613,6 +1156,7 @@
 <!-- /Filter -->
 
       <!-- form simple order -->
+<!--
       <div class="b-widget">
         <div class="b-wiget__body">
           <a href="">
@@ -620,6 +1164,7 @@
           </a>
         </div>
       </div>
+-->
       <!-- /form simple order -->
 
       <!-- form simple order -->
@@ -627,7 +1172,7 @@
         <h3 class="b-widget__title">заказать уникальный букет</h3>
         <p class="b-widget__text">Если Вы не нашли букет, который хотели бы купить, мы можем выполнить индивидуальный заказ. Для этого достаточно оставить заявкусвяжеться с Вами!</p>
 
-        <div class="b-wiget__body">
+        <div class="b-widget__body">
           <form class="g-form js-form-simple-order">
             <div class="g-form__field">
               <input class="g-input g-input--md" type="text" name="name" placeholder="Имя">
@@ -646,13 +1191,23 @@
     </aside>
     <!-- /SIDEBAR -->
 
-    <!-- MAIN -->
-    <div class="main">
+    <!-- CATALOG -->
+    <div class="catalog">
+      
       <!-- PRODUCTS -->
-      <div class="row">
-        <div class="col col--4-of-12 col--push-8-of-12 col--d-last">
-          <div id="sort" class="b-sort" tabindex="100">
-            <div class="b-sort__text">Сортировать:</div>
+      <div class="b-row">
+<!--        <div class="col col--4-of-12 col--push-8-of-12 col--d-last">-->
+          <form id="sort" class="b-sort" tabindex="100">
+            <label class="b-sort__text" for="sortBy">Сортировать:</label>
+            <select class="js-selectric" name="sortBy" id="sortBy">
+                <option value="" class="label" hidden disabled>Сортировать</option>
+                <option value="name" selected>По названию</option>
+                <option value="priceUp">По цене &uarr;</option>
+                <option value="priceDown">По цене &darr;</option>
+                <option value="rating">По новизне</option>
+                <option value="rating">По рейтингу</option>
+            </select>
+<!--
             <div class="b-sort__dropdown">
               <i class="icon-sort-down"></i>
               <span class="b-sort__selected">По названию</span>
@@ -663,248 +1218,615 @@
                   <li class="b-sort__item"><a href="">По названию</a></label></li>
               </ul>
             </div>
-          </div>
+-->
+             <div class="g-btn g-btn--bordered g-btn--grey js-filters-toggle">ФИЛЬТРОВАТЬ</div>
+          </form>
+<!--        </div>-->
+      </div>
+
+    <div class="content-block" id="catalog_product1">
+      
+          <article class="b-product">
+    <div class="b-product__tags">
+        <span class="b-product__tag b-product__tag--sale">sale</span>
+        <span class="b-product__tag b-product__tag--small">small</span>
+        <span class="b-product__tag b-product__tag--new">new</span>
+    </div>
+    <a href="" class="b-product__photo">
+        <img src="./img/products/p-1.png" alt="">
+    </a>
+    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
+    
+    <div class="b-product__nums">
+        <div class="b-product__prices">
+            <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
+            <ins class="b-product__price b-product__price--old">1 800 <span>грн.</span></ins>
         </div>
-      </div>
-
-      <div class="content-block" id="catalog_product1">
-      
-          <article class="b-product">
-  <div class="b-product__tags">
-    <span class="b-product__tag b-product__tag--sale">sale</span>
-    <span class="b-product__tag b-product__tag--small">small</span>
-    <span class="b-product__tag b-product__tag--new">new</span>
-  </div>
-  <a href="" class="b-product__photo">
-    <img src="./img/products/p-1.png" alt="">
-  </a>
-  <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
-  <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
-  <div class="b-product__prices">
-    <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
-  </div>
-  <div class="b-product__qty">
-    <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
-    <input type="text" value="1" class="js-qty-input">
-    <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
-  </div>
-  <div class="b-product__action">
-    <a href="" class="g-btn g-btn--fullwide">Добавить в корзину</a>
-  </div>
-  <div class="b-product__rating">
-    <i class="g-rating g-rating--3"></i>
-  </div>
+        <div class="b-product__qty">
+            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+            <input type="text" value="1" class="js-qty-input">
+            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+        </div>
+    </div>
+    
+    <div class="b-product__action">
+       <span class="b-action__note">под заказ</span>
+        <a href="#" class="g-btn g-btn--fullwide">Добавить в корзину</a>
+    </div>
+    <div class="b-product__rating">
+        <i class="g-rating js-stars_rating" data-rating="3">
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+        </i>
+    </div>
 </article>
-
 
       
           <article class="b-product">
-  <div class="b-product__tags">
-    <span class="b-product__tag b-product__tag--sale">sale</span>
-    <span class="b-product__tag b-product__tag--small">small</span>
-    <span class="b-product__tag b-product__tag--new">new</span>
-  </div>
-  <a href="" class="b-product__photo">
-    <img src="./img/products/p-2.png" alt="">
-  </a>
-  <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
-  <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
-  <div class="b-product__prices">
-    <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
-  </div>
-  <div class="b-product__qty">
-    <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
-    <input type="text" value="1" class="js-qty-input">
-    <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
-  </div>
-  <div class="b-product__action">
-    <a href="" class="g-btn g-btn--fullwide">Добавить в корзину</a>
-  </div>
-  <div class="b-product__rating">
-    <i class="g-rating g-rating--3"></i>
-  </div>
+    <div class="b-product__tags">
+        <span class="b-product__tag b-product__tag--sale">sale</span>
+        <span class="b-product__tag b-product__tag--small">small</span>
+        <span class="b-product__tag b-product__tag--new">new</span>
+    </div>
+    <a href="" class="b-product__photo">
+        <img src="./img/products/p-2.png" alt="">
+    </a>
+    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
+    
+    <div class="b-product__nums">
+        <div class="b-product__prices">
+            <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
+            <ins class="b-product__price b-product__price--old">1 800 <span>грн.</span></ins>
+        </div>
+        <div class="b-product__qty">
+            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+            <input type="text" value="1" class="js-qty-input">
+            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+        </div>
+    </div>
+    
+    <div class="b-product__action">
+       <span class="b-action__note">под заказ</span>
+        <a href="#" class="g-btn g-btn--fullwide">Добавить в корзину</a>
+    </div>
+    <div class="b-product__rating">
+        <i class="g-rating js-stars_rating" data-rating="3">
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+        </i>
+    </div>
 </article>
-
 
       
           <article class="b-product">
-  <div class="b-product__tags">
-    <span class="b-product__tag b-product__tag--sale">sale</span>
-    <span class="b-product__tag b-product__tag--small">small</span>
-    <span class="b-product__tag b-product__tag--new">new</span>
-  </div>
-  <a href="" class="b-product__photo">
-    <img src="./img/products/p-3.png" alt="">
-  </a>
-  <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
-  <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
-  <div class="b-product__prices">
-    <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
-  </div>
-  <div class="b-product__qty">
-    <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
-    <input type="text" value="1" class="js-qty-input">
-    <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
-  </div>
-  <div class="b-product__action">
-    <a href="" class="g-btn g-btn--fullwide">Добавить в корзину</a>
-  </div>
-  <div class="b-product__rating">
-    <i class="g-rating g-rating--3"></i>
-  </div>
+    <div class="b-product__tags">
+        <span class="b-product__tag b-product__tag--sale">sale</span>
+        <span class="b-product__tag b-product__tag--small">small</span>
+        <span class="b-product__tag b-product__tag--new">new</span>
+    </div>
+    <a href="" class="b-product__photo">
+        <img src="./img/products/p-3.png" alt="">
+    </a>
+    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
+    
+    <div class="b-product__nums">
+        <div class="b-product__prices">
+            <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
+            <ins class="b-product__price b-product__price--old">1 800 <span>грн.</span></ins>
+        </div>
+        <div class="b-product__qty">
+            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+            <input type="text" value="1" class="js-qty-input">
+            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+        </div>
+    </div>
+    
+    <div class="b-product__action">
+       <span class="b-action__note">под заказ</span>
+        <a href="#" class="g-btn g-btn--fullwide">Добавить в корзину</a>
+    </div>
+    <div class="b-product__rating">
+        <i class="g-rating js-stars_rating" data-rating="3">
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+        </i>
+    </div>
 </article>
-
 
       
           <article class="b-product">
-  <div class="b-product__tags">
-    <span class="b-product__tag b-product__tag--sale">sale</span>
-    <span class="b-product__tag b-product__tag--small">small</span>
-    <span class="b-product__tag b-product__tag--new">new</span>
-  </div>
-  <a href="" class="b-product__photo">
-    <img src="./img/products/p-4.png" alt="">
-  </a>
-  <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
-  <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
-  <div class="b-product__prices">
-    <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
-  </div>
-  <div class="b-product__qty">
-    <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
-    <input type="text" value="1" class="js-qty-input">
-    <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
-  </div>
-  <div class="b-product__action">
-    <a href="" class="g-btn g-btn--fullwide">Добавить в корзину</a>
-  </div>
-  <div class="b-product__rating">
-    <i class="g-rating g-rating--3"></i>
-  </div>
+    <div class="b-product__tags">
+        <span class="b-product__tag b-product__tag--sale">sale</span>
+        <span class="b-product__tag b-product__tag--small">small</span>
+        <span class="b-product__tag b-product__tag--new">new</span>
+    </div>
+    <a href="" class="b-product__photo">
+        <img src="./img/products/p-4.png" alt="">
+    </a>
+    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
+    
+    <div class="b-product__nums">
+        <div class="b-product__prices">
+            <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
+            <ins class="b-product__price b-product__price--old">1 800 <span>грн.</span></ins>
+        </div>
+        <div class="b-product__qty">
+            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+            <input type="text" value="1" class="js-qty-input">
+            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+        </div>
+    </div>
+    
+    <div class="b-product__action">
+       <span class="b-action__note">под заказ</span>
+        <a href="#" class="g-btn g-btn--fullwide">Добавить в корзину</a>
+    </div>
+    <div class="b-product__rating">
+        <i class="g-rating js-stars_rating" data-rating="3">
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+        </i>
+    </div>
 </article>
-
 
       
-      </div>
-      <div class="content-block" id="catalog_product2">
-        
-        <article class="b-product">
-  <div class="b-product__tags">
-    <span class="b-product__tag b-product__tag--sale">sale</span>
-    <span class="b-product__tag b-product__tag--small">small</span>
-    <span class="b-product__tag b-product__tag--new">new</span>
-  </div>
-  <a href="" class="b-product__photo">
-    <img src="./img/products/p-1.png" alt="">
-  </a>
-  <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
-  <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
-  <div class="b-product__prices">
-    <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
-  </div>
-  <div class="b-product__qty">
-    <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
-    <input type="text" value="1" class="js-qty-input">
-    <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
-  </div>
-  <div class="b-product__action">
-    <a href="" class="g-btn g-btn--fullwide">Добавить в корзину</a>
-  </div>
-  <div class="b-product__rating">
-    <i class="g-rating g-rating--3"></i>
-  </div>
+          <article class="b-product">
+    <div class="b-product__tags">
+        <span class="b-product__tag b-product__tag--sale">sale</span>
+        <span class="b-product__tag b-product__tag--small">small</span>
+        <span class="b-product__tag b-product__tag--new">new</span>
+    </div>
+    <a href="" class="b-product__photo">
+        <img src="./img/products/p-5.png" alt="">
+    </a>
+    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
+    
+    <div class="b-product__nums">
+        <div class="b-product__prices">
+            <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
+            <ins class="b-product__price b-product__price--old">1 800 <span>грн.</span></ins>
+        </div>
+        <div class="b-product__qty">
+            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+            <input type="text" value="1" class="js-qty-input">
+            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+        </div>
+    </div>
+    
+    <div class="b-product__action">
+       <span class="b-action__note">под заказ</span>
+        <a href="#" class="g-btn g-btn--fullwide">Добавить в корзину</a>
+    </div>
+    <div class="b-product__rating">
+        <i class="g-rating js-stars_rating" data-rating="3">
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+        </i>
+    </div>
 </article>
 
-
-        
-        <article class="b-product">
-  <div class="b-product__tags">
-    <span class="b-product__tag b-product__tag--sale">sale</span>
-    <span class="b-product__tag b-product__tag--small">small</span>
-    <span class="b-product__tag b-product__tag--new">new</span>
-  </div>
-  <a href="" class="b-product__photo">
-    <img src="./img/products/p-2.png" alt="">
-  </a>
-  <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
-  <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
-  <div class="b-product__prices">
-    <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
-  </div>
-  <div class="b-product__qty">
-    <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
-    <input type="text" value="1" class="js-qty-input">
-    <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
-  </div>
-  <div class="b-product__action">
-    <a href="" class="g-btn g-btn--fullwide">Добавить в корзину</a>
-  </div>
-  <div class="b-product__rating">
-    <i class="g-rating g-rating--3"></i>
-  </div>
+      
+          <article class="b-product">
+    <div class="b-product__tags">
+        <span class="b-product__tag b-product__tag--sale">sale</span>
+        <span class="b-product__tag b-product__tag--small">small</span>
+        <span class="b-product__tag b-product__tag--new">new</span>
+    </div>
+    <a href="" class="b-product__photo">
+        <img src="./img/products/p-6.png" alt="">
+    </a>
+    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
+    
+    <div class="b-product__nums">
+        <div class="b-product__prices">
+            <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
+            <ins class="b-product__price b-product__price--old">1 800 <span>грн.</span></ins>
+        </div>
+        <div class="b-product__qty">
+            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+            <input type="text" value="1" class="js-qty-input">
+            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+        </div>
+    </div>
+    
+    <div class="b-product__action">
+       <span class="b-action__note">под заказ</span>
+        <a href="#" class="g-btn g-btn--fullwide">Добавить в корзину</a>
+    </div>
+    <div class="b-product__rating">
+        <i class="g-rating js-stars_rating" data-rating="3">
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+        </i>
+    </div>
 </article>
 
-
-        
-        <article class="b-product">
-  <div class="b-product__tags">
-    <span class="b-product__tag b-product__tag--sale">sale</span>
-    <span class="b-product__tag b-product__tag--small">small</span>
-    <span class="b-product__tag b-product__tag--new">new</span>
-  </div>
-  <a href="" class="b-product__photo">
-    <img src="./img/products/p-3.png" alt="">
-  </a>
-  <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
-  <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
-  <div class="b-product__prices">
-    <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
-  </div>
-  <div class="b-product__qty">
-    <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
-    <input type="text" value="1" class="js-qty-input">
-    <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
-  </div>
-  <div class="b-product__action">
-    <a href="" class="g-btn g-btn--fullwide">Добавить в корзину</a>
-  </div>
-  <div class="b-product__rating">
-    <i class="g-rating g-rating--3"></i>
-  </div>
+      
+          <article class="b-product">
+    <div class="b-product__tags">
+        <span class="b-product__tag b-product__tag--sale">sale</span>
+        <span class="b-product__tag b-product__tag--small">small</span>
+        <span class="b-product__tag b-product__tag--new">new</span>
+    </div>
+    <a href="" class="b-product__photo">
+        <img src="./img/products/p-7.png" alt="">
+    </a>
+    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
+    
+    <div class="b-product__nums">
+        <div class="b-product__prices">
+            <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
+            <ins class="b-product__price b-product__price--old">1 800 <span>грн.</span></ins>
+        </div>
+        <div class="b-product__qty">
+            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+            <input type="text" value="1" class="js-qty-input">
+            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+        </div>
+    </div>
+    
+    <div class="b-product__action">
+       <span class="b-action__note">под заказ</span>
+        <a href="#" class="g-btn g-btn--fullwide">Добавить в корзину</a>
+    </div>
+    <div class="b-product__rating">
+        <i class="g-rating js-stars_rating" data-rating="3">
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+        </i>
+    </div>
 </article>
 
-
-        
-        <article class="b-product">
-  <div class="b-product__tags">
-    <span class="b-product__tag b-product__tag--sale">sale</span>
-    <span class="b-product__tag b-product__tag--small">small</span>
-    <span class="b-product__tag b-product__tag--new">new</span>
-  </div>
-  <a href="" class="b-product__photo">
-    <img src="./img/products/p-4.png" alt="">
-  </a>
-  <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
-  <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
-  <div class="b-product__prices">
-    <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
-  </div>
-  <div class="b-product__qty">
-    <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
-    <input type="text" value="1" class="js-qty-input">
-    <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
-  </div>
-  <div class="b-product__action">
-    <a href="" class="g-btn g-btn--fullwide">Добавить в корзину</a>
-  </div>
-  <div class="b-product__rating">
-    <i class="g-rating g-rating--3"></i>
-  </div>
+      
+          <article class="b-product">
+    <div class="b-product__tags">
+        <span class="b-product__tag b-product__tag--sale">sale</span>
+        <span class="b-product__tag b-product__tag--small">small</span>
+        <span class="b-product__tag b-product__tag--new">new</span>
+    </div>
+    <a href="" class="b-product__photo">
+        <img src="./img/products/p-8.png" alt="">
+    </a>
+    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
+    
+    <div class="b-product__nums">
+        <div class="b-product__prices">
+            <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
+            <ins class="b-product__price b-product__price--old">1 800 <span>грн.</span></ins>
+        </div>
+        <div class="b-product__qty">
+            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+            <input type="text" value="1" class="js-qty-input">
+            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+        </div>
+    </div>
+    
+    <div class="b-product__action">
+       <span class="b-action__note">под заказ</span>
+        <a href="#" class="g-btn g-btn--fullwide">Добавить в корзину</a>
+    </div>
+    <div class="b-product__rating">
+        <i class="g-rating js-stars_rating" data-rating="3">
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+        </i>
+    </div>
 </article>
 
+      
+          <article class="b-product">
+    <div class="b-product__tags">
+        <span class="b-product__tag b-product__tag--sale">sale</span>
+        <span class="b-product__tag b-product__tag--small">small</span>
+        <span class="b-product__tag b-product__tag--new">new</span>
+    </div>
+    <a href="" class="b-product__photo">
+        <img src="./img/products/p-9.png" alt="">
+    </a>
+    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
+    
+    <div class="b-product__nums">
+        <div class="b-product__prices">
+            <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
+            <ins class="b-product__price b-product__price--old">1 800 <span>грн.</span></ins>
+        </div>
+        <div class="b-product__qty">
+            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+            <input type="text" value="1" class="js-qty-input">
+            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+        </div>
+    </div>
+    
+    <div class="b-product__action">
+       <span class="b-action__note">под заказ</span>
+        <a href="#" class="g-btn g-btn--fullwide">Добавить в корзину</a>
+    </div>
+    <div class="b-product__rating">
+        <i class="g-rating js-stars_rating" data-rating="3">
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+        </i>
+    </div>
+</article>
 
-        
-      </div>
+      
+          <article class="b-product">
+    <div class="b-product__tags">
+        <span class="b-product__tag b-product__tag--sale">sale</span>
+        <span class="b-product__tag b-product__tag--small">small</span>
+        <span class="b-product__tag b-product__tag--new">new</span>
+    </div>
+    <a href="" class="b-product__photo">
+        <img src="./img/products/p-10.png" alt="">
+    </a>
+    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
+    
+    <div class="b-product__nums">
+        <div class="b-product__prices">
+            <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
+            <ins class="b-product__price b-product__price--old">1 800 <span>грн.</span></ins>
+        </div>
+        <div class="b-product__qty">
+            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+            <input type="text" value="1" class="js-qty-input">
+            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+        </div>
+    </div>
+    
+    <div class="b-product__action">
+       <span class="b-action__note">под заказ</span>
+        <a href="#" class="g-btn g-btn--fullwide">Добавить в корзину</a>
+    </div>
+    <div class="b-product__rating">
+        <i class="g-rating js-stars_rating" data-rating="3">
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+        </i>
+    </div>
+</article>
+
+      
+          <article class="b-product">
+    <div class="b-product__tags">
+        <span class="b-product__tag b-product__tag--sale">sale</span>
+        <span class="b-product__tag b-product__tag--small">small</span>
+        <span class="b-product__tag b-product__tag--new">new</span>
+    </div>
+    <a href="" class="b-product__photo">
+        <img src="./img/products/p-11.png" alt="">
+    </a>
+    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
+    
+    <div class="b-product__nums">
+        <div class="b-product__prices">
+            <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
+            <ins class="b-product__price b-product__price--old">1 800 <span>грн.</span></ins>
+        </div>
+        <div class="b-product__qty">
+            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+            <input type="text" value="1" class="js-qty-input">
+            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+        </div>
+    </div>
+    
+    <div class="b-product__action">
+       <span class="b-action__note">под заказ</span>
+        <a href="#" class="g-btn g-btn--fullwide">Добавить в корзину</a>
+    </div>
+    <div class="b-product__rating">
+        <i class="g-rating js-stars_rating" data-rating="3">
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+        </i>
+    </div>
+</article>
+
+      
+          <article class="b-product">
+    <div class="b-product__tags">
+        <span class="b-product__tag b-product__tag--sale">sale</span>
+        <span class="b-product__tag b-product__tag--small">small</span>
+        <span class="b-product__tag b-product__tag--new">new</span>
+    </div>
+    <a href="" class="b-product__photo">
+        <img src="./img/products/p-12.png" alt="">
+    </a>
+    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
+    
+    <div class="b-product__nums">
+        <div class="b-product__prices">
+            <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
+            <ins class="b-product__price b-product__price--old">1 800 <span>грн.</span></ins>
+        </div>
+        <div class="b-product__qty">
+            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+            <input type="text" value="1" class="js-qty-input">
+            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+        </div>
+    </div>
+    
+    <div class="b-product__action">
+       <span class="b-action__note">под заказ</span>
+        <a href="#" class="g-btn g-btn--fullwide">Добавить в корзину</a>
+    </div>
+    <div class="b-product__rating">
+        <i class="g-rating js-stars_rating" data-rating="3">
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+        </i>
+    </div>
+</article>
+
+      
+          <article class="b-product">
+    <div class="b-product__tags">
+        <span class="b-product__tag b-product__tag--sale">sale</span>
+        <span class="b-product__tag b-product__tag--small">small</span>
+        <span class="b-product__tag b-product__tag--new">new</span>
+    </div>
+    <a href="" class="b-product__photo">
+        <img src="./img/products/p-13.png" alt="">
+    </a>
+    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
+    
+    <div class="b-product__nums">
+        <div class="b-product__prices">
+            <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
+            <ins class="b-product__price b-product__price--old">1 800 <span>грн.</span></ins>
+        </div>
+        <div class="b-product__qty">
+            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+            <input type="text" value="1" class="js-qty-input">
+            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+        </div>
+    </div>
+    
+    <div class="b-product__action">
+       <span class="b-action__note">под заказ</span>
+        <a href="#" class="g-btn g-btn--fullwide">Добавить в корзину</a>
+    </div>
+    <div class="b-product__rating">
+        <i class="g-rating js-stars_rating" data-rating="3">
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+        </i>
+    </div>
+</article>
+
+      
+          <article class="b-product">
+    <div class="b-product__tags">
+        <span class="b-product__tag b-product__tag--sale">sale</span>
+        <span class="b-product__tag b-product__tag--small">small</span>
+        <span class="b-product__tag b-product__tag--new">new</span>
+    </div>
+    <a href="" class="b-product__photo">
+        <img src="./img/products/p-14.png" alt="">
+    </a>
+    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
+    
+    <div class="b-product__nums">
+        <div class="b-product__prices">
+            <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
+            <ins class="b-product__price b-product__price--old">1 800 <span>грн.</span></ins>
+        </div>
+        <div class="b-product__qty">
+            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+            <input type="text" value="1" class="js-qty-input">
+            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+        </div>
+    </div>
+    
+    <div class="b-product__action">
+       <span class="b-action__note">под заказ</span>
+        <a href="#" class="g-btn g-btn--fullwide">Добавить в корзину</a>
+    </div>
+    <div class="b-product__rating">
+        <i class="g-rating js-stars_rating" data-rating="3">
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+        </i>
+    </div>
+</article>
+
+      
+          <article class="b-product">
+    <div class="b-product__tags">
+        <span class="b-product__tag b-product__tag--sale">sale</span>
+        <span class="b-product__tag b-product__tag--small">small</span>
+        <span class="b-product__tag b-product__tag--new">new</span>
+    </div>
+    <a href="" class="b-product__photo">
+        <img src="./img/products/p-15.png" alt="">
+    </a>
+    <h3 class="b-product__title"><a href="">Букет Красивое Название</a></h3>
+    <p class="b-product__desc">роза, ромашка, пион, тюльпан</p>
+    
+    <div class="b-product__nums">
+        <div class="b-product__prices">
+            <ins class="b-product__price b-product__price--new">800 <span>грн.</span></ins>
+            <ins class="b-product__price b-product__price--old">1 800 <span>грн.</span></ins>
+        </div>
+        <div class="b-product__qty">
+            <span class="b-product__qty-plus js-qty-plus"><i class="icon-qty-up"></i></span>
+            <input type="text" value="1" class="js-qty-input">
+            <span class="b-product__qty-minus js-qty-minus"><i class="icon-qty-down"></i></span>
+        </div>
+    </div>
+    
+    <div class="b-product__action">
+       <span class="b-action__note">под заказ</span>
+        <a href="#" class="g-btn g-btn--fullwide">Добавить в корзину</a>
+    </div>
+    <div class="b-product__rating">
+        <i class="g-rating js-stars_rating" data-rating="3">
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+            <span class="icon-star"></span>
+        </i>
+    </div>
+</article>
+
+      
+    </div>
       <!-- /PRODUCTS -->
 
       <div class="b-pagination">
@@ -919,7 +1841,7 @@
 
 
     </div>
-    <!-- /MAIN -->
+    <!-- /CATALOG -->
   </div>
 
 </section>
@@ -941,276 +1863,390 @@
   </div>
 </section>
 <!-- /SEO -->
-<script>
-  $(".b-product").css("width","25.804%");
-  $(".b-product").css("padding","0 0.8%");
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__left">
+            <div class="footer__block footer__block--1">
+
+                <nav class="g-menu footer__block-menu--information">
+                    <h4 class="g-menu__title">Информация</h4>
+                    <ul class="g-menu__list">
+                        <li class="g-menu__item">
+                            <a href="" class="g-menu__link">Новости</a>
+                        </li>
+                        <li class="g-menu__item">
+                            <a href="" class="g-menu__link">Наши услуги</a>
+                        </li>
+                        <li class="g-menu__item">
+                            <a href="" class="g-menu__link">Политика конфиденциальности</a>
+                        </li>
+                        <li class="g-menu__item">
+                            <a href="" class="g-menu__link">Связаться с нами</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="footer__block footer__block--2">
+
+                <nav class="g-menu footer__block-menu--delivery">
+                    <h4 class="g-menu__title">Доставка цветов</h4>
+                    <ul class="g-menu__list">
+                        <li class="g-menu__item">
+                            <a href="" class="g-menu__link">Доставка</a>
+                        </li>
+                        <li class="g-menu__item">
+                            <a href="" class="g-menu__link">Оплата</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <nav class="g-menu footer__block-menu--account">
+                    <h4 class="g-menu__title">Личный кабинет</h4>
+                    <ul class="g-menu__list">
+                        <li class="g-menu__item">
+                            <a href="" class="g-menu__link">Мои заказы</a>
+                        </li>
+                        <li class="g-menu__item">
+                            <a href="" class="g-menu__link">Личная информация</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="footer__block footer__block--3">
+
+                <div class="g-menu footer__block-menu--contacts">
+                    <h4 class="g-menu__title">Контакты</h4>
+                    <ul class="g-menu__list">
+                        <li class="g-menu__item">
+                            <a href="tel:+38099997112" class="b-phones__link_footer">
+                                <i class="icon-phone-small-white"></i>
+                                <!--
+                                    <svg class="b-phones__icon" viewBox="0 0 25.92 35.06">
+                                        <use xlink:href="#svg-phone"></use>
+                                    </svg>
+    -->
+                                <span>+380 99-99-71-12</span>
+                            </a>
+                        </li>
+                        <li class="g-menu__item">
+                            <a href="tel:+38044191112" class="b-phones__link_footer">
+                                <i class="icon-phone-small-white"></i>
+                                <!--
+                                    <svg>
+                                        <use xlink:href="#svg-phone"></use>
+                                    </svg>
+    -->
+                                <span>+380 44-19-11-12</span>
+                            </a>
+                        </li>
+                        <!--							<li class="g-menu__item">&nbsp;</li>-->
+                        <li class="g-menu__item">
+                            <i class="icon-location-small-white"></i>
+                            <span id="all_adresses">Киев, все адреса <a href="">здесь</a></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="b-social b-social--footer">
+                    <a href="#" class="b-social__item"><i class="icon-facebook-white"></i></a>
+                    <a href="#" class="b-social__item"><i class="icon-insta-white"></i></a>
+                    <a href="#" class="b-social__item"><i class="icon-gplus-white"></i></a>
+                    <a href="#" class="b-social__item"><i class="icon-youtube-white"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer__right">
+            <div id="map">
+
+                <script>
+                    // Init maps function
+                    function initMaps(){
+                        var
+                             university = 		{lat: 50.444248, lng: 30.505879}
+                            ,centerFooter = 	{lat: 50.442441, lng: 30.509395}
+                            ,centerContacts = 	{lat: 50.443476, lng: 30.524931}
+                            ,square = 			{lat: 50.439360, lng: 30.516294}
+                            ,passi = 			{lat: 50.439781, lng: 30.516782}
+                            ,optionsFooter = {
+                                zoom: 14,
+                                center: centerFooter
+                            }
+                            ,optionsContacts = {
+                                zoom: 14,
+                                center: centerContacts
+                            }
+                            ;
+                        
+                        if (document.getElementById('mapContacts')){    // run only in contacts page
+                            var 
+                                 contactsMap = new google.maps.Map(document.getElementById('mapContacts'), optionsContacts)
+                                
+                                ,markerPassiContacts = new google.maps.Marker({
+                                    position: passi,
+                                    map: contactsMap
+                                })
+                                ;
+                            
+                        }
+                        var footerMap = new google.maps.Map(document.getElementById('map'), optionsFooter);
+
+
+                        var 
+                             markerUnivercityFooter = new google.maps.Marker({
+                                position: university,
+                                map: footerMap
+                            })
+                            ,markerSquareFooter = new google.maps.Marker({
+                                position: square,
+                                map: footerMap
+                            })
+                            ;
+
+                    };
+                </script>
+
+                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbYdRSX_XQ-p7xlVH9V2KiuXZq1FqQKIo&callback=initMaps">
+
+
+                </script>
+
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <div class="b-counters">
+<!--                <a href="#"><img src="./img/flags/undp.png" class="b-counters__item" width="45" height="22" alt=""></a>-->
+                <a href="#"><img src="./img/svg/undp.svg" class="b-counters__item" width="45" height="22" alt=""></a>
+<!--                <a href="#"><img src="./img/flags/japan.png" class="b-counters__item" width="33" height="22" alt=""></a>-->
+                <a href="#"><img src="./img/svg/japan.svg" class="b-counters__item" width="33" height="22" alt=""></a>
+            </div>
+            <div class="b-copyrights">Интернет-магазин PassifloRa 2017 © </div>
+        </div>
+    </div>
+</footer>
+<!-- /FOOTER -->
+
+<a href="#header" class="b-up js-up"><i class="icon-arrow-up"></i></a>
+
+<!-- MODAL -->
+<div style="display:none">
+    <!--    next modals (IDs) is here: register, login, promo, callback, calc-->
+    <!-- Form register -->
+    <div class="arcticmodal b-modal_register" id="register">
+        <form action="" class="g-form js-form-register">
+            <div class="arcticmodal-close"><i class="icon-close"></i></div>
+            <div class="arcticmodal-header">Регистрация</div>
+
+            <div class="arcticmodal-body">
+                <div class="g-form__field">
+                    <input class="g-input" type="email" name="email" required placeholder="e-mail">
+                </div>
+                <div class="g-form__field">
+                    <input class="g-input" type="password" name="password" required pattern=".{5,}" placeholder="пароль">
+                </div>
+                <div class="g-form__field">
+                    <input class="g-input" type="password" name="comparePassword" required pattern=".{5,}" placeholder="пароль еще раз">
+                </div>
+                <div class="g-form__field">
+                    <button type="submit" class="g-btn">Дальше</button>
+                </div>
+            </div>
+
+            <div class="arcticmodal-footer">
+                <div class="g-form__alarm">
+                    <i class="icon-alarm"></i>
+                    <p>ваши личные данные защищены <a href="">политикой конфиденциальности</a></p>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <!-- /Form register -->
+
+    <!-- Form login -->
+    <div class="arcticmodal b-modal_login" id="login">
+        <form action="" class="g-form js-form-login">
+            <div class="arcticmodal-close"><i class="icon-close"></i></div>
+            <div class="arcticmodal-header">Вход</div>
+
+            <div class="arcticmodal-body">
+                <div class="g-form__field">
+                    <input class="g-input" type="email" name="email" required placeholder="e-mail">
+                </div>
+                <div class="g-form__field">
+                    <input class="g-input" type="password" name="password" required placeholder="пароль">
+                </div>
+                <div class="g-form__field">
+                    <button type="submit" class="g-btn">Войти</button>
+                    <a class="g-btn g-btn--link">Забыли пароль?</a>
+                </div>
+            </div>
+
+            <div class="arcticmodal-footer">
+                <div class="g-text--center">
+                    <div class="g-h3">
+                        или <br> Войти через социальные сети:
+                    </div>
+                    <div class="b-social_modal">
+                        <a href=""><img src="./img/icons/i-fb.svg" width="36" alt=""></a>
+                        <a href=""><img src="./img/icons/i-gplus.svg" width="36" alt=""></a>
+                    </div>
+
+                    <a href="" class="g-btn g-btn--link">Нет учетной записи?</a>
+                    <button class="g-btn g-btn--md g-btn--alt" data-modal="register">Зарегистрироваться</button>
+                </div>
+                <div class="g-form__alarm">
+                    <i class="icon-alarm"></i>
+                    <p>ваши личные данные защищены <a href="">политикой конфиденциальности</a></p>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <!-- /Form login -->
+
+    <!-- Form promo -->
+    <div class="arcticmodal b-modal_promo" id="promo">
+        <div class="arcticmodal-close"><i class="icon-close"></i></div>
+        <!--                        <img src="http://placehold.jp/430x510.png"  class="b-modal_promo__left" alt="">-->
+        <img src="./img/modals/promo-430.jpg" class="b-modal_promo__left" alt="">
+
+        <div class="b-modal_promo__right">
+            <p class="g-h2">Получи бесплатно живой подарок стомостью 190 грн<br>при покупке от 949 грн</p>
+            <p class="g-h2"><span>Промокод</span><span>fregood</span></p>
+            <form action="" class="g-form js-form-promo">
+                <div class="g-form__field g-form__field--inline">
+                    <input class="g-input" type="text" name="code" required pattern="[A-Za-z0-9]{2,}" placeholder="Промокод">
+                    <button type="submit" class="g-btn g-btn--alt">Получить</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <!-- /Form promo -->
+    
+    <!-- Form promo alt -->
+    <div class="arcticmodal b-modal_promoAlt" id="promoAlt">
+        <div class="arcticmodal-close"><i class="icon-close"></i></div>
+        <!--                        <img src="http://placehold.jp/430x510.png"  class="b-modal_promo__left" alt="">-->
+        <img src="./img/modals/promo-430.jpg" class="b-modal_promo__left" alt="">
+
+        <div class="b-modal_promo__right">
+            <p class="g-h2">Получи бесплатно живой подарок стомостью 190 грн<br>при покупке от 949 грн</p>
+            <p class="">Промокод fregood</p>
+            <form action="" class="g-form js-form-promo">
+                <div class="g-form__field g-form__field--inline">
+                    <input class="g-input" type="email" name="code" required placeholder="E-mail">
+                    <button type="submit" class="g-btn g-btn--alt">Подписаться</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <!-- /Form promo alt -->
+    
+    <!-- Info form modal -->
+    <div class="arcticmodal b-modal_info" id="info">
+        <div class="arcticmodal-close"><i class="icon-close"></i></div>
+        <p class="g-h2">Получи бесплатно живой подарок стомостью 190 грн<br>при покупке от 949 грн</p>
+    </div>
+    <!-- /Info form modal -->
+    
+    <!-- Form login -->
+    <div class="arcticmodal b-modal_ware" id="ware">
+        <form action="" class="g-form js-form-login">
+            <div class="arcticmodal-close"><i class="icon-close"></i></div>
+            <div class="arcticmodal-header g-text--center">Товар добавлен в корзину</div>
+
+            <div class="arcticmodal-body">
+                <div class="g-form__field">
+                    <button type="submit" class="g-btn">Оформить заказ</button>
+                    <a class="g-btn g-btn--link">Продолжить покупки</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- /Form login -->
+    
+    <!-- Callback Form -->
+    <div class="b-modal b-modal_callback" id="callback">
+        <div class="arcticmodal-close"><i class="icon-close"></i></div>
+
+        <form action="" class="b-form js-form-callback">
+          <div class="b-form__inner">
+            <div class="b-form__header">Заказать звонок</div>
+            <div class="b-form__content">
+              <div class="b-form__field">
+                <i class="icon-user"></i>
+                <input type="text" name="name" pattern="[A-Za-zА-Яа-яЁёІіЇї\s]{2,}" placeholder="* Ваше имя:">
+              </div>
+              <div class="b-form__field">
+                <i class="icon-phone"></i>
+                <input type="tel" name="phone" placeholder="* Контактный телефон:">
+              </div>
+            </div>
+            <div class="b-form__action">
+              <input type="submit" class="g-btn" value="Отправить заявку">
+            </div>
+          </div>
+        </form>
+
+    </div>
+    <!-- /Callback Form -->
+
+    <!-- Calc Form -->
+    <div class="b-modal b-modal_calc" id="calc">
+      <div class="arcticmodal-close"><i class="icon-close"></i></div>
+      <form action="" class="b-form js-form-calc">
+        <div class="b-form__inner">
+          <div class="b-form__header">Рассчитать стоимость</div>
+          <div class="b-form__content">
+            <div class="b-form__field">
+              <i class="icon-user"></i>
+              <input type="text" name="name" pattern="[A-Za-zА-Яа-яЁёІіЇї\s]{2,}" placeholder="* Ваше имя:">
+            </div>
+            <div class="b-form__field">
+              <i class="icon-phone"></i>
+              <input type="tel" name="phone" required placeholder="* Контактный телефон:">
+            </div>
+            <div class="b-form__field">
+              <i class="icon-mail"></i>
+              <input type="email" name="email" required placeholder="Ваш e-mail:">
+            </div>
+          </div>
+          <div class="b-form__action">
+            <input type="submit" class="g-btn" value="Отправить заявку">
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- /Calc Form -->
+    
+    
+    
+    
+    
+</div>
+<!-- /MODAL -->
+
+<script src="./js/script.min.js"></script>
+
+<!--
+<script id="__bs_script__">
+    //<![CDATA[
+    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.8'><\/script>".replace("HOST", location.hostname));
+    //]]>
 </script>
-
-
-	<!-- FOOTER -->
-	<footer class="footer">
-		<div class="container">
-			<div class="footer__left">
-				<div class="footer__block footer__block--1">
-				
-					<nav class="g-menu footer__block-menu--information">
-						<h4 class="g-menu__title">Иформация</h4>
-						<ul class="g-menu__list">
-							<li class="g-menu__item">
-								<a href="" class="g-menu__link">Новости</a>
-							</li>
-							<li class="g-menu__item">
-								<a href="" class="g-menu__link">Наши услуги</a>
-							</li>
-							<li class="g-menu__item">
-								<a href="" class="g-menu__link">Политика конфиденциальности</a>
-							</li>
-							<li class="g-menu__item">
-								<a href="" class="g-menu__link">Связаться с нами</a>
-							</li>
-						</ul>
-					</nav>
-					
-				</div>
-
-				<div class="footer__block footer__block--2">
-				
-					<nav class="g-menu footer__block-menu--delivery">
-						<h4 class="g-menu__title">Доставка цветов</h4>
-						<ul class="g-menu__list">
-							<li class="g-menu__item">
-								<a href="" class="g-menu__link">Доставка</a>
-							</li>
-							<li class="g-menu__item">
-								<a href="" class="g-menu__link">Оплата</a>
-							</li>
-						</ul>
-					</nav>
-					
-					<nav class="g-menu footer__block-menu--account">
-						<h4 class="g-menu__title">Личный кабинет</h4>
-						<ul class="g-menu__list">
-							<li class="g-menu__item">
-								<a href="" class="g-menu__link">Мои заказы</a>
-							</li>
-							<li class="g-menu__item">
-								<a href="" class="g-menu__link">Личная иформаци</a>
-							</li>
-						</ul>
-					</nav>
-					
-				</div>
-
-				<div class="footer__block footer__block--3">
-
-					<div class="g-menu footer__block-menu--contacts">
-						<h4 class="g-menu__title">Контакты</h4>
-						<ul class="g-menu__list">
-							<li class="g-menu__item">
-								<i class="icon-phone-small-white"></i>
-								<span">+380 99-99-71-12</span>
-							</li>
-							<li class="g-menu__item">
-								<i class="icon-phone-small-white"></i>
-								<span">+380 44-19-11-12</span>
-							</li>
-							<li class="g-menu__item">&nbsp;</li>
-							<li class="g-menu__item">
-								<i class="icon-location-small-white"></i>
-								<span>Киев, все адреса <a href="">здесь</a></span>
-							</li>
-						</ul>
-					</div>
-					
-					<div class="b-social b-social--footer">
-						<a href="" class="b-social__item"><i class="icon-facebook-white"></i></a>
-						<a href="" class="b-social__item"><i class="icon-in-white"></i></a>
-						<a href="" class="b-social__item"><i class="icon-gplus-white"></i></a>
-						<a href="" class="b-social__item"><i class="icon-youtube-white"></i></a>
-					</div>
-
-				</div>
-			
-			</div>
-
-			<div class="footer__right">
-				<div id="map">
-					<script>
-						function initMap() {
-							var university = {lat: 50.444248, lng: 30.505879};
-							var center = {lat:50.442441, lng: 30.509395};
-							var square = {lat:50.439360, lng: 30.516294};
-							var map = new google.maps.Map(document.getElementById('map'), {
-								zoom: 14,
-								center: center
-							});
-							var marker1 = new google.maps.Marker({
-								position: university,
-								map: map
-							});
-							var marker2 = new google.maps.Marker({
-								position: square,
-								map: map
-							});
-						}
-					</script>
-					<script async defer
-							src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbYdRSX_XQ-p7xlVH9V2KiuXZq1FqQKIo&callback=initMap">
-					</script>
-
-				</div>
-			</div>
-
-			<div class="footer__bottom">
-				<div class="b-counters">
-					<img src="./img/flags/undp.png" class="b-counters__item" alt="">
-					<img src="./img/flags/japan.png" class="b-counters__item" alt="">
-				</div>
-				<div class="b-copyrights">Интернет-магазин PassifloRa 2017 © </div>
-			</div>
-		</div>
-	</footer>
-	<!-- /FOOTER -->
-
-	<a href="#header" class="b-up js-up"><i class="icon-arrow-up"></i></a>
-
-	<!-- MODAL -->
-	<div style="display:none">
-
-	    <!-- Form register -->
-	    <div class="arcticmodal" id="register">
-	      <form class="g-form js-form-register">
-	        <div class="arcticmodal-close"><i class="icon-close"></i></div>
-	        <div class="arcticmodal-header">Регистрация</div>
-	        
-	        <div class="arcticmodal-body">
-            <div class="g-form__field">
-              <input class="g-input" type="email" name="email" placeholder="e-mail">
-            </div>
-            <div class="g-form__field">
-              <input class="g-input" type="password" name="password" placeholder="пароль">
-            </div>
-            <div class="g-form__field">
-              <input class="g-input" type="password" name="comparePassword" placeholder="пароль еще раз">
-            </div>
-            <div class="g-form__field">
-	            <button class="g-btn">Дальше</button>
-            </div>
-	        </div>
-
-	        <div class="arcticmodal-footer">
-	        	<div class="g-form__alarm">
-	        		<i class="icon-alarm"></i>
-	        		<p>ваши личные данные защищены <a href="">политикой приватности</a></p>
-	        	</div>  
-	        </div>
-
-	      </form>
-	    </div>
-	    <!-- /Form register -->
-
-	    <!-- Form login -->
-	    <div class="arcticmodal" id="login">
-	      <form class="g-form js-form-login">
-	        <div class="arcticmodal-close"><i class="icon-close"></i></div>
-	        <div class="arcticmodal-header">Вход</div>
-	        
-	        <div class="arcticmodal-body">
-            <div class="g-form__field">
-              <input class="g-input" type="email" name="email" placeholder="e-mail">
-            </div>
-            <div class="g-form__field">
-              <input class="g-input" type="password" name="password" placeholder="пароль">
-            </div>
-            <div class="g-form__field">
-	            <button class="g-btn">Войти</button>
-	            <a href="" class="g-btn g-btn--link">Забыли пароль?</a>
-            </div>
-	        </div>
-
-	        <div class="arcticmodal-footer">
-	        	<div class="g-text--center">
-	        		<div class="g-h3">
-	        			или <br>
-	        			Войти через социальные сети:
-	        		</div>
-	        	
-        			<img src="./img/icons/i-fb.png" alt="">
-        			<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-        			<img src="./img/icons/i-gplus.png" alt="">
-        			<br><br>
-        	
-            	<a href="" class="g-btn g-btn--link">Нет учетной записи?</a>
-        			<br><br>
-            	<a href="" class="g-btn g-btn--md g-btn--alt" data-modal="register">Зарегистрироваться</a>
-        			<br><br>
-	        	</div>
-	        	<div class="g-form__alarm">
-	        		<i class="icon-alarm"></i>
-	        		<p>ваши личные данные защищены <a href="">политикой приватности</a></p>
-	        	</div>  
-	        </div>
-
-	      </form>
-	    </div>
-	    <!-- /Form login -->
-
-	    <!-- Form promo -->
-	    <div class="arcticmodal arcticmodal--wide" id="promo">
-	        <div class="arcticmodal-close"><i class="icon-close"></i></div>
-	        
-	        <div class="arcticmodal-promo">
-						<div class="arcticmodal-promo__left">
-							<img src="http://placehold.jp/430x510.png" alt="">
-						</div>
-						<div class="arcticmodal-promo__right">
-							<p class="g-h2">Получи бесплатно живой подарок стомостью 190 грн при покупке от 949 грн</p>
-							<p class="g-h2">Промокод <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> fregood</p>
-				      <form class="g-form js-form-promo">
-		            <div class="g-form__field g-form__field--inline">
-		              <input class="g-input" type="text" name="code" placeholder="Промокод">
-			            <button class="g-btn g-btn--bordered g-btn--alt">Получить</button>
-		            </div>
-				      </form>
-				    </div>
-	        </div>
-
-	    </div>
-	    <!-- /Form promo -->
-	</div>
-	<!-- /MODAL -->
-
-	<script src="./js/script.min.js"></script>
-	<script src="./js/scrollpane.js"></script>
-	<script src="./js/ion-rangeSlider/ion.rangeSlider.js"></script>
-  
-  <script>
-  	  //
-  	  // Filter
-  	  //---------------------------------------------------------------------------------------
-  	  var $filter = $('.b-filter');
-			$filter.find('.b-filter__block-items').jScrollPane({
-          showArrows: false
-      });
-
-
-  	  //
-  	  // Price Range Slider
-  	  //---------------------------------------------------------------------------------------
-      $("#price_range").ionRangeSlider({
-          type: "double",
-          grid: true,
-          min: 0,
-          max: 2000,
-          from: 0,
-          to: 2000,
-          postfix: " грн"
-      });
-  </script>
-  
-	<script id="__bs_script__">//<![CDATA[
-	    document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.18.8'><\/script>".replace("HOST", location.hostname));
-	//]]></script>
+-->
 
 </body>
 </html>

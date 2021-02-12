@@ -2,6 +2,34 @@
 	margin-bottom: 92px;
 	min-height: 20px;
 
+    @include huge{
+        margin-bottom: 61px;
+    }
+    @include pc{
+        margin-bottom: 60px;
+    }
+    @include note{
+        margin-bottom: 48px;
+    }
+    @include small{
+//        margin-bottom: 50px;
+//        font-size: 10px;
+        line-height: 12px;
+//        margin-bottom: 38px;
+        margin-bottom: 29px;
+    }
+    
+    .container{
+        @include pc{
+            width: 100%;
+            max-width: none;
+            padding: 0 19px;
+        }
+        @include small{
+            padding: 0 14px;
+        }
+    }
+    
 	a {
 		text-decoration: none;
 		&:hover{
@@ -16,20 +44,30 @@
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
-	padding-left: 27px;
+	padding-left: 26px;
 	color: #0f0f0f;
 	text-transform: uppercase;
 	font-size: 16px;
 	line-height: 20px;
 	font-weight: 400;
 
-	@include twoK {
-		font-size: 20px;
-	}
-	@include fourK {
-		font-size: 30px;
-		line-height: 35px;
-	}
+//	@include twoK {
+//		font-size: 20px;
+//	}
+//	@include fourK {
+//		font-size: 30px;
+//		line-height: 35px;
+//	}
+    @include huge{
+        padding-left: 14px;
+        line-height: 16px;
+        font-size: 12px;
+    }
+    @include small{
+        padding-left: 10px;
+        line-height: 14px;
+        font-size: 10px;
+    }
 
 	&:first-child{
 		padding-left: 0;
@@ -41,9 +79,26 @@
 	
 	&:before{
 		content: '';
+		@extend .icon-toggler;
 		position: absolute;
-		left: 8px; top:2px;
-		@include sprite($i-breadcrumbs-arrow);
+		left: 2px;
+        top:5px;
+        width: 14px;
+        transform: rotate(90deg);
+        
+        @include huge{
+            top: 4px;
+            left: -2px;
+//            width: 13px;
+            width: 10px;
+            height: 7px;
+        }
+        @include small{
+            top: 4px;
+            left: 0;
+            width: 8px;
+            height: 5px;
+        }
 	}
 }
 

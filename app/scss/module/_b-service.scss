@@ -1,21 +1,70 @@
 .b-service{
 	margin-bottom: 45px;
+    
+    @include small{
+        margin: 0 0 23px;
+    }
 }
 .b-service__img{
+    display: block;
 	margin: 0 0 32px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    
+//		@include twoK {
+//			width: 100%;
+//		}
+    @include huge{
+        margin: 0 0 25px;
+    }
+    @include pc{
+//        margin: 0 0 17px;
+        margin: 0 0 10px;
+    }
+    @include small{
+    }
+    
+    &:hover{
+        opacity: 0.7;
+    }
+    
 	img{
 		display: block;
 		margin: 0 auto;
 		width: 100%;
 
-		@include twoK {
-			width: 100%;
-		}
+        @include tablet{
+//            height: 182px;
+        }
+
 	}
 }
 .b-service-separate{
 	width: 31.5%;
-	margin-left: 1px;
+//	margin-left: 1px;
+    @include pc{
+        width: 32.17%;
+    }
+    @include note{
+        width: 230px;
+    }
+    @include tablet{
+//        width: 100%;
+//        width: 47%;
+          width: 290px;
+        
+        &:last-child{
+            display: none;
+//            margin: 0 auto;
+        }
+    }
+    @include small{
+        width: 100%;
+        
+        &:last-child{
+            display: block;
+        }
+    }
 }
 .b-service__list{
 	margin: 0;
@@ -25,23 +74,42 @@
 .b-service__item{
 	padding: 2px 0;
 	text-align: center;
-}
-.b-service__link{
-	font-size: 21px;
+    font-size: 21px;
 	font-weight: 300;
 	line-height: 28px;
 	color: #121212;
-
+    
+//	@include twoK {
+//		font-size: 27px;
+//		line-height: 33px;
+//	}
+//	@include fourK {
+//		font-size: 40px;
+//		line-height: 45px;
+//	}
 	@include huge {
-		font-size: 16px;
-		line-height: 21px;
+		font-size: 15.3px;
+		line-height: 19px;
 	}
-	@include twoK {
-		font-size: 27px;
-		line-height: 33px;
-	}
-	@include fourK {
-		font-size: 40px;
-		line-height: 45px;
-	}
+    @include pc{
+//        font-size: 14px;
+        font-size: 13px;
+        line-height: 20px;
+    }
+    @include small{
+        font-size: 12px;
+        line-height: 18px;
+    }
+}
+
+.b-service__link{
+    &:hover{
+        text-decoration: none;
+        box-shadow: inset 0 -3px 0 #fff, inset 0 -4px 0px #000;
+    }
+//	font-size: 21px;
+//	font-weight: 300;
+//	line-height: 28px;
+//	color: #121212;
+
 }

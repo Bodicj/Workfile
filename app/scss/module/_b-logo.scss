@@ -1,38 +1,81 @@
 .b-logo{
 	display: block;
 	width: 100%;
-	padding: 9px 10px 10px 9px;
+//	padding: 9px 10px 10px 9px;
 	background-color: #0f0f0f;
-	margin-left: 2.7%;
-	margin-top: 1%;
+//	margin-left: 2.7%;
+//	margin-top: 1%;
+    >img{
+        display: block;
+        height: auto;
+    }
 }
 .b-logo--simple{
-	width: 180px;
-	padding: 9px 20px 12px 10px;
+//    margin-top: 0;
+//    margin-left: 0;
+    margin: auto;
+    display: none;
+	width: 205px;
+    padding: 0px;
+//	padding: 13px 20px 9px 10px;
 
+//	@include fourK {
+//		width: 319px;
+//	}
+	@include pc {
+        position: relative;
+//        right: 2%;
+        right: 8px;
+		display: block;
+        width: 152px;
+        height: 100%;
+        padding-top: 4px;
+	}
+	@include small {
+        right: 6px;
+        bottom: 3%;
+		width: 87px;
+        padding-top: 5px;
+        
+//        &:before{
+//            content: '';
+//            display: inline-block;
+//            height: 100%;
+//        }
+	}
+    
 	img {
 		max-width: 100%;
-	}
-	@include fourK {
-		width: 319px;
+        @include pc {
+            display: block;
+        }
 	}
 }
 .b-logo__inner{
 	display: block;
 	width: 100%;
-	padding: 16px;
-	padding-bottom: 10px;
+//	padding: 16px 17px 10px 17px;
+//	padding-bottom: 10px;
 	border: 1px solid #fff;
-	img{
-		width: 92.5%;
+    
+	>img{
+        display: block;
+//		width: 92.2%;
+        width: 82.8%;
+        margin-left: 5.0%;
+        margin-top: 4.68%;
 	}
 }
 .b-logo__text{
 	display: block;
-	padding-top: 12px;
+//	padding-top: 12px;
 	text-align: center;
-	img {
-		width: 81%;
-		margin-left: 1%;
+    
+	>img {
+        display: block;
+        width: 73.4%;
+		margin-top: 5.2%;
+        margin-left: 13.64%;
+        margin-bottom: 4.5%;
 	}
 }

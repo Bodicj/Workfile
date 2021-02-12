@@ -1,0 +1,94 @@
+.b-payDeliv{
+    display: flex;
+    padding-left: 5px;
+    font-size: 18px;
+    color: #1a1a1a;
+//    color: #444a55;
+    
+    @include huge{
+        padding-left: 3px;
+        font-size: 14.5px;
+    }
+    @include note{
+        font-size: 13px;
+    }
+    @include small{
+        flex-direction: column;
+        font-size: 16px;
+    }
+    
+    &__heading{
+        flex-basis: 239px;
+        font-size: 0.961em;
+        font-weight: 700;
+        
+        @include tablet{
+            flex-basis: 246px;
+        }
+        @include small{
+            margin-bottom: 32px;
+            flex-basis: auto;
+        }
+    }
+    
+    &__options{
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+        flex-basis: 535px;
+        
+        @include small{
+            flex-basis: auto;
+        }
+    } 
+    &__option{
+        margin-bottom: 31px;
+        
+        @include huge{
+            margin-bottom: 20px;
+        }
+        @include small{
+            margin-bottom: 32px;
+        }
+        
+        .b-option__heading{
+//            margin-bottom: 2px;
+            margin-bottom: 0.1em;
+            
+            @include huge{
+                margin-bottom: 0;
+            }
+        }
+        .b-option__info{
+            list-style: none;
+            padding-left: 54px;
+            font-size: 0.9em;
+//            color: #848484;
+            color: #757575;
+            
+            @include huge{
+                padding-left: 38px;
+                line-height: 1.2;
+            }
+            @include small{
+                padding-left: 45px;
+                line-height: 1.5;
+            }
+            
+            li{
+                position: relative;
+                padding-left: 10px;
+                
+                @include small{
+                    padding-left: 8px;
+                }
+                
+                &:before{
+                    content: '-';
+                    position: absolute;
+                    left: 0;
+                }
+            }
+        }
+    }    
+}

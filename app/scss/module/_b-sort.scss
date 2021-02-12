@@ -1,11 +1,92 @@
+.b-row{
+    @include clearfix;
+}
 .b-sort{
+    @extend %clearfix;
 	margin-top: 8px;
-  margin-right: 6px;
+//    margin-right: 6px;
 	margin-bottom: 110px;
-	text-align: right;
+    float: right;
+//	text-align: right;
 	&:focus{
 		outline:none;
 	}
+    
+    @include huge{
+//        margin-top: 4px;
+//        margin-bottom: 73px;  
+        margin-top: 7px;
+        margin-bottom: 70px;
+    }
+
+    @include note{
+ //       display: -webkit-flex;
+ //       display: -moz-flex;
+  //      display: -ms-flex;
+  //      display: -o-flex;
+  //      display: flex;
+//        flex-direction: row-reverse;
+  //      align-items: center;
+//
+//        display: block;
+//        max-width: 290px;
+//        float: none;
+//        margin: 0 auto 70px auto;
+
+    }
+    
+    @include note{
+        display: block;
+        float: none;
+        max-width: 263px;
+//        margin: 0 0 70px auto;
+        margin: 0 0 24px auto;
+    }
+    @include tablet{
+        margin: 0 0 27px auto;
+    }
+    @include small{
+        margin: 0 auto 25px;   
+        max-width: 264px;
+    }
+    
+    select{
+        border-width: 1px;
+        @include pc{
+//            float: left;
+            width: 120px;
+            padding: 4px 0px 5px 7px;
+            line-height: 21px;
+            font-size: 12px;
+        }
+        @include note{
+            float: right;
+        }
+    }
+    
+    .g-btn--bordered{
+        display: none;
+        border-width: 1px;
+        
+        @include note{
+            display: block;
+//        }
+//        
+//        @include tablet{
+            float: left;
+            min-width: 120px;
+            border: none;
+            padding: 7px 13px 6px;
+            line-height: 17px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #000;
+            background-color: #d1d4d3;
+        }
+        @include small{
+//            float: right;
+        }
+    }
 }
 .b-sort__text{
 	display: inline-block;
@@ -17,86 +98,96 @@
 	color: #0f0f0f;
 	text-align: left;
 
-	@include twoK {
-		font-size: 24px;
-	}
-	@include  fourK {
-		font-size: 35px;
-		line-height: 40px;
-	}
-}
-.b-sort__dropdown{
-	display: inline-block;
-	vertical-align: middle;
-	position: relative;
-	width: 175px;
-	height: 42px;
-	padding: 10px 16px;
-	border: 1px solid #121212;
-	background-color: #ffffff;
-	text-align: left;
+//	@include twoK {
+//		font-size: 24px;
+//	}
+//	@include  fourK {
+//		font-size: 35px;
+//		line-height: 40px;
+//	}
+    
+    @include huge{
+        margin-right: 7px;
+        font-size: 12px;
+    }
 
-	i {
-		position: absolute;
-		top: 19px;
-		right: 17px;
-	}
+    @include note{
+        display: none;
+    }
+}
 
-	@include twoK {
-		width: 209px;
-	}
-	@include fourK {
-		width: 254px;
-	}
-}
-.b-sort__selected{
-	display: block;
-	height: 20px;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	font-size: 16px;
-	line-height: 20px;
-	font-weight: 600;
-	cursor: pointer;
-	color: #0f0f0f;
-
-	@include twoK {
-		font-size: 18px;
-	}
-	@include  fourK {
-		font-size: 24px;
-	}
-
-	i{
-		position: absolute;
-		right: 3px; top: 3px;
-	}
-}
-.b-sort__list{
-	display: none;
-	position: absolute;
-	top: 40px; left: -1px;
-	margin: 0;padding: 12px 10px;
-	list-style-type: none;
-	width: 175px;
-	border: 1px solid #121212;
-	background-color: #ffffff;
-	z-index: 300;
-	
-	.is--open &{
-		display: block;
-	}
-}
-.b-sort__item{
-	position: relative;
-	padding-bottom: 10px;
-	&:last-child{
-		padding-bottom: 0;
-	}
-	a {
-	  display: block;
-	  position: relative;
-	  cursor: pointer;
-	}
-}
+//.b-sort__dropdown{
+//	display: inline-block;
+//	vertical-align: middle;
+//	position: relative;
+//	width: 175px;
+//	height: 42px;
+//	padding: 10px 16px;
+//	border: 1px solid #121212;
+//	background-color: #ffffff;
+//	text-align: left;
+//
+//	i {
+//		position: absolute;
+//		top: 19px;
+//		right: 17px;
+//	}
+//
+////	@include twoK {
+////		width: 209px;
+////	}
+////	@include fourK {
+////		width: 254px;
+////	}
+//}
+//.b-sort__selected{
+//	display: block;
+//	height: 20px;
+//	overflow: hidden;
+//	white-space: nowrap;
+//	text-overflow: ellipsis;
+//	font-size: 16px;
+//	line-height: 20px;
+//	font-weight: 600;
+//	cursor: pointer;
+//	color: #0f0f0f;
+//
+////	@include twoK {
+////		font-size: 18px;
+////	}
+////	@include  fourK {
+////		font-size: 24px;
+////	}
+//
+//	i{
+//		position: absolute;
+//		right: 3px; top: 3px;
+//	}
+//}
+//.b-sort__list{
+//	display: none;
+//	position: absolute;
+//	top: 40px; left: -1px;
+//	margin: 0;padding: 12px 10px;
+//	list-style-type: none;
+//	width: 175px;
+//	border: 1px solid #121212;
+//	background-color: #ffffff;
+//	z-index: 300;
+//	
+//	.is--open &{
+//		display: block;
+//	}
+//}
+//.b-sort__item{
+//	position: relative;
+//	padding-bottom: 10px;
+//	&:last-child{
+//		padding-bottom: 0;
+//	}
+//	a {
+//	  display: block;
+//	  position: relative;
+//	  cursor: pointer;
+//	}
+//}
